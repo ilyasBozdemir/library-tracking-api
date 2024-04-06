@@ -23,7 +23,6 @@
     <Folder Include="Authorization\Policies\" />
     <Folder Include="Features\Commands\" />
     <Folder Include="Features\Events\" />
-    <Folder Include="Features\Results\" />
     <Folder Include="Features\Queries\" />
     <Folder Include="Interfaces\Services\" />
     <Folder Include="Mapping\" />
