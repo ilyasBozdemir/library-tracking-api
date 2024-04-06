@@ -1,4 +1,4 @@
-﻿namespace LibraryTrackingApp.Domain.Entities;
+﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
 public class Member : BaseEntity<Guid>
 {

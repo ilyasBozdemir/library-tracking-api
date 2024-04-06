@@ -15,4 +15,23 @@
     <ProjectReference Include="..\LibraryTrackingApp.Domain\LibraryTrackingApp.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Authorization\Claims\" />
+    <Folder Include="Authorization\Handlers\" />
+    <Folder Include="Authorization\Scopes\" />
+    <Folder Include="Authorization\Requirements\" />
+    <Folder Include="Authorization\Policies\" />
+    <Folder Include="Features\Commands\" />
+    <Folder Include="Features\Events\" />
+    <Folder Include="Features\Results\" />
+    <Folder Include="Features\Queries\" />
+    <Folder Include="Interfaces\Services\" />
+    <Folder Include="Mapping\" />
+    <Folder Include="DTOs\" />
+    <Folder Include="Middlewares\" />
+    <Folder Include="Filters\" />
+    <Folder Include="Claims\" />
+    <Folder Include="Attributes\" />
+  </ItemGroup>
+
 </Project>

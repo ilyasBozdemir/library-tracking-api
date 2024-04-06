@@ -1,6 +1,6 @@
 ﻿using LibraryTrackingApp.Domain.Enums;
 
-namespace LibraryTrackingApp.Domain.Entities;
+namespace LibraryTrackingApp.Domain.Entities.Library;
 
 public class Return : BaseEntity<Guid>
 {

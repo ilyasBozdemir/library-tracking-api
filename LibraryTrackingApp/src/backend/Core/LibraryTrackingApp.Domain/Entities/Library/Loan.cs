@@ -1,6 +1,6 @@
 ﻿using LibraryTrackingApp.Domain.Enums;
 
-namespace LibraryTrackingApp.Domain.Entities;
+namespace LibraryTrackingApp.Domain.Entities.Library;
 
 // Loan entity
 public class Loan : BaseEntity<Guid>
