@@ -1,6 +1,4 @@
-﻿using LibraryTrackingApp.Domain.Interfaces;
-
-namespace LibraryTrackingApp.Domain.Entities;
+﻿namespace LibraryTrackingApp.Domain.Entities;
 
 public abstract class BaseEntity<TEntityIdType> :  ISoftDeletable
 {
