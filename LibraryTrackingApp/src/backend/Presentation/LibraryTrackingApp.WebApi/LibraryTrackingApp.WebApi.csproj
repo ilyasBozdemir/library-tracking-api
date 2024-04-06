@@ -18,4 +18,11 @@
     <Folder Include="Controllers\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\LibraryTrackingApp.Application\LibraryTrackingApp.Application.csproj" />
+    <ProjectReference Include="..\..\Core\LibraryTrackingApp.Domain\LibraryTrackingApp.Domain.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\LibraryTrackingApp.Infrastructure\LibraryTrackingApp.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Infrastructure\LibraryTrackingApp.Persistence\LibraryTrackingApp.Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

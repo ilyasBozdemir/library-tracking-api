@@ -7,10 +7,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Aggregates\" />
-    <Folder Include="Entities\" />
-    <Folder Include="Services\" />
-    <Folder Include="ValueObjects\" />
+    <Folder Include="Constants\" />
+    <Folder Include="Exceptions\" />
+    <Folder Include="Abstracts\" />
   </ItemGroup>
 
 </Project>
