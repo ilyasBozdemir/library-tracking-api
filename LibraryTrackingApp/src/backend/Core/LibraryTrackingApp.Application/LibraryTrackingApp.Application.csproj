@@ -25,9 +25,15 @@
     <Folder Include="Authorization\Scopes\" />
     <Folder Include="Authorization\Requirements\" />
     <Folder Include="Authorization\Policies\" />
-    <Folder Include="Features\Commands\" />
+    <Folder Include="Features\Commands\Book\CreateBook\" />
+    <Folder Include="Features\Commands\Book\DeleteBook\" />
+    <Folder Include="Features\Commands\Book\UpdateBook\" />
+    <Folder Include="Features\Commands\Loan\" />
+    <Folder Include="Features\Commands\Member\" />
+    <Folder Include="Features\Commands\Return\" />
     <Folder Include="Features\Events\" />
-    <Folder Include="Features\Queries\" />
+    <Folder Include="Features\Queries\GetBook\" />
+    <Folder Include="Features\Queries\GetBooks\" />
     <Folder Include="Interfaces\Services\" />
     <Folder Include="Mapping\" />
     <Folder Include="DTOs\" />
