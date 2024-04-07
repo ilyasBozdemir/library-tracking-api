@@ -37,19 +37,19 @@ public static class IdentityExtensions
         .AddDefaultTokenProviders();
     }
 
-    public static IdentityBuilder AddIdentityApiEndpointsWithConfiguration(
-          this IServiceCollection services,
-          Action<IdentityOptions> configureOptions = null)
-    {
+    //public static IdentityBuilder AddIdentityApiEndpointsWithConfiguration(
+    //      this IServiceCollection services,
+    //      Action<IdentityOptions> configureOptions = null)
+    //{
+      
 
+    //    return services.AddIdentityApiEndpoints<AppUser>(options =>
+    //    {
+    //        configureOptions?.Invoke(options);
+    //        ConfigureIdentityOptions(options);
+    //    });
 
-        return services.AddIdentityApiEndpoints<AppUser>(options =>
-        {
-            configureOptions?.Invoke(options);
-            ConfigureIdentityOptions(options);
-        });
-
-    }
+    //}
 
     private static void ConfigureIdentityOptions(IdentityOptions options)
     {

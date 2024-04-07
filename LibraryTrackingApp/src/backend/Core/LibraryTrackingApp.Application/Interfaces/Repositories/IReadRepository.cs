@@ -5,19 +5,24 @@ using System.Linq.Expressions;
 
 namespace LibraryTrackingApp.Application.Interfaces.Repositories;
 
-public interface IReadRepository<T, TKey>
-where T : BaseEntity<TKey>
+public interface IReadRepository<TEntity, TKey>
+where TEntity : BaseEntity<TKey>
 {
-    DbSet<T> Table { get; }
-    IQueryable<T> GetAll(bool tracking = true);
-    IQueryable<T> GetWhere(Expression<Func<T, bool>> method, bool tracking = true);
-    Task<T> GetSingleAsync(Expression<Func<T, bool>> method, bool tracking = true);
-    Task<T> GetByIdAsync(TKey id, bool tracking = true);
+    DbSet<TEntity> Table { get; }
+    IQueryable<TEntity> GetAll(bool tracking = true);
+    IQueryable<TEntity> GetWhere(Expression<Func<TEntity, bool>> method, bool tracking = true);
+    Task<IEnumerable<TEntity>> GetByFilterAsync(Func<TEntity, bool> filter);
+    Task<TEntity> GetSingleAsync(Expression<Func<TEntity, bool>> method, bool tracking = true);
+    Task<TEntity> GetByIdAsync(TKey id, bool tracking = true);
+    Task<IEnumerable<TEntity>> GetRelatedEntitiesAsync(Guid id);
+    Task<TEntity> GetFirstOrDefaultAsync(Func<TEntity, bool> filter);
+    Task<int> CountAsync();
 
-    Task<Paginate<T>> GetPaginatedAsync(PaginationInfo paginationInfo, bool tracking = true);
-    Task<Paginate<T>> GetPaginatedAsync(
-        Expression<Func<T, bool>> filter,
-        PaginationInfo paginationInfo,
+    Task<bool> ExistsAsync(Func<TEntity, bool> filter);
+    Task<Paginate<TEntity>> GetPaginatedAsync(int pageNumber, int pageSize, bool tracking = true);
+    Task<Paginate<TEntity>> GetPaginatedAsync(
+        Expression<Func<TEntity, bool>> filter,
+        int pageNumber, int pageSize,
         bool tracking = true
     );
 }

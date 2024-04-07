@@ -3,15 +3,18 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LibraryTrackingApp.Application.Interfaces.Repositories;
 
-public interface IWriteRepository<T, TKey>
-    where T : BaseEntity<TKey>
+public interface IWriteRepository<TEntity, TKey>
+    where TEntity : BaseEntity<TKey>
 {
-    DbSet<T> Table { get; }
-    Task<bool> AddAsync(T model);
-    Task<bool> AddRangeAsync(List<T> datas);
-    bool Remove(T model);
-    bool RemoveRange(List<T> datas);
-    Task<bool> RemoveAsync(string id);
-    bool Update(T model);
+    DbSet<TEntity> Table { get; }
+    Task<bool> AddAsync(TEntity model);
+    Task<bool> AddRangeAsync(IEnumerable<TEntity> datas);
+    Task<bool> DeleteAsync(TEntity entity);
+    Task<bool> DeleteRangeAsync(IEnumerable<TEntity> entities);
+    Task<bool> UpdateAsync(TEntity entity);
+    Task SoftDeleteAsync(TEntity entity);
+    Task SoftDeleteRangeAsync(IEnumerable<TEntity> entities);
+    Task RestoreAsync(TEntity entity);
+    Task RestoreRangeAsync(IEnumerable<TEntity> entities);
     Task<int> SaveAsync();
 }

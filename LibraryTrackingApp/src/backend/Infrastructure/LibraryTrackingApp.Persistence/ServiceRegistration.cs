@@ -1,48 +1,47 @@
-﻿using LibraryTrackingApp.Domain.Entities.Identity;
-using LibraryTrackingApp.Persistence.Contexts;
+﻿using LibraryTrackingApp.Persistence.Contexts;
 using LibraryTrackingApp.Persistence.Extensions;
 using LibraryTrackingApp.Persistence.Validators;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using LibraryTrackingApp.Domain.Entities.Identity;
+using LibraryTrackingApp.Persistence.Configurations;
+using Microsoft.AspNetCore.Identity;
 
 namespace LibraryTrackingApp.Persistence;
 
 
 public static class ServiceRegistration
 {
-    public static void AddPersistenceRegistration(this IServiceCollection services)
+    public static void AddPersistenceRegistration(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDatabaseConfiguration();
-
-
-     
+        services.AddDatabaseConfiguration(configuration);
     }
 
-    public static IServiceCollection AddIdentityDbContext(this IServiceCollection services)
+    public static IServiceCollection AddIdentityDbContext(this IServiceCollection services, IConfiguration configuration)
     {
-        var connString = @"Server=DESKTOP-R4UP5K6\SQLEXPRESS;Database=AppIdentityDb;Integrated Security=True;TrustServerCertificate=True;";
         services
-            .AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(connString))
+            .AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")))
             .AddIdentityDbConfig();
+       
         return services;
     }
     public static IServiceCollection AddIdentityDbConfig(this IServiceCollection services)
     {
-        services.AddIdentityApiEndpointsWithConfiguration()
-            .AddPasswordValidator<CustomPasswordValidation>()
-            .AddUserValidator<CustomUserValidation>()
-            .AddErrorDescriber<CustomIdentityErrorDescriber>()
-            .AddEntityFrameworkStores<AppIdentityDbContext>()
-            .AddDefaultTokenProviders();
+        //services.AddIdentityApiEndpointsWithConfiguration()
+        //    .AddPasswordValidator<CustomPasswordValidation>()
+        //    .AddUserValidator<CustomUserValidation>()
+        //    .AddErrorDescriber<CustomIdentityErrorDescriber>()
+        //    .AddEntityFrameworkStores<AppIdentityDbContext>()
+        //    .AddDefaultTokenProviders();
 
         return services;
     }
 
-    public static IServiceCollection AddDatabaseConfiguration(this IServiceCollection services)
+    public static IServiceCollection AddDatabaseConfiguration(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContextPool<AppIdentityDbContext>(
-                 options => options.UseSqlServer(@"Server=DESKTOP-R4UP5K6\SQLEXPRESS;Database=AppIdentityDb;Integrated Security=True;TrustServerCertificate=True;",
+                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
                      sqlOptions =>
                      {
                          sqlOptions.EnableRetryOnFailure(maxRetryCount: 5,

@@ -10,11 +10,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+var configuration = new ConfigurationBuilder()
+            .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+            .AddEnvironmentVariables()
+            .Build();
 
 #region Katmanlarýn servis kayýtlarý
 
 builder.Services.AddApplicationRegistration();
-builder.Services.AddPersistenceRegistration();
+builder.Services.AddPersistenceRegistration(configuration);
 builder.Services.AddInfrastructureServices();
 
 #endregion
