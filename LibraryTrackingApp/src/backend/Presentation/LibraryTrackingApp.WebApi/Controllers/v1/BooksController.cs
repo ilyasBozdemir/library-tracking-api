@@ -5,11 +5,7 @@
 [Route($"api/v{ApiVersions.V1}/books")]
 public class BooksController : BaseController
 {
-    public BooksController(IMediator mediator) : base(mediator)
-    {
-
-    }
-
+    public BooksController(IMediator mediator) : base(mediator) {}
 
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateBookCommandRequest request)

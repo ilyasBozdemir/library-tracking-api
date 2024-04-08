@@ -1,60 +1,60 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
+	<TargetFramework>net8.0</TargetFramework>
+	<ImplicitUsings>enable</ImplicitUsings>
+	<Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
-    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
+	<PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
+	<PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="8.0.0" />
 	  <PackageReference Include="FluentValidation" Version="11.9.0" />
 	  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
 	  <PackageReference Include="AutoMapper" Version="13.0.0" />
-	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\LibraryTrackingApp.Domain\LibraryTrackingApp.Domain.csproj" />
+	<ProjectReference Include="..\LibraryTrackingApp.Domain\LibraryTrackingApp.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Authorization\Claims\" />
-    <Folder Include="Authorization\Handlers\" />
-    <Folder Include="Authorization\Scopes\" />
-    <Folder Include="Authorization\Requirements\" />
-    <Folder Include="Authorization\Policies\" />
-    <Folder Include="Features\Commands\BookStock\CreateBookStock\" />
-    <Folder Include="Features\Commands\BookStock\DeleteBookStock\" />
-    <Folder Include="Features\Commands\BookStock\UpdateBookStock\" />
-    <Folder Include="Features\Commands\Loan\CreateLoan\" />
-    <Folder Include="Features\Commands\Loan\DeleteLoan\" />
-    <Folder Include="Features\Commands\Loan\UpdateLoan\" />
-    <Folder Include="Features\Commands\Member\CreateMember\" />
-    <Folder Include="Features\Commands\Member\DeleteMember\" />
-    <Folder Include="Features\Commands\Member\UpdateMember\" />
-    <Folder Include="Features\Commands\Return\CreateReturn\" />
-    <Folder Include="Features\Commands\Return\DeleteReturn\" />
-    <Folder Include="Features\Commands\Return\UpdateReturn\" />
-    <Folder Include="Features\Events\BookStock\" />
-    <Folder Include="Features\Events\Loan\" />
-    <Folder Include="Features\Events\Member\" />
-    <Folder Include="Features\Events\Return\" />
-    <Folder Include="Features\Handlers\" />
-    <Folder Include="Features\Queries\BookStock\GetBookStock\" />
-    <Folder Include="Features\Queries\BookStock\GetAllBookStocks\" />
-    <Folder Include="Features\Queries\Loan\GetAllLoans\" />
-    <Folder Include="Features\Queries\Loan\GetLoan\" />
-    <Folder Include="Features\Queries\Member\GetAllMembers\" />
-    <Folder Include="Features\Queries\Member\GetMember\" />
-    <Folder Include="Features\Queries\Return\GetAllReturns\" />
-    <Folder Include="Features\Queries\Return\GetReturn\" />
-    <Folder Include="Interfaces\Services\" />
-    <Folder Include="Middlewares\" />
-    <Folder Include="Filters\" />
-    <Folder Include="Claims\" />
-    <Folder Include="Attributes\" />
+	<Folder Include="Authorization\Claims\" />
+	<Folder Include="Authorization\Handlers\" />
+	<Folder Include="Authorization\Scopes\" />
+	<Folder Include="Authorization\Requirements\" />
+	<Folder Include="Authorization\Policies\" />
+	<Folder Include="Features\Commands\BookStock\CreateBookStock\" />
+	<Folder Include="Features\Commands\BookStock\DeleteBookStock\" />
+	<Folder Include="Features\Commands\BookStock\UpdateBookStock\" />
+	<Folder Include="Features\Commands\Loan\CreateLoan\" />
+	<Folder Include="Features\Commands\Loan\DeleteLoan\" />
+	<Folder Include="Features\Commands\Loan\UpdateLoan\" />
+	<Folder Include="Features\Commands\Member\CreateMember\" />
+	<Folder Include="Features\Commands\Member\DeleteMember\" />
+	<Folder Include="Features\Commands\Member\UpdateMember\" />
+	<Folder Include="Features\Commands\Return\CreateReturn\" />
+	<Folder Include="Features\Commands\Return\DeleteReturn\" />
+	<Folder Include="Features\Commands\Return\UpdateReturn\" />
+	<Folder Include="Features\Events\BookStock\" />
+	<Folder Include="Features\Events\Loan\" />
+	<Folder Include="Features\Events\Member\" />
+	<Folder Include="Features\Events\Return\" />
+	<Folder Include="Features\Handlers\" />
+	<Folder Include="Features\Queries\BookStock\GetBookStock\" />
+	<Folder Include="Features\Queries\BookStock\GetAllBookStocks\" />
+	<Folder Include="Features\Queries\Loan\GetAllLoans\" />
+	<Folder Include="Features\Queries\Loan\GetLoan\" />
+	<Folder Include="Features\Queries\Member\GetAllMembers\" />
+	<Folder Include="Features\Queries\Member\GetMember\" />
+	<Folder Include="Features\Queries\Return\GetAllReturns\" />
+	<Folder Include="Features\Queries\Return\GetReturn\" />
+	<Folder Include="Interfaces\Services\" />
+	<Folder Include="Middlewares\" />
+	<Folder Include="Filters\" />
+	<Folder Include="Claims\" />
+	<Folder Include="Attributes\" />
   </ItemGroup>
 
 </Project>

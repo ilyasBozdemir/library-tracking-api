@@ -1,4 +1,7 @@
-﻿namespace LibraryTrackingApp.Persistence;
+﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+using LibraryTrackingApp.Persistence.UnitOfWorks;
+
+namespace LibraryTrackingApp.Persistence;
 
 
 public static class ServiceRegistration
@@ -6,6 +9,8 @@ public static class ServiceRegistration
     public static void AddPersistenceRegistration(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDatabaseConfiguration(configuration);
+
+        services.AddScoped<IUnitOfWork<Guid>, GuidUnitOfWork<Guid>>();
     }
 
     public static IServiceCollection AddIdentityDbContext(this IServiceCollection services, IConfiguration configuration)
