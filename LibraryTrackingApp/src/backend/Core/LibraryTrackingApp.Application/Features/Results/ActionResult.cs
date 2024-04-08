@@ -1,5 +1,5 @@
 ﻿namespace LibraryTrackingApp.Application.Features.Results;
-public class ActionResult
+public abstract class ActionResult
 {
     public bool Success { get; set; }
     public int StatusCode { get; set; }

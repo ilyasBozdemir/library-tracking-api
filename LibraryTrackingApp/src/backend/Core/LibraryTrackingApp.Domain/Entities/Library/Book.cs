@@ -1,7 +1,7 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
 
-public class Book : BaseEntity<Guid>
+public class Book : BaseEntity<Guid> 
 {
     public string Title { get; set; } // başlık
     public string Author { get; set; } // yazar
