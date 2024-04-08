@@ -1,5 +1,4 @@
-﻿
-namespace LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
+﻿namespace LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
 
 
 public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest, CreateBookCommandResponse>

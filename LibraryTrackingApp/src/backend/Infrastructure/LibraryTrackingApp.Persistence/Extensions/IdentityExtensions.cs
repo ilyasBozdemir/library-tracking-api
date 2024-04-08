@@ -1,10 +1,4 @@
-﻿using LibraryTrackingApp.Domain.Entities.Identity;
-using LibraryTrackingApp.Persistence.Configurations;
-using LibraryTrackingApp.Persistence.Contexts;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.Extensions.DependencyInjection;
-
-namespace LibraryTrackingApp.Persistence.Extensions;
+﻿namespace LibraryTrackingApp.Persistence.Extensions;
 
 public static class IdentityExtensions
 {

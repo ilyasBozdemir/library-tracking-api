@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace LibraryTrackingApp.Application.Features.Queries.Book.GetBook;
+﻿namespace LibraryTrackingApp.Application.Features.Queries.Book.GetBook;
 
 public class GetBookQueryRequest : IRequest<GetBookQueryResponse>
 {

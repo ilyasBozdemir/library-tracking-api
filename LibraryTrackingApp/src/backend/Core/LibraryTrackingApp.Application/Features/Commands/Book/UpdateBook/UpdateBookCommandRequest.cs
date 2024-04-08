@@ -1,7 +1,4 @@
-﻿using LibraryTrackingApp.Domain.Enums;
-using MediatR;
-
-namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook;
+﻿namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook;
 
 public class UpdateBookCommandRequest : IRequest<UpdateBookCommandResponse>
 {

@@ -1,6 +1,4 @@
-﻿using Microsoft.AspNetCore.Identity;
-
-namespace LibraryTrackingApp.Persistence.Validators;
+﻿namespace LibraryTrackingApp.Persistence.Validators;
 
 public class CustomIdentityErrorDescriber : IdentityErrorDescriber
 {

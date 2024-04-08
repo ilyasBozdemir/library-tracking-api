@@ -1,7 +1,4 @@
-﻿using LibraryTrackingApp.Domain.Entities.Identity;
-using Microsoft.AspNetCore.Identity;
-
-namespace LibraryTrackingApp.Persistence.Validators;
+﻿namespace LibraryTrackingApp.Persistence.Validators;
 
 public class CustomUserValidation : IUserValidator<AppUser>
 {

@@ -1,1 +1,10 @@
-﻿
+﻿global using LibraryTrackingApp.Persistence.Contexts;
+global using Microsoft.EntityFrameworkCore.Design;
+global using Microsoft.EntityFrameworkCore;
+global using LibraryTrackingApp.Domain.Entities.Identity;
+global using LibraryTrackingApp.Persistence.Configurations;
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.Extensions.DependencyInjection;
+global using LibraryTrackingApp.Persistence.Extensions;
+global using LibraryTrackingApp.Persistence.Validators;
+global using Microsoft.Extensions.Configuration;

@@ -1,14 +1,4 @@
-﻿using LibraryTrackingApp.Persistence.Contexts;
-using LibraryTrackingApp.Persistence.Extensions;
-using LibraryTrackingApp.Persistence.Validators;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using LibraryTrackingApp.Domain.Entities.Identity;
-using LibraryTrackingApp.Persistence.Configurations;
-using Microsoft.AspNetCore.Identity;
-
-namespace LibraryTrackingApp.Persistence;
+﻿namespace LibraryTrackingApp.Persistence;
 
 
 public static class ServiceRegistration

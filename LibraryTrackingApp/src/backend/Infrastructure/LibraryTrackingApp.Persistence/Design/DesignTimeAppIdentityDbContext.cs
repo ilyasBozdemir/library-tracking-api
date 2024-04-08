@@ -1,8 +1,4 @@
-﻿using LibraryTrackingApp.Persistence.Contexts;
-using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using System.IO;
+﻿
 
 namespace LibraryTrackingApp.Persistence.Design;
 

@@ -1,7 +1,4 @@
-﻿using MediatR;
-
-namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook;
-
+﻿namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook;
 
 public class UpdateBookBookCommandHandler : IRequestHandler<UpdateBookCommandRequest, UpdateBookCommandResponse>
 {

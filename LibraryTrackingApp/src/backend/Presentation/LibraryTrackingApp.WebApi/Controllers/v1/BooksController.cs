@@ -1,10 +1,4 @@
-﻿using LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
-using LibraryTrackingApp.Application.Features.Commands.Book.DeleteBook;
-using LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook;
-using LibraryTrackingApp.Application.Features.Queries.Book.GetAllBooks;
-using LibraryTrackingApp.Application.Features.Queries.Book.GetBook;
-
-namespace LibraryTrackingApp.WebApi.Controllers.v1;
+﻿namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
