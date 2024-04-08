@@ -44,9 +44,6 @@
     <Folder Include="Features\Handlers\" />
     <Folder Include="Features\Queries\BookStock\GetBookStock\" />
     <Folder Include="Features\Queries\BookStock\GetAllBookStocks\" />
-    <Folder Include="Features\Queries\Book\GetBook\" />
-    <Folder Include="Features\Queries\Book\GetAllBooks\" />
-    <Folder Include="Features\Queries\Book\" />
     <Folder Include="Features\Queries\Loan\GetAllLoans\" />
     <Folder Include="Features\Queries\Loan\GetLoan\" />
     <Folder Include="Features\Queries\Member\GetAllMembers\" />

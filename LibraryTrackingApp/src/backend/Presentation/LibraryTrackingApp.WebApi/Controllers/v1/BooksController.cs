@@ -1,6 +1,8 @@
 ﻿using LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
 using LibraryTrackingApp.Application.Features.Commands.Book.DeleteBook;
 using LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook;
+using LibraryTrackingApp.Application.Features.Queries.Book.GetAllBooks;
+using LibraryTrackingApp.Application.Features.Queries.Book.GetBook;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
@@ -13,26 +15,62 @@ public class BooksController : BaseController
     {
 
     }
+
+
     [HttpPost]
-    public async Task<IActionResult> Create(CreateBookCommandRequest request)
+    public async Task<IActionResult> Create([FromBody] CreateBookCommandRequest request)
     {
         var response = await _mediator.Send(request);
         return Ok(response);
     }
 
+
+
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(Guid id, UpdateBookCommandRequest request)
+    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateBookCommandRequest request)
     {
         request.Id = id;
         var response = await _mediator.Send(request);
         return Ok(response);
     }
 
+
     [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(Guid id)
+    public async Task<IActionResult> Delete([FromRoute] Guid id)
     {
         var request = new DeleteBookCommandRequest { Id = id };
         var response = await _mediator.Send(request);
         return Ok(response);
+    }
+
+    [HttpGet]
+    public async Task<IActionResult> GetAllBooks([FromBody] GetAllBooksQueryRequest request)
+    {
+        var response = await _mediator.Send(request);
+
+        if (response != null && response.Data != null)
+        {
+            return Ok(response.Data);
+        }
+        else
+        {
+            return NotFound();
+        }
+    }
+
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetBook([FromRoute] Guid id)
+    {
+        var query = new GetBookQueryRequest { BookId = id };
+        var response = await _mediator.Send(query);
+
+        if (response != null && response.Data != null)
+        {
+            return Ok(response.Data);
+        }
+        else
+        {
+            return NotFound();
+        }
     }
 }
