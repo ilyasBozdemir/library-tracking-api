@@ -1,7 +1,4 @@
-﻿using LibraryTrackingApp.Domain.Enums;
-
-
-namespace LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
+﻿namespace LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
 
 public class CreateBookCommandRequest : IRequest<CreateBookCommandResponse>
 {
@@ -11,6 +8,6 @@ public class CreateBookCommandRequest : IRequest<CreateBookCommandResponse>
     public int PageCount { get; init; } // Sayfa Sayısı
     public string Publisher { get; init; } // Yayıncı
     public DateTime PublicationDate { get; init; } // Yayın Tarihi
-    public BookStatus Status { get; init; } // Kitap Durumu
+    public BookStatus Status { get; init; } = BookStatus.Available;// Kitap Durumu
     public bool IsDamaged { get; init; } // Hasar Durumu
 }

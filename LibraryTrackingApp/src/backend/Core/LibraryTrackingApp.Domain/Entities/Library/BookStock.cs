@@ -3,6 +3,6 @@
 
 public class BookStock : BaseEntity<Guid>
 {
-    public Guid BookId { get; set; } // Kitap ID
-    public int Quantity { get; set; } // Stok miktarı
+    public Guid BookId { get; set; }
+    public int Quantity { get; set; } 
 }

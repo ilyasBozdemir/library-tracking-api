@@ -1,8 +1,9 @@
 ﻿namespace LibraryTrackingApp.Domain.Enums;
 
+[Flags]
 public enum BookStatus
 {
-    Available,  // Mevcut
+    Available = 0,  // Mevcut
     Borrowed,   // Ödünç Alınmış
     Reserved,   // Rezerve Edilmiş
     Damaged,    // Hasarlı

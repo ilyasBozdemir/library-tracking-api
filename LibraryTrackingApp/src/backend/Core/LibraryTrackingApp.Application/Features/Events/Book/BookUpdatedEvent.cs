@@ -4,5 +4,5 @@ namespace LibraryTrackingApp.Application.Features.Events.Book;
 
 public class BookUpdatedEvent: BaseEvent
 {
-    public Guid BookId { get; set; }
+    public BookDTO BookDTO { get; set; }
 }
