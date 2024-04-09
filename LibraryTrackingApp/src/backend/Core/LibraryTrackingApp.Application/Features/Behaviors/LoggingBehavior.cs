@@ -14,7 +14,7 @@ public class LoggingBehavior<TRequest, TResponse> : IPipelineBehavior<TRequest, 
         // Yanıt sonrası loglama
         Console.WriteLine($"Handled {typeof(TRequest).Name}");
 
-        return await next();
+        return response;
     }
 }
 

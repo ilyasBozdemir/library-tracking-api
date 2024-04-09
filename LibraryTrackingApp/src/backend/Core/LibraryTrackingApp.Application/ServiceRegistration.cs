@@ -1,7 +1,5 @@
-﻿using FluentValidation;
-using LibraryTrackingApp.Application.Features.Behaviors;
+﻿using LibraryTrackingApp.Application.Features.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
 using System.Reflection;
 
 namespace LibraryTrackingApp.Application;

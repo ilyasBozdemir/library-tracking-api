@@ -1,5 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Features.Events.BookStock;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+using System.Net;
 
 namespace LibraryTrackingApp.Application.Features.Commands.StockOperation;
 
@@ -46,6 +47,16 @@ public class StockOperationCommandHandler
                 );
                 if (existingBookStock != null)
                 {
+                    if (request.Quantity <= 0)
+                    {
+                        return new StockOperationCommandResponse
+                        {
+                            StatusCode = (int)HttpStatusCode.BadRequest,
+                            Success = false,
+                            Errors = new string[] { "Stok miktarı sıfırdan büyük olmalıdır." }
+                        };
+                    }
+
                     switch (request.OperationType)
                     {
                         case StockOperationType.Increase:

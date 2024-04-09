@@ -17,6 +17,6 @@ public class PerformanceBehaviour<TRequest, TResponse> : IPipelineBehavior<TRequ
             Console.WriteLine($"Long Running Request: {requestName} ({stopwatch.ElapsedMilliseconds} milliseconds)");
         }
 
-        return await next();
+        return response;
     }
 }
