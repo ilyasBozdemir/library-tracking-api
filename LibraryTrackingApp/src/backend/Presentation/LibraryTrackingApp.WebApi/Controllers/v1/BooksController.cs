@@ -44,17 +44,17 @@ public class BooksController : BaseController
 
 
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    [HttpDelete("{IdOrISBN}")]
+    public async Task<IActionResult> Delete([FromRoute] string IdOrISBN)
     {
-        var request = new DeleteBookCommandRequest { Id = id };
+        var request = new DeleteBookCommandRequest { IdOrISBN = IdOrISBN };
         var response = await _mediator.Send(request);
 
         await _mediator.Publish(new BookCommandEvent()
         {
             Errors = response.Errors,
             IsSuccessful = response.Success,
-            EntityId = id.ToString(),
+            EntityId = IdOrISBN,
             RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.Delete
         });
         return Ok(response);

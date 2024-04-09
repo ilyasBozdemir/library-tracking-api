@@ -1,5 +1,4 @@
-﻿using LibraryTrackingApp.Application.Features.Events.BookStock;
-using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 using System.Net;
 
 namespace LibraryTrackingApp.Application.Features.Commands.StockOperation;
@@ -53,7 +52,10 @@ public class StockOperationCommandHandler
                         {
                             StatusCode = (int)HttpStatusCode.BadRequest,
                             Success = false,
-                            Errors = new string[] { "Stok miktarı sıfırdan büyük olmalıdır." }
+                            Errors = new string[] 
+                            { 
+                                "Stok miktarı sıfırdan büyük olmalıdır."
+                            }
                         };
                     }
 

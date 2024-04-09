@@ -1,5 +1,4 @@
-﻿using LibraryTrackingApp.Application.Features.Events.Book;
-using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
 namespace LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
 
