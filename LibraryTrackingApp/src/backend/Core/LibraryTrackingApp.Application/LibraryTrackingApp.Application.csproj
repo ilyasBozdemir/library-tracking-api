@@ -38,8 +38,6 @@
 	<Folder Include="Features\Events\Member\" />
 	<Folder Include="Features\Events\Return\" />
 	<Folder Include="Features\Handlers\" />
-	<Folder Include="Features\Queries\BookStock\GetBookStock\" />
-	<Folder Include="Features\Queries\BookStock\GetAllBookStocks\" />
 	<Folder Include="Features\Queries\Loan\GetAllLoans\" />
 	<Folder Include="Features\Queries\Loan\GetLoan\" />
 	<Folder Include="Features\Queries\Member\GetAllMembers\" />

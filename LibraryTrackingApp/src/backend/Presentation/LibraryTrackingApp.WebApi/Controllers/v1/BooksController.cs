@@ -9,6 +9,8 @@ public class BooksController : BaseController
 {
     public BooksController(IMediator mediator) : base(mediator) {}
 
+
+
     [HttpPost]
     public async Task<IActionResult> Create([FromBody] CreateBookCommandRequest request)
     {
@@ -41,6 +43,7 @@ public class BooksController : BaseController
     }
 
 
+
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete([FromRoute] Guid id)
     {
@@ -56,6 +59,8 @@ public class BooksController : BaseController
         });
         return Ok(response);
     }
+
+
 
     [HttpGet]
     public async Task<IActionResult> GetAllBooks([FromBody] GetAllBooksQueryRequest request)
@@ -85,6 +90,8 @@ public class BooksController : BaseController
             return NotFound();
         }
     }
+
+
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetBook([FromRoute] Guid id)

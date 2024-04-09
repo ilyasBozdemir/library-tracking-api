@@ -1,15 +1,20 @@
 ﻿using LibraryTrackingApp.Application.Features.Commands.StockOperation;
 using LibraryTrackingApp.Application.Features.Events.BookStock;
+using LibraryTrackingApp.Application.Features.Queries.BookStock.GetAllBookStocks;
+using LibraryTrackingApp.Application.Features.Queries.BookStock.GetBookStock;
 using LibraryTrackingApp.Domain.Enums;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
+
+// mediator notification kısmı daha düzene oturtulcaktır.
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
 [Route($"api/v{ApiVersions.V1}/book-stocks")]
 public class BookStocksController : BaseController
 {
     public BookStocksController(IMediator mediator) : base(mediator) {}
+
 
 
     [HttpPost("increase")]
@@ -34,6 +39,8 @@ public class BookStocksController : BaseController
         return Ok(response);
     }
 
+
+
     [HttpPost("decrease")]
     public async Task<IActionResult> DecreaseStock(Guid bookId, int quantity)
     {
@@ -54,16 +61,39 @@ public class BookStocksController : BaseController
         return Ok(response);
     }
 
-    [HttpGet("{bookId}")]
+
+
+    [HttpGet("get/{bookId}")]
     public async Task<IActionResult> GetBookStockInfo(Guid bookId)
     {
-        return Ok();
+        var response = await _mediator.Send(new GetBookStockInfoQueryRequest() 
+        {
+            BookId = bookId 
+        });
+        await _mediator.Publish(new StockOperationEvent()
+        {
+            Errors = response.Errors,
+            IsSuccessful = response.Success,
+            BookId = bookId,
+            OperationType = StockOperationType.Decrease,
+        });
+        return Ok(response);
     }
+
+
 
     [HttpGet]
     public async Task<IActionResult> GetAllBookStocks()
     {
-        return Ok();
+        var response = await _mediator.Send(new GetAllBookStockQueryRequest());
+
+        await _mediator.Publish(new StockOperationEvent()
+        {
+            Errors = response.Errors,
+            IsSuccessful = response.Success,
+            OperationType = StockOperationType.Decrease,
+        });
+        return Ok(response);
     }
 
 }

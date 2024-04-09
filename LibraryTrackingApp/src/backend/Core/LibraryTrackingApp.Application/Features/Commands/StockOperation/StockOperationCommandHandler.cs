@@ -4,7 +4,7 @@ using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 namespace LibraryTrackingApp.Application.Features.Commands.StockOperation;
 
 public class StockOperationCommandHandler
-    : IRequestHandler<StockOperationCommandRequest, StockOperationResponse>
+    : IRequestHandler<StockOperationCommandRequest, StockOperationCommandResponse>
 {
     private readonly IUnitOfWork<Guid> _unitOfWork;
     private readonly IMediator _mediator;
@@ -15,7 +15,7 @@ public class StockOperationCommandHandler
         _mediator = mediator;
     }
 
-    public async Task<StockOperationResponse> Handle(
+    public async Task<StockOperationCommandResponse> Handle(
         StockOperationCommandRequest request,
         CancellationToken cancellationToken
     )
