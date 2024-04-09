@@ -10,7 +10,8 @@ public static class ServiceRegistration
     {
         services.AddDatabaseConfiguration(configuration);
 
-        services.AddScoped<IUnitOfWork<Guid>, GuidUnitOfWork<Guid>>();
+        services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+
     }
 
     public static IServiceCollection AddIdentityDbContext(this IServiceCollection services, IConfiguration configuration)

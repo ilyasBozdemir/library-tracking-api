@@ -25,8 +25,6 @@
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
 	<Folder Include="Authorization\Policies\" />
-	<Folder Include="Features\Commands\BookStock\DeleteBookStock\" />
-	<Folder Include="Features\Commands\BookStock\UpdateBookStock\" />
 	<Folder Include="Features\Commands\Loan\CreateLoan\" />
 	<Folder Include="Features\Commands\Loan\DeleteLoan\" />
 	<Folder Include="Features\Commands\Loan\UpdateLoan\" />

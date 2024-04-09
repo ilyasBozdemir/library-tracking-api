@@ -5,8 +5,7 @@ using System.Linq.Expressions;
 
 namespace LibraryTrackingApp.Application.Interfaces.Repositories;
 
-public interface IReadRepository<TEntity, TKey>
-where TEntity : BaseEntity<TKey>
+public interface IReadRepository<TEntity, TKey> where TEntity : BaseEntity<TKey>
 {
     DbSet<TEntity> Table { get; }
     IQueryable<TEntity> GetAll(bool tracking = true);

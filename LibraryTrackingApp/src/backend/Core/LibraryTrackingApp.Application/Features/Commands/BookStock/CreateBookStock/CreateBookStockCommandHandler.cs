@@ -66,5 +66,4 @@ public class CreateBookStockCommandHandler : IRequestHandler<CreateBookStockComm
             };
         }
     }
-
 }

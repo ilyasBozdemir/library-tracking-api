@@ -3,8 +3,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace LibraryTrackingApp.Application.Interfaces.Repositories;
 
-public interface IWriteRepository<TEntity, TKey>
-    where TEntity : BaseEntity<TKey>
+public interface IWriteRepository<TEntity, TKey> where TEntity : BaseEntity<TKey>
 {
     DbSet<TEntity> Table { get; }
     Task<bool> AddAsync(TEntity model);
