@@ -6,18 +6,18 @@ namespace LibraryTrackingApp.Persistence;
 
 public static class ServiceRegistration
 {
-    public static void AddPersistenceRegistration(this IServiceCollection services, IConfiguration configuration)
+    public static void AddPersistenceRegistration(this IServiceCollection services)
     {
-        services.AddDatabaseConfiguration(configuration);
+        services.AddDatabaseConfiguration();
 
         services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
 
     }
 
-    public static IServiceCollection AddIdentityDbContext(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddIdentityDbContext(this IServiceCollection services)
     {
         services
-            .AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")))
+            .AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(AppConstant.DefaultConnectionString))
             .AddIdentityDbConfig();
        
         return services;
@@ -34,7 +34,7 @@ public static class ServiceRegistration
         return services;
     }
 
-    public static IServiceCollection AddDatabaseConfiguration(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddDatabaseConfiguration(this IServiceCollection services)
     {
         services.AddDbContextPool<AppIdentityDbContext>(
                  options => options.UseSqlServer(AppConstant.DefaultConnectionString,
