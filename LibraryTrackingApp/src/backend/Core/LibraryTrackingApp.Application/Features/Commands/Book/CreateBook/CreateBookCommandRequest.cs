@@ -9,5 +9,4 @@ public class CreateBookCommandRequest : IRequest<CreateBookCommandResponse>
     public string Publisher { get; init; } // Yayıncı
     public DateTime PublicationDate { get; init; } // Yayın Tarihi
     public BookStatus Status { get; init; } = BookStatus.Available;// Kitap Durumu
-    public bool IsDamaged { get; init; } // Hasar Durumu
 }

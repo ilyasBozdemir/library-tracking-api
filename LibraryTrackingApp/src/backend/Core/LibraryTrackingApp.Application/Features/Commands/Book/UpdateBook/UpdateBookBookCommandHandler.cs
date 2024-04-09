@@ -15,39 +15,58 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
         {
             try
             {
-                // Kitap güncelleme işlemi burada gerçekleştirilecek
-                // Örneğin, kitabın veritabanındaki bilgilerini güncelleme ve işlem sonucunu değerlendirme
+                var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.Book>();
 
-                // var bookToUpdate = await _unitOfWork.BookRepository.GetByIdAsync(request.BookId);
-                // if (bookToUpdate == null)
-                // {
-                //     return new UpdateBookCommandResponse
-                //     {
-                //         StatusCode = 404,
-                //         Success = false,
-                //         Message = "Güncellenecek kitap bulunamadı."
-                //     };
-                // }
+                var existingBook = await readRepository.GetSingleAsync(s => s.Id == request.Id);
 
-                // bookToUpdate.Title = request.NewTitle;
-                // bookToUpdate.Author = request.NewAuthor;
-                // bookToUpdate.ISBN = request.NewISBN;
-                // vb.
-
-                // await _unitOfWork.SaveChangesAsync();
-
-                // Güncelleme işlemi başarılıysa
-                return new UpdateBookCommandResponse
+                if (existingBook == null)
                 {
-                    StatusCode = 200,
-                    Success = true,
-                    Errors = new string[] { "Kitap başarıyla güncellendi." }
-                };
+                    return new()
+                    {
+                        StatusCode = 404,
+                        Success = false,
+                        Errors = new string[] { "Böyle bir kitap bulunamadı" }
+                    };
+                }
+
+                else
+                {
+                    var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.Book>();
+
+                    existingBook.Author = request.Author;
+                    existingBook.Title = request.Title;
+                    existingBook.ISBN = request.ISBN;
+                    existingBook.PageCount = request.PageCount;
+                    existingBook.Publisher = request.Publisher;
+                    existingBook.PublicationDate = request.PublicationDate;
+                    existingBook.Status = request.Status;
+
+                    bool isUpdated = await writeRepository.UpdateAsync(existingBook);
+
+                    if (isUpdated)
+                    {
+                        return new()
+                        {
+                            StatusCode = 200,
+                            Success = true,
+                            Errors = new string[] { "Kitap başarıyla güncellendi." }
+                        };
+                    }
+                    else
+                    {
+
+                        return new()
+                        {
+                            StatusCode = 400,
+                            Success = false,
+                            Errors = new string[] { "Kitap güncellenirken bir hata oluştu." }
+                        };
+                    }
+                }
             }
             catch (Exception ex)
             {
-                // Güncelleme işlemi sırasında bir hata oluşursa
-                return new UpdateBookCommandResponse
+                return new()
                 {
                     StatusCode = 500,
                     Success = false,

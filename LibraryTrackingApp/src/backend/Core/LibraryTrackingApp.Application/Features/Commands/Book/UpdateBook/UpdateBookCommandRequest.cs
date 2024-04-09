@@ -11,5 +11,4 @@ public class UpdateBookCommandRequest : IRequest<UpdateBookCommandResponse>
     public string Publisher { get; set; } // Yeni yayıncı
     public DateTime PublicationDate { get; set; } // Yeni yayın tarihi
     public BookStatus Status { get; set; } // Yeni kitap durumu
-    public bool IsDamaged { get; set; } // Yeni hasar durumu
 }

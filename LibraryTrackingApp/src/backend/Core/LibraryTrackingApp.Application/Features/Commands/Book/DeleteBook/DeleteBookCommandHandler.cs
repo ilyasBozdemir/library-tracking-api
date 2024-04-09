@@ -17,8 +17,7 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
         try
         {
 
-            var readRepository =
-               _unitOfWork.GetReadRepository<Domain.Entities.Library.Book>();
+            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.Book>();
 
             Guid bookId;
             bool isGuid = Guid.TryParse(request.IdOrISBN, out bookId);
@@ -67,7 +66,6 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
         }
         catch (Exception ex)
         {
-            // Silme işlemi sırasında bir hata oluşursa
             return new DeleteBookCommandResponse
             {
                 StatusCode = 500,

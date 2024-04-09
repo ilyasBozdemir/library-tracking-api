@@ -43,8 +43,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
                 PageCount = request.PageCount,
                 Status = request.Status,
                 IsDeleted = false,
-                DeletedDate = null,
-                IsDamaged = request.IsDamaged,
+                DeletedDate = null
             };
 
             var bookDto = new BookDTO()
@@ -54,9 +53,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
                 ISBN = request.ISBN,
                 Publisher = request.Publisher,
                 PublicationDate = request.PublicationDate,
-                PageCount = request.PageCount,
-                Status = request.Status,
-                IsDamaged = request.IsDamaged,
+                PageCount = request.PageCount
             };
 
             //var newBook = _mapper.Map<Domain.Entities.Library.Book>(request); // bunu assembly olarak eklerken sorun oldugu için 
