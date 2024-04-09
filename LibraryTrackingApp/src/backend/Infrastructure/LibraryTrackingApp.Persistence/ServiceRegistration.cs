@@ -1,5 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 using LibraryTrackingApp.Persistence.UnitOfWorks;
+using Microsoft.Extensions.Options;
 
 namespace LibraryTrackingApp.Persistence;
 
@@ -41,12 +42,11 @@ public static class ServiceRegistration
                      sqlOptions =>
                      {
                          sqlOptions.EnableRetryOnFailure(maxRetryCount: 5,
-                         maxRetryDelay: TimeSpan.FromSeconds(3),
+                         maxRetryDelay: TimeSpan.FromSeconds(15),
                          errorNumbersToAdd: null);
                      })
                      .EnableSensitiveDataLogging()
                  );
-
         return services;
     }
 }

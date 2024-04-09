@@ -34,7 +34,6 @@
 	<Folder Include="Features\Commands\Return\CreateReturn\" />
 	<Folder Include="Features\Commands\Return\DeleteReturn\" />
 	<Folder Include="Features\Commands\Return\UpdateReturn\" />
-	<Folder Include="Features\Events\BookStock\" />
 	<Folder Include="Features\Events\Loan\" />
 	<Folder Include="Features\Events\Member\" />
 	<Folder Include="Features\Events\Return\" />

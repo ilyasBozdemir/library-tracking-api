@@ -9,7 +9,7 @@ public class BaseController : ControllerBase
     {
         _mediator = mediator;
     }
-    protected async Task<IActionResult> HandleCommand<T>(IRequest<CommandResult<T>> request)
+    protected async Task<IActionResult> HandleCommand<T>(IRequest<CommandResult<T>> request)//testing
     {
         var result = await _mediator.Send(request);
 
@@ -19,7 +19,7 @@ public class BaseController : ControllerBase
         };
     }
 
-    protected async Task<IActionResult> HandleQuery<T>(IRequest<QueryResult<T>> request)
+    protected async Task<IActionResult> HandleQuery<T>(IRequest<QueryResult<T>> request)//testing
     {
         var result = await _mediator.Send(request);
 

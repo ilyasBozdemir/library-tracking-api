@@ -26,7 +26,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
 
             if (existingBook)
             {
-                return new CreateBookCommandResponse
+                return new ()
                 {
                     StatusCode = 409,
                     Success = false,
@@ -69,9 +69,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
 
             if (isAdded)
             {
-
-                await _mediator.Publish(new BookCreatedEvent() { BookDTO = bookDto });
-                return new CreateBookCommandResponse
+                return new()
                 {
                     StatusCode = 200,
                     Success = true,
@@ -81,7 +79,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
             else
             {
 
-                return new CreateBookCommandResponse
+                return new()
                 {
                     StatusCode = 400,
                     Success = false,
@@ -92,7 +90,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
         }
         catch (Exception ex)
         {
-            return new CreateBookCommandResponse
+            return new()
             {
                 StatusCode = 500,
                 Success = false,

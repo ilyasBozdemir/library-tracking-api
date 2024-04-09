@@ -1,5 +1,6 @@
-﻿using LibraryTrackingApp.Application.Features.Commands.BookStock.CreateBookStock;
-using LibraryTrackingApp.Application.Features.Commands.BookStock.UpdateBookStock;
+﻿using LibraryTrackingApp.Application.Features.Commands.StockOperation;
+using LibraryTrackingApp.Application.Features.Events.BookStock;
+using LibraryTrackingApp.Domain.Enums;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
@@ -10,60 +11,59 @@ public class BookStocksController : BaseController
 {
     public BookStocksController(IMediator mediator) : base(mediator) {}
 
-    [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateBookStockCommandRequest request)
+
+    [HttpPost("increase")]
+    public async Task<IActionResult> IncreaseStock(Guid bookId, int quantity)
     {
-        var response = await _mediator.Send(request);
+        var response = await _mediator.Send(new StockOperationCommandRequest()
+        {
+            Quantity = quantity,
+            OperationType = StockOperationType.Increase,
+            BookId = bookId
+        });
+
+        await _mediator.Publish(new StockOperationEvent()
+        {
+            Errors = response.Errors,
+            IsSuccessful = response.Success,
+            BookId = bookId,
+            Quantity = quantity,
+            OperationType= StockOperationType.Increase,
+        });
+
         return Ok(response);
     }
 
-
-
-    [HttpPut("{id}")]
-    public async Task<IActionResult> Update([FromRoute] Guid id, [FromBody] UpdateBookCommandRequest request)
+    [HttpPost("decrease")]
+    public async Task<IActionResult> DecreaseStock(Guid bookId, int quantity)
     {
-        request.Id = id;
-        var response = await _mediator.Send(request);
+        var response = await _mediator.Send(new StockOperationCommandRequest()
+        {
+            Quantity = quantity,
+            OperationType = StockOperationType.Decrease,
+            BookId = bookId
+        });
+        await _mediator.Publish(new StockOperationEvent()
+        {
+            Errors = response.Errors,
+            IsSuccessful = response.Success,
+            BookId = bookId,
+            Quantity = quantity,
+            OperationType = StockOperationType.Decrease,
+        });
         return Ok(response);
     }
 
-
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete([FromRoute] Guid id)
+    [HttpGet("{bookId}")]
+    public async Task<IActionResult> GetBookStockInfo(Guid bookId)
     {
-        var request = new DeleteBookCommandRequest { Id = id };
-        var response = await _mediator.Send(request);
-        return Ok(response);
+        return Ok();
     }
 
     [HttpGet]
-    public async Task<IActionResult> GetAllBooks([FromBody] GetAllBooksQueryRequest request)
+    public async Task<IActionResult> GetAllBookStocks()
     {
-        var response = await _mediator.Send(request);
-
-        if (response != null && response.Data != null)
-        {
-            return Ok(response.Data);
-        }
-        else
-        {
-            return NotFound();
-        }
+        return Ok();
     }
 
-    [HttpGet("{id}")]
-    public async Task<IActionResult> GetBook([FromRoute] Guid id)
-    {
-        var query = new GetBookQueryRequest { BookId = id };
-        var response = await _mediator.Send(query);
-
-        if (response != null && response.Data != null)
-        {
-            return Ok(response.Data);
-        }
-        else
-        {
-            return NotFound();
-        }
-    }
 }

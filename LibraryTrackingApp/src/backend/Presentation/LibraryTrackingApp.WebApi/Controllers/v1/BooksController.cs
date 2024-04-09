@@ -1,4 +1,6 @@
-﻿namespace LibraryTrackingApp.WebApi.Controllers.v1;
+﻿using LibraryTrackingApp.Application.Features.Events.Book;
+
+namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
@@ -11,6 +13,12 @@ public class BooksController : BaseController
     public async Task<IActionResult> Create([FromBody] CreateBookCommandRequest request)
     {
         var response = await _mediator.Send(request);
+        await _mediator.Publish(new BookCommandEvent()
+        {
+            Errors = response.Errors,
+            IsSuccessful = response.Success,
+            RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.Create
+        });
         return Ok(response);
     }
 
@@ -21,6 +29,14 @@ public class BooksController : BaseController
     {
         request.Id = id;
         var response = await _mediator.Send(request);
+
+        await _mediator.Publish(new BookCommandEvent()
+        {
+            Errors = response.Errors,
+            IsSuccessful = response.Success,
+            EntityId = id.ToString(),
+            RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.Update
+        });
         return Ok(response);
     }
 
@@ -30,6 +46,14 @@ public class BooksController : BaseController
     {
         var request = new DeleteBookCommandRequest { Id = id };
         var response = await _mediator.Send(request);
+
+        await _mediator.Publish(new BookCommandEvent()
+        {
+            Errors = response.Errors,
+            IsSuccessful = response.Success,
+            EntityId = id.ToString(),
+            RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.Delete
+        });
         return Ok(response);
     }
 
@@ -40,10 +64,24 @@ public class BooksController : BaseController
 
         if (response != null && response.Data != null)
         {
+            await _mediator.Publish(new BookCommandEvent()
+            {
+                Errors = response.Errors,
+                IsSuccessful = response.Success,
+                RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.GetAll
+
+            });
             return Ok(response.Data);
         }
         else
         {
+            await _mediator.Publish(new BookCommandEvent()
+            {
+                Errors = response.Errors,
+                IsSuccessful = false,
+                RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.GetAll
+
+            });
             return NotFound();
         }
     }
@@ -56,10 +94,23 @@ public class BooksController : BaseController
 
         if (response != null && response.Data != null)
         {
+            await _mediator.Publish(new BookCommandEvent()
+            {
+                Errors = response.Errors,
+                IsSuccessful = response.Success,
+                RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.Get
+
+            });
             return Ok(response.Data);
         }
         else
         {
+            await _mediator.Publish(new BookCommandEvent()
+            {
+                Errors = response.Errors,
+                IsSuccessful = false,
+                RequestNotificationType = LibraryTrackingApp.Domain.Enums.RequestNotificationType.Get
+            });
             return NotFound();
         }
     }

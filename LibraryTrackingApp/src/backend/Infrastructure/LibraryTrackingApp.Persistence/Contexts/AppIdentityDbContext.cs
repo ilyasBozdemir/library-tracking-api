@@ -2,6 +2,7 @@
 using LibraryTrackingApp.Domain.Entities.Library;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Reflection;
 
 namespace LibraryTrackingApp.Persistence.Contexts;
