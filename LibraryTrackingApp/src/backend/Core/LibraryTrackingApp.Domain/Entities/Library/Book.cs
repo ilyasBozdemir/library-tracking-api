@@ -11,4 +11,7 @@ public class Book : BaseEntity<Guid>
     public DateTime PublicationDate { get; set; } //yayın tarihi
     public BookStatus Status { get; set; } // Kitap durumu
     public bool IsDamaged { get; set; } // Hasar durumu
+
+    public virtual ICollection<BookStock> BookStocks { get; set; }
+    public virtual ICollection<Loan> Loans { get; set; }
 }

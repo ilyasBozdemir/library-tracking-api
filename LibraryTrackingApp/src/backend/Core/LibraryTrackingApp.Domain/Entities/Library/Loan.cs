@@ -11,4 +11,9 @@ public class Loan : BaseEntity<Guid>
     public bool HasFee { get; set; } // ücretli mi
 
     public TimeSpan TimeElapsedSinceBorrowDate => DateTime.Now - BorrowDate; // geçen süre
+
+    // Ödünç alınan kitaba olan ilişki
+    public virtual Book Book { get; set; }
+    public virtual Return Return { get; set; }
+    public virtual Member Member { get; set; }
 }

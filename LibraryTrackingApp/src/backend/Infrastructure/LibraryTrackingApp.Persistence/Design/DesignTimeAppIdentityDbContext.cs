@@ -1,20 +1,13 @@
-﻿namespace LibraryTrackingApp.Persistence.Design;
+﻿using LibraryTrackingApp.Domain.Constants;
+
+namespace LibraryTrackingApp.Persistence.Design;
 
 public class DesignTimeAppIdentityDbContext : IDesignTimeDbContextFactory<AppIdentityDbContext>
 {
-    private readonly IConfiguration _configuration;
-
-    public DesignTimeAppIdentityDbContext(IConfiguration configuration)
-    {
-        _configuration = configuration;
-    }
     public AppIdentityDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<AppIdentityDbContext>();
-
-        string connectionString = _configuration.GetConnectionString("DefaultConnection");
-
-        optionsBuilder.UseSqlServer(connectionString);
+        optionsBuilder.UseSqlServer(AppConstant.DefaultConnectionString);
         return new AppIdentityDbContext(optionsBuilder.Options);
     }
 }

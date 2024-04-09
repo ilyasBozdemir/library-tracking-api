@@ -2,7 +2,7 @@
 
 namespace LibraryTrackingApp.Application.DTOs;
 
-public record CreateBookDto
+public record CreateBookDto : BaseAuditableDTO
 {
     public string Title { get; init; } // Başlık
     public string Author { get; init; } // Yazar

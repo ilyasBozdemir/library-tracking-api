@@ -1,6 +1,5 @@
-﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+﻿using LibraryTrackingApp.Domain.Constants;
 using LibraryTrackingApp.Persistence.UnitOfWorks;
-using Microsoft.Extensions.Options;
 
 namespace LibraryTrackingApp.Persistence;
 
@@ -38,7 +37,7 @@ public static class ServiceRegistration
     public static IServiceCollection AddDatabaseConfiguration(this IServiceCollection services, IConfiguration configuration)
     {
         services.AddDbContextPool<AppIdentityDbContext>(
-                 options => options.UseSqlServer(configuration.GetConnectionString("DefaultConnection"),
+                 options => options.UseSqlServer(AppConstant.DefaultConnectionString,
                      sqlOptions =>
                      {
                          sqlOptions.EnableRetryOnFailure(maxRetryCount: 5,

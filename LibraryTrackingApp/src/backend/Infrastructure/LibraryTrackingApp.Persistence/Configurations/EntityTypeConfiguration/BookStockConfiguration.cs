@@ -1,6 +1,5 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Microsoft.EntityFrameworkCore;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 

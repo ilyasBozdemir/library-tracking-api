@@ -15,4 +15,7 @@ public class Member : BaseEntity<Guid>
     public int PenaltyDurationInDays { get; set; } // Ceza süresi (gün cinsinden)
     public bool IsExtensionAllowed { get; set; } // Uzatma izni
     public int ExtensionDurationInDays { get; set; } // Uzatma süresi (gün cinsinden)
+
+    // Üye tarafından yapılan ödünçlerin ilişkisi
+    public virtual ICollection<Loan> Loans { get; set; }
 }

@@ -7,4 +7,7 @@ public class Return : BaseEntity<Guid>
     public bool IsLate { get; set; } // Geciken iade mi?
     public BookStatus BookStatus { get; set; } // Durumu
     public int PenaltyDurationInDays { get; set; } // Uygulanan ceza süresi (gün cinsinden)
+
+    // İade edilen ödünçe olan ilişki
+    public virtual Loan Loan { get; set; }
 }
