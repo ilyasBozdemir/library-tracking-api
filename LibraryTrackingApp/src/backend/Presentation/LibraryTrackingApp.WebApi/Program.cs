@@ -2,7 +2,11 @@ using LibraryTrackingApp.Infrastructure;
 using LibraryTrackingApp.Application;
 using LibraryTrackingApp.Persistence;
 using LibraryTrackingApp.Application.Filters;
+using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs.Swagger.Helpers;
+using LibraryTrackingApp.Infrastructure.Enums;
 
+string assemblyName =System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
+Console.WriteLine(assemblyName);
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -41,11 +45,7 @@ builder.Services.AddInfrastructureServices();
 
 var app = builder.Build();
 
-if (app.Environment.IsDevelopment())
-{
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+app.UseCustomSwaggerUI(app.Environment, LayerName.WebAPI);
 
 app.UseHttpsRedirection();
 
