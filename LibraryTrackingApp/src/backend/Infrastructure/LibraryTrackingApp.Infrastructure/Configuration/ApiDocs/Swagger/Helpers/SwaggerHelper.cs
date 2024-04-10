@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System.Reflection;
@@ -29,6 +30,7 @@ public static class SwaggerHelper
             .Distinct()
             .OrderBy(v => v.ToString());
 
+        // testing...
         services.AddSwaggerGen(c =>
         {
             c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
@@ -37,11 +39,29 @@ public static class SwaggerHelper
             {
                 var versionStr = $"v{version}";
 
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+
+
+            }
+        });
+        /*
+        services.AddSwaggerGen(c =>
+        {
+            c.ResolveConflictingActions(apiDescriptions => apiDescriptions.First());
+
+            foreach (var version in apiVersions)
+            {
+                var versionStr = $"v{version}";
+
+
 
                 if (apiInfos.TryGetValue(versionStr, out var openApiInfo))
                 {
+                 
                     c.SwaggerDoc(versionStr, openApiInfo);
+
+                    Console.WriteLine(versionStr);
+                    Console.WriteLine(openApiInfo.Title);
+                    Console.WriteLine(openApiInfo.Contact.Name);
 
                     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
                     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
@@ -72,7 +92,6 @@ public static class SwaggerHelper
             {
                 c.AddSecurityRequirement(OpenApiSecurityRequirements.BearerSecurityRequirement);
                 c.AddSecurityDefinition("Bearer", SecuritySchemes.BearerSecurityScheme);
-
                 c.OperationFilter<ParameterOperationFilter>();
                 c.OperationFilter<ResponseOperationFilter>();
                 c.OperationFilter<SecurityOperationFilter>();
@@ -84,7 +103,7 @@ public static class SwaggerHelper
 
             }
         });
-
+        */
         services.AddApiVersioning(setup =>
         {
             setup.DefaultApiVersion = new ApiVersion(1, 0);
@@ -99,7 +118,7 @@ public static class SwaggerHelper
         LayerName layerName
     )
     {
-        //app.UseSwagger();
+        app.UseSwagger();
         app.UseSwaggerUI(c =>
         {
             foreach (var apiVersionInfo in GetAllVersions(layerName))
@@ -107,11 +126,6 @@ public static class SwaggerHelper
                 c.SwaggerEndpoint(
                     $"/swagger/{apiVersionInfo.Version}/swagger.json",
                     $"{apiVersionInfo.OpenApiInfo.Title}"
-                );
-
-                Console.WriteLine(
-                    $"/swagger/{apiVersionInfo.Version}/swagger.json "
-                        + $"{apiVersionInfo.OpenApiInfo.Title}"
                 );
             }
         });

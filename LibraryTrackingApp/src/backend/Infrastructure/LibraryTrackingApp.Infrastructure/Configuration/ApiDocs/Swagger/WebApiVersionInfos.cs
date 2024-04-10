@@ -12,15 +12,12 @@ public static class WebApiVersionInfos
         yield return V1;
     }
 
-    static string repositoryOwner = "ilyasBozdemir";
-    static string repositoryName = "libraryTrackingApp";
-
     public static ApiVersionInfo V1 => new ApiVersionInfo
     {
         Version = $"v{ApiVersions.V1}",
         OpenApiInfo = new OpenApiInfo
         {
-            Title = $"Kütüphane Takip API v{ApiVersions.V1}",
+            Title = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name.Split(".")[0]} v{ApiVersions.V1}",
             Version = $"v{ApiVersions.V1}",
             Description = @"
              Bu API v1 sürümü, kütüphane takip uygulaması için kapsamlı bir dizi özellik sunmaktadır: \n" +
@@ -39,7 +36,7 @@ public static class WebApiVersionInfos
             License = new OpenApiLicense
             {
                 Name = "API Lisansı",
-                Url = new Uri($"https://raw.githubusercontent.com/{repositoryOwner}/{repositoryName}/main/LICENSE")
+                Url = new Uri($"https://raw.githubusercontent.com/{AppConstant.repositoryOwner}/{AppConstant.repositoryName}/main/LICENSE")
             }
         }
 

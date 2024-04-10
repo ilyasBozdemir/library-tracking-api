@@ -5,8 +5,7 @@ using LibraryTrackingApp.Application.Filters;
 using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs.Swagger.Helpers;
 using LibraryTrackingApp.Infrastructure.Enums;
 
-string assemblyName =System.Reflection.Assembly.GetExecutingAssembly().GetName().Name;
-Console.WriteLine(assemblyName);
+
 
 var builder = WebApplication.CreateBuilder(args);
 

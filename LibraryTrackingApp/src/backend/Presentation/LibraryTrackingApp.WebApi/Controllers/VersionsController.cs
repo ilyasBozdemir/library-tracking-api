@@ -1,7 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
-namespace LibraryTrackingApp.WebApi.Controllers;
+﻿namespace LibraryTrackingApp.WebApi.Controllers;
 
 [ApiController]
 [Route("api/versions")]
@@ -17,20 +14,19 @@ public class VersionsController : ControllerBase
     [HttpGet("{version}")]
     public IActionResult Get(string version)
     {
-        // API sürümüne ilişkin belgeleme bağlantısı
+    
         string documentationLink = $"https://api.example.com/docs/{version}";
 
-        // API sürümüne ilişkin değişiklik günlüğü
-        string changelog = "https://api.example.com/changelog";
+        
+        string changelogUrl = $"https://raw.githubusercontent.com/{AppConstant.repositoryOwner}/{AppConstant.repositoryName}/main/docs/{ApiVersions.Current}.0.0/CHANGELOG.md";
 
-        // API sürümünün destek bilgileri
+       
         string supportInformation = $"API Version {version} is supported until {DateTime.UtcNow.AddYears(2):yyyy-MM-dd}";
 
-        // İlgili bilgileri JSON olarak döndürme
         var response = new
         {
             DocumentationLink = documentationLink,
-            Changelog = changelog,
+            Changelog = changelogUrl,
             SupportInformation = supportInformation
         };
 
@@ -43,9 +39,7 @@ public class VersionsController : ControllerBase
     {
         var documentationLinks = new Dictionary<string, string>
             {
-                { "CustomersAPI", "/api/v1/customers/docs" },
-                { "OrdersAPI", "/api/v1/orders/docs" },
-                { "InvoicesAPI", "/api/v1/invoices/docs" }
+                { "WebAPI", "/api/v1/customers/docs" },
             };
 
         return Ok(documentationLinks);
