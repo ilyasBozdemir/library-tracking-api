@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using LibraryTrackingApp.Infrastructure.Mvc;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers;
@@ -8,11 +9,24 @@ namespace LibraryTrackingApp.WebApi.Controllers;
 [Route("api/health-checks")]
 [ApiVersion(ApiVersions.V1)]
 
-public class HealthChecksController : ControllerBase
+public class HealthChecksController : CustomBaseController
 {
-    [HttpGet("")]
-    public IActionResult CheckHealth()
+    public HealthChecksController(IMediator mediator) : base(mediator)
     {
-        return Ok("API is up and running.");
+    }
+
+
+    [HttpGet("health-url")]
+    public IActionResult GetHealthCheckUrl()
+    {
+        var healthCheckUrl = "https://localhost:7115/health";
+        return Ok(healthCheckUrl);
+    }
+
+    [HttpGet("health-ui-url")]
+    public IActionResult GetHealthCheckUIUrl()
+    {
+        var healthCheckUIUrl = "https://localhost:7115/health-ui";
+        return Ok(healthCheckUIUrl);
     }
 }

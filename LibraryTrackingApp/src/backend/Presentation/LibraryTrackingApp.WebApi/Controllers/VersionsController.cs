@@ -1,12 +1,23 @@
-﻿namespace LibraryTrackingApp.WebApi.Controllers;
+﻿using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs;
+using LibraryTrackingApp.Infrastructure.Mvc;
+using LibraryTrackingApp.Infrastructure.Repositories;
+
+namespace LibraryTrackingApp.WebApi.Controllers;
 
 
-// testing...
+// test asamasında..
 [ApiController]
 [Route("api/versions")]
 [ApiVersion(ApiVersions.V1)]
-public class VersionsController : ControllerBase
+public class VersionsController : CustomBaseController
 {
+    private readonly VersionConfig _versionConfig;
+
+    public VersionsController(IMediator mediator) : base(mediator)
+    {
+       
+    }
+
     [HttpGet("")]
     public IActionResult Get()
     {
@@ -16,14 +27,17 @@ public class VersionsController : ControllerBase
     [HttpGet("{version}")]
     public IActionResult Get(string version)
     {
-    
+
         string documentationLink = $"https://api.example.com/docs/{version}";
 
-        
-        string changelogUrl = $"https://raw.githubusercontent.com/{AppConstant.repositoryOwner}/{AppConstant.repositoryName}/main/docs/{ApiVersions.Current}.0.0/CHANGELOG.md";
+        string changelogUrl = string.Format(AppConstant.changelogUrlTemplate, AppConstant.repositoryOwner, AppConstant.repositoryName, ApiVersions.Current);
 
-       
+
         string supportInformation = $"API Version {version} is supported until {DateTime.UtcNow.AddYears(2):yyyy-MM-dd}";
+
+
+
+
 
         var response = new
         {
@@ -31,6 +45,7 @@ public class VersionsController : ControllerBase
             Changelog = changelogUrl,
             SupportInformation = supportInformation
         };
+
 
         return Ok(response);
     }
@@ -46,5 +61,6 @@ public class VersionsController : ControllerBase
 
         return Ok(documentationLinks);
     }
+
 }
 

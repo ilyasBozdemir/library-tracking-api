@@ -1,11 +1,17 @@
-﻿namespace LibraryTrackingApp.WebApi.Controllers;
+﻿using LibraryTrackingApp.Domain.Constants;
+using MediatR;
+using Microsoft.AspNetCore.Mvc;
+using LibraryTrackingApp.Application.Features.Results;
+
+namespace LibraryTrackingApp.Infrastructure.Mvc;
 
 
+[ApiVersion(ApiVersions.V1)]
 [ApiController]
-public class BaseController : ControllerBase
+public class CustomBaseController : ControllerBase
 {
     protected readonly IMediator _mediator;
-    public BaseController(IMediator mediator)
+    public CustomBaseController(IMediator mediator)
     {
         _mediator = mediator;
     }

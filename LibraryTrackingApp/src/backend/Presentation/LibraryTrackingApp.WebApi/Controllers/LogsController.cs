@@ -1,12 +1,18 @@
-﻿namespace LibraryTrackingApp.WebApi.Controllers;
+﻿using LibraryTrackingApp.Infrastructure.Mvc;
+
+namespace LibraryTrackingApp.WebApi.Controllers;
 
 
 [ApiController]
 [Route("api/logs")]
 [ApiVersion(ApiVersions.V1)]
-public class LogsController : ControllerBase
+public class LogsController : CustomBaseController
 {
-   [ HttpGet]
+    public LogsController(IMediator mediator) : base(mediator)
+    {
+    }
+
+    [ HttpGet]
     public IActionResult Index()
     {
         return Ok();

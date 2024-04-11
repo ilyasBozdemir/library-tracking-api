@@ -1,11 +1,25 @@
-﻿namespace LibraryTrackingApp.WebApi.Controllers.v1;
+﻿using LibraryTrackingApp.Infrastructure.Mvc;
 
+namespace LibraryTrackingApp.WebApi.Controllers.v1;
+
+
+/// <summary>
+/// Yönetici işlemlerini yönetmek için Controller.
+/// </summary>
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
-[Route($"api/v{ApiVersions.V1}/books")]
-public class AdminController : BaseController
+[Route($"api/v{ApiVersions.V1}/admin")]
+public class AdminController : CustomBaseController
 {
     public AdminController(IMediator mediator) : base(mediator)
     {
     }
+
+    [HttpGet]
+    public async Task<IActionResult> Index()
+    {
+        return Ok();
+    }
 }
+      
+
