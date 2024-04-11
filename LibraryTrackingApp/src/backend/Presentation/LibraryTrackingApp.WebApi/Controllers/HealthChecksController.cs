@@ -1,14 +1,10 @@
 ﻿using LibraryTrackingApp.Infrastructure.Mvc;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-
 namespace LibraryTrackingApp.WebApi.Controllers;
 
 
 [ApiController]
 [Route("api/health-checks")]
 [ApiVersion(ApiVersions.V1)]
-
 public class HealthChecksController : CustomBaseController
 {
     public HealthChecksController(IMediator mediator) : base(mediator)

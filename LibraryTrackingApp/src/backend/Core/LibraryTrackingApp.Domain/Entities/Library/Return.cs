@@ -9,5 +9,5 @@ public class Return : BaseEntity<Guid>
     public int PenaltyDurationInDays { get; set; } // Uygulanan ceza süresi (gün cinsinden)
 
     // İade edilen ödünçe olan ilişki
-    public virtual Loan Loan { get; set; }
+    public virtual Borrow Borrow { get; set; }
 }

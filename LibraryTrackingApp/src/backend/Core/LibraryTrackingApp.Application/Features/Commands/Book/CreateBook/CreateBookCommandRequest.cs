@@ -3,7 +3,7 @@
 public class CreateBookCommandRequest : IRequest<CreateBookCommandResponse>
 {
     public string Title { get; init; } // Başlık
-    public string Author { get; init; } // Yazar
+    public string Author { get; init; } // Yazar // Yazar
     public string ISBN { get; init; } // ISBN
     public int PageCount { get; init; } // Sayfa Sayısı
     public string Publisher { get; init; } // Yayıncı

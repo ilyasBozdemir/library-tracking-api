@@ -36,7 +36,6 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
             var newBook = new Domain.Entities.Library.Book()
             {
                 Title = request.Title,
-                Author = request.Author,
                 ISBN = request.ISBN,
                 Publisher = request.Publisher,
                 PublicationDate = request.PublicationDate,
@@ -49,7 +48,6 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
             var bookDto = new BookDTO()
             {
                 Title = request.Title,
-                Author = request.Author,
                 ISBN = request.ISBN,
                 Publisher = request.Publisher,
                 PublicationDate = request.PublicationDate,

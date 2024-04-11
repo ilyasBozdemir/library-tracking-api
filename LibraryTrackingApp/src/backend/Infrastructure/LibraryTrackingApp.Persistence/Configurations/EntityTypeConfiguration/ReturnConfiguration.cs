@@ -11,7 +11,7 @@ public class ReturnConfiguration : IEntityTypeConfiguration<Return>
         builder.Property(r => r.ReturnDate).IsRequired();
 
         
-        builder.HasOne(r => r.Loan)
+        builder.HasOne(r => r.Borrow)
                .WithOne(l => l.Return) 
                .HasForeignKey<Return>(r => r.LoanId)
                .IsRequired();

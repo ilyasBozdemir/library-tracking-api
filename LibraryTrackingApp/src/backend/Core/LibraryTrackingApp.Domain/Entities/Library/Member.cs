@@ -6,8 +6,9 @@ public class Member : BaseEntity<Guid>
     public string Email { get; set; } // mail
     public string Address { get; set; } // adres
     public string PhoneNumber { get; set; } // telefon numarası
+    public DateTime MembershipDate { get; set; } // Üyelik Tarihi
     public DateTime BirthDate { get; set; } // doğum tarihi
-    public string Gender { get; set; } // cinsiyet
+    public bool Gender { get; set; } // cinsiyet
     public string Occupation { get; set; } //Meslek
     public int NumberOfLateReturns { get; set; } // Geciken iade sayısı
     public int MaxLateReturnsAllowed { get; set; } // Maksimum geciken iade sayısı izni
@@ -17,5 +18,5 @@ public class Member : BaseEntity<Guid>
     public int ExtensionDurationInDays { get; set; } // Uzatma süresi (gün cinsinden)
 
     // Üye tarafından yapılan ödünçlerin ilişkisi
-    public virtual ICollection<Loan> Loans { get; set; }
+    public virtual ICollection<Borrow> Loans { get; set; }
 }

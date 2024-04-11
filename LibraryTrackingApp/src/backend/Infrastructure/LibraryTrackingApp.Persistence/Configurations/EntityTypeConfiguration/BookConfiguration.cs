@@ -10,12 +10,12 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         builder.ToTable("Books");
         builder.HasKey(b => b.Id);
         builder.Property(b => b.Title).IsRequired();
-        builder.Property(b => b.Author).IsRequired();
+
         builder.Property(b => b.ISBN).IsRequired();
 
         builder.HasMany(b => b.BookStocks)
            .WithOne(bs => bs.Book) 
-           .HasForeignKey(bs => bs.BookId);
+           .HasForeignKey(bs => bs.Id);
 
     }
 }

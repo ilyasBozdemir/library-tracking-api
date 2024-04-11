@@ -1,11 +1,13 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
 // Loan entity
-public class Loan : BaseEntity<Guid>
+public class Borrow : BaseEntity<Guid>
 {
     public Guid Id { get; set; } // borç Id
     public Guid BookId { get; set; } //kitap id
-    public DateTime BorrowDate { get; set; } //Ödünç Alma Tarihi
+    public Guid MemberId { get; set; } // Ödünç alan üyenin ID'si
+    public Guid LenderId { get; set; } // Ödünç veren personelin ID'si
+    public DateTime BorrowDate { get; set; } // Ödünç alma tarihi
     public DateTime DueDate { get; set; } // bitiş tarihi
     public BookStatus BookStatus { get; set; } // Durumu
     public bool HasFee { get; set; } // ücretli mi
@@ -16,4 +18,5 @@ public class Loan : BaseEntity<Guid>
     public virtual Book Book { get; set; }
     public virtual Return Return { get; set; }
     public virtual Member Member { get; set; }
+    public virtual Staff Lender { get; set; }
 }

@@ -13,7 +13,7 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options) { }
 
     public DbSet<Book> Books { get; set; }
-    public DbSet<Loan> Loans { get; set; }
+    public DbSet<Borrow> Loans { get; set; }
     public DbSet<Member> Members { get; set; }
     public DbSet<Return> Returns { get; set; }
 

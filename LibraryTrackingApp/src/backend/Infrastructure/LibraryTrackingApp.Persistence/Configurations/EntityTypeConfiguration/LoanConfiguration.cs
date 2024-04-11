@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
-public class LoanConfiguration : IEntityTypeConfiguration<Loan>
+public class LoanConfiguration : IEntityTypeConfiguration<Borrow>
 {
-    public void Configure(EntityTypeBuilder<Loan> builder)
+    public void Configure(EntityTypeBuilder<Borrow> builder)
     {
         builder.ToTable("Loans");
         builder.HasKey(l => l.Id);
@@ -15,7 +15,7 @@ public class LoanConfiguration : IEntityTypeConfiguration<Loan>
 
 
         builder.HasOne(l => l.Book)
-               .WithMany(b => b.Loans) 
+               .WithMany(b => b.Borrows) 
                .HasForeignKey(l => l.BookId)
                .IsRequired(); 
     }

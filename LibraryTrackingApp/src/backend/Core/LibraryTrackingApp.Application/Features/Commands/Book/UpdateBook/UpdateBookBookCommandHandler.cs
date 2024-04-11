@@ -33,7 +33,6 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
                 {
                     var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.Book>();
 
-                    existingBook.Author = request.Author;
                     existingBook.Title = request.Title;
                     existingBook.ISBN = request.ISBN;
                     existingBook.PageCount = request.PageCount;

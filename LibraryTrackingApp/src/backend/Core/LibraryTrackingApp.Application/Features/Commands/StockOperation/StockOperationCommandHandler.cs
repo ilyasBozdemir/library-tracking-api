@@ -42,7 +42,7 @@ public class StockOperationCommandHandler
                     _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookStock>();
 
                 var existingBookStock = await readRepository.GetSingleAsync(
-                    s => s.BookId == request.BookId
+                    s => s.Id == request.BookId
                 );
                 if (existingBookStock != null)
                 {
@@ -98,7 +98,7 @@ public class StockOperationCommandHandler
                 {
                     var newBookStock = new Domain.Entities.Library.BookStock()
                     {
-                        BookId = request.BookId,
+                        Id = request.BookId,
                         Quantity = request.Quantity,
                     };
                     await writeRepository.AddAsync(newBookStock);
