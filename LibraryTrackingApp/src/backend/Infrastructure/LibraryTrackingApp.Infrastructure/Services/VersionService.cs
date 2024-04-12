@@ -1,18 +1,15 @@
-﻿using LibraryTrackingApp.Domain.Constants;
-using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs;
-using System;
+﻿using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs;
 
-namespace LibraryTrackingApp.Infrastructure.Repositories;
+namespace LibraryTrackingApp.Infrastructure.Services;
 
-public class VersionRepository
+public class VersionService
 {
-    private readonly Dictionary<string, VersionInfo> _versions = new Dictionary<string, VersionInfo>();
+    private readonly Dictionary<string, VersionInfo> _versions;
 
-    public VersionRepository()
+    public VersionService()
     {
-        AddVersion("v1", new VersionInfo { VersionNumber = "v1", Description = "V1 açıklama metni", SupportEndDate = DateTime.Now.AddDays(30) });
+        _versions = new Dictionary<string, VersionInfo>();
     }
-
 
     public void AddVersion(string version, VersionInfo versionInfo)
     {

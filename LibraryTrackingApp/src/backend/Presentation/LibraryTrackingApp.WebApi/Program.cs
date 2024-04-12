@@ -5,6 +5,7 @@ using LibraryTrackingApp.Application;
 using LibraryTrackingApp.Application.Filters;
 using LibraryTrackingApp.Infrastructure;
 using LibraryTrackingApp.Infrastructure.Enums;
+using LibraryTrackingApp.Infrastructure.Extensions;
 using LibraryTrackingApp.Infrastructure.Helpers;
 using LibraryTrackingApp.Persistence;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -77,8 +78,11 @@ builder.Services.AddInfrastructureServices();
 var app = builder.Build();
 
 app.UseCustomSwaggerUI(app.Environment, LayerName.WebAPI);
+//app.UseVersionValidation();
 
 app.UseHttpsRedirection();
+
+
 
 app.UseAuthorization();
 app.MapControllers();

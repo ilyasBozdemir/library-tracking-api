@@ -49,9 +49,9 @@
 	<Folder Include="Features\Queries\Return\GetAllReturns\" />
 	<Folder Include="Features\Queries\Return\GetReturn\" />
 	<Folder Include="Interfaces\Services\" />
-	<Folder Include="Middlewares\" />
 	<Folder Include="Claims\" />
 	<Folder Include="Attributes\" />
+	<Folder Include="Middlewares\" />
   </ItemGroup>
 
 </Project>

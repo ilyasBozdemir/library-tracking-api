@@ -5,11 +5,12 @@ namespace LibraryTrackingApp.Infrastructure.Configuration.ApiDocs.Swagger;
 
 public static class WebApiVersionInfos
 {
-
     public static IEnumerable<ApiVersionInfo> GetAllVersions()
     {
         yield return V1;
     }
+  
+
     public static ApiVersionInfo V1 => new ApiVersionInfo
     {
         Version = $"v{ApiVersions.V1}",
@@ -41,5 +42,4 @@ public static class WebApiVersionInfos
         }
 
     };
-
 }

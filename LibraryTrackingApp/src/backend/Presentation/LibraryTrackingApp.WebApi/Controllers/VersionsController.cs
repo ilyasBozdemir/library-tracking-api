@@ -5,8 +5,6 @@ using LibraryTrackingApp.Infrastructure.Repositories;
 
 namespace LibraryTrackingApp.WebApi.Controllers;
 
-
-
 [ApiController]
 [Route("api/versions")]
 [ApiVersion(ApiVersions.V1)]
@@ -14,15 +12,17 @@ public class VersionsController : CustomBaseController
 {
     private readonly VersionRepository _versionRepository;
     private string _baseUrl;
-    public VersionsController(IMediator mediator) : base(mediator)
+
+    public VersionsController(IMediator mediator)
+        : base(mediator)
     {
-        _versionRepository = new ();
+        _versionRepository = new();
     }
 
-    [HttpGet("")]
+    [HttpGet("all-versions")]
     public IActionResult GetAllVersion()
     {
-        var supportedVersions = _versionRepository.GetSupportedVersions();
+        var supportedVersions = _versionRepository.GetSupportedVersions(DateTime.Now);
 
         var response = new
         {
@@ -30,76 +30,64 @@ public class VersionsController : CustomBaseController
             SupportedVersions = supportedVersions
         };
         return Ok(response);
-
     }
 
     [HttpGet("{version}")]
     public IActionResult Get(string version)
     {
-        var supportedVersions = _versionRepository.GetSupportedVersions();
+        var supportedVersions = _versionRepository.GetSupportedVersions(DateTime.Now);
 
         if (!version.StartsWith("v"))
             version = "v" + version;
 
         var apiversions = SwaggerHelper.GetAllVersions(LayerName.WebAPI);
 
+        var requestedApiVersion = apiversions.FirstOrDefault(
+            apiversion => apiversion.Version == version
+        );
 
-        var  requestedApiVersion = apiversions.FirstOrDefault(apiversion => apiversion.Version == version);
-
-
-
-        if (supportedVersions.ContainsKey(version))
-        {
-            DateTime supportEndDate = supportedVersions[version];
-            var request = HttpContext.Request;
-            _baseUrl = $"{request.Scheme}://{request.Host}";
-
-            string swaggerJsonUri = _baseUrl;
-
-
-            swaggerJsonUri += string.Format(AppConstant.swaggerUrlTemplate, version); 
-
-            string changelogUrl = string.Format(AppConstant.changelogUrlTemplate, AppConstant.repositoryOwner, AppConstant.repositoryName, ApiVersions.Current);
-            string supportInformation = $"API Sürümü {version} {supportEndDate:yyyy-MM-dd}e kadar desteklenir.";
-      
-            var response = new
-            {
-                Title = requestedApiVersion.OpenApiInfo.Title,
-                Version = requestedApiVersion.OpenApiInfo.Version,
-                SwaggerJsonUri = swaggerJsonUri,
-                Changelog = changelogUrl,
-                SupportInformation = supportInformation
-            };
-
-            return Ok(response);
-        }
-        else
-        {
-            return NotFound($"API Version {version} is not supported.");
-        }
+        var versionInfo = _versionRepository.GetVersionInfo(version);
+        return Ok(versionInfo);
     }
 
-
     [HttpGet("api-docs")]
-    public IActionResult APIDocumentation()// örnek bu
+    public IActionResult APIDocumentation()
     {
         var request = HttpContext.Request;
-        _baseUrl = $"{request.Scheme}://{request.Host}";
+        _baseUrl = string.Format(AppConstant.baseUrlTemplate, request.Scheme, request.Host);
 
-        string swaggerJsonUri = _baseUrl;
+        string swaggerJsonUri = _baseUrl + string.Format(AppConstant.swaggerUrlTemplate, $"v{ApiVersions.Current}");
+       
+        var allVersions = SwaggerHelper.GetAllVersions(LayerName.WebAPI);
+
+        var requestedApiVersion = allVersions.FirstOrDefault(
+            apiversion => apiversion.Version == $"v{ApiVersions.Current}"
+        );
+
+        string changelogUrl = string.Format(
+               AppConstant.changelogUrlTemplate,
+               AppConstant.repositoryOwner,
+               AppConstant.repositoryName,
+              $"v{ApiVersions.Current}"
+           );
+
+        foreach (var versionInfo in allVersions)
+        {
+            Console.WriteLine($"Version: {versionInfo.Version}");
+        }
 
 
-        swaggerJsonUri += string.Format(AppConstant.swaggerUrlTemplate, ApiVersions.Current);
-
-        var documentationLinks = new Dictionary<string, string>
+        var documentationLinks = new
+        {
+            Title = requestedApiVersion.OpenApiInfo.Title,
+            SwaggerJsonUri = new 
             {
-                { "WebAPI", swaggerJsonUri },
-            };
+                WebAPI = swaggerJsonUri,
+            },
+            ChangelogUri = changelogUrl
 
-  
+        };
 
         return Ok(documentationLinks);
     }
-
 }
-
