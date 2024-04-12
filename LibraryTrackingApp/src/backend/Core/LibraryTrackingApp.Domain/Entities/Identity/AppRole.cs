@@ -3,9 +3,6 @@
 /*
  * 
  * Admin Rolü: Yönetim işlevlerine tam erişim. Örneğin, kullanıcıları yönetmek, finansal raporlara erişmek, sistem ayarlarını değiştirmek vb.
- * Müşteri Rolü: Genellikle kendi cari hesaplarına, faturalarına ve ödeme bilgilerine erişim.
- * Tedarikçi Rolü: Kendi faturalarını ve cari hesap bilgilerini görebilme, belki de sipariş takibi gibi işlevlere erişim.
- * 
  */
 
 /// <summary>

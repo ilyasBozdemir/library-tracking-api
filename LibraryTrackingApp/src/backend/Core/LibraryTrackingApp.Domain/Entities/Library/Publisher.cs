@@ -10,4 +10,6 @@ public class Publisher : BaseEntity<Guid>
     public string Address { get; set; } // Yayınevi adresi
     public string PhoneNumber { get; set; } // Yayınevi telefon numarası
     public string Email { get; set; } // Yayınevi e-posta adresi
+
+    public virtual ICollection<Book> Books { get; set; }
 }

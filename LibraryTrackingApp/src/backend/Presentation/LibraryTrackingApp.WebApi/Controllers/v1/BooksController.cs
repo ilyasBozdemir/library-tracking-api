@@ -97,49 +97,43 @@ public class BooksController : CustomBaseController
         return Ok(response);
     }
 
-    /// <summary>
-    /// Tüm kitapları alır.
-    /// </summary>
-    /// <param name="request">Kitapları filtrelemek için kriterleri içeren istek nesnesi.</param>
-    /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
-    [HttpGet]
-    public async Task<IActionResult> GetAllBooks([FromBody] GetAllBooksQueryRequest request)
-    {
-        var response = await _mediator.Send(request);
 
-        if (response != null && response.Data != null)
-        {
-            await _mediator.Publish(
-                new BookCommandEvent()
-                {
-                    Errors = response.Errors,
-                    IsSuccessful = response.Success,
-                    RequestNotificationType = LibraryTrackingApp
-                        .Domain
-                        .Enums
-                        .RequestNotificationType
-                        .GetAll
-                }
-            );
-            return Ok(response.Data);
-        }
-        else
-        {
-            await _mediator.Publish(
-                new BookCommandEvent()
-                {
-                    Errors = response.Errors,
-                    IsSuccessful = false,
-                    RequestNotificationType = LibraryTrackingApp
-                        .Domain
-                        .Enums
-                        .RequestNotificationType
-                        .GetAll
-                }
-            );
-            return NotFound();
-        }
+
+    /// <summary>
+    /// Verilen kitabı ödünç almak için istemciden gelen isteği işler.
+    /// </summary>
+    /// <param name="bookId">Ödünç alınacak kitabın ID'si.</param>
+    /// <param name="memberId">Ödünç alan üyenin ID'si.</param>
+    /// <returns>
+    /// 200 OK cevabı, işlem başarılı ise;
+    /// 404 Not Found cevabı, kitap bulunamadığı durumda;
+    /// 400 Bad Request cevabı, geçersiz kitap işlemi durumunda;
+    /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
+    /// </returns>
+    [HttpPost("borrow/{bookId}")]
+    public async Task<IActionResult> BorrowBook([FromRoute] Guid bookId, [FromRoute] Guid memberId)
+    {
+        return Ok();
     }
+
+
+    /// <summary>
+    /// Belirli bir kitabı iade etmek için istemciden gelen isteği işler.
+    /// </summary>
+    /// <param name="bookId">İade edilecek kitabın ID'si.</param>
+    /// <returns>
+    /// 200 OK cevabı, işlem başarılı ise;
+    /// 404 Not Found cevabı, kitap bulunamadığı durumda;
+    /// 400 Bad Request cevabı, geçersiz kitap işlemi durumunda;
+    /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
+    /// </returns>
+    [HttpPost("return/{bookId}")]
+    public async Task<IActionResult> ReturnBook([FromRoute] Guid bookId)
+    {
+        return Ok();
+    }
+
+
 
     /// <summary>
     /// Bir kitabı ID ile alır.
@@ -180,6 +174,50 @@ public class BooksController : CustomBaseController
                         .Enums
                         .RequestNotificationType
                         .Get
+                }
+            );
+            return NotFound();
+        }
+    }
+
+    /// <summary>
+    /// Tüm kitapları alır.
+    /// </summary>
+    /// <param name="request">Kitapları filtrelemek için kriterleri içeren istek nesnesi.</param>
+    /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
+    [HttpGet]
+    public async Task<IActionResult> GetAllBooks([FromBody] GetAllBooksQueryRequest request)
+    {
+        var response = await _mediator.Send(request);
+
+        if (response != null && response.Data != null)
+        {
+            await _mediator.Publish(
+                new BookCommandEvent()
+                {
+                    Errors = response.Errors,
+                    IsSuccessful = response.Success,
+                    RequestNotificationType = LibraryTrackingApp
+                        .Domain
+                        .Enums
+                        .RequestNotificationType
+                        .GetAll
+                }
+            );
+            return Ok(response.Data);
+        }
+        else
+        {
+            await _mediator.Publish(
+                new BookCommandEvent()
+                {
+                    Errors = response.Errors,
+                    IsSuccessful = false,
+                    RequestNotificationType = LibraryTrackingApp
+                        .Domain
+                        .Enums
+                        .RequestNotificationType
+                        .GetAll
                 }
             );
             return NotFound();

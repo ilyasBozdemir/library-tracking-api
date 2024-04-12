@@ -36,7 +36,6 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
                     existingBook.Title = request.Title;
                     existingBook.ISBN = request.ISBN;
                     existingBook.PageCount = request.PageCount;
-                    existingBook.Publisher = request.Publisher;
                     existingBook.PublicationDate = request.PublicationDate;
                     existingBook.Status = request.Status;
 

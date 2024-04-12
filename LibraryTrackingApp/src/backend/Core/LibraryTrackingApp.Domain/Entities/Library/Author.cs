@@ -9,5 +9,5 @@ public class Author : BaseEntity<Guid>
     public string Country { get; set; }
     public string Biography { get; set; }
 
-    public virtual Book Book { get; set; }
+    public virtual ICollection<Book> Books { get; set; }
 }

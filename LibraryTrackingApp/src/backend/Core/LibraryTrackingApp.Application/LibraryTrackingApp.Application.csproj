@@ -29,9 +29,9 @@
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
 	<Folder Include="Authorization\Policies\" />
-	<Folder Include="Features\Commands\Loan\CreateLoan\" />
-	<Folder Include="Features\Commands\Loan\DeleteLoan\" />
-	<Folder Include="Features\Commands\Loan\UpdateLoan\" />
+	<Folder Include="Features\Commands\Borrow\CreateBorrow\" />
+	<Folder Include="Features\Commands\Borrow\DeleteBorrow\" />
+	<Folder Include="Features\Commands\Borrow\UpdateBorrow\" />
 	<Folder Include="Features\Commands\Member\CreateMember\" />
 	<Folder Include="Features\Commands\Member\DeleteMember\" />
 	<Folder Include="Features\Commands\Member\UpdateMember\" />

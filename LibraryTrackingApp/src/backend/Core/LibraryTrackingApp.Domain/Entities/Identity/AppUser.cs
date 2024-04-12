@@ -1,5 +1,7 @@
-﻿namespace LibraryTrackingApp.Domain.Entities.Identity;
+﻿using LibraryTrackingApp.Domain.Entities.Library;
 
+namespace LibraryTrackingApp.Domain.Entities.Identity;
+ 
 public class AppUser : IdentityUser<Guid>
 {
     public Guid Id { get; set; }
@@ -14,4 +16,7 @@ public class AppUser : IdentityUser<Guid>
     public DateTime? LastModifiedDate { get; set; }
     public bool IsDeleted { get; set; }
     public DateTime? DeletedDate { get; set; }
+    public virtual Staff Staff { get; set; }
+    public ICollection<AppRole> AppRoles { get; set; }
+
 }

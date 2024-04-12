@@ -13,7 +13,7 @@ public class LibraryBranch : BaseEntity<Guid>
     public ICollection<Member> Members { get; set; } // Şubeye kayıtlı üyeler
     public ICollection<Staff> Staff { get; set; } // Şube personeli
 
-    public ICollection<BranchHours> BranchHours { get; set; }
+    public ICollection<BranchHour> BranchHours { get; set; }
     public ICollection<LibraryTransaction> Transactions { get; set; } // Şube işlemleri
 }
 

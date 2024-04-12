@@ -24,13 +24,6 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
         builder.Property(m => m.PenaltyDurationInDays).IsRequired();
         builder.Property(m => m.IsExtensionAllowed).IsRequired(); 
         builder.Property(m => m.ExtensionDurationInDays).IsRequired();
-
-
-       
-        builder.HasMany(m => m.Loans)
-               .WithOne(l => l.Member)
-               .HasForeignKey(l => l.Id)
-               .IsRequired(); 
     }
 }
 

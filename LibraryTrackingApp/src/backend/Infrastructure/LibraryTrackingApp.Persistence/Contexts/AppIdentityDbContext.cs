@@ -1,8 +1,5 @@
-﻿using LibraryTrackingApp.Domain.Entities.Identity;
-using LibraryTrackingApp.Domain.Entities.Library;
+﻿using LibraryTrackingApp.Domain.Entities.Library;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Diagnostics;
 using System.Reflection;
 
 namespace LibraryTrackingApp.Persistence.Contexts;
@@ -12,9 +9,18 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
 {
     public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options) { }
 
+    public DbSet<Author> Authors { get; set; }
     public DbSet<Book> Books { get; set; }
-    public DbSet<Borrow> Loans { get; set; }
+    public DbSet<BookStock> BookStocks { get; set; }
+    public DbSet<BranchHour> BranchHours { get; set; }
+    public DbSet<Genre> Genres { get; set; }
+    public DbSet<LibraryBranch> LibraryBranches { get; set; }
+    public DbSet<LibraryTransaction> LibraryTransactions { get; set; }
     public DbSet<Member> Members { get; set; }
+    public DbSet<Publisher> Publishers { get; set; }
+    public DbSet<Staff> Staffs { get; set; }
+    public DbSet<Tag> Tags { get; set; }
+    public DbSet<Borrow> Borrows { get; set; }
     public DbSet<Return> Returns { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

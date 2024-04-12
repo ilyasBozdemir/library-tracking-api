@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace LibraryTrackingApp.Persistence.Migrations
 {
     [DbContext(typeof(AppIdentityDbContext))]
-    [Migration("20240409204700_Mig004")]
-    partial class Mig004
+    [Migration("20240412092428_Mig001")]
+    partial class Mig001
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -25,10 +25,43 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("AuthorBook", b =>
+                {
+                    b.Property<Guid>("AuthorsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BooksId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("AuthorsId", "BooksId");
+
+                    b.HasIndex("BooksId");
+
+                    b.ToTable("AuthorBook");
+                });
+
+            modelBuilder.Entity("BookTag", b =>
+                {
+                    b.Property<Guid>("BooksId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("TagsId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("BooksId", "TagsId");
+
+                    b.HasIndex("TagsId");
+
+                    b.ToTable("BookTag");
+                });
+
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Identity.AppRole", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("AppUserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("ConcurrencyStamp")
@@ -44,6 +77,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .HasColumnType("nvarchar(256)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AppUserId");
 
                     b.HasIndex("NormalizedName")
                         .IsUnique()
@@ -213,6 +248,10 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
@@ -232,28 +271,82 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.ToTable("Scope");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Author", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("Author")
+                    b.Property<string>("Biography")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("BirthDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Country")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Surname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Authors");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("AuthorId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("BookLanguage")
+                        .HasColumnType("int");
+
+                    b.Property<string>("CoverImageUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Format")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("GenreId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("ISBN")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("IsDamaged")
-                        .HasColumnType("bit");
-
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<bool>("IsFeatured")
+                        .HasColumnType("bit");
+
+                    b.Property<DateTime>("OriginalPublicationDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("PageCount")
                         .HasColumnType("int");
@@ -261,9 +354,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<DateTime>("PublicationDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Publisher")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("PublisherId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -274,6 +366,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("GenreId");
+
                     b.ToTable("Books", (string)null);
                 });
 
@@ -281,9 +375,6 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("BookId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime?>("DeletedDate")
@@ -297,24 +388,23 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookId");
-
                     b.ToTable("BookStocks", (string)null);
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Loan", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Borrow", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("BookId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<int>("BookStatus")
-                        .HasColumnType("int");
-
                     b.Property<DateTime>("BorrowDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<int>("BorrowStatus")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
@@ -328,11 +418,141 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<Guid>("LenderId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MemberId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("Loans", (string)null);
+                    b.HasIndex("LenderId");
+
+                    b.HasIndex("MemberId");
+
+                    b.ToTable("Borrows", (string)null);
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BranchHour", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<TimeSpan>("ClosingTime")
+                        .HasColumnType("time");
+
+                    b.Property<int>("DayOfWeek")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("LibraryBranchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<TimeSpan>("OpeningTime")
+                        .HasColumnType("time");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BranchHours", (string)null);
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Genre", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Genres", (string)null);
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("OpeningDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LibraryBranches", (string)null);
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.LibraryTransaction", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Details")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("LibraryBranchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("TransactionDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("TransactionType")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LibraryBranchId");
+
+                    b.ToTable("LibraryTransactions", (string)null);
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Member", b =>
@@ -358,9 +578,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<int>("ExtensionDurationInDays")
                         .HasColumnType("int");
 
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("Gender")
+                        .HasColumnType("bit");
 
                     b.Property<bool>("HasPenalty")
                         .HasColumnType("bit");
@@ -373,6 +592,9 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<int>("MaxLateReturnsAllowed")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("MembershipDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -395,6 +617,43 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Members", (string)null);
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Publisher", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Website")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Publishers", (string)null);
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Return", b =>
@@ -430,6 +689,66 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsUnique();
 
                     b.ToTable("Returns", (string)null);
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Staff", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime>("EmploymentDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsFullTime")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Phone")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<decimal>("Salary")
+                        .HasColumnType("decimal(18,2)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("Staff", (string)null);
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Tag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Tags", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -535,6 +854,43 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.ToTable("AspNetUserTokens", (string)null);
                 });
 
+            modelBuilder.Entity("AuthorBook", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Author", null)
+                        .WithMany()
+                        .HasForeignKey("AuthorsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", null)
+                        .WithMany()
+                        .HasForeignKey("BooksId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("BookTag", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", null)
+                        .WithMany()
+                        .HasForeignKey("BooksId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Tag", null)
+                        .WithMany()
+                        .HasForeignKey("TagsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Identity.AppRole", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Identity.AppUser", null)
+                        .WithMany("AppRoles")
+                        .HasForeignKey("AppUserId");
+                });
+
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Identity.RoleScope", b =>
                 {
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Identity.AppRole", "Role")
@@ -554,45 +910,132 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("Scope");
                 });
 
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Genre", "Genre")
+                        .WithMany("Books")
+                        .HasForeignKey("GenreId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
+                        .WithMany("Books")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Publisher", "Publisher")
+                        .WithMany("Books")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Genre");
+
+                    b.Navigation("LibraryBranch");
+
+                    b.Navigation("Publisher");
+                });
+
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookStock", b =>
                 {
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
                         .WithMany("BookStocks")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Book");
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Loan", b =>
-                {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
-                        .WithMany("Loans")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Member", "Member")
-                        .WithMany("Loans")
                         .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Book");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Borrow", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
+                        .WithMany("Borrows")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Staff", "Lender")
+                        .WithMany()
+                        .HasForeignKey("LenderId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Member", "Member")
+                        .WithMany("Borrows")
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Lender");
 
                     b.Navigation("Member");
                 });
 
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BranchHour", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
+                        .WithMany("BranchHours")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LibraryBranch");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.LibraryTransaction", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
+                        .WithMany("Transactions")
+                        .HasForeignKey("LibraryBranchId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LibraryBranch");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Member", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
+                        .WithMany("Members")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LibraryBranch");
+                });
+
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Return", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Loan", "Loan")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Borrow", "Borrow")
                         .WithOne("Return")
                         .HasForeignKey("LibraryTrackingApp.Domain.Entities.Library.Return", "LoanId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Loan");
+                    b.Navigation("Borrow");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Staff", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
+                        .WithMany("Staff")
+                        .HasForeignKey("Id")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Identity.AppUser", "User")
+                        .WithOne("Staff")
+                        .HasForeignKey("LibraryTrackingApp.Domain.Entities.Library.Staff", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("LibraryBranch");
+
+                    b.Navigation("User");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<System.Guid>", b =>
@@ -651,6 +1094,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("RoleScopes");
                 });
 
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Identity.AppUser", b =>
+                {
+                    b.Navigation("AppRoles");
+
+                    b.Navigation("Staff")
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Identity.Scope", b =>
                 {
                     b.Navigation("RoleScopes");
@@ -660,18 +1111,41 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     b.Navigation("BookStocks");
 
-                    b.Navigation("Loans");
+                    b.Navigation("Borrows");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Loan", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Borrow", b =>
                 {
                     b.Navigation("Return")
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Genre", b =>
+                {
+                    b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", b =>
+                {
+                    b.Navigation("Books");
+
+                    b.Navigation("BranchHours");
+
+                    b.Navigation("Members");
+
+                    b.Navigation("Staff");
+
+                    b.Navigation("Transactions");
+                });
+
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Member", b =>
                 {
-                    b.Navigation("Loans");
+                    b.Navigation("Borrows");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Publisher", b =>
+                {
+                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }

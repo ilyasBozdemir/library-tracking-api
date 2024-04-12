@@ -1,6 +1,6 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
-public class BranchHours : BaseEntity<Guid>
+public class BranchHour : BaseEntity<Guid>
 {
     public DayOfWeek DayOfWeek { get; set; } // Haftanın günü
     public TimeSpan OpeningTime { get; set; } // Açılış saati

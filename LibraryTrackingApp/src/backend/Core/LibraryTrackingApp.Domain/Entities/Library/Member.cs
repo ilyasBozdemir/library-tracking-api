@@ -17,6 +17,6 @@ public class Member : BaseEntity<Guid>
     public bool IsExtensionAllowed { get; set; } // Uzatma izni
     public int ExtensionDurationInDays { get; set; } // Uzatma süresi (gün cinsinden)
 
-    // Üye tarafından yapılan ödünçlerin ilişkisi
-    public virtual ICollection<Borrow> Loans { get; set; }
+    public virtual LibraryBranch LibraryBranch { get; set; }
+    public virtual ICollection<Borrow> Borrows { get; set; }
 }
