@@ -11,4 +11,5 @@ public class AppConstant
 
     public const string licenseUrlTemplate = "https://raw.githubusercontent.com/{0}/{1}/main/LICENSE";
 
+    public const string swaggerUrlTemplate = "/swagger/{0}/swagger.json";
 }

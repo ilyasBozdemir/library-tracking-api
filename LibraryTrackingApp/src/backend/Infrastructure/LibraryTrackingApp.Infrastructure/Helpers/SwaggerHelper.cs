@@ -1,4 +1,5 @@
-﻿using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs;
+﻿using LibraryTrackingApp.Domain.Constants;
+using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs;
 using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs.Swagger;
 using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs.Swagger.Filters;
 using LibraryTrackingApp.Infrastructure.Configuration.ApiDocs.Swagger.Security;
@@ -133,7 +134,7 @@ public static class SwaggerHelper
             foreach (var apiVersionInfo in GetAllVersions(layerName))
             {
                 c.SwaggerEndpoint(
-                    $"/swagger/{apiVersionInfo.Version}/swagger.json",
+                    string.Format(AppConstant.swaggerUrlTemplate, apiVersionInfo.Version),
                     $"{apiVersionInfo.OpenApiInfo.Title}"
                 );
             }
@@ -146,7 +147,7 @@ public static class SwaggerHelper
     /// </summary>
     /// <param name="layerName">API versiyon bilgilerinin alınacağı katmanın adı.</param>
     /// <returns>API versiyon bilgilerinin koleksiyonu.</returns>
-    private static IEnumerable<ApiVersionInfo> GetAllVersions(LayerName layerName)
+    public static IEnumerable<ApiVersionInfo> GetAllVersions(LayerName layerName)
     {
         switch (layerName)
         {
@@ -164,7 +165,7 @@ public static class SwaggerHelper
     /// </summary>
     /// <param name="layerName">API OpenAPI bilgilerinin alınacağı katmanın adı.</param>
     /// <returns>API OpenAPI bilgilerinin sözlüğü.</returns>
-    private static IDictionary<string, OpenApiInfo> GetApiInfos(LayerName layerName)
+    public static IDictionary<string, OpenApiInfo> GetApiInfos(LayerName layerName)
     {
         // Belirli katman adına göre API OpenAPI bilgilerini döndür
         switch (layerName)

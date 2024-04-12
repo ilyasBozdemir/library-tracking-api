@@ -15,7 +15,7 @@ public static class WebApiVersionInfos
         Version = $"v{ApiVersions.V1}",
         OpenApiInfo = new OpenApiInfo
         {
-            Title = $"{System.Reflection.Assembly.GetExecutingAssembly().GetName().Name.Split(".")[0]} v{ApiVersions.V1}",
+            Title = $"Kütüphane Takip Uygulaması v{ApiVersions.V1}",
             Version = $"v{ApiVersions.V1}",
             Description =
             """
