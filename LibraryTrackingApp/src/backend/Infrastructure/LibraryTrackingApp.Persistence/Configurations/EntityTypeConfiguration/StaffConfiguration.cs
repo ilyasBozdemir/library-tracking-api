@@ -17,9 +17,11 @@ public class StaffConfiguration : IEntityTypeConfiguration<Staff>
         builder.Property(s => s.Salary).HasColumnType("decimal(18,2)").IsRequired();
         builder.Property(s => s.IsFullTime).IsRequired();
 
-        // Kullanıcıya ait staff ilişkisi
-        builder.HasOne(s => s.User)
-               .WithOne(u => u.Staff)
-               .HasForeignKey<Staff>(s => s.UserId);
+    
+        builder
+            .HasOne(s => s.User)
+            .WithOne(u => u.Staff)
+            .HasForeignKey<Staff>(s => s.UserId)
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }

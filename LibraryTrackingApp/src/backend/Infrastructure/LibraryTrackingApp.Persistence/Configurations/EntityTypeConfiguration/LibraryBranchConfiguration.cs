@@ -22,7 +22,28 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
             .WithOne(b => b.LibraryBranch)
             .HasForeignKey(b => b.LibraryBranchId);
 
-        builder.HasMany(b => b.Members).WithMany(t => t.LibraryBranches);
+
+        builder
+            .HasMany(b => b.Members)
+            .WithMany(t => t.LibraryBranches)
+            .UsingEntity<Dictionary<string, object>>(
+            "MemberLibraryBranch",
+            j => j
+            .HasOne<Member>()
+            .WithMany()
+            .HasForeignKey("MemberId"),
+            j => j
+            .HasOne<LibraryBranch>()
+            .WithMany()
+            .HasForeignKey("LibraryBranchId"),
+            j =>
+            {
+                j.HasKey("MemberId", "LibraryBranchId");
+                j.ToTable("MemberLibraryBranch");
+            }
+            );
+
+
 
 
         builder.HasMany(lb => lb.BranchHours)

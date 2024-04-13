@@ -95,6 +95,7 @@ public static class SeedData
         };
 
         var appUserRole = new AppUserRole() { UserId = adminUser.Id, RoleId = adminRole.Id };
+
         var appUserRole2 = new AppUserRole() { UserId = staffUser.Id, RoleId = staffRole.Id };
 
         var jKRowlingAuthor = new Author
@@ -138,7 +139,7 @@ public static class SeedData
 
         var mainBranch = new LibraryBranch
         {
-            Id = Guid.NewGuid(),
+            Id = mainBranchId,
             Name = "Örnek Kütüphane Şubesi",
             Address = "123 Ana Cadde",
             PhoneNumber = "123-456-7890",
@@ -188,6 +189,12 @@ public static class SeedData
             LastModifiedBy = systemUser.LastModifiedBy
         };
 
+        var bookAuthor = new Dictionary<string, object>
+        {
+            { "BookId", harryPotterBook.Id },
+            { "AuthorId", jKRowlingAuthor.Id }
+        };
+
         var harryPotterTag1 = new Tag
         {
             Id = Guid.NewGuid(),
@@ -221,6 +228,17 @@ public static class SeedData
             LastModifiedBy = systemUser.LastModifiedBy
         };
 
+        var bookTag1 = new Dictionary<string, object>
+        {
+            { "BookId", harryPotterBook.Id },
+            { "TagId", harryPotterTag1.Id }
+        };
+
+        var bookTag2 = new Dictionary<string, object>
+        {
+            { "BookId", harryPotterBook.Id },
+            { "TagId", harryPotterTag2.Id }
+        };
 
         var member1 = new Member
         {
@@ -238,8 +256,8 @@ public static class SeedData
             HasPenalty = false,
             PenaltyDurationInDays = 0,
             IsExtensionAllowed = true,
-            ExtensionDurationInDays = 7, 
-            LibraryBranchId= mainBranchId,
+            ExtensionDurationInDays = 7,
+            LibraryBranchId = mainBranchId,
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
             CreatedDate = DateTime.Now,
@@ -272,15 +290,28 @@ public static class SeedData
             LastModifiedDate = null
         };
 
+        var memberLibraryBranch = new Dictionary<string, object>
+        {
+            { "MemberId", member1.Id },
+            { "LibraryBranchId", mainBranchId }
+        };
+
+        var memberLibraryBranch2 = new Dictionary<string, object>
+        {
+            { "MemberId", member2.Id },
+            { "LibraryBranchId", mainBranchId }
+        };
+
         var mondaybranchHour = new BranchHour
         {
             Id = Guid.NewGuid(),
             LibraryBranchId = mainBranchId,
-            OpeningTime = new TimeSpan(8, 0, 0), 
+            OpeningTime = new TimeSpan(8, 0, 0),
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
         };
 
         var tuesdaybranchHour = new BranchHour
@@ -291,7 +322,8 @@ public static class SeedData
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
         };
 
         var wednesdaybranchHour = new BranchHour
@@ -302,7 +334,8 @@ public static class SeedData
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
         };
 
         var thursdaybranchHour = new BranchHour
@@ -313,7 +346,8 @@ public static class SeedData
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
         };
 
         var fridaybranchHour = new BranchHour
@@ -324,7 +358,8 @@ public static class SeedData
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
         };
 
         var saturdaybranchHour = new BranchHour
@@ -335,7 +370,8 @@ public static class SeedData
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
         };
 
         var sundaybranchHour = new BranchHour
@@ -346,22 +382,90 @@ public static class SeedData
             ClosingTime = new TimeSpan(0, 0, 0),
             CreatedById = systemUser.Id,
             CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
         };
 
+        var bookStock = new BookStock
+        {
+            Id = Guid.NewGuid(),
+            BookId = harryPotterBook.Id, 
+            Quantity = 100,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
+        };
+
+        var staff = new Staff
+        {
+            Id = Guid.NewGuid(),
+            UserId = staffUser.Id,
+            Phone = "+905553331122",
+            Address = "Employee Address",
+            EmploymentDate = DateTime.Now,
+            Salary = 3000.00m,
+            IsFullTime = true,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LibraryBranchId = mainBranchId
+        };
+
+        var borrow = new Borrow
+        {
+            Id = Guid.NewGuid(),
+            MemberId = member1.Id,
+            BookId = harryPotterBook.Id,
+            LenderId = staff.Id,
+            BorrowDate = DateTime.Now,
+            DueDate = DateTime.Now.AddDays(14),
+            BorrowStatus = BorrowStatus.Borrowed,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
+        };
+
+
+        var @return = new Return() 
+        {
+            Id = Guid.NewGuid(),
+            LoanId = borrow.Id, 
+            ReturnDate = DateTime.Now, 
+            IsLate = DateTime.Now > borrow.DueDate, 
+            BookStatus = BookStatus.Available,
+            PenaltyDurationInDays = (DateTime.Now - borrow.DueDate).Days,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
+        };
+
+      
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
         SeedEntities<AppUser>(modelBuilder, systemUser, adminUser, staffUser);
         SeedEntities<AppUserRole>(modelBuilder, appUserRole, appUserRole2);
         SeedEntities<Author>(modelBuilder, jKRowlingAuthor);
         SeedEntities<Genre>(modelBuilder, fantasyGenre, adventureGenre);
         SeedEntities<LibraryBranch>(modelBuilder, mainBranch);
-        //SeedEntities<BranchHour>(modelBuilder, mondaybranchHour, tuesdaybranchHour, wednesdaybranchHour, thursdaybranchHour, fridaybranchHour, saturdaybranchHour, sundaybranchHour);
+        SeedEntities<BranchHour>(modelBuilder, mondaybranchHour, tuesdaybranchHour, wednesdaybranchHour, thursdaybranchHour, fridaybranchHour, saturdaybranchHour, sundaybranchHour);
         SeedEntities<Publisher>(modelBuilder, bloomsburyPublishingPublisher);
         SeedEntities<Book>(modelBuilder, harryPotterBook);
         SeedEntities<Tag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
         SeedEntities<Member>(modelBuilder, member1, member2);
+        SeedEntities<Borrow>(modelBuilder, borrow);
+        SeedEntities<Staff>(modelBuilder, staff);
+        SeedEntities<BookStock>(modelBuilder, bookStock);
+        SeedEntities<Return>(modelBuilder, @return);
 
+
+
+        modelBuilder.Entity("BookTag").HasData(bookTag1, bookTag2);
+        modelBuilder.Entity("BookAuthor").HasData(bookAuthor);
+        modelBuilder.Entity("MemberLibraryBranch").HasData(memberLibraryBranch, memberLibraryBranch2);
     }
+
 
     private static void SeedEntities<T>(ModelBuilder modelBuilder, params T[] entities)
         where T : class

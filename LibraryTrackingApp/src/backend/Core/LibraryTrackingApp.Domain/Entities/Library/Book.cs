@@ -10,7 +10,6 @@ public class Book : BaseEntity<Guid>, IAuditable<Guid>
     public Guid LibraryBranchId { get; set; }
     public Guid BookStockBranchId { get; set; }
     public Guid BorrowId { get; set; }
-    public Guid TagId { get; set; }
 
     public string Title { get; set; } 
     public string ISBN { get; set; }

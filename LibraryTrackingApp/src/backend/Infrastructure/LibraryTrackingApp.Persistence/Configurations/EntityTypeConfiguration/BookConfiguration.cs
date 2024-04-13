@@ -13,7 +13,10 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         builder.Property(b => b.ISBN).IsRequired();
         builder.Property(lb => lb.Description).IsRequired();
 
-        builder.HasOne(b => b.Publisher).WithMany(p => p.Books).HasForeignKey(b => b.Id);
+        builder.HasOne(b => b.Publisher)
+            .WithMany(p => p.Books)
+            .HasForeignKey(b => b.Id)
+            .OnDelete(DeleteBehavior.Cascade);
 
         // Book - BookStocks ilişkisi
         builder.HasMany(b => b.BookStocks).WithOne(bs => bs.Book).HasForeignKey(bs => bs.Id);//1-1 olması lazım düzenlencek.
@@ -22,24 +25,62 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         builder.HasMany(b => b.Borrows).WithOne(br => br.Book).HasForeignKey(br => br.BookId);
 
         // Book - Tags ilişkisi
-        builder.HasMany(b => b.Tags).WithMany(t => t.Books);
+        builder
+            .HasMany(b => b.Tags)
+            .WithMany(t => t.Books)
+            .UsingEntity<Dictionary<string, object>>(
+            "BookTag",
+            j => j
+            .HasOne<Tag>()
+            .WithMany()
+            .HasForeignKey("TagId"),
+            j => j
+            .HasOne<Book>()
+            .WithMany()
+            .HasForeignKey("BookId"),
+            j =>
+            {
+                j.HasKey("TagId", "BookId");
+                j.ToTable("BookTag");
+            }
+            );
+
 
         // Book - Authors ilişkisi
-        builder.HasMany(b => b.Authors).WithMany(a => a.Books);
+
+        builder.HasMany(b => b.Authors)
+            .WithMany(a => a.Books)
+            .UsingEntity<Dictionary<string, object>>(
+            "BookAuthor",
+            j => j
+            .HasOne<Author>()
+            .WithMany()
+            .HasForeignKey("AuthorId"),
+                j => j
+            .HasOne<Book>()
+            .WithMany()
+            .HasForeignKey("BookId"),
+            j =>
+            {
+                j.HasKey("AuthorId", "BookId");
+                j.ToTable("BookAuthor");
+            }
+            );
+
 
         // Book - BookStocks ilişkisi
         builder
             .HasMany(b => b.BookStocks)
             .WithOne(bs => bs.Book)
             .HasForeignKey(bs => bs.BookId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
 
         // Book - Publisher ilişkisi
 
         builder.HasOne(b => b.Publisher)
                .WithMany(p => p.Books)
                .HasForeignKey(b => b.PublisherId)
-               .OnDelete(DeleteBehavior.Cascade);
+               .OnDelete(DeleteBehavior.Restrict);
 
 
 
@@ -48,6 +89,6 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             .HasMany(b => b.Borrows)
             .WithOne(br => br.Book)
             .HasForeignKey(br => br.BookId)
-            .OnDelete(DeleteBehavior.Cascade);
+            .OnDelete(DeleteBehavior.Restrict);
     }
 }
