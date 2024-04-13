@@ -71,12 +71,6 @@ public class VersionsController : CustomBaseController
               $"v{ApiVersions.Current}"
            );
 
-        foreach (var versionInfo in allVersions)
-        {
-            Console.WriteLine($"Version: {versionInfo.Version}");
-        }
-
-
         var documentationLinks = new
         {
             Title = requestedApiVersion.OpenApiInfo.Title,

@@ -1,6 +1,6 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
-public class Member : BaseEntity<Guid>
+public class Member : BaseEntity<Guid>, IAuditable<Guid>
 {
     public string Name { get; set; } //ad
     public string Email { get; set; } // mail
@@ -16,7 +16,16 @@ public class Member : BaseEntity<Guid>
     public int PenaltyDurationInDays { get; set; } // Ceza süresi (gün cinsinden)
     public bool IsExtensionAllowed { get; set; } // Uzatma izni
     public int ExtensionDurationInDays { get; set; } // Uzatma süresi (gün cinsinden)
+    public Guid CreatedById { get; set; }
+    public string CreatedBy { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public string? LastModifiedBy { get; set; }
+    public DateTime? LastModifiedDate { get; set; }
 
+
+
+    public Guid BorrowId { get; set; }
+    public Guid LibraryBranchId { get; set; }
     public virtual LibraryBranch LibraryBranch { get; set; }
     public virtual ICollection<Borrow> Borrows { get; set; }
 }

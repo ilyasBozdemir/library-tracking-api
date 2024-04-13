@@ -57,6 +57,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     BirthDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Country = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Biography = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -72,6 +77,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     IsActive = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -90,6 +100,17 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     OpeningDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    BookId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    MemberId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    StaffId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    LibraryBranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BranchHourId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    LibraryTransactionId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -108,6 +129,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     Address = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     PhoneNumber = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -141,6 +167,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -238,6 +269,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     DayOfWeek = table.Column<int>(type: "int", nullable: false),
                     OpeningTime = table.Column<TimeSpan>(type: "time", nullable: false),
                     ClosingTime = table.Column<TimeSpan>(type: "time", nullable: false),
+                    IsOpen = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     LibraryBranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
@@ -246,8 +283,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_BranchHours", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BranchHours_LibraryBranches_Id",
-                        column: x => x.Id,
+                        name: "FK_BranchHours_LibraryBranches_LibraryBranchId",
+                        column: x => x.LibraryBranchId,
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -262,6 +299,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     TransactionType = table.Column<int>(type: "int", nullable: false),
                     Details = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LibraryBranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -295,6 +337,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     PenaltyDurationInDays = table.Column<int>(type: "int", nullable: false),
                     IsExtensionAllowed = table.Column<bool>(type: "bit", nullable: false),
                     ExtensionDurationInDays = table.Column<int>(type: "int", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    BorrowId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    LibraryBranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -302,8 +351,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_Members", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Members_LibraryBranches_Id",
-                        column: x => x.Id,
+                        name: "FK_Members_LibraryBranches_LibraryBranchId",
+                        column: x => x.LibraryBranchId,
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -320,6 +369,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     EmploymentDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     Salary = table.Column<decimal>(type: "decimal(18,2)", nullable: false),
                     IsFullTime = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    LibraryBranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -333,8 +388,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Staff_LibraryBranches_Id",
-                        column: x => x.Id,
+                        name: "FK_Staff_LibraryBranches_LibraryBranchId",
+                        column: x => x.LibraryBranchId,
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -348,6 +403,10 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     GenreId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     PublisherId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     AuthorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    LibraryBranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BookStockBranchId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BorrowId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    TagId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Title = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     ISBN = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -359,6 +418,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     Format = table.Column<int>(type: "int", nullable: false),
                     BookLanguage = table.Column<int>(type: "int", nullable: false),
                     IsFeatured = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -372,8 +436,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_Books_LibraryBranches_Id",
-                        column: x => x.Id,
+                        name: "FK_Books_LibraryBranches_LibraryBranchId",
+                        column: x => x.LibraryBranchId,
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -490,7 +554,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    BookId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     Quantity = table.Column<int>(type: "int", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -498,8 +568,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_BookStocks", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_BookStocks_Books_Id",
-                        column: x => x.Id,
+                        name: "FK_BookStocks_Books_BookId",
+                        column: x => x.BookId,
                         principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -541,6 +611,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     DueDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     BorrowStatus = table.Column<int>(type: "int", nullable: false),
                     HasFee = table.Column<bool>(type: "bit", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -577,6 +652,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     IsLate = table.Column<bool>(type: "bit", nullable: false),
                     BookStatus = table.Column<int>(type: "int", nullable: false),
                     PenaltyDurationInDays = table.Column<int>(type: "int", nullable: false),
+                    CreatedById = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
+                    CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
                     DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
                 },
@@ -646,6 +726,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 column: "GenreId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Books_LibraryBranchId",
+                table: "Books",
+                column: "LibraryBranchId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BookStocks_BookId",
+                table: "BookStocks",
+                column: "BookId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BookTag_TagsId",
                 table: "BookTag",
                 column: "TagsId");
@@ -666,8 +756,18 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 column: "MemberId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_BranchHours_LibraryBranchId",
+                table: "BranchHours",
+                column: "LibraryBranchId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_LibraryTransactions_LibraryBranchId",
                 table: "LibraryTransactions",
+                column: "LibraryBranchId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Members_LibraryBranchId",
+                table: "Members",
                 column: "LibraryBranchId");
 
             migrationBuilder.CreateIndex(
@@ -685,6 +785,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 name: "IX_RoleScope_ScopeId",
                 table: "RoleScope",
                 column: "ScopeId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Staff_LibraryBranchId",
+                table: "Staff",
+                column: "LibraryBranchId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Staff_UserId",

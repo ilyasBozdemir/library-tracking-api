@@ -19,4 +19,8 @@ public class AppUser : IdentityUser<Guid>
     public virtual Staff Staff { get; set; }
     public ICollection<AppRole> AppRoles { get; set; }
 
+    public AppUser()
+    {
+        CreatedDate = DateTime.Now;
+    }
 }

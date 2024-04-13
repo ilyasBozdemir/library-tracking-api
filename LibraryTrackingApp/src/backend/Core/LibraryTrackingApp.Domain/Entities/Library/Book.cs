@@ -1,12 +1,17 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
-
-public class Book : BaseEntity<Guid>
+ 
+public class Book : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
     public Guid GenreId { get; set; }
     public Guid PublisherId { get; set; }
     public Guid AuthorId { get; set; }
+    public Guid LibraryBranchId { get; set; }
+    public Guid BookStockBranchId { get; set; }
+    public Guid BorrowId { get; set; }
+    public Guid TagId { get; set; }
+
     public string Title { get; set; } 
     public string ISBN { get; set; }
     public string Description { get; set; }
@@ -20,12 +25,20 @@ public class Book : BaseEntity<Guid>
     public BookLanguage BookLanguage { get; set; }
     public bool IsFeatured { get; set; }
 
-    public virtual Genre Genre { get; set; }
+
+
+    public Guid CreatedById { get; set; }
+    public string CreatedBy { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public string? LastModifiedBy { get; set; }
+    public DateTime? LastModifiedDate { get; set; }
+
+    public  Genre Genre { get; set; }
     public Publisher Publisher { get; set; }
 
-    public virtual LibraryBranch LibraryBranch { get; set; }
-    public virtual ICollection<Tag> Tags { get; set; }
-    public virtual ICollection<Author> Authors { get; set; }
-    public virtual ICollection<BookStock> BookStocks { get; set; }
-    public virtual ICollection<Borrow> Borrows { get; set; }
+    public  LibraryBranch LibraryBranch { get; set; }
+    public  ICollection<Tag> Tags { get; set; }
+    public  ICollection<Author> Authors { get; set; }
+    public  ICollection<BookStock> BookStocks { get; set; }
+    public  ICollection<Borrow> Borrows { get; set; }
 }

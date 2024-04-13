@@ -1,6 +1,6 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities;
 
-public abstract class BaseEntity<TEntityIdType> : ISoftDeletable
+public abstract class BaseEntity<TEntityIdType> 
 {
     public TEntityIdType Id { get; set; }
     TEntityIdType CreatedById { get; set; }

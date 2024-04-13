@@ -1,4 +1,5 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
+using LibraryTrackingApp.Persistence.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.Reflection;
 
@@ -25,8 +26,8 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
         base.OnModelCreating(modelBuilder);
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
     }
 
 

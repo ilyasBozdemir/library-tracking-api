@@ -18,26 +18,38 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
         builder.Property(lb => lb.OpeningDate).IsRequired();
         builder.Property(lb => lb.Description).IsRequired();
 
+        // Kitaplar için ilişkiyi belirt
+        builder.HasMany(lb => lb.Books)
+               .WithOne(b => b.LibraryBranch) // Book varlığında yer alan LibraryBranchId özelliğiyle eşleşir
+               .HasForeignKey(b => b.LibraryBranchId); // Book varlığındaki LibraryBranchId dış anahtarını kullanır
+
+
+
         // İlişkileri belirt
         builder.HasMany(lb => lb.Books)
                .WithOne(b => b.LibraryBranch)
-               .HasForeignKey(b => b.Id);
+               .HasForeignKey(b => b.LibraryBranchId)
+               .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasMany(lb => lb.Members)
                .WithOne(m => m.LibraryBranch)
-               .HasForeignKey(m => m.Id);
+               .HasForeignKey(m => m.LibraryBranchId)
+               .OnDelete(DeleteBehavior.Cascade);
 
-        builder.HasMany(lb => lb.Staff)
+        builder.HasMany(lb => lb.Staffs)
                .WithOne(s => s.LibraryBranch)
-               .HasForeignKey(s => s.Id);
+               .HasForeignKey(s => s.LibraryBranchId)
+               .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasMany(lb => lb.BranchHours)
                .WithOne(bh => bh.LibraryBranch)
-               .HasForeignKey(bh => bh.Id);
+               .HasForeignKey(bh => bh.LibraryBranchId)
+               .OnDelete(DeleteBehavior.Cascade);
 
         builder.HasMany(lb => lb.Transactions)
                .WithOne(t => t.LibraryBranch)
-               .HasForeignKey(t => t.Id);
+               .HasForeignKey(t => t.LibraryBranchId)
+               .OnDelete(DeleteBehavior.Cascade);
     }
 }
 

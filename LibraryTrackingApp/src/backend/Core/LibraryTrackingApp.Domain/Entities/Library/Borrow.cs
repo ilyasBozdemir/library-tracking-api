@@ -1,7 +1,7 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
 // Borrow entity
-public class Borrow : BaseEntity<Guid>
+public class Borrow : BaseEntity<Guid>,IAuditable<Guid>
 {
     public Guid Id { get; set; } // borç Id
     public Guid BookId { get; set; } //kitap id
@@ -13,6 +13,12 @@ public class Borrow : BaseEntity<Guid>
     public bool HasFee { get; set; } // ücretli mi
 
     public TimeSpan TimeElapsedSinceBorrowDate => DateTime.Now - BorrowDate; // geçen süre
+
+    public Guid CreatedById { get; set; }
+    public string CreatedBy { get; set; }
+    public DateTime CreatedDate { get; set; }
+    public string? LastModifiedBy { get; set; }
+    public DateTime? LastModifiedDate { get; set; }
 
     // Ödünç alınan kitaba olan ilişki
     public virtual Book Book { get; set; }

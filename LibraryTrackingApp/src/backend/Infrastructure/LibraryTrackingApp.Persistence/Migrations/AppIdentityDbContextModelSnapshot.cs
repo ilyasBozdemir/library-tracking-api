@@ -285,11 +285,27 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -315,9 +331,25 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<int>("BookLanguage")
                         .HasColumnType("int");
 
+                    b.Property<Guid>("BookStockBranchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BorrowId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("CoverImageUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
@@ -342,6 +374,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LibraryBranchId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("OriginalPublicationDate")
                         .HasColumnType("datetime2");
 
@@ -357,6 +398,9 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
+                    b.Property<Guid>("TagId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -364,6 +408,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.HasIndex("GenreId");
+
+                    b.HasIndex("LibraryBranchId");
 
                     b.ToTable("Books", (string)null);
                 });
@@ -374,16 +420,37 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("BookId");
 
                     b.ToTable("BookStocks", (string)null);
                 });
@@ -403,6 +470,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<int>("BorrowStatus")
                         .HasColumnType("int");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
@@ -414,6 +491,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<Guid>("LenderId")
                         .HasColumnType("uniqueidentifier");
@@ -435,10 +518,21 @@ namespace LibraryTrackingApp.Persistence.Migrations
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BranchHour", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<TimeSpan>("ClosingTime")
                         .HasColumnType("time");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<int>("DayOfWeek")
                         .HasColumnType("int");
@@ -449,6 +543,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsOpen")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
 
@@ -456,6 +559,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .HasColumnType("time");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("LibraryBranchId");
 
                     b.ToTable("BranchHours", (string)null);
                 });
@@ -466,6 +571,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
@@ -474,6 +589,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -494,6 +615,22 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BranchHourId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
@@ -503,6 +640,21 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LibraryBranchId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LibraryTransactionId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("MemberId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -515,6 +667,9 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("StaffId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.ToTable("LibraryBranches", (string)null);
@@ -526,6 +681,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
@@ -535,6 +700,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
@@ -565,6 +736,19 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<DateTime>("BirthDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<Guid>("BorrowId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
@@ -586,6 +770,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<bool>("IsExtensionAllowed")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LibraryBranchId")
+                        .HasColumnType("uniqueidentifier");
 
                     b.Property<int>("MaxLateReturnsAllowed")
                         .HasColumnType("int");
@@ -613,6 +806,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("LibraryBranchId");
+
                     b.ToTable("Members", (string)null);
                 });
 
@@ -626,6 +821,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
@@ -635,6 +840,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -662,6 +873,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<int>("BookStatus")
                         .HasColumnType("int");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
@@ -670,6 +891,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Property<bool>("IsLate")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<Guid>("LoanId")
                         .HasColumnType("uniqueidentifier");
@@ -691,11 +918,22 @@ namespace LibraryTrackingApp.Persistence.Migrations
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Staff", b =>
                 {
                     b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("Address")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
@@ -709,6 +947,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsFullTime")
                         .HasColumnType("bit");
 
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LibraryBranchId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Phone")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -720,6 +967,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("LibraryBranchId");
 
                     b.HasIndex("UserId")
                         .IsUnique();
@@ -733,11 +982,27 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CreatedBy")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
+
+                    b.Property<string>("LastModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("LastModifiedDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -915,15 +1180,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Publisher", "Publisher")
                         .WithMany("Books")
                         .HasForeignKey("Id")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Publisher", "Publisher")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
                         .WithMany("Books")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("LibraryBranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -938,7 +1203,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
                         .WithMany("BookStocks")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -976,7 +1241,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
                         .WithMany("BranchHours")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("LibraryBranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -998,7 +1263,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
                         .WithMany("Members")
-                        .HasForeignKey("Id")
+                        .HasForeignKey("LibraryBranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1019,8 +1284,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Staff", b =>
                 {
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", "LibraryBranch")
-                        .WithMany("Staff")
-                        .HasForeignKey("Id")
+                        .WithMany("Staffs")
+                        .HasForeignKey("LibraryBranchId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
@@ -1130,7 +1395,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.Navigation("Members");
 
-                    b.Navigation("Staff");
+                    b.Navigation("Staffs");
 
                     b.Navigation("Transactions");
                 });
