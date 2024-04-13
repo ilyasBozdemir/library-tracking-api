@@ -3,6 +3,7 @@
 public class Tag : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
+    public Guid BookId { get; set; }
     public string Name { get; set; }
     public Guid CreatedById { get; set; }
     public string CreatedBy { get; set; }

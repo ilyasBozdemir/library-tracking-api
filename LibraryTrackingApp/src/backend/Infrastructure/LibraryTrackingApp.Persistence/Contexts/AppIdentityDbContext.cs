@@ -28,6 +28,7 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        SeedData.Seed(modelBuilder);
     }
 
 

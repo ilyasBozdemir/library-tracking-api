@@ -16,7 +16,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         builder.HasOne(b => b.Publisher).WithMany(p => p.Books).HasForeignKey(b => b.Id);
 
         // Book - BookStocks ilişkisi
-        builder.HasMany(b => b.BookStocks).WithOne(bs => bs.Book).HasForeignKey(bs => bs.Id);
+        builder.HasMany(b => b.BookStocks).WithOne(bs => bs.Book).HasForeignKey(bs => bs.Id);//1-1 olması lazım düzenlencek.
 
         // Book - Borrows ilişkisi
         builder.HasMany(b => b.Borrows).WithOne(br => br.Book).HasForeignKey(br => br.BookId);
@@ -33,6 +33,15 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             .WithOne(bs => bs.Book)
             .HasForeignKey(bs => bs.BookId)
             .OnDelete(DeleteBehavior.Cascade);
+
+        // Book - Publisher ilişkisi
+
+        builder.HasOne(b => b.Publisher)
+               .WithMany(p => p.Books)
+               .HasForeignKey(b => b.PublisherId)
+               .OnDelete(DeleteBehavior.Cascade);
+
+
 
         // Book - Borrows ilişkisi
         builder

@@ -14,10 +14,5 @@ public class BranchHoursConfiguration : IEntityTypeConfiguration<BranchHour>
         builder.Property(bh => bh.DayOfWeek).IsRequired();
         builder.Property(bh => bh.OpeningTime).IsRequired();
         builder.Property(bh => bh.ClosingTime).IsRequired();
-
-       
-        builder.HasOne(bh => bh.LibraryBranch)
-               .WithMany(lb => lb.BranchHours)
-               .HasForeignKey(bh => bh.LibraryBranchId);
     }
 }

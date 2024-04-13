@@ -5,7 +5,7 @@ namespace LibraryTrackingApp.Persistence.Data;
 
 public static class SeedData
 {
-    public static void Seed()
+    public static void Seed(ModelBuilder modelBuilder)
     {
         var systemRole = new AppRole
         {
@@ -112,21 +112,6 @@ public static class SeedData
             LastModifiedBy = systemUser.LastModifiedBy,
         };
 
-
-        var bloomsburyPublishingPublisher = new Publisher
-        {
-            Id = Guid.NewGuid(),
-            Name = "Bloomsbury Publishing",
-            Website = "https://www.bloomsbury.com/",
-            Address = "50 Bedford Square, London, England",
-            PhoneNumber = "+44 (0)20 7631 5600",
-            Email = "info@bloomsbury.com",
-            CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy,
-        };
-
         var fantasyGenre = new Genre
         {
             Id = Guid.NewGuid(),
@@ -141,7 +126,7 @@ public static class SeedData
         var adventureGenre = new Genre
         {
             Id = Guid.NewGuid(),
-            Name = "Fantasy",
+            Name = "Adventure",
             IsActive = true,
             CreatedById = systemUser.Id,
             CreatedDate = DateTime.Now,
@@ -161,6 +146,20 @@ public static class SeedData
             Description = "Bu bir örnek kütüphane şubesidir.",
             CreatedBy = systemUser.Name,
             CreatedById = systemUser.Id,
+            LastModifiedBy = systemUser.LastModifiedBy,
+        };
+
+        var bloomsburyPublishingPublisher = new Publisher
+        {
+            Id = Guid.NewGuid(),
+            Name = "Bloomsbury Publishing",
+            Website = "https://www.bloomsbury.com/",
+            Address = "50 Bedford Square, London, England",
+            PhoneNumber = "+44 (0)20 7631 5600",
+            Email = "info@bloomsbury.com",
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
             LastModifiedBy = systemUser.LastModifiedBy,
         };
 
@@ -189,40 +188,184 @@ public static class SeedData
             LastModifiedBy = systemUser.LastModifiedBy
         };
 
-
-
-
-
-        for (DayOfWeek day = DayOfWeek.Monday; day <= DayOfWeek.Sunday; day++)
+        var harryPotterTag1 = new Tag
         {
-            var branchHour = new BranchHour();
+            Id = Guid.NewGuid(),
+            Name = "Hogwarts",
+            BookId = harryPotterBook.Id,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
+        };
 
-            if (DayOfWeek.Sunday == day)
-                branchHour = new BranchHour
-                {
-                    Id = Guid.NewGuid(),
-                    DayOfWeek = day,
-                    IsOpen = false,
-                    LibraryBranchId = mainBranchId,
-                };
-            else
-                branchHour = new BranchHour
-                {
-                    Id = Guid.NewGuid(),
-                    DayOfWeek = day,
-                    OpeningTime = new TimeSpan(9, 0, 0),
-                    ClosingTime = new TimeSpan(18, 0, 0), 
-                    IsOpen = true,
-                    LibraryBranchId = mainBranchId,
-                };
+        var harryPotterTag2 = new Tag
+        {
+            Id = Guid.NewGuid(),
+            Name = "Harry Potter",
+            BookId = harryPotterBook.Id,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
+        };
 
-            branchHour.CreatedBy = systemUser.Name;
-            branchHour.CreatedById = systemUser.Id;
-            branchHour.LastModifiedBy = systemUser.LastModifiedBy;
-
-            mainBranch.BranchHours.Add(branchHour);
-        }
+        var harryPotterTag3 = new Tag
+        {
+            Id = Guid.NewGuid(),
+            Name = "Quidditch",
+            BookId = harryPotterBook.Id,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy
+        };
 
 
+        var member1 = new Member
+        {
+            Id = Guid.NewGuid(),
+            Name = "John Doe",
+            Email = "john.doe@example.com",
+            Address = "123 Main Street",
+            PhoneNumber = "+1234567890",
+            MembershipDate = DateTime.Now,
+            BirthDate = new DateTime(1990, 5, 15),
+            Gender = true,
+            Occupation = "Software Engineer",
+            NumberOfLateReturns = 0,
+            MaxLateReturnsAllowed = 3,
+            HasPenalty = false,
+            PenaltyDurationInDays = 0,
+            IsExtensionAllowed = true,
+            ExtensionDurationInDays = 7, 
+            LibraryBranchId= mainBranchId,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy,
+            LastModifiedDate = null
+        };
+
+        var member2 = new Member
+        {
+            Id = Guid.NewGuid(),
+            Name = "Jane Smith",
+            Email = "jane.smith@example.com",
+            Address = "456 Oak Street",
+            PhoneNumber = "+1987654321",
+            MembershipDate = DateTime.Now,
+            BirthDate = new DateTime(1985, 8, 20),
+            Gender = false,
+            LibraryBranchId = mainBranchId,
+            Occupation = "Teacher",
+            NumberOfLateReturns = 2,
+            MaxLateReturnsAllowed = 3,
+            HasPenalty = true,
+            PenaltyDurationInDays = 7,
+            IsExtensionAllowed = false,
+            ExtensionDurationInDays = 0,
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now,
+            LastModifiedBy = systemUser.LastModifiedBy,
+            LastModifiedDate = null
+        };
+
+        var mondaybranchHour = new BranchHour
+        {
+            Id = Guid.NewGuid(),
+            LibraryBranchId = mainBranchId,
+            OpeningTime = new TimeSpan(8, 0, 0), 
+            ClosingTime = new TimeSpan(17, 30, 0),
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now
+        };
+
+        var tuesdaybranchHour = new BranchHour
+        {
+            Id = Guid.NewGuid(),
+            LibraryBranchId = mainBranchId,
+            OpeningTime = new TimeSpan(8, 0, 0),
+            ClosingTime = new TimeSpan(17, 30, 0),
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now
+        };
+
+        var wednesdaybranchHour = new BranchHour
+        {
+            Id = Guid.NewGuid(),
+            LibraryBranchId = mainBranchId,
+            OpeningTime = new TimeSpan(8, 0, 0),
+            ClosingTime = new TimeSpan(17, 30, 0),
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now
+        };
+
+        var thursdaybranchHour = new BranchHour
+        {
+            Id = Guid.NewGuid(),
+            LibraryBranchId = mainBranchId,
+            OpeningTime = new TimeSpan(8, 0, 0),
+            ClosingTime = new TimeSpan(17, 30, 0),
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now
+        };
+
+        var fridaybranchHour = new BranchHour
+        {
+            Id = Guid.NewGuid(),
+            LibraryBranchId = mainBranchId,
+            OpeningTime = new TimeSpan(8, 0, 0),
+            ClosingTime = new TimeSpan(17, 30, 0),
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now
+        };
+
+        var saturdaybranchHour = new BranchHour
+        {
+            Id = Guid.NewGuid(),
+            LibraryBranchId = mainBranchId,
+            OpeningTime = new TimeSpan(8, 0, 0),
+            ClosingTime = new TimeSpan(17, 30, 0),
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now
+        };
+
+        var sundaybranchHour = new BranchHour
+        {
+            Id = Guid.NewGuid(),
+            LibraryBranchId = mainBranchId,
+            OpeningTime = new TimeSpan(0, 0, 0),
+            ClosingTime = new TimeSpan(0, 0, 0),
+            CreatedById = systemUser.Id,
+            CreatedBy = systemUser.Name,
+            CreatedDate = DateTime.Now
+        };
+
+        SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
+        SeedEntities<AppUser>(modelBuilder, systemUser, adminUser, staffUser);
+        SeedEntities<AppUserRole>(modelBuilder, appUserRole, appUserRole2);
+        SeedEntities<Author>(modelBuilder, jKRowlingAuthor);
+        SeedEntities<Genre>(modelBuilder, fantasyGenre, adventureGenre);
+        SeedEntities<LibraryBranch>(modelBuilder, mainBranch);
+        //SeedEntities<BranchHour>(modelBuilder, mondaybranchHour, tuesdaybranchHour, wednesdaybranchHour, thursdaybranchHour, fridaybranchHour, saturdaybranchHour, sundaybranchHour);
+        SeedEntities<Publisher>(modelBuilder, bloomsburyPublishingPublisher);
+        SeedEntities<Book>(modelBuilder, harryPotterBook);
+        SeedEntities<Tag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
+        SeedEntities<Member>(modelBuilder, member1, member2);
+
+    }
+
+    private static void SeedEntities<T>(ModelBuilder modelBuilder, params T[] entities)
+        where T : class
+    {
+        modelBuilder.Entity<T>().HasData(entities);
     }
 }

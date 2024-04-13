@@ -17,10 +17,10 @@ public class LibraryBranch : BaseEntity<Guid>, IAuditable<Guid>
 
 
     public Guid BookId { get; set; }
+    public Guid BranchHourId { get; set; }
     public Guid MemberId { get; set; }
     public Guid StaffId { get; set; }
     public Guid LibraryBranchId { get; set; }
-    public Guid BranchHourId { get; set; }
     public Guid LibraryTransactionId { get; set; }
 
 
@@ -29,7 +29,7 @@ public class LibraryBranch : BaseEntity<Guid>, IAuditable<Guid>
     public ICollection<Book> Books { get; set; } // Şubeye ait kitaplar
     public ICollection<Member> Members { get; set; } // Şubeye kayıtlı üyeler
     public ICollection<Staff> Staffs { get; set; } // Şube personeli
-    public ICollection<BranchHour> BranchHours { get; set; }
+    public ICollection<BranchHour> BranchHours { get; set; } // mesai saatleri
     public ICollection<LibraryTransaction> Transactions { get; set; } // Şube işlemleri
 }
 

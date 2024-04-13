@@ -24,6 +24,7 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
         builder.Property(m => m.PenaltyDurationInDays).IsRequired();
         builder.Property(m => m.IsExtensionAllowed).IsRequired(); 
         builder.Property(m => m.ExtensionDurationInDays).IsRequired();
+
     }
 }
 
