@@ -10,14 +10,11 @@ public class EnumDocumentFilter : IDocumentFilter
 {
     public void Apply(OpenApiDocument swaggerDoc, DocumentFilterContext context)
     {
-
         AddEnumToSwagger<BookFormat>(swaggerDoc, "Kitabın formatını temsil eden bir enum.");
         AddEnumToSwagger<BookLanguage>(swaggerDoc, "Kitabın dilini temsil eden bir enum.");
         AddEnumToSwagger<BookStatus>(swaggerDoc, "Kitabın durumunu temsil eden bir enum.");
         AddEnumToSwagger<BorrowStatus>(swaggerDoc, "Kitabın ödünç durumunu temsil eden bir enum.");
         AddEnumToSwagger<TransactionType>(swaggerDoc, "Kitap işleminin türünü temsil eden bir enum.");
-
-
 
         var externalDocs = new OpenApiExternalDocs
         {
@@ -46,6 +43,4 @@ public class EnumDocumentFilter : IDocumentFilter
         else
             swaggerDoc.Components.Schemas[enumType.Name] = enumSchema;
     }
-
-
 }
