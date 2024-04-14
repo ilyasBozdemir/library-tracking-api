@@ -7,7 +7,8 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
 {
     public void Configure(EntityTypeBuilder<Member> builder)
     {
-        builder.ToTable("Members"); 
+        builder.ToTable(name: "Members", schema: "lm");// LibraryManagement
+
         builder.HasKey(m => m.Id);
         builder.Property(m => m.Id).ValueGeneratedOnAdd();
 

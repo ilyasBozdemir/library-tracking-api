@@ -9,7 +9,7 @@ public class BorrowConfiguration : IEntityTypeConfiguration<Borrow>
 {
     public void Configure(EntityTypeBuilder<Borrow> builder)
     {
-        builder.ToTable("Borrows");
+        builder.ToTable(name: "Borrows", schema: "lm");// LibraryManagement
         builder.HasKey(l => l.Id);
         builder.Property(l => l.BorrowDate).IsRequired();
         builder.Property(l => l.DueDate).IsRequired();

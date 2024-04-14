@@ -7,7 +7,8 @@ public class StaffConfiguration : IEntityTypeConfiguration<Staff>
 {
     public void Configure(EntityTypeBuilder<Staff> builder)
     {
-        builder.ToTable("Staff"); 
+        builder.ToTable(name: "Staffs", schema: "lm");// LibraryManagement
+
         builder.HasKey(s => s.Id); 
 
  

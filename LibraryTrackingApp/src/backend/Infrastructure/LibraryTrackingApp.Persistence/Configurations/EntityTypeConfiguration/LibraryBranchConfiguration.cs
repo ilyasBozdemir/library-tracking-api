@@ -7,8 +7,8 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
 {
     public void Configure(EntityTypeBuilder<LibraryBranch> builder)
     {
+        builder.ToTable(name: "LibraryBranches", schema: "lm");// LibraryManagement
 
-        builder.ToTable("LibraryBranches");
         builder.HasKey(lb => lb.Id);
 
         builder.Property(lb => lb.Name).IsRequired();
@@ -27,7 +27,7 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
             .HasMany(b => b.Members)
             .WithMany(t => t.LibraryBranches)
             .UsingEntity<Dictionary<string, object>>(
-            "MemberLibraryBranch",
+            "LibraryBranchMembers",
             j => j
             .HasOne<Member>()
             .WithMany()
@@ -39,7 +39,7 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
             j =>
             {
                 j.HasKey("MemberId", "LibraryBranchId");
-                j.ToTable("MemberLibraryBranch");
+                j.ToTable("LibraryBranchMembers");
             }
             );
 

@@ -9,7 +9,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
 {
     public void Configure(EntityTypeBuilder<Book> builder)
     {
-        builder.ToTable("Books");
+        builder.ToTable(name: "Books", schema: "lm");// LibraryManagement
         builder.HasKey(b => b.Id);
         builder.Property(b => b.Title).IsRequired();
         builder.Property(b => b.ISBN).IsRequired();
@@ -44,7 +44,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             .HasMany(b => b.Tags)
             .WithMany(t => t.Books)
             .UsingEntity<Dictionary<string, object>>(
-            "BookTag",
+            "BookTags",
             j => j
             .HasOne<Tag>()
             .WithMany()
@@ -56,7 +56,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             j =>
             {
                 j.HasKey("TagId", "BookId");
-                j.ToTable("BookTag");
+                j.ToTable("BookTags");
             }
             );
 
@@ -66,7 +66,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         builder.HasMany(b => b.Authors)
             .WithMany(a => a.Books)
             .UsingEntity<Dictionary<string, object>>(
-            "BookAuthor",
+            "BookAuthors",
             j => j
             .HasOne<Author>()
             .WithMany()
@@ -78,7 +78,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             j =>
             {
                 j.HasKey("AuthorId", "BookId");
-                j.ToTable("BookAuthor");
+                j.ToTable("BookAuthors");
             }
             );
 

@@ -7,7 +7,8 @@ public class TagConfiguration : IEntityTypeConfiguration<Tag>
 {
     public void Configure(EntityTypeBuilder<Tag> builder)
     {
-        builder.ToTable("Tags");
+        builder.ToTable(name: "Tags", schema: "lm");// LibraryManagement
+
         builder.HasKey(t => t.Id); 
 
  

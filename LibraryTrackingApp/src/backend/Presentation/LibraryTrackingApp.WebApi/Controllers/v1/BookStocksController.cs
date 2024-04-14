@@ -50,7 +50,10 @@ public class BookStocksController : CustomBaseController
             }
         );
 
-        return Ok(response);
+        return new JsonResult(new { data = response.Data })
+        {
+            StatusCode = response.StatusCode
+        };
     }
 
     /// <summary>
@@ -80,7 +83,10 @@ public class BookStocksController : CustomBaseController
                 OperationType = StockOperationType.Decrease,
             }
         );
-        return Ok(response);
+        return new JsonResult(new { data = response.Data })
+        {
+            StatusCode = response.StatusCode
+        };
     }
 
     /// <summary>
@@ -101,7 +107,10 @@ public class BookStocksController : CustomBaseController
                 OperationType = StockOperationType.Decrease,
             }
         );
-        return Ok(response);
+        return new JsonResult(new { data = response.Data })
+        {
+            StatusCode = response.StatusCode
+        };
     }
 
     /// <summary>
@@ -121,6 +130,9 @@ public class BookStocksController : CustomBaseController
                 OperationType = StockOperationType.Decrease,
             }
         );
-        return Ok(response);
+        return new JsonResult(new { data = response.Data })
+        {
+            StatusCode = response.StatusCode
+        };
     }
 }

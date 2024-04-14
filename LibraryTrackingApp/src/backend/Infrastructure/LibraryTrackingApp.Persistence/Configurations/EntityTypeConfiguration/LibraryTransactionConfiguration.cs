@@ -9,7 +9,8 @@ public class LibraryTransactionConfiguration : IEntityTypeConfiguration<LibraryT
 {
     public void Configure(EntityTypeBuilder<LibraryTransaction> builder)
     {
-        builder.ToTable("LibraryTransactions"); 
+        builder.ToTable(name: "LibraryTransactions", schema: "lm");// LibraryManagement
+
         builder.HasKey(lt => lt.Id);
 
     

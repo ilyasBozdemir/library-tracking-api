@@ -13,6 +13,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.EnsureSchema(
+                name: "lm");
+
+            migrationBuilder.EnsureSchema(
+                name: "identity");
+
             migrationBuilder.CreateTable(
                 name: "AspNetUsers",
                 columns: table => new
@@ -74,6 +80,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Genres",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -94,6 +101,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "LibraryBranches",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -123,6 +131,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Members",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -157,6 +166,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Publishers",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -179,11 +189,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Scope",
+                name: "Scopes",
+                schema: "identity",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
-                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -194,11 +205,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Scope", x => x.Id);
+                    table.PrimaryKey("PK_Scopes", x => x.Id);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Tags",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -300,6 +312,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "BranchHours",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -321,6 +334,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_BranchHours_LibraryBranches_LibraryBranchId",
                         column: x => x.LibraryBranchId,
+                        principalSchema: "lm",
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -328,6 +342,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "LibraryTransactions",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -349,13 +364,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_LibraryTransactions_LibraryBranches_LibraryBranchId",
                         column: x => x.LibraryBranchId,
+                        principalSchema: "lm",
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "Staff",
+                name: "Staffs",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -376,23 +393,25 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Staff", x => x.Id);
+                    table.PrimaryKey("PK_Staffs", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Staff_AspNetUsers_UserId",
+                        name: "FK_Staffs_AspNetUsers_UserId",
                         column: x => x.UserId,
                         principalTable: "AspNetUsers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Staff_LibraryBranches_LibraryBranchId",
+                        name: "FK_Staffs_LibraryBranches_LibraryBranchId",
                         column: x => x.LibraryBranchId,
+                        principalSchema: "lm",
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "MemberLibraryBranch",
+                name: "LibraryBranchMembers",
+                schema: "lm",
                 columns: table => new
                 {
                     MemberId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -400,16 +419,18 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_MemberLibraryBranch", x => new { x.MemberId, x.LibraryBranchId });
+                    table.PrimaryKey("PK_LibraryBranchMembers", x => new { x.MemberId, x.LibraryBranchId });
                     table.ForeignKey(
-                        name: "FK_MemberLibraryBranch_LibraryBranches_LibraryBranchId",
+                        name: "FK_LibraryBranchMembers_LibraryBranches_LibraryBranchId",
                         column: x => x.LibraryBranchId,
+                        principalSchema: "lm",
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_MemberLibraryBranch_Members_MemberId",
+                        name: "FK_LibraryBranchMembers_Members_MemberId",
                         column: x => x.MemberId,
+                        principalSchema: "lm",
                         principalTable: "Members",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -417,6 +438,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Books",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -451,18 +473,21 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_Books_Genres_GenreId",
                         column: x => x.GenreId,
+                        principalSchema: "lm",
                         principalTable: "Genres",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Books_LibraryBranches_LibraryBranchId",
                         column: x => x.LibraryBranchId,
+                        principalSchema: "lm",
                         principalTable: "LibraryBranches",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
                         name: "FK_Books_Publishers_PublisherId",
                         column: x => x.PublisherId,
+                        principalSchema: "lm",
                         principalTable: "Publishers",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
@@ -515,10 +540,10 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RoleScope",
+                name: "RolePermissions",
+                schema: "identity",
                 columns: table => new
                 {
-                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     RoleId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     ScopeId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
                     CreatedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -526,27 +551,29 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     LastModifiedBy = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     LastModifiedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     IsDeleted = table.Column<bool>(type: "bit", nullable: false),
-                    DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true)
+                    DeletedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RoleScope", x => x.Id);
+                    table.PrimaryKey("PK_RolePermissions", x => new { x.RoleId, x.ScopeId });
                     table.ForeignKey(
-                        name: "FK_RoleScope_AspNetRoles_RoleId",
+                        name: "FK_RolePermissions_AspNetRoles_RoleId",
                         column: x => x.RoleId,
                         principalTable: "AspNetRoles",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_RoleScope_Scope_ScopeId",
+                        name: "FK_RolePermissions_Scopes_ScopeId",
                         column: x => x.ScopeId,
-                        principalTable: "Scope",
+                        principalSchema: "identity",
+                        principalTable: "Scopes",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                name: "BookAuthor",
+                name: "BookAuthors",
                 columns: table => new
                 {
                     AuthorId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -554,16 +581,17 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BookAuthor", x => new { x.AuthorId, x.BookId });
+                    table.PrimaryKey("PK_BookAuthors", x => new { x.AuthorId, x.BookId });
                     table.ForeignKey(
-                        name: "FK_BookAuthor_Authors_AuthorId",
+                        name: "FK_BookAuthors_Authors_AuthorId",
                         column: x => x.AuthorId,
                         principalTable: "Authors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BookAuthor_Books_BookId",
+                        name: "FK_BookAuthors_Books_BookId",
                         column: x => x.BookId,
+                        principalSchema: "lm",
                         principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -571,6 +599,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "BookStocks",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -590,13 +619,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_BookStocks_Books_BookId",
                         column: x => x.BookId,
+                        principalSchema: "lm",
                         principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
-                name: "BookTag",
+                name: "BookTags",
+                schema: "lm",
                 columns: table => new
                 {
                     TagId = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -604,16 +635,18 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_BookTag", x => new { x.TagId, x.BookId });
+                    table.PrimaryKey("PK_BookTags", x => new { x.TagId, x.BookId });
                     table.ForeignKey(
-                        name: "FK_BookTag_Books_BookId",
+                        name: "FK_BookTags_Books_BookId",
                         column: x => x.BookId,
+                        principalSchema: "lm",
                         principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        name: "FK_BookTag_Tags_TagId",
+                        name: "FK_BookTags_Tags_TagId",
                         column: x => x.TagId,
+                        principalSchema: "lm",
                         principalTable: "Tags",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -621,6 +654,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             migrationBuilder.CreateTable(
                 name: "Borrows",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -645,25 +679,29 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_Borrows_Books_BookId",
                         column: x => x.BookId,
+                        principalSchema: "lm",
                         principalTable: "Books",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_Borrows_Members_MemberId",
                         column: x => x.MemberId,
+                        principalSchema: "lm",
                         principalTable: "Members",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
-                        name: "FK_Borrows_Staff_LenderId",
+                        name: "FK_Borrows_Staffs_LenderId",
                         column: x => x.LenderId,
-                        principalTable: "Staff",
+                        principalSchema: "lm",
+                        principalTable: "Staffs",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
                 name: "Returns",
+                schema: "lm",
                 columns: table => new
                 {
                     Id = table.Column<Guid>(type: "uniqueidentifier", nullable: false),
@@ -686,6 +724,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     table.ForeignKey(
                         name: "FK_Returns_Borrows_LoanId",
                         column: x => x.LoanId,
+                        principalSchema: "lm",
                         principalTable: "Borrows",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
@@ -696,10 +735,10 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 columns: new[] { "Id", "AppUserId", "ConcurrencyStamp", "Name", "NormalizedName" },
                 values: new object[,]
                 {
-                    { new Guid("52bb77e0-2506-4a65-9cba-688e3a262bc6"), null, "e15081bf-8144-442d-9f10-7d45284a8292", "Staff", "STAFF" },
-                    { new Guid("ad6b6471-57b2-4e53-b5d2-1e42a6b1ee18"), null, "1cd715d8-5cb9-4dd5-8378-f228a094929c", "Member", "MEMBER" },
-                    { new Guid("b93550d2-207d-4395-87ab-a12f17e9977c"), null, "4f55e2f4-d739-4905-902c-7a53932ab7b2", "system", "SYSTEM" },
-                    { new Guid("da67f859-4955-45a6-a244-75f15f338f24"), null, "2c9e899a-84c8-4416-9301-bda428daf6e8", "Admin", "ADMIN" }
+                    { new Guid("6089e326-0c0f-488b-b0aa-0b00df1218a4"), null, "b6d138d6-80b7-4439-8625-150b9506093a", "system", "SYSTEM" },
+                    { new Guid("8e0cd7bc-bc89-4ca0-8aca-f96488a8f8b6"), null, "5f4afd77-a3fa-494f-90fe-c4676d260c83", "Staff", "STAFF" },
+                    { new Guid("b4722322-72e5-4000-a818-45be45efb465"), null, "45071d4b-ddbf-41ec-b4fd-277479d979e8", "Member", "MEMBER" },
+                    { new Guid("e61c43e5-d940-424f-995c-f78767f43956"), null, "d1cdddbe-8b1e-4e92-8b16-157da9994b31", "Admin", "ADMIN" }
                 });
 
             migrationBuilder.InsertData(
@@ -707,52 +746,57 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "Email", "EmailConfirmed", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "LockoutEnabled", "LockoutEnd", "Name", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "RefreshToken", "RefreshTokenEndDate", "SecurityStamp", "Surname", "TwoFactorEnabled", "UserName" },
                 values: new object[,]
                 {
-                    { new Guid("4b9a128e-e613-4651-b672-0d94923dc87c"), 0, "0d3fcb87-580c-45df-b9f0-2aabe08ab0b9", "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 64, DateTimeKind.Local).AddTicks(1658), null, "admin@example.com", true, false, "SYSTEM", null, false, null, "admin", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEAkHvuin6yeN6l4jeCO0QqbNgndh0nFCN86+0a1EOziuzLQqZvq8EsDqh1xRuZAwug==", null, false, null, null, "", "admin", false, "admin@example.com" },
-                    { new Guid("8b60ed0d-ad2c-4df7-b7b0-f4561f6e1d43"), 0, "82b8292e-a9a6-4d88-8e30-fad0e96e4325", "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 107, DateTimeKind.Local).AddTicks(8922), null, "employee1@example.com", true, false, "SYSTEM", null, false, null, "admin", "EMPLOYEE2@EXAMPLE.COM", "EMPLOYEE2@EXAMPLE.COM", "AQAAAAIAAYagAAAAECI/9Z2oRfOjKHoPlOr08l4JpEtQkRhvftOrymVyoBz9xbB3kUJOfHtNkmBMsPmKQA==", null, false, null, null, "", "admin", false, "employee1@example.com" },
-                    { new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), 0, "006ed127-1482-4fca-a938-647118af94b8", "SYSTEM", new Guid("00000000-0000-0000-0000-000000000000"), new DateTime(2024, 4, 14, 15, 11, 47, 21, DateTimeKind.Local).AddTicks(2843), null, "system@domain.com", true, false, "SYSTEM", null, false, null, "system", "SYSTEM@DOMAIN.COM", "SYSTEM", "AQAAAAIAAYagAAAAEMzkSWqIvsQ5KpuKrrNNG21RZEprVS4y8gADXmyILRXHgeI2Yyzy1+l9aNv7O9aR+A==", null, false, null, null, "", "system", false, "system" }
+                    { new Guid("2f4602fa-1225-4cfb-ac69-6c6b87608fc0"), 0, "2ebc1dca-66d1-4004-af54-07fc6369418c", "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 201, DateTimeKind.Local).AddTicks(293), null, "employee1@example.com", true, false, "SYSTEM", null, false, null, "admin", "EMPLOYEE2@EXAMPLE.COM", "EMPLOYEE2@EXAMPLE.COM", "AQAAAAIAAYagAAAAEIzm5JL2JXtZO4bHns+y8ZOfXxwDYfjqdngBEFjwQM5ZhS/gVgq82ELRH//LEdDxmw==", null, false, null, null, "", "admin", false, "employee1@example.com" },
+                    { new Guid("ac947006-18d9-4006-a629-661840f97ceb"), 0, "88482ebb-520a-4805-8efb-9bb136f3efa2", "SYSTEM", new Guid("00000000-0000-0000-0000-000000000000"), new DateTime(2024, 4, 14, 15, 30, 26, 93, DateTimeKind.Local).AddTicks(8274), null, "system@domain.com", true, false, "SYSTEM", null, false, null, "system", "SYSTEM@DOMAIN.COM", "SYSTEM", "AQAAAAIAAYagAAAAECKuXNb761ish0sy/buQr+doccsSUU8GsdzJbqYhrX/Wxklr1ZAmasksqz3O6XMAyg==", null, false, null, null, "", "system", false, "system" },
+                    { new Guid("b9d2641b-437a-4515-92b9-137688dd16bf"), 0, "a560d7b6-89ab-45b7-ad90-1904d14be7c2", "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 156, DateTimeKind.Local).AddTicks(9393), null, "admin@example.com", true, false, "SYSTEM", null, false, null, "admin", "ADMIN@EXAMPLE.COM", "ADMIN@EXAMPLE.COM", "AQAAAAIAAYagAAAAEK2u0v9T52YIClp0k9ur0sIgjDZfKGkgmazm4qrlYtO4p7r7TA99g4tG17yqHu/sSQ==", null, false, null, null, "", "admin", false, "admin@example.com" }
                 });
 
             migrationBuilder.InsertData(
                 table: "Authors",
                 columns: new[] { "Id", "Biography", "BirthDate", "Country", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "Name", "Surname" },
-                values: new object[] { new Guid("2e733534-e02a-43d8-8c99-9502a7b1d695"), "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.", new DateTime(1965, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "United Kingdom", "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4427), null, false, "SYSTEM", null, "J.K.", "Rowling" });
+                values: new object[] { new Guid("9825e537-83e0-40ef-a601-4479772d12e7"), "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.", new DateTime(1965, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified), "United Kingdom", "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9291), null, false, "SYSTEM", null, "J.K.", "Rowling" });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "Genres",
                 columns: new[] { "Id", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "IsActive", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("bdd155d1-0967-44de-8905-86d087f61267"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4436), null, true, false, "SYSTEM", null, "Fantasy" },
-                    { new Guid("f2cce02a-a6bf-4d17-ad3f-65b42b73828d"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4439), null, true, false, "SYSTEM", null, "Adventure" }
+                    { new Guid("211e9ca5-7fed-4244-8a9a-db52c8ef6b4b"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9310), null, true, false, "SYSTEM", null, "Adventure" },
+                    { new Guid("f596c279-7a11-47db-bfce-04b05981bc2d"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9307), null, true, false, "SYSTEM", null, "Fantasy" }
                 });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "LibraryBranches",
                 columns: new[] { "Id", "Address", "BookId", "BranchHourId", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "Description", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "LibraryBranchId", "LibraryTransactionId", "MemberId", "Name", "OpeningDate", "PhoneNumber", "StaffId" },
-                values: new object[] { new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), "123 Ana Cadde", new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Bu bir örnek kütüphane şubesidir.", false, "SYSTEM", null, new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), "Örnek Kütüphane Şubesi", new DateTime(2020, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "123-456-7890", new Guid("00000000-0000-0000-0000-000000000000") });
+                values: new object[] { new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), "123 Ana Cadde", new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified), null, "Bu bir örnek kütüphane şubesidir.", false, "SYSTEM", null, new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), "Örnek Kütüphane Şubesi", new DateTime(2020, 2, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), "123-456-7890", new Guid("00000000-0000-0000-0000-000000000000") });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "Members",
                 columns: new[] { "Id", "Address", "BirthDate", "BorrowId", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "Email", "ExtensionDurationInDays", "Gender", "HasPenalty", "IsDeleted", "IsExtensionAllowed", "LastModifiedBy", "LastModifiedDate", "LibraryBranchId", "MaxLateReturnsAllowed", "MembershipDate", "Name", "NumberOfLateReturns", "Occupation", "PenaltyDurationInDays", "PhoneNumber" },
                 values: new object[,]
                 {
-                    { new Guid("1dab653d-c69c-4f72-8dec-21c1f31b79b8"), "123 Main Street", new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("00000000-0000-0000-0000-000000000000"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4619), null, "john.doe@example.com", 7, true, false, false, true, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), 3, new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4614), "John Doe", 0, "Software Engineer", 0, "+1234567890" },
-                    { new Guid("be83d51a-b7f8-4c0d-8e78-3b4b44ac28e4"), "456 Oak Street", new DateTime(1985, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("00000000-0000-0000-0000-000000000000"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4643), null, "jane.smith@example.com", 0, false, true, false, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), 3, new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4641), "Jane Smith", 2, "Teacher", 7, "+1987654321" }
+                    { new Guid("1e2e2b83-224f-4461-93e7-0b6448553409"), "456 Oak Street", new DateTime(1985, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("00000000-0000-0000-0000-000000000000"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9487), null, "jane.smith@example.com", 0, false, true, false, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), 3, new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9485), "Jane Smith", 2, "Teacher", 7, "+1987654321" },
+                    { new Guid("41261b67-19e9-404e-9cf1-1cd45f378e41"), "123 Main Street", new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("00000000-0000-0000-0000-000000000000"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9482), null, "john.doe@example.com", 7, true, false, false, true, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), 3, new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9478), "John Doe", 0, "Software Engineer", 0, "+1234567890" }
                 });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "Publishers",
                 columns: new[] { "Id", "Address", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "Email", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "Name", "PhoneNumber", "Website" },
-                values: new object[] { new Guid("71993c51-540a-4759-a16c-0a792d6a4761"), "50 Bedford Square, London, England", "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4463), null, "info@bloomsbury.com", false, "SYSTEM", null, "Bloomsbury Publishing", "+44 (0)20 7631 5600", "https://www.bloomsbury.com/" });
+                values: new object[] { new Guid("76ca146f-0f45-4775-ac37-7c9e0c56e4b0"), "50 Bedford Square, London, England", "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9325), null, "info@bloomsbury.com", false, "SYSTEM", null, "Bloomsbury Publishing", "+44 (0)20 7631 5600", "https://www.bloomsbury.com/" });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "Tags",
                 columns: new[] { "Id", "BookId", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "Name" },
                 values: new object[,]
                 {
-                    { new Guid("704cf34a-f081-412b-a879-f2037accd656"), new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4598), null, false, "SYSTEM", null, "Hogwarts" },
-                    { new Guid("a18fb570-71e9-42be-b888-770c313324ce"), new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4603), null, false, "SYSTEM", null, "Quidditch" },
-                    { new Guid("c63e7d5a-fa1b-4baa-bbab-273411967671"), new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4601), null, false, "SYSTEM", null, "Harry Potter" }
+                    { new Guid("45be5d43-c2f4-45be-946b-c087166b4859"), new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9464), null, false, "SYSTEM", null, "Quidditch" },
+                    { new Guid("9a5e3858-aa7b-4818-856b-38c5bb21ca1e"), new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9462), null, false, "SYSTEM", null, "Harry Potter" },
+                    { new Guid("fc4f3658-6498-4f3f-9f04-11013025584b"), new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9459), null, false, "SYSTEM", null, "Hogwarts" }
                 });
 
             migrationBuilder.InsertData(
@@ -760,71 +804,79 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 columns: new[] { "RoleId", "UserId", "Discriminator" },
                 values: new object[,]
                 {
-                    { new Guid("da67f859-4955-45a6-a244-75f15f338f24"), new Guid("4b9a128e-e613-4651-b672-0d94923dc87c"), "AppUserRole" },
-                    { new Guid("52bb77e0-2506-4a65-9cba-688e3a262bc6"), new Guid("8b60ed0d-ad2c-4df7-b7b0-f4561f6e1d43"), "AppUserRole" }
+                    { new Guid("8e0cd7bc-bc89-4ca0-8aca-f96488a8f8b6"), new Guid("2f4602fa-1225-4cfb-ac69-6c6b87608fc0"), "AppUserRole" },
+                    { new Guid("e61c43e5-d940-424f-995c-f78767f43956"), new Guid("b9d2641b-437a-4515-92b9-137688dd16bf"), "AppUserRole" }
                 });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "Books",
                 columns: new[] { "Id", "AuthorId", "BookFormat", "BookLanguage", "BookStatus", "BookStockBranchId", "BorrowId", "CoverImageUrl", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "Description", "GenreId", "ISBN", "IsDeleted", "IsFeatured", "LastModifiedBy", "LastModifiedDate", "LibraryBranchId", "OriginalPublicationDate", "PageCount", "PublicationDate", "PublisherId", "Title" },
-                values: new object[] { new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), new Guid("2e733534-e02a-43d8-8c99-9502a7b1d695"), "PrintedBook", "English", "Available", new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg", "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4477), null, "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!", new Guid("bdd155d1-0967-44de-8905-86d087f61267"), "9781408855652", false, true, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), 352, new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("71993c51-540a-4759-a16c-0a792d6a4761"), "Harry Potter and the Philosopher's Stone" });
+                values: new object[] { new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), new Guid("9825e537-83e0-40ef-a601-4479772d12e7"), "PrintedBook", "English", "Available", new Guid("00000000-0000-0000-0000-000000000000"), new Guid("00000000-0000-0000-0000-000000000000"), "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg", "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9339), null, "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!", new Guid("f596c279-7a11-47db-bfce-04b05981bc2d"), "9781408855652", false, true, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), 352, new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified), new Guid("76ca146f-0f45-4775-ac37-7c9e0c56e4b0"), "Harry Potter and the Philosopher's Stone" });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "BranchHours",
                 columns: new[] { "Id", "ClosingTime", "CreatedBy", "CreatedById", "CreatedDate", "DayOfWeek", "DeletedDate", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "LibraryBranchId", "OpeningTime" },
                 values: new object[,]
                 {
-                    { new Guid("028af088-751b-497c-bd81-2b4cf37d74a5"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4698), 0, null, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new TimeSpan(0, 8, 0, 0, 0) },
-                    { new Guid("0b0205f8-2b23-4ced-a2e4-ae1788aa8ef3"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4693), 0, null, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new TimeSpan(0, 8, 0, 0, 0) },
-                    { new Guid("24315f2c-1b35-441f-b6d2-ac148a105e1c"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4696), 0, null, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new TimeSpan(0, 8, 0, 0, 0) },
-                    { new Guid("5018a967-3ee3-43f8-bafe-92a7a9c5f467"), new TimeSpan(0, 0, 0, 0, 0), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4701), 0, null, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new TimeSpan(0, 0, 0, 0, 0) },
-                    { new Guid("6f0e01f6-ce41-4369-a0ce-0af0c4f3ec70"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4663), 0, null, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new TimeSpan(0, 8, 0, 0, 0) },
-                    { new Guid("87b0d36e-1a0e-4704-a9f0-695a6e92a69a"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4658), 0, null, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new TimeSpan(0, 8, 0, 0, 0) },
-                    { new Guid("f60c13bd-a9f4-4fe2-9aa6-a6c96d9a99cf"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4678), 0, null, false, "SYSTEM", null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new TimeSpan(0, 8, 0, 0, 0) }
+                    { new Guid("89610ec7-8914-49e6-8225-c9f8f810d735"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9523), 0, null, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new TimeSpan(0, 8, 0, 0, 0) },
+                    { new Guid("a409ae99-d76d-4f91-a00e-5cb2b1a92b8b"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9551), 0, null, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new TimeSpan(0, 8, 0, 0, 0) },
+                    { new Guid("a5f37372-9fbd-4114-8b38-10ca47f941f4"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9508), 0, null, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new TimeSpan(0, 8, 0, 0, 0) },
+                    { new Guid("ab3aceab-9786-4548-b505-156a06beab3d"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9554), 0, null, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new TimeSpan(0, 8, 0, 0, 0) },
+                    { new Guid("ab3dcc9c-0a7b-4352-9cdf-a1063b3e09f0"), new TimeSpan(0, 0, 0, 0, 0), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9558), 0, null, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new TimeSpan(0, 0, 0, 0, 0) },
+                    { new Guid("b2610214-6538-4a50-93e0-0dc13a09556b"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9549), 0, null, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new TimeSpan(0, 8, 0, 0, 0) },
+                    { new Guid("cc9dd40f-930c-4557-92c9-fcd6d4293056"), new TimeSpan(0, 17, 30, 0, 0), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9505), 0, null, false, "SYSTEM", null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new TimeSpan(0, 8, 0, 0, 0) }
                 });
 
             migrationBuilder.InsertData(
-                table: "MemberLibraryBranch",
+                schema: "lm",
+                table: "LibraryBranchMembers",
                 columns: new[] { "LibraryBranchId", "MemberId" },
                 values: new object[,]
                 {
-                    { new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new Guid("1dab653d-c69c-4f72-8dec-21c1f31b79b8") },
-                    { new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), new Guid("be83d51a-b7f8-4c0d-8e78-3b4b44ac28e4") }
+                    { new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new Guid("1e2e2b83-224f-4461-93e7-0b6448553409") },
+                    { new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), new Guid("41261b67-19e9-404e-9cf1-1cd45f378e41") }
                 });
 
             migrationBuilder.InsertData(
-                table: "Staff",
+                schema: "lm",
+                table: "Staffs",
                 columns: new[] { "Id", "Address", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "EmploymentDate", "IsDeleted", "IsFullTime", "LastModifiedBy", "LastModifiedDate", "LibraryBranchId", "Phone", "Salary", "UserId" },
-                values: new object[] { new Guid("92863cc9-0b7d-4699-934a-d12619ff0973"), "Employee Address", "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4716), null, new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4712), false, true, null, null, new Guid("4e2ff95a-555f-4b6e-bec5-95b2547e2591"), "+905553331122", 3000.00m, new Guid("8b60ed0d-ad2c-4df7-b7b0-f4561f6e1d43") });
+                values: new object[] { new Guid("2171ad89-05af-4298-a1fd-d3cd21cb365d"), "Employee Address", "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9574), null, new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9566), false, true, null, null, new Guid("9c17a9d1-277d-4227-adaa-1a0c83559188"), "+905553331122", 3000.00m, new Guid("2f4602fa-1225-4cfb-ac69-6c6b87608fc0") });
 
             migrationBuilder.InsertData(
-                table: "BookAuthor",
+                table: "BookAuthors",
                 columns: new[] { "AuthorId", "BookId" },
-                values: new object[] { new Guid("2e733534-e02a-43d8-8c99-9502a7b1d695"), new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e") });
+                values: new object[] { new Guid("9825e537-83e0-40ef-a601-4479772d12e7"), new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c") });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "BookStocks",
                 columns: new[] { "Id", "BookId", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "Quantity" },
-                values: new object[] { new Guid("3fcf90e1-37aa-4065-96f7-bdb35e5ee7d3"), new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4708), null, false, "SYSTEM", null, 100 });
+                values: new object[] { new Guid("db4779f7-7fc5-43fe-a863-b2d7b0848cb0"), new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9562), null, false, "SYSTEM", null, 100 });
 
             migrationBuilder.InsertData(
-                table: "BookTag",
+                schema: "lm",
+                table: "BookTags",
                 columns: new[] { "BookId", "TagId" },
                 values: new object[,]
                 {
-                    { new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), new Guid("704cf34a-f081-412b-a879-f2037accd656") },
-                    { new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), new Guid("c63e7d5a-fa1b-4baa-bbab-273411967671") }
+                    { new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), new Guid("9a5e3858-aa7b-4818-856b-38c5bb21ca1e") },
+                    { new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), new Guid("fc4f3658-6498-4f3f-9f04-11013025584b") }
                 });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "Borrows",
                 columns: new[] { "Id", "BookId", "BorrowDate", "BorrowStatus", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "DueDate", "HasFee", "IsDeleted", "LastModifiedBy", "LastModifiedDate", "LenderId", "MemberId" },
-                values: new object[] { new Guid("53508a63-28a7-4ba2-aeee-fcf9a9e77ab4"), new Guid("1c2cf9fd-0b7f-40d8-b018-bc6136479d7e"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4721), "Borrowed", "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4746), null, new DateTime(2024, 4, 28, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4721), false, false, "SYSTEM", null, new Guid("92863cc9-0b7d-4699-934a-d12619ff0973"), new Guid("1dab653d-c69c-4f72-8dec-21c1f31b79b8") });
+                values: new object[] { new Guid("071c761a-ccd6-4146-b7f3-5c7cefaa1de2"), new Guid("10405239-c787-4a4c-b01f-00b10a55ec9c"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9578), "Borrowed", "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9599), null, new DateTime(2024, 4, 28, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9579), false, false, "SYSTEM", null, new Guid("2171ad89-05af-4298-a1fd-d3cd21cb365d"), new Guid("41261b67-19e9-404e-9cf1-1cd45f378e41") });
 
             migrationBuilder.InsertData(
+                schema: "lm",
                 table: "Returns",
                 columns: new[] { "Id", "BookStatus", "CreatedBy", "CreatedById", "CreatedDate", "DeletedDate", "IsDeleted", "IsLate", "LastModifiedBy", "LastModifiedDate", "LoanId", "PenaltyDurationInDays", "ReturnDate" },
-                values: new object[] { new Guid("e8583752-b4ed-4cbf-9383-ed1bb24621c4"), 4, "system", new Guid("a1670e55-05e6-48f4-a57c-117efb032b28"), new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4775), null, false, false, "SYSTEM", null, new Guid("53508a63-28a7-4ba2-aeee-fcf9a9e77ab4"), -13, new DateTime(2024, 4, 14, 15, 11, 47, 162, DateTimeKind.Local).AddTicks(4750) });
+                values: new object[] { new Guid("768b0557-4606-4b98-a5e8-a52c70e572bd"), 4, "system", new Guid("ac947006-18d9-4006-a629-661840f97ceb"), new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9652), null, false, false, "SYSTEM", null, new Guid("071c761a-ccd6-4146-b7f3-5c7cefaa1de2"), -13, new DateTime(2024, 4, 14, 15, 30, 26, 245, DateTimeKind.Local).AddTicks(9621) });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AspNetRoleClaims_RoleId",
@@ -871,89 +923,99 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BookAuthor_BookId",
-                table: "BookAuthor",
+                name: "IX_BookAuthors_BookId",
+                table: "BookAuthors",
                 column: "BookId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Books_GenreId",
+                schema: "lm",
                 table: "Books",
                 column: "GenreId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Books_LibraryBranchId",
+                schema: "lm",
                 table: "Books",
                 column: "LibraryBranchId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Books_PublisherId",
+                schema: "lm",
                 table: "Books",
                 column: "PublisherId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BookStocks_BookId",
+                schema: "lm",
                 table: "BookStocks",
                 column: "BookId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BookTag_BookId",
-                table: "BookTag",
+                name: "IX_BookTags_BookId",
+                schema: "lm",
+                table: "BookTags",
                 column: "BookId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Borrows_BookId",
+                schema: "lm",
                 table: "Borrows",
                 column: "BookId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Borrows_LenderId",
+                schema: "lm",
                 table: "Borrows",
                 column: "LenderId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Borrows_MemberId",
+                schema: "lm",
                 table: "Borrows",
                 column: "MemberId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BranchHours_LibraryBranchId",
+                schema: "lm",
                 table: "BranchHours",
                 column: "LibraryBranchId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_LibraryBranchMembers_LibraryBranchId",
+                schema: "lm",
+                table: "LibraryBranchMembers",
+                column: "LibraryBranchId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_LibraryTransactions_LibraryBranchId",
+                schema: "lm",
                 table: "LibraryTransactions",
                 column: "LibraryBranchId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_MemberLibraryBranch_LibraryBranchId",
-                table: "MemberLibraryBranch",
-                column: "LibraryBranchId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Returns_LoanId",
+                schema: "lm",
                 table: "Returns",
                 column: "LoanId",
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_RoleScope_RoleId",
-                table: "RoleScope",
-                column: "RoleId");
-
-            migrationBuilder.CreateIndex(
-                name: "IX_RoleScope_ScopeId",
-                table: "RoleScope",
+                name: "IX_RolePermissions_ScopeId",
+                schema: "identity",
+                table: "RolePermissions",
                 column: "ScopeId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Staff_LibraryBranchId",
-                table: "Staff",
+                name: "IX_Staffs_LibraryBranchId",
+                schema: "lm",
+                table: "Staffs",
                 column: "LibraryBranchId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Staff_UserId",
-                table: "Staff",
+                name: "IX_Staffs_UserId",
+                schema: "lm",
+                table: "Staffs",
                 column: "UserId",
                 unique: true);
         }
@@ -977,64 +1039,80 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 name: "AspNetUserTokens");
 
             migrationBuilder.DropTable(
-                name: "BookAuthor");
+                name: "BookAuthors");
 
             migrationBuilder.DropTable(
-                name: "BookStocks");
+                name: "BookStocks",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "BookTag");
+                name: "BookTags",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "BranchHours");
+                name: "BranchHours",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "LibraryTransactions");
+                name: "LibraryBranchMembers",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "MemberLibraryBranch");
+                name: "LibraryTransactions",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "Returns");
+                name: "Returns",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "RoleScope");
+                name: "RolePermissions",
+                schema: "identity");
 
             migrationBuilder.DropTable(
                 name: "Authors");
 
             migrationBuilder.DropTable(
-                name: "Tags");
+                name: "Tags",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "Borrows");
+                name: "Borrows",
+                schema: "lm");
 
             migrationBuilder.DropTable(
                 name: "AspNetRoles");
 
             migrationBuilder.DropTable(
-                name: "Scope");
+                name: "Scopes",
+                schema: "identity");
 
             migrationBuilder.DropTable(
-                name: "Books");
+                name: "Books",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "Members");
+                name: "Members",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "Staff");
+                name: "Staffs",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "Genres");
+                name: "Genres",
+                schema: "lm");
 
             migrationBuilder.DropTable(
-                name: "Publishers");
+                name: "Publishers",
+                schema: "lm");
 
             migrationBuilder.DropTable(
                 name: "AspNetUsers");
 
             migrationBuilder.DropTable(
-                name: "LibraryBranches");
+                name: "LibraryBranches",
+                schema: "lm");
         }
     }
 }

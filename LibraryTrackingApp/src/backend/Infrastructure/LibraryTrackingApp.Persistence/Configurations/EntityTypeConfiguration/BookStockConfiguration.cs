@@ -7,7 +7,7 @@ public class BookStockConfiguration : IEntityTypeConfiguration<BookStock>
 {
     public void Configure(EntityTypeBuilder<BookStock> builder)
     {
-        builder.ToTable("BookStocks");
+        builder.ToTable(name: "BookStocks", schema: "lm");// LibraryManagement
         builder.HasKey(bs => bs.Id);
         builder.Property(bs => bs.Id).ValueGeneratedOnAdd(); 
 

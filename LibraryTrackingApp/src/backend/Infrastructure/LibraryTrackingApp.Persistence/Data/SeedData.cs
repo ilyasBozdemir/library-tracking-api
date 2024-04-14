@@ -460,9 +460,9 @@ public static class SeedData
         SeedEntities<Return>(modelBuilder, @return);
 
 
-        modelBuilder.Entity("BookTag").HasData(bookTag1, bookTag2);
-        modelBuilder.Entity("BookAuthor").HasData(bookAuthor);
-        modelBuilder.Entity("MemberLibraryBranch").HasData(memberLibraryBranch, memberLibraryBranch2);
+        modelBuilder.Entity("BookTags").HasData(bookTag1, bookTag2);
+        modelBuilder.Entity("BookAuthors").HasData(bookAuthor);
+        modelBuilder.Entity("LibraryBranchMembers").HasData(memberLibraryBranch, memberLibraryBranch2);
     }
 
 

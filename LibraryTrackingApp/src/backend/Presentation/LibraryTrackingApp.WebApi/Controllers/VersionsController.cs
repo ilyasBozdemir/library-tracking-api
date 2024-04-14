@@ -2,7 +2,6 @@
 using LibraryTrackingApp.Infrastructure.Helpers;
 using LibraryTrackingApp.Infrastructure.Mvc;
 using LibraryTrackingApp.Infrastructure.Repositories;
-using System.Net;
 
 namespace LibraryTrackingApp.WebApi.Controllers;
 

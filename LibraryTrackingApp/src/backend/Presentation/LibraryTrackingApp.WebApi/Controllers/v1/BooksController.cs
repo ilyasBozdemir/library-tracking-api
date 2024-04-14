@@ -36,7 +36,10 @@ public class BooksController : CustomBaseController
                     .Create
             }
         );
-        return Ok(response);
+        return new JsonResult(new { data = response.Data })
+        {
+            StatusCode = response.StatusCode
+        };
     }
 
     /// <summary>
@@ -67,7 +70,10 @@ public class BooksController : CustomBaseController
                     .Update
             }
         );
-        return Ok(response);
+        return new JsonResult(new { data = response.Data })
+        {
+            StatusCode = response.StatusCode
+        };
     }
 
     /// <summary>
@@ -94,7 +100,10 @@ public class BooksController : CustomBaseController
                     .Delete
             }
         );
-        return Ok(response);
+        return new JsonResult(new { data = response.Data })
+        {
+            StatusCode = response.StatusCode
+        };
     }
 
 
@@ -160,7 +169,11 @@ public class BooksController : CustomBaseController
                         .Get
                 }
             );
-            return Ok(response.Data);
+
+            return new JsonResult(new { data = response.Data })
+            {
+                StatusCode = response.StatusCode
+            };
         }
         else
         {
@@ -204,7 +217,10 @@ public class BooksController : CustomBaseController
                         .GetAll
                 }
             );
-            return Ok(response.Data);
+            return new JsonResult(new { data = response.Data })
+            {
+                StatusCode = response.StatusCode
+            };
         }
         else
         {

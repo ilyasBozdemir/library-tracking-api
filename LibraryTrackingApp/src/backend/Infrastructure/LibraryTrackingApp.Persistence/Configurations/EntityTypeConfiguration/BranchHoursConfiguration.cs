@@ -7,7 +7,7 @@ public class BranchHoursConfiguration : IEntityTypeConfiguration<BranchHour>
 {
     public void Configure(EntityTypeBuilder<BranchHour> builder)
     {
-        builder.ToTable("BranchHours");
+        builder.ToTable(name: "BranchHours", schema: "lm");// LibraryManagement
         builder.HasKey(bh => bh.Id); 
 
       

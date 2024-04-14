@@ -7,7 +7,8 @@ public class GenreConfiguration : IEntityTypeConfiguration<Genre>
 {
     public void Configure(EntityTypeBuilder<Genre> builder)
     {
-        builder.ToTable("Genres"); 
+        builder.ToTable(name: "Genres", schema: "lm");// LibraryManagement
+
         builder.HasKey(g => g.Id);
 
     
