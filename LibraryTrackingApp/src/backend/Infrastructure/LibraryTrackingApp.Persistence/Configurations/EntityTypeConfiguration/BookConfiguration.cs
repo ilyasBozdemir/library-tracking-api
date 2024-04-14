@@ -32,6 +32,8 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             .Property(b => b.BookLanguage)
             .HasConversion(new EnumToStringConverter<BookLanguage>());
 
+        builder.HasIndex(b => b.Title);
+        builder.HasIndex(b => b.ISBN);
 
         // Book - BookStocks ilişkisi
         builder.HasMany(b => b.BookStocks).WithOne(bs => bs.Book).HasForeignKey(bs => bs.Id);//1-1 olması lazım düzenlencek.

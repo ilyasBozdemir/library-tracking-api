@@ -2,7 +2,7 @@
 
 public class Return : BaseEntity<Guid>, IAuditable<Guid>
 {
-    public Guid LoanId { get; set; } 
+    public Guid BorrowId { get; set; } 
     public DateTime ReturnDate { get; set; } 
     public bool IsLate { get; set; } 
     public BookStatus BookStatus { get; set; } 

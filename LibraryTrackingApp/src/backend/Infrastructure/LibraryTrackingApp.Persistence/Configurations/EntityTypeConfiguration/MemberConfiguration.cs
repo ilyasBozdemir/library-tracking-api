@@ -10,7 +10,7 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
         builder.ToTable(name: "Members", schema: "lm");// LibraryManagement
 
         builder.HasKey(m => m.Id);
-        builder.Property(m => m.Id).ValueGeneratedOnAdd();
+        builder.HasIndex(m => m.Email).IsUnique();
 
         builder.Property(m => m.Name).IsRequired(); 
         builder.Property(m => m.Email).IsRequired();

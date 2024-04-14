@@ -9,9 +9,10 @@ public class StaffConfiguration : IEntityTypeConfiguration<Staff>
     {
         builder.ToTable(name: "Staffs", schema: "lm");// LibraryManagement
 
-        builder.HasKey(s => s.Id); 
+        builder.HasKey(s => s.Id);
+        builder.HasIndex(s => s.Phone);
 
- 
+
         builder.Property(s => s.Phone).IsRequired();
         builder.Property(s => s.Address).IsRequired();
         builder.Property(s => s.EmploymentDate).IsRequired();

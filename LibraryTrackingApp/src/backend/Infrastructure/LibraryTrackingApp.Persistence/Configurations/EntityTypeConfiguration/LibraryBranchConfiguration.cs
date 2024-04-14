@@ -10,6 +10,8 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
         builder.ToTable(name: "LibraryBranches", schema: "lm");// LibraryManagement
 
         builder.HasKey(lb => lb.Id);
+        builder.HasIndex(b => b.Name).IsUnique();
+
 
         builder.Property(lb => lb.Name).IsRequired();
         builder.Property(lb => lb.Address).IsRequired();

@@ -14,6 +14,11 @@ public class BorrowConfiguration : IEntityTypeConfiguration<Borrow>
         builder.Property(l => l.BorrowDate).IsRequired();
         builder.Property(l => l.DueDate).IsRequired();
 
+        builder.HasIndex(b => b.MemberId);
+        builder.HasIndex(b => b.BookId);
+        builder.HasIndex(b => b.BorrowDate);
+        builder.HasIndex(b => b.DueDate);
+
 
         builder
             .Property(b => b.BorrowStatus)

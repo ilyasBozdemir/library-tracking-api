@@ -10,7 +10,9 @@ public class PublisherConfiguration : IEntityTypeConfiguration<Publisher>
     {
         builder.ToTable(name: "Publishers", schema: "lm");// LibraryManagement
 
-        builder.HasKey(p => p.Id); 
+        builder.HasKey(p => p.Id);
+        builder.HasIndex(p => p.Email).IsUnique();
+        builder.HasIndex(p => p.Name);
 
         builder.Property(p => p.Name).IsRequired();
         builder.Property(p => p.Address).IsRequired();

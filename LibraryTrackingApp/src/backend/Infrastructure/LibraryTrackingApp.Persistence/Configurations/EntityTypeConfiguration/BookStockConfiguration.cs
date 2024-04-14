@@ -13,5 +13,6 @@ public class BookStockConfiguration : IEntityTypeConfiguration<BookStock>
 
         builder.Property(bs => bs.Id).IsRequired();
         builder.Property(bs => bs.Quantity).IsRequired();
+
     }
 }

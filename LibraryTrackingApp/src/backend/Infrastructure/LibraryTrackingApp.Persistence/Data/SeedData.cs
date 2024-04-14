@@ -430,7 +430,7 @@ public static class SeedData
         var @return = new Return() 
         {
             Id = Guid.NewGuid(),
-            LoanId = borrow.Id, 
+            BorrowId = borrow.Id, 
             ReturnDate = DateTime.Now, 
             IsLate = DateTime.Now > borrow.DueDate, 
             BookStatus = BookStatus.Available,

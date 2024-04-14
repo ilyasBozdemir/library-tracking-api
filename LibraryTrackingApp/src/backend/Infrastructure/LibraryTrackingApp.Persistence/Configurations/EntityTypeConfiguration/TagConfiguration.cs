@@ -9,9 +9,10 @@ public class TagConfiguration : IEntityTypeConfiguration<Tag>
     {
         builder.ToTable(name: "Tags", schema: "lm");// LibraryManagement
 
-        builder.HasKey(t => t.Id); 
+        builder.HasKey(t => t.Id);
+        builder.HasIndex(t => t.Name);
 
- 
+
         builder.Property(t => t.Name).IsRequired();
 
     }

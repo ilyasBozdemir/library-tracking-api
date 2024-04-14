@@ -13,7 +13,6 @@ public class LibraryTransactionConfiguration : IEntityTypeConfiguration<LibraryT
 
         builder.HasKey(lt => lt.Id);
 
-    
         builder.Property(lt => lt.TransactionDate).IsRequired();
         builder.Property(lt => lt.TransactionType).IsRequired();
         builder.Property(lt => lt.Details).IsRequired();
