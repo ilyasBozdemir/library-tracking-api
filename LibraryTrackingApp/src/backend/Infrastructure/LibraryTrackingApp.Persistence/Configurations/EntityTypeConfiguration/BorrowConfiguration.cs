@@ -1,5 +1,7 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
+using LibraryTrackingApp.Domain.Enums;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
@@ -12,6 +14,10 @@ public class BorrowConfiguration : IEntityTypeConfiguration<Borrow>
         builder.Property(l => l.BorrowDate).IsRequired();
         builder.Property(l => l.DueDate).IsRequired();
 
+
+        builder
+            .Property(b => b.BorrowStatus)
+            .HasConversion(new EnumToStringConverter<BookLanguage>());
 
 
         builder.HasOne(l => l.Book)

@@ -19,8 +19,8 @@ public class Book : BaseEntity<Guid>, IAuditable<Guid>
  
     public DateTime PublicationDate { get; set; }
     public DateTime OriginalPublicationDate { get; set; }
-    public BookStatus Status { get; set; }
-    public BookFormat Format { get; set; }
+    public BookStatus BookStatus { get; set; }
+    public BookFormat BookFormat { get; set; }
     public BookLanguage BookLanguage { get; set; }
     public bool IsFeatured { get; set; }
 

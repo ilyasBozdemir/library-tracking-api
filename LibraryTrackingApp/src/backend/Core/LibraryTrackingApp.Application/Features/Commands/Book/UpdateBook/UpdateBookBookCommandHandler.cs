@@ -37,7 +37,7 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
                     existingBook.ISBN = request.ISBN;
                     existingBook.PageCount = request.PageCount;
                     existingBook.PublicationDate = request.PublicationDate;
-                    existingBook.Status = request.Status;
+                    existingBook.BookStatus = request.Status;
 
                     bool isUpdated = await writeRepository.UpdateAsync(existingBook);
 

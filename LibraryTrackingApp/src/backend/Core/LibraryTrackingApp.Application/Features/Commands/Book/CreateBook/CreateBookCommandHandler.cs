@@ -40,7 +40,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
                 //Publisher = request.Publisher,
                 PublicationDate = request.PublicationDate,
                 PageCount = request.PageCount,
-                Status = request.Status,
+                BookStatus = request.Status,
                 IsDeleted = false,
                 DeletedDate = null
             };

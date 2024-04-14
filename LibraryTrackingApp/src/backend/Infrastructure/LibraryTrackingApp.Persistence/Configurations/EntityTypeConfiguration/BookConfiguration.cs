@@ -1,5 +1,7 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
+using LibraryTrackingApp.Domain.Enums;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
@@ -17,6 +19,19 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             .WithMany(p => p.Books)
             .HasForeignKey(b => b.Id)
             .OnDelete(DeleteBehavior.Cascade);
+
+        builder
+            .Property(b => b.BookStatus)
+            .HasConversion(new EnumToStringConverter<BookStatus>());
+
+        builder
+            .Property(b => b.BookFormat)
+            .HasConversion(new EnumToStringConverter<BookFormat>());
+
+        builder
+            .Property(b => b.BookLanguage)
+            .HasConversion(new EnumToStringConverter<BookLanguage>());
+
 
         // Book - BookStocks ilişkisi
         builder.HasMany(b => b.BookStocks).WithOne(bs => bs.Book).HasForeignKey(bs => bs.Id);//1-1 olması lazım düzenlencek.

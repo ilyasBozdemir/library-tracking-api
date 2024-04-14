@@ -1,4 +1,5 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
+using LibraryTrackingApp.Domain.Enums;
 using LibraryTrackingApp.Persistence.Data;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using System.Reflection;
@@ -28,6 +29,7 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     {
         base.OnModelCreating(modelBuilder);
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
         SeedData.Seed(modelBuilder);
     }
 

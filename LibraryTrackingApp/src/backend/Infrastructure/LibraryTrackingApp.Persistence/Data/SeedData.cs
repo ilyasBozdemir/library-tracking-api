@@ -179,8 +179,8 @@ public static class SeedData
             PageCount = 352,
             PublicationDate = new DateTime(1997, 6, 26),
             OriginalPublicationDate = new DateTime(1997, 6, 26),
-            Status = BookStatus.Available,
-            Format = BookFormat.PrintedBook,
+            BookStatus = BookStatus.Available,
+            BookFormat = BookFormat.PrintedBook,
             BookLanguage = BookLanguage.English,
             IsFeatured = true,
             CreatedById = systemUser.Id,
@@ -427,7 +427,6 @@ public static class SeedData
             LastModifiedBy = systemUser.LastModifiedBy
         };
 
-
         var @return = new Return() 
         {
             Id = Guid.NewGuid(),
@@ -442,7 +441,8 @@ public static class SeedData
             LastModifiedBy = systemUser.LastModifiedBy
         };
 
-      
+
+
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
         SeedEntities<AppUser>(modelBuilder, systemUser, adminUser, staffUser);
         SeedEntities<AppUserRole>(modelBuilder, appUserRole, appUserRole2);
@@ -458,7 +458,6 @@ public static class SeedData
         SeedEntities<Staff>(modelBuilder, staff);
         SeedEntities<BookStock>(modelBuilder, bookStock);
         SeedEntities<Return>(modelBuilder, @return);
-
 
 
         modelBuilder.Entity("BookTag").HasData(bookTag1, bookTag2);
