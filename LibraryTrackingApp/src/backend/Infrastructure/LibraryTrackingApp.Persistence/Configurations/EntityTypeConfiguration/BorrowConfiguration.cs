@@ -17,7 +17,7 @@ public class BorrowConfiguration : IEntityTypeConfiguration<Borrow>
 
         builder
             .Property(b => b.BorrowStatus)
-            .HasConversion(new EnumToStringConverter<BookLanguage>());
+            .HasConversion(new EnumToStringConverter<BorrowStatus>());
 
 
         builder.HasOne(l => l.Book)

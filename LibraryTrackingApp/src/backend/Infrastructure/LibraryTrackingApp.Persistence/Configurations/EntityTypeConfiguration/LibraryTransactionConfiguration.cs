@@ -19,7 +19,7 @@ public class LibraryTransactionConfiguration : IEntityTypeConfiguration<LibraryT
 
         builder
             .Property(b => b.TransactionType)
-            .HasConversion(new EnumToStringConverter<BookLanguage>());
+            .HasConversion(new EnumToStringConverter<TransactionType>());
 
         builder.HasOne(lt => lt.LibraryBranch)
                .WithMany(lb => lb.Transactions)
