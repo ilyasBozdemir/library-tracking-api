@@ -1,7 +1,8 @@
 import { Flex, Text } from "@chakra-ui/react";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import PagesBreadcrumb from "./PagesBreadcrumb";
+
+import PagesBreadcrumb from '../components/shared/PagesBreadcrumb'
 
 function PagesCTA({ imgSrc, currentPage }) {
   const [isMobile, setIsMobile] = useState(false);
@@ -24,7 +25,7 @@ function PagesCTA({ imgSrc, currentPage }) {
       <Flex
         as="section"
         h={{ base: 180, md: 250 }}
-        bgGradient="linear(to-l, #e8910e, #ff5e13)"
+        bgGradient="linear(to-l, primary.100, primary.200)"
         w="100%"
         color="white"
         justify={"center"}

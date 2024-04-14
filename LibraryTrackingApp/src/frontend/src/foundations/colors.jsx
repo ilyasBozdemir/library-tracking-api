@@ -1,54 +1,45 @@
-// The theme colors have been generated on the website https://aicolors.co/.
-
-import { useColorModeValue } from "@chakra-ui/react";
-
-const aiColorstoObject = (text) => {
-  const lines = text.trim().split(/\r?\n/);
-
-  const colors = lines.reduce((acc, line) => {
-    const [key, value] = line.split(":");
-    if (key && value) {
-      const colorName = key.trim().replace("--", "").replace("-", "_");
-      acc[colorName] = value.trim().replace(";", "");
-    }
-    return acc;
-  }, {});
-
-  return colors;
-};
-
-const inputWhitenText = `
-    --primary-100:#1F3A5F;
-    --primary-200:#4d648d;
-    --primary-300:#acc2ef;
-    --accent-100:#3D5A80;
-    --accent-200:#cee8ff;
-    --text-100:#FFFFFF;
-    --text-200:#e0e0e0;
-    --bg-100:#0F1C2E;
-    --bg-200:#1f2b3e;
-    --bg-300:#374357;
-      
-`;
-
-const inputDarkenText = `
---primary-100:#1F3A5F;
---primary-200:#4d648d;
---primary-300:#acc2ef;
---accent-100:#3D5A80;
---accent-200:#cee8ff;
---text-100:#FFFFFF;
---text-200:#e0e0e0;
---bg-100:#0F1C2E;
---bg-200:#1f2b3e;
---bg-300:#374357;
-  
-`;
-
-const whitenColors = aiColorstoObject(inputWhitenText);
-const darkenColors = aiColorstoObject(inputDarkenText);
-
 export const colors = {
-  darken: aiColorstoObject(inputWhitenText),
-  whiten: aiColorstoObject(inputDarkenText),
+  white: "#ffffff",
+  black: "#000000",
+
+  //whiten
+
+  primary: {
+    100: "#54BEC3",
+    200: "#30a1a6",
+    300: "#005f65",
+  },
+  accent: {
+    100: "#c354be",
+    200: "#ffecff",
+  },
+  text: {
+    100: "#333333",
+    200: "#5c5c5c",
+  },
+  bg: {
+    100: "#F5F5F5",
+    200: "#ebebeb",
+    300: "#c2c2c2",
+  },
+
+  //darken
+  primaryD: {
+    100: "#61DAFB",
+    200: "#39bcdc",
+    300: "#007997",
+  },
+  accentD: {
+    100: "#c354be",
+    200: "#ffecff",
+  },
+  textD: {
+    100: "#FFFFFF",
+    200: "#e0e0e0",
+  },
+  bgD: {
+    100: "#282C34",
+    200: "#383c44",
+    300: "#50555e",
+  },
 };

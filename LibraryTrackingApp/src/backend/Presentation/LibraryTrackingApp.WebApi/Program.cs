@@ -2,6 +2,7 @@
 using System.Text.Json;
 using HealthChecks.UI.Client;
 using LibraryTrackingApp.Application;
+using LibraryTrackingApp.Application.Authorization.Policies;
 using LibraryTrackingApp.Application.Filters;
 using LibraryTrackingApp.Infrastructure;
 using LibraryTrackingApp.Infrastructure.Enums;
@@ -76,8 +77,10 @@ builder.Services.AddInfrastructureServices();
 
 
 var app = builder.Build();
-
+app.UseRouting();
+CorsPolicies.UseCustomCorsPolicies(app);
 app.UseCustomSwaggerUI(app.Environment, LayerName.WebAPI);
+
 //app.UseVersionValidation();
 
 app.UseHttpsRedirection();

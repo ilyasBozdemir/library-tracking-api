@@ -1,6 +1,7 @@
-import { Icon, IconButton, useColorMode, Tooltip } from "@chakra-ui/react";
+import { Icon, IconButton, useColorMode } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { BsMoon, BsSun } from "react-icons/bs";
+import { FiSearch } from "react-icons/fi";
 
 function ThemeSwitcher() {
   const { colorMode, toggleColorMode } = useColorMode();
@@ -42,17 +43,12 @@ function ThemeSwitcher() {
     <>
       <IconButton
         id={"theme-switcher"}
-        aria-label="Color Switcher"
-        variant={"ghost"}
+        aria-label="Color Switcher"  
+         variant={"ghost"}
         onClick={handleToggleColorMode}
-        icon={
-          <Icon
-            variant={"ghost"}
-            as={icon === darkIcon ? BsMoon : BsSun}
-            fontSize="lg"
-          />
-        }
+        icon={<Icon as={icon === darkIcon ? BsMoon : BsSun} fontSize="lg" />}
         p={3}
+     
       />
     </>
   );

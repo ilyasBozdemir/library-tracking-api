@@ -2,6 +2,7 @@
 using LibraryTrackingApp.Infrastructure.Helpers;
 using LibraryTrackingApp.Infrastructure.Mvc;
 using LibraryTrackingApp.Infrastructure.Repositories;
+using System.Net;
 
 namespace LibraryTrackingApp.WebApi.Controllers;
 
@@ -56,8 +57,9 @@ public class VersionsController : CustomBaseController
         var request = HttpContext.Request;
         _baseUrl = string.Format(AppConstant.baseUrlTemplate, request.Scheme, request.Host);
 
-        string swaggerJsonUri = _baseUrl + string.Format(AppConstant.swaggerUrlTemplate, $"v{ApiVersions.Current}");
-       
+        string swaggerJsonUri =
+            _baseUrl + string.Format(AppConstant.swaggerUrlTemplate, $"v{ApiVersions.Current}");
+
         var allVersions = SwaggerHelper.GetAllVersions(LayerName.WebAPI);
 
         var requestedApiVersion = allVersions.FirstOrDefault(
@@ -65,23 +67,22 @@ public class VersionsController : CustomBaseController
         );
 
         string changelogUrl = string.Format(
-               AppConstant.changelogUrlTemplate,
-               AppConstant.repositoryOwner,
-               AppConstant.repositoryName,
-              $"v{ApiVersions.Current}"
-           );
+            AppConstant.changelogUrlTemplate,
+            AppConstant.repositoryOwner,
+            AppConstant.repositoryName,
+            $"v{ApiVersions.Current}"
+        );
 
         var documentationLinks = new
         {
             Title = requestedApiVersion.OpenApiInfo.Title,
-            SwaggerJsonUri = new 
-            {
-                WebAPI = swaggerJsonUri,
-            },
+            SwaggerJsonUri = new { WebAPI = swaggerJsonUri, },
             ChangelogUri = changelogUrl
-
         };
 
         return Ok(documentationLinks);
     }
+
+    
+    
 }

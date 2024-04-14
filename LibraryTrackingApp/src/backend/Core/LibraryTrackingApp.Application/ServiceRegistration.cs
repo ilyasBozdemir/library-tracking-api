@@ -1,4 +1,5 @@
-﻿using LibraryTrackingApp.Application.Features.Behaviors;
+﻿using LibraryTrackingApp.Application.Authorization.Policies;
+using LibraryTrackingApp.Application.Features.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -8,6 +9,8 @@ public static class ServiceRegistration
 {
     public static void AddApplicationRegistration(this IServiceCollection services)
     {
+        CorsPolicies.AddCorsPolicies(services);
+
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
         services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
         //services.AddAutoMapper(Assembly.GetExecutingAssembly());
