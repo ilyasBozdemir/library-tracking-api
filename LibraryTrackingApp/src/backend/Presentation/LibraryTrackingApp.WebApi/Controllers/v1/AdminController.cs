@@ -15,11 +15,11 @@ public class AdminController : CustomBaseController
     {
     }
 
-    [HttpGet]
-    public async Task<IActionResult> Index()
-    {
-        return Ok();
-    }
+    //[HttpGet]
+    //public async Task<IActionResult> Index()
+    //{
+    //    return Ok();
+    //}
 }
       
 

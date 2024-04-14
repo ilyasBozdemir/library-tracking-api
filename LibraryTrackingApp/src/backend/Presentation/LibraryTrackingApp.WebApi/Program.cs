@@ -77,6 +77,7 @@ builder.Services.AddInfrastructureServices();
 
 
 var app = builder.Build();
+app.UseStaticFiles();
 app.UseRouting();
 CorsPolicies.UseCustomCorsPolicies(app);
 app.UseCustomSwaggerUI(app.Environment, LayerName.WebAPI);

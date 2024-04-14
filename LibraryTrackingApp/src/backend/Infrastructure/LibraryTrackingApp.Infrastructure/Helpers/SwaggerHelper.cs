@@ -70,6 +70,9 @@ public static class SwaggerHelper
                 else { }
             }
 
+            c.DocumentFilter<BasePathDocumentFilter>();
+            c.DocumentFilter<EnumDocumentFilter>();
+
             c.DocInclusionPredicate(
                 (docName, apiDesc) =>
                 {

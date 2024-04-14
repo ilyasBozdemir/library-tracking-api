@@ -16,10 +16,18 @@ public class AppConstant
     public const string changelogUrlTemplate = "https://raw.githubusercontent.com/{0}/{1}/main/docs/{2}.0.0/CHANGELOG.md";
 
     public const string licenseUrlTemplate = "https://raw.githubusercontent.com/{0}/{1}/main/LICENSE";
+    public const string termsUrlTemplate = "https://raw.githubusercontent.com/{0}/{1}/main/TERMS.md";
 
     public const string swaggerUrlTemplate = "/swagger/{0}/swagger.json";
 
     public const string baseUrlTemplate = "{0}://{1}";
+
+    public const string projectGithubUrl = $"https://github.com/{repositoryOwner}/{repositoryName}";
+    public const string projectLogoUrl = $"https://localhost:7115/api/v1/admin/api/logo";
+    public const string projectLang = $"tr";
+    public const string bgColor = $"#fff";
+    public const string contactName = $"Kütüphane Destek";
+    public const string contactEmail = $"bozdemir.ib70@gmail.com";
 
 
 }

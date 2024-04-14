@@ -49,7 +49,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
             {
                 Title = request.Title,
                 ISBN = request.ISBN,
-                Publisher = request.Publisher,
+               // Publisher = request.Publisher,
                 PublicationDate = request.PublicationDate,
                 PageCount = request.PageCount
             };

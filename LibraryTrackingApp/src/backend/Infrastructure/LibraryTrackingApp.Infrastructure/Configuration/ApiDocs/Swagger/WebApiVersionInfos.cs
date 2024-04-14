@@ -1,4 +1,6 @@
 ﻿using LibraryTrackingApp.Domain.Constants;
+using Microsoft.OpenApi.Any;
+using Microsoft.OpenApi.Interfaces;
 using Microsoft.OpenApi.Models;
 
 namespace LibraryTrackingApp.Infrastructure.Configuration.ApiDocs.Swagger;
@@ -16,10 +18,11 @@ public static class WebApiVersionInfos
         Version = $"v{ApiVersions.V1}",
         OpenApiInfo = new OpenApiInfo
         {
-            Title = $"Kütüphane Takip Uygulaması v{ApiVersions.V1}",
+            Title = $"Kütüphane Takip Uygulaması",
             Version = $"v{ApiVersions.V1}",
             Description =
             """
+            ## Giriş
             Bu API v1 sürümü, kütüphane takip uygulaması için kapsamlı bir dizi özellik sunmaktadır:
             - **Kitap ve Kategori Yönetimi**: Kitapların ve kategorilerin kaydedilmesi, düzenlenmesi ve sorgulanması.
             - **Üye Yönetimi**: Kütüphane üyelerinin kaydedilmesi ve takibi
@@ -31,13 +34,25 @@ public static class WebApiVersionInfos
             """,
             Contact = new OpenApiContact
             {
-                Name = "Kütüphane Destek",
-                Email = "bozdemir.ib70@gmail.com"
+                Name = AppConstant.contactName,
+                Email = AppConstant.contactEmail
             },
             License = new OpenApiLicense
             {
                 Name = "API Lisansı",
                 Url = new Uri(string.Format(AppConstant.licenseUrlTemplate, AppConstant.repositoryOwner, AppConstant.repositoryName))
+            },
+            Extensions = new Dictionary<string, IOpenApiExtension>
+            {
+                ["x-logo"] = new OpenApiObject
+                {
+                    ["url"] = new OpenApiString(AppConstant.projectLogoUrl)
+                },
+                ["bgcolor"] = new OpenApiString(AppConstant.bgColor),
+
+                ["termsOfService"] = new OpenApiString(string.Format(AppConstant.termsUrlTemplate, AppConstant.repositoryOwner, AppConstant.repositoryName)),
+
+                ["x-language"] = new OpenApiString(AppConstant.projectLang)
             }
         }
 

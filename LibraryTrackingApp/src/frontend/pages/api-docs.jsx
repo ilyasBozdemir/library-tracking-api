@@ -13,9 +13,8 @@ function ApiDocsPage() {
       <RedocStandalone
         specUrl={"https://localhost:7115/swagger/v1/swagger.json"}
         options={{
-            theme: { colors: { primary: { main: '#ff0000' } } },
-            hideDownloadButton: true,
-            hideLoading: true,
+            theme: { colors: { primary: { main: '#3432a8' } } },
+          
           }}
       />
     </>
