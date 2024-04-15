@@ -35,6 +35,7 @@
 	<Folder Include="Features\Commands\Member\CreateMember\" />
 	<Folder Include="Features\Commands\Member\DeleteMember\" />
 	<Folder Include="Features\Commands\Member\UpdateMember\" />
+	<Folder Include="Features\Commands\Author\" />
 	<Folder Include="Features\Commands\Return\CreateReturn\" />
 	<Folder Include="Features\Commands\Return\DeleteReturn\" />
 	<Folder Include="Features\Commands\Return\UpdateReturn\" />
