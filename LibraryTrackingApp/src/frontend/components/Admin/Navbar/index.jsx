@@ -36,7 +36,7 @@ import { HiMenuAlt2 } from "react-icons/hi";
 import { MdOutlineSegment } from "react-icons/md";
 import { AiOutlineSetting, AiOutlineSearch } from "react-icons/ai";
 
-const Navbar = () => {
+const Navbar = ({ isOpen, onMenuToggle }) => {
   const [isMaximized, setIsMaximized] = useState(false);
 
   const handleMaximizeToggle = () => {
@@ -76,50 +76,27 @@ const Navbar = () => {
       top="0"
       bg={useColorModeValue("gray.100", "gray.700")}
       width="100%"
-      zIndex="1"
+      zIndex="2"
+      transition="0.3s ease-in-out"
+      justifyContent={"space-between"}
+      p={2}
     >
-      <Flex px={4} gap={3} justifyContent={"space-between"}>
-        <HStack>
-          <HStack spacing={3}>
-            <Icon cursor={"pointer"} as={HiMenuAlt2} boxSize={18} />
-          </HStack>
-          <HStack spacing={3} display={{ base: "initial", md: "none" }}>
-            <Icon cursor={"pointer"} as={AiOutlineSearch} boxSize={18} />
-          </HStack>
-        </HStack>
 
-        <HStack spacing={3} display={{ base: "initial", md: "none" }}>
-          <Link href="/admin">
-            <Image
-              src={"/logo.png"}
-              alt="Logo"
-              width={180}
-              height={50}
-              style={{
-                cursor: "pointer",
-                objectFit: "contain",
-              }}
-              draggable={false}
-              loading="lazy"
-            />
-          </Link>
-        </HStack>
+      <HStack spacing={3}>
+        <Icon
+          cursor={"pointer"}
+          as={HiMenuAlt2}
+          boxSize={18}
+          onClick={onMenuToggle}
+        />
+      </HStack>
 
-        <Box display={{ base: "none", md: "initial" }}>
-          <NavItem
-            isMaximized={isMaximized}
-            handleMaximizeToggle={handleMaximizeToggle}
-          />
-        </Box>
-        <HStack>
-          <HStack display={{ base: "initial", md: "none" }}>
-            <Icon cursor={"pointer"} as={FiMoreVertical} boxSize={18} />
-          </HStack>
-          <HStack>
-            <Icon cursor={"pointer"} as={AiOutlineSetting} boxSize={18} />
-          </HStack>
-        </HStack>
-      </Flex>
+
+
+      <NavItem
+        isMaximized={isMaximized}
+        handleMaximizeToggle={handleMaximizeToggle}
+      />
     </Flex>
   );
 };
@@ -127,22 +104,19 @@ const Navbar = () => {
 const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
   return (
     <>
-      <HStack spacing={5}>
+      <HStack spacing={3}>
         <LanguageSwitcher />
         <ThemeSwitcher />
 
-        <Icon cursor={"pointer"} as={HiOutlineEnvelope} boxSize={18} />
-        <Icon cursor={"pointer"} as={IoIosNotificationsOutline} boxSize={18} />
         <Icon
           cursor={"pointer"}
           as={isMaximized ? FiMinimize : FiMaximize}
           boxSize={15}
           onClick={handleMaximizeToggle}
         />
-        <Icon cursor={"pointer"} as={MdOutlineSegment} boxSize={18} />
 
         <Menu isLazy>
-          <MenuButton as={Button} size="sm" px={0} py={0} rounded="full">
+          <MenuButton as={Button} size="sm" _hover={{ variant: 'ghost' }}>
             <Avatar size="sm" src={"/admin.jpg"} />
           </MenuButton>
           <MenuList
@@ -161,18 +135,8 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
                 </VStack>
               </MenuItem>
             </Link>
-            <MenuDivider />
-
-            <MenuItem>
-              <Text fontWeight="500">Settings</Text>
-            </MenuItem>
-            <MenuDivider />
-            <MenuItem>
-              <Text fontWeight="500">Sign Out</Text>
-            </MenuItem>
           </MenuList>
         </Menu>
-        
       </HStack>
     </>
   );

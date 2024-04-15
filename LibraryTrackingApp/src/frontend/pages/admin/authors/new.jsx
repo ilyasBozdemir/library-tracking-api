@@ -73,7 +73,7 @@ export default function CreateAuthorForm() {
               spacing={8}
             >
               <FormControl id="name">
-                <FormLabel>Name</FormLabel>
+                <FormLabel>Ad</FormLabel>
                 <Input
                   type="text"
                   rounded="md"
@@ -86,7 +86,7 @@ export default function CreateAuthorForm() {
                 )}
               </FormControl>
               <FormControl id="surname">
-                <FormLabel>Surname</FormLabel>
+                <FormLabel>Soyad</FormLabel>
                 <Input
                   type="text"
                   rounded="md"
@@ -99,7 +99,7 @@ export default function CreateAuthorForm() {
                 )}
               </FormControl>
               <FormControl id="birthDate">
-                <FormLabel>Birth Date</FormLabel>
+                <FormLabel>Doğum Tarihi</FormLabel>
                 <Input
                   type="date"
                   rounded="md"
@@ -114,7 +114,7 @@ export default function CreateAuthorForm() {
                 )}
               </FormControl>
               <FormControl id="country">
-                <FormLabel>Country</FormLabel>
+                <FormLabel>Ülke</FormLabel>
                 <Input
                   type="text"
                   rounded="md"
@@ -130,6 +130,8 @@ export default function CreateAuthorForm() {
                 <FormLabel>Biyografi</FormLabel>
                 <Input
                   as={"textarea"}
+                  minH={150}
+                  maxH={150}
                   type="text"
                   rounded="md"
                   onChange={formik.handleChange}
@@ -142,8 +144,8 @@ export default function CreateAuthorForm() {
                   <Text color="red.500">{formik.errors.biography}</Text>
                 )}
               </FormControl>
-              <Button type="submit" colorScheme="blue">
-                Submit
+              <Button type="submit" colorScheme="whatsapp">
+                Kaydet
               </Button>
             </VStack>
           </Stack>
