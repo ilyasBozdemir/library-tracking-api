@@ -10,6 +10,8 @@ public abstract class BaseEntity<TEntityIdType> : IEntity<TEntityIdType>
     public bool IsDeleted { get; set; }
     public DateTime? DeletedDate { get; set; }
 
+    //CreatedDate ve LastModifiedDate bunlar unix timestamp olarka cevrilcektir.
+
     protected BaseEntity()
     {
         CreatedDate = DateTime.Now;

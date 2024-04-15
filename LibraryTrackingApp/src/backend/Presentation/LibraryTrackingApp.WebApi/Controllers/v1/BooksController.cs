@@ -1,4 +1,5 @@
-﻿using LibraryTrackingApp.Application.Features.Events.Book;
+﻿using LibraryTrackingApp.Application.Features.Commands.Book;
+using LibraryTrackingApp.Application.Features.Events.Book;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
@@ -27,7 +28,7 @@ public class BooksController : CustomBaseController
         await _mediator.Publish(
             new BookCommandEvent()
             {
-                Errors = response.Errors,
+                Errors = response.Success ? null : response.StateMessages,
                 IsSuccessful = response.Success,
                 RequestNotificationType = LibraryTrackingApp
                     .Domain
@@ -36,7 +37,16 @@ public class BooksController : CustomBaseController
                     .Create
             }
         );
-        return new JsonResult(new { data = response.Data })
+
+
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
         {
             StatusCode = response.StatusCode
         };
@@ -62,7 +72,7 @@ public class BooksController : CustomBaseController
         await _mediator.Publish(
             new BookCommandEvent()
             {
-                Errors = response.Errors,
+                Errors = response.Success ? null : response.StateMessages,
                 IsSuccessful = response.Success,
                 EntityId = id.ToString(),
                 RequestNotificationType = LibraryTrackingApp
@@ -72,7 +82,16 @@ public class BooksController : CustomBaseController
                     .Update
             }
         );
-        return new JsonResult(new { data = response.Data })
+
+
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
         {
             StatusCode = response.StatusCode
         };
@@ -92,7 +111,7 @@ public class BooksController : CustomBaseController
         await _mediator.Publish(
             new BookCommandEvent()
             {
-                Errors = response.Errors,
+                Errors = response.Success ? null : response.StateMessages,
                 IsSuccessful = response.Success,
                 EntityId = IdOrISBN,
                 RequestNotificationType = LibraryTrackingApp
@@ -102,7 +121,16 @@ public class BooksController : CustomBaseController
                     .Delete
             }
         );
-        return new JsonResult(new { data = response.Data })
+
+
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
         {
             StatusCode = response.StatusCode
         };
@@ -162,7 +190,7 @@ public class BooksController : CustomBaseController
             await _mediator.Publish(
                 new BookCommandEvent()
                 {
-                    Errors = response.Errors,
+                    Errors = response.Success ? null : response.StateMessages,
                     IsSuccessful = response.Success,
                     RequestNotificationType = LibraryTrackingApp
                         .Domain
@@ -172,7 +200,16 @@ public class BooksController : CustomBaseController
                 }
             );
 
-            return new JsonResult(new { data = response.Data })
+
+
+            var responseValue = new
+            {
+                IsSucces = response.Success,
+                Messages = response.StateMessages.ToArray(),
+                Data = response.Data,
+            };
+
+            return new JsonResult(responseValue)
             {
                 StatusCode = response.StatusCode
             };
@@ -182,7 +219,7 @@ public class BooksController : CustomBaseController
             await _mediator.Publish(
                 new BookCommandEvent()
                 {
-                    Errors = response.Errors,
+                    Errors = response.Success ? null : response.StateMessages,
                     IsSuccessful = false,
                     RequestNotificationType = LibraryTrackingApp
                         .Domain
@@ -210,7 +247,7 @@ public class BooksController : CustomBaseController
             await _mediator.Publish(
                 new BookCommandEvent()
                 {
-                    Errors = response.Errors,
+                    Errors = response.Success ? null : response.StateMessages,
                     IsSuccessful = response.Success,
                     RequestNotificationType = LibraryTrackingApp
                         .Domain
@@ -219,7 +256,16 @@ public class BooksController : CustomBaseController
                         .GetAll
                 }
             );
-            return new JsonResult(new { data = response.Data })
+
+
+            var responseValue = new
+            {
+                IsSucces = response.Success,
+                Messages = response.StateMessages.ToArray(),
+                Data = response.Data,
+            };
+
+            return new JsonResult(responseValue)
             {
                 StatusCode = response.StatusCode
             };
@@ -229,7 +275,7 @@ public class BooksController : CustomBaseController
             await _mediator.Publish(
                 new BookCommandEvent()
                 {
-                    Errors = response.Errors,
+                    Errors = response.Success ? null : response.StateMessages,
                     IsSuccessful = false,
                     RequestNotificationType = LibraryTrackingApp
                         .Domain

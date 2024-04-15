@@ -1,4 +1,4 @@
-﻿namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook;
+﻿namespace LibraryTrackingApp.Application.Features.Commands.Book;
 
 
 public class UpdateBookCommandRequestValidator : AbstractValidator<UpdateBookCommandRequest>

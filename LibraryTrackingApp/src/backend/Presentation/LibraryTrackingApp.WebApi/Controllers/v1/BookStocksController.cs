@@ -42,7 +42,7 @@ public class BookStocksController : CustomBaseController
         await _mediator.Publish(
             new StockOperationEvent()
             {
-                Errors = response.Errors,
+                Errors = response.Success ? null : response.StateMessages,
                 IsSuccessful = response.Success,
                 BookId = bookId,
                 Quantity = quantity,
@@ -76,7 +76,7 @@ public class BookStocksController : CustomBaseController
         await _mediator.Publish(
             new StockOperationEvent()
             {
-                Errors = response.Errors,
+                Errors = response.Success ? null : response.StateMessages,
                 IsSuccessful = response.Success,
                 BookId = bookId,
                 Quantity = quantity,
@@ -101,7 +101,7 @@ public class BookStocksController : CustomBaseController
         await _mediator.Publish(
             new StockOperationEvent()
             {
-                Errors = response.Errors,
+                Errors = response.Success ? null : response.StateMessages,
                 IsSuccessful = response.Success,
                 BookId = bookId,
                 OperationType = StockOperationType.Decrease,
@@ -125,7 +125,7 @@ public class BookStocksController : CustomBaseController
         await _mediator.Publish(
             new StockOperationEvent()
             {
-                Errors = response.Errors,
+                Errors = response.Success ? null : response.StateMessages,
                 IsSuccessful = response.Success,
                 OperationType = StockOperationType.Decrease,
             }

@@ -9,6 +9,7 @@ public record BaseAuditableDTO
     public string LastModifiedBy { get; set; }
     public DateTime? LastModifiedDate { get; set; }
 
+    //CreatedDate ve LastModifiedDate bunlar unix timestamp olarka cevrilcektir.
     protected BaseAuditableDTO()
     {
         CreatedDate = DateTime.Now;

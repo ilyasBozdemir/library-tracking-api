@@ -9,9 +9,9 @@ namespace LibraryTrackingApp.WebApi.Controllers.v1;
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
 [Route($"api/v{ApiVersions.V1}/admin")]
-public class AdminController : CustomBaseController
+public class AdminsController : CustomBaseController
 {
-    public AdminController(IMediator mediator) : base(mediator)
+    public AdminsController(IMediator mediator) : base(mediator)
     {
     }
 

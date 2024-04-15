@@ -1,6 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
-namespace LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
+namespace LibraryTrackingApp.Application.Features.Commands.Book;
 
 
 public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest, CreateBookCommandResponse>
@@ -25,11 +25,11 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
 
             if (existingBook)
             {
-                return new ()
+                return new()
                 {
                     StatusCode = 409,
                     Success = false,
-                    Errors = new string[] { "Bu ISBN numarasına sahip bir kitap zaten mevcut." }
+                    StateMessages = new string[] { "Bu ISBN numarasına sahip bir kitap zaten mevcut." }
                 };
             }
 
@@ -49,7 +49,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
             {
                 Title = request.Title,
                 ISBN = request.ISBN,
-               // Publisher = request.Publisher,
+                // Publisher = request.Publisher,
                 PublicationDate = request.PublicationDate,
                 PageCount = request.PageCount
             };
@@ -67,7 +67,8 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
                 {
                     StatusCode = 200,
                     Success = true,
-                    Errors = new string[] { "Kitap başarıyla eklendi." }
+                    StateMessages = new string[] { "Kitap başarıyla eklendi." },
+                    
                 };
             }
             else
@@ -77,7 +78,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
                 {
                     StatusCode = 400,
                     Success = false,
-                    Errors = new string[] { "Kitap eklenirken bir hata oluştu." }
+                    StateMessages = new string[] { "Kitap eklenirken bir hata oluştu." }
                 };
             }
 
@@ -88,7 +89,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
             {
                 StatusCode = 500,
                 Success = false,
-                Errors = new string[] { $"Bir hata oluştu: {ex.Message}" }
+                StateMessages = new string[] { $"Bir hata oluştu: {ex.Message}" }
             };
         }
     }

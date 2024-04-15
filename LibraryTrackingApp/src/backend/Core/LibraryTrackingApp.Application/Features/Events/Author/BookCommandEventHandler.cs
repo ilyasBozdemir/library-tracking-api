@@ -1,34 +1,33 @@
-﻿using LibraryTrackingApp.Application.Features.Events.Author;
-using LibraryTrackingApp.Application.Features.Events.Book;
+﻿using LibraryTrackingApp.Application.Features.Events.Book;
 
-namespace LibraryTrackingApp.Application.Features.Commands.Book;
+namespace LibraryTrackingApp.Application.Features.Events.Author;
 
-public class BookCommandEventHandler : INotificationHandler<BookCommandEvent>
+public class AuthorCommandEventHandler : INotificationHandler<AuthorCommandEvent>
 {
-    public BookCommandEventHandler()
+    public AuthorCommandEventHandler()
     {
         // Constructor gerekli bir işlem yapmıyor, dolayısıyla içini boş bırakabiliriz.
     }
 
-    public async Task Handle(BookCommandEvent notification, CancellationToken cancellationToken)
+    public async Task Handle(AuthorCommandEvent notification, CancellationToken cancellationToken)
     {
         switch (notification.RequestNotificationType)
         {
             case RequestNotificationType.Create:
-                Console.WriteLine($"Yeni bir kitap oluşturuldu. Kitap ID: {notification.BookId}");
+                Console.WriteLine($"Yeni bir Yazar oluşturuldu. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.Update:
-         
-                Console.WriteLine($"Kitap güncellendi. Kitap ID: {notification.BookId}");
+
+                Console.WriteLine($"Yazar güncellendi. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.Delete:
-                Console.WriteLine($"Kitap silindi. Kitap ID: {notification.BookId}");
+                Console.WriteLine($"Yazar silindi. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.Get:
-                Console.WriteLine($"Kitap bilgileri alındı. Kitap ID: {notification.BookId}");
+                Console.WriteLine($"Yazar bilgileri alındı. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.GetAll:
-                Console.WriteLine("Tüm kitap bilgileri alındı.");
+                Console.WriteLine("Tüm Yazar bilgileri alındı.");
                 break;
             default:
                 // Tanımsız bir işlem türü gelirse buraya düşer

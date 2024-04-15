@@ -3,12 +3,12 @@
 public class QueryResult : ActionResult
 {
     public object Data { get; set; }
-    public QueryResult(bool success, int statusCode, string[] errors = null)
-        : base(success, statusCode, errors)
+    public QueryResult(bool success, int statusCode, string[] stateMessages = null)
+        : base(success, statusCode, stateMessages)
     {
     }
-    public QueryResult(bool success, int statusCode, object data, string[] errors = null)
-      : base(success, statusCode, errors)
+    public QueryResult(bool success, int statusCode, object data, string[] stateMessages = null)
+      : base(success, statusCode, stateMessages)
     {
         Data = data;
     }
@@ -20,12 +20,12 @@ public class QueryResult<T> : ActionResult
 {
     public T Data { get; set; }
 
-    public QueryResult(bool success, int statusCode, string[] errors = null)
-        : base(success, statusCode, errors)
+    public QueryResult(bool success, int statusCode, string[] stateMessages = null)
+        : base(success, statusCode, stateMessages)
     {
     }
-    public QueryResult(bool success, int statusCode, T data, string[] errors = null)
-        : base(success, statusCode, errors)
+    public QueryResult(bool success, int statusCode, T data, string[] stateMessages = null)
+        : base(success, statusCode, stateMessages)
     {
         Data = data;
     }

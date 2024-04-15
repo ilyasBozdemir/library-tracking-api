@@ -1,6 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
-namespace LibraryTrackingApp.Application.Features.Commands.Book.DeleteBook;
+namespace LibraryTrackingApp.Application.Features.Commands.Book;
 
 
 public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest, DeleteBookCommandResponse>
@@ -23,17 +23,17 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
             bool isGuid = Guid.TryParse(request.IdOrISBN, out bookId);
 
             var existingBookStock = await readRepository.GetSingleAsync(s =>
-                (isGuid && s.Id == bookId) ||
-                (!isGuid && s.ISBN == request.IdOrISBN)
+                isGuid && s.Id == bookId ||
+                !isGuid && s.ISBN == request.IdOrISBN
             );
 
             if (existingBookStock == null)
             {
-                return new ()
+                return new()
                 {
                     StatusCode = 404,
                     Success = false,
-                    Errors = new string[] { "Böyle bir kitap bulunamadı" }
+                    StateMessages = new string[] { "Böyle bir kitap bulunamadı" }
                 };
             }
             else
@@ -46,7 +46,7 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
                     {
                         StatusCode = 200,
                         Success = true,
-                        Errors = new string[] { "Kitap başarıyla silindi." }
+                        StateMessages = new string[] { "Kitap başarıyla silindi." }
                     };
                 }
                 else
@@ -56,11 +56,11 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
                     {
                         StatusCode = 400,
                         Success = false,
-                        Errors = new string[] { "Kitap silinirken bir hata oluştu." }
+                        StateMessages = new string[] { "Kitap silinirken bir hata oluştu." }
                     };
                 }
 
-              
+
             }
 
         }
@@ -70,7 +70,7 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
             {
                 StatusCode = 500,
                 Success = false,
-                Errors = new string[] { $"Kitap silinirken bir hata oluştu: {ex.Message}" }
+                StateMessages = new string[] { $"Kitap silinirken bir hata oluştu: {ex.Message}" }
             };
         }
 

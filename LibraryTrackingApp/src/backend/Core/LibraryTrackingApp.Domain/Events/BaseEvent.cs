@@ -7,6 +7,6 @@ public abstract class BaseEvent : INotification
     public DateTime OccurredOn { get; protected set; } = DateTime.UtcNow;
     public bool IsSuccessful { get; set; }
     public string[] Errors { get; set; }
- 
+
 }
 

@@ -1,6 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
-namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
+namespace LibraryTrackingApp.Application.Features.Commands.Book
 {
     public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommandRequest, UpdateBookCommandResponse>
     {
@@ -25,7 +25,7 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
                     {
                         StatusCode = 404,
                         Success = false,
-                        Errors = new string[] { "Böyle bir kitap bulunamadı" }
+                        StateMessages = new string[] { "Böyle bir kitap bulunamadı" }
                     };
                 }
 
@@ -47,7 +47,7 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
                         {
                             StatusCode = 200,
                             Success = true,
-                            Errors = new string[] { "Kitap başarıyla güncellendi." }
+                            StateMessages = new string[] { "Kitap başarıyla güncellendi." }
                         };
                     }
                     else
@@ -57,7 +57,7 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
                         {
                             StatusCode = 400,
                             Success = false,
-                            Errors = new string[] { "Kitap güncellenirken bir hata oluştu." }
+                            StateMessages = new string[] { "Kitap güncellenirken bir hata oluştu." }
                         };
                     }
                 }
@@ -68,7 +68,7 @@ namespace LibraryTrackingApp.Application.Features.Commands.Book.UpdateBook
                 {
                     StatusCode = 500,
                     Success = false,
-                    Errors = new string[] { $"Kitap güncellenirken bir hata oluştu: {ex.Message}" },
+                    StateMessages = new string[] { $"Kitap güncellenirken bir hata oluştu: {ex.Message}" },
                 };
             }
         }

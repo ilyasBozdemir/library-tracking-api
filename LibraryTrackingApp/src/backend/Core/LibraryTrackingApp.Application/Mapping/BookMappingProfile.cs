@@ -1,4 +1,4 @@
-﻿using LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
+﻿using LibraryTrackingApp.Application.Features.Commands.Book;
 using LibraryTrackingApp.Domain.Entities.Library;
 
 namespace LibraryTrackingApp.Application.Mapping;

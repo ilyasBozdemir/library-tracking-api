@@ -1,6 +1,6 @@
 ﻿using System.Text.Json.Serialization;
 
-namespace LibraryTrackingApp.Application.Features.Commands.Book.CreateBook;
+namespace LibraryTrackingApp.Application.Features.Commands.Book;
 
 public class CreateBookCommandRequest : IRequest<CreateBookCommandResponse>
 {

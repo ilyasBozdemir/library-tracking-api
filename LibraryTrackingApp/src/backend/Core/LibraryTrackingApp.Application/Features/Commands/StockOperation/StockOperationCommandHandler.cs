@@ -31,7 +31,7 @@ public class StockOperationCommandHandler
                 {
                     StatusCode = 404,
                     Success = false,
-                    Errors = new string[] { "Verilen ID'ye ait kitap bulunamadı." }
+                    StateMessages = new string[] { "Verilen ID'ye ait kitap bulunamadı." }
                 };
             }
             else
@@ -52,7 +52,7 @@ public class StockOperationCommandHandler
                         {
                             StatusCode = (int)HttpStatusCode.BadRequest,
                             Success = false,
-                            Errors = new string[] 
+                            StateMessages = new string[] 
                             { 
                                 "Stok miktarı sıfırdan büyük olmalıdır."
                             }
@@ -71,7 +71,7 @@ public class StockOperationCommandHandler
                                 {
                                     StatusCode = 400,
                                     Success = false,
-                                    Errors = new string[]
+                                    StateMessages = new string[]
                                     {
                                         "Stok miktarı talep edilen miktardan az."
                                     }
@@ -84,7 +84,7 @@ public class StockOperationCommandHandler
                             {
                                 StatusCode = 400,
                                 Success = false,
-                                Errors = new string[]
+                                StateMessages = new string[]
                                 {
                                     "Bilinmeyen işlem türü. Lütfen geçerli bir işlem türü belirtin."
                                 }
@@ -108,7 +108,7 @@ public class StockOperationCommandHandler
                 {
                     StatusCode = 200,
                     Success = true,
-                    Errors = new string[] { "Kitap Stok kaydı başarıyla güncellendi." }
+                    StateMessages = new string[] { "Kitap Stok kaydı başarıyla güncellendi." }
                 };
             }
         }
@@ -118,7 +118,7 @@ public class StockOperationCommandHandler
             {
                 StatusCode = 500,
                 Success = false,
-                Errors = new string[] { $"Bir hata oluştu: {ex.Message}" }
+                StateMessages = new string[] { $"Bir hata oluştu: {ex.Message}" }
             };
         }
     }
