@@ -32,9 +32,6 @@ public class GetAllAuthorsQueryHandler : IRequestHandler<GetAllAuthorsQueryReque
 
             var authorList =  readRepository.GetAll();
 
-          
-
-
             var authorDtoList = new List<AuthorDTO>();
 
             foreach (Author author in authorList)
