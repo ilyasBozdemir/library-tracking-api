@@ -29,7 +29,6 @@
 	<Folder Include="Authorization\Handlers\" />
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
-	<Folder Include="Features\Authors\Queries\" />
 	<Folder Include="Interfaces\Services\" />
 	<Folder Include="Claims\" />
 	<Folder Include="Middlewares\" />

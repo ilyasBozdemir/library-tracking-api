@@ -15,7 +15,6 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
 
     public async Task<DeleteBookCommandResponse> Handle(DeleteBookCommandRequest request, CancellationToken cancellationToken)
     {
-
         try
         {
 
@@ -68,18 +67,12 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
         }
         catch (Exception ex)
         {
-            return new DeleteBookCommandResponse
+            return new ()
             {
                 StatusCode = 500,
                 Success = false,
                 StateMessages = new string[] { $"Kitap silinirken bir hata oluştu: {ex.Message}" }
             };
         }
-
-        return new()
-        {
-            StatusCode = 200,
-            Success = true,
-        };
     }
 }

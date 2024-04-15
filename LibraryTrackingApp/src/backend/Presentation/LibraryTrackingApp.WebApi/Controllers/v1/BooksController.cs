@@ -1,6 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Features.Books.Commands.Requests;
+using LibraryTrackingApp.Application.Features.Books.Events;
 using LibraryTrackingApp.Application.Features.Books.Queries.Requests;
-using LibraryTrackingApp.Application.Features.Events.Book;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
@@ -242,6 +242,9 @@ public class BooksController : CustomBaseController
             return NotFound();
         }
     }
+
+
+
 
     /// <summary>
     /// Tüm kitapları alır.

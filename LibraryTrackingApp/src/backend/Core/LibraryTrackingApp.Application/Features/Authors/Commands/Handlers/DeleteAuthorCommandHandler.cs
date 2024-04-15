@@ -1,31 +1,30 @@
 ﻿using LibraryTrackingApp.Application.Features.Authors.Commands.Requests;
 using LibraryTrackingApp.Application.Features.Authors.Commands.Responses;
+using LibraryTrackingApp.Application.Features.Books.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
 namespace LibraryTrackingApp.Application.Features.Authors.Commands.Handlers;
 
 
-public class UpdateAuthorCommandHandler : IRequestHandler<UpdateAuthorCommandRequest, UpdateAuthorCommandResponse>
+public class DeleteAuthorCommandHandler : IRequestHandler<DeleteAuthorCommandRequest, DeleteAuthorCommandResponse>
 {
     private readonly IUnitOfWork<Guid> _unitOfWork;
-    private readonly IMediator _mediator;
-    //private readonly IMapper _mapper;
-    public UpdateAuthorCommandHandler(IUnitOfWork<Guid> unitOfWork /*,IMapper mapper*/, IMediator mediator)
+    public DeleteAuthorCommandHandler(IUnitOfWork<Guid> unitOfWork)
     {
         _unitOfWork = unitOfWork;
-        _mediator = mediator;
-        //_mapper = mapper;
     }
-
-    public async Task<UpdateAuthorCommandResponse> Handle(UpdateAuthorCommandRequest request, CancellationToken cancellationToken)
+    public async Task<DeleteAuthorCommandResponse> Handle(DeleteAuthorCommandRequest request, CancellationToken cancellationToken)
     {
         try
         {
-           
 
             var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.Author>();
 
-            var existingAuthor = await readRepository.GetSingleAsync(s => s.Id == request.UpdatedId);
+            Guid bookId;
+            bool isGuid = Guid.TryParse(request.Id, out bookId);
+
+            var existingAuthor = await readRepository.GetSingleAsync(s => isGuid && s.Id == bookId);
+
             if (existingAuthor == null)
             {
                 return new()
@@ -38,24 +37,14 @@ public class UpdateAuthorCommandHandler : IRequestHandler<UpdateAuthorCommandReq
             else
             {
                 var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.Author>();
-
-                existingAuthor.Name = request.Name;
-                existingAuthor.Surname = request.Surname;
-                existingAuthor.BirthDate = request.BirthDate;
-                existingAuthor.Country = request.Country;
-                existingAuthor.Biography = request.Biography;
-                existingAuthor.LastModifiedBy = "test-user";//staff name olucak ilerde
-                existingAuthor.LastModifiedDate = DateTime.Now;
-
-                bool isUpdated = await writeRepository.UpdateAsync(existingAuthor);
-
-                if (isUpdated)
+                bool isDeleted = await writeRepository.DeleteAsync(existingAuthor);
+                if (isDeleted)
                 {
                     return new()
                     {
                         StatusCode = 200,
                         Success = true,
-                        StateMessages = new string[] { "Yazar başarıyla güncellendi." }
+                        StateMessages = new string[] { "Yazar başarıyla silindi." }
                     };
                 }
                 else
@@ -65,18 +54,21 @@ public class UpdateAuthorCommandHandler : IRequestHandler<UpdateAuthorCommandReq
                     {
                         StatusCode = 400,
                         Success = false,
-                        StateMessages = new string[] { "Yazar güncellenirken bir hata oluştu." }
+                        StateMessages = new string[] { "Yazar silinirken bir hata oluştu." }
                     };
                 }
+
+
             }
+
         }
         catch (Exception ex)
         {
-            return new()
+            return new ()
             {
                 StatusCode = 500,
                 Success = false,
-                StateMessages = new string[] { $"Bir hata oluştu: {ex.Message}" }
+                StateMessages = new string[] { $"Yazar silinirken bir hata oluştu: {ex.Message}" }
             };
         }
     }

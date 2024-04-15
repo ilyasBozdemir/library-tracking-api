@@ -1,7 +1,6 @@
-﻿using LibraryTrackingApp.Application.Features.Commands.StockOperation;
-using LibraryTrackingApp.Application.Features.Events.BookStock;
-using LibraryTrackingApp.Application.Features.Queries.BookStock.GetAllBookStocks;
-using LibraryTrackingApp.Application.Features.Queries.BookStock.GetBookStock;
+﻿using LibraryTrackingApp.Application.Features.BookStocks.Commands.Requests;
+using LibraryTrackingApp.Application.Features.BookStocks.Events;
+using LibraryTrackingApp.Application.Features.BookStocks.Queries.Requests;
 using LibraryTrackingApp.Domain.Enums;
 using LibraryTrackingApp.Infrastructure.Mvc;
 

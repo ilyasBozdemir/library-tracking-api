@@ -1,5 +1,4 @@
-﻿using LibraryTrackingApp.Application.Features.Events.Book;
-
+﻿
 namespace LibraryTrackingApp.Application.Features.BookStocks.Events;
 
 public class StockOperationEventHandler : INotificationHandler<StockOperationEvent>

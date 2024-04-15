@@ -21,7 +21,8 @@ public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommandReq
     {
         try
         {
-            var existingAuthor = await _unitOfWork.GetReadRepository<Domain.Entities.Library.Author>()
+            var existingAuthor = await _unitOfWork
+                .GetReadRepository<Domain.Entities.Library.Author>()
                 .ExistsAsync(b =>
                 b.Name == request.Name
                 && b.Surname == request.Surname

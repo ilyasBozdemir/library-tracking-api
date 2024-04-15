@@ -1,5 +1,7 @@
 ﻿using LibraryTrackingApp.Application.Features.Authors.Commands.Requests;
 using LibraryTrackingApp.Application.Features.Authors.Events;
+using LibraryTrackingApp.Application.Features.Authors.Queries.Requests;
+using LibraryTrackingApp.Application.Features.Books.Events;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
@@ -31,7 +33,7 @@ public class AuthorsController : CustomBaseController
         await _mediator.Publish(
             new AuthorCommandEvent()
             {
-                Errors = response.Success ? null : response.StateMessages,
+                Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
                 RequestNotificationType = LibraryTrackingApp
                     .Domain
@@ -73,7 +75,7 @@ public class AuthorsController : CustomBaseController
         await _mediator.Publish(
             new AuthorCommandEvent()
             {
-                Errors = response.Success ? null : response.StateMessages,
+                Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
                 EntityId = id.ToString(),
                 RequestNotificationType = LibraryTrackingApp
@@ -99,6 +101,172 @@ public class AuthorsController : CustomBaseController
             StatusCode = response.StatusCode
         };
     }
+
+    /// <summary>
+    /// Bir yazarın ID ile siler.
+    /// </summary>
+    /// <param name="Id">Silinecek yazarın ID'si veya ISBN'i.</param>
+    /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
+    [HttpDelete("{Id}")]
+    public async Task<IActionResult> Delete([FromRoute] string Id)
+    {
+        var request = new DeleteAuthorCommandRequest { Id = Id };
+        var response = await _mediator.Send(request);
+
+        await _mediator.Publish(
+            new AuthorCommandEvent()
+            {
+                Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
+                IsSuccessful = response.Success,
+                EntityId = Id,
+                RequestNotificationType = LibraryTrackingApp
+                    .Domain
+                    .Enums
+                    .RequestNotificationType
+                    .Delete
+            }
+        );
+
+
+
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
+        {
+            StatusCode = response.StatusCode
+        };
+    }
+
+
+
+
+    /// <summary>
+    /// Bir yazarı ID ile alır.
+    /// </summary>
+    /// <param name="id">Alınacak yazarın ID'si.</param>
+    /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
+    [HttpGet("{id}")]
+    public async Task<IActionResult> GetBook([FromRoute] Guid id)
+    {
+        var query = new GetAuthorQueryRequest { AuthorId = id };
+        var response = await _mediator.Send(query);
+
+        if (response != null && response.Data != null)
+        {
+            await _mediator.Publish(
+                new AuthorCommandEvent()
+                {
+                    Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
+                    IsSuccessful = response.Success,
+                    RequestNotificationType = LibraryTrackingApp
+                        .Domain
+                        .Enums
+                        .RequestNotificationType
+                        .Get
+                }
+            );
+
+
+
+
+            var responseValue = new
+            {
+                IsSucces = response.Success,
+                StatusCode = response.StatusCode,
+                Messages = response.StateMessages.ToArray(),
+                Data = response.Data,
+            };
+
+            return new JsonResult(responseValue)
+            {
+                StatusCode = response.StatusCode
+            };
+        }
+        else
+        {
+            await _mediator.Publish(
+                new BookCommandEvent()
+                {
+                    Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
+                    IsSuccessful = false,
+                    RequestNotificationType = LibraryTrackingApp
+                        .Domain
+                        .Enums
+                        .RequestNotificationType
+                        .Get
+                }
+            );
+            return NotFound();
+        }
+    }
+
+
+
+    /// <summary>
+    /// Tüm yazarları alır.
+    /// </summary>
+    /// <param name="request">Yazarları filtrelemek için kriterleri içeren istek nesnesi.</param>
+    /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
+    [HttpGet]
+    public async Task<IActionResult> GetAllBooks([FromQuery] GetAllAuthorsQueryRequest request)
+    {
+        var response = await _mediator.Send(request);
+
+        if (response != null && response.Data != null)
+        {
+            await _mediator.Publish(
+                new BookCommandEvent()
+                {
+                    Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
+                    IsSuccessful = response.Success,
+                    RequestNotificationType = LibraryTrackingApp
+                        .Domain
+                        .Enums
+                        .RequestNotificationType
+                        .GetAll
+                }
+            );
+
+
+
+            var responseValue = new
+            {
+                IsSucces = response.Success,
+                StatusCode = response.StatusCode,
+                Messages = response.StateMessages.ToArray(),
+                Data = response.Data,
+            };
+
+            return new JsonResult(responseValue)
+            {
+                StatusCode = response.StatusCode
+            };
+        }
+        else
+        {
+            await _mediator.Publish(
+                new BookCommandEvent()
+                {
+                    Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
+                    IsSuccessful = false,
+                    RequestNotificationType = LibraryTrackingApp
+                        .Domain
+                        .Enums
+                        .RequestNotificationType
+                        .GetAll
+                }
+            );
+            return NotFound();
+        }
+    }
+
+
 }
-      
+
 

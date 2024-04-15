@@ -1,6 +1,4 @@
-﻿using LibraryTrackingApp.Application.Features.Events.Author;
-
-namespace LibraryTrackingApp.Application.Features.Books.Events;
+﻿namespace LibraryTrackingApp.Application.Features.Books.Events;
 
 public class BookCommandEventHandler : INotificationHandler<BookCommandEvent>
 {
