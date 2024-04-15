@@ -1,7 +1,7 @@
 ﻿using LibraryTrackingApp.Domain.Constants;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using LibraryTrackingApp.Application.Features.Results;
+using LibraryTrackingApp.Application.Shared.Wrappers.Results;
 
 namespace LibraryTrackingApp.Infrastructure.Mvc;
 

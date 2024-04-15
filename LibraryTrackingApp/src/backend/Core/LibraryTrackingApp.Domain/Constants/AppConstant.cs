@@ -9,7 +9,7 @@ public class AppConstant
 
     // case için veritabanı baglantısı gercek projede bu şekilde saklanmaz.
     public const string DefaultConnectionString = $"Server={server};Database={database};Integrated Security={integratedSecurity};TrustServerCertificate={trustServerCertificate};";
-   
+
     public const string repositoryOwner = "ilyasBozdemir";
     public const string repositoryName = "libraryTrackingApp";
     //repository içinde ki CHANGELOG için versiyonuna göre url templatedir. string.Format() methodu ile format ve arg[] değerleri doldurulcaktır. 
@@ -29,5 +29,8 @@ public class AppConstant
     public const string contactName = $"Kütüphane Destek";
     public const string contactEmail = $"bozdemir.ib70@gmail.com";
 
+
+    public const string openApiServer = $"https://localhost:7115";
+    public const string openApiServer2 = $"http://localhost:5256";
 
 }

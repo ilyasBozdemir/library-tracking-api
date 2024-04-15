@@ -95,8 +95,9 @@ public static class SwaggerHelper
             {
                 c.AddSecurityRequirement(OpenApiSecurityRequirements.BearerSecurityRequirement);
                 c.AddSecurityDefinition("Bearer", SecuritySchemes.BearerSecurityScheme);
-                c.OperationFilter<ParameterOperationFilter>();
                 c.OperationFilter<ResponseOperationFilter>();
+                c.OperationFilter<ParameterOperationFilter>();
+            
                 c.OperationFilter<SecurityOperationFilter>();
                 //c.OperationFilter<DocumentationOperationFilter>();
                 c.OperationFilter<CustomMetadataOperationFilter>();

@@ -1,5 +1,5 @@
 ﻿using LibraryTrackingApp.Application.Authorization.Policies;
-using LibraryTrackingApp.Application.Features.Behaviors;
+using LibraryTrackingApp.Application.Behaviors;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 

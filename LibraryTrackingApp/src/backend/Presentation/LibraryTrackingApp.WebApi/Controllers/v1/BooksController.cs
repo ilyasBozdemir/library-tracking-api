@@ -1,4 +1,5 @@
-﻿using LibraryTrackingApp.Application.Features.Commands.Book;
+﻿using LibraryTrackingApp.Application.Features.Books.Commands.Requests;
+using LibraryTrackingApp.Application.Features.Books.Queries.Requests;
 using LibraryTrackingApp.Application.Features.Events.Book;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
@@ -39,9 +40,11 @@ public class BooksController : CustomBaseController
         );
 
 
+
         var responseValue = new
         {
             IsSucces = response.Success,
+            StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
         };
@@ -84,9 +87,11 @@ public class BooksController : CustomBaseController
         );
 
 
+
         var responseValue = new
         {
             IsSucces = response.Success,
+            StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
         };
@@ -96,6 +101,8 @@ public class BooksController : CustomBaseController
             StatusCode = response.StatusCode
         };
     }
+
+
 
     /// <summary>
     /// Bir kitabı ID veya ISBN ile siler.
@@ -123,9 +130,11 @@ public class BooksController : CustomBaseController
         );
 
 
+
         var responseValue = new
         {
             IsSucces = response.Success,
+            StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
         };
@@ -202,9 +211,11 @@ public class BooksController : CustomBaseController
 
 
 
+
             var responseValue = new
             {
                 IsSucces = response.Success,
+                StatusCode = response.StatusCode,
                 Messages = response.StateMessages.ToArray(),
                 Data = response.Data,
             };
@@ -258,9 +269,11 @@ public class BooksController : CustomBaseController
             );
 
 
+
             var responseValue = new
             {
                 IsSucces = response.Success,
+                StatusCode = response.StatusCode,
                 Messages = response.StateMessages.ToArray(),
                 Data = response.Data,
             };

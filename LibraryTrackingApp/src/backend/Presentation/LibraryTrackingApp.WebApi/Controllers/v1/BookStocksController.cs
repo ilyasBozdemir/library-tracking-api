@@ -50,7 +50,15 @@ public class BookStocksController : CustomBaseController
             }
         );
 
-        return new JsonResult(new { data = response.Data })
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
         {
             StatusCode = response.StatusCode
         };
@@ -83,7 +91,15 @@ public class BookStocksController : CustomBaseController
                 OperationType = StockOperationType.Decrease,
             }
         );
-        return new JsonResult(new { data = response.Data })
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
         {
             StatusCode = response.StatusCode
         };
@@ -107,7 +123,15 @@ public class BookStocksController : CustomBaseController
                 OperationType = StockOperationType.Decrease,
             }
         );
-        return new JsonResult(new { data = response.Data })
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
         {
             StatusCode = response.StatusCode
         };
@@ -130,7 +154,15 @@ public class BookStocksController : CustomBaseController
                 OperationType = StockOperationType.Decrease,
             }
         );
-        return new JsonResult(new { data = response.Data })
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue)
         {
             StatusCode = response.StatusCode
         };
