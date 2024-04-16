@@ -11,6 +11,7 @@ import {
   Tr,
   Th,
   Td,
+  ButtonGroup,
 } from "@chakra-ui/react";
 
 import {
@@ -26,7 +27,7 @@ import {
 import { MdAdd, MdDeleteOutline } from "react-icons/md";
 import { useRouter } from "next/router";
 import EditAuthorModal from "@/components/Author/EditAuthorModal";
-import { FaEdit } from "react-icons/fa";
+import { FaEdit, FaEye } from "react-icons/fa";
 import AuthorService from "@/services/authorService";
 
 const AuthorsPage = () => {
@@ -109,15 +110,20 @@ const AuthorsPage = () => {
           </Thead>
           <Tbody>
             {authors.map((author, index) => (
-              <Tr 
-              key={author.id} 
-               _hover={{ backgroundColor: "gray.100", cursor: "pointer" }}
-               onClick={() => router.push(`/admin/author/${author.id}`)}
-               >
+              <Tr key={author.id} _hover={{ backgroundColor: "gray.100" }}>
                 <Td>{index + 1}</Td>
                 <Td> {`${author.name} ${author.surname}`} </Td>
                 <Td> {author.country} </Td>
                 <Td>
+                  <Button
+                    onClick={() => router.push(`/admin/author/${author.id}`)}
+                    colorScheme="gray"
+                    size="sm"
+                    mr={2}
+                    leftIcon={<FaEye />}
+                  >
+                    Görüntüle
+                  </Button>
                   <Button
                     onClick={() => handleEditClick(author)}
                     colorScheme="teal"
@@ -158,16 +164,18 @@ const AuthorsPage = () => {
             </AlertDialogBody>
 
             <AlertDialogFooter>
-              <Button ref={cancelRef} onClick={() => setIsOpen(false)}>
-                İptal
-              </Button>
-              <Button
-                colorScheme="red"
-                onClick={() => handleDelete(authorId)}
-                ml={3}
-              >
-                Sil
-              </Button>
+              <ButtonGroup>
+                <Button
+                  colorScheme="red"
+                  onClick={() => handleDelete(authorId)}
+                  ml={3}
+                >
+                  Sil
+                </Button>
+                <Button ref={cancelRef} onClick={() => setIsOpen(false)}>
+                  İptal
+                </Button>
+              </ButtonGroup>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialogOverlay>
