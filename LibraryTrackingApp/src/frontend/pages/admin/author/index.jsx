@@ -89,6 +89,7 @@ const AuthorsPage = () => {
   return (
     <Flex direction="column" p={4}>
       <Heading mb={4}>Yazarlar</Heading>
+      
       <Button
         onClick={handleAddAuthor}
         leftIcon={<MdAdd />}
@@ -97,6 +98,7 @@ const AuthorsPage = () => {
       >
         Yeni Yazar Ekle
       </Button>
+
       <TableContainer>
         <Table variant="striped" colorScheme="blue">
           <TableCaption>{`${authors.length} yazar bulundu.`}</TableCaption>
