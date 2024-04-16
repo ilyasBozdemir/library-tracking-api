@@ -6,42 +6,16 @@ import {
   Avatar,
   Icon,
   Button,
-  Divider
+  Divider,
 } from "@chakra-ui/react";
-import { FiHome, FiSettings, FiLogOut } from "react-icons/fi";
-import {
-  BsArrowLeftRight,
-  BsBook,
-  BsBuilding,
-  BsPeople,
-  BsPeopleFill,
-  BsPerson,
-  BsTagFill,
-} from "react-icons/bs";
+
 import Link from "next/link";
-import { FaBookOpen } from "react-icons/fa";
+
 import { CloseIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
+import { sidebarItems } from "@/constants/sidebarItems";
 
 function Sidebar({ isOpen, toggleSidebar }) {
-  const sidebarItems = [
-    { icon: <FiHome />, text: "Ana Sayfa", href: "/admin" },
-    { icon: <BsBuilding />, text: "Kütüphane", href: "/admin/library" },
-    { icon: <BsPerson />, text: "Yazarlar", href: "/admin/authors" },
-    { icon: <BsBook />, text: "Kitaplar", href: "/admin/books" },
-    { icon: <FaBookOpen />, text: "Türler", href: "/admin/genres" },
-    { icon: <BsPeople />, text: "Üyeler", href: "/admin/members" },
-    { icon: <BsPeopleFill />, text: "Personel", href: "/admin/staff" },
-    {
-      icon: <BsArrowLeftRight />,
-      text: "Ödünç Verilen Kitaplar",
-      href: "/admin/borrows",
-    },
-    { icon: <BsTagFill />, text: "Etiketler", href: "/admin/book-tags" },
-    { icon: <FiSettings />, text: "Ayarlar", href: "/admin/settings" },
-    { icon: <FiLogOut />, text: "Çıkış Yap", href: "/admin/logout" },
-  ];
-
   const router = useRouter();
 
   return (
@@ -78,7 +52,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
           <SidebarItem
             key={index}
             icon={item.icon}
-            text={item.text}
+            text={item.title}
             href={item.href}
             isActive={router.pathname === item.href}
           />

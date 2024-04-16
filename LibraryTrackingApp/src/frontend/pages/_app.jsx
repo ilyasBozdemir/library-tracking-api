@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     Layout = UserLayout;
   } else if (router.pathname.startsWith("/admin")) {
     Layout = AdminLayout;
-  } else if (router.pathname === "/login") {
+  } else if (router.pathname === "/login" || "/register") {
     Layout = EmptyLayout;
   } 
   else if (router.pathname === "/api-docs") {
