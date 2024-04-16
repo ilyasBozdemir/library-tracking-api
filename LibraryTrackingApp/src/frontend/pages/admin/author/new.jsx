@@ -15,10 +15,11 @@ import {
 
 import * as Yup from "yup";
 import AuthorService from "@/services/authorService";
+import { useRouter } from "next/router";
 
 export default function CreateAuthorForm() {
   const toast = useToast();
-
+  const router = useRouter();
   const validationSchema = Yup.object().shape({
     name: Yup.string().required("Yazar Adı gereklidir."),
     surname: Yup.string().required("Yazar Soyadı gereklidir."),
@@ -26,6 +27,14 @@ export default function CreateAuthorForm() {
     country: Yup.string().required("Yazar Ülke Adı gereklidir."),
     biography: Yup.string().required("Yazar Biyografi gereklidir."),
   });
+
+  const FormClear = (values) => {
+    values.name = "";
+    values.surname = "";
+    values.biography = "";
+    values.country = "";
+    values.biography = "";
+  };
 
   const formik = useFormik({
     initialValues: {
@@ -41,11 +50,13 @@ export default function CreateAuthorForm() {
       var result = await AuthorService.createAuthor(data);
 
       if (result.isSucces === true) {
+        FormClear(values);
+
         toast({
           title: "Başarı",
           description: "Yazar Kaydı Başarıyla Eklendi!",
           status: "success",
-          duration: 5000,
+          duration: 2500,
           isClosable: true,
         });
       } else {
@@ -53,7 +64,7 @@ export default function CreateAuthorForm() {
           title: "Hata",
           description: result.messages,
           status: "error",
-          duration: 5000,
+          duration: 2500,
           isClosable: true,
         });
       }
@@ -146,6 +157,13 @@ export default function CreateAuthorForm() {
               </FormControl>
               <Button type="submit" colorScheme="whatsapp">
                 Kaydet
+              </Button>
+              <Button
+                onClick={() => router.push("/admin/author")}
+                colorScheme="orange"
+                variant="outline"
+              >
+                Listeye Dön
               </Button>
             </VStack>
           </Stack>
