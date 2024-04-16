@@ -1,17 +1,35 @@
-import { useState, useEffect } from 'react';
-import { Table, Thead, Tbody, Tr, Th, Td, Button, Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, FormControl, FormLabel, Input } from '@chakra-ui/react';
-import { MdEdit, MdDelete } from 'react-icons/md';
+import React, { useState, useEffect } from "react";
+import {
+  Table,
+  Thead,
+  Tbody,
+  Tr,
+  Th,
+  Td,
+  Button,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  FormControl,
+  FormLabel,
+  Input,
+} from "@chakra-ui/react";
+import { MdEdit, MdDelete } from "react-icons/md";
 
 function BranchesPage() {
   const [branches, setBranches] = useState([]);
   const [isOpen, setIsOpen] = useState(false);
-  const [newBranch, setNewBranch] = useState({ name: '', address: '' });
+  const [newBranch, setNewBranch] = useState({ name: "", address: "" });
 
   useEffect(() => {
     const sampleBranches = [
-      { id: 1, name: 'Şube 1', address: 'Adres 1' },
-      { id: 2, name: 'Şube 2', address: 'Adres 2' },
-      { id: 3, name: 'Şube 3', address: 'Adres 3' },
+      { id: 1, name: "Şube 1", address: "Adres 1" },
+      { id: 2, name: "Şube 2", address: "Adres 2" },
+      { id: 3, name: "Şube 3", address: "Adres 3" },
     ];
     setBranches(sampleBranches);
   }, []);
@@ -30,16 +48,20 @@ function BranchesPage() {
   };
 
   const handleAddBranch = () => {
-
-    const updatedBranches = [...branches, { id: branches.length + 1, ...newBranch }];
+    const updatedBranches = [
+      ...branches,
+      { id: branches.length + 1, ...newBranch },
+    ];
     setBranches(updatedBranches);
     setIsOpen(false);
-    setNewBranch({ name: '', address: '' });
+    setNewBranch({ name: "", address: "" });
   };
 
   return (
-    <div>
-      <Button onClick={handleOpenModal}>Yeni Ekle</Button>
+    <React.Fragment>
+      <Button colorScheme={"green"} variant="outline" onClick={handleOpenModal}>
+        Yeni Ekle
+      </Button>
 
       <Table variant="simple">
         <Thead>
@@ -53,14 +75,21 @@ function BranchesPage() {
         <Tbody>
           {branches.map((branch) => (
             <Tr key={branch.id}>
-              <Td>{branch.id}</Td>
-              <Td>{branch.name}</Td>
-              <Td>{branch.address}</Td>
+              <Td contenteditable={true}>{branch.id}</Td>
+              <Td contenteditable={true}>{branch.name}</Td>
+              <Td contenteditable={true}>{branch.address}</Td>
               <Td>
-                <Button leftIcon={<MdEdit />} mr={2} variant="outline">
+                <Button
+                  colorScheme={"blue"}
+                  leftIcon={<MdEdit />}
+                  mr={2}
+                >
                   Düzenle
                 </Button>
-                <Button leftIcon={<MdDelete />} variant="outline">
+                <Button
+                  colorScheme={"red"}
+                  leftIcon={<MdDelete />}
+                >
                   Sil
                 </Button>
               </Td>
@@ -77,11 +106,21 @@ function BranchesPage() {
           <ModalBody>
             <FormControl>
               <FormLabel>Şube Adı</FormLabel>
-              <Input type="text" name="name" value={newBranch.name} onChange={handleInputChange} />
+              <Input
+                type="text"
+                name="name"
+                value={newBranch.name}
+                onChange={handleInputChange}
+              />
             </FormControl>
             <FormControl mt={4}>
               <FormLabel>Adres</FormLabel>
-              <Input type="text" name="address" value={newBranch.address} onChange={handleInputChange} />
+              <Input
+                type="text"
+                name="address"
+                value={newBranch.address}
+                onChange={handleInputChange}
+              />
             </FormControl>
           </ModalBody>
           <ModalFooter>
@@ -91,7 +130,7 @@ function BranchesPage() {
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </div>
+    </React.Fragment>
   );
 }
 

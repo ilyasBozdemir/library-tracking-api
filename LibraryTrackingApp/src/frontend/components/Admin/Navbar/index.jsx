@@ -76,12 +76,10 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
       top="0"
       bg={useColorModeValue("gray.100", "gray.700")}
       width="100%"
-      zIndex="2"
       transition="0.3s ease-in-out"
       justifyContent={"space-between"}
       p={2}
     >
-
       <HStack spacing={3}>
         <Icon
           cursor={"pointer"}
@@ -90,8 +88,6 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
           onClick={onMenuToggle}
         />
       </HStack>
-
-
 
       <NavItem
         isMaximized={isMaximized}
@@ -116,8 +112,8 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
         />
 
         <Menu isLazy>
-          <MenuButton as={Button} size="sm" _hover={{ variant: 'ghost' }}>
-            <Avatar size="sm" src={"/admin.jpg"} />
+          <MenuButton as={Button} size="sm" _hover={{ variant: "ghost" }}>
+            <Avatar size="sm" src={"https://avatars.githubusercontent.com/u/52322835?s=96&v=4"} />
           </MenuButton>
           <MenuList
             zIndex={5}

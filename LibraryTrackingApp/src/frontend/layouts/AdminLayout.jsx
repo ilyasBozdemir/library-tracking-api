@@ -12,7 +12,7 @@ function AdminLayout({ children }) {
     setIsSidebarOpen(!isSidebarOpen);
   };
   return (
-    <Flex as="main"  zIndex="1">
+    <Flex as="main" zIndex="1">
       <Head>
         <meta name="robots" content="noindex, nofollow" />
         <link rel="icon" href="/favicon.ico" />
@@ -20,24 +20,20 @@ function AdminLayout({ children }) {
       </Head>
 
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
-      <Box w="100%" >
+      <Box w="100%">
         <Navbar
           onMenuToggle={toggleSidebar}
           isOpen={isSidebarOpen}
           transition="0.3s ease-in-out"
         />
-        <Flex direction={{ base: "column", md: "row" }}>
-          
-          <Box
-            flex={1}
-            ml={isSidebarOpen ? "350px" : "0px"}
-            transition="margin-left 0.5s ease-in-out"
-          >
-            <Box  p={{ base: 5, md: 10 }}>
-              {children}
-            </Box>
-          </Box>
-        </Flex>
+
+        <Box
+          ml={isSidebarOpen ? "300px" : "0px"}
+          mt={isSidebarOpen ? "20" : "20"}
+          transition="margin-left 0.5s ease-in-out"
+        >
+          {children}
+        </Box>
       </Box>
     </Flex>
   );

@@ -6,6 +6,7 @@ import {
   Avatar,
   Icon,
   Button,
+  Divider
 } from "@chakra-ui/react";
 import { FiHome, FiSettings, FiLogOut } from "react-icons/fi";
 import {
@@ -20,8 +21,29 @@ import {
 import Link from "next/link";
 import { FaBookOpen } from "react-icons/fa";
 import { CloseIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
 
-function Sidebar({ isOpen ,toggleSidebar}) {
+function Sidebar({ isOpen, toggleSidebar }) {
+  const sidebarItems = [
+    { icon: <FiHome />, text: "Ana Sayfa", href: "/admin" },
+    { icon: <BsBuilding />, text: "Kütüphane", href: "/admin/library" },
+    { icon: <BsPerson />, text: "Yazarlar", href: "/admin/authors" },
+    { icon: <BsBook />, text: "Kitaplar", href: "/admin/books" },
+    { icon: <FaBookOpen />, text: "Türler", href: "/admin/genres" },
+    { icon: <BsPeople />, text: "Üyeler", href: "/admin/members" },
+    { icon: <BsPeopleFill />, text: "Personel", href: "/admin/staff" },
+    {
+      icon: <BsArrowLeftRight />,
+      text: "Ödünç Verilen Kitaplar",
+      href: "/admin/borrows",
+    },
+    { icon: <BsTagFill />, text: "Etiketler", href: "/admin/book-tags" },
+    { icon: <FiSettings />, text: "Ayarlar", href: "/admin/settings" },
+    { icon: <FiLogOut />, text: "Çıkış Yap", href: "/admin/logout" },
+  ];
+
+  const router = useRouter();
+
   return (
     <Box
       bg="gray.700"
@@ -38,66 +60,42 @@ function Sidebar({ isOpen ,toggleSidebar}) {
       zIndex="2"
     >
       <Flex alignItems="center" mb="8">
-        <Avatar size="sm" name="Admin" src="https://avatars.githubusercontent.com/u/52322835?s=96&v=4" />
+        <Avatar size="sm" name="Admin" />
         <Text ml="3" fontSize="lg" fontWeight="bold" color="white">
           Admin Panel
         </Text>
         <Box ml="auto" onClick={toggleSidebar}>
-          <CloseIcon boxSize={4} color="white" cursor={'pointer'} _hover={{color:'red'}}/>
+          <CloseIcon
+            boxSize={4}
+            color="white"
+            cursor={"pointer"}
+            _hover={{ color: "red" }}
+          />
         </Box>
       </Flex>
       <VStack spacing="4" align="stretch">
-        <SidebarItem icon={<FiHome />} text="Ana Sayfa" href="/admin" />
-        <SidebarItem
-          icon={<BsBuilding />}
-          text="Şubeler"
-          href="/admin/branches"
-        />
-        <SidebarItem
-          icon={<BsPerson />}
-          text="Yazarlar"
-          href="/admin/authors"
-        />
-        <SidebarItem icon={<BsBook />} text="Kitaplar" href="/admin/books" />
-        <SidebarItem icon={<FaBookOpen />} text="Türler" href="/admin/genres" />
-        <SidebarItem icon={<BsPeople />} text="Üyeler" href="/admin/members" />
-        <SidebarItem
-          icon={<BsPeopleFill />}
-          text="Çalışanlar"
-          href="/admin/staffs"
-        />
-        <SidebarItem
-          icon={<BsArrowLeftRight />}
-          text="Ödünç Verilen Kitaplar"
-          href="/admin/borrows"
-        />
-
-        <SidebarItem
-          icon={<BsTagFill />}
-          text="Etiketler"
-          href="/admin/book-tags"
-        />
-        <SidebarItem
-          icon={<FiSettings />}
-          text="Ayarlar"
-          href="/admin/settings"
-        />
-        <SidebarItem
-          icon={<FiLogOut />}
-          text="Çıkış Yap"
-          href="/admin/logout"
-        />
+        {sidebarItems.map((item, index) => (
+          <SidebarItem
+            key={index}
+            icon={item.icon}
+            text={item.text}
+            href={item.href}
+            isActive={router.pathname === item.href}
+          />
+        ))}
       </VStack>
     </Box>
   );
 }
 
-const SidebarItem = ({ icon, text, href }) => {
+const SidebarItem = ({ icon, text, href, isActive }) => {
+  const color = isActive ? "#1468de" : "gray.100";
+
   return (
     <Link href={href} passHref>
       <Button
         variant="ghost"
-        color="white"
+        color={color}
         _hover={{ color: "#1468de" }}
         leftIcon={icon}
         justifyContent="flex-start"
