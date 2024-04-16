@@ -6,7 +6,6 @@ public class LibraryBranch : BaseEntity<Guid>, IAuditable<Guid>
     public string Name { get; set; } // Şubenin adı
     public string Address { get; set; } // Şubenin adresi
     public string PhoneNumber { get; set; } // Şubenin telefon numarası
-    public DateTime OpeningDate { get; set; } // Şubenin açılış tarihi - kaldırlcak bu 
     public string Description { get; set; } // Şube hakkında açıklama
 
     public Guid CreatedById { get; set; }

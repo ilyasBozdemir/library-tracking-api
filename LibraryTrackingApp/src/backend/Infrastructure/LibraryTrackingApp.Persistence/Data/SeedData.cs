@@ -143,7 +143,6 @@ public static class SeedData
             Name = "Örnek Kütüphane Şubesi",
             Address = "123 Ana Cadde",
             PhoneNumber = "123-456-7890",
-            OpeningDate = new DateTime(2020, 2, 20),
             Description = "Bu bir örnek kütüphane şubesidir.",
             CreatedBy = systemUser.Name,
             CreatedById = systemUser.Id,

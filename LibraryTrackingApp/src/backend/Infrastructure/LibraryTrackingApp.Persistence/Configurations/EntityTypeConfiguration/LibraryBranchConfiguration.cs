@@ -16,7 +16,6 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
         builder.Property(lb => lb.Name).IsRequired();
         builder.Property(lb => lb.Address).IsRequired();
         builder.Property(lb => lb.PhoneNumber).IsRequired();
-        builder.Property(lb => lb.OpeningDate).IsRequired();
         builder.Property(lb => lb.Description).IsRequired();
 
         builder
