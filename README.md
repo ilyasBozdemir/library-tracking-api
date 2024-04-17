@@ -5,6 +5,48 @@ Bu uygulama, bir kütüphanenin envanterini ve ödünç işlemlerini takip etmek
 Next.js ile yazılmış bir web arayüzü, kullanıcılara kütüphane kitaplarını aramak ve ödünç almak için bir arayüz sunar.
 Web arayüzü, .NET Core API'ye istekler yapar ve kullanıcıların etkileşimlerini işler.
 
+## `Entity`'ler
+
+Uygulama aşağıdaki entiteleri içermektedir:
+
+- **AppUser**: Uygulama kullanıcılarının kaydedilmesi ve yönetilmesi.
+- **AppRole**: Kullanıcı rollerinin tanımlanması ve yönetilmesi.
+- **Staff**: Kütüphane personelinin kaydedilmesi ve yönetilmesi.
+- **Member**: Kütüphane üyelerinin kaydedilmesi ve takibi.
+- **Library Branch**: Kütüphane şubelerinin kaydedilmesi.
+- **LibraryTransaction**: Kütüphane işlemlerinin yönetimi.
+- **Branch Hour**: Kütüphane şubelerinin çalışma saatlerinin yönetimi.
+- **Book**: Kitapların kaydedilmesi ve yönetilmesi.
+- **Genre**: Kitap türlerinin kaydedilmesi.
+- **Author**: Kitap yazarlarının kaydedilmesi.
+- **Publisher**: Kitap yayınevlerinin kaydedilmesi.
+- **Borrow**: Kitap ödünç alma işlemlerinin yönetimi.
+- **Return**: Kitap iade işlemlerinin yönetimi.
+- **BookStock**: Kitap stoklarının yönetimi.
+- **Tag**: Kitapları kategorize etmek için etiketlerin yönetimi.
+
+## Özellikler
+
+- **Kitap ve Kategori Yönetimi**: Kitapların ve kategorilerin kaydedilmesi, düzenlenmesi ve sorgulanması.
+- **Üye Yönetimi**: Kütüphane üyelerinin kaydedilmesi ve takibi.
+- **Ödünç Alma ve İade İşlemleri**: Kitap ödünç alma, iade etme ve süre uzatma işlemleri.
+- **Personel Yönetimi**: Kütüphane personelinin yönetimi ve yetkilendirilmesi.
+- **Kütüphane İşlemleri Takibi**: Kütüphane içi işlemlerin detaylı kaydı ve raporlanması.
+- **Yönetim ve Raporlama Araçları**: Kapsamlı yönetim ve raporlama araçları.
+- **Kullanıcı Hesapları ve İzinler**: Çok kullanıcılı hesap yönetimi ve rol bazlı erişim kontrolleri.
+
+## Ekran Görüntüleri
+
+- Dashboard
+- 
+  ![Dashboard](screenshots/dashboard.png)
+
+- Yazar Sayfası
+  ![Dashboard](screenshots/author-page.png)
+
+- daha eklenecektir güncellendikçe
+
+
 # Proje Kurulumu
 Projenin yerel ortamınıza nasıl kurulacağına dair adımları bu bölümde açıklayabilirsiniz.
 
