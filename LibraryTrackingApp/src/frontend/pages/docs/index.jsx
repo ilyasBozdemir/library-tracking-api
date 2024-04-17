@@ -1,8 +1,9 @@
+import React from "react";
+
 import { RedocStandalone } from "redoc";
-import { useState, useEffect } from "react";
 import Head from "next/head";
 
-function ApiDocsPage() {
+function DocsPage() {
   const pageTitle = `Kütüphane Takip Uygulaması`;
 
   return (
@@ -13,12 +14,11 @@ function ApiDocsPage() {
       <RedocStandalone
         specUrl={"https://localhost:7115/swagger/v1/swagger.json"}
         options={{
-            theme: { colors: { primary: { main: '#3432a8' } } },
-          
-          }}
+          theme: { colors: { primary: { main: "#3432a8" } } },
+        }}
       />
     </>
   );
 }
 
-export default ApiDocsPage;
+export default DocsPage;

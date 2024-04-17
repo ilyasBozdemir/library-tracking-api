@@ -54,6 +54,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
             icon={item.icon}
             text={item.title}
             href={item.href}
+            target={item.target}
             isActive={router.pathname === item.href}
           />
         ))}
@@ -62,11 +63,11 @@ function Sidebar({ isOpen, toggleSidebar }) {
   );
 }
 
-const SidebarItem = ({ icon, text, href, isActive }) => {
+const SidebarItem = ({ icon, text, href, target, isActive }) => {
   const color = isActive ? "#1468de" : "gray.100";
 
   return (
-    <Link href={href} passHref>
+    <Link href={href} target={target} passHref>
       <Button
         variant="ghost"
         color={color}

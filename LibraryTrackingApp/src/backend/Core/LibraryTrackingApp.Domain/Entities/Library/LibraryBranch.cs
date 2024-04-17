@@ -1,6 +1,9 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
 
+
+// şubeleri aslında appusere baglayıp appuserin yani adminin subeleri olması lazım.
+// sonra ki guncellemede gelicektir.
 public class LibraryBranch : BaseEntity<Guid>, IAuditable<Guid>
 {
     public string Name { get; set; } // Şubenin adı

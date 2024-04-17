@@ -4,7 +4,7 @@ using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
 namespace LibraryTrackingApp.Application.Features.Books.Commands.Handlers;
 
-
+// book crud işlemleri tekrdan düzenelecektir.
 public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest, CreateBookCommandResponse>
 {
     private readonly IUnitOfWork<Guid> _unitOfWork;

@@ -1,33 +1,32 @@
-﻿using LibraryTrackingApp.Application.Features.Authors.Commands.Requests;
-using LibraryTrackingApp.Application.Features.Authors.Events;
-using LibraryTrackingApp.Application.Features.Authors.Queries.Requests;
-using LibraryTrackingApp.Application.Features.Books.Events;
+﻿using LibraryTrackingApp.Application.Features.LibraryBranches.Queries.Requests;
+using LibraryTrackingApp.Application.Features.LibraryBranches.Commands.Requests;
+using LibraryTrackingApp.Application.Features.LibraryBranches.Events;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
-
 /// <summary>
-/// Yazar işlemlerini yönetmek için Controller.
+/// Kütüphane şubeleriyle ilgili işlemleri yönetmek için Controller.
 /// </summary>
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
-[Route($"api/v{ApiVersions.V1}/authors")]
-public class AuthorsController : CustomBaseController
+[Route($"api/v{ApiVersions.V1}/libraries")]
+public class LibraryBranchesController : CustomBaseController
 {
-    public AuthorsController(IMediator mediator) : base(mediator) { }
+    public LibraryBranchesController(IMediator mediator)
+        : base(mediator) { }
 
     /// <summary>
-    /// Yeni bir yazar oluşturur.
+    /// Yeni bir kütüphane şubesi oluşturur.
     /// </summary>
-    /// <param name="request">Yazar bilgilerini içeren istek nesnesi.</param>
+    /// <param name="request">Kütüphane şubelerini içeren istek nesnesi.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpPost]
-    public async Task<IActionResult> Create([FromBody] CreateAuthorCommandRequest request)
+    public async Task<IActionResult> Create([FromBody] CreateLibraryBranchCommandRequest request)
     {
         var response = await _mediator.Send(request);
         await _mediator.Publish(
-            new AuthorCommandEvent()
+            new LibraryBranchCommandEvent()
             {
                 Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
@@ -47,14 +46,11 @@ public class AuthorsController : CustomBaseController
             Data = response.Data,
         };
 
-        return new JsonResult(responseValue)
-        {
-            StatusCode = response.StatusCode
-        };
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 
     /// <summary>
-    /// Mevcut bir yazarı günceller.
+    /// Mevcut bir kütüphane şubesini günceller.
     /// </summary>
     /// <param name="id">Güncellenecek yazarın ID'si.</param>
     /// <param name="request">Güncellenmiş yazar bilgilerini içeren istek nesnesi.</param>
@@ -62,14 +58,14 @@ public class AuthorsController : CustomBaseController
     [HttpPut("{id}")]
     public async Task<IActionResult> Update(
         [FromRoute] Guid id,
-        [FromBody] UpdateAuthorCommandRequest request
+        [FromBody] UpdateLibraryBranchCommandRequest request
     )
     {
         request.UpdatedId = id;
         var response = await _mediator.Send(request);
 
         await _mediator.Publish(
-            new AuthorCommandEvent()
+            new LibraryBranchCommandEvent()
             {
                 Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
@@ -82,8 +78,6 @@ public class AuthorsController : CustomBaseController
             }
         );
 
-
-
         var responseValue = new
         {
             IsSucces = response.Success,
@@ -92,25 +86,22 @@ public class AuthorsController : CustomBaseController
             Data = response.Data,
         };
 
-        return new JsonResult(responseValue)
-        {
-            StatusCode = response.StatusCode
-        };
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 
     /// <summary>
-    /// Bir yazarın ID ile siler.
+    /// Bir kütüphane şubesini ID ile siler.
     /// </summary>
     /// <param name="Id">Silinecek yazarın ID'si veya ISBN'i.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpDelete("{Id}")]
     public async Task<IActionResult> Delete([FromRoute] string Id)
     {
-        var request = new DeleteAuthorCommandRequest { Id = Id };
+        var request = new DeleteLibraryBranchCommandRequest { Id = Id };
         var response = await _mediator.Send(request);
 
         await _mediator.Publish(
-            new AuthorCommandEvent()
+            new LibraryBranchCommandEvent()
             {
                 Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
@@ -123,8 +114,6 @@ public class AuthorsController : CustomBaseController
             }
         );
 
-
-
         var responseValue = new
         {
             IsSucces = response.Success,
@@ -133,30 +122,24 @@ public class AuthorsController : CustomBaseController
             Data = response.Data,
         };
 
-        return new JsonResult(responseValue)
-        {
-            StatusCode = response.StatusCode
-        };
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 
-
-
-
     /// <summary>
-    /// Bir yazarı ID ile alır.
+    /// Bir kütüphane şubesini ID ile alır.
     /// </summary>
     /// <param name="id">Alınacak yazarın ID'si.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpGet("{id}")]
-    public async Task<IActionResult> GetBook([FromRoute] Guid id)
+    public async Task<IActionResult> GetLibraryBranch([FromRoute] Guid id)
     {
-        var query = new GetAuthorQueryRequest { AuthorId = id };
+        var query = new GetLibraryBranchQueryRequest { LibraryBranchId = id };
         var response = await _mediator.Send(query);
 
         if (response != null && response.Data != null)
         {
             await _mediator.Publish(
-                new AuthorCommandEvent()
+                new LibraryBranchCommandEvent()
                 {
                     Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                     IsSuccessful = response.Success,
@@ -168,9 +151,6 @@ public class AuthorsController : CustomBaseController
                 }
             );
 
-
-
-
             var responseValue = new
             {
                 IsSucces = response.Success,
@@ -179,15 +159,12 @@ public class AuthorsController : CustomBaseController
                 Data = response.Data,
             };
 
-            return new JsonResult(responseValue)
-            {
-                StatusCode = response.StatusCode
-            };
+            return new JsonResult(responseValue) { StatusCode = response.StatusCode };
         }
         else
         {
             await _mediator.Publish(
-                new BookCommandEvent()
+                new LibraryBranchCommandEvent()
                 {
                     Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                     IsSuccessful = false,
@@ -202,22 +179,20 @@ public class AuthorsController : CustomBaseController
         }
     }
 
-
-
     /// <summary>
-    /// Tüm yazarları alır.
+    /// Tüm kütüphane şubelerini alır.
     /// </summary>
     /// <param name="request">Yazarları filtrelemek için kriterleri içeren istek nesnesi.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpGet]
-    public async Task<IActionResult> GetAllBooks([FromQuery] GetAllAuthorsQueryRequest request)
+    public async Task<IActionResult> GetAllGetLibraryBranches([FromQuery] GetAllLibraryBranchesQueryRequest request)
     {
         var response = await _mediator.Send(request);
 
         if (response != null && response.Data != null)
         {
             await _mediator.Publish(
-                new BookCommandEvent()
+                new LibraryBranchCommandEvent()
                 {
                     Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                     IsSuccessful = response.Success,
@@ -229,8 +204,6 @@ public class AuthorsController : CustomBaseController
                 }
             );
 
-
-
             var responseValue = new
             {
                 IsSucces = response.Success,
@@ -239,15 +212,12 @@ public class AuthorsController : CustomBaseController
                 Data = response.Data,
             };
 
-            return new JsonResult(responseValue)
-            {
-                StatusCode = response.StatusCode
-            };
+            return new JsonResult(responseValue) { StatusCode = response.StatusCode };
         }
         else
         {
             await _mediator.Publish(
-                new BookCommandEvent()
+                new LibraryBranchCommandEvent()
                 {
                     Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                     IsSuccessful = false,
@@ -261,8 +231,4 @@ public class AuthorsController : CustomBaseController
             return NotFound();
         }
     }
-
-
 }
-
-
