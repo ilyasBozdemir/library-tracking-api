@@ -1,26 +1,17 @@
-import { site } from "@/constants/site";
+import customAxios from "@/utils/customAxios";
+
+const AUTH_BASE_API_URL = `/api/v1/auths`;
 // düzenlenecek.
-const AUTH_BASE_API_URL = `${site.API_BASE_URL}/api/v1/auths`;
+
+//register ve login endpointlerine istek atıcak...
 
 const AuthService = {
-    login: async (loginData) => {
-    const response = await fetch(AUTH_BASE_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: (loginData)
-    });
+  login: async (loginData) => {
+    const response = await customAxios.post(AUTH_BASE_API_URL, loginData);
     return response.json()
   },
-  register : async (registerData) => {
-    const response = await fetch(AUTH_BASE_API_URL, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: (registerData)
-    });
+  register: async (registerData) => {
+    const response = await customAxios.post(AUTH_BASE_API_URL, loginData);
     return response.json()
   },
 
@@ -28,5 +19,4 @@ const AuthService = {
 
 
 
-  export default new AuthService;
-  
+export default new AuthService;

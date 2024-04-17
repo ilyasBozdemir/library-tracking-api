@@ -82,14 +82,14 @@ const AuthorsPage = () => {
   };
 
   const handleDeleteAlertDialog = (id) => {
-    setIsOpen(true);
     setAuthorId(id);
+    setIsOpen(true);
   };
 
   return (
     <Flex direction="column" p={4}>
       <Heading mb={4}>Yazarlar</Heading>
-      
+
       <Button
         onClick={handleAddAuthor}
         leftIcon={<MdAdd />}
@@ -101,7 +101,7 @@ const AuthorsPage = () => {
 
       <TableContainer>
         <Table variant="striped" colorScheme="blue">
-          <TableCaption>{`${authors.length} yazar bulundu.`}</TableCaption>
+          <TableCaption>{`${authors?.length} yazar bulundu.`}</TableCaption>
           <Thead>
             <Tr>
               <Th>Sıra</Th>
@@ -111,7 +111,7 @@ const AuthorsPage = () => {
             </Tr>
           </Thead>
           <Tbody>
-            {authors.map((author, index) => (
+            {authors?.map((author, index) => (
               <Tr key={author.id} _hover={{ backgroundColor: "gray.100" }}>
                 <Td>{index + 1}</Td>
                 <Td> {`${author.name} ${author.surname}`} </Td>

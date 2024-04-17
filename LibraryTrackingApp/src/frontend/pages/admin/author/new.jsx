@@ -11,11 +11,16 @@ import {
   Button,
   Text,
   useToast,
+  Select,
 } from "@chakra-ui/react";
 
 import * as Yup from "yup";
 import AuthorService from "@/services/authorService";
 import { useRouter } from "next/router";
+import { countries } from "@/constants/countries";
+
+//su anlık 409 yani aynı datadan varsa hatası işlenmedi toast için,
+// customAxiostan sonar geldi bu sonrasında bakılcaktır.
 
 export default function CreateAuthorForm() {
   const toast = useToast();
@@ -47,7 +52,9 @@ export default function CreateAuthorForm() {
     validationSchema,
     onSubmit: async (values) => {
       var data = JSON.stringify(values, null, 2);
+
       var result = await AuthorService.createAuthor(data);
+      alert(result.response.status);
 
       if (result.isSucces === true) {
         FormClear(values);
@@ -126,13 +133,21 @@ export default function CreateAuthorForm() {
               </FormControl>
               <FormControl id="country">
                 <FormLabel>Ülke</FormLabel>
-                <Input
-                  type="text"
-                  rounded="md"
-                  onChange={formik.handleChange}
+
+                <Select
+                  placeholder="Ülke Seçin"
+                  onChange={(e) =>
+                    formik.setFieldValue("country", e.target.value)
+                  }
                   value={formik.values.country}
                   isInvalid={formik.touched.country && formik.errors.country}
-                />
+                >
+                  {countries.map(([code, name]) => (
+                    <option key={code} value={name}>
+                      {name}
+                    </option>
+                  ))}
+                </Select>
                 {formik.touched.country && formik.errors.country && (
                   <Text color="red.500">{formik.errors.country}</Text>
                 )}

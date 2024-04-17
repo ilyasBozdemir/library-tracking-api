@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 import {
   Button,
   Modal,
@@ -12,16 +12,15 @@ import {
   FormLabel,
   Input,
   Textarea,
-} from '@chakra-ui/react';
+} from "@chakra-ui/react";
 
 function EditAuthorModal({ author, isOpen, onClose, onUpdate }) {
-  
   const [formData, setFormData] = useState({
-    name: author?.name,
-    surname: author?.surname,
-    birthDate: author?.birthDate,
-    country: author?.country,
-    biography: author?.biography,
+    name: author?.name || null,
+    surname: author?.surname || null,
+    birthDate: author?.birthDate || null,
+    country: author?.country || null,
+    biography: author?.biography || null,
   });
 
   const handleChange = (e) => {
