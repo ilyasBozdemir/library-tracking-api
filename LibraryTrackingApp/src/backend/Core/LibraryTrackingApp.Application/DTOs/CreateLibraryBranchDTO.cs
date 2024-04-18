@@ -1,6 +1,6 @@
 ﻿namespace LibraryTrackingApp.Application.DTOs;
 
-public record CreateLibraryBranchDTO : BaseAuditableDTO
+public record CreateLibraryBranchDTO : BaseAuditableDTO<Guid>
 {
     public string Name { get; init; }
     public string Address { get; init; } 

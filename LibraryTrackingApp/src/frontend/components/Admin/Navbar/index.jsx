@@ -1,40 +1,25 @@
 import { useState } from "react";
 import {
-  Container,
   Box,
   Avatar,
   Button,
   HStack,
   VStack,
-  Image,
-  Input,
-  Spacer,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
   Text,
-  MenuDivider,
   useColorModeValue,
   Icon,
   Flex,
-  Stack,
 } from "@chakra-ui/react";
-import { IoIosNotificationsOutline } from "react-icons/io";
 import Link from "next/link";
 import ThemeSwitcher from ".././../ThemeSwitcher";
 import LanguageSwitcher from ".././../LanguageSwitcher";
 
-import {
-  FiMinimize,
-  FiMaximize,
-  FiMoreHorizontal,
-  FiMoreVertical,
-} from "react-icons/fi";
-import { HiOutlineEnvelope } from "react-icons/hi2";
+import { FiMinimize, FiMaximize } from "react-icons/fi";
 import { HiMenuAlt2 } from "react-icons/hi";
-import { MdOutlineSegment } from "react-icons/md";
-import { AiOutlineSetting, AiOutlineSearch } from "react-icons/ai";
 
 const Navbar = ({ isOpen, onMenuToggle }) => {
   const [isMaximized, setIsMaximized] = useState(false);
@@ -113,12 +98,15 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
 
         <Menu isLazy>
           <MenuButton as={Button} size="sm" _hover={{ variant: "ghost" }}>
-            <Avatar size="sm" src={"https://avatars.githubusercontent.com/u/52322835?s=96&v=4"} />
+            <Avatar
+              size="sm"
+              src={"https://avatars.githubusercontent.com/u/52322835?s=96&v=4"}
+            />
           </MenuButton>
           <MenuList
             zIndex={5}
             border="2px solid"
-            borderColor={useColorModeValue("gray.700", "gray.100")}
+            borderColor={useColorModeValue("gray.100", "gray.700")}
             boxShadow="4px 4px 0"
           >
             <Link href="/admin/profile" passHref>

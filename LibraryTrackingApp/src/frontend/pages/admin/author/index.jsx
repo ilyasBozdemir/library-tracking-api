@@ -11,7 +11,6 @@ import {
   Tr,
   Th,
   Td,
-  ButtonGroup,
 } from "@chakra-ui/react";
 
 import {
@@ -30,6 +29,7 @@ import EditAuthorModal from "@/components/Author/EditAuthorModal";
 import { FaEdit, FaEye } from "react-icons/fa";
 import AuthorService from "@/services/authorService";
 
+// burası da library modeli gibi olucaktır kod tekrarını azaltmak adına :))
 const AuthorsPage = () => {
   const router = useRouter();
   const [authors, setAuthors] = useState([]);
@@ -82,14 +82,13 @@ const AuthorsPage = () => {
   };
 
   const handleDeleteAlertDialog = (id) => {
-    setAuthorId(id);
     setIsOpen(true);
+    setAuthorId(id);
   };
 
   return (
     <Flex direction="column" p={4}>
       <Heading mb={4}>Yazarlar</Heading>
-
       <Button
         onClick={handleAddAuthor}
         leftIcon={<MdAdd />}
@@ -98,10 +97,9 @@ const AuthorsPage = () => {
       >
         Yeni Yazar Ekle
       </Button>
-
       <TableContainer>
         <Table variant="striped" colorScheme="blue">
-          <TableCaption>{`${authors?.length} yazar bulundu.`}</TableCaption>
+          <TableCaption>{`${authors.length} yazar bulundu.`}</TableCaption>
           <Thead>
             <Tr>
               <Th>Sıra</Th>
@@ -111,8 +109,11 @@ const AuthorsPage = () => {
             </Tr>
           </Thead>
           <Tbody>
-            {authors?.map((author, index) => (
-              <Tr key={author.id} _hover={{ backgroundColor: "gray.100" }}>
+            {authors.map((author, index) => (
+              <Tr
+                key={author.id}
+                _hover={{ backgroundColor: "gray.100", cursor: "pointer" }}
+              >
                 <Td>{index + 1}</Td>
                 <Td> {`${author.name} ${author.surname}`} </Td>
                 <Td> {author.country} </Td>
@@ -166,18 +167,16 @@ const AuthorsPage = () => {
             </AlertDialogBody>
 
             <AlertDialogFooter>
-              <ButtonGroup>
-                <Button
-                  colorScheme="red"
-                  onClick={() => handleDelete(authorId)}
-                  ml={3}
-                >
-                  Sil
-                </Button>
-                <Button ref={cancelRef} onClick={() => setIsOpen(false)}>
-                  İptal
-                </Button>
-              </ButtonGroup>
+              <Button ref={cancelRef} onClick={() => setIsOpen(false)}>
+                İptal
+              </Button>
+              <Button
+                colorScheme="red"
+                onClick={() => handleDelete(authorId)}
+                ml={3}
+              >
+                Sil
+              </Button>
             </AlertDialogFooter>
           </AlertDialogContent>
         </AlertDialogOverlay>

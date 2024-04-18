@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
-public class GenreConfiguration : IEntityTypeConfiguration<Genre>
+public class BookGenreConfiguration : IEntityTypeConfiguration<BookGenre>
 {
-    public void Configure(EntityTypeBuilder<Genre> builder)
+    public void Configure(EntityTypeBuilder<BookGenre> builder)
     {
-        builder.ToTable(name: "Genres", schema: "lm");// LibraryManagement
+        builder.ToTable(name: "BookGenres", schema: "lm");// LibraryManagement
 
         builder.HasKey(g => g.Id);
 

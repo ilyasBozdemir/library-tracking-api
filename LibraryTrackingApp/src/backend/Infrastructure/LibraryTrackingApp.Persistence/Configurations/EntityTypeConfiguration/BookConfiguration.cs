@@ -48,7 +48,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             .UsingEntity<Dictionary<string, object>>(
             "BookTags",
             j => j
-            .HasOne<Tag>()
+            .HasOne<BookTag>()
             .WithMany()
             .HasForeignKey("TagId"),
             j => j

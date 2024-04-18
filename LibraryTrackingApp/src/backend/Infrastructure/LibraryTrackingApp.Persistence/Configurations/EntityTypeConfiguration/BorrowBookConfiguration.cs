@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
-public class BorrowConfiguration : IEntityTypeConfiguration<Borrow>
+public class BorrowBookConfiguration : IEntityTypeConfiguration<BorrowBook>
 {
-    public void Configure(EntityTypeBuilder<Borrow> builder)
+    public void Configure(EntityTypeBuilder<BorrowBook> builder)
     {
-        builder.ToTable(name: "Borrows", schema: "lm");// LibraryManagement
+        builder.ToTable(name: "BorrowBooks", schema: "lm");// LibraryManagement
         builder.HasKey(l => l.Id);
         builder.Property(l => l.BorrowDate).IsRequired();
         builder.Property(l => l.DueDate).IsRequired();

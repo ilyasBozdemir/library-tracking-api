@@ -1,6 +1,7 @@
 ﻿using LibraryTrackingApp.Application.Features.Authors.Commands.Requests;
 using LibraryTrackingApp.Application.Features.Authors.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+using LibraryTrackingApp.Domain.Entities;
 
 namespace LibraryTrackingApp.Application.Features.Authors.Commands.Handlers;
 
@@ -47,11 +48,10 @@ public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommandReq
                 BirthDate = request.BirthDate,
                 Biography = request.Biography,
                 IsDeleted = false,
-                DeletedDate = null,
-                CreatedBy = "test-user",//staff name olucak ilerde
-                LastModifiedBy = "test-user",//staff name olucak ilerde
-                LastModifiedDate = DateTime.Now,
-                CreatedDate = DateTime.Now,
+                CreatedById = Guid.NewGuid(),//staff id olucak ilerde
+                LastModifiedById = Guid.NewGuid(),//staff id olucak ilerde
+                LastModifiedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+                CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             };
 
             var bookDto = new AuthorDTO()
@@ -69,9 +69,9 @@ public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommandReq
             {
                 return new()
                 {
-                    StatusCode = 200,//201 yazarız ama bazı tarayıcılar 201'i destekleyemebilir.
+                    StatusCode = 201,
                     Success = true,
-                    StateMessages = new string[] { "Yazar başarıyla eklendi." }
+                    StateMessages = new string[] { "Yazar başarıyla oluşturuldu." }
                 };
             }
             else

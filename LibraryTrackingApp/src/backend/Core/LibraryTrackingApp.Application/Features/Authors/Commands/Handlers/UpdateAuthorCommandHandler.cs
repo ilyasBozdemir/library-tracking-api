@@ -1,6 +1,7 @@
 ﻿using LibraryTrackingApp.Application.Features.Authors.Commands.Requests;
 using LibraryTrackingApp.Application.Features.Authors.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+using LibraryTrackingApp.Domain.Entities;
 
 namespace LibraryTrackingApp.Application.Features.Authors.Commands.Handlers;
 
@@ -44,8 +45,10 @@ public class UpdateAuthorCommandHandler : IRequestHandler<UpdateAuthorCommandReq
                 existingAuthor.BirthDate = request.BirthDate;
                 existingAuthor.Country = request.Country;
                 existingAuthor.Biography = request.Biography;
-                existingAuthor.LastModifiedBy = "test-user";//staff name olucak ilerde
-                existingAuthor.LastModifiedDate = DateTime.Now;
+                existingAuthor.CreatedById = Guid.NewGuid();//staff id olucak ilerde
+                existingAuthor.LastModifiedById = Guid.NewGuid();//staff id olucak ilerde
+                existingAuthor.LastModifiedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now);
+                existingAuthor.CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now);
 
                 bool isUpdated = await writeRepository.UpdateAsync(existingAuthor);
 

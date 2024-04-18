@@ -44,7 +44,6 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
                 PageCount = request.PageCount,
                 //BookStatus = request.Status,
                 IsDeleted = false,
-                DeletedDate = null
             };
 
             var bookDto = new BookDTO()

@@ -1,18 +1,29 @@
 ﻿namespace LibraryTrackingApp.Application.DTOs;
 
-public record BaseAuditableDTO
+public record BaseAuditableDTO<TDTOIdType>
 {
-    public Guid Id { get; set; }
-    public Guid CreatedById { get; set; }
-    
-    public DateTime CreatedDate { get; set; }
-    public string LastModifiedBy { get; set; }
-    public DateTime? LastModifiedDate { get; set; }
+    public TDTOIdType Id { get; set; }
 
-    //CreatedDate ve LastModifiedDate bunlar unix timestamp olarka cevrilcektir.
-    protected BaseAuditableDTO()
+    public TDTOIdType CreatedById { get; set; }
+    public TDTOIdType? LastModifiedById { get; set; }
+    public TDTOIdType? IsDeletedById { get; set; }
+
+
+    public long CreatedDateUnix { get; set; }
+    public long? LastModifiedDateUnix { get; set; }
+    public long? DeletedDateUnix { get; set; }
+
+    public bool IsDeleted { get; set; } = false;
+
+    // DateTime'ı Unix zaman damgasına dönüştürme fonksiyonu
+    public static long ToUnixTimestamp(DateTime dateTime)
     {
-        CreatedDate = DateTime.Now;
-        LastModifiedDate = DateTime.Now;
+        return (long)dateTime.ToLocalTime().Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+    }
+
+    // Unix zaman damgasını DateTime'a dönüştürme fonksiyonu
+    public static DateTime FromUnixTimestamp(long unixTime)
+    {
+        return DateTimeOffset.FromUnixTimeSeconds(unixTime).UtcDateTime;
     }
 }

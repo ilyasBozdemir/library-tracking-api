@@ -11,25 +11,74 @@ import {
 import { FaBookOpen } from "react-icons/fa";
 
 export const sidebarItems = [
-  { title: "Ana Sayfa", icon: <FiHome />, href: "/admin", target: "_self" },
-  { title: "Kütüphane", icon: <BsBuilding />, href: "/admin/library", target: "_self" },
-  { title: "Yazarlar", icon: <BsPerson />, href: "/admin/author", target: "_self" },
+  {
+    title: "Ana Sayfa",
+    icon: <FiHome />,
+    href: "/admin",
+    target: "_self",
+  },
+  {
+    title: "Kütüphane",
+    icon: <BsBuilding />,
+    href: "/admin/library",
+    target: "_self",
+  },
+  {
+    title: "Yazarlar",
+    icon: <BsPerson />,
+    href: "/admin/author",
+    target: "_self",
+  },
   { title: "Kitaplar", icon: <BsBook />, href: "/admin/book", target: "_self" },
-  { title: "Türler", icon: <FaBookOpen />, href: "/admin/genre", target: "_self" },
-  { title: "Üyeler", icon: <BsPeople />, href: "/admin/member", target: "_self" },
-  { title: "Personel", icon: <BsPeopleFill />, href: "/admin/staff", target: "_self" },
+  {
+    title: "Türler",
+    icon: <FaBookOpen />,
+    href: "/admin/genre",
+    target: "_self",
+  },
+  {
+    title: "Üyeler",
+    icon: <BsPeople />,
+    href: "/admin/member",
+    target: "_self",
+  },
+  {
+    title: "Personel",
+    icon: <BsPeopleFill />,
+    href: "/admin/staff",
+    target: "_self",
+  },
   {
     title: "Ödünç Verilen Kitaplar",
     icon: <BsArrowLeftRight />,
     href: "/admin/borrow",
-    target: "_self"
+    target: "_self",
   },
-  { title: "Etiketler", icon: <BsTagFill />, href: "/admin/book-tag", target: "_self" },
-  { title: "Ayarlar", icon: <FiSettings />, href: "/admin/settings", target: "_self" },
-  { title: "Geliştirici Belgeleri", icon: <FiBook />, href: "/docs", target: "_blank" },
-  { title: "Çıkış Yap", icon: <FiLogOut />, href: "/admin/logout", target: "_self" },
+  {
+    title: "Etiketler",
+    icon: <BsTagFill />,
+    href: "/admin/book-tag",
+    target: "_self",
+  },
+  {
+    title: "Ayarlar",
+    icon: <FiSettings />,
+    href: "/admin/settings",
+    target: "_self",
+  },
+  {
+    title: "Geliştirici Belgeleri",
+    icon: <FiBook />,
+    href: "/docs",
+    target: "_blank",
+  },
+  {
+    title: "Çıkış Yap",
+    icon: <FiLogOut />,
+    href: "/admin/logout",
+    target: "_self",
+  },
 ];
-
 
 export const items = [
   {

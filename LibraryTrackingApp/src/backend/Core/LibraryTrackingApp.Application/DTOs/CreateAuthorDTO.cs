@@ -1,6 +1,6 @@
 ﻿namespace LibraryTrackingApp.Application.DTOs;
 
-public record CreateAuthorDTO : BaseAuditableDTO
+public record CreateAuthorDTO : BaseAuditableDTO<Guid>
 {
     public string Name { get; set; }
     public string Surname { get; set; }
