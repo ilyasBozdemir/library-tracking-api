@@ -1,6 +1,6 @@
 ﻿namespace LibraryTrackingApp.Application.DTOs;
 
-public record CreateBookDto : BaseAuditableDTO
+public record CreateBookDto : BaseAuditableDTO<Guid>
 {
     public Guid AuthorId { get; init; } // Yazar ID
     public Guid GenreId { get; init; } // Tür ID

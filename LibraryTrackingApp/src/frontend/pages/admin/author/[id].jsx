@@ -1,4 +1,4 @@
-import AuthorService from "@/services/authorService";
+import LibraryService from "@/services/authorService";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { Button, Box, Heading, Text, VStack } from "@chakra-ui/react";

@@ -39,8 +39,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            AuthorId = new Guid("bbece305-bd38-4f0c-ada3-88cb2c7a2120"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1")
+                            AuthorId = new Guid("de5951ec-1f7d-40d1-a2a8-58c84dedead9"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5")
                         });
                 });
 
@@ -61,13 +61,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            TagId = new Guid("448a537d-19e6-4bdd-bb65-811c897938dd"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1")
+                            TagId = new Guid("96466d58-4479-4936-8430-2fa4212d8971"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5")
                         },
                         new
                         {
-                            TagId = new Guid("d6cc5d98-489c-47dd-b46b-dd1352d683b4"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1")
+                            TagId = new Guid("dbfd4647-3a63-4da1-a636-050af9a96968"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5")
                         });
                 });
 
@@ -88,13 +88,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MemberId = new Guid("a607c64c-0f30-4e6b-8eed-a4c6bd76a029"),
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239")
+                            MemberId = new Guid("c82b02f4-bbdd-4643-b47d-0e8ba85c4ddf"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404")
                         },
                         new
                         {
-                            MemberId = new Guid("959a8619-7598-4687-ae4d-655e6512b87b"),
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239")
+                            MemberId = new Guid("3c0c4bff-5d46-48f9-94d5-d4142768cb08"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404")
                         });
                 });
 
@@ -133,29 +133,29 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6d7c1b6e-1083-4362-9cba-2010a049b606"),
-                            ConcurrencyStamp = "deda9ae4-9c2a-417b-b55f-cfc2d62b05cc",
+                            Id = new Guid("288621b1-cd9f-402d-88be-74cb8034a420"),
+                            ConcurrencyStamp = "c07e7168-08e7-438c-92ae-95ce65dddcd3",
                             Name = "system",
                             NormalizedName = "SYSTEM"
                         },
                         new
                         {
-                            Id = new Guid("7863bd73-f898-4fb9-91ab-d4426282a554"),
-                            ConcurrencyStamp = "6c5f4922-0ae2-4481-b04d-e8d8bc94b531",
+                            Id = new Guid("a62ce4f1-6ff3-4e7a-b3a8-616e3bb36513"),
+                            ConcurrencyStamp = "b82da569-9908-4385-8ace-b7523c793285",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("04f120d4-3a7c-4271-8222-ce3b4ca5c26c"),
-                            ConcurrencyStamp = "c942862b-a832-42ed-8dfa-03964c6be235",
+                            Id = new Guid("6556fa23-f1f2-47fc-b060-a8a55a735177"),
+                            ConcurrencyStamp = "fbaabb94-2370-4d6d-a104-eb0b60275f24",
                             Name = "Staff",
                             NormalizedName = "STAFF"
                         },
                         new
                         {
-                            Id = new Guid("a5362845-57e8-4a3a-9302-2e026a6d10e6"),
-                            ConcurrencyStamp = "5bd21315-b647-4339-a080-538689acd8c3",
+                            Id = new Guid("1f5f3e4a-7552-4e65-a08f-458449cce306"),
+                            ConcurrencyStamp = "6d066187-1eae-497b-b4d5-e8f3a83b7916",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         });
@@ -266,12 +266,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
+                            Id = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "126580a8-d1c7-41c8-8044-dea28117ca4e",
+                            ConcurrencyStamp = "187bf0e3-fac1-4c1d-b82a-3dd01798b858",
                             CreatedBy = "SYSTEM",
                             CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 551, DateTimeKind.Local).AddTicks(4019),
+                            CreatedDate = new DateTime(2024, 4, 18, 21, 29, 2, 240, DateTimeKind.Local).AddTicks(3084),
                             Email = "system@domain.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
@@ -280,7 +280,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             Name = "system",
                             NormalizedEmail = "SYSTEM@DOMAIN.COM",
                             NormalizedUserName = "SYSTEM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHYa/KZOyxZlYs6lzQNKNBANYU/S0EW2o9PDMQFk1/OMsJKdsPIFfaeRrc9vhpfwfw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEEg0eDfYtVOmj6aVrueOAydNg6hPgs7VrI4kMJOc6HEeqLDRcNCbELd4wofGGAtoYw==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             Surname = "system",
@@ -289,12 +289,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("078144a2-4c29-4922-bcd8-e87c73f3f046"),
+                            Id = new Guid("fcb68775-eb8a-4d96-b3bf-001997ed1f87"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "66ce6880-a217-4093-8f5b-d6b21614d326",
+                            ConcurrencyStamp = "875ef2b7-8ab4-46a9-aed8-973b683542e1",
                             CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 598, DateTimeKind.Local).AddTicks(7664),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDate = new DateTime(2024, 4, 18, 21, 29, 2, 287, DateTimeKind.Local).AddTicks(6102),
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
@@ -303,7 +303,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             Name = "admin",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEA2elnY3uH7LYbrwwPkT3x5teDKlYRcp/gfLc2iqbPLRHmDJeGeNZ9lBG6gN2VWQEw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOVaqRf75giQ3Ll6lgznXPPbi1dMzGOTAPPeq5zls0BLBPdJQJtI6OF5jktVQJc3lg==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             Surname = "admin",
@@ -312,12 +312,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("b029b03e-704c-4d07-8a2b-d417a4028cdf"),
+                            Id = new Guid("b34ea5da-b9e6-4a28-9bb4-545d7406cf55"),
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "7eb58d74-f102-4102-9fee-59be72fca4f9",
+                            ConcurrencyStamp = "53e9d7e3-9e76-47a7-be97-3940f2b4842e",
                             CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 642, DateTimeKind.Local).AddTicks(6200),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDate = new DateTime(2024, 4, 18, 21, 29, 2, 329, DateTimeKind.Local).AddTicks(6205),
                             Email = "employee1@example.com",
                             EmailConfirmed = true,
                             IsDeleted = false,
@@ -326,7 +326,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             Name = "admin",
                             NormalizedEmail = "EMPLOYEE2@EXAMPLE.COM",
                             NormalizedUserName = "EMPLOYEE2@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAELWsOO2Pn3076R6fAiKjDjTHC4FAZzTmQ4wO6L+Af5lFAKZnYejGjZ6XXwYlEjhDIg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ9UNt+aUtqiMa80O4RQ50mwYu94RXbGaJx5FEXv3ts0E+MBNQHFf/RTuDI0vGgTHQ==",
                             PhoneNumberConfirmed = false,
                             SecurityStamp = "",
                             Surname = "admin",
@@ -347,11 +347,20 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("Id")
                         .HasColumnType("uniqueidentifier");
@@ -359,12 +368,21 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("LastModifiedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.HasKey("RoleId", "ScopeId");
 
@@ -383,11 +401,20 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -396,12 +423,21 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("LastModifiedBy")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<DateTime?>("LastModifiedDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -430,27 +466,26 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -467,15 +502,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("bbece305-bd38-4f0c-ada3-88cb2c7a2120"),
+                            Id = new Guid("de5951ec-1f7d-40d1-a2a8-58c84dedead9"),
                             Biography = "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.",
                             BirthDate = new DateTime(1965, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Country = "United Kingdom",
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5810),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
                             Name = "J.K.",
                             Surname = "Rowling"
                         });
@@ -512,18 +547,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -539,14 +570,17 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("IsFeatured")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
@@ -584,29 +618,233 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1"),
-                            AuthorId = new Guid("bbece305-bd38-4f0c-ada3-88cb2c7a2120"),
+                            Id = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5"),
+                            AuthorId = new Guid("de5951ec-1f7d-40d1-a2a8-58c84dedead9"),
                             BookFormat = "PrintedBook",
                             BookLanguage = "English",
                             BookStatus = "Available",
                             BookStockBranchId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BorrowId = new Guid("00000000-0000-0000-0000-000000000000"),
                             CoverImageUrl = "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg",
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5857),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             Description = "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
-                            GenreId = new Guid("b9c23956-f78f-48c7-957d-95c613557a8c"),
+                            GenreId = new Guid("bf60b3e8-7e68-4c64-9c77-fdc74908643d"),
                             ISBN = "9781408855652",
                             IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFeatured = true,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OriginalPublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PageCount = 352,
                             PublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PublisherId = new Guid("ac07c154-e576-446c-b8ef-5c229b599672"),
+                            PublisherId = new Guid("54e898f1-26e3-47cb-b2bb-0ec5d1247b70"),
                             Title = "Harry Potter and the Philosopher's Stone"
+                        });
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookGenre", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("BookGenres", "lm");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("bf60b3e8-7e68-4c64-9c77-fdc74908643d"),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            IsActive = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            Name = "Fantasy"
+                        },
+                        new
+                        {
+                            Id = new Guid("cd91aa88-e6a3-47d8-a61e-ed245a2aadf3"),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            IsActive = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            Name = "Adventure"
+                        });
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookPublisher", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Address")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("PhoneNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Website")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
+
+                    b.HasIndex("Name");
+
+                    b.ToTable("BookPublishers", "lm");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("54e898f1-26e3-47cb-b2bb-0ec5d1247b70"),
+                            Address = "50 Bedford Square, London, England",
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            Email = "info@bloomsbury.com",
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            Name = "Bloomsbury Publishing",
+                            PhoneNumber = "+44 (0)20 7631 5600",
+                            Website = "https://www.bloomsbury.com/"
+                        });
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookReturn", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("BookStatus")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("BorrowId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<bool>("IsLate")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<int>("PenaltyDurationInDays")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("ReturnDate")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BorrowId")
+                        .IsUnique();
+
+                    b.HasIndex("ReturnDate");
+
+                    b.ToTable("BookReturns", "lm");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("8f2e4cb7-6d6a-41f5-b37d-a581bb1faa5c"),
+                            BookStatus = 4,
+                            BorrowId = new Guid("8e34963f-0a3b-47a5-9314-34b821ba79de"),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            IsLate = false,
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            PenaltyDurationInDays = -13,
+                            ReturnDate = new DateTime(2024, 4, 18, 21, 29, 2, 374, DateTimeKind.Local).AddTicks(7568)
                         });
                 });
 
@@ -619,27 +857,26 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<Guid>("BookId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("Quantity")
                         .HasColumnType("int");
@@ -653,18 +890,94 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("0abc4c63-2433-4cde-be5f-a681dedb3a8e"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6031),
+                            Id = new Guid("715074fb-7901-4eae-8c79-304d78da86c6"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5"),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
                             Quantity = 100
                         });
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Borrow", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookTag", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("Name");
+
+                    b.ToTable("Book_Tags", "lm");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("96466d58-4479-4936-8430-2fa4212d8971"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5"),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            Name = "Hogwarts"
+                        },
+                        new
+                        {
+                            Id = new Guid("dbfd4647-3a63-4da1-a636-050af9a96968"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5"),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            Name = "Harry Potter"
+                        },
+                        new
+                        {
+                            Id = new Guid("3cdd38f2-ba11-453d-83a1-f41b353f95d0"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5"),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            Name = "Quidditch"
+                        });
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BorrowBook", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -680,18 +993,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("DueDate")
                         .HasColumnType("datetime2");
@@ -702,11 +1011,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("LenderId")
                         .HasColumnType("uniqueidentifier");
@@ -726,24 +1038,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasIndex("MemberId");
 
-                    b.ToTable("Borrows", "lm");
+                    b.ToTable("BorrowBooks", "lm");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("681f340d-e6ac-498d-934b-a5cf1daa9fc9"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1"),
-                            BorrowDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6048),
+                            Id = new Guid("8e34963f-0a3b-47a5-9314-34b821ba79de"),
+                            BookId = new Guid("fd434411-cae1-4a69-855b-2e25dcdce5a5"),
+                            BorrowDate = new DateTime(2024, 4, 18, 21, 29, 2, 374, DateTimeKind.Local).AddTicks(7543),
                             BorrowStatus = "Borrowed",
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6086),
-                            DueDate = new DateTime(2024, 4, 30, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6049),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            DueDate = new DateTime(2024, 5, 2, 21, 29, 2, 374, DateTimeKind.Local).AddTicks(7544),
                             HasFee = false,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LenderId = new Guid("f586cc6e-ce94-4128-b000-08b2843d0901"),
-                            MemberId = new Guid("a607c64c-0f30-4e6b-8eed-a4c6bd76a029")
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LenderId = new Guid("b9373aaf-4c75-4d8b-aad6-aa834b115849"),
+                            MemberId = new Guid("c82b02f4-bbdd-4643-b47d-0e8ba85c4ddf")
                         });
                 });
 
@@ -756,30 +1068,29 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<TimeSpan>("ClosingTime")
                         .HasColumnType("time");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<int>("DayOfWeek")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
@@ -802,158 +1113,94 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a7c1a1fd-b9be-443a-a1c9-512a1b0510d3"),
+                            Id = new Guid("040d8537-a55b-499b-8e65-02a764903b45"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6005),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             DayOfWeek = 0,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("0939e9fb-1ace-4a3e-9a49-618284ad76f7"),
+                            Id = new Guid("83d48b86-ad88-4144-afe3-79ae7a102e45"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6008),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             DayOfWeek = 0,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("2a714dc5-f51b-4a43-90d8-d02a54f0c88e"),
+                            Id = new Guid("02f66609-1bbc-4880-94d0-6a27d0f391ee"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6013),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             DayOfWeek = 0,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("c774012e-9f14-426a-885e-0ffcd40c4e52"),
+                            Id = new Guid("31eb4c14-c71a-4cf2-a3d7-802e78d4de94"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6015),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             DayOfWeek = 0,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("001f9132-4774-4654-ade5-fb7a631ba56e"),
+                            Id = new Guid("87e50036-b4ec-4832-afa5-94ef434e2e76"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6023),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             DayOfWeek = 0,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("475035fa-cad6-4c04-8953-ba5f3b147ca7"),
+                            Id = new Guid("c0f62571-a6ed-4197-851a-48914522323d"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6025),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             DayOfWeek = 0,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("b2a80d72-6ce4-4eb1-a9d7-190c87a4c99b"),
+                            Id = new Guid("ecd95182-8bff-4953-8083-19a57a4c64b8"),
                             ClosingTime = new TimeSpan(0, 0, 0, 0, 0),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6027),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             DayOfWeek = 0,
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             OpeningTime = new TimeSpan(0, 0, 0, 0, 0)
-                        });
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Genre", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CreatedById")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsActive")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Genres", "lm");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("b9c23956-f78f-48c7-957d-95c613557a8c"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5815),
-                            IsActive = true,
-                            IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            Name = "Fantasy"
-                        },
-                        new
-                        {
-                            Id = new Guid("95406a70-b6ac-402d-9c1c-c9adfdac8e27"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5818),
-                            IsActive = true,
-                            IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            Name = "Adventure"
                         });
                 });
 
@@ -973,18 +1220,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<Guid>("BranchHourId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -993,11 +1236,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
@@ -1029,16 +1275,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            Id = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             Address = "123 Ana Cadde",
                             BookId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BranchHourId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             Description = "Bu bir örnek kütüphane şubesidir.",
                             IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
                             LibraryBranchId = new Guid("00000000-0000-0000-0000-000000000000"),
                             LibraryTransactionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             MemberId = new Guid("00000000-0000-0000-0000-000000000000"),
@@ -1054,18 +1300,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Details")
                         .IsRequired()
@@ -1074,11 +1316,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
@@ -1113,18 +1358,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<Guid>("BorrowId")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -1142,14 +1383,17 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("IsExtensionAllowed")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
@@ -1188,23 +1432,23 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a607c64c-0f30-4e6b-8eed-a4c6bd76a029"),
+                            Id = new Guid("c82b02f4-bbdd-4643-b47d-0e8ba85c4ddf"),
                             Address = "123 Main Street",
                             BirthDate = new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             BorrowId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5987),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             Email = "john.doe@example.com",
                             ExtensionDurationInDays = 7,
                             Gender = true,
                             HasPenalty = false,
                             IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = true,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             MaxLateReturnsAllowed = 3,
-                            MembershipDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5984),
+                            MembershipDate = new DateTime(2024, 4, 18, 21, 29, 2, 374, DateTimeKind.Local).AddTicks(7491),
                             Name = "John Doe",
                             NumberOfLateReturns = 0,
                             Occupation = "Software Engineer",
@@ -1213,171 +1457,28 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("959a8619-7598-4687-ae4d-655e6512b87b"),
+                            Id = new Guid("3c0c4bff-5d46-48f9-94d5-d4142768cb08"),
                             Address = "456 Oak Street",
                             BirthDate = new DateTime(1985, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             BorrowId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5992),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
                             Email = "jane.smith@example.com",
                             ExtensionDurationInDays = 0,
                             Gender = false,
                             HasPenalty = true,
                             IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = false,
-                            LastModifiedBy = "SYSTEM",
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             MaxLateReturnsAllowed = 3,
-                            MembershipDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5989),
+                            MembershipDate = new DateTime(2024, 4, 18, 21, 29, 2, 374, DateTimeKind.Local).AddTicks(7496),
                             Name = "Jane Smith",
                             NumberOfLateReturns = 2,
                             Occupation = "Teacher",
                             PenaltyDurationInDays = 7,
                             PhoneNumber = "+1987654321"
-                        });
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Publisher", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("Address")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CreatedById")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Email")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("PhoneNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Website")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Email")
-                        .IsUnique();
-
-                    b.HasIndex("Name");
-
-                    b.ToTable("Publishers", "lm");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("ac07c154-e576-446c-b8ef-5c229b599672"),
-                            Address = "50 Bedford Square, London, England",
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5835),
-                            Email = "info@bloomsbury.com",
-                            IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            Name = "Bloomsbury Publishing",
-                            PhoneNumber = "+44 (0)20 7631 5600",
-                            Website = "https://www.bloomsbury.com/"
-                        });
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Return", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("BookStatus")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("BorrowId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CreatedById")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsLate")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<int>("PenaltyDurationInDays")
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("ReturnDate")
-                        .HasColumnType("datetime2");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BorrowId")
-                        .IsUnique();
-
-                    b.HasIndex("ReturnDate");
-
-                    b.ToTable("Returns", "lm");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("c8547cf5-54ca-4a1d-b478-66a0ac642198"),
-                            BookStatus = 4,
-                            BorrowId = new Guid("681f340d-e6ac-498d-934b-a5cf1daa9fc9"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6102),
-                            IsDeleted = false,
-                            IsLate = false,
-                            LastModifiedBy = "SYSTEM",
-                            PenaltyDurationInDays = -13,
-                            ReturnDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6091)
                         });
                 });
 
@@ -1391,18 +1492,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
 
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<DateTime>("EmploymentDate")
                         .HasColumnType("datetime2");
@@ -1410,14 +1507,17 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<bool>("IsDeleted")
                         .HasColumnType("bit");
 
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<bool>("IsFullTime")
                         .HasColumnType("bit");
 
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
 
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
 
                     b.Property<Guid>("LibraryBranchId")
                         .HasColumnType("uniqueidentifier");
@@ -1446,95 +1546,19 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f586cc6e-ce94-4128-b000-08b2843d0901"),
+                            Id = new Guid("b9373aaf-4c75-4d8b-aad6-aa834b115849"),
                             Address = "Employee Address",
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6044),
-                            EmploymentDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(6035),
+                            CreatedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            CreatedDateUnix = 1713475742L,
+                            EmploymentDate = new DateTime(2024, 4, 18, 21, 29, 2, 374, DateTimeKind.Local).AddTicks(7531),
                             IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFullTime = true,
-                            LibraryBranchId = new Guid("c293bb24-9dcf-4101-8709-d7733c16a239"),
+                            LastModifiedById = new Guid("c5c04fd3-6fc0-43b2-8f2e-cd99a9484bf3"),
+                            LibraryBranchId = new Guid("dc6678ea-d746-40b4-b514-3bec6aaf9404"),
                             Phone = "+905553331122",
                             Salary = 3000.00m,
-                            UserId = new Guid("b029b03e-704c-4d07-8a2b-d417a4028cdf")
-                        });
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Tag", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("BookId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("CreatedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<Guid>("CreatedById")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("CreatedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<DateTime?>("DeletedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("LastModifiedBy")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime?>("LastModifiedDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(450)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("Name");
-
-                    b.ToTable("Tags", "lm");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = new Guid("448a537d-19e6-4bdd-bb65-811c897938dd"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5965),
-                            IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            Name = "Hogwarts"
-                        },
-                        new
-                        {
-                            Id = new Guid("d6cc5d98-489c-47dd-b46b-dd1352d683b4"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5968),
-                            IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            Name = "Harry Potter"
-                        },
-                        new
-                        {
-                            Id = new Guid("c042d48a-e9e4-4d42-be7d-c72f7df011b4"),
-                            BookId = new Guid("b4f0be02-303a-49ce-8dd8-dd312110edf1"),
-                            CreatedBy = "system",
-                            CreatedById = new Guid("6ce1ea24-8b2f-4a57-a2cc-a3059b0c7413"),
-                            CreatedDate = new DateTime(2024, 4, 16, 18, 53, 47, 682, DateTimeKind.Local).AddTicks(5971),
-                            IsDeleted = false,
-                            LastModifiedBy = "SYSTEM",
-                            Name = "Quidditch"
+                            UserId = new Guid("b34ea5da-b9e6-4a28-9bb4-545d7406cf55")
                         });
                 });
 
@@ -1659,13 +1683,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("078144a2-4c29-4922-bcd8-e87c73f3f046"),
-                            RoleId = new Guid("7863bd73-f898-4fb9-91ab-d4426282a554")
+                            UserId = new Guid("fcb68775-eb8a-4d96-b3bf-001997ed1f87"),
+                            RoleId = new Guid("a62ce4f1-6ff3-4e7a-b3a8-616e3bb36513")
                         },
                         new
                         {
-                            UserId = new Guid("b029b03e-704c-4d07-8a2b-d417a4028cdf"),
-                            RoleId = new Guid("04f120d4-3a7c-4271-8222-ce3b4ca5c26c")
+                            UserId = new Guid("b34ea5da-b9e6-4a28-9bb4-545d7406cf55"),
+                            RoleId = new Guid("6556fa23-f1f2-47fc-b060-a8a55a735177")
                         });
                 });
 
@@ -1692,7 +1716,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Tag", null)
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookTag", null)
                         .WithMany()
                         .HasForeignKey("TagId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1742,7 +1766,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Genre", "Genre")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookGenre", "Genre")
                         .WithMany("Books")
                         .HasForeignKey("GenreId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -1754,7 +1778,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Publisher", "Publisher")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookPublisher", "Publisher")
                         .WithMany("Books")
                         .HasForeignKey("PublisherId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -1765,6 +1789,17 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("LibraryBranch");
 
                     b.Navigation("Publisher");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookReturn", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BorrowBook", "Borrow")
+                        .WithOne("Return")
+                        .HasForeignKey("LibraryTrackingApp.Domain.Entities.Library.BookReturn", "BorrowId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Borrow");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookStock", b =>
@@ -1778,7 +1813,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("Book");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Borrow", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BorrowBook", b =>
                 {
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
                         .WithMany("Borrows")
@@ -1825,17 +1860,6 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("LibraryBranch");
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Return", b =>
-                {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Borrow", "Borrow")
-                        .WithOne("Return")
-                        .HasForeignKey("LibraryTrackingApp.Domain.Entities.Library.Return", "BorrowId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Borrow");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Staff", b =>
@@ -1933,15 +1957,20 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("Borrows");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Borrow", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookGenre", b =>
+                {
+                    b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookPublisher", b =>
+                {
+                    b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BorrowBook", b =>
                 {
                     b.Navigation("Return")
                         .IsRequired();
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Genre", b =>
-                {
-                    b.Navigation("Books");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.LibraryBranch", b =>
@@ -1958,11 +1987,6 @@ namespace LibraryTrackingApp.Persistence.Migrations
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Member", b =>
                 {
                     b.Navigation("Borrows");
-                });
-
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Publisher", b =>
-                {
-                    b.Navigation("Books");
                 });
 #pragma warning restore 612, 618
         }

@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
-public class TagConfiguration : IEntityTypeConfiguration<Tag>
+public class BookTagConfiguration : IEntityTypeConfiguration<BookTag>
 {
-    public void Configure(EntityTypeBuilder<Tag> builder)
+    public void Configure(EntityTypeBuilder<BookTag> builder)
     {
-        builder.ToTable(name: "Tags", schema: "lm");// LibraryManagement
+        builder.ToTable(name: "Book_Tags", schema: "lm");// LibraryManagement
 
         builder.HasKey(t => t.Id);
         builder.HasIndex(t => t.Name);

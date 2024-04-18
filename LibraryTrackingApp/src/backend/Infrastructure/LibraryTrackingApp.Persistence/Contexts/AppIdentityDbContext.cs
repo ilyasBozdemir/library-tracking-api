@@ -15,15 +15,15 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     public DbSet<Book> Books { get; set; }
     public DbSet<BookStock> BookStocks { get; set; }
     public DbSet<BranchHour> BranchHours { get; set; }
-    public DbSet<Genre> Genres { get; set; }
+    public DbSet<BookGenre> Genres { get; set; }
     public DbSet<LibraryBranch> LibraryBranches { get; set; }
     public DbSet<LibraryTransaction> LibraryTransactions { get; set; }
     public DbSet<Member> Members { get; set; }
-    public DbSet<Publisher> Publishers { get; set; }
+    public DbSet<BookPublisher> Publishers { get; set; }
     public DbSet<Staff> Staffs { get; set; }
-    public DbSet<Tag> Tags { get; set; }
-    public DbSet<Borrow> Borrows { get; set; }
-    public DbSet<Return> Returns { get; set; }
+    public DbSet<BookTag> Tags { get; set; }
+    public DbSet<BorrowBook> Borrows { get; set; }
+    public DbSet<BookReturn> Returns { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

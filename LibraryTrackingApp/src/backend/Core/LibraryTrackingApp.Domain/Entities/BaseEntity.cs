@@ -3,18 +3,33 @@
 public abstract class BaseEntity<TEntityIdType> : IEntity<TEntityIdType>
 {
     public TEntityIdType Id { get; set; }
-    TEntityIdType CreatedById { get; set; }
-    DateTime CreatedDate { get; set; }
-    string? LastModifiedBy { get; set; }
-    DateTime? LastModifiedDate { get; set; }
-    public bool IsDeleted { get; set; }
-    public DateTime? DeletedDate { get; set; }
 
-    //CreatedDate ve LastModifiedDate bunlar unix timestamp olarka cevrilcektir.
+    public TEntityIdType CreatedById { get; set; }
+    public TEntityIdType? LastModifiedById { get; set; }
+    public TEntityIdType? IsDeletedById { get; set; }
 
-    protected BaseEntity()
+
+    public long CreatedDateUnix { get; set; }
+    public long? LastModifiedDateUnix { get; set; }
+    public long? DeletedDateUnix { get; set; }
+
+
+    public bool IsDeleted { get; set; } = false; // testler tamamlanınca silindi gösterilcektir datalar.
+
+   
+}
+
+public  class BaseEntity
+{
+    // DateTime'ı Unix zaman damgasına dönüştürme fonksiyonu
+    public static long  ToUnixTimestamp(DateTime dateTime)
     {
-        CreatedDate = DateTime.Now;
-        IsDeleted = false;
+        return (long)dateTime.ToLocalTime().Subtract(new DateTime(1970, 1, 1)).TotalSeconds;
+    }
+
+    // Unix zaman damgasını DateTime'a dönüştürme fonksiyonu
+    public static DateTime FromUnixTimestamp(long unixTime)
+    {
+        return DateTimeOffset.FromUnixTimeSeconds(unixTime).UtcDateTime;
     }
 }

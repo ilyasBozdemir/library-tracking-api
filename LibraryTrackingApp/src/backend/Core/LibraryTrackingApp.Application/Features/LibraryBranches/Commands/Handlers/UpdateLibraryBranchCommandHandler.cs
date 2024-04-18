@@ -1,6 +1,7 @@
 ﻿using LibraryTrackingApp.Application.Features.LibraryBranches.Commands.Requests;
 using LibraryTrackingApp.Application.Features.LibraryBranches.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+using LibraryTrackingApp.Domain.Entities;
 
 namespace LibraryTrackingApp.Application.Features.LibraryBranches.Commands.Handlers;
 
@@ -53,9 +54,10 @@ public class UpdateLibraryBranchCommandHandler
                 existingLibraryBranch.Description = request.Description;
                 existingLibraryBranch.Address = request.Address;
                 existingLibraryBranch.PhoneNumber = request.PhoneNumber;
-                existingLibraryBranch.LastModifiedBy = "test-user"; //staff name olucak ilerde
-                existingLibraryBranch.LastModifiedDate = DateTime.Now;
+                existingLibraryBranch.LastModifiedById = Guid.NewGuid(); //staff name olucak ilerde hata almasın diye new guid
+                existingLibraryBranch.LastModifiedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now);
 
+             
                 bool isUpdated = await writeRepository.UpdateAsync(existingLibraryBranch);
 
                 if (isUpdated)

@@ -1,6 +1,7 @@
 ﻿using LibraryTrackingApp.Application.Features.LibraryBranches.Commands.Requests;
 using LibraryTrackingApp.Application.Features.LibraryBranches.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
+using LibraryTrackingApp.Domain.Entities;
 
 namespace LibraryTrackingApp.Application.Features.LibraryBranches.Commands.Handlers;
 
@@ -40,11 +41,9 @@ public class CreateLibraryBranchCommandHandler : IRequestHandler<CreateLibraryBr
                 Address = request.Address,
                 PhoneNumber = request.PhoneNumber,
                 IsDeleted = false,
-                DeletedDate = null,
-                CreatedBy = "test-user",//staff name olucak ilerde
-                LastModifiedBy = "test-user",//staff name olucak ilerde
-                LastModifiedDate = DateTime.Now,
-                CreatedDate = DateTime.Now,
+                CreatedById = Guid.NewGuid(), //staff name olucak ilerde hata almasın diye new guid,
+                CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+                LastModifiedById = Guid.NewGuid()
             };
 
             var libraryBranchDto = new LibraryBranchDTO()

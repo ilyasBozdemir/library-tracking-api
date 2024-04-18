@@ -48,24 +48,40 @@ function Sidebar({ isOpen, toggleSidebar }) {
         </Box>
       </Flex>
       <VStack spacing="4" align="stretch">
-        {sidebarItems.map((item, index) => (
+      {sidebarItems.map((item, index) => (
+        <Box key={index}>
           <SidebarItem
-            key={index}
             icon={item.icon}
             text={item.title}
             href={item.href}
             target={item.target}
             isActive={router.pathname === item.href}
           />
-        ))}
-      </VStack>
+          {sidebarItems.subItems && item.subItems.length > 0 && (
+            <VStack spacing="1" align="stretch" ml="4">
+              {item.subItems.map((subItem, subIndex) => (
+                <SidebarItem
+                  key={subIndex}
+                  icon={subItem.icon}
+                  text={subItem.title}
+                  href={subItem.href}
+                  target={subItem.target}
+                  isActive={router.pathname === subItem.href}
+                  isSubItem
+                />
+              ))}
+            </VStack>
+          )}
+        </Box>
+      ))}
+    </VStack>
     </Box>
   );
 }
 
+
 const SidebarItem = ({ icon, text, href, target, isActive }) => {
   const color = isActive ? "#1468de" : "gray.100";
-
   return (
     <Link href={href} target={target} passHref>
       <Button

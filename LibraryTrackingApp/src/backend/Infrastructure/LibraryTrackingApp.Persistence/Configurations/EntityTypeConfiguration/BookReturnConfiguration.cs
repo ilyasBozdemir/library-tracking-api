@@ -2,11 +2,11 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
-public class ReturnConfiguration : IEntityTypeConfiguration<Return>
+public class BookReturnConfiguration : IEntityTypeConfiguration<BookReturn>
 {
-    public void Configure(EntityTypeBuilder<Return> builder)
+    public void Configure(EntityTypeBuilder<BookReturn> builder)
     {
-        builder.ToTable(name: "Returns", schema: "lm");// LibraryManagement
+        builder.ToTable(name: "BookReturns", schema: "lm");// LibraryManagement
 
         builder.HasKey(r => r.Id);
         builder.HasIndex(r => r.BorrowId);
@@ -18,7 +18,7 @@ public class ReturnConfiguration : IEntityTypeConfiguration<Return>
         
         builder.HasOne(r => r.Borrow)
                .WithOne(l => l.Return) 
-               .HasForeignKey<Return>(r => r.BorrowId)
+               .HasForeignKey<BookReturn>(r => r.BorrowId)
                .IsRequired();
     }
 }

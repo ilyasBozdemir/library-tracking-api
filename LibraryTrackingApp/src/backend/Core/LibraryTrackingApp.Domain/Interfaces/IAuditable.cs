@@ -2,9 +2,12 @@
 
 public interface IAuditable<TEntityIdType>
 {
-    TEntityIdType CreatedById { get; set; }
-    string CreatedBy { get; set; }
-    DateTime CreatedDate { get; set; }
-    string? LastModifiedBy { get; set; }
-    DateTime? LastModifiedDate { get; set; }
+    public TEntityIdType CreatedById { get; set; }
+    public TEntityIdType? LastModifiedById { get; set; }
+    public TEntityIdType? IsDeletedById { get; set; }
+
+
+    public long CreatedDateUnix { get; set; }
+    public long? LastModifiedDateUnix { get; set; }
+    public long? DeletedDateUnix { get; set; }
 }

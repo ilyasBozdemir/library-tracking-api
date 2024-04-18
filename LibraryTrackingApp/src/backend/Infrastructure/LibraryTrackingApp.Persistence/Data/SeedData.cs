@@ -108,31 +108,28 @@ public static class SeedData
             Biography =
                 "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.",
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id,
         };
 
-        var fantasyGenre = new Genre
+        var fantasyGenre = new BookGenre
         {
             Id = Guid.NewGuid(),
             Name = "Fantasy",
             IsActive = true,
             CreatedById = systemUser.Id,
-            CreatedDate = DateTime.Now,
-            CreatedBy = systemUser.Name,
-            LastModifiedBy = systemUser.LastModifiedBy,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
-        var adventureGenre = new Genre
+        var adventureGenre = new BookGenre
         {
             Id = Guid.NewGuid(),
             Name = "Adventure",
             IsActive = true,
             CreatedById = systemUser.Id,
-            CreatedDate = DateTime.Now,
-            CreatedBy = systemUser.Name,
-            LastModifiedBy = systemUser.LastModifiedBy,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var mainBranchId = Guid.NewGuid();
@@ -144,12 +141,12 @@ public static class SeedData
             Address = "123 Ana Cadde",
             PhoneNumber = "123-456-7890",
             Description = "Bu bir örnek kütüphane şubesidir.",
-            CreatedBy = systemUser.Name,
             CreatedById = systemUser.Id,
-            LastModifiedBy = systemUser.LastModifiedBy,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
-        var bloomsburyPublishingPublisher = new Publisher
+        var bloomsburyPublishingPublisher = new BookPublisher
         {
             Id = Guid.NewGuid(),
             Name = "Bloomsbury Publishing",
@@ -158,9 +155,8 @@ public static class SeedData
             PhoneNumber = "+44 (0)20 7631 5600",
             Email = "info@bloomsbury.com",
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var harryPotterBook = new Book
@@ -183,9 +179,8 @@ public static class SeedData
             BookLanguage = BookLanguage.English,
             IsFeatured = true,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var bookAuthor = new Dictionary<string, object>
@@ -194,37 +189,34 @@ public static class SeedData
             { "AuthorId", jKRowlingAuthor.Id }
         };
 
-        var harryPotterTag1 = new Tag
+        var harryPotterTag1 = new BookTag
         {
             Id = Guid.NewGuid(),
             Name = "Hogwarts",
             BookId = harryPotterBook.Id,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
-        var harryPotterTag2 = new Tag
+        var harryPotterTag2 = new BookTag
         {
             Id = Guid.NewGuid(),
             Name = "Harry Potter",
             BookId = harryPotterBook.Id,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
-        var harryPotterTag3 = new Tag
+        var harryPotterTag3 = new BookTag
         {
             Id = Guid.NewGuid(),
             Name = "Quidditch",
             BookId = harryPotterBook.Id,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var bookTag1 = new Dictionary<string, object>
@@ -258,10 +250,8 @@ public static class SeedData
             ExtensionDurationInDays = 7,
             LibraryBranchId = mainBranchId,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy,
-            LastModifiedDate = null
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var member2 = new Member
@@ -283,10 +273,8 @@ public static class SeedData
             IsExtensionAllowed = false,
             ExtensionDurationInDays = 0,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy,
-            LastModifiedDate = null
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var memberLibraryBranch = new Dictionary<string, object>
@@ -308,9 +296,8 @@ public static class SeedData
             OpeningTime = new TimeSpan(8, 0, 0),
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var tuesdaybranchHour = new BranchHour
@@ -320,9 +307,8 @@ public static class SeedData
             OpeningTime = new TimeSpan(8, 0, 0),
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var wednesdaybranchHour = new BranchHour
@@ -332,9 +318,8 @@ public static class SeedData
             OpeningTime = new TimeSpan(8, 0, 0),
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var thursdaybranchHour = new BranchHour
@@ -344,9 +329,8 @@ public static class SeedData
             OpeningTime = new TimeSpan(8, 0, 0),
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var fridaybranchHour = new BranchHour
@@ -356,9 +340,8 @@ public static class SeedData
             OpeningTime = new TimeSpan(8, 0, 0),
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var saturdaybranchHour = new BranchHour
@@ -368,9 +351,8 @@ public static class SeedData
             OpeningTime = new TimeSpan(8, 0, 0),
             ClosingTime = new TimeSpan(17, 30, 0),
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var sundaybranchHour = new BranchHour
@@ -380,9 +362,8 @@ public static class SeedData
             OpeningTime = new TimeSpan(0, 0, 0),
             ClosingTime = new TimeSpan(0, 0, 0),
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var bookStock = new BookStock
@@ -391,9 +372,8 @@ public static class SeedData
             BookId = harryPotterBook.Id, 
             Quantity = 100,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
         var staff = new Staff
@@ -406,12 +386,12 @@ public static class SeedData
             Salary = 3000.00m,
             IsFullTime = true,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LibraryBranchId = mainBranchId
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id,
+            LibraryBranchId = mainBranch.Id
         };
 
-        var borrow = new Borrow
+        var borrow = new BorrowBook
         {
             Id = Guid.NewGuid(),
             MemberId = member1.Id,
@@ -421,12 +401,11 @@ public static class SeedData
             DueDate = DateTime.Now.AddDays(14),
             BorrowStatus = BorrowStatus.Borrowed,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
-        var @return = new Return() 
+        var @return = new BookReturn() 
         {
             Id = Guid.NewGuid(),
             BorrowId = borrow.Id, 
@@ -435,9 +414,8 @@ public static class SeedData
             BookStatus = BookStatus.Available,
             PenaltyDurationInDays = (DateTime.Now - borrow.DueDate).Days,
             CreatedById = systemUser.Id,
-            CreatedBy = systemUser.Name,
-            CreatedDate = DateTime.Now,
-            LastModifiedBy = systemUser.LastModifiedBy
+            CreatedDateUnix =  BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
         };
 
 
@@ -446,17 +424,17 @@ public static class SeedData
         SeedEntities<AppUser>(modelBuilder, systemUser, adminUser, staffUser);
         SeedEntities<AppUserRole>(modelBuilder, appUserRole, appUserRole2);
         SeedEntities<Author>(modelBuilder, jKRowlingAuthor);
-        SeedEntities<Genre>(modelBuilder, fantasyGenre, adventureGenre);
+        SeedEntities<BookGenre>(modelBuilder, fantasyGenre, adventureGenre);
         SeedEntities<LibraryBranch>(modelBuilder, mainBranch);
         SeedEntities<BranchHour>(modelBuilder, mondaybranchHour, tuesdaybranchHour, wednesdaybranchHour, thursdaybranchHour, fridaybranchHour, saturdaybranchHour, sundaybranchHour);
-        SeedEntities<Publisher>(modelBuilder, bloomsburyPublishingPublisher);
+        SeedEntities<BookPublisher>(modelBuilder, bloomsburyPublishingPublisher);
         SeedEntities<Book>(modelBuilder, harryPotterBook);
-        SeedEntities<Tag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
+        SeedEntities<BookTag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
         SeedEntities<Member>(modelBuilder, member1, member2);
-        SeedEntities<Borrow>(modelBuilder, borrow);
+        SeedEntities<BorrowBook>(modelBuilder, borrow);
         SeedEntities<Staff>(modelBuilder, staff);
         SeedEntities<BookStock>(modelBuilder, bookStock);
-        SeedEntities<Return>(modelBuilder, @return);
+        SeedEntities<BookReturn>(modelBuilder, @return);
 
 
         modelBuilder.Entity("BookTags").HasData(bookTag1, bookTag2);
