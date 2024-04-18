@@ -81,5 +81,3 @@ Onion Architecture, içten dışa doğru bir bağımlılık düzenlemesi sağlar
 - Uygulama performansını artırabilir ve karmaşık iş akışlarını daha iyi yönetebilir.
 
 CQRS, özellikle büyük ve karmaşık uygulamalarda işe yarar ve veri okuma ve yazma işlemlerini daha iyi ölçeklendirmenize yardımcı olabilir.
-
-Bu tasarım kalıpları, yazılım projelerinizi daha düzenli ve bakımı kolay hale getirerek geliştirme sürecinizi iyileştirebilir. İhtiyacınıza bağlı olarak, bu kalıpları projenizde kullanmayı düşünebilirsiniz.
