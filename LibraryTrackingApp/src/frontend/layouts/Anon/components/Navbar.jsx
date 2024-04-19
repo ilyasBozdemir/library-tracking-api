@@ -30,8 +30,7 @@ export default function Navbar() {
       <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
         <Text fontWeight={"semibold"}>LOGO</Text>
 
-        <HStack spacing={8} alignItems="center">
-          <HStack
+        <HStack
             as="nav"
             spacing={6}
             display={{ base: "none", md: "flex" }}
@@ -41,14 +40,12 @@ export default function Navbar() {
               <NavLink key={index} {...link} onClose={onClose} />
             ))}
           </HStack>
-        </HStack>
-
         <Flex
           gap={3}
           textAlign="center"
           display={{ base: "none", md: "inherit" }}
         >
-             <ThemeSwitcher />
+          <ThemeSwitcher />
 
           <Link href="/register" passHref target="_blank">
             <Button colorScheme="white" variant="outline">
