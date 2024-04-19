@@ -41,9 +41,11 @@ public static class SeedData
 
         var hasher = new PasswordHasher<AppUser>();
 
+        var systemUserId = Guid.NewGuid();
+
         var systemUser = new AppUser
         {
-            Id = Guid.NewGuid(),
+            Id = systemUserId,
             UserName = "system",
             NormalizedUserName = "SYSTEM",
             Name = "system",
@@ -54,8 +56,8 @@ public static class SeedData
             PasswordHash = hasher.HashPassword(null, "SYSTEM@DOMAIN.COM"),
             SecurityStamp = string.Empty,
             ConcurrencyStamp = Guid.NewGuid().ToString(),
-            CreatedBy = "SYSTEM",
-            LastModifiedBy = "SYSTEM",
+            CreatedById = Guid.Empty,
+            LastModifiedById = Guid.Empty,
         };
 
         var adminUser = new AppUser
@@ -68,12 +70,11 @@ public static class SeedData
             Name = "admin",
             Surname = "admin",
             EmailConfirmed = true,
-            PasswordHash = hasher.HashPassword(null, "YourPassword"),
+            PasswordHash = hasher.HashPassword(null, "ADMIN@EXAMPLE.COM"),
             SecurityStamp = string.Empty,
             ConcurrencyStamp = Guid.NewGuid().ToString(),
-            CreatedBy = systemUser.Name,
-            CreatedById = systemUser.Id,
-            LastModifiedBy = systemUser.LastModifiedBy,
+            CreatedById = systemUserId,
+            LastModifiedById = systemUserId,
         };
 
         var staffUser = new AppUser
@@ -86,12 +87,11 @@ public static class SeedData
             Name = "admin",
             Surname = "admin",
             EmailConfirmed = true,
-            PasswordHash = hasher.HashPassword(null, "YourPassword2"),
+            PasswordHash = hasher.HashPassword(null, "EMPLOYEE2@EXAMPLE.COM"),
             SecurityStamp = string.Empty,
             ConcurrencyStamp = Guid.NewGuid().ToString(),
-            CreatedBy = systemUser.Name,
-            CreatedById = systemUser.Id,
-            LastModifiedBy = systemUser.LastModifiedBy,
+            CreatedById = systemUserId,
+            LastModifiedById = systemUserId,
         };
 
         var appUserRole = new AppUserRole() { UserId = adminUser.Id, RoleId = adminRole.Id };
@@ -240,8 +240,9 @@ public static class SeedData
             PhoneNumber = "+1234567890",
             MembershipDate = DateTime.Now,
             BirthDate = new DateTime(1990, 5, 15),
-            Gender = true,
+            Gender = Gender.Male,
             Occupation = "Software Engineer",
+            MemberType= MemberType.Adult,
             NumberOfLateReturns = 0,
             MaxLateReturnsAllowed = 3,
             HasPenalty = false,
@@ -263,8 +264,9 @@ public static class SeedData
             PhoneNumber = "+1987654321",
             MembershipDate = DateTime.Now,
             BirthDate = new DateTime(1985, 8, 20),
-            Gender = false,
+            Gender = Gender.Female,
             LibraryBranchId = mainBranchId,
+            MemberType = MemberType.Teacher,
             Occupation = "Teacher",
             NumberOfLateReturns = 2,
             MaxLateReturnsAllowed = 3,

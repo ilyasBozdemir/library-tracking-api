@@ -1,5 +1,7 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
+using LibraryTrackingApp.Domain.Enums;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
+using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
@@ -25,6 +27,16 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
         builder.Property(m => m.PenaltyDurationInDays).IsRequired();
         builder.Property(m => m.IsExtensionAllowed).IsRequired(); 
         builder.Property(m => m.ExtensionDurationInDays).IsRequired();
+
+
+        builder
+            .Property(m => m.MemberType)
+            .HasConversion(new EnumToStringConverter<MemberType>());
+
+
+        builder
+            .Property(m => m.Gender)
+            .HasConversion(new EnumToStringConverter<Gender>());
 
     }
 }

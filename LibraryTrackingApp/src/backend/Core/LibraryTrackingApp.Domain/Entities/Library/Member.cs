@@ -8,8 +8,10 @@ public class Member : BaseEntity<Guid>, IAuditable<Guid>
     public string PhoneNumber { get; set; } // telefon numarası
     public DateTime MembershipDate { get; set; } // Üyelik Tarihi
     public DateTime BirthDate { get; set; } // doğum tarihi
-    public bool Gender { get; set; } // cinsiyet
+    public Gender Gender { get; set; } 
     public string Occupation { get; set; } //Meslek
+    public MemberType MemberType { get; set; } //Meslek
+    
     public int NumberOfLateReturns { get; set; } // Geciken iade sayısı
     public int MaxLateReturnsAllowed { get; set; } // Maksimum geciken iade sayısı izni
     public bool HasPenalty { get; set; } // Ceza durumu

@@ -1,5 +1,6 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
 using LibraryTrackingApp.Domain.Enums;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -18,6 +19,13 @@ public class BorrowBookConfiguration : IEntityTypeConfiguration<BorrowBook>
         builder.HasIndex(b => b.BookId);
         builder.HasIndex(b => b.BorrowDate);
         builder.HasIndex(b => b.DueDate);
+
+
+        builder.Property(b => b.HasFee)
+            .HasColumnType("bit");
+
+        builder.Property(b => b.FeeAmount)
+            .HasColumnType("decimal(18,2)");
 
 
         builder

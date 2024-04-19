@@ -24,6 +24,6 @@ public record BaseAuditableDTO<TDTOIdType>
     // Unix zaman damgasını DateTime'a dönüştürme fonksiyonu
     public static DateTime FromUnixTimestamp(long unixTime)
     {
-        return DateTimeOffset.FromUnixTimeSeconds(unixTime).UtcDateTime;
+        return DateTimeOffset.FromUnixTimeSeconds(unixTime).LocalDateTime;
     }
 }

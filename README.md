@@ -37,19 +37,20 @@ Uygulama aşağıdaki entiteleri içermektedir:
 
 ## Ekran Görüntüleri
 
+- Landing Sayfası
+  ![Dashboard](screenshots/landing-page.png)
+
 - Dashboard
-- 
-  ![Dashboard](screenshots/dashboard.png)
+- ![Dashboard](screenshots/dashboard.png)
 
 - Yazar Sayfası
   ![Dashboard](screenshots/author-page.png)
 
 - daha eklenecektir güncellendikçe
 
-
 # Proje Kurulumu
-Projenin yerel ortamınıza nasıl kurulacağına dair adımları bu bölümde açıklayabilirsiniz.
 
+Projenin yerel ortamınıza nasıl kurulacağına dair adımları bu bölümde açıklayabilirsiniz.
 
 ## Kullanılan Teknolojiler
 
@@ -149,7 +150,6 @@ dotnet restore
 
 5. Admin sayfası için http://localhost:3000/admin/ sayfasını acın.
 
-
 ## Proje Özellikleri
 
 Proje, çeşitli mimari ve tasarım desenlerini kullanarak geliştirilmiş ve bir dizi kütüphane ve araçtan faydalanmaktadır.
@@ -171,8 +171,9 @@ Proje, çeşitli mimari ve tasarım desenlerini kullanarak geliştirilmiş ve bi
 - **Chakra UI**: React bileşenleri için bir UI kütüphanesidir.
 - **Tailwind CSS**: Hızlı ve esnek CSS framework'üdür.
 - **Redoc Library**: Swagger JSON'dan beslenen API dokümantasyonu için bir kütüphanedir. Bu kütüphane, API'nin belgelendirilmesi için kullanıcı dostu bir arayüz sağlar.
-  
+
 ### Testler
+
 - SpecFlow: Yazılım davranışlarını anlamak ve doğrulamak için kullanılan bir BDD (Behaviour Driven Development) aracıdır.
 - Selenium: Web uygulamalarını otomatik olarak test etmek için kullanılan bir araçtır.
 - TDD ve BDD Yaklaşımları: Yazılım geliştirme sürecinde Test Driven Development (TDD) ve Behaviour Driven Development (BDD) yaklaşımları kullanılmıştır. Bu yaklaşımlar, yazılımın testlerini öncelikle yazarak ve testlerin başarılı olması için kod geliştirerek yazılımın kalitesini artırmayı hedefler.
