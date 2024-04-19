@@ -2,6 +2,7 @@
 
 using System;
 
+
 public class BookPublisher : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; } // Yayınevi ID'si

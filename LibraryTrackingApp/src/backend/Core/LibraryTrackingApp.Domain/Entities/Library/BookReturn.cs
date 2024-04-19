@@ -1,5 +1,11 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
+/*   
+       public DateTime ReturnDate { get; set; }
+
+   
+   unix seconds olarak saklanacaktır sonra ki güncellemede.
+ */
 public class BookReturn : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid BorrowId { get; set; }

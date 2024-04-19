@@ -1,6 +1,10 @@
-﻿using LibraryTrackingApp.Domain.Interfaces;
+﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
-namespace LibraryTrackingApp.Domain.Entities.Library;
+/*   
+    public DateTime BirthDate { get; set; }
+   
+   unix seconds olarak saklanacaktır sonra ki güncellemede.
+ */
 
 public class Author : BaseEntity<Guid>, IAuditable<Guid>
 {
