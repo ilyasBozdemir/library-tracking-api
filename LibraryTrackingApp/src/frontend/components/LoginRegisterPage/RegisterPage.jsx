@@ -7,6 +7,9 @@ import {
   Input,
   Button,
   FormErrorMessage,
+  HStack,
+  Stack,
+  Flex,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 
@@ -16,7 +19,7 @@ const RegisterPage = () => {
       firstName: "admin",
       lastName: "admin",
       email: "employee1@example.com",
-      phone: "+905553337788",
+      phone: "5553334455",
       password: "YourPassword2",
     },
     validationSchema: Yup.object({
@@ -44,35 +47,37 @@ const RegisterPage = () => {
         description="Kütüphane uygulamasına kayıt olun. Emanet kitaplarınızı yönetmeye başlayın ve favori kitaplarınızı ekleyin."
       />
       <form onSubmit={formik.handleSubmit}>
-        <FormControl
-          id="firstName"
-          isInvalid={formik.touched.firstName && formik.errors.firstName}
-        >
-          <FormLabel>Ad</FormLabel>
-          <Input
-            type="text"
-            name="firstName"
-            value={formik.values.firstName}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
-        </FormControl>
-        <FormControl
-          id="lastName"
-          mt={4}
-          isInvalid={formik.touched.lastName && formik.errors.lastName}
-        >
-          <FormLabel>Soyad</FormLabel>
-          <Input
-            type="text"
-            name="lastName"
-            value={formik.values.lastName}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          <FormErrorMessage>{formik.errors.lastName}</FormErrorMessage>
-        </FormControl>
+        <Flex direction="row" align="center" gap={2}>
+          <FormControl
+            id="firstName"
+            isInvalid={formik.touched.firstName && formik.errors.firstName}
+          >
+            <FormLabel>Ad</FormLabel>
+            <Input
+              type="text"
+              name="firstName"
+              value={formik.values.firstName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            <FormErrorMessage>{formik.errors.firstName}</FormErrorMessage>
+          </FormControl>
+          <FormControl
+            id="lastName"
+            isInvalid={formik.touched.lastName && formik.errors.lastName}
+          >
+            <FormLabel>Soyad</FormLabel>
+            <Input
+              type="text"
+              name="lastName"
+              value={formik.values.lastName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            <FormErrorMessage>{formik.errors.lastName}</FormErrorMessage>
+          </FormControl>
+        </Flex>
+
         <FormControl
           id="email"
           mt={4}
@@ -118,7 +123,7 @@ const RegisterPage = () => {
           />
           <FormErrorMessage>{formik.errors.password}</FormErrorMessage>
         </FormControl>
-        <Button type="submit" colorScheme="blue" mt={4}>
+        <Button type="submit" colorScheme="teal" w={"full"} mt={4}>
           Kayıt Ol
         </Button>
       </form>

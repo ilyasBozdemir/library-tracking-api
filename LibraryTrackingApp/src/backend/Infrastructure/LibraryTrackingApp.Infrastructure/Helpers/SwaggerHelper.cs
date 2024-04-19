@@ -140,7 +140,7 @@ public static class SwaggerHelper
             {
                 c.SwaggerEndpoint(
                     string.Format(AppConstant.swaggerUrlTemplate, apiVersionInfo.Version),
-                    $"{apiVersionInfo.OpenApiInfo.Title}"
+                    $"{apiVersionInfo.OpenApiInfo.Title} {apiVersionInfo.OpenApiInfo.Version}"
                 );
             }
         });

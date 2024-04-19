@@ -45,6 +45,7 @@ const LoginRegisterPage = () => {
         onChange={handleTabChange}
         defaultIndex={activeTab}
         index={activeTab}
+        colorScheme={'teal'}
       >
         <TabList>
           <Tab onClick={() => handleTabChange(0)}>Giriş Yap</Tab>

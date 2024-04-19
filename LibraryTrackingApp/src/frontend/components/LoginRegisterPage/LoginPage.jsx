@@ -41,7 +41,7 @@ const LoginPage = () => {
         <Input type="password" name="password" value={formik.values.password} onChange={formik.handleChange} onBlur={formik.handleBlur} />
         <FormErrorMessage>{formik.errors.password}</FormErrorMessage>
       </FormControl>
-      <Button type="submit" colorScheme="blue" mt={4}>Giriş Yap</Button>
+      <Button type="submit" colorScheme="teal" w={'full'} mt={4}>Giriş Yap</Button>
     </form>
   </>
   );

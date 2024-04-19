@@ -1,10 +1,12 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
-const UserLayout = dynamic(() => import("@/layouts/UserLayout"));
-const AdminLayout = dynamic(() => import("@/layouts/AdminLayout"));
-const ErrorLayout = dynamic(() => import("@/layouts/ErrorLayout"));
-const EmptyLayout = dynamic(() => import("@/layouts/EmptyLayout"));
+const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
+const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
+const ErrorLayout = dynamic(() => import("@/layouts/Error/layout"));
+const PlaceholderLayout = dynamic(() =>
+  import("@/layouts/PlaceholderLayout/layout")
+);
 
 import theme from "../src/theme";
 import "../styles/globals.css";
@@ -12,23 +14,22 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+
 function MyApp({ Component, pageProps, session, statusCode }) {
-  const data = {};
-  let Layout;
   const router = useRouter();
-  if (router.pathname === "/") {
-    Layout = UserLayout;
-  } else if (router.pathname.startsWith("/admin")) {
-    Layout = AdminLayout;
-  } else if (router.pathname === "/login" || "/register" || "/docs") {
-    Layout = EmptyLayout;
-  }
-  else if (router.pathname === "/api-docs") {
-    Layout = EmptyLayout;
-  }
-  else {
-    Layout = UserLayout;
-  }
+  
+  const routeLayoutMap = {
+    "/": AnonLayout,
+    "/admin": AdminLayout,
+    "/login": PlaceholderLayout,
+    "/register": PlaceholderLayout,
+    "/docs": PlaceholderLayout,
+    "/api-docs": PlaceholderLayout,
+  };
+
+  let Layout = [401, 403, 404, 500, 501].includes(statusCode)
+    ? ErrorLayout
+    : routeLayoutMap[router.pathname] || AnonLayout;
 
   useEffect(() => {
     AOS.init({
