@@ -50,8 +50,6 @@ Uygulama aşağıdaki entiteleri içermektedir:
 
 # Proje Kurulumu
 
-Projenin yerel ortamınıza nasıl kurulacağına dair adımları bu bölümde açıklayabilirsiniz.
-
 ## Kullanılan Teknolojiler
 
 ### Frontend
