@@ -49,18 +49,6 @@ const LandingPage = () => {
         </Text>
         <Text fontSize="md">- Kullanıcı dostu arayüz</Text>
       </Box>
-      <Box textAlign="center">
-        <Link href="/login" passHref target="_blank">
-          <Button colorScheme="teal" mr={4}>
-            Giriş Yap
-          </Button>
-        </Link>
-        <Link href="/register" passHref target="_blank">
-          <Button colorScheme="white" variant="outline">
-            Kayıt Ol
-          </Button>
-        </Link>
-      </Box>
     </Flex>
   );
 };

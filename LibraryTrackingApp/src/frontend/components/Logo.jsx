@@ -1,7 +1,6 @@
-import { Box, useColorMode } from "@chakra-ui/react";
+import { Box, Icon, useColorMode } from "@chakra-ui/react";
 import Link from "next/link";
 import React from "react";
-import LogoSVG from "./LogoSVG";
 
 function Logo({ from = "header" }) {
   const { colorMode } = useColorMode();
@@ -24,5 +23,26 @@ function Logo({ from = "header" }) {
     </>
   );
 }
+
+const LogoSVG = ({ svgColor, width, height }) => {
+  return (
+    <Icon
+      viewBox={`0 0 ${width} ${height}`}
+      fill={svgColor}
+      width={width}
+      height={height}
+    >
+      <rect
+        width="100%"
+        height="100%"
+        fill={svgColor}
+      />
+
+    </Icon>
+  );
+}
+
+
+
 
 export default Logo;

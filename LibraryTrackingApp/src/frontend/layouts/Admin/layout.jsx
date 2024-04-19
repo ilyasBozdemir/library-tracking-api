@@ -2,10 +2,10 @@ import { Box, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import React, { useState } from "react";
 
-import Navbar from "../components/Admin/Navbar";
-import Sidebar from "../components/Admin/Sidebar";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
 
-function AdminLayout({ children }) {
+function Layout({ children }) {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -40,4 +40,4 @@ function AdminLayout({ children }) {
   );
 }
 
-export default AdminLayout;
+export default Layout

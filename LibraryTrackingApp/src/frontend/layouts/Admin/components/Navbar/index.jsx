@@ -15,8 +15,8 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import ThemeSwitcher from ".././../ThemeSwitcher";
-import LanguageSwitcher from ".././../LanguageSwitcher";
+import ThemeSwitcher from "../../../../components/ThemeSwitcher";
+import LanguageSwitcher from "../../../../components/LanguageSwitcher";
 
 import { FiMinimize, FiMaximize } from "react-icons/fi";
 import { HiMenuAlt2 } from "react-icons/hi";
