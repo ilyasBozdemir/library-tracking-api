@@ -14,6 +14,7 @@ import {
 // Here we have used react-icons package for the icons
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 const navLinks = [
   { name: "Hakkımızda", path: "#" },
@@ -43,6 +44,7 @@ export default function Navbar() {
         </HStack>
 
         <Flex gap={3} textAlign="center">
+          <ThemeSwitcher />
           <Link href="/register" passHref target="_blank">
             <Button colorScheme="white" variant="outline">
               Kayıt Ol
