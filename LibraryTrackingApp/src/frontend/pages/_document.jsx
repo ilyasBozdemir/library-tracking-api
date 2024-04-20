@@ -1,32 +1,22 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import theme from "../src/theme";
-import { colors } from "../src/foundations/colors";
-import { ColorModeScript } from "@chakra-ui/react";
+import { colors, darkTheme, lightTheme } from "../src/foundations/colors";
+import { ColorModeScript, colorMode, extendTheme } from "@chakra-ui/react";
 import GoogleTagManagerBody from "../plugins/GoogleTagManagerBody";
 import ExternalFonts from "../fonts/ExternalFonts";
 import React from "react";
 
 import { site } from "../constants/site";
 
-const themeColor = colors.primary[100];
-
-/*
-function AnalyticsIsVisible() {
-  const [isAnalyticsVisible, setIsAnalyticsVisible] = React.useState(false);
-
-  React.useEffect(() => {
-    setIsAnalyticsVisible(
-      window.location.origin === appizsoftOfficialDomainName
-    );
-  }, []);
-
-  return isAnalyticsVisible;
-}
-*/
 export default class MyDocument extends Document {
   render() {
     const { langValue, pageContext } = this.props;
-    const appizsoftOfficialDomainName = site.baseUrl;
+    const officialDomainName = site.baseUrl;
+
+    const theme = extendTheme(
+      colorMode === "light" ? lightTheme.colors : darkTheme.colors
+    );
+
+    const themeColor = theme.primary[100];
 
     //const isAnalyticsVisible = AnalyticsIsVisible();
 

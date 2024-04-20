@@ -23,7 +23,7 @@ public class AppConstant
     public const string baseUrlTemplate = "{0}://{1}";
 
     public const string projectGithubUrl = $"https://github.com/{repositoryOwner}/{repositoryName}";
-    public const string projectLogoUrl = $"https://localhost:7115/api/v1/admin/api/logo";
+    public const string projectLogoUrl = $"https://localhost:7115/api/v1/static/api/logo";
     public const string projectLang = $"tr";
     public const string bgColor = $"#fff";
     public const string contactName = $"Kütüphane Destek";

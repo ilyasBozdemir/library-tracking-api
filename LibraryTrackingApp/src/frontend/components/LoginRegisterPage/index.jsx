@@ -12,17 +12,17 @@ import RegisterPage from "./RegisterPage";
 import { useRouter } from "next/router";
 
 const LoginRegisterPage = () => {
-  const [activeTab, setActiveTab] = useState(0);
+  const [activeTab, setActiveTab] = useState(null);
   const router = useRouter();
 
   const handleTabChange = (index) => {
     setActiveTab(index);
     switch (index) {
       case 0:
-        router.push("/login");
+        router.push("/register");
         break;
       case 1:
-        router.push("/register");
+        router.push("/login");
         break;
       default:
         break;
@@ -31,9 +31,9 @@ const LoginRegisterPage = () => {
 
   useEffect(() => {
     if (router.pathname === "/login") {
-      setActiveTab(0);
-    } else if (router.pathname === "/register") {
       setActiveTab(1);
+    } else if (router.pathname === "/register") {
+      setActiveTab(0);
     }
   }, [router.pathname]);
 
@@ -45,18 +45,18 @@ const LoginRegisterPage = () => {
         onChange={handleTabChange}
         defaultIndex={activeTab}
         index={activeTab}
-        colorScheme={'teal'}
+        colorScheme={"teal"}
       >
         <TabList>
-          <Tab onClick={() => handleTabChange(0)}>Giriş Yap</Tab>
-          <Tab onClick={() => handleTabChange(1)}>Kayıt Ol</Tab>
+          <Tab onClick={() => handleTabChange(0)}>Kayıt Ol</Tab>
+          <Tab onClick={() => handleTabChange(1)}>Giriş Yap</Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
-            <LoginPage />
+            <RegisterPage />
           </TabPanel>
           <TabPanel>
-            <RegisterPage />
+            <LoginPage />
           </TabPanel>
         </TabPanels>
       </Tabs>

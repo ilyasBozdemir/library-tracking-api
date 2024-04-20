@@ -4,22 +4,25 @@ import {
   HStack,
   Button,
   Text,
-  Link,
   MenuItem,
   Stack,
   IconButton,
   useDisclosure,
   useColorModeValue,
+  textDecoration,
+  Link as CLink
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
+import Link from "next/link";
 
 const navLinks = [
-  { name: "Hakkımızda", path: "#" },
-  { name: "Özellikler", path: "#" },
-  { name: "Blog", path: "#" },
+  { name: "Hakkımızda", path: "/about" , target:'_self' },
+  { name: "Özellikler", path: "/features" , target:'_self' },
+  { name: "Dökümantasyon", path: "/docs", target:'_blank' },
+  { name: "Blog", path: "/blog" },
 ];
 
 export default function Navbar() {
@@ -28,18 +31,20 @@ export default function Navbar() {
   return (
     <Box px={4} bg={useColorModeValue("white", "gray.800")}>
       <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
-        <Text fontWeight={"semibold"}>LOGO</Text>
+        <Link href="/">
+          <Text fontWeight={"semibold"}>LOGO</Text>
+        </Link>
 
         <HStack
-            as="nav"
-            spacing={6}
-            display={{ base: "none", md: "flex" }}
-            alignItems="center"
-          >
-            {navLinks.map((link, index) => (
-              <NavLink key={index} {...link} onClose={onClose} />
-            ))}
-          </HStack>
+          as="nav"
+          spacing={6}
+          display={{ base: "none", md: "flex" }}
+          alignItems="center"
+        >
+          {navLinks.map((link, index) => (
+            <NavLink key={index} {...link} onClose={onClose} />
+          ))}
+        </HStack>
         <Flex
           gap={3}
           textAlign="center"
@@ -80,18 +85,23 @@ export default function Navbar() {
   );
 }
 
-const NavLink = ({ name, path, onClose }) => {
+const NavLink = ({ name, path,target, onClose }) => {
   return (
-    <Link
+    <CLink
+    as={Link}
       href={path}
       lineHeight="inherit"
+      target={target}
       _hover={{
         textDecoration: "none",
         color: useColorModeValue("teal.500", "teal.200"),
+        textDecoration:'underline'
       }}
+
+
       onClick={() => onClose()}
     >
       {name}
-    </Link>
+    </CLink>
   );
 };

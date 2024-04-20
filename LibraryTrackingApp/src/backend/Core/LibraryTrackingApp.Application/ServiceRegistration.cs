@@ -12,6 +12,7 @@ public static class ServiceRegistration
 {
     public static void AddApplicationRegistration(this IServiceCollection services)
     {
+        services.AddMemoryCache();
         CorsPolicies.AddCorsPolicies(services);
 
         services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
