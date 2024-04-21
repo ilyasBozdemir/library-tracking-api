@@ -1,51 +1,49 @@
-import { items } from "@/constants/sidebarItems";
-import {
-  Flex,
-  Heading,
-  Grid,
-  GridItem,
-  Text,
-  Box,
-  Link as ChakraLink,
-} from "@chakra-ui/react";
-import Link from "next/link";
+import { Box, Flex, Heading, VStack, Text, Badge, HStack } from "@chakra-ui/react";
+import { FiUsers, FiBook, FiMapPin, FiClock } from "react-icons/fi";
 
-function AdminIndexPage() {
+const AdminIndexPage = () => {
+  const todayActivities = {
+    newUsers: 5,
+    newBooks: 10,
+    newLibraries: 2,
+    newLocations: 3,
+    newWorkingHours: 15,
+  };
+
   return (
-    <Flex direction="column" alignItems="center" justifyContent="center">
-      <Heading as="h1" size="2xl" textAlign="center" mb={4}>
-        Hoş Geldiniz!
-      </Heading>
-      <Text fontSize="xl" textAlign="center" mb={8}>
-        Bu, kütüphane yönetim paneline hoş geldiniz. Buradan kütüphane, üye,
-        kitap, personel ve diğer kaynakları yönetebilirsiniz.
-      </Text>
-      <Grid
-        templateColumns={{ base: "repeat(1, 1fr)", md: "repeat(3, 1fr)" }}
-        gap={6}
-      >
-        {items.map((item, index) => (
-          <GridItem key={index}>
-            <Box bg="gray.200" p={8} borderRadius="lg" textAlign="center">
-              <Heading as="h2" size="lg" mb={4}>
-                {item.title}
-              </Heading>
-              <Text fontSize="md">{item.description}</Text>
-              <ChakraLink
-                as={Link}
-                href={item.link}
-                mt={4}
-                color="blue.500"
-                textDecoration="underline"
-              >
-                Detaylar
-              </ChakraLink>
-            </Box>
-          </GridItem>
-        ))}
-      </Grid>
-    </Flex>
+    <Box p="6">
+      <HStack spacing="4" align="center">
+        <Flex align="center">
+          <Box as={FiUsers} fontSize="2xl" color="teal.500" mr="2" />
+          <Box>
+            <Text fontWeight="bold">Yeni Kullanıcılar</Text>
+            <Text>{todayActivities.newUsers}</Text>
+          </Box>
+        </Flex>
+        <Flex align="center">
+          <Box as={FiBook} fontSize="2xl" color="teal.500" mr="2" />
+          <Box>
+            <Text fontWeight="bold">Yeni Kitaplar</Text>
+            <Text>{todayActivities.newBooks}</Text>
+          </Box>
+        </Flex>
+        <Flex align="center">
+          <Box as={FiMapPin} fontSize="2xl" color="teal.500" mr="2" />
+          <Box>
+            <Text fontWeight="bold">Yeni Konumlar</Text>
+            <Text>{todayActivities.newLocations}</Text>
+          </Box>
+        </Flex>
+        <Flex align="center">
+          <Box as={FiClock} fontSize="2xl" color="teal.500" mr="2" />
+          <Box>
+            <Text fontWeight="bold">Yeni Çalışma Saatleri</Text>
+            <Text>{todayActivities.newWorkingHours}</Text>
+          </Box>
+        </Flex>
+      </HStack>
+    </Box>
   );
-}
+};
 
 export default AdminIndexPage;

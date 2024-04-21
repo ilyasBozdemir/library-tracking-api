@@ -15,7 +15,7 @@ public abstract class BaseEntity<TEntityIdType> : IEntity<TEntityIdType>
     public bool IsDeleted { get; set; } = false; // testler tamamlanınca silindi gösterilcektir datalar.
 }
 
-public class BaseEntity
+public sealed class BaseEntity
 {
     // DateTime'ı Unix zaman damgasına dönüştürme fonksiyonu
     public static long ToUnixTimestamp(DateTime dateTime)

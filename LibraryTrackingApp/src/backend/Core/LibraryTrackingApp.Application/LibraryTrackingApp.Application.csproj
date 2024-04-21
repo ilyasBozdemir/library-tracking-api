@@ -80,6 +80,8 @@
 	<Folder Include="Features\AppUsers\Queries\Handlers\" />
 	<Folder Include="Features\AppUsers\Queries\Requests\" />
 	<Folder Include="Features\AppUsers\Queries\Responses\" />
+	<Folder Include="Features\JwtConfiguration\Behaviors\Mapping\" />
+	<Folder Include="Features\JwtConfiguration\Events\" />
 	<Folder Include="Features\Staffs\Behaviors\Mapping\" />
 	<Folder Include="Features\Staffs\Behaviors\Validator\" />
 	<Folder Include="Features\Staffs\Commands\Handlers\" />

@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import Link from "next/link";
 
-function AdminIndexPage() {
+function AppIndexPage() {
   return (
     <Flex direction="column" alignItems="center" justifyContent="center">
       <Heading as="h1" size="2xl" textAlign="center" mb={4}>
@@ -48,4 +48,4 @@ function AdminIndexPage() {
   );
 }
 
-export default AdminIndexPage;
+export default AppIndexPage;
