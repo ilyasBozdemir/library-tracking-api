@@ -37,28 +37,28 @@ Uygulama aşağıdaki entiteleri içermektedir:
 
 ## Ekran Görüntüleri
 
-- Landing Sayfası
-  ![Dashboard](screenshots/landing-page.png)
+- **Landing Sayfası**
+  ![Landing Page](screenshots/landing-page.png)
 
- - Kayıt Ol ve Giriş Yap  Sayfaları
+- **Kayıt Ol ve Giriş Yap Sayfaları**
   ![Register Page](screenshots/register-page.png) 
-
   ![Login Page](screenshots/login-page.png) 
 
-- Application Panel
-- ![Application Panel](screenshots/app-panel.png)
+- **Uygulama Paneli**
+  ![Application Panel](screenshots/app-panel.png)
 
-- Yazar Sayfası
+- **Yazar Sayfası**
   ![Author Page](screenshots/author-page.png)
 
-  - Admin Dashboard
-  ![Admin Dashboard](screenshots/author-page.png)
+- **Admin Ana Panel**
+  ![Admin Dashboard](screenshots/admin-dashboard.png)
 
-  - Admin  Support Page
-  ![Admin Dashboard](screenshots/admin-support-page.png)
+- **Admin Destek Sayfası**
+  ![Admin Support Page](screenshots/admin-support-page.png)
 
-  - App  Support Page
-  ![Admin Dashboard](screenshots/app-support-page.png)
+- **Uygulama Destek Sayfası**
+  ![App Support Page](screenshots/app-support-page.png)
+
 
 - daha eklenecektir güncellendikçe
 
