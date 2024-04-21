@@ -51,7 +51,7 @@ Uygulama aşağıdaki entiteleri içermektedir:
   ![Author Page](screenshots/author-page.png)
 
 - **Admin Ana Panel**
-  ![Admin Dashboard](screenshots/admin-dashboard.png)
+  ![Admin Dashboard](screenshots/admin-support-page.png)
 
 - **Admin Destek Sayfası**
   ![Admin Support Page](screenshots/admin-support-page.png)
