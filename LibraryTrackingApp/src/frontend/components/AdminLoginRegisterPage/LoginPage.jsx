@@ -41,7 +41,7 @@ const LoginPage = () => {
     }),
     onSubmit: (values) => {
       console.log("Giriş yapıldı:", values);
-      router.push("/app");
+      router.push("/admin");
     },
   });
 

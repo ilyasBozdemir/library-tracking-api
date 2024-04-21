@@ -2,6 +2,7 @@ import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
 const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
+const AppLayout = dynamic(() => import("@/layouts/App/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
 const ErrorLayout = dynamic(() => import("@/layouts/Error/layout"));
 const PlaceholderLayout = dynamic(() =>
@@ -27,9 +28,11 @@ function MyApp({ Component, pageProps, session, statusCode }) {
   const placeholderRoutes = ["/login", "/register", "/docs", "/api-docs"];
   const anonLayoutRoutes = ["/./"];
   const adminLayoutRoutes = /^\/admin(?:\/|$)/
+  const appLayoutRoutes = /^\/app(?:\/|$)/
 
   const routeLayoutMap = [
     { regex: adminLayoutRoutes, layout: AdminLayout },
+    { regex: appLayoutRoutes, layout: AppLayout },
     {
       regex: new RegExp(`^(${placeholderRoutes.join("|")})`),
       layout: PlaceholderLayout,

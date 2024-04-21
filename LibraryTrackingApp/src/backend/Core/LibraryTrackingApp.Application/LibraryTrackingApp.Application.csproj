@@ -32,7 +32,6 @@
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
 	<Folder Include="Claims\" />
-	<Folder Include="Features\AppUsers\Behaviors\Validator\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Mapping\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Validator\" />
 	<Folder Include="Features\BorrowBooks\Commands\Handlers\" />

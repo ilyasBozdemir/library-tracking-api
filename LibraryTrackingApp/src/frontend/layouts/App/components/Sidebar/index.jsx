@@ -13,7 +13,7 @@ import Link from "next/link";
 
 import { CloseIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
-import { adminSidebarItems } from "@/constants/adminSidebarItems";
+import { sidebarItems } from "@/constants/sidebarItems";
 import { useEffect } from "react";
 
 function Sidebar({ isOpen, toggleSidebar }) {
@@ -42,7 +42,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
       <Flex alignItems="center" mb="8">
         <Avatar size="sm" name="Admin" />
         <Text ml="3" fontSize="lg" fontWeight="bold" color="white">
-          Admin Panel
+          Application Panel
         </Text>
         <Box ml="auto" onClick={toggleSidebar}>
           <CloseIcon
@@ -54,7 +54,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
         </Box>
       </Flex>
       <VStack spacing="4" align="stretch">
-        {adminSidebarItems.map((item, index) => (
+        {sidebarItems.map((item, index) => (
           <Box key={index}>
             <SidebarItem
               icon={item.icon}
@@ -63,7 +63,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
               target={item.target}
               isActive={router.pathname === item.href}
             />
-            {adminSidebarItems.subItems && item.subItems.length > 0 && (
+            {sidebarItems.subItems && item.subItems.length > 0 && (
               <VStack spacing="1" align="stretch" ml="4">
                 {item.subItems.map((subItem, subIndex) => (
                   <SidebarItem
