@@ -35,7 +35,7 @@ public class BooksController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Create
+                    .Created
             }
         );
 
@@ -82,7 +82,7 @@ public class BooksController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Update
+                    .Updated
             }
         );
 
@@ -125,7 +125,7 @@ public class BooksController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Delete
+                    .Deleted
             }
         );
 
@@ -205,7 +205,7 @@ public class BooksController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .Get
+                        .FetchedSingle
                 }
             );
 
@@ -236,7 +236,7 @@ public class BooksController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .Get
+                        .FetchedSingle
                 }
             );
             return NotFound();
@@ -267,7 +267,7 @@ public class BooksController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .GetAll
+                        .FetchedAll
                 }
             );
 
@@ -297,7 +297,7 @@ public class BooksController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .GetAll
+                        .FetchedAll
                 }
             );
             return NotFound();

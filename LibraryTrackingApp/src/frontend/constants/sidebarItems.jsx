@@ -1,4 +1,4 @@
-import { FiHome, FiSettings, FiLogOut, FiBook } from "react-icons/fi";
+import { FiHome, FiSettings, FiLogOut, FiBook, FiHelpCircle } from "react-icons/fi";
 import {
   BsArrowLeftRight,
   BsBook,
@@ -10,60 +10,62 @@ import {
 } from "react-icons/bs";
 import { FaBookOpen } from "react-icons/fa";
 
+import { BiSupport } from "react-icons/bi";
+
 export const sidebarItems = [
   {
     title: "Ana Sayfa",
     icon: <FiHome />,
-    href: "/admin",
+    href: "/app",
     target: "_self",
   },
   {
-    title: "Kütüphane",
+    title: "Kütüphane Yönetimi",
     icon: <BsBuilding />,
-    href: "/admin/library",
+    href: "/app/library",
     target: "_self",
   },
   {
-    title: "Yazarlar",
+    title: "Yazar Yönetimi",
     icon: <BsPerson />,
-    href: "/admin/author",
+    href: "/app/author",
     target: "_self",
   },
-  { title: "Kitaplar", icon: <BsBook />, href: "/admin/book", target: "_self" },
+  { title: "Kitaplar", icon: <BsBook />, href: "/app/book", target: "_self" },
   {
-    title: "Türler",
+    title: "Kitap Tür Yönetimi",
     icon: <FaBookOpen />,
-    href: "/admin/genre",
+    href: "/app/genre",
     target: "_self",
   },
   {
-    title: "Üyeler",
+    title: "Kütüphane Üye Yönetimi",
     icon: <BsPeople />,
-    href: "/admin/member",
+    href: "/app/member",
     target: "_self",
   },
   {
-    title: "Personel",
+    title: "Personel Yönetimi",
     icon: <BsPeopleFill />,
-    href: "/admin/staff",
+    href: "/app/staff",
     target: "_self",
   },
   {
-    title: "Ödünç Verilen Kitaplar",
+    title: "Ödünç Kitap Yönetimi",
     icon: <BsArrowLeftRight />,
-    href: "/admin/borrow",
+    href: "/app/borrow",
     target: "_self",
   },
   {
-    title: "Etiketler",
+    title: "Kitap Etiket Yönetimi",
     icon: <BsTagFill />,
-    href: "/admin/book-tag",
+    href: "/app/book-tag",
     target: "_self",
   },
   {
     title: "Ayarlar",
     icon: <FiSettings />,
-    href: "/admin/settings",
+    href: "/app/settings",
     target: "_self",
   },
   {
@@ -73,9 +75,15 @@ export const sidebarItems = [
     target: "_blank",
   },
   {
+    title: "Destek",
+    icon: <BiSupport />,
+    href: "/app/support",
+    target: "_self",
+  },
+  {
     title: "Çıkış Yap",
     icon: <FiLogOut />,
-    href: "/admin/logout",
+    href: "/app/logout",
     target: "_self",
   },
 ];
@@ -84,37 +92,37 @@ export const items = [
   {
     title: "Kütüphane",
     description: "Kütüphane bilgilerini düzenleyin, yeni kütüphaneler ekleyin.",
-    link: "/admin/library",
+    link: "/app/library",
   },
   {
     title: "Üyeler",
     description: "Üyeleri yönetin, yeni üyeler ekleyin.",
-    link: "/admin/member",
+    link: "/app/member",
   },
   {
     title: "Kitaplar",
     description: "Kitapları düzenleyin, yeni kitaplar ekleyin.",
-    link: "/admin/book",
+    link: "/app/book",
   },
   {
     title: "Personel",
     description: "Personel bilgilerini yönetin, yeni personel ekleyin.",
-    link: "/admin/staff",
+    link: "/app/staff",
   },
   {
     title: "Ödünç Verme",
     description: "Kitap ödünç verme işlemlerini yönetin.",
-    link: "/admin/borrow",
+    link: "/app/borrow",
   },
   {
     title: "Kitap Türleri",
     description: "Kitap türlerini düzenleyin, yeni türler ekleyin.",
-    link: "/admin/genre",
+    link: "/app/genre",
   },
   {
     title: "Kitap Etiketleri",
     description:
       "Arama terimlerini yönetin, popüler arama terimlerini görüntüleyin ve düzenleyin.",
-    link: "/admin/book-tag",
+    link: "/app/book-tag",
   },
 ];

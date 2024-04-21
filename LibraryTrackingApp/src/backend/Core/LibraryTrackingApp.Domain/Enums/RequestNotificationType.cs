@@ -2,10 +2,10 @@
 
 public enum RequestNotificationType
 {
-    Create,
-    Update,
-    Delete,
-    Get,
-    GetAll,
+    Created,
+    Updated,
+    Deleted,
+    FetchedSingle,
+    FetchedAll,
 }
 

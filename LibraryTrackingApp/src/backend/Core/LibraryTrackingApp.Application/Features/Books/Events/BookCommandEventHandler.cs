@@ -11,20 +11,20 @@ public class BookCommandEventHandler : INotificationHandler<BookCommandEvent>
     {
         switch (notification.RequestNotificationType)
         {
-            case RequestNotificationType.Create:
+            case RequestNotificationType.Created:
                 Console.WriteLine($"Yeni bir kitap oluşturuldu. Kitap ID: {notification.BookId}");
                 break;
-            case RequestNotificationType.Update:
+            case RequestNotificationType.Updated:
 
                 Console.WriteLine($"Kitap güncellendi. Kitap ID: {notification.BookId}");
                 break;
-            case RequestNotificationType.Delete:
+            case RequestNotificationType.Deleted:
                 Console.WriteLine($"Kitap silindi. Kitap ID: {notification.BookId}");
                 break;
-            case RequestNotificationType.Get:
+            case RequestNotificationType.FetchedSingle:
                 Console.WriteLine($"Kitap bilgileri alındı. Kitap ID: {notification.BookId}");
                 break;
-            case RequestNotificationType.GetAll:
+            case RequestNotificationType.FetchedAll:
                 Console.WriteLine("Tüm kitap bilgileri alındı.");
                 break;
             default:

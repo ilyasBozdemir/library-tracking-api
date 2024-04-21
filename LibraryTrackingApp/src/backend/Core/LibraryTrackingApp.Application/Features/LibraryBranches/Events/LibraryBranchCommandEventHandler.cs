@@ -11,20 +11,20 @@ public class LibraryBranchCommandEventHandler : INotificationHandler<LibraryBran
     {
         switch (notification.RequestNotificationType)
         {
-            case RequestNotificationType.Create:
+            case RequestNotificationType.Created:
                 Console.WriteLine($"Yeni bir Şube oluşturuldu. Şube ID: {notification.AuthorId}");
                 break;
-            case RequestNotificationType.Update:
+            case RequestNotificationType.Updated:
 
                 Console.WriteLine($"Şube güncellendi. Şube ID: {notification.AuthorId}");
                 break;
-            case RequestNotificationType.Delete:
+            case RequestNotificationType.Deleted:
                 Console.WriteLine($"Şube silindi. Şube ID: {notification.AuthorId}");
                 break;
-            case RequestNotificationType.Get:
+            case RequestNotificationType.FetchedSingle:
                 Console.WriteLine($"Şube bilgileri alındı. Şube ID: {notification.AuthorId}");
                 break;
-            case RequestNotificationType.GetAll:
+            case RequestNotificationType.FetchedAll:
                 Console.WriteLine("Tüm Şube bilgileri alındı.");
                 break;
             default:

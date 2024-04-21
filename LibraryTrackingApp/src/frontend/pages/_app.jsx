@@ -1,35 +1,51 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
 const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
+const AppLayout = dynamic(() => import("@/layouts/App/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
 const ErrorLayout = dynamic(() => import("@/layouts/Error/layout"));
 const PlaceholderLayout = dynamic(() =>
   import("@/layouts/PlaceholderLayout/layout")
 );
 
-import theme from "../src/theme";
+import { useColorMode,colorMode } from "@chakra-ui/react";
+
 import "../styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+import { darkTheme, lightTheme } from "@/src/foundations/colors";
 
 function MyApp({ Component, pageProps, session, statusCode }) {
   const router = useRouter();
-  
-  const routeLayoutMap = {
-    "/": AnonLayout,
-    "/admin": AdminLayout,
-    "/login": PlaceholderLayout,
-    "/register": PlaceholderLayout,
-    "/docs": PlaceholderLayout,
-    "/api-docs": PlaceholderLayout,
-  };
 
-  let Layout = [401, 403, 404, 500, 501].includes(statusCode)
-    ? ErrorLayout
-    : routeLayoutMap[router.pathname] || AnonLayout;
+  const theme = extendTheme(colorMode === "light" ? lightTheme.colors : darkTheme.colors);
+
+
+
+  const placeholderRoutes = ["/login", "/register", "/docs", "/api-docs"];
+  const anonLayoutRoutes = ["/./"];
+  const adminLayoutRoutes = /^\/admin(?:\/|$)/
+  const appLayoutRoutes = /^\/app(?:\/|$)/
+
+  const routeLayoutMap = [
+    { regex: adminLayoutRoutes, layout: AdminLayout },
+    { regex: appLayoutRoutes, layout: AppLayout },
+    {
+      regex: new RegExp(`^(${placeholderRoutes.join("|")})`),
+      layout: PlaceholderLayout,
+    },
+    {
+      regex: new RegExp(`^(${anonLayoutRoutes.join("|")})`),
+      layout: AnonLayout,
+    },
+  ];
+
+  let Layout =
+    routeLayoutMap.find((route) => router.pathname.match(route.regex))
+      ?.layout || AnonLayout;
 
   useEffect(() => {
     AOS.init({
@@ -42,23 +58,19 @@ function MyApp({ Component, pageProps, session, statusCode }) {
 
   return (
     <>
-      <>
-        {[401, 403, 404, 500, 501].includes(statusCode) ? (
-          <>
-            <ErrorLayout statusCode={statusCode} />
-          </>
-        ) : (
-          <>
-            <ChakraProvider theme={theme} resetCSS>
-              <Layout>
-                <Component {...pageProps} />
-              </Layout>
-            </ChakraProvider>
-          </>
-        )}
-      </>
-
-      <></>
+      {[401, 403, 404, 500, 501].includes(statusCode) ? (
+        <>
+          <ErrorLayout statusCode={statusCode} />
+        </>
+      ) : (
+        <>
+          <ChakraProvider theme={theme} resetCSS>
+            <Layout>
+              <Component {...pageProps} />
+            </Layout>
+          </ChakraProvider>
+        </>
+      )}
     </>
   );
 }

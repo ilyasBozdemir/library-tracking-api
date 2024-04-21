@@ -5,38 +5,61 @@ using LibraryTrackingApp.Application.Shared.Wrappers.Extensions;
 using LibraryTrackingApp.Domain.Entities.Library;
 using System.Drawing;
 using System.Net;
+using Microsoft.Extensions.Caching.Memory; // MemoryCache'ı kullanmak için ekleyin
+
 
 namespace LibraryTrackingApp.Application.Features.Authors.Queries.Handlers;
+
 
 public class GetAllAuthorsQueryHandler : IRequestHandler<GetAllAuthorsQueryRequest, GetAllAuthorsQueryResponse>
 {
     private readonly IUnitOfWork<Guid> _unitOfWork;
     private readonly IMediator _mediator;
-    public GetAllAuthorsQueryHandler(IUnitOfWork<Guid> unitOfWork /*,IMapper mapper*/, IMediator mediator)
+    private readonly IMemoryCache _cache;
+
+    public GetAllAuthorsQueryHandler(IUnitOfWork<Guid> unitOfWork, IMediator mediator, IMemoryCache cache)
     {
         _unitOfWork = unitOfWork;
         _mediator = mediator;
-        //_mapper = mapper;
+        _cache = cache; 
     }
 
     public async Task<GetAllAuthorsQueryResponse> Handle(GetAllAuthorsQueryRequest request, CancellationToken cancellationToken)
     {
-		try
-		{
-            // PageSize ve  PageIndex kısmı da eklenecektir.
-            int PageSize = request.PageSize;
-            int PageIndex = request.PageIndex;
+        //memory cache testi: 500 istek 9711ms
+        // memory cache olamdan 500 istek 6283 ms
 
-            var readRepository = _unitOfWork
-                           .GetReadRepository<Domain.Entities.Library.Author>();
+        // redis kullanılcaktır.
 
-            var authorList =  readRepository.GetAll();
+        // ve de ;
 
-            var authorDtoList = new List<AuthorDTO>();
+        /*
+            Task<IDbContextTransaction> BeginTransactionAsync(CancellationToken cancellationToken = default);
+    Task RollbackAsync(CancellationToken cancellationToken = default);
+    Task CommitAsync(CancellationToken cancellationToken = default);
 
-            foreach (Author author in authorList)
+        bunlar her handler'de kullanılcaktır.
+
+         */
+        try
+        {
+            string cacheKey = "AllAuthors";
+
+            if (_cache.TryGetValue<List<AuthorDTO>>(cacheKey, out List<AuthorDTO> cachedAuthors))
             {
-                authorDtoList.Add(new AuthorDTO 
+                return new GetAllAuthorsQueryResponse
+                {
+                    StatusCode = (int)HttpStatusCode.OK,
+                    Success = true,
+                    Data = cachedAuthors,
+                    StateMessages = new string[] { $"Tüm Yazarlar Önbellekten Alındı." }
+                };
+            }
+            else
+            {
+                var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.Author>();
+                var authorList = readRepository.GetAll();
+                var authorDtoList = authorList.Select(author => new AuthorDTO
                 {
                     Id = author.Id,
                     Name = author.Name,
@@ -44,26 +67,22 @@ public class GetAllAuthorsQueryHandler : IRequestHandler<GetAllAuthorsQueryReque
                     Biography = author.Biography,
                     BirthDate = author.BirthDate,
                     Country = author.Country,
-                });
+                }).ToList();
+
+                _cache.Set(cacheKey, authorDtoList, TimeSpan.FromMinutes(5));
+
+                return new GetAllAuthorsQueryResponse
+                {
+                    StatusCode = (int)HttpStatusCode.OK,
+                    Success = true,
+                    Data = authorDtoList,
+                    StateMessages = new string[] { $"Tüm Yazarlar Listelendi." }
+                };
             }
-
-
-            return new()
-            {
-                StatusCode = (int)HttpStatusCode.OK,
-                Success = false,
-                Data= authorDtoList,
-                StateMessages = new string[] { $"Tüm Yazarlar Listelendi." }
-                
-            };
-
-
-
-
         }
         catch (Exception ex)
         {
-            return new()
+            return new GetAllAuthorsQueryResponse
             {
                 StatusCode = (int)HttpStatusCode.InternalServerError,
                 Success = false,

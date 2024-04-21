@@ -37,20 +37,32 @@ Uygulama aşağıdaki entiteleri içermektedir:
 
 ## Ekran Görüntüleri
 
-- Landing Sayfası
-  ![Dashboard](screenshots/landing-page.png)
+- **Landing Sayfası**
+  ![Landing Page](screenshots/landing-page.png)
 
-- Dashboard
-- ![Dashboard](screenshots/dashboard.png)
+- **Kayıt Ol ve Giriş Yap Sayfaları**
+  ![Register Page](screenshots/register-page.png) 
+  ![Login Page](screenshots/login-page.png) 
 
-- Yazar Sayfası
-  ![Dashboard](screenshots/author-page.png)
+- **Uygulama Paneli**
+  ![Application Panel](screenshots/app-panel.png)
+
+- **Yazar Sayfası**
+  ![Author Page](screenshots/author-page.png)
+
+- **Admin Ana Panel**
+  ![Admin Dashboard](screenshots/admin-dashboard.png)
+
+- **Admin Destek Sayfası**
+  ![Admin Support Page](screenshots/admin-support-page.png)
+
+- **Uygulama Destek Sayfası**
+  ![App Support Page](screenshots/app-support-page.png)
+
 
 - daha eklenecektir güncellendikçe
 
 # Proje Kurulumu
-
-Projenin yerel ortamınıza nasıl kurulacağına dair adımları bu bölümde açıklayabilirsiniz.
 
 ## Kullanılan Teknolojiler
 

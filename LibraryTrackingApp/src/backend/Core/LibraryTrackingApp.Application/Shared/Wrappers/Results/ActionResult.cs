@@ -4,7 +4,6 @@ public abstract class ActionResult
     public bool Success { get; set; }
     public int StatusCode { get; set; }
     public object? Data { get; set; }
-
     public string[] StateMessages { get; set; }
 
     public ActionResult(

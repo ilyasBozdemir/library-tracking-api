@@ -13,15 +13,21 @@ import Link from "next/link";
 
 import { CloseIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
-import { sidebarItems } from "@/constants/sidebarItems";
+import { adminSidebarItems } from "@/constants/adminSidebarItems";
+import { useEffect } from "react";
 
 function Sidebar({ isOpen, toggleSidebar }) {
   const router = useRouter();
 
+  useEffect(()=>{
+
+    
+  },[])
+
   return (
     <Box
       bg="gray.700"
-      w="250px"
+      w="275px"
       h="100vh"
       p="4"
       position="fixed"
@@ -29,7 +35,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
       top="0"
       overflowY="auto"
       transition="0.3s ease-in-out"
-      transform={isOpen ? "translateX(0)" : "translateX(-250px)"}
+      transform={isOpen ? "translateX(0)" : "translateX(-275px)"}
       boxShadow="md"
       zIndex="2"
     >
@@ -48,37 +54,36 @@ function Sidebar({ isOpen, toggleSidebar }) {
         </Box>
       </Flex>
       <VStack spacing="4" align="stretch">
-      {sidebarItems.map((item, index) => (
-        <Box key={index}>
-          <SidebarItem
-            icon={item.icon}
-            text={item.title}
-            href={item.href}
-            target={item.target}
-            isActive={router.pathname === item.href}
-          />
-          {sidebarItems.subItems && item.subItems.length > 0 && (
-            <VStack spacing="1" align="stretch" ml="4">
-              {item.subItems.map((subItem, subIndex) => (
-                <SidebarItem
-                  key={subIndex}
-                  icon={subItem.icon}
-                  text={subItem.title}
-                  href={subItem.href}
-                  target={subItem.target}
-                  isActive={router.pathname === subItem.href}
-                  isSubItem
-                />
-              ))}
-            </VStack>
-          )}
-        </Box>
-      ))}
-    </VStack>
+        {adminSidebarItems.map((item, index) => (
+          <Box key={index}>
+            <SidebarItem
+              icon={item.icon}
+              text={item.title}
+              href={item.href}
+              target={item.target}
+              isActive={router.pathname === item.href}
+            />
+            {adminSidebarItems.subItems && item.subItems.length > 0 && (
+              <VStack spacing="1" align="stretch" ml="4">
+                {item.subItems.map((subItem, subIndex) => (
+                  <SidebarItem
+                    key={subIndex}
+                    icon={subItem.icon}
+                    text={subItem.title}
+                    href={subItem.href}
+                    target={subItem.target}
+                    isActive={router.pathname === subItem.href}
+                    isSubItem
+                  />
+                ))}
+              </VStack>
+            )}
+          </Box>
+        ))}
+      </VStack>
     </Box>
   );
 }
-
 
 const SidebarItem = ({ icon, text, href, target, isActive }) => {
   const color = isActive ? "#1468de" : "gray.100";

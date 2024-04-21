@@ -3,6 +3,9 @@ import React from "react";
 import { RedocStandalone } from "redoc";
 import Head from "next/head";
 
+
+// Daha Düzencelencek 
+
 function DocsPage() {
   const pageTitle = `Kütüphane Takip Uygulaması`;
 
