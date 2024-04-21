@@ -1,7 +1,7 @@
-﻿using LibraryTrackingApp.Application.Features.JwtConfiguration.Commands.Requests;
-using LibraryTrackingApp.Application.Features.JwtConfiguration.Commands.Responses;
-using LibraryTrackingApp.Application.Features.JwtConfiguration.Queries.Requests;
-using LibraryTrackingApp.Application.Features.JwtConfiguration.Queries.Responses;
+﻿using LibraryTrackingApp.Application.Features.JwtConfigurations.Commands.Requests;
+using LibraryTrackingApp.Application.Features.JwtConfigurations.Commands.Responses;
+using LibraryTrackingApp.Application.Features.JwtConfigurations.Queries.Requests;
+using LibraryTrackingApp.Application.Features.JwtConfigurations.Queries.Responses;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
