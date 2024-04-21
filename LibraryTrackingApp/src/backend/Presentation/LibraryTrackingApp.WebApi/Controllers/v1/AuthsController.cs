@@ -16,6 +16,30 @@ public class AuthsController : CustomBaseController
     public AuthsController(IMediator mediator)
         : base(mediator) { }
 
+    /// <summary>
+    /// 
+    /// </summary>
+    /// <param name="request"></param>
+    /// <returns></returns>
+    [HttpPost("create-user")]
+    [AllowAnonymous]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<IActionResult> CreateUser(CreateUserCommandRequest request)
+    {
+        CreateUserCommandResponse response = await _mediator.Send(request);
+
+        var responseValue = new
+        {
+            IsSucces = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
+    }
+
 
     /// <summary>
     /// Kullanıcıyı kimlik doğrulaması için HTTP POST isteğini işler.
@@ -41,7 +65,10 @@ public class AuthsController : CustomBaseController
         };
     }
 
-    //register user 
+   
+
+
+
     //refresh token login 
     //logout
     //two factor enable

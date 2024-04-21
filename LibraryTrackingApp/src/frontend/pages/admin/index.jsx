@@ -12,8 +12,7 @@ const AdminIndexPage = () => {
 
   return (
     <Box p="6">
-      <Heading mb="4">Admin Paneli Ana Sayfa</Heading>
-      <VStack spacing="4" align="start">
+      <HStack spacing="4" align="center">
         <Flex align="center">
           <Box as={FiUsers} fontSize="2xl" color="teal.500" mr="2" />
           <Box>
@@ -42,7 +41,7 @@ const AdminIndexPage = () => {
             <Text>{todayActivities.newWorkingHours}</Text>
           </Box>
         </Flex>
-      </VStack>
+      </HStack>
     </Box>
   );
 };

@@ -1,7 +1,4 @@
-﻿using LibraryTrackingApp.Application.Features.AppUsers.Commands.Requests;
-using LibraryTrackingApp.Application.Features.AppUsers.Commands.Responses;
-using LibraryTrackingApp.Infrastructure.Mvc;
-using Microsoft.AspNetCore.Authorization;
+﻿using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
@@ -16,23 +13,10 @@ public class UsersController : CustomBaseController
     public UsersController(IMediator mediator)
         : base(mediator) { }
 
-    [HttpPost("create-user")]
-    [AllowAnonymous]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<IActionResult> CreateUser(CreateUserCommandRequest registerUserCommandRequest)
-    {
-        CreateUserCommandResponse response = await _mediator.Send(registerUserCommandRequest);
+  //Register
+  //getprofile
 
-        var responseValue = new
-        {
-            IsSucces = response.Success,
-            StatusCode = response.StatusCode,
-            Messages = response.StateMessages.ToArray(),
-            Data = response.Data,
-        };
 
-        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
-    }
+
 
 }
