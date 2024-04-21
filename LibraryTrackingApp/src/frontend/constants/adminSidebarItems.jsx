@@ -6,7 +6,7 @@ export const adminSidebarItems = [
     {
       title: "Ana Sayfa",
       icon: <FiHome />,
-      href: "/admin/dashboard",
+      href: "/admin",
       target: "_self",
     },
     {
