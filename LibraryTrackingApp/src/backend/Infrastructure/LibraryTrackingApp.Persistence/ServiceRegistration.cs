@@ -1,5 +1,8 @@
-﻿using LibraryTrackingApp.Domain.Constants;
+﻿using LibraryTrackingApp.Application.Interfaces.Services.Security;
+using LibraryTrackingApp.Application.Interfaces.Services;
+using LibraryTrackingApp.Domain.Constants;
 using LibraryTrackingApp.Persistence.UnitOfWorks;
+using LibraryTrackingApp.Persistence.Services;
 
 namespace LibraryTrackingApp.Persistence;
 
@@ -8,9 +11,13 @@ public static class ServiceRegistration
 {
     public static void AddPersistenceRegistration(this IServiceCollection services)
     {
+
         services.AddDatabaseConfiguration();
 
         services.AddScoped(typeof(IUnitOfWork<>), typeof(UnitOfWork<>));
+
+        services.AddScoped<IAuthService, AuthService>();
+        services.AddScoped<IUserService, UserService>();
 
     }
 
@@ -18,21 +25,19 @@ public static class ServiceRegistration
     {
         services
             .AddDbContext<AppIdentityDbContext>(options => options.UseSqlServer(AppConstant.DefaultConnectionString))
-            .AddIdentityDbConfig();
-       
-        return services;
-    }
-    public static IServiceCollection AddIdentityDbConfig(this IServiceCollection services)
-    {
-        //services.AddIdentityApiEndpointsWithConfiguration()
-        //    .AddPasswordValidator<CustomPasswordValidation>()
-        //    .AddUserValidator<CustomUserValidation>()
-        //    .AddErrorDescriber<CustomIdentityErrorDescriber>()
-        //    .AddEntityFrameworkStores<AppIdentityDbContext>()
-        //    .AddDefaultTokenProviders();
+            .AddIdentityWithConfiguration()
+            .AddEntityFrameworkStores<AppIdentityDbContext>()
+            .AddUserManager<UserManager<AppUser>>()
+            .AddSignInManager<SignInManager<AppUser>>()
+            .AddDefaultTokenProviders()
+            .AddPasswordValidator<CustomPasswordValidation>()
+            .AddUserValidator<CustomUserValidation>()
+            .AddErrorDescriber<CustomIdentityErrorDescriber>();
+
 
         return services;
     }
+ 
 
     public static IServiceCollection AddDatabaseConfiguration(this IServiceCollection services)
     {
@@ -46,6 +51,8 @@ public static class ServiceRegistration
                      })
                      .EnableSensitiveDataLogging()
                  );
+        services.AddIdentityDbContext();
+
         return services;
     }
 }

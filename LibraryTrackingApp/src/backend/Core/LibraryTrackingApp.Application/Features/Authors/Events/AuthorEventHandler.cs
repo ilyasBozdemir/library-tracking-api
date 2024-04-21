@@ -1,31 +1,33 @@
-﻿namespace LibraryTrackingApp.Application.Features.Books.Events;
+﻿using LibraryTrackingApp.Application.Features.AppUsers.Events;
 
-public class BookCommandEventHandler : INotificationHandler<BookCommandEvent>
+namespace LibraryTrackingApp.Application.Features.Authors.Events;
+
+public class UserCommandEventHandler : INotificationHandler<UserEvent>
 {
-    public BookCommandEventHandler()
+    public UserCommandEventHandler()
     {
         // Constructor gerekli bir işlem yapmıyor, dolayısıyla içini boş bırakabiliriz.
     }
 
-    public async Task Handle(BookCommandEvent notification, CancellationToken cancellationToken)
+    public async Task Handle(UserEvent notification, CancellationToken cancellationToken)
     {
         switch (notification.RequestNotificationType)
         {
             case RequestNotificationType.Created:
-                Console.WriteLine($"Yeni bir kitap oluşturuldu. Kitap ID: {notification.BookId}");
+                Console.WriteLine($"Yeni bir Yazar oluşturuldu. Yazar ID: {notification.UserId}");
                 break;
             case RequestNotificationType.Updated:
 
-                Console.WriteLine($"Kitap güncellendi. Kitap ID: {notification.BookId}");
+                Console.WriteLine($"Yazar güncellendi. Yazar ID: {notification.UserId}");
                 break;
             case RequestNotificationType.Deleted:
-                Console.WriteLine($"Kitap silindi. Kitap ID: {notification.BookId}");
+                Console.WriteLine($"Yazar silindi. Yazar ID: {notification.UserId}");
                 break;
             case RequestNotificationType.FetchedSingle:
-                Console.WriteLine($"Kitap bilgileri alındı. Kitap ID: {notification.BookId}");
+                Console.WriteLine($"Yazar bilgileri alındı. Yazar ID: {notification.UserId}");
                 break;
             case RequestNotificationType.FetchedAll:
-                Console.WriteLine("Tüm kitap bilgileri alındı.");
+                Console.WriteLine("Tüm Yazar bilgileri alındı.");
                 break;
             default:
                 // Tanımsız bir işlem türü gelirse buraya düşer

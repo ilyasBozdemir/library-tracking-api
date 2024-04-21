@@ -1,5 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Authorization.Policies;
 using LibraryTrackingApp.Application.Behaviors;
+using LibraryTrackingApp.Application.Features.AppUsers.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.Authors.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.Books.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.BookStocks.Behaviors.Mapping;
@@ -25,6 +26,8 @@ public static class ServiceRegistration
             mapperConfig.AddProfile<AuthorMappingProfile>();
             mapperConfig.AddProfile<BookMappingProfile>();
             mapperConfig.AddProfile<BookStockMappingProfile>();
+            mapperConfig.AddProfile<UserMappingsProfile>();
+            //UserMappingsProfile
         });
 
         services.AddSingleton(mapperConfiguration.CreateMapper());

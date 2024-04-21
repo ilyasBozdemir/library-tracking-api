@@ -34,7 +34,7 @@ public class LibraryBranchesController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Create
+                    .Created
             }
         );
 
@@ -74,7 +74,7 @@ public class LibraryBranchesController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Update
+                    .Updated
             }
         );
 
@@ -110,7 +110,7 @@ public class LibraryBranchesController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Delete
+                    .Deleted
             }
         );
 
@@ -147,7 +147,7 @@ public class LibraryBranchesController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .Get
+                        .FetchedSingle
                 }
             );
 
@@ -172,7 +172,7 @@ public class LibraryBranchesController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .Get
+                        .FetchedSingle
                 }
             );
             return NotFound();
@@ -200,7 +200,7 @@ public class LibraryBranchesController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .GetAll
+                        .FetchedAll
                 }
             );
 
@@ -225,7 +225,7 @@ public class LibraryBranchesController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .GetAll
+                        .FetchedAll
                 }
             );
             return NotFound();

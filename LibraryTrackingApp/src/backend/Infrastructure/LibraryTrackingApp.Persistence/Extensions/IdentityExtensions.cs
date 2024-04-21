@@ -26,16 +26,14 @@ public static class IdentityExtensions
         {
             configureOptions?.Invoke(options);
             ConfigureIdentityOptions(options);
-        })
-        .AddEntityFrameworkStores<AppIdentityDbContext>()
-        .AddDefaultTokenProviders();
+        });
     }
 
     //public static IdentityBuilder AddIdentityApiEndpointsWithConfiguration(
     //      this IServiceCollection services,
     //      Action<IdentityOptions> configureOptions = null)
     //{
-      
+
 
     //    return services.AddIdentityApiEndpoints<AppUser>(options =>
     //    {

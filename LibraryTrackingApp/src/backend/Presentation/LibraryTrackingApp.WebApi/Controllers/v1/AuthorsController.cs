@@ -27,7 +27,7 @@ public class AuthorsController : CustomBaseController
     {
         var response = await _mediator.Send(request);
         await _mediator.Publish(
-            new AuthorCommandEvent()
+            new AuthorEvent()
             {
                 Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
@@ -35,7 +35,7 @@ public class AuthorsController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Create
+                    .Created
             }
         );
 
@@ -69,7 +69,7 @@ public class AuthorsController : CustomBaseController
         var response = await _mediator.Send(request);
 
         await _mediator.Publish(
-            new AuthorCommandEvent()
+            new AuthorEvent()
             {
                 Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
@@ -78,7 +78,7 @@ public class AuthorsController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Update
+                    .Updated
             }
         );
 
@@ -110,7 +110,7 @@ public class AuthorsController : CustomBaseController
         var response = await _mediator.Send(request);
 
         await _mediator.Publish(
-            new AuthorCommandEvent()
+            new AuthorEvent()
             {
                 Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                 IsSuccessful = response.Success,
@@ -119,7 +119,7 @@ public class AuthorsController : CustomBaseController
                     .Domain
                     .Enums
                     .RequestNotificationType
-                    .Delete
+                    .Deleted
             }
         );
 
@@ -156,7 +156,7 @@ public class AuthorsController : CustomBaseController
         if (response != null && response.Data != null)
         {
             await _mediator.Publish(
-                new AuthorCommandEvent()
+                new AuthorEvent()
                 {
                     Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                     IsSuccessful = response.Success,
@@ -164,7 +164,7 @@ public class AuthorsController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .Get
+                        .FetchedSingle
                 }
             );
 
@@ -195,7 +195,7 @@ public class AuthorsController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .Get
+                        .FetchedSingle
                 }
             );
             return NotFound();
@@ -210,14 +210,14 @@ public class AuthorsController : CustomBaseController
     /// <param name="request">Yazarları filtrelemek için kriterleri içeren istek nesnesi.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpGet]
-    public async Task<IActionResult> GetAllBooks([FromQuery] GetAllAuthorsQueryRequest request)
+    public async Task<IActionResult> GetAllAuthors([FromQuery] GetAllAuthorsQueryRequest request)
     {
         var response = await _mediator.Send(request);
 
         if (response != null && response.Data != null)
         {
             await _mediator.Publish(
-                new BookCommandEvent()
+                new AuthorEvent()
                 {
                     Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                     IsSuccessful = response.Success,
@@ -225,7 +225,7 @@ public class AuthorsController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .GetAll
+                        .FetchedAll
                 }
             );
 
@@ -247,7 +247,7 @@ public class AuthorsController : CustomBaseController
         else
         {
             await _mediator.Publish(
-                new BookCommandEvent()
+                new AuthorEvent()
                 {
                     Errors = response.Success ? Array.Empty<string>() : response.StateMessages,
                     IsSuccessful = false,
@@ -255,7 +255,7 @@ public class AuthorsController : CustomBaseController
                         .Domain
                         .Enums
                         .RequestNotificationType
-                        .GetAll
+                        .FetchedAll
                 }
             );
             return NotFound();

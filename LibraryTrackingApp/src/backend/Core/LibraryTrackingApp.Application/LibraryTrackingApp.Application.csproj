@@ -18,6 +18,7 @@
 	  <PackageReference Include="FluentValidation" Version="11.9.0" />
 	  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.7.1" />
 	  <PackageReference Include="AutoMapper" Version="13.0.0" />
+	  <PackageReference Include="Microsoft.Identity.Client" Version="4.47.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +31,8 @@
 	<Folder Include="Authorization\Handlers\" />
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
+	<Folder Include="Claims\" />
+	<Folder Include="Features\AppUsers\Behaviors\Validator\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Mapping\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Validator\" />
 	<Folder Include="Features\BorrowBooks\Commands\Handlers\" />
@@ -75,6 +78,9 @@
 	<Folder Include="Features\BranchHours\Queries\Handlers\" />
 	<Folder Include="Features\BranchHours\Queries\Requests\" />
 	<Folder Include="Features\BranchHours\Queries\Responses\" />
+	<Folder Include="Features\AppUsers\Queries\Handlers\" />
+	<Folder Include="Features\AppUsers\Queries\Requests\" />
+	<Folder Include="Features\AppUsers\Queries\Responses\" />
 	<Folder Include="Features\Staffs\Behaviors\Mapping\" />
 	<Folder Include="Features\Staffs\Behaviors\Validator\" />
 	<Folder Include="Features\Staffs\Commands\Handlers\" />
@@ -111,8 +117,6 @@
 	<Folder Include="Features\BookGenres\Queries\Handlers\" />
 	<Folder Include="Features\BookGenres\Queries\Requests\" />
 	<Folder Include="Features\BookGenres\Queries\Responses\" />
-	<Folder Include="Interfaces\Services\" />
-	<Folder Include="Claims\" />
 	<Folder Include="Middlewares\" />
   </ItemGroup>
 

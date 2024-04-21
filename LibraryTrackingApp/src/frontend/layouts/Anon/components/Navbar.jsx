@@ -29,7 +29,7 @@ export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   return (
-    <Box px={4} bg={useColorModeValue("white", "gray.800")}>
+    <Box px={10} bg={useColorModeValue("white", "gray.800")}>
       <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
         <Link href="/">
           <Text fontWeight={"semibold"}>LOGO</Text>

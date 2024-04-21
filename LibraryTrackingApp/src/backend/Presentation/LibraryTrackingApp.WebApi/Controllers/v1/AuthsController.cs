@@ -2,18 +2,16 @@
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
-
 /// <summary>
 /// Yönetici işlemlerini yönetmek için Controller.
 /// </summary>
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
-[Route($"api/v{ApiVersions.V1}/admin")]
+[Route($"api/v{ApiVersions.V1}/auths")]
 public class AuthsController : CustomBaseController
 {
-    public AuthsController(IMediator mediator) : base(mediator)
-    {
-    }
+    public AuthsController(IMediator mediator)
+        : base(mediator) { }
 
     //[HttpGet]
     //public async Task<IActionResult> Index()
@@ -21,5 +19,3 @@ public class AuthsController : CustomBaseController
     //    return Ok();
     //}
 }
-      
-
