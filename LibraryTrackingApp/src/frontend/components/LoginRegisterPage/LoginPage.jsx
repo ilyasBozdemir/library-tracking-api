@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
-import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import {
   Container,
@@ -47,10 +46,7 @@ const LoginPage = () => {
 
   return (
     <>
-      <NextSeo
-        title="Giriş Yap"
-        description="Kütüphane uygulamasına giriş yapın. Emanet kitaplarınızı yönetin ve okuma listelerinizi oluşturun."
-      />
+     
       <Container maxW="7xl" p={{ base: 5, md: 10 }}>
         <Center>
           <Stack spacing={4}>

@@ -54,7 +54,6 @@ export default function CreateAuthorForm() {
       var data = JSON.stringify(values, null, 2);
 
       var result = await AuthorService.createAuthor(data);
-      alert(result.response.status);
 
       if (result.isSucces === true) {
         FormClear(values);
@@ -75,7 +74,7 @@ export default function CreateAuthorForm() {
           isClosable: true,
         });
       }
-    },
+    }
   });
 
   return (

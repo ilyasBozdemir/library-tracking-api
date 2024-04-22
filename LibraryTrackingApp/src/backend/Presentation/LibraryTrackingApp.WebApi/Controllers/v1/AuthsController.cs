@@ -17,10 +17,11 @@ public class AuthsController : CustomBaseController
         : base(mediator) { }
 
     /// <summary>
-    /// 
+    /// Kullanıcı oluşturma isteği alır ve işler.
     /// </summary>
-    /// <param name="request"></param>
-    /// <returns></returns>
+    /// <param name="request">Oluşturulacak kullanıcının bilgilerini içeren istek nesnesi.</param>
+    /// <returns>İşlem sonucunu ve gerekirse ek bilgileri içeren JSON yanıtı.</returns>
+
     [HttpPost("create-user")]
     [AllowAnonymous]
     [ProducesResponseType(StatusCodes.Status200OK)]
@@ -31,7 +32,7 @@ public class AuthsController : CustomBaseController
 
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -57,12 +58,17 @@ public class AuthsController : CustomBaseController
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
     {
-        LoginUserCommandResponse commandResponse = await _mediator.Send(loginUserCommandRequest);
+        LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
 
-        return new JsonResult(new { data = commandResponse.Token })
+        var responseValue = new
         {
-            StatusCode = commandResponse.StatusCode
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
         };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 
    

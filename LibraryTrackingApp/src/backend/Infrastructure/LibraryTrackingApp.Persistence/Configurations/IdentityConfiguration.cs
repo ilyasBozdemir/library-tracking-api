@@ -18,7 +18,7 @@ public static class IdentityConfiguration
     {
         PasswordOptions = new PasswordOptions
         {
-            RequiredLength = 12,
+            RequiredLength = 5,
             RequiredUniqueChars = 3,
             RequireNonAlphanumeric = true,
             RequireLowercase = true,

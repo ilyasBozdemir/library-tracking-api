@@ -41,7 +41,7 @@ public class AuthorsController : CustomBaseController
 
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -51,6 +51,7 @@ public class AuthorsController : CustomBaseController
         {
             StatusCode = response.StatusCode
         };
+
     }
 
     /// <summary>
@@ -86,7 +87,7 @@ public class AuthorsController : CustomBaseController
 
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -127,7 +128,7 @@ public class AuthorsController : CustomBaseController
 
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -173,7 +174,7 @@ public class AuthorsController : CustomBaseController
 
             var responseValue = new
             {
-                IsSucces = response.Success,
+                IsSuccess = response.Success,
                 StatusCode = response.StatusCode,
                 Messages = response.StateMessages.ToArray(),
                 Data = response.Data,
@@ -233,7 +234,7 @@ public class AuthorsController : CustomBaseController
 
             var responseValue = new
             {
-                IsSucces = response.Success,
+                IsSuccess = response.Success,
                 StatusCode = response.StatusCode,
                 Messages = response.StateMessages.ToArray(),
                 Data = response.Data,
