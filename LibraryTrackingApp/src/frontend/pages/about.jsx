@@ -1,9 +1,8 @@
-import React from 'react'
+import { useAuth } from "@/contexts/AuthContext";
+import React from "react";
 
 function AboutPage() {
-  return (
-    <div>AboutPage</div>
-  )
+  return <>AboutPage</>;
 }
 
-export default AboutPage
+export default AboutPage;

@@ -28,3 +28,5 @@ export const AppContextProvider = ({ children }) => {
     <AppContext.Provider value={contextValue}>{children}</AppContext.Provider>
   );
 };
+
+export const useApp = () => useContext(AppContext);

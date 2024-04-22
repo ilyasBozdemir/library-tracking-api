@@ -25,6 +25,8 @@ const navLinks = [
   { name: "Blog", path: "/blog" },
 ];
 
+
+
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
 
