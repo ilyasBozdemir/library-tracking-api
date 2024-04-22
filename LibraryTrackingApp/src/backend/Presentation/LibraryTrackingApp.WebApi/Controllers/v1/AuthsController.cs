@@ -1,5 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Features.AppUsers.Commands.Requests;
 using LibraryTrackingApp.Application.Features.AppUsers.Commands.Responses;
+using LibraryTrackingApp.Application.Features.CheckUserExistence.Queries.Requests;
 using LibraryTrackingApp.Infrastructure.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
@@ -71,7 +72,26 @@ public class AuthsController : CustomBaseController
         return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 
-   
+
+
+    // hata veriyor burası buraya gelmeden düzeltilcektir
+
+
+    [HttpPost("check-user-existence")]
+    public async Task<IActionResult> CheckUserExistence( CheckUserExistenceQueryRequest query)
+    {
+        var response = await _mediator.Send(query);
+        var responseValue = new
+        {
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
+
+    }
 
 
 

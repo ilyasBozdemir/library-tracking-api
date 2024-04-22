@@ -42,7 +42,7 @@ const LoginRegisterPage = () => {
   const bg = bgColors[activeTab];
   return (
     <>
-      <Flex direction="column" justify="center" align="center" h="100vh">
+      <Flex direction="column" justify="center" align="center" >
         <Tabs
           align="center"
           position="relative"

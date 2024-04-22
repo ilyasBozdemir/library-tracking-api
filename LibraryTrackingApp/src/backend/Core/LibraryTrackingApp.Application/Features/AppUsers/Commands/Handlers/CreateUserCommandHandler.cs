@@ -30,7 +30,12 @@ public class CreateUserCommandHandler : IRequestHandler<CreateUserCommandRequest
             bool userExists = await _authService.CheckUserExistence(request.Username, request.Email);
 
             if (userExists)
-                throw new AlreadyExistsException(ExceptionMessages.UserAlreadyExistsException);
+                return new()
+                {
+                    StatusCode = 409,
+                    Success = false,
+                    StateMessages = new string[] { "Bu bilgilere sahip bir kullanıcı zaten mevcut." }
+                };
 
 
             var user = _mapper.Map<CreateUserDTO>(request);

@@ -81,6 +81,12 @@
 	<Folder Include="Features\AppUsers\Queries\Handlers\" />
 	<Folder Include="Features\AppUsers\Queries\Requests\" />
 	<Folder Include="Features\AppUsers\Queries\Responses\" />
+	<Folder Include="Features\CheckUserExistence\Behaviors\Mapping\" />
+	<Folder Include="Features\CheckUserExistence\Behaviors\Validator\" />
+	<Folder Include="Features\CheckUserExistence\Commands\Handlers\" />
+	<Folder Include="Features\CheckUserExistence\Commands\Requests\" />
+	<Folder Include="Features\CheckUserExistence\Commands\Responses\" />
+	<Folder Include="Features\CheckUserExistence\Events\" />
 	<Folder Include="Features\MailConfigurations\Behaviors\Mapping\" />
 	<Folder Include="Features\MailConfigurations\Events\" />
 	<Folder Include="Features\JwtConfigurations\Behaviors\Mapping\" />
