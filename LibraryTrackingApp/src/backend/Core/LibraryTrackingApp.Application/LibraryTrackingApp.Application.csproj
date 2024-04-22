@@ -32,6 +32,7 @@
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
 	<Folder Include="Claims\" />
+	<Folder Include="DTOs\MailConfiguration\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Mapping\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Validator\" />
 	<Folder Include="Features\BorrowBooks\Commands\Handlers\" />
@@ -80,8 +81,10 @@
 	<Folder Include="Features\AppUsers\Queries\Handlers\" />
 	<Folder Include="Features\AppUsers\Queries\Requests\" />
 	<Folder Include="Features\AppUsers\Queries\Responses\" />
-	<Folder Include="Features\JwtConfiguration\Behaviors\Mapping\" />
-	<Folder Include="Features\JwtConfiguration\Events\" />
+	<Folder Include="Features\MailConfigurations\Behaviors\Mapping\" />
+	<Folder Include="Features\MailConfigurations\Events\" />
+	<Folder Include="Features\JwtConfigurations\Behaviors\Mapping\" />
+	<Folder Include="Features\JwtConfigurations\Events\" />
 	<Folder Include="Features\Staffs\Behaviors\Mapping\" />
 	<Folder Include="Features\Staffs\Behaviors\Validator\" />
 	<Folder Include="Features\Staffs\Commands\Handlers\" />

@@ -1,5 +1,5 @@
 ﻿namespace LibraryTrackingApp.Application.DTOs;
-public record JwtConfigurationDTO : BaseAuditableDTO<Guid>
+public record JwtConfigurationDTO : BaseAuditableDTO<int>
 {
     public string Subject { get; set; }
     public string Issuer { get; set; }
