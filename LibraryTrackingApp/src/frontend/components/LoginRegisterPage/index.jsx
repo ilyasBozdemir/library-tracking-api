@@ -6,6 +6,9 @@ import {
   TabPanels,
   Tab,
   TabPanel,
+  useColorModeValue,
+  SlideFade,
+  ScaleFade,
 } from "@chakra-ui/react";
 import LoginPage from "./LoginPage";
 import RegisterPage from "./RegisterPage";
@@ -13,54 +16,73 @@ import { useRouter } from "next/router";
 
 const LoginRegisterPage = () => {
   const [activeTab, setActiveTab] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
   const router = useRouter();
 
   const handleTabChange = (index) => {
+    const paths = ["/register", "/login"];
     setActiveTab(index);
-    switch (index) {
-      case 0:
-        router.push("/register");
-        break;
-      case 1:
-        router.push("/login");
-        break;
-      default:
-        break;
-    }
+    router.push(paths[index]);
   };
 
   useEffect(() => {
-    if (router.pathname === "/login") {
-      setActiveTab(1);
-    } else if (router.pathname === "/register") {
-      setActiveTab(0);
+    const paths = ["/register", "/login"];
+    const index = paths.findIndex((path) => path === router.pathname);
+    if (index !== -1) {
+      setActiveTab(index);
     }
+    setIsMounted(true);
   }, [router.pathname]);
 
+  const bgColors = useColorModeValue(
+    ["teal.50", "blue.50"],
+    ["teal.900", "blue.900"]
+  );
+
+  const bg = bgColors[activeTab];
   return (
-    <Flex direction="column" justify="center" align="center" h="100vh">
-      <Tabs
-        isFitted
-        variant="soft-rounded"
-        onChange={handleTabChange}
-        defaultIndex={activeTab}
-        index={activeTab}
-        colorScheme={"teal"}
-      >
-        <TabList>
-          <Tab onClick={() => handleTabChange(0)}>Kayıt Ol</Tab>
-          <Tab onClick={() => handleTabChange(1)}>Giriş Yap</Tab>
-        </TabList>
-        <TabPanels>
-          <TabPanel>
-            <RegisterPage />
-          </TabPanel>
-          <TabPanel>
-            <LoginPage />
-          </TabPanel>
-        </TabPanels>
-      </Tabs>
-    </Flex>
+    <>
+      <Flex direction="column" justify="center" align="center" h="100vh">
+        <Tabs
+          align="center"
+          position="relative"
+          onChange={handleTabChange}
+          defaultIndex={activeTab}
+          index={activeTab}
+          bg={bg}
+          colorScheme={"teal"}
+        >
+          <TabList>
+            <Tab
+              _selected={{ color: "white", bg: "teal.400" }}
+              onClick={() => handleTabChange(0)}
+            >
+              Kayıt Ol
+            </Tab>
+            <Tab
+              _selected={{ color: "white", bg: "blue.400" }}
+              onClick={() => handleTabChange(1)}
+            >
+              Giriş Yap
+            </Tab>
+          </TabList>
+          {isMounted && (
+            <TabPanels>
+              <ScaleFade initialScale={0.5} in={true}>
+                <TabPanel>
+                  <RegisterPage />
+                </TabPanel>
+              </ScaleFade>
+              <ScaleFade initialScale={0.5} in={true}>
+                <TabPanel>
+                  <LoginPage />
+                </TabPanel>
+              </ScaleFade>
+            </TabPanels>
+          )}
+        </Tabs>
+      </Flex>
+    </>
   );
 };
 

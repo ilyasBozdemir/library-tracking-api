@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import {
   Container,
@@ -31,8 +32,8 @@ const LoginPage = () => {
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
-      username: "system",
-      password: "SYSTEM@DOMAIN.COM",
+      username: "",
+      password: "",
     },
     validationSchema: Yup.object({
       username: Yup.string().required("Kullanıcı adı zorunlu"),
@@ -46,7 +47,10 @@ const LoginPage = () => {
 
   return (
     <>
-     
+      <NextSeo
+        title="Giriş Yap"
+        description="Kütüphane uygulamasına giriş yapın. Emanet kitaplarınızı yönetin ve okuma listelerinizi oluşturun."
+      />
       <Container maxW="7xl" p={{ base: 5, md: 10 }}>
         <Center>
           <Stack spacing={4}>
@@ -119,7 +123,12 @@ const LoginPage = () => {
                     Şifremi Unuttum
                   </CLink>
                 </Stack>
-                <Button type="submit" colorScheme={"teal"} rounded="md" w="100%">
+                <Button
+                  type="submit"
+                  colorScheme={"blue"}
+                  rounded="md"
+                  w="100%"
+                >
                   Giriş Yap
                 </Button>
               </VStack>

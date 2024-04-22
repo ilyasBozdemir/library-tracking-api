@@ -18,6 +18,7 @@ import {
   Box,
   useToast,
 } from "@chakra-ui/react";
+import { NextSeo } from "next-seo";
 import AuthService from "@/services/authService";
 
 const RegisterPage = () => {
@@ -98,7 +99,10 @@ const FormClear = (values) => {
 
   return (
     <>
-     
+      <NextSeo
+        title="Kayıt Ol"
+        description="Kütüphane uygulamasına kayıt olun. Emanet kitaplarınızı yönetmeye başlayın ve favori kitaplarınızı ekleyin."
+      />
       <Container maxW="7xl" p={{ base: 5, md: 10 }}>
         <Center>
           <Stack spacing={4}>
