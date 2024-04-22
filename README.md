@@ -97,20 +97,20 @@ Bu Uygulama, aşağıdaki temel bileşenleri ve kütüphaneleri kullanarak güç
 
 Frontend kısmında, modern ve kullanıcı dostu bir deneyim sunmak için aşağıdaki teknolojiler kullanılmıştır:
 
-- **React**: Hızlı ve etkileşimli kullanıcı arayüzleri oluşturmak için tercih edilmiştir.
-- **Next.js**: SSR (Server-Side Rendering) desteği ve kolay yönetilebilirlik sağlamak için kullanılmıştır.
-- **TypeScript**: Daha güvenli ve okunabilir kod yazmak için TypeScript tercih edilmiştir.
-- **Tailwind CSS**: Esnek ve hızlı bir şekilde stil oluşturmak için kullanılmıştır.
+> - **React**: Hızlı ve etkileşimli kullanıcı arayüzleri oluşturmak için tercih edilmiştir.
+> - **Next.js**: SSR (Server-Side Rendering) desteği ve kolay yönetilebilirlik sağlamak için kullanılmıştır.
+> - **TypeScript**: Daha güvenli ve okunabilir kod yazmak için TypeScript tercih edilmiştir.
+> - **Tailwind CSS**: Esnek ve hızlı bir şekilde stil oluşturmak için kullanılmıştır.
 
 ### `Tests`
 
 Uygulamanın doğruluğunu ve tutarlılığını sağlamak için aşağıdaki test kütüphaneleri kullanılmıştır:
 
-- **Jest**: JavaScript uygulamaları için bir test çerçevesidir.
-- **React Testing Library**: React bileşenlerini test etmek için kullanılmıştır.
-- **xUnit**: .NET Core uygulamaları için bir test çerçevesidir.
-- **SpecFlow**: BDD (Behavior Driven Development) için kullanılan bir test otomasyon aracıdır.
-- **Selenium**: Web uygulamalarının otomatik test edilmesi için kullanılmıştır.
+> - **Jest**: JavaScript uygulamaları için bir test çerçevesidir.
+> - **React Testing Library**: React bileşenlerini test etmek için kullanılmıştır.
+> - **xUnit**: .NET Core uygulamaları için bir test çerçevesidir.
+> - **SpecFlow**: BDD (Behavior Driven Development) için kullanılan bir test otomasyon aracıdır.
+> - **Selenium**: Web uygulamalarının otomatik test edilmesi için kullanılmıştır.
 
 ## `Entity`
 
