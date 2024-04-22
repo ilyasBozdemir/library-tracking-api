@@ -2,7 +2,7 @@ import React from 'react'
 
 function FeaturesPage() {
   return (
-    <>FeaturesPage</>
+    <div>FeaturesPage</div>
   )
 }
 

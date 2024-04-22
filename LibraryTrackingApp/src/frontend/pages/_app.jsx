@@ -6,10 +6,12 @@ const AppLayout = dynamic(() => import("@/layouts/App/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
 const ErrorLayout = dynamic(() => import("@/layouts/Error/layout"));
 const PlaceholderLayout = dynamic(() =>
-  import("@/layouts/PlaceholderLayout/layout")
+  import("@/layouts/Placeholder/layout")
 );
 
-import { useColorMode,colorMode } from "@chakra-ui/react";
+
+
+import { useColorMode, colorMode } from "@chakra-ui/react";
 
 import "../styles/globals.css";
 import AOS from "aos";
@@ -17,18 +19,20 @@ import "aos/dist/aos.css";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { darkTheme, lightTheme } from "@/src/foundations/colors";
+import { AuthContextProvider, AuthProvider } from "@/contexts/AuthContext";
+import { AppContextProvider } from "@/contexts/AppContext";
 
 function MyApp({ Component, pageProps, session, statusCode }) {
   const router = useRouter();
 
-  const theme = extendTheme(colorMode === "light" ? lightTheme.colors : darkTheme.colors);
-
-
+  const theme = extendTheme(
+    colorMode === "light" ? lightTheme.colors : darkTheme.colors
+  );
 
   const placeholderRoutes = ["/login", "/register", "/docs", "/api-docs"];
   const anonLayoutRoutes = ["/./"];
-  const adminLayoutRoutes = /^\/admin(?:\/|$)/
-  const appLayoutRoutes = /^\/app(?:\/|$)/
+  const adminLayoutRoutes = /^\/admin(?:\/|$)/;
+  const appLayoutRoutes = /^\/app(?:\/|$)/;
 
   const routeLayoutMap = [
     { regex: adminLayoutRoutes, layout: AdminLayout },
@@ -58,18 +62,20 @@ function MyApp({ Component, pageProps, session, statusCode }) {
 
   return (
     <>
-      {[401, 403, 404, 500, 501].includes(statusCode) ? (
+      {[401, 403, 404, 409, 500, 501, 502, 503].includes(statusCode) ? (
         <>
           <ErrorLayout statusCode={statusCode} />
         </>
       ) : (
-        <>
-          <ChakraProvider theme={theme} resetCSS>
-            <Layout>
-              <Component {...pageProps} />
-            </Layout>
-          </ChakraProvider>
-        </>
+        <AppContextProvider>
+          <AuthContextProvider>
+            <ChakraProvider theme={theme} resetCSS>
+              <Layout>
+                <Component {...pageProps} />
+              </Layout>
+            </ChakraProvider>
+          </AuthContextProvider>
+        </AppContextProvider>
       )}
     </>
   );
