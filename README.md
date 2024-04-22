@@ -282,31 +282,3 @@ dotnet restore
    ```
 
 5. Admin sayfası için http://localhost:3000/ sayfasını acın.
-
-## Proje Özellikleri
-
-Proje, çeşitli mimari ve tasarım desenlerini kullanarak geliştirilmiş ve bir dizi kütüphane ve araçtan faydalanmaktadır.
-
-### Backend
-
-- **Onion Architecture**: Modüler ve katmanlı bir yapı kullanılarak geliştirilmiştir.
-- **MediatR Pattern**: İsteklerin işlenmesi için bir mediatör tasarım deseni kullanılmıştır.
-- **CQRS Repository Unit of Work Pattern**: Komut ve sorgu sorumluluk ayrımı yapılarak repository ve unit of work desenleri kullanılmıştır.
-- **Health Check Eklentisi**: Uygulamanın durumunu izlemek için sağlık kontrolü eklentisi entegre edilmiştir.
-- **Serilog**: Yapılandırılabilir ve genişletilebilir bir günlükleme kütüphanesi planlanmıştır.
-- **Swagger Dokümantasyonu**: API'nin gelişmiş belgelendirilmesi için Swagger kullanılmıştır.
-- **AutoMapper**: Nesne eşlemesi için kullanılan bir kütüphanedir.
-- **FluentValidation**: Giriş doğrulaması için kullanılan bir kütüphanedir.
-
-### Frontend
-
-- **Next.js**: React tabanlı web uygulamaları için bir frameworktür.
-- **Chakra UI**: React bileşenleri için bir UI kütüphanesidir.
-- **Tailwind CSS**: Hızlı ve esnek CSS framework'üdür.
-- **Redoc Library**: Swagger JSON'dan beslenen API dokümantasyonu için bir kütüphanedir. Bu kütüphane, API'nin belgelendirilmesi için kullanıcı dostu bir arayüz sağlar.
-
-### Testler
-
-- SpecFlow: Yazılım davranışlarını anlamak ve doğrulamak için kullanılan bir BDD (Behaviour Driven Development) aracıdır.
-- Selenium: Web uygulamalarını otomatik olarak test etmek için kullanılan bir araçtır.
-- TDD ve BDD Yaklaşımları: Yazılım geliştirme sürecinde Test Driven Development (TDD) ve Behaviour Driven Development (BDD) yaklaşımları kullanılmıştır. Bu yaklaşımlar, yazılımın testlerini öncelikle yazarak ve testlerin başarılı olması için kod geliştirerek yazılımın kalitesini artırmayı hedefler.
