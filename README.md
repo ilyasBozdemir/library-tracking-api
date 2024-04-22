@@ -281,7 +281,7 @@ dotnet restore
    npm run start
    ```
 
-5. Admin sayfası için http://localhost:3000/admin/ sayfasını acın.
+5. Admin sayfası için http://localhost:3000/ sayfasını acın.
 
 ## Proje Özellikleri
 
