@@ -32,8 +32,8 @@ const LoginPage = () => {
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
-      username: "system",
-      password: "SYSTEM@DOMAIN.COM",
+      username: "",
+      password: "",
     },
     validationSchema: Yup.object({
       username: Yup.string().required("Kullanıcı adı zorunlu"),
@@ -123,7 +123,12 @@ const LoginPage = () => {
                     Şifremi Unuttum
                   </CLink>
                 </Stack>
-                <Button type="submit" colorScheme={"teal"} rounded="md" w="100%">
+                <Button
+                  type="submit"
+                  colorScheme={"blue"}
+                  rounded="md"
+                  w="100%"
+                >
                   Giriş Yap
                 </Button>
               </VStack>

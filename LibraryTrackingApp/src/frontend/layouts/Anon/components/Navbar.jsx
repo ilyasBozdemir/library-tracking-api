@@ -10,7 +10,7 @@ import {
   useDisclosure,
   useColorModeValue,
   textDecoration,
-  Link as CLink
+  Link as CLink,
 } from "@chakra-ui/react";
 // Here we have used react-icons package for the icons
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -19,13 +19,12 @@ import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Link from "next/link";
 
 const navLinks = [
-  { name: "Hakkımızda", path: "/about" , target:'_self' },
-  { name: "Özellikler", path: "/features" , target:'_self' },
-  { name: "Dökümantasyon", path: "/docs", target:'_blank' },
+  { name: "Hakkımızda", path: "/about", target: "_self" },
+  { name: "Özellikler", path: "/features", target: "_self" },
+  { name: "Dökümantasyon", path: "/docs", target: "_blank" },
+  { name: "Topluluk", path: "/community", target: "_self" },
   { name: "Blog", path: "/blog" },
 ];
-
-
 
 export default function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -34,7 +33,9 @@ export default function Navbar() {
     <Box px={10} bg={useColorModeValue("white", "gray.800")}>
       <Flex h={16} alignItems="center" justifyContent="space-between" mx="auto">
         <Link href="/">
-          <Text fontWeight={"semibold"}>LOGO</Text>
+          <Text fontWeight={"semibold"} fontSize={{ base: 18, md: 20 }} line>
+            LOGO
+          </Text>
         </Link>
 
         <HStack
@@ -71,6 +72,7 @@ export default function Navbar() {
           aria-label="Open Menu"
           display={{ base: "inherit", md: "none" }}
           onClick={isOpen ? onClose : onOpen}
+          variant={"ghost"}
         />
       </Flex>
 
@@ -87,20 +89,18 @@ export default function Navbar() {
   );
 }
 
-const NavLink = ({ name, path,target, onClose }) => {
+const NavLink = ({ name, path, target, onClose }) => {
   return (
     <CLink
-    as={Link}
+      as={Link}
       href={path}
       lineHeight="inherit"
       target={target}
       _hover={{
         textDecoration: "none",
         color: useColorModeValue("teal.500", "teal.200"),
-        textDecoration:'underline'
+        textDecoration: "underline",
       }}
-
-
       onClick={() => onClose()}
     >
       {name}

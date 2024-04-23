@@ -51,7 +51,7 @@ public class BookStocksController : CustomBaseController
 
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -92,7 +92,7 @@ public class BookStocksController : CustomBaseController
         );
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -124,7 +124,7 @@ public class BookStocksController : CustomBaseController
         );
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -155,7 +155,7 @@ public class BookStocksController : CustomBaseController
         );
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,

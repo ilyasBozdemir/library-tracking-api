@@ -1,5 +1,6 @@
 ﻿using LibraryTrackingApp.Application.Features.AppUsers.Commands.Requests;
 using LibraryTrackingApp.Application.Features.AppUsers.Commands.Responses;
+using LibraryTrackingApp.Application.Features.CheckUserExistence.Queries.Requests;
 using LibraryTrackingApp.Infrastructure.Mvc;
 using Microsoft.AspNetCore.Authorization;
 
@@ -17,21 +18,20 @@ public class AuthsController : CustomBaseController
         : base(mediator) { }
 
     /// <summary>
-    /// 
+    /// Kullanıcı oluşturma isteği alır ve işler.
     /// </summary>
-    /// <param name="request"></param>
-    /// <returns></returns>
+    /// <param name="request">Oluşturulacak kullanıcının bilgilerini içeren istek nesnesi.</param>
+    /// <returns>İşlem sonucunu ve gerekirse ek bilgileri içeren JSON yanıtı.</returns>
+
     [HttpPost("create-user")]
     [AllowAnonymous]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
     public async Task<IActionResult> CreateUser(CreateUserCommandRequest request)
     {
         CreateUserCommandResponse response = await _mediator.Send(request);
 
         var responseValue = new
         {
-            IsSucces = response.Success,
+            IsSuccess = response.Success,
             StatusCode = response.StatusCode,
             Messages = response.StateMessages.ToArray(),
             Data = response.Data,
@@ -52,20 +52,50 @@ public class AuthsController : CustomBaseController
 
     [HttpPost("login")]
     [AllowAnonymous]
-    [ProducesResponseType(StatusCodes.Status200OK)]
-    [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Login(LoginUserCommandRequest loginUserCommandRequest)
     {
-        LoginUserCommandResponse commandResponse = await _mediator.Send(loginUserCommandRequest);
+        LoginUserCommandResponse response = await _mediator.Send(loginUserCommandRequest);
 
-        return new JsonResult(new { data = commandResponse.Token })
+        var responseValue = new
         {
-            StatusCode = commandResponse.StatusCode
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
         };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 
-   
+
+
+    // hata veriyor burası buraya gelmeden düzeltilcektir
+
+    /// <summary>
+    /// Verilen e-posta adresinin veritabanında var olup olmadığını kontrol eder.
+    /// </summary>
+    /// <param name="query">Kontrol edilecek e-posta adresi veya username alır.</param>
+    /// <returns>E-posta adresi zaten varsa true, yoksa false döner.</returns>
+    [HttpPost("check-user-existence")]
+    [AllowAnonymous]
+
+    public async Task<IActionResult> CheckUserExistence( CheckUserExistenceQueryRequest request)
+    {
+        var response = await _mediator.Send(request);
+        var responseValue = new
+        {
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            StatusResult = response.StatusResult,
+        };
+
+        return new JsonResult(responseValue)
+        {
+            StatusCode = response.StatusCode
+        };
+
+    }
 
 
 

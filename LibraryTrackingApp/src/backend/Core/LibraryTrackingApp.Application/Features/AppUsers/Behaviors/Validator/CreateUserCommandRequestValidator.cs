@@ -5,11 +5,19 @@ public class CreateUserCommandRequestValidator : AbstractValidator<CreateUserCom
 {
     public CreateUserCommandRequestValidator()
     {
-        RuleFor(x => x.Username).NotEmpty().WithMessage("Kullanıcı adı boş olamaz");
-        RuleFor(x => x.Email).NotEmpty().EmailAddress().WithMessage("Geçerli bir e-posta adresi giriniz");
+        RuleFor(x => x.Username)
+            .NotEmpty()
+            .WithMessage("Kullanıcı adı boş olamaz");
+
+        RuleFor(x => x.Email)
+            .NotEmpty()
+            .EmailAddress()
+            .WithMessage("Geçerli bir e-posta adresi giriniz");
+
         RuleFor(x => x.TelNumber)
-           .NotEmpty().WithMessage("Telefon numarası boş olamaz.")
-           .Must(BeAValidPhoneNumber).WithMessage("Geçersiz telefon numarası.");
+           .NotEmpty()
+           .WithMessage("Telefon numarası boş olamaz.");
+
         RuleFor(x => x.Password).NotEmpty().WithMessage("Şifre boş olamaz");
     }
     private bool BeAValidPhoneNumber(string telNumber)
