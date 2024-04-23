@@ -32,7 +32,7 @@ public class CheckUserExistenceQueryHandler:IRequestHandler<CheckUserExistenceQu
 
             return new()
             {
-                Status = userExists
+                StatusResult = userExists
             };
 
         }

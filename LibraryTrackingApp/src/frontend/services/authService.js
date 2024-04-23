@@ -27,33 +27,20 @@ const AuthService = {
     }
   },
   checkUsernameExists: async (username) => {
-    /*
-    try {
-      const response = await customAxios.post(
-        `${AUTH_BASE_API_URL}/check-user-existence`,
-        username
-      );
-      return response?.data;
-    } catch (error) {
-      // Hata varsa konsola yazma
-      return Promise.reject(error);
-    }
-  */
-    return false;
+    console.table(username)
+    const response = await customAxios.post(
+      `${AUTH_BASE_API_URL}/check-user-existence`,
+      username
+    );
+    return response?.data.statusResult;
+
   },
   checkEmailExists: async (email) => {
-    /*
-    try {
-      const response = await customAxios.post(
-        `${AUTH_BASE_API_URL}/check-user-existence`,
-        email
-      );
-      return response?.data;
-    } catch (error) {
-      return Promise.reject(error);
-    }
-  */
-    return false;
+    const response = await customAxios.post(
+      `${AUTH_BASE_API_URL}/check-user-existence`,
+      email
+    );
+    return response?.data.statusResult;
   },
 };
 

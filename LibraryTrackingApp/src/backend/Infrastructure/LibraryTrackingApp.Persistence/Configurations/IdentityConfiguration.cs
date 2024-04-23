@@ -43,7 +43,7 @@ public static class IdentityConfiguration
         UserOptions = new UserOptions
         {
             AllowedUserNameCharacters =
-                "abcçdefghıijklmnoçpqrsştuüvwxyzABCÇDEFGHIİJKLMNOÖPQRSŞTUÜVWXYZ0123456789-._@+'#!/^%{}*",
+                "abcçdefghıijklmnoçpqrsştuüvwxyzABCÇDEFGHIİJKLMNOÖPQRSŞTUÜVWXYZ0123456789_.\\-!@#$%^&*(),.?\":{}|<>",
             RequireUniqueEmail = true
         };
 

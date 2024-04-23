@@ -4,5 +4,5 @@ namespace LibraryTrackingApp.Application.Features.CheckUserExistence.Queries.Req
 
 public class CheckUserExistenceQueryRequest:IRequest<CheckUserExistenceQueryResponse>
 {
-    public string UsernameOrEmail { get; }
+    public string UsernameOrEmail { get; set; }
 }

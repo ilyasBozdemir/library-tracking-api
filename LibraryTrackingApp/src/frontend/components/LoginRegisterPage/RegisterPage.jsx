@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 import {
@@ -25,10 +25,6 @@ import { NextSeo } from "next-seo";
 import AuthService from "@/services/authService";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 
-
-//username ve email için debounce tekniği uygulancaktır yazmayı bırakınca kullanıcı 150 ms sonra mesela sunucuya istek atıcak gereksiz istek atılmasını önlencektir
-
-
 const RegisterPage = () => {
   const toast = useToast();
 
@@ -45,7 +41,6 @@ const RegisterPage = () => {
     values.telNumber = "";
     values.password = "";
   };
-
 
   const formik = useFormik({
     initialValues: {
@@ -64,7 +59,9 @@ const RegisterPage = () => {
           "username-exists",
           "Bu Kullanıcı adı zaten kullanılıyor.",
           async function (value) {
-            const usernameExists = await AuthService.checkUsernameExists(value);
+            const usernameExists = await AuthService.checkUsernameExists({
+              UsernameOrEmail: value,
+            });
             return !usernameExists;
           }
         ),
@@ -73,10 +70,16 @@ const RegisterPage = () => {
       email: Yup.string()
         .email("Geçerli bir e-posta adresi girin")
         .required("E-posta zorunlu")
-        .test('email-exists', 'Bu e-posta adresi zaten kullanılıyor', async function (value) {
-          const emailExists = await AuthService.checkEmailExists(value);
-          return !emailExists;
-        }),
+        .test(
+          "email-exists",
+          "Bu e-posta adresi zaten kullanılıyor",
+          async function (value) {
+            const emailExists = await AuthService.checkEmailExists({
+              UsernameOrEmail: value,
+            });
+            return !emailExists;
+          }
+        ),
       telNumber: Yup.string()
         .matches(/^\d{10}$/, "Geçerli bir telefon numarası girin")
         .required("Telefon zorunlu"),
@@ -128,6 +131,9 @@ const RegisterPage = () => {
       }
     },
   });
+
+
+
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   return (

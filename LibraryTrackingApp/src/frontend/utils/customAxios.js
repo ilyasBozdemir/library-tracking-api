@@ -37,7 +37,7 @@ customAxios.interceptors.response.use(
     } else if (error.response && error.response.status === 409) {
       alert("İstenilen kaynak zaten mevcut.");
     } else {
-      alert("Beklenmedik bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+      alert("Sunucuya bağlanırken bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
     }
    
      //return Promise.reject(error);

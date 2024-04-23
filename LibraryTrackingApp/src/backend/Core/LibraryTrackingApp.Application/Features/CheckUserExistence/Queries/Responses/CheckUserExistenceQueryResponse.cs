@@ -4,5 +4,5 @@ namespace LibraryTrackingApp.Application.Features.CheckUserExistence.Queries.Res
 
 public class CheckUserExistenceQueryResponse:QueryResult
 {
-    public bool Status { get; set; }
+    public bool StatusResult { get; set; }
 }
