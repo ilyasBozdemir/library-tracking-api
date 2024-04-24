@@ -63,7 +63,7 @@ const AuthorsPage = () => {
   const cancelRef = React.useRef();
 
   const handleAddAuthor = () => {
-    router.push("/admin/author/new");
+    router.push("/app/author/new");
   };
 
   const handleEditClick = (author) => {
@@ -119,7 +119,7 @@ const AuthorsPage = () => {
                 <Td> {author.country} </Td>
                 <Td>
                   <Button
-                    onClick={() => router.push(`/admin/author/${author.id}`)}
+                    onClick={() => router.push(`/app/author/${author.id}`)}
                     colorScheme="gray"
                     size="sm"
                     mr={2}

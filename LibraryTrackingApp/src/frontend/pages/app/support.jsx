@@ -41,8 +41,8 @@ const SupportPage = () => {
   };
 
   return (
-    <Box p="6">
-      <Heading mb="4">Destek Talebi Oluştur</Heading>
+    <Box p="5">
+      <Heading mb="4" >Destek Talebi Oluştur</Heading>
       <VStack spacing="4" align="start">
         <Input
           placeholder="Başlık"

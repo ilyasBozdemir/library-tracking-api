@@ -132,8 +132,6 @@ const RegisterPage = () => {
     },
   });
 
-
-
   const [show, setShow] = useState(false);
   const handleClick = () => setShow(!show);
   return (

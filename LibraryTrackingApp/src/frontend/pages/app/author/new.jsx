@@ -173,7 +173,7 @@ export default function CreateAuthorForm() {
                 Kaydet
               </Button>
               <Button
-                onClick={() => router.push("/admin/author")}
+                onClick={() => router.push("/app/author")}
                 colorScheme="orange"
                 variant="outline"
               >

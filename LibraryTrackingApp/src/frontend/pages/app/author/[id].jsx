@@ -58,7 +58,7 @@ function AuthorPage() {
       </Box>
       <VStack my={3}>
         <Button
-          onClick={() => router.push("/admin/author")}
+          onClick={() => router.push("/app/author")}
           colorScheme="orange"
           variant="outline"
         >
