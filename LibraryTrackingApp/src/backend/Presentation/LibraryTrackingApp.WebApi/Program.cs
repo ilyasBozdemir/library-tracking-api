@@ -25,6 +25,7 @@ builder.Services.AddControllers(options =>
 
 builder.Services.AddControllers();
 builder.Services.AddExceptionHandler<ExceptionHandler>();
+builder.Services.AddProblemDetails();
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
