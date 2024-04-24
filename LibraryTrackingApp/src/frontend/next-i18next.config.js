@@ -27,5 +27,4 @@ module.exports = {
     defaultLocale: TR_LOCALE.hl,
   },
   localePath: path.resolve("./locales"),
-  // Diğer ayarlar...
 };

@@ -1,8 +1,7 @@
 const { TR_LOCALE, EN_LOCALE } = require("./lib/locales");
 const { i18n } = require("./next-i18next.config");
 const { siteInfo } = require("./siteInfo");
-siteInfo;
-// routes.js
+
 
 const generateLocaleSource = (locale, path) => {
   return i18n.defaultLocale !== locale ? "/" + locale + path : path;
