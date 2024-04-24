@@ -31,7 +31,7 @@ const RegisterPage = () => {
   // çalısıyor ama backende ki validotr ile burda ki validator kısmında tutarsızlıklar az cok mevcuttur düzeltilkcetir.
   //ne olursa olsun status code 200 dönmesi gerekiyor sunucudan
   // ama gelen json datası içinde gerçek status code dönerse daha tutarlı olucak.
-  // backendde persistence içinde extensions/idendityextensions kısmında şifre ayarına göre.
+  // backendde persistence içinde extensions/idendityextensions kısmında şifre ayarına göre. ayarlandı burası.
 
   const FormClear = (values) => {
     values.username = "";

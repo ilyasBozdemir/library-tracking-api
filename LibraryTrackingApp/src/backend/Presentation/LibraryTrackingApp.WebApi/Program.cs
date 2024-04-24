@@ -9,6 +9,7 @@ using LibraryTrackingApp.Infrastructure.Enums;
 using LibraryTrackingApp.Infrastructure.Extensions;
 using LibraryTrackingApp.Infrastructure.Helpers;
 using LibraryTrackingApp.Persistence;
+using LibraryTrackingApp.WebApi.Middlewares;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
@@ -23,6 +24,7 @@ builder.Services.AddControllers(options =>
 });
 
 builder.Services.AddControllers();
+builder.Services.AddExceptionHandler<ExceptionHandler>();
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
