@@ -108,7 +108,7 @@ function LibraryIndexPage() {
                 <Td> {library.phoneNumber} </Td>
                 <Td>
                   <Button
-                    onClick={() => router.push(`/admin/library/${library.id}`)}
+                    onClick={() => router.push(`/app/library/${library.id}`)}
                     colorScheme="gray"
                     size="sm"
                     mr={2}

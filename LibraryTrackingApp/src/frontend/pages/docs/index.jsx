@@ -3,7 +3,7 @@ import { RedocStandalone } from "redoc";
 import Head from "next/head";
 import { site } from "@/constants/site";
 import axios from "axios";
-import { Flex, Text } from "@chakra-ui/react";
+import {  Text } from "@chakra-ui/react";
 import https from "https";
 
 function DocsPage({ swaggerJsonUri, pageTitle, error }) {
@@ -31,6 +31,11 @@ function DocsPage({ swaggerJsonUri, pageTitle, error }) {
 }
 
 export async function getStaticProps() {
+
+
+  // burda json dosyasını alıp günlük haftalık gibi cachelemek ile 
+  //specUrl yerine spec değerine json dosyasını vererek günde veya haftada bir kere istek atarak daha mantıklı hale getirebiliriz
+  
   try {
     const axiosInstance = axios.create({
       baseURL: site.API_BASE_URL,
