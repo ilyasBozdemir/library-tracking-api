@@ -17,6 +17,7 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const navLinks = [
   { name: "Hakkımızda", path: "/about", target: "_self" },
@@ -90,12 +91,20 @@ export default function Navbar() {
 }
 
 const NavLink = ({ name, path, target, onClose }) => {
+  const router = useRouter();
+  const isActive = router.pathname === path;
+
+  const color = isActive
+    ? useColorModeValue("teal.500", "teal.200")
+    : useColorModeValue("black", "white");
+
   return (
     <CLink
       as={Link}
       href={path}
       lineHeight="inherit"
       target={target}
+      color={color}
       _hover={{
         textDecoration: "none",
         color: useColorModeValue("teal.500", "teal.200"),
