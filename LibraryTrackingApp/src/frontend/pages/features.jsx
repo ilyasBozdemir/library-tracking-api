@@ -1,9 +1,15 @@
-import React from 'react'
+import Features from "@/components/Features";
+import { Box } from "@chakra-ui/react";
+import React from "react";
 
 function FeaturesPage() {
   return (
-    <div>FeaturesPage</div>
-  )
+    <>
+      <Box mt={5}>
+        <Features />
+      </Box>
+    </>
+  );
 }
 
-export default FeaturesPage
+export default FeaturesPage;

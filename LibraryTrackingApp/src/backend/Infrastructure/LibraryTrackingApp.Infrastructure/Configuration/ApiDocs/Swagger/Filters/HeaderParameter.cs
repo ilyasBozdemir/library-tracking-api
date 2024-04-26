@@ -59,7 +59,7 @@ public class HeaderParameter : IOperationFilter
             "İstek için dil tanımlayıcı.",
             ParameterLocation.Header,
             false,
-            "Guid",
+            "string",
             new [] { SupportedLanguage.Turkish, SupportedLanguage.English }
         );
     }

@@ -1,12 +1,10 @@
 ﻿using System.Reflection;
-using System.Text.Json;
 using HealthChecks.UI.Client;
 using LibraryTrackingApp.Application;
 using LibraryTrackingApp.Application.Authorization.Policies;
 using LibraryTrackingApp.Application.Filters;
 using LibraryTrackingApp.Infrastructure;
 using LibraryTrackingApp.Infrastructure.Enums;
-using LibraryTrackingApp.Infrastructure.Extensions;
 using LibraryTrackingApp.Infrastructure.Helpers;
 using LibraryTrackingApp.Persistence;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
@@ -17,12 +15,12 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers(options =>
 {
     options.Filters.Add<CustomExceptionFilter>();
-    options.Filters.Add<CustomExceptionFilter>();
     options.Filters.Add(new ProducesAttribute("application/json", "application/vnd.api+json"));
     options.Filters.Add(new ConsumesAttribute("application/json", "application/vnd.api+json"));
 });
 
 builder.Services.AddControllers();
+builder.Services.AddProblemDetails();
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)

@@ -1,14 +1,18 @@
-﻿namespace LibraryTrackingApp.Domain.Entities.Library;
+﻿using LibraryTrackingApp.Domain.Entities.Identity;
+
+namespace LibraryTrackingApp.Domain.Entities.Library;
+
+/*   
+      MembershipDat, BirthDate
+   
+   unix seconds olarak saklanacaktır sonra ki güncellemede.
+ */
 
 public class Member : BaseEntity<Guid>, IAuditable<Guid>
 {
-    public string Name { get; set; } //ad
-    public string Email { get; set; } // mail
-    public string Address { get; set; } // adres
-    public string PhoneNumber { get; set; } // telefon numarası
+    public Guid UserId { get; set; }
     public DateTime MembershipDate { get; set; } // Üyelik Tarihi
-    public DateTime BirthDate { get; set; } // doğum tarihi
-    public Gender Gender { get; set; } 
+    public GenderType Gender { get; set; } 
     public string Occupation { get; set; } //Meslek
     public MemberType MemberType { get; set; } //Meslek
     
@@ -21,6 +25,9 @@ public class Member : BaseEntity<Guid>, IAuditable<Guid>
 
     public Guid BorrowId { get; set; }
     public Guid LibraryBranchId { get; set; }
+    public AppUser User { get; set; }
+
+
     public virtual ICollection<LibraryBranch> LibraryBranches { get; set; }
     public virtual ICollection<BorrowBook> Borrows { get; set; }
 }

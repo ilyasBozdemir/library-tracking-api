@@ -25,7 +25,8 @@ customAxios.interceptors.response.use(
     return response;
   },
   function (error) {
-    // Handle server error codes and display warning messages
+ 
+    
     if (error.response && error.response.status === 500) {
       alert("Beklenmedik bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
     } else if (error.response && error.response.status === 401) {
@@ -37,11 +38,15 @@ customAxios.interceptors.response.use(
     } else if (error.response && error.response.status === 409) {
       alert("İstenilen kaynak zaten mevcut.");
     } else {
-      alert("Sunucuya bağlanırken bir hata oluştu. Lütfen daha sonra tekrar deneyin.");
+      alert(
+        "Sunucuya bağlanırken bir hata oluştu. Lütfen daha sonra tekrar deneyin."
+      );
     }
-   
-     //return Promise.reject(error);
-     return Promise.resolve(); // Hata yok gibi davranıyoruz
+
+  
+
+    //return Promise.reject(error);
+    return Promise.resolve(); // Hata yok gibi davranıyoruz
   }
 );
 

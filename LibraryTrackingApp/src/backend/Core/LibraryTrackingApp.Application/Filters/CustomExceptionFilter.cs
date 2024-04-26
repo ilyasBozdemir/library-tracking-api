@@ -4,10 +4,17 @@ using Microsoft.AspNetCore.Mvc.Filters;
 using Microsoft.AspNetCore.Mvc;
 
 using System.Net;
-using System.Web.Http.Results;
 
 namespace LibraryTrackingApp.Application.Filters;
 
+
+
+/// <summary>
+/// Bu filtre, işlem sırasında ortaya çıkan istisnaları işler ve uygun HTTP yanıtlarını oluşturarak istemcilere gönderir.
+/// </summary>
+///
+
+// proje içinde fırlatılan istisnalar için burada eğer ki, yakalamazsak 500 interval hatası döner....
 
 public class CustomExceptionFilter : IExceptionFilter
 {
@@ -19,34 +26,34 @@ public class CustomExceptionFilter : IExceptionFilter
                 HandleExceptionMessage(context, authenticationError.Message, HttpStatusCode.Unauthorized);
                 break;
             case AlreadyExistsException alreadyExistsError:
-                HandleExceptionMessage(context, ExceptionMessages.UserAlreadyExistsException, HttpStatusCode.Conflict);
+                HandleExceptionMessage(context, alreadyExistsError.Message, HttpStatusCode.Conflict);
                 break;
             case FluentValidation.ValidationException validationException:
                 HandleExceptionMessage(context, validationException.Message, HttpStatusCode.BadRequest);
                 break;
             case NotFoundException notFoundError:
-                HandleExceptionMessage(context, ExceptionMessages.UserNotFoundException, HttpStatusCode.NotFound);
+                HandleExceptionMessage(context, notFoundError.Message, HttpStatusCode.NotFound);
                 break;
             case CustomGeneralException customGeneralError:
                 HandleExceptionMessage(context, customGeneralError.Message, HttpStatusCode.InternalServerError);
                 break;
             case DuplicateEmailException duplicateEmailError:
-                HandleExceptionMessage(context, ExceptionMessages.DuplicateEmailException, HttpStatusCode.Conflict);
+                HandleExceptionMessage(context, duplicateEmailError.Message, HttpStatusCode.Conflict);
                 break;
             case EmptyException emptyUserError:
-                HandleExceptionMessage(context, ExceptionMessages.EmptyUserException, HttpStatusCode.BadRequest);
+                HandleExceptionMessage(context, emptyUserError.Message, HttpStatusCode.BadRequest);
                 break;
             case InvalidException invalidPasswordError:
-                HandleExceptionMessage(context, ExceptionMessages.InvalidPasswordException, HttpStatusCode.BadRequest);
+                HandleExceptionMessage(context, invalidPasswordError.Message, HttpStatusCode.BadRequest);
                 break;
             case LockoutAccountException lockoutAccountError:
-                HandleExceptionMessage(context, ExceptionMessages.LockoutAccountException, HttpStatusCode.TooManyRequests);
+                HandleExceptionMessage(context, lockoutAccountError.Message, HttpStatusCode.TooManyRequests);
                 break;
             case PasswordChangeFailedException passwordChangeFailedError:
-                HandleExceptionMessage(context, ExceptionMessages.PasswordChangeFailedException, HttpStatusCode.BadRequest);
+                HandleExceptionMessage(context, passwordChangeFailedError.Message, HttpStatusCode.BadRequest);
                 break;
             case CreateFailedException userCreateFailedError:
-                HandleExceptionMessage(context, ExceptionMessages.UserCreateFailedException, HttpStatusCode.InternalServerError);
+                HandleExceptionMessage(context, userCreateFailedError.Message, HttpStatusCode.InternalServerError);
                 break;
             default:
                 HandleExceptionMessage(context, ExceptionMessages.CustomGeneralException, HttpStatusCode.InternalServerError);

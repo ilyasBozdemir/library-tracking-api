@@ -47,7 +47,7 @@ function LibraryDetailPage() {
       </Box>
       <VStack my={3}>
         <Button
-          onClick={() => router.push("/admin/library")}
+          onClick={() => router.push("/app/library")}
           colorScheme="orange"
           variant="outline"
         >

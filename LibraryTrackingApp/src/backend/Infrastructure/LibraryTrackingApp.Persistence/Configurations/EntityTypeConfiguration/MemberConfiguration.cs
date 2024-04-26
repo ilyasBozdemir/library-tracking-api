@@ -12,13 +12,7 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
         builder.ToTable(name: "Members", schema: "lm");// LibraryManagement
 
         builder.HasKey(m => m.Id);
-        builder.HasIndex(m => m.Email).IsUnique();
 
-        builder.Property(m => m.Name).IsRequired(); 
-        builder.Property(m => m.Email).IsRequired();
-        builder.Property(m => m.Address);
-        builder.Property(m => m.PhoneNumber);
-        builder.Property(m => m.BirthDate).IsRequired();
         builder.Property(m => m.Gender);
         builder.Property(m => m.Occupation);
         builder.Property(m => m.NumberOfLateReturns).IsRequired(); 
@@ -28,6 +22,12 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
         builder.Property(m => m.IsExtensionAllowed).IsRequired(); 
         builder.Property(m => m.ExtensionDurationInDays).IsRequired();
 
+        builder
+           .HasOne(s => s.User)
+           .WithOne(u => u.Member)
+           .HasForeignKey<Member>(m => m.UserId)
+           .OnDelete(DeleteBehavior.Restrict);
+
 
         builder
             .Property(m => m.MemberType)
@@ -36,7 +36,7 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
 
         builder
             .Property(m => m.Gender)
-            .HasConversion(new EnumToStringConverter<Gender>());
+            .HasConversion(new EnumToStringConverter<GenderType>());
 
     }
 }

@@ -1,9 +1,9 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { colors, darkTheme, lightTheme } from "../src/foundations/colors";
+import {  darkTheme, lightTheme } from "../src/foundations/colors";
 import { ColorModeScript, colorMode, extendTheme } from "@chakra-ui/react";
 import GoogleTagManagerBody from "../plugins/GoogleTagManagerBody";
 import ExternalFonts from "../fonts/ExternalFonts";
-import React from "react";
+import React, { useEffect } from "react";
 
 import { site } from "../constants/site";
 
@@ -19,6 +19,10 @@ export default class MyDocument extends Document {
     const themeColor = theme.primary[100];
 
     //const isAnalyticsVisible = AnalyticsIsVisible();
+
+    useEffect(() => {
+      console.log(l);
+    }, []);
 
     return (
       <Html lang={langValue || site.lang} prefix="og: http://ogp.me/ns#">
