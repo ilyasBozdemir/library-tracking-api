@@ -64,6 +64,8 @@ Bu API, kütüphane yönetimi için gerekli olan tüm işlevleri sağlayarak, mo
     </a>
 </p>
 
+Uygulamanın Senaryosu hakkında bilgi için [tıklayınız.](/docs/1.0.0/application-scenario.md)
+
 ## Fundamentals
 
 Bu Uygulama, aşağıdaki temel bileşenleri ve kütüphaneleri kullanarak güçlendirilmiştir:
