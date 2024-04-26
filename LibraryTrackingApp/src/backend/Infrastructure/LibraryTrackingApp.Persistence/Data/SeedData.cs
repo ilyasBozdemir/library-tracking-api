@@ -48,11 +48,15 @@ public static class SeedData
             Id = systemUserId,
             UserName = "system",
             NormalizedUserName = "SYSTEM",
-            Name = "system",
-            Surname = "system",
+            Name = "System",
+            Surname = "Admin",
             Email = "system@domain.com",
             NormalizedEmail = "SYSTEM@DOMAIN.COM",
             EmailConfirmed = true,
+            Gender = GenderType.Male,
+            Address = "123 System St.",
+            BirthDate = new DateTime(1980, 1, 1),
+            ProfilePicture = new byte[] { },
             PasswordHash = hasher.HashPassword(null, "SYSTEM@DOMAIN.COM"),
             SecurityStamp = string.Empty,
             ConcurrencyStamp = Guid.NewGuid().ToString(),
@@ -67,9 +71,13 @@ public static class SeedData
             NormalizedUserName = "ADMIN@EXAMPLE.COM",
             Email = "admin@example.com",
             NormalizedEmail = "ADMIN@EXAMPLE.COM",
-            Name = "admin",
-            Surname = "admin",
+            Name = "Admin",
+            Surname = "Admin",
             EmailConfirmed = true,
+            Gender = GenderType.Male,
+            Address = "456 Admin St.",
+            BirthDate = new DateTime(1985, 5, 15),
+            ProfilePicture = new byte[] { },
             PasswordHash = hasher.HashPassword(null, "ADMIN@EXAMPLE.COM"),
             SecurityStamp = string.Empty,
             ConcurrencyStamp = Guid.NewGuid().ToString(),
@@ -81,13 +89,60 @@ public static class SeedData
         {
             Id = Guid.NewGuid(),
             UserName = "employee1@example.com",
-            NormalizedUserName = "EMPLOYEE2@EXAMPLE.COM",
+            NormalizedUserName = "EMPLOYEE1@EXAMPLE.COM",
             Email = "employee1@example.com",
-            NormalizedEmail = "EMPLOYEE2@EXAMPLE.COM",
-            Name = "admin",
-            Surname = "admin",
+            NormalizedEmail = "EMPLOYEE1@EXAMPLE.COM",
+            Name = "Employee",
+            Surname = "One",
             EmailConfirmed = true,
-            PasswordHash = hasher.HashPassword(null, "EMPLOYEE2@EXAMPLE.COM"),
+            Gender = GenderType.Female,
+            Address = "789 Employee St.",
+            BirthDate = new DateTime(1990, 10, 20),
+            ProfilePicture = new byte[] { },
+            PasswordHash = hasher.HashPassword(null, "EMPLOYEE1@EXAMPLE.COM"),
+            SecurityStamp = string.Empty,
+            ConcurrencyStamp = Guid.NewGuid().ToString(),
+            CreatedById = systemUserId,
+            LastModifiedById = systemUserId,
+        };
+
+
+        var memberUser = new AppUser
+        {
+            Id = Guid.NewGuid(),
+            UserName = "john.doe@example.com",
+            NormalizedUserName = "JOHN.DOE@EXAMPLE.COM",
+            Email = "john.doe@example.com",
+            NormalizedEmail = "JOHN.DOE@EXAMPLE.COM",
+            Name = "John",
+            Surname = "Doe",
+            EmailConfirmed = true,
+            Gender = GenderType.Male,
+            Address = "123 Main Street",
+            BirthDate = new DateTime(1990, 5, 15),
+            ProfilePicture = new byte[] { },
+            PasswordHash = hasher.HashPassword(null, "john.doe@example.com"),
+            SecurityStamp = string.Empty,
+            ConcurrencyStamp = Guid.NewGuid().ToString(),
+            CreatedById = systemUserId,
+            LastModifiedById = systemUserId,
+        };
+
+        var memberUser2 = new AppUser
+        {
+            Id = Guid.NewGuid(),
+            UserName = "jane.smith@example.com",
+            NormalizedUserName = "JANE.SMITH@EXAMPLE.COM",
+            Email = "jane.smith@example.com",
+            NormalizedEmail = "JANE.SMITH@EXAMPLE.COM",
+            Name = "Jane",
+            Surname = "Smith",
+            EmailConfirmed = true,
+            Gender = GenderType.Female,
+            Address = "456 Oak Street",
+            BirthDate = new DateTime(1985, 8, 20),
+            ProfilePicture = new byte[] { },
+            PasswordHash = hasher.HashPassword(null, "jane.smith@example.com"),
             SecurityStamp = string.Empty,
             ConcurrencyStamp = Guid.NewGuid().ToString(),
             CreatedById = systemUserId,
@@ -234,15 +289,11 @@ public static class SeedData
         var member1 = new Member
         {
             Id = Guid.NewGuid(),
-            Name = "John Doe",
-            Email = "john.doe@example.com",
-            Address = "123 Main Street",
-            PhoneNumber = "+1234567890",
+            UserId = memberUser.Id,
             MembershipDate = DateTime.Now,
-            BirthDate = new DateTime(1990, 5, 15),
-            Gender = Gender.Male,
+            Gender = GenderType.Male,
             Occupation = "Software Engineer",
-            MemberType= MemberType.Adult,
+            MemberType = MemberType.Adult,
             NumberOfLateReturns = 0,
             MaxLateReturnsAllowed = 3,
             HasPenalty = false,
@@ -258,13 +309,9 @@ public static class SeedData
         var member2 = new Member
         {
             Id = Guid.NewGuid(),
-            Name = "Jane Smith",
-            Email = "jane.smith@example.com",
-            Address = "456 Oak Street",
-            PhoneNumber = "+1987654321",
+            UserId = memberUser2.Id,
             MembershipDate = DateTime.Now,
-            BirthDate = new DateTime(1985, 8, 20),
-            Gender = Gender.Female,
+            Gender = GenderType.Female,
             LibraryBranchId = mainBranchId,
             MemberType = MemberType.Teacher,
             Occupation = "Teacher",
@@ -278,6 +325,8 @@ public static class SeedData
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
         };
+
+
 
         var memberLibraryBranch = new Dictionary<string, object>
         {
@@ -371,7 +420,7 @@ public static class SeedData
         var bookStock = new BookStock
         {
             Id = Guid.NewGuid(),
-            BookId = harryPotterBook.Id, 
+            BookId = harryPotterBook.Id,
             Quantity = 100,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
@@ -407,23 +456,23 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        var @return = new BookReturn() 
+        var @return = new BookReturn()
         {
             Id = Guid.NewGuid(),
-            BorrowId = borrow.Id, 
-            ReturnDate = DateTime.Now, 
-            IsLate = DateTime.Now > borrow.DueDate, 
+            BorrowId = borrow.Id,
+            ReturnDate = DateTime.Now,
+            IsLate = DateTime.Now > borrow.DueDate,
             BookStatus = BookStatus.Available,
             PenaltyDurationInDays = (DateTime.Now - borrow.DueDate).Days,
             CreatedById = systemUser.Id,
-            CreatedDateUnix =  BaseEntity.ToUnixTimestamp(DateTime.Now),
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
         };
 
 
 
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
-        SeedEntities<AppUser>(modelBuilder, systemUser, adminUser, staffUser);
+        SeedEntities<AppUser>(modelBuilder, systemUser, adminUser, staffUser, memberUser, memberUser2);
         SeedEntities<AppUserRole>(modelBuilder, appUserRole, appUserRole2);
         SeedEntities<Author>(modelBuilder, jKRowlingAuthor);
         SeedEntities<BookGenre>(modelBuilder, fantasyGenre, adventureGenre);
