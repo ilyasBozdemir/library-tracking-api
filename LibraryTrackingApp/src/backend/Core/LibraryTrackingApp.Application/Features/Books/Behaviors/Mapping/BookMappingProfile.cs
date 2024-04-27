@@ -11,5 +11,7 @@ public class BookMappingProfile : Profile
         CreateMap<Book, BookDTO>().ReverseMap();
         CreateMap<Book, CreateBookCommandRequest>().ReverseMap();
         CreateMap<BookDTO, CreateBookCommandRequest>().ReverseMap();
+
+        // lazım olan yerde burda map'leme yapılabilir.
     }
 }

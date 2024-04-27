@@ -7,7 +7,7 @@ public class Book : BaseEntity<Guid>, IAuditable<Guid>
     public Guid PublisherId { get; set; }
     public Guid AuthorId { get; set; }
     public Guid LibraryBranchId { get; set; }
-    public Guid BookStockBranchId { get; set; }
+    public Guid BookStockId { get; set; }
     public Guid BorrowId { get; set; }
 
     public string Title { get; set; }

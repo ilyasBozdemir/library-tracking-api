@@ -214,6 +214,9 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
+        var bookStockId = Guid.NewGuid();
+        var bookBorrowId = Guid.NewGuid();
+
         var harryPotterBook = new Book
         {
             Id = Guid.NewGuid(),
@@ -221,6 +224,8 @@ public static class SeedData
             LibraryBranchId = mainBranch.Id,
             PublisherId = bloomsburyPublishingPublisher.Id,
             AuthorId = jKRowlingAuthor.Id,
+            BookStockId= bookStockId,
+            BorrowId= bookBorrowId,
             Title = "Harry Potter and the Philosopher's Stone",
             ISBN = "9781408855652",
             Description =
@@ -417,9 +422,10 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
+       
         var bookStock = new BookStock
         {
-            Id = Guid.NewGuid(),
+            Id = bookStockId,
             BookId = harryPotterBook.Id,
             Quantity = 100,
             CreatedById = systemUser.Id,
@@ -444,7 +450,7 @@ public static class SeedData
 
         var borrow = new BorrowBook
         {
-            Id = Guid.NewGuid(),
+            Id = bookBorrowId,
             MemberId = member1.Id,
             BookId = harryPotterBook.Id,
             LenderId = staff.Id,

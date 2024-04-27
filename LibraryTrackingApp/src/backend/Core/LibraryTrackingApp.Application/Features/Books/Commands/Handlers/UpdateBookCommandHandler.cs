@@ -40,6 +40,17 @@ public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommandRequest
                 existingBook.PageCount = request.PageCount;
                 existingBook.PublicationDate = request.PublicationDate;
                 existingBook.BookStatus = request.Status;
+                existingBook.Description = request.Description;
+                existingBook.PublicationDate = request.PublicationDate;
+                existingBook.OriginalPublicationDate = request.OriginalPublicationDate;
+                existingBook.BookFormat = request.BookFormat;
+                existingBook.BookLanguage = request.BookLanguage;
+                existingBook.GenreId = request.GenreId;
+                existingBook.PublisherId = request.PublisherId;
+                existingBook.AuthorId = request.AuthorId;
+                existingBook.LibraryBranchId = request.LibraryBranchId;
+                existingBook.BookStockId = request.BookStockId;
+
 
                 bool isUpdated = await writeRepository.UpdateAsync(existingBook);
 
