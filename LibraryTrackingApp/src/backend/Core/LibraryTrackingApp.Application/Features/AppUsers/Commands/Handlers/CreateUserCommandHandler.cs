@@ -1,10 +1,10 @@
-﻿using LibraryTrackingApp.Application.Features.AppUsers.Commands.Requests;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
+using LibraryTrackingApp.Application.Features.AppUsers.Commands.Requests;
 using LibraryTrackingApp.Application.Features.AppUsers.Commands.Responses;
 using LibraryTrackingApp.Application.Features.AppUsers.Events;
 using LibraryTrackingApp.Application.Interfaces.Services;
 using LibraryTrackingApp.Domain.Constants;
 using LibraryTrackingApp.Domain.Exceptions;
-using PreAccountingBE.Application.Features.DTOs.User;
 
 namespace LibraryTrackingApp.Application.Features.AppUsers.Commands.Handlers;
 

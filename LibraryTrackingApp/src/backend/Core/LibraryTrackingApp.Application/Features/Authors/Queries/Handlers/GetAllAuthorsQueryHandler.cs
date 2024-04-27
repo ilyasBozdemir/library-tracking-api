@@ -1,11 +1,8 @@
 ﻿using LibraryTrackingApp.Application.Features.Authors.Queries.Requests;
 using LibraryTrackingApp.Application.Features.Authors.Queries.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
-using LibraryTrackingApp.Application.Shared.Wrappers.Extensions;
-using LibraryTrackingApp.Domain.Entities.Library;
-using System.Drawing;
 using System.Net;
-using Microsoft.Extensions.Caching.Memory; // MemoryCache'ı kullanmak için ekleyin
+using Microsoft.Extensions.Caching.Memory;
 
 
 namespace LibraryTrackingApp.Application.Features.Authors.Queries.Handlers;

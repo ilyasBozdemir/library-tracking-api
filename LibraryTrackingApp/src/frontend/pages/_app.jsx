@@ -4,7 +4,6 @@ import dynamic from "next/dynamic";
 const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
 const AppLayout = dynamic(() => import("@/layouts/App/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
-const ErrorLayout = dynamic(() => import("@/layouts/Error/layout"));
 const PlaceholderLayout = dynamic(() =>
   import("@/layouts/Placeholder/layout")
 );
@@ -21,6 +20,7 @@ import { useEffect } from "react";
 import { darkTheme, lightTheme } from "@/src/foundations/colors";
 import { AuthContextProvider, AuthProvider } from "@/contexts/AuthContext";
 import { AppContextProvider } from "@/contexts/AppContext";
+import { errorStatusCodes } from "@/constants/errorStatusCodes";
 
 function MyApp({ Component, pageProps, session, statusCode }) {
   const router = useRouter();
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     colorMode === "light" ? lightTheme.colors : darkTheme.colors
   );
 
-  const placeholderRoutes = ["/login", "/register", "/docs", "/api-docs"];
+  const placeholderRoutes = ["/login", "/register", "/docs", "/api-docs",'/401','/403','/404','/409','/500','/501','/502','/503'];
   const anonLayoutRoutes = ["/./"];
   const adminLayoutRoutes = /^\/admin(?:\/|$)/;
   const appLayoutRoutes = /^\/app(?:\/|$)/;
@@ -62,9 +62,9 @@ function MyApp({ Component, pageProps, session, statusCode }) {
 
   return (
     <>
-      {[401, 403, 404, 409, 500, 501, 502, 503].includes(statusCode) ? (
+      {errorStatusCodes.includes(statusCode) ? (
         <>
-          <ErrorLayout statusCode={statusCode} />
+          <PlaceholderLayout statusCode={statusCode} />
         </>
       ) : (
         <AppContextProvider>

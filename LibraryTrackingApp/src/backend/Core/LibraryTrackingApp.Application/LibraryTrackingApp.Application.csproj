@@ -32,7 +32,6 @@
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
 	<Folder Include="Claims\" />
-	<Folder Include="DTOs\MailConfiguration\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Mapping\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Validator\" />
 	<Folder Include="Features\BorrowBooks\Commands\Handlers\" />
@@ -136,15 +135,6 @@
 	<Folder Include="Features\LibraryTransactions\Queries\Handlers\" />
 	<Folder Include="Features\LibraryTransactions\Queries\Requests\" />
 	<Folder Include="Features\LibraryTransactions\Queries\Responses\" />
-	<Folder Include="Features\BookGenres\Behaviors\Mapping\" />
-	<Folder Include="Features\BookGenres\Behaviors\Validator\" />
-	<Folder Include="Features\BookGenres\Commands\Handlers\" />
-	<Folder Include="Features\BookGenres\Commands\Requests\" />
-	<Folder Include="Features\BookGenres\Commands\Responses\" />
-	<Folder Include="Features\BookGenres\Events\" />
-	<Folder Include="Features\BookGenres\Queries\Handlers\" />
-	<Folder Include="Features\BookGenres\Queries\Requests\" />
-	<Folder Include="Features\BookGenres\Queries\Responses\" />
 	<Folder Include="Middlewares\" />
   </ItemGroup>
 

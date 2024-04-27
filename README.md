@@ -208,7 +208,6 @@ Uygulama aşağıdaki entiteleri içermektedir:
 - **Uygulama Destek Sayfası**
   ![App Support Page](screenshots/app-support-page.png)
 
-
 - **Veritabanı Tablolar**
   ![App Support Page](screenshots/database-context.png)
 

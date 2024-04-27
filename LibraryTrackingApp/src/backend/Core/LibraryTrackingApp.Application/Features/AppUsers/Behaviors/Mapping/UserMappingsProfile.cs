@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using LibraryTrackingApp.Application.DataTransferObjects;
 using LibraryTrackingApp.Application.Features.AppUsers.Commands.Requests;
 using LibraryTrackingApp.Domain.Entities.Identity;
-using PreAccountingBE.Application.Features.DTOs.User;
 
 
 namespace LibraryTrackingApp.Application.Features.AppUsers.Behaviors.Mapping;

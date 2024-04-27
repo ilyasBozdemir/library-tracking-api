@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
+using Microsoft.AspNetCore.Identity;
 
 namespace LibraryTrackingApp.Application.Interfaces.Services
 {
