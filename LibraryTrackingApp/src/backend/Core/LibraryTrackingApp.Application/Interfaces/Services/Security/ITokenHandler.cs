@@ -1,4 +1,4 @@
-﻿using PreAccountingBE.Application.Features.DTOs.User;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
 using System.Security.Claims;
 
 namespace LibraryTrackingApp.Application.Interfaces.Services.Security;

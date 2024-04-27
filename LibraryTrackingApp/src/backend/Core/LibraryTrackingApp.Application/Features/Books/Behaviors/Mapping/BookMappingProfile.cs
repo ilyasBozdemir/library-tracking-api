@@ -1,4 +1,5 @@
-﻿using LibraryTrackingApp.Application.Features.Books.Commands.Requests;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
+using LibraryTrackingApp.Application.Features.Books.Commands.Requests;
 using LibraryTrackingApp.Domain.Entities.Library;
 
 namespace LibraryTrackingApp.Application.Features.Books.Behaviors.Mapping;

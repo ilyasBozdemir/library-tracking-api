@@ -1,6 +1,5 @@
 ﻿using LibraryTrackingApp.Application.Features.Authors.Commands.Requests;
 using LibraryTrackingApp.Application.Features.Authors.Commands.Responses;
-using LibraryTrackingApp.Application.Features.Books.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
 namespace LibraryTrackingApp.Application.Features.Authors.Commands.Handlers;

@@ -1,4 +1,4 @@
-﻿using LibraryTrackingApp.Application.DTOs;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
 using LibraryTrackingApp.Application.Shared.Wrappers.Results;
 
 

@@ -1,4 +1,6 @@
-﻿namespace LibraryTrackingApp.Application.Interfaces.Services
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
+
+namespace LibraryTrackingApp.Application.Interfaces.Services
 {
     public interface IExternalAuthentication
     {

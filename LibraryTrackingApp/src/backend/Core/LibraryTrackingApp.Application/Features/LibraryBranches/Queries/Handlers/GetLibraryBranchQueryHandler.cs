@@ -1,9 +1,6 @@
-﻿using LibraryTrackingApp.Application.Features.Authors.Queries.Requests;
-using LibraryTrackingApp.Application.Features.Authors.Queries.Responses;
-using LibraryTrackingApp.Application.Features.LibraryBranches.Queries.Requests;
+﻿using LibraryTrackingApp.Application.Features.LibraryBranches.Queries.Requests;
 using LibraryTrackingApp.Application.Features.LibraryBranches.Queries.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
-using LibraryTrackingApp.Domain.Entities.Library;
 using System.Net;
 
 namespace LibraryTrackingApp.Application.Features.LibraryBranches.Queries.Handlers;

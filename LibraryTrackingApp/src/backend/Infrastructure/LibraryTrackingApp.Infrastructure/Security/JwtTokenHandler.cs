@@ -1,8 +1,7 @@
-﻿using LibraryTrackingApp.Application.DTOs;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
 using LibraryTrackingApp.Application.Interfaces.Services.Security;
 using Microsoft.AspNetCore.Http;
 using Microsoft.IdentityModel.Tokens;
-using PreAccountingBE.Application.Features.DTOs.User;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;

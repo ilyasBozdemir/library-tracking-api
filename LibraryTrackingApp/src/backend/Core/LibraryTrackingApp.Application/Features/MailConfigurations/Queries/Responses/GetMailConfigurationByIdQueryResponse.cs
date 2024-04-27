@@ -1,4 +1,5 @@
-﻿using LibraryTrackingApp.Application.Shared.Wrappers.Results;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
+using LibraryTrackingApp.Application.Shared.Wrappers.Results;
 
 namespace LibraryTrackingApp.Application.Features.MailConfigurations.Queries.Responses;
 

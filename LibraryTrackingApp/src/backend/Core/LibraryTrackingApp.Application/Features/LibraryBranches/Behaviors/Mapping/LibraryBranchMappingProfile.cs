@@ -1,4 +1,5 @@
-﻿using LibraryTrackingApp.Domain.Entities.Library;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
+using LibraryTrackingApp.Domain.Entities.Library;
 
 namespace LibraryTrackingApp.Application.Features.LibraryBranches.Behaviors.Mapping;
 

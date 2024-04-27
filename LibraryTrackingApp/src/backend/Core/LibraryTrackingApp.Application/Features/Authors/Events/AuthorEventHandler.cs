@@ -2,29 +2,29 @@
 
 namespace LibraryTrackingApp.Application.Features.Authors.Events;
 
-public class UserCommandEventHandler : INotificationHandler<UserEvent>
+public class AuthorEventHandler : INotificationHandler<AuthorEvent>
 {
-    public UserCommandEventHandler()
+    public AuthorEventHandler()
     {
         // Constructor gerekli bir işlem yapmıyor, dolayısıyla içini boş bırakabiliriz.
     }
 
-    public async Task Handle(UserEvent notification, CancellationToken cancellationToken)
+    public async Task Handle(AuthorEvent notification, CancellationToken cancellationToken)
     {
         switch (notification.RequestNotificationType)
         {
             case RequestNotificationType.Created:
-                Console.WriteLine($"Yeni bir Yazar oluşturuldu. Yazar ID: {notification.UserId}");
+                Console.WriteLine($"Yeni bir Yazar oluşturuldu. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.Updated:
 
-                Console.WriteLine($"Yazar güncellendi. Yazar ID: {notification.UserId}");
+                Console.WriteLine($"Yazar güncellendi. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.Deleted:
-                Console.WriteLine($"Yazar silindi. Yazar ID: {notification.UserId}");
+                Console.WriteLine($"Yazar silindi. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.FetchedSingle:
-                Console.WriteLine($"Yazar bilgileri alındı. Yazar ID: {notification.UserId}");
+                Console.WriteLine($"Yazar bilgileri alındı. Yazar ID: {notification.AuthorId}");
                 break;
             case RequestNotificationType.FetchedAll:
                 Console.WriteLine("Tüm Yazar bilgileri alındı.");

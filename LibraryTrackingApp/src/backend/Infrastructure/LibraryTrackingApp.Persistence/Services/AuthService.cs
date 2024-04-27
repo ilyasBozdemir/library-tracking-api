@@ -1,12 +1,11 @@
 ﻿using AutoMapper;
-using LibraryTrackingApp.Application.DTOs;
+using LibraryTrackingApp.Application.DataTransferObjects;
 using LibraryTrackingApp.Application.Interfaces.Services;
 using LibraryTrackingApp.Application.Interfaces.Services.Messaging;
 using LibraryTrackingApp.Application.Interfaces.Services.Security;
 using LibraryTrackingApp.Domain.Constants;
 using LibraryTrackingApp.Domain.Exceptions;
 using Microsoft.Identity.Client;
-using PreAccountingBE.Application.Features.DTOs.User;
 using System.Security.Claims;
 
 namespace LibraryTrackingApp.Persistence.Services;

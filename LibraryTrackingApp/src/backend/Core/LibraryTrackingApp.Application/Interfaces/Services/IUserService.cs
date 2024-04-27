@@ -1,5 +1,5 @@
-﻿using LibraryTrackingApp.Domain.Entities.Identity;
-using PreAccountingBE.Application.Features.DTOs.User;
+﻿using LibraryTrackingApp.Application.DataTransferObjects;
+using LibraryTrackingApp.Domain.Entities.Identity;
 
 namespace LibraryTrackingApp.Application.Interfaces.Services;
 

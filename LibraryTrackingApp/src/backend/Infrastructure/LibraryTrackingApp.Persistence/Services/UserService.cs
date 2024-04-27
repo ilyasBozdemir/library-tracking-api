@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
+using LibraryTrackingApp.Application.DataTransferObjects;
 using LibraryTrackingApp.Application.Interfaces.Services;
 using LibraryTrackingApp.Domain.Exceptions;
-using PreAccountingBE.Application.Features.DTOs.User;
 using System.Security.Claims;
 
 namespace LibraryTrackingApp.Persistence.Services;

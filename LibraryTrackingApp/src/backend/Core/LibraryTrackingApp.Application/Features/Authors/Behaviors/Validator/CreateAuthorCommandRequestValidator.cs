@@ -6,6 +6,6 @@ public class CreateAuthorCommandRequestValidator : AbstractValidator<CreateAutho
 {
     public CreateAuthorCommandRequestValidator()
     {
-
+       
     }
 }
