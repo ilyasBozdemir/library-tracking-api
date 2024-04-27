@@ -9,12 +9,12 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
 {
     private readonly IUnitOfWork<Guid> _unitOfWork;
     private readonly IMediator _mediator;
-    //private readonly IMapper _mapper;
-    public CreateBookCommandHandler(IUnitOfWork<Guid> unitOfWork /*,IMapper mapper*/, IMediator mediator)
+    private readonly IMapper _mapper;
+    public CreateBookCommandHandler(IUnitOfWork<Guid> unitOfWork, IMapper mapper, IMediator mediator)
     {
         _unitOfWork = unitOfWork;
         _mediator = mediator;
-        //_mapper = mapper;
+        _mapper = mapper;
     }
 
     public async Task<CreateBookCommandResponse> Handle(CreateBookCommandRequest request, CancellationToken cancellationToken)
@@ -35,35 +35,18 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
                 };
             }
 
-            var newBook = new Domain.Entities.Library.Book()
-            {
-                Title = request.Title,
-                ISBN = request.ISBN,
-                //Publisher = request.Publisher,
-                PublicationDate = request.PublicationDate,
-                PageCount = request.PageCount,
-                //BookStatus = request.Status,
-                IsDeleted = false,
-            };
-
-            var bookDto = new BookDTO()
-            {
-                Title = request.Title,
-                ISBN = request.ISBN,
-                // Publisher = request.Publisher,
-                PublicationDate = request.PublicationDate,
-                PageCount = request.PageCount
-            };
-
-            //var newBook = _mapper.Map<Domain.Entities.Library.Book>(request); // bunu assembly olarak eklerken sorun oldugu için 
-            // su anlık elle yazdım sonrasında düzeltme yapacağım.
 
 
+            var newBook = _mapper.Map<Domain.Entities.Library.Book>(request);
+            newBook.Id = Guid.NewGuid();
+
+          
             var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.Book>();
             bool isAdded = await writeRepository.AddAsync(newBook);
 
             if (isAdded)
             {
+
                 return new()
                 {
                     StatusCode = 200,

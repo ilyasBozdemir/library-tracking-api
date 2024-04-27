@@ -32,6 +32,7 @@
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
 	<Folder Include="Claims\" />
+	<Folder Include="Features\BookReturns\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Mapping\" />
 	<Folder Include="Features\BorrowBooks\Behaviors\Validator\" />
 	<Folder Include="Features\BorrowBooks\Commands\Handlers\" />
@@ -41,15 +42,6 @@
 	<Folder Include="Features\BorrowBooks\Queries\Handlers\" />
 	<Folder Include="Features\BorrowBooks\Queries\Requests\" />
 	<Folder Include="Features\BorrowBooks\Queries\Responses\" />
-	<Folder Include="Features\BookReturns\Behaviors\Mapping\" />
-	<Folder Include="Features\BookReturns\Behaviors\Validator\" />
-	<Folder Include="Features\BookReturns\Commands\Handlers\" />
-	<Folder Include="Features\BookReturns\Commands\Requests\" />
-	<Folder Include="Features\BookReturns\Commands\Responses\" />
-	<Folder Include="Features\BookReturns\Events\" />
-	<Folder Include="Features\BookReturns\Queries\Handlers\" />
-	<Folder Include="Features\BookReturns\Queries\Requests\" />
-	<Folder Include="Features\BookReturns\Queries\Responses\" />
 	<Folder Include="Features\BookTags\Behaviors\Mapping\" />
 	<Folder Include="Features\BookTags\Behaviors\Validator\" />
 	<Folder Include="Features\BookTags\Commands\Handlers\" />

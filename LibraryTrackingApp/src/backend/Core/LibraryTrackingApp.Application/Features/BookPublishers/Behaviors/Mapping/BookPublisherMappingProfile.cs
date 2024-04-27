@@ -1,8 +1,8 @@
 ﻿namespace LibraryTrackingApp.Application.Features.BookPublishers.Behaviors.Mapping;
 
-public class BookGenreMappingProfile : Profile
+public class BookPublisherMappingProfile : Profile
 {
-    public BookGenreMappingProfile()
+    public BookPublisherMappingProfile()
     {
 
     }

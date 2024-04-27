@@ -41,6 +41,8 @@ public class StockOperationCommandHandler
             }
             else
             {
+
+
                 var readRepository =
                     _unitOfWork.GetReadRepository<Domain.Entities.Library.BookStock>();
                 var writeRepository =

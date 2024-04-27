@@ -8,6 +8,7 @@ public record CreateBookDto : BaseAuditableDTO<Guid>
     public string Title { get; init; } // Başlık
     public string ISBN { get; init; } // ISBN
     public int PageCount { get; init; } // Sayfa Sayısı
+
     public Guid PublisherId { get; init; } // Yayıncı ID
     public DateTime PublicationDate { get; init; } // Yayın Tarihi
     public DateTime OriginalPublicationDate { get; init; } // Orijinal Yayın Tarihi
