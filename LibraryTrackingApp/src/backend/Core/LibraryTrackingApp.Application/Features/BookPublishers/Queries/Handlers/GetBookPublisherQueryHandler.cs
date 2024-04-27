@@ -1,51 +1,49 @@
-﻿using LibraryTrackingApp.Application.Features.BookGenres.Queries.Requests;
-using LibraryTrackingApp.Application.Features.BookGenres.Queries.Responses;
+﻿using LibraryTrackingApp.Application.Features.BookPublishers.Queries.Requests;
+using LibraryTrackingApp.Application.Features.BookPublishers.Queries.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 using Microsoft.Extensions.Caching.Memory;
 using System.Net;
 
-namespace LibraryTrackingApp.Application.Features.BookGenres.Queries.Handlers;
+namespace LibraryTrackingApp.Application.Features.BookPublishers.Queries.Handlers;
 
-
-
-public class GetBookGenreQueryHandler : IRequestHandler<GetBookGenreQueryRequest, GetBookGenreQueryResponse>
+public class GetBookPublisherQueryHandler : IRequestHandler<GetBookPublisherQueryRequest, GetBookPublisherQueryResponse>
 {
     private readonly IUnitOfWork<Guid> _unitOfWork;
     private readonly IMediator _mediator;
     private readonly IMemoryCache _cache;
 
-    public GetBookGenreQueryHandler(IUnitOfWork<Guid> unitOfWork, IMediator mediator, IMemoryCache cache)
+    public GetBookPublisherQueryHandler(IUnitOfWork<Guid> unitOfWork, IMediator mediator, IMemoryCache cache)
     {
         _unitOfWork = unitOfWork;
         _mediator = mediator;
         _cache = cache;
     }
 
-    public async Task<GetBookGenreQueryResponse> Handle(GetBookGenreQueryRequest request, CancellationToken cancellationToken)
+    public async Task<GetBookPublisherQueryResponse> Handle(GetBookPublisherQueryRequest request, CancellationToken cancellationToken)
     {
         try
         {
             var readRepository = _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookGenre>();
+                .GetReadRepository<Domain.Entities.Library.BookPublisher>();
 
 
-            var existingBookGenre = await
+            var existingBookPublisher = await
                 readRepository
-                .ExistsAsync(b => b.Id == request.BookGenreId);
+                .ExistsAsync(b => b.Id == request.BookPublisherId);
 
-            if (!existingBookGenre)
+            if (!existingBookPublisher)
             {
                 return new()
                 {
                     StatusCode = (int)HttpStatusCode.NotFound,
                     Success = false,
-                    StateMessages = new string[] { "Listelenecek Tür Bulunamadı." }
+                    StateMessages = new string[] { "Listelenecek Yayınevi Bulunamadı." }
                 };
             }
             else
             {
                 var bookGenre = await readRepository.GetSingleAsync(
-                    genre => genre.Id == request.BookGenreId
+                    genre => genre.Id == request.BookPublisherId
                     );
 
 
@@ -54,12 +52,15 @@ public class GetBookGenreQueryHandler : IRequestHandler<GetBookGenreQueryRequest
                 {
                     StatusCode = (int)HttpStatusCode.OK,
                     Success = true,
-                    StateMessages = new string[] { "Tür listelendi." },
+                    StateMessages = new string[] { "Yayınevi listelendi." },
 
-                    Data = new BookGenreDTO
+                    Data = new BookPublisherDTO
                     {
                         Id = bookGenre.Id,
                         Name = bookGenre.Name,
+                        Address = bookGenre.Address,
+                        Website = bookGenre.Website,
+                        PhoneNumber = bookGenre.PhoneNumber,
                     }
 
                 };
