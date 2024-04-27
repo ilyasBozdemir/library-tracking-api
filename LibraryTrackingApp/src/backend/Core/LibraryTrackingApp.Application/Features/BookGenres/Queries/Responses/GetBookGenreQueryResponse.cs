@@ -1,5 +1,4 @@
-﻿
-using LibraryTrackingApp.Application.Shared.Wrappers.Results;
+﻿using LibraryTrackingApp.Application.Shared.Wrappers.Results;
 
 namespace LibraryTrackingApp.Application.Features.BookGenres.Queries.Responses;
 

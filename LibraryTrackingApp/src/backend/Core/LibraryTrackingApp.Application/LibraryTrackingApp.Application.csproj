@@ -50,15 +50,6 @@
 	<Folder Include="Features\BookReturns\Queries\Handlers\" />
 	<Folder Include="Features\BookReturns\Queries\Requests\" />
 	<Folder Include="Features\BookReturns\Queries\Responses\" />
-	<Folder Include="Features\BookPublishers\Behaviors\Mapping\" />
-	<Folder Include="Features\BookPublishers\Behaviors\Validator\" />
-	<Folder Include="Features\BookPublishers\Commands\Handlers\" />
-	<Folder Include="Features\BookPublishers\Commands\Requests\" />
-	<Folder Include="Features\BookPublishers\Commands\Responses\" />
-	<Folder Include="Features\BookPublishers\Events\" />
-	<Folder Include="Features\BookPublishers\Queries\Handlers\" />
-	<Folder Include="Features\BookPublishers\Queries\Requests\" />
-	<Folder Include="Features\BookPublishers\Queries\Responses\" />
 	<Folder Include="Features\BookTags\Behaviors\Mapping\" />
 	<Folder Include="Features\BookTags\Behaviors\Validator\" />
 	<Folder Include="Features\BookTags\Commands\Handlers\" />

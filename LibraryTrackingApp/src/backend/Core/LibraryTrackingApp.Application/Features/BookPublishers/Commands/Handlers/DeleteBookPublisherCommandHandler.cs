@@ -1,35 +1,35 @@
-﻿using LibraryTrackingApp.Application.Features.BookGenres.Commands.Requests;
-using LibraryTrackingApp.Application.Features.BookGenres.Commands.Responses;
+﻿using LibraryTrackingApp.Application.Features.BookPublishers.Commands.Requests;
+using LibraryTrackingApp.Application.Features.BookPublishers.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
-namespace LibraryTrackingApp.Application.Features.BookGenres.Commands.Handlers;
+namespace LibraryTrackingApp.Application.Features.BookPublishers.Commands.Handlers;
 
 
-public class DeleteBookGenreCommandHandler : IRequestHandler<DeleteBookGenreCommandRequest, DeleteBookGenreCommandResponse>
+public class DeleteBookPublisherCommandHandler : IRequestHandler<DeleteBookPublisherCommandRequest, DeleteBookPublisherCommandResponse>
 {
     private readonly IUnitOfWork<Guid> _unitOfWork;
     private readonly IMediator _mediator;
     //private readonly IMapper _mapper;
-    public DeleteBookGenreCommandHandler(IUnitOfWork<Guid> unitOfWork /*,IMapper mapper*/, IMediator mediator)
+    public DeleteBookPublisherCommandHandler(IUnitOfWork<Guid> unitOfWork /*,IMapper mapper*/, IMediator mediator)
     {
         _unitOfWork = unitOfWork;
         _mediator = mediator;
         //_mapper = mapper;
     }
 
-    public async Task<DeleteBookGenreCommandResponse> Handle(DeleteBookGenreCommandRequest request, CancellationToken cancellationToken)
+    public async Task<DeleteBookPublisherCommandResponse> Handle(DeleteBookPublisherCommandRequest request, CancellationToken cancellationToken)
     {
         try
         {
 
-            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.BookGenre>();
+            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.BookPublisher>();
 
             Guid bookId;
             bool isGuid = Guid.TryParse(request.Id, out bookId);
 
-            var existingBookGenre = await readRepository.GetSingleAsync(s => isGuid && s.Id == bookId);
+            var existingBookPublisher = await readRepository.GetSingleAsync(s => isGuid && s.Id == bookId);
 
-            if (existingBookGenre == null)
+            if (existingBookPublisher == null)
             {
                 return new()
                 {
@@ -40,8 +40,8 @@ public class DeleteBookGenreCommandHandler : IRequestHandler<DeleteBookGenreComm
             }
             else
             {
-                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookGenre>();
-                bool isDeleted = await writeRepository.DeleteAsync(existingBookGenre);
+                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookPublisher>();
+                bool isDeleted = await writeRepository.DeleteAsync(existingBookPublisher);
                 if (isDeleted)
                 {
                     return new()
@@ -58,7 +58,7 @@ public class DeleteBookGenreCommandHandler : IRequestHandler<DeleteBookGenreComm
                     {
                         StatusCode = 400,
                         Success = false,
-                        StateMessages = new string[] { "Tür silinirken bir hata oluştu." }
+                        StateMessages = new string[] { "Yazar silinirken bir hata oluştu." }
                     };
                 }
 

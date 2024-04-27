@@ -58,7 +58,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             j =>
             {
                 j.HasKey("TagId", "BookId");
-                j.ToTable("BookTags");
+                j.ToTable("BookTags", "lm");
             }
             );
 
@@ -80,7 +80,7 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
             j =>
             {
                 j.HasKey("AuthorId", "BookId");
-                j.ToTable("BookAuthors");
+                j.ToTable("BookAuthors", "lm");
             }
             );
 
