@@ -10,11 +10,16 @@ public class Book : BaseEntity<Guid>, IAuditable<Guid>
     public Guid BookStockId { get; set; }
     public Guid BorrowId { get; set; }
 
+    public string BookNumber { get; set; }
     public string Title { get; set; }
     public string ISBN { get; set; }
     public string Description { get; set; }
     public string CoverImageUrl { get; set; }
     public int PageCount { get; set; }
+
+
+    public string? AudioFilePath { get; set; }
+    public string? FilePath { get; set; }
 
     public DateTime PublicationDate { get; set; }
     public DateTime OriginalPublicationDate { get; set; }
@@ -30,5 +35,5 @@ public class Book : BaseEntity<Guid>, IAuditable<Guid>
     public ICollection<BookTag> Tags { get; set; }
     public ICollection<Author> Authors { get; set; }
     public ICollection<BookStock> BookStocks { get; set; }
-    public ICollection<BorrowBook> Borrows { get; set; }
+    public ICollection<BorrowLend> Borrows { get; set; }
 }

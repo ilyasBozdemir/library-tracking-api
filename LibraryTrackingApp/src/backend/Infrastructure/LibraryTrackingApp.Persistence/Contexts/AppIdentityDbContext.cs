@@ -22,8 +22,7 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     public DbSet<BookPublisher> Publishers { get; set; }
     public DbSet<Staff> Staffs { get; set; }
     public DbSet<BookTag> Tags { get; set; }
-    public DbSet<BorrowBook> Borrows { get; set; }
-    public DbSet<BookReturn> Returns { get; set; }
+    public DbSet<BorrowLend> Borrows { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

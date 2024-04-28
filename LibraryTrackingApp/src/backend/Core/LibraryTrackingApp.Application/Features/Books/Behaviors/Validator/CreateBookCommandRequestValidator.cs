@@ -5,6 +5,9 @@ public class CreateBookCommandRequestValidator : AbstractValidator<CreateBookCom
 {
     public CreateBookCommandRequestValidator()
     {
+        RuleFor(book => book.AudioFilePath).NotEmpty().When(book => book.Format == BookFormat.AudioBook);
+        RuleFor(book => book.FilePath).NotEmpty().When(book => book.Format == BookFormat.EBook);
 
+        //geri kalanlarda yazılcaktır.
     }
 }

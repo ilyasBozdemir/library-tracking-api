@@ -226,6 +226,7 @@ public static class SeedData
             AuthorId = jKRowlingAuthor.Id,
             BookStockId= bookStockId,
             BorrowId= bookBorrowId,
+            BookNumber="A1",
             Title = "Harry Potter and the Philosopher's Stone",
             ISBN = "9781408855652",
             Description =
@@ -234,7 +235,7 @@ public static class SeedData
             PageCount = 352,
             PublicationDate = new DateTime(1997, 6, 26),
             OriginalPublicationDate = new DateTime(1997, 6, 26),
-            BookStatus = BookStatus.Available,
+            BookStatus = BookStatus.Active,
             BookFormat = BookFormat.PrintedBook,
             BookLanguage = BookLanguage.English,
             IsFeatured = true,
@@ -448,7 +449,9 @@ public static class SeedData
             LibraryBranchId = mainBranch.Id
         };
 
-        var borrow = new BorrowBook
+     
+
+        var borrow = new BorrowLend
         {
             Id = bookBorrowId,
             MemberId = member1.Id,
@@ -462,18 +465,12 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        var @return = new BookReturn()
-        {
-            Id = Guid.NewGuid(),
-            BorrowId = borrow.Id,
-            ReturnDate = DateTime.Now,
-            IsLate = DateTime.Now > borrow.DueDate,
-            BookStatus = BookStatus.Available,
-            PenaltyDurationInDays = (DateTime.Now - borrow.DueDate).Days,
-            CreatedById = systemUser.Id,
-            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
-            LastModifiedById = systemUser.Id
-        };
+        borrow.ReturnDate = DateTime.Now.AddMinutes(10);
+        borrow.BorrowStatus = BorrowStatus.Returned;
+
+        borrow.IsLate = borrow.ReturnDate > borrow.DueDate;
+        borrow.LateDurationInDays = borrow.IsLate == true ? (int?)(borrow.ReturnDate - borrow.DueDate)?.TotalDays : null;
+
 
 
 
@@ -488,10 +485,9 @@ public static class SeedData
         SeedEntities<Book>(modelBuilder, harryPotterBook);
         SeedEntities<BookTag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
         SeedEntities<Member>(modelBuilder, member1, member2);
-        SeedEntities<BorrowBook>(modelBuilder, borrow);
+        SeedEntities<BorrowLend>(modelBuilder, borrow);
         SeedEntities<Staff>(modelBuilder, staff);
         SeedEntities<BookStock>(modelBuilder, bookStock);
-        SeedEntities<BookReturn>(modelBuilder, @return);
 
 
         modelBuilder.Entity("BookTags").HasData(bookTag1, bookTag2);

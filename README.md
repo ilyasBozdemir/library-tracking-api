@@ -78,6 +78,8 @@ Bu Uygulama, aşağıdaki temel bileşenleri ve kütüphaneleri kullanarak güç
 > - **CQRS Pattern**: Komut ve sorgu sorumluluklarını ayrı ayrı ele alarak daha iyi performans ve ölçeklenebilirlik sağlar.
 > - **Generic Repository Pattern**: Veritabanı işlemlerini genelleştirilmiş bir şekilde ele alır, tekrar kullanımı ve bakımı kolaylaştırır.
 > - **Generic UnitOfWork Pattern**: Birim işlemlerinin genelleştirilmiş bir şekilde yönetilmesini sağlar.
+> - **State Design Pattern **:Kitapların ödünç verilme ve iade durumlarını yönetmek için kullanılan pattern.
+> - **Mediator Design Pattern **: Merkezi bir aracı (mediator) kullanarak nesneler arasındaki doğrudan bağımlılığı azaltır.
 > - **Mediatr Library**: CQRS ve Mediator desenlerini uygulamak için kullanılır, komut ve isteklerin işlenmesini kolaylaştırır.
 > - **FluentValidation Library**: Giriş doğrulaması için kullanılır, gelen verilerin geçerliliğini kontrol eder.
 > - **Microsoft.AspNetCore.Identity Library**: Kullanıcı kimlik doğrulaması ve yetkilendirme işlemleri için kullanılır.
@@ -129,12 +131,13 @@ Uygulama aşağıdaki entiteleri içermektedir:
 - **BookGenre**: Kitap türlerinin kaydedilmesi.
 - **Author**: Kitap yazarlarının kaydedilmesi.
 - **BookPublisher**: Kitap yayınevlerinin kaydedilmesi.
-- **Borrow**: Kitap ödünç alma işlemlerinin yönetimi.
-- **BookReturn**: Kitap iade işlemlerinin yönetimi.
+- **BorrowLendBook**: Kitap ödünç alma ve iade işlemlerinin yönetimi.
 - **BookStock**: Kitap stoklarının yönetimi.
 - **BookTag**: Kitapları kategorize etmek için etiketlerin yönetimi.
 - **FavoriteList**: Kullanıcıların favori listesine kitap eklemesi
 - **ReadingList**: Kullanıcıların okuma listesine kitap eklemesi.
+- **Shelf**: Kitaplar için rafı temsil eden entity
+- **BookCompartment**: rafların kitap bölmesini temsil eden entity
 
 ## Planlanan Özellikler
 

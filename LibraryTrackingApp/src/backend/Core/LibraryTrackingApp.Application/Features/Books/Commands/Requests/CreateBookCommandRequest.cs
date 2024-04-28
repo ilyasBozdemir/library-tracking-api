@@ -11,8 +11,12 @@ public class CreateBookCommandRequest : IRequest<CreateBookCommandResponse>
     public int PageCount { get; init; } // Sayfa Sayısı
     public DateTime PublicationDate { get; init; } // Yayın Tarihi
 
+    public string? AudioFilePath { get; set; }
+    public string? FilePath { get; set; }
+
+
     [JsonConverter(typeof(JsonStringEnumConverter))]
-    public BookStatus Status { get; init; } = BookStatus.Available; // Kitap Durumu
+    public BookStatus Status { get; init; } = BookStatus.Active; // Kitap Durumu
     public Guid GenreId { get; init; } // Tür Id'si
     public Guid PublisherId { get; init; } // Yayıncı Id'si
     public Guid LibraryBranchId { get; init; } // Kütüphane Şube Id'si

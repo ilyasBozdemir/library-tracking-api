@@ -17,6 +17,9 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
         _mapper = mapper;
     }
 
+
+    // kitap olustururken stok miktarı da eklenecek
+
     public async Task<CreateBookCommandResponse> Handle(CreateBookCommandRequest request, CancellationToken cancellationToken)
     {
 

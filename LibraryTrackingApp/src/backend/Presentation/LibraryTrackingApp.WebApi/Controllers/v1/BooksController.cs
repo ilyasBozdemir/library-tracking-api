@@ -147,40 +147,6 @@ public class BooksController : CustomBaseController
 
 
 
-    /// <summary>
-    /// Verilen kitabı ödünç almak için istemciden gelen isteği işler.
-    /// </summary>
-    /// <param name="bookId">Ödünç alınacak kitabın ID'si.</param>
-    /// <param name="memberId">Ödünç alan üyenin ID'si.</param>
-    /// <returns>
-    /// 200 OK cevabı, işlem başarılı ise;
-    /// 404 Not Found cevabı, kitap bulunamadığı durumda;
-    /// 400 Bad Request cevabı, geçersiz kitap işlemi durumunda;
-    /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
-    /// </returns>
-    [HttpPost("borrow/{bookId}")]
-    public async Task<IActionResult> BorrowBook([FromRoute] Guid bookId, [FromRoute] Guid memberId)
-    {
-        return Ok();
-    }
-
-
-    /// <summary>
-    /// Belirli bir kitabı iade etmek için istemciden gelen isteği işler.
-    /// </summary>
-    /// <param name="bookId">İade edilecek kitabın ID'si.</param>
-    /// <returns>
-    /// 200 OK cevabı, işlem başarılı ise;
-    /// 404 Not Found cevabı, kitap bulunamadığı durumda;
-    /// 400 Bad Request cevabı, geçersiz kitap işlemi durumunda;
-    /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
-    /// </returns>
-    [HttpPost("return/{bookId}")]
-    public async Task<IActionResult> ReturnBook([FromRoute] Guid bookId)
-    {
-        return Ok();
-    }
-
 
 
     /// <summary>
