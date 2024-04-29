@@ -9,14 +9,20 @@ public class LibraryBranch : BaseEntity<Guid>, IAuditable<Guid>
     public string PhoneNumber { get; set; } // Şubenin telefon numarası
     public string Description { get; set; } // Şube hakkında açıklama
 
-    public Guid BookId { get; set; }
-    public Guid BranchHourId { get; set; }
-    public Guid MemberId { get; set; }
-    public Guid StaffId { get; set; }
-    public Guid LibraryBranchId { get; set; }
-    public Guid LibraryTransactionId { get; set; }
 
-    public ICollection<Book> Books { get; set; } // Şubeye ait kitaplar
+    public int MaxCheckoutLimit { get; set; } // Azami ödünç alma adedi
+    public int MinCheckoutDurationInDays { get; set; } // Asgari teslim süresi (gün cinsinden)
+    public int MaxCheckoutDurationInDays { get; set; } // Azami teslim süresi (gün cinsinden)
+    public int CriticalLevelThreshold { get; set; } // Eser kritik seviyesi
+
+    public bool NotifyOnBookOrBlogComment { get; set; } // Eser veya blog yorumu bildirimi açık mı?
+
+    public int TopMembersReportLimit { get; set; } // En çok okuyan üyeler raporunda listelenecek maksimum üye sayısı
+    public int TopBooksReportLimit { get; set; } // En çok okuyan eserler raporunda listelenecek maksimum eser sayısı
+
+
+
+    public ICollection<BookCatalog> Books { get; set; } // Şubeye ait kitaplar
     public ICollection<Member> Members { get; set; } // Şubeye kayıtlı üyeler
     public ICollection<Staff> Staffs { get; set; } // Şube personeli
     public ICollection<BranchHour> BranchHours { get; set; } // mesai saatleri

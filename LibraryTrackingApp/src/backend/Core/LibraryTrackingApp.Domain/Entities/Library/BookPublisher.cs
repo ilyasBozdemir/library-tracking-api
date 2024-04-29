@@ -12,5 +12,5 @@ public class BookPublisher : BaseEntity<Guid>, IAuditable<Guid>
     public string PhoneNumber { get; set; } // Yayınevi telefon numarası
     public string Email { get; set; } // Yayınevi e-posta adresi
 
-    public ICollection<Book> Books { get; set; }
+    public ICollection<BookCatalog> Books { get; set; }
 }

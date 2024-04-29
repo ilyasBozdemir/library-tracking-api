@@ -6,5 +6,5 @@ public class Shelf : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
     public string Name { get; set; }
-    public List<BookCompartment> Compartments { get; set; }
+    public ICollection<BookCompartment> Compartments { get; set; }
 }

@@ -3,7 +3,6 @@ using LibraryTrackingApp.Domain.Enums;
 
 namespace LibraryTrackingApp.Persistence.Data;
 
-
 // SeedData bu sınıfla beraber 1-1 1-n n-n gibi ilişkilerde güncellemelerden sonra düzelmemiş yerler kalabilir bunlar zamanla düzeltilcektir.
 
 public static class SeedData
@@ -109,7 +108,6 @@ public static class SeedData
             LastModifiedById = systemUserId,
         };
 
-
         var memberUser = new AppUser
         {
             Id = Guid.NewGuid(),
@@ -199,6 +197,13 @@ public static class SeedData
             Address = "123 Ana Cadde",
             PhoneNumber = "123-456-7890",
             Description = "Bu bir örnek kütüphane şubesidir.",
+            MaxCheckoutLimit = 5,
+            MinCheckoutDurationInDays = 5,
+            MaxCheckoutDurationInDays = 7,
+            CriticalLevelThreshold = 5,
+            NotifyOnBookOrBlogComment = true,
+            TopMembersReportLimit = 5,
+            TopBooksReportLimit = 5,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
@@ -219,14 +224,14 @@ public static class SeedData
 
         var bookStockId = Guid.NewGuid();
 
-        var harryPotterBook = new Book
+        var harryPotterBook = new BookCatalog
         {
             Id = Guid.NewGuid(),
             GenreId = fantasyGenre.Id,
             LibraryBranchId = mainBranch.Id,
             PublisherId = bloomsburyPublishingPublisher.Id,
             AuthorId = jKRowlingAuthor.Id,
-            BookStockId= bookStockId,
+            BookStockId = bookStockId,
             Title = "Harry Potter and the Philosopher's Stone",
             ISBN = "9781408855652",
             Description =
@@ -300,6 +305,7 @@ public static class SeedData
             Gender = GenderType.Male,
             Occupation = "Software Engineer",
             MemberType = MemberType.Adult,
+            MembershipStatus=MembershipStatus.Active,
             NumberOfLateReturns = 0,
             MaxLateReturnsAllowed = 3,
             HasPenalty = false,
@@ -320,6 +326,7 @@ public static class SeedData
             Gender = GenderType.Female,
             LibraryBranchId = mainBranchId,
             MemberType = MemberType.Teacher,
+            MembershipStatus = MembershipStatus.Active,
             Occupation = "Teacher",
             NumberOfLateReturns = 2,
             MaxLateReturnsAllowed = 3,
@@ -331,8 +338,6 @@ public static class SeedData
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
         };
-
-
 
         var memberLibraryBranch = new Dictionary<string, object>
         {
@@ -423,16 +428,7 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-       
-        var bookStock = new BookStock
-        {
-            Id = bookStockId,
-            BookId = harryPotterBook.Id,
-            Quantity = 100,
-            CreatedById = systemUser.Id,
-            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
-            LastModifiedById = systemUser.Id
-        };
+
 
         var staff = new Staff
         {
@@ -449,8 +445,6 @@ public static class SeedData
             LibraryBranchId = mainBranch.Id
         };
 
-
-
         var borrow = new BorrowLend
         {
             Id = Guid.NewGuid(),
@@ -464,16 +458,15 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        borrow.DueDate = DateTime.Now;//zamanında iade için
+        borrow.DueDate = DateTime.Now; //zamanında iade için
         borrow.ReturnDate = DateTime.Now;
         borrow.BorrowStatus = BorrowStatus.Returned;
 
         borrow.IsLate = borrow.ReturnDate > borrow.DueDate;
-        borrow.LateDurationInDays = borrow.IsLate == true ? (int?)(borrow.ReturnDate - borrow.DueDate)?.TotalDays : 0;
+        borrow.LateDurationInDays =
+            borrow.IsLate == true ? (int?)(borrow.ReturnDate - borrow.DueDate)?.TotalDays : 0;
 
-
-
-        var borrow2 = new BorrowLend// gecikmeli iade için
+        var borrow2 = new BorrowLend // gecikmeli iade için
         {
             Id = Guid.NewGuid(),
             MemberId = member2.Id,
@@ -491,32 +484,116 @@ public static class SeedData
         borrow2.BorrowStatus = BorrowStatus.DelayedReturn;
 
         borrow2.IsLate = borrow2.ReturnDate > borrow2.DueDate;
-        borrow2.LateDurationInDays = borrow2.IsLate == true ? (int?)(borrow2.ReturnDate - borrow2.DueDate)?.TotalDays : 0;
+        borrow2.LateDurationInDays =
+            borrow2.IsLate == true ? (int?)(borrow2.ReturnDate - borrow2.DueDate)?.TotalDays : 0;
 
+        var bookStock = new BookStockOLD
+        {
+            Id = bookStockId,
+            BookId = harryPotterBook.Id,
+            Quantity = 100,
+            CreatedById = systemUser.Id,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
+        };
+
+
+
+        List<Shelf> shelves = new List<Shelf>();
+        List<BookCompartment> bookCompartments = new List<BookCompartment>();
+
+        int compartmentCountPerShelf = 5;
+        int shelfCount = 3;
+
+        for (int i = 0; i < shelfCount; i++)
+        {
+            var shelf = new Shelf { Id = Guid.NewGuid(), Name = $"Shelf {i + 1}", };
+
+            shelves.Add(shelf);
+
+            for (int j = 0; j < compartmentCountPerShelf; j++)
+            {
+                var compartment = new BookCompartment
+                {
+                    Id = Guid.NewGuid(),
+                    Name = $"Compartment {j + 1}",
+                    ShelfId = shelf.Id,
+                };
+
+                bookCompartments.Add(compartment);
+            }
+        }
+
+        List<BookInventory> bookItems = new List<BookInventory>();
+
+        for (int i = 0; i < 105; i++)
+        {
+            var item = new BookInventory
+            {
+                Id = Guid.NewGuid(),
+                BookId = harryPotterBook.Id,
+                BookNumber = $"HP-{i + 1}",
+                BookStatus = BookStatus.Active,
+                IsAvailable = true,
+                Description = "",
+                Notes = "",
+                TransactionDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+                BookStockTransactionType = BookStockTransactionType.Entry,
+                CreatedById = systemUser.Id,
+                CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+                LastModifiedById = systemUser.Id
+            };
+
+            bookItems.Add(item);
+        }
+
+        // kitap bölmelerine kitapları ilişkilendircez.
+        
+        //burda tanımlancaktır.....
 
 
 
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
-        SeedEntities<AppUser>(modelBuilder, systemUser, adminUser, staffUser, memberUser, memberUser2);
+        SeedEntities<AppUser>(
+            modelBuilder,
+            systemUser,
+            adminUser,
+            staffUser,
+            memberUser,
+            memberUser2
+        );
         SeedEntities<AppUserRole>(modelBuilder, appUserRole, appUserRole2);
         SeedEntities<Author>(modelBuilder, jKRowlingAuthor);
         SeedEntities<BookGenre>(modelBuilder, fantasyGenre, adventureGenre);
         SeedEntities<LibraryBranch>(modelBuilder, mainBranch);
-        SeedEntities<BranchHour>(modelBuilder, mondaybranchHour, tuesdaybranchHour, wednesdaybranchHour, thursdaybranchHour, fridaybranchHour, saturdaybranchHour, sundaybranchHour);
+        SeedEntities<BranchHour>(
+            modelBuilder,
+            mondaybranchHour,
+            tuesdaybranchHour,
+            wednesdaybranchHour,
+            thursdaybranchHour,
+            fridaybranchHour,
+            saturdaybranchHour,
+            sundaybranchHour
+        );
         SeedEntities<BookPublisher>(modelBuilder, bloomsburyPublishingPublisher);
-        SeedEntities<Book>(modelBuilder, harryPotterBook);
+        SeedEntities<BookCatalog>(modelBuilder, harryPotterBook);
         SeedEntities<BookTag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
         SeedEntities<Member>(modelBuilder, member1, member2);
         SeedEntities<BorrowLend>(modelBuilder, borrow, borrow2);
         SeedEntities<Staff>(modelBuilder, staff);
-        SeedEntities<BookStock>(modelBuilder, bookStock);
+        SeedEntities<BookStockOLD>(modelBuilder, bookStock);//BookInventory işlemi bitince bu entity kaldırılcaktır
 
+        SeedEntities<BookInventory>(modelBuilder, bookItems.ToArray());
+        SeedEntities<Shelf>(modelBuilder, shelves.ToArray());
+        SeedEntities<BookCompartment>(modelBuilder, bookCompartments.ToArray());
 
         modelBuilder.Entity("BookTags").HasData(bookTag1, bookTag2);
         modelBuilder.Entity("BookAuthors").HasData(bookAuthor);
-        modelBuilder.Entity("LibraryBranchMembers").HasData(memberLibraryBranch, memberLibraryBranch2);
+        modelBuilder
+            .Entity("LibraryBranchMembers")
+            .HasData(memberLibraryBranch, memberLibraryBranch2);
     }
-
 
     private static void SeedEntities<T>(ModelBuilder modelBuilder, params T[] entities)
         where T : class

@@ -15,7 +15,8 @@ public class Member : BaseEntity<Guid>, IAuditable<Guid>
     public GenderType Gender { get; set; } 
     public string Occupation { get; set; } //Meslek
     public MemberType MemberType { get; set; } //Meslek
-    
+    public MembershipStatus MembershipStatus { get; set; } // Üyelik Durumu
+
     public int NumberOfLateReturns { get; set; } // Geciken iade sayısı
     public int MaxLateReturnsAllowed { get; set; } // Maksimum geciken iade sayısı izni
     public bool HasPenalty { get; set; } // Ceza durumu

@@ -15,5 +15,5 @@ public class Author : BaseEntity<Guid>, IAuditable<Guid>
     public string Country { get; set; }
     public string Biography { get; set; }
 
-    public ICollection<Book> Books { get; set; }
+    public ICollection<BookCatalog> Books { get; set; }
 }

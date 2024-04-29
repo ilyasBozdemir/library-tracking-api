@@ -6,5 +6,5 @@ public class BookGenre : BaseEntity<Guid>, IAuditable<Guid>
     public string Name { get; set; }
     public bool IsActive { get; set; } = true;
 
-    public ICollection<Book> Books { get; set; }
+    public ICollection<BookCatalog> Books { get; set; }
 }
