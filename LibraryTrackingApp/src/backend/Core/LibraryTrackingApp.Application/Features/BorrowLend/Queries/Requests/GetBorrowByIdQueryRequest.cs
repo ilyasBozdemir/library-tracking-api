@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LibraryTrackingApp.Application.Features.BorrowLend.Queries.Responses;
 
-namespace LibraryTrackingApp.Application.Features.BorrowLend.Queries.Requests
+namespace LibraryTrackingApp.Application.Features.BorrowLend.Queries.Requests;
+
+public class GetBorrowByIdQueryRequest:IRequest<GetBorrowByIdQueryResponse>
 {
-    public class GetBorrowByIdQueryRequest
-    {
-    }
+    public Guid BorrowId { get; set; }
 }
