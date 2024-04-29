@@ -1,17 +1,10 @@
-﻿using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
+﻿using System.Net;
+using LibraryTrackingApp.Application.Features.BookStocks.Commands.Requests;
+using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
 using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
 
 namespace LibraryTrackingApp.Application.Features.BorrowLend.Commands.Handlers;
-
-/*
- *
- *
- *
- *
- *
- *
- */
 
 public class TakeBorrowCommandHandler
     : IRequestHandler<TakeBorrowCommandRequest, TakeBorrowCommandResponse>
@@ -31,6 +24,8 @@ public class TakeBorrowCommandHandler
         _mapper = mapper;
     }
 
+
+    // hata durumlarında geri almak için RollbackAsync olayları da yapılcaktır daha.
     public async Task<TakeBorrowCommandResponse> Handle(
         TakeBorrowCommandRequest request,
         CancellationToken cancellationToken
@@ -38,11 +33,74 @@ public class TakeBorrowCommandHandler
     {
         try
         {
+            var givenBookWriteRepository =
+                _unitOfWork.GetWriteRepository<Domain.Entities.Library.BorrowLend>();
+
+            var givenBookReadRepository =
+                _unitOfWork.GetReadRepository<Domain.Entities.Library.BorrowLend>();
+
+            var borrowedBook = await givenBookReadRepository.GetSingleAsync(
+                b => b.Id == request.BorrowId
+            );
+
+            if (borrowedBook == null)
+                return new()
+                {
+                    StatusCode = (int)HttpStatusCode.NotFound,
+                    Success = false,
+                    StateMessages = new[] { "Ödünç Kitap Bulunamadı." }
+                };
+
+            if (borrowedBook.BorrowStatus == BorrowStatus.Returned)
+                return new()
+                {
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    Success = false,
+                    StateMessages = new[] { "Kitap zaten iade edilmiş durumda." }
+                };
+
+            borrowedBook.ReturnDate = DateTime.Now;
+
+            borrowedBook.BorrowStatus = BorrowStatus.Returned;
+
+            if (borrowedBook.ReturnDate.HasValue && borrowedBook.ReturnDate > borrowedBook.DueDate)
+            {
+                borrowedBook.LateDurationInDays = (int?)
+                    (borrowedBook.ReturnDate - borrowedBook.DueDate)?.TotalDays;
+            }
+            else
+            {
+                borrowedBook.LateDurationInDays = 0;
+            }
+
+            var stockDecreaseResponse = await _mediator.Send(
+               new StockOperationCommandRequest
+               {
+                   BookId = borrowedBook.BookId,
+                   OperationType = StockOperationType.Increase,
+                   Quantity = 1,
+               }
+           );
+
+
+            if (stockDecreaseResponse.Success)
+            {
+
+                var givenBookResult = await givenBookWriteRepository.UpdateAsync(borrowedBook);
+
+                return new()
+                {
+                    StatusCode = (int)HttpStatusCode.OK,
+                    Success = stockDecreaseResponse.Success,
+                    StateMessages = new[] { "Kitap Başarıyla Teslim alındı." }
+                };
+            }
+
             return new()
             {
-                StatusCode = 500,
-                Success = false,
-                StateMessages = new string[] { $"Bir hata oluştu: " }
+                StatusCode = stockDecreaseResponse.StatusCode,
+                Success = stockDecreaseResponse.Success,
+                StateMessages = stockDecreaseResponse.StateMessages
             };
         }
         catch (Exception ex)

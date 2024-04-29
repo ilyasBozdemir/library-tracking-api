@@ -50,7 +50,7 @@ public class BorrowLendsController : CustomBaseController
     /// <summary>
     /// Belirli bir kitabı iade etmek için istemciden gelen isteği işler.
     /// </summary>
-    /// <param name="bookId">İade edilecek kitabın ID'si.</param>
+    /// <param name="request">İade edilecek kitabın request nesnesi.</param>
     /// <returns>
     /// 200 OK cevabı, işlem başarılı ise;
     /// 404 Not Found cevabı, kitap bulunamadığı durumda;
@@ -94,6 +94,7 @@ public class BorrowLendsController : CustomBaseController
     [HttpGet("borrow/{borrowId}")]
     public async Task<IActionResult> GetBorrowById(Guid borrowId)
     {
+        //eklencek daha
         return Ok();
     }
 
@@ -107,11 +108,9 @@ public class BorrowLendsController : CustomBaseController
     /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
     /// </returns>
     [HttpGet("borrows")]
-    public async Task<IActionResult> GetAllBorrows(
-        [FromQuery] int pageIndex,
-        [FromQuery] int pageSize
-    )
+    public async Task<IActionResult> GetAllBorrows()
     {
+        //eklencek daha
         return Ok();
     }
 }

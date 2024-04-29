@@ -2,7 +2,7 @@
 
 namespace LibraryTrackingApp.Application.Features.BorrowLend.Behaviors.Mapping;
 
-public class BorrowLendMappingProfile :Profile
+public class BorrowLendMappingProfile : Profile
 {
     public BorrowLendMappingProfile()
     {
@@ -14,7 +14,6 @@ public class BorrowLendMappingProfile :Profile
         CreateMap<Domain.Entities.Library.BorrowLend, CreateBorrowLendDTO>()
             .ReverseMap();
 
-
         // BorrowLend ↔ GiveBorrowCommandRequest
         CreateMap<Domain.Entities.Library.BorrowLend, GiveBorrowCommandRequest>()
             .ReverseMap();
@@ -23,8 +22,20 @@ public class BorrowLendMappingProfile :Profile
         CreateMap<GiveBorrowCommandRequest, CreateBorrowLendDTO>()
             .ReverseMap();
 
-
         // GiveBorrowCommandRequest ↔ BorrowLendDTO
-        CreateMap<GiveBorrowCommandRequest, BorrowLendDTO>().ReverseMap();
+        CreateMap<GiveBorrowCommandRequest, BorrowLendDTO>()
+            .ReverseMap();
+
+        // BorrowLend ↔ TakeBorrowCommandRequest
+        CreateMap<Domain.Entities.Library.BorrowLend, TakeBorrowCommandRequest>()
+            .ReverseMap();
+
+        // TakeBorrowCommandRequest ↔ CreateBorrowLendDTO
+        CreateMap<TakeBorrowCommandRequest, CreateBorrowLendDTO>()
+            .ReverseMap();
+
+        // BorrowCommandRequest ↔ BorrowLendDTO
+        CreateMap<TakeBorrowCommandRequest, BorrowLendDTO>()
+            .ReverseMap();
     }
 }

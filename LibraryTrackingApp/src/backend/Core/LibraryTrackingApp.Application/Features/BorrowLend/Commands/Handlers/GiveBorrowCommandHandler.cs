@@ -37,6 +37,33 @@ public class GiveBorrowCommandHandler
         _mapper = mapper;
     }
 
+    /*
+     *
+     * Burda aslında library kısmını kiracı başına veritabanı yapılırdı.
+     * istek atılan header içinde daha sonrasında library id de verilir header'dan da o alınır.
+     * güncellemek isteyen kullanıcının böylece yetkisi kontrol edilir.
+     *
+     */
+
+    /*
+     *
+     * ve de IUnitOfWork içinde BeginTransactionAsync, RollbackAsync, CommitAsync ve SaveAsync
+     * bunlar da kullanılcaktır. BeginTransactionAsync kısmında birtakım hata oldugu için su anlık askıya aldım.
+     * bunlar da kulllanılarak hata olunca rollback yapılcak.
+     *
+     */
+
+
+    /*
+     *
+     * NOT: stok durumlarını işe ona göre de ,
+     * hata mesajlarını response mesajlarını  ayarla
+     *
+     *
+     */
+
+    //  seed data ile olusan   bookid, memberid,lenderid gibi dataları alıp bu handleri test edebilirsiniz.
+
     public async Task<GiveBorrowCommandResponse> Handle(
         GiveBorrowCommandRequest request,
         CancellationToken cancellationToken
@@ -45,8 +72,8 @@ public class GiveBorrowCommandHandler
         try
         {
             var existingBook = await _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BorrowLend>()
-                .ExistsAsync(b => b.BookId == request.BookId);
+                .GetReadRepository<Domain.Entities.Library.Book>()
+                .ExistsAsync(b => b.Id == request.BookId);
 
             var existingMember = await _unitOfWork
                 .GetReadRepository<Domain.Entities.Library.Member>()
@@ -58,79 +85,64 @@ public class GiveBorrowCommandHandler
 
             if (!existingBook || !existingMember || !existingStaff)
             {
-                return new GiveBorrowCommandResponse
+                return new ()
                 {
                     StatusCode = (int)HttpStatusCode.BadRequest,
                     Success = false,
-                    StateMessages = new [] { "Bazı girişler geçersiz veya eksik." }
+                    StateMessages = new[] { "Bazı girişler geçersiz veya eksik." }
                 };
             }
-            else
-            {
-                var stockDecreaseResponse = await _mediator.Send(
-                    new StockOperationCommandRequest
-                    {
-                        BookId = request.BookId,
-                        OperationType = StockOperationType.Decrease,
-                        Quantity = 1,
-                    }
-                );
 
-                if (stockDecreaseResponse.Success)
+            var stockDecreaseResponse = await _mediator.Send(
+                new StockOperationCommandRequest
                 {
+                    BookId = request.BookId,
+                    OperationType = StockOperationType.Decrease,
+                    Quantity = 1,
+                }
+            );
 
-                    var givenBookWriteRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BorrowLend>();
+            if (stockDecreaseResponse.Success)
+            {
+                var givenBookWriteRepository =
+                    _unitOfWork.GetWriteRepository<Domain.Entities.Library.BorrowLend>();
 
+                var givenBook = _mapper.Map<Domain.Entities.Library.BorrowLend>(request);
 
-                    var givenBook = _mapper.Map<Domain.Entities.Library.BorrowLend>(request);
+                givenBook.BorrowDate = DateTime.Now;
 
-                    givenBook.IsLate = givenBook.IsLate = givenBook.ReturnDate > givenBook.DueDate;
-                    givenBook.BorrowStatus = BorrowStatus.Borrowed;
+                givenBook.IsLate = givenBook.IsLate = givenBook.ReturnDate > givenBook.DueDate;
+                givenBook.BorrowStatus = BorrowStatus.Borrowed;
 
-                    if (givenBook.ReturnDate.HasValue && givenBook.ReturnDate > givenBook.DueDate)
+                var givenBookResult = await givenBookWriteRepository.AddAsync(givenBook);
+
+                if (givenBookResult)
+                {
+                    return new ()
                     {
-                        givenBook.LateDurationInDays = (int?)(givenBook.ReturnDate - givenBook.DueDate)?.TotalDays;
-                    }
-                    else
-                    {
-                        givenBook.LateDurationInDays = null;
-                    }
-
-
-
-                    var givenBookResult = await givenBookWriteRepository.AddAsync(givenBook);
-
-
-                    if (givenBookResult)
-                    {
-                        return new GiveBorrowCommandResponse
-                        {
-                            StatusCode = (int)HttpStatusCode.OK,
-                            Success = true,
-                            StateMessages = new[] { "Kitap Başarıyla Ödünç Verildi." }
-                        };
-                    }
-                    else
-                    {
-                        return new GiveBorrowCommandResponse
-                        {
-                            StatusCode = (int)HttpStatusCode.BadRequest,
-                            Success = true,
-                            StateMessages = new[] { "Kitap Ödünç Verilirken Hata Oluştu." }
-                        };
-                    }
-
-                   
+                        StatusCode = (int)HttpStatusCode.OK,
+                        Success = true,
+                        StateMessages = new[] { "Kitap Başarıyla Ödünç Verildi." }
+                    };
                 }
                 else
                 {
-                    return new GiveBorrowCommandResponse
+                    return new ()
                     {
-                        StatusCode = stockDecreaseResponse.StatusCode,
-                        Success = stockDecreaseResponse.Success,
-                        StateMessages = stockDecreaseResponse.StateMessages
+                        StatusCode = (int)HttpStatusCode.BadRequest,
+                        Success = true,
+                        StateMessages = new[] { "Kitap Ödünç Verilirken Hata Oluştu." }
                     };
                 }
+            }
+            else
+            {
+                return new ()
+                {
+                    StatusCode = stockDecreaseResponse.StatusCode,
+                    Success = stockDecreaseResponse.Success,
+                    StateMessages = stockDecreaseResponse.StateMessages
+                };
             }
         }
         catch (Exception ex)
@@ -139,7 +151,7 @@ public class GiveBorrowCommandHandler
             {
                 StatusCode = 500,
                 Success = false,
-                StateMessages = new [] { $"Bir hata oluştu: {ex.Message}" }
+                StateMessages = new[] { $"Bir hata oluştu: {ex.Message}" }
             };
         }
     }

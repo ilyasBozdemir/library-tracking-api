@@ -10,7 +10,6 @@ public class GiveBorrowCommandRequest : IRequest<GiveBorrowCommandResponse>
     public Guid MemberId { get; set; }
     public Guid LenderId { get; set; }
 
-    public DateTime BorrowDate { get; set; }
     public DateTime DueDate { get; set; }
     public bool HasFee { get; set; }
     public decimal FeeAmount { get; set; }
