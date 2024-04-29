@@ -67,6 +67,7 @@ public class TakeBorrowCommandHandler
             {
                 borrowedBook.LateDurationInDays = (int?)
                     (borrowedBook.ReturnDate - borrowedBook.DueDate)?.TotalDays;
+                borrowedBook.BorrowStatus = BorrowStatus.DelayedReturn;
             }
             else
             {

@@ -85,7 +85,7 @@ public class GiveBorrowCommandHandler
 
             if (!existingBook || !existingMember || !existingStaff)
             {
-                return new ()
+                return new()
                 {
                     StatusCode = (int)HttpStatusCode.BadRequest,
                     Success = false,
@@ -118,7 +118,7 @@ public class GiveBorrowCommandHandler
 
                 if (givenBookResult)
                 {
-                    return new ()
+                    return new()
                     {
                         StatusCode = (int)HttpStatusCode.OK,
                         Success = true,
@@ -127,7 +127,7 @@ public class GiveBorrowCommandHandler
                 }
                 else
                 {
-                    return new ()
+                    return new()
                     {
                         StatusCode = (int)HttpStatusCode.BadRequest,
                         Success = true,
@@ -137,7 +137,7 @@ public class GiveBorrowCommandHandler
             }
             else
             {
-                return new ()
+                return new()
                 {
                     StatusCode = stockDecreaseResponse.StatusCode,
                     Success = stockDecreaseResponse.Success,

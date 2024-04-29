@@ -131,8 +131,9 @@ Uygulama aşağıdaki entiteleri içermektedir:
 - **BookGenre**: Kitap türlerinin kaydedilmesi.
 - **Author**: Kitap yazarlarının kaydedilmesi.
 - **BookPublisher**: Kitap yayınevlerinin kaydedilmesi.
-- **BorrowLendBook**: Kitap ödünç alma ve iade işlemlerinin yönetimi.
+- **BorrowLend**: Kitap ödünç alma ve iade işlemlerinin yönetimi.
 - **BookStock**: Kitap stoklarının yönetimi.
+- **BookEntry**: Kitaplar için stok entity yerine stok tutması ve kayıt tutması için bunu kullanıcaz ilerde
 - **BookTag**: Kitapları kategorize etmek için etiketlerin yönetimi.
 - **FavoriteList**: Kullanıcıların favori listesine kitap eklemesi
 - **ReadingList**: Kullanıcıların okuma listesine kitap eklemesi.

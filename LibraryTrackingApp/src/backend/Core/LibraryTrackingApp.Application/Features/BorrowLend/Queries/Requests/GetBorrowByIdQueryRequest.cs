@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace LibraryTrackingApp.Application.Features.BorrowLend.Queries.Requests
 {
-    internal class GetBorrowByIdQueryRequest
+    public class GetBorrowByIdQueryRequest
     {
     }
 }

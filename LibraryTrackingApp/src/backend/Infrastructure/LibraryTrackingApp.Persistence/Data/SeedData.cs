@@ -3,6 +3,9 @@ using LibraryTrackingApp.Domain.Enums;
 
 namespace LibraryTrackingApp.Persistence.Data;
 
+
+// SeedData bu sınıfla beraber 1-1 1-n n-n gibi ilişkilerde güncellemelerden sonra düzelmemiş yerler kalabilir bunlar zamanla düzeltilcektir.
+
 public static class SeedData
 {
     public static void Seed(ModelBuilder modelBuilder)
@@ -215,7 +218,6 @@ public static class SeedData
         };
 
         var bookStockId = Guid.NewGuid();
-        var bookBorrowId = Guid.NewGuid();
 
         var harryPotterBook = new Book
         {
@@ -225,8 +227,6 @@ public static class SeedData
             PublisherId = bloomsburyPublishingPublisher.Id,
             AuthorId = jKRowlingAuthor.Id,
             BookStockId= bookStockId,
-            BorrowId= bookBorrowId,
-            BookNumber="A1",
             Title = "Harry Potter and the Philosopher's Stone",
             ISBN = "9781408855652",
             Description =
@@ -449,27 +449,49 @@ public static class SeedData
             LibraryBranchId = mainBranch.Id
         };
 
-     
+
 
         var borrow = new BorrowLend
         {
-            Id = bookBorrowId,
+            Id = Guid.NewGuid(),
             MemberId = member1.Id,
             BookId = harryPotterBook.Id,
             LenderId = staff.Id,
-            BorrowDate = DateTime.Now,
-            DueDate = DateTime.Now.AddDays(14),
+            BorrowDate = DateTime.Now - TimeSpan.FromDays(10),
             BorrowStatus = BorrowStatus.Borrowed,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
         };
 
-        borrow.ReturnDate = DateTime.Now.AddMinutes(10);
+        borrow.DueDate = DateTime.Now;//zamanında iade için
+        borrow.ReturnDate = DateTime.Now;
         borrow.BorrowStatus = BorrowStatus.Returned;
 
         borrow.IsLate = borrow.ReturnDate > borrow.DueDate;
-        borrow.LateDurationInDays = borrow.IsLate == true ? (int?)(borrow.ReturnDate - borrow.DueDate)?.TotalDays : null;
+        borrow.LateDurationInDays = borrow.IsLate == true ? (int?)(borrow.ReturnDate - borrow.DueDate)?.TotalDays : 0;
+
+
+
+        var borrow2 = new BorrowLend// gecikmeli iade için
+        {
+            Id = Guid.NewGuid(),
+            MemberId = member2.Id,
+            BookId = harryPotterBook.Id,
+            LenderId = staff.Id,
+            BorrowDate = DateTime.Now - TimeSpan.FromDays(10),
+            BorrowStatus = BorrowStatus.Borrowed,
+            CreatedById = systemUser.Id,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
+        };
+
+        borrow2.DueDate = DateTime.Now - TimeSpan.FromDays(1);
+        borrow2.ReturnDate = DateTime.Now;
+        borrow2.BorrowStatus = BorrowStatus.DelayedReturn;
+
+        borrow2.IsLate = borrow2.ReturnDate > borrow2.DueDate;
+        borrow2.LateDurationInDays = borrow2.IsLate == true ? (int?)(borrow2.ReturnDate - borrow2.DueDate)?.TotalDays : 0;
 
 
 
@@ -485,7 +507,7 @@ public static class SeedData
         SeedEntities<Book>(modelBuilder, harryPotterBook);
         SeedEntities<BookTag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
         SeedEntities<Member>(modelBuilder, member1, member2);
-        SeedEntities<BorrowLend>(modelBuilder, borrow);
+        SeedEntities<BorrowLend>(modelBuilder, borrow, borrow2);
         SeedEntities<Staff>(modelBuilder, staff);
         SeedEntities<BookStock>(modelBuilder, bookStock);
 

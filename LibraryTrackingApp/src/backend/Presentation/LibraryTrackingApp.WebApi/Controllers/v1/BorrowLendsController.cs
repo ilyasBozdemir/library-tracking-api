@@ -1,9 +1,19 @@
-﻿using LibraryTrackingApp.Application.Features.Books.Events;
-using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
+﻿using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
 using LibraryTrackingApp.Application.Features.BorrowLend.Events;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
+
+
+/*
+ 
+daha saglıklı kitap takibi için,
+bookstock entity'si kaldırılcaktır.
+yerine bookentry gelicektir.
+ 
+ve fiş girer gibi tek tek kayıt girilcektir.
+
+ */
 
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
@@ -81,6 +91,111 @@ public class BorrowLendsController : CustomBaseController
         return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 
+
+    /// <summary>
+    /// Kitabın ödünç süresini uzatmak için istemciden gelen isteği işler.
+    /// </summary>
+    /// <param name="request">Ödünç süresi uzatılacak kitabın request nesnesi.</param>
+    /// <returns>
+    /// 200 OK cevabı, işlem başarılı ise;
+    /// 404 Not Found cevabı, kitap bulunamadığı durumda;
+    /// 400 Bad Request cevabı, geçersiz kitap işlemi durumunda;
+    /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
+    /// </returns>
+    [HttpPost("renew")]
+    public async Task<IActionResult> RenewBook([FromBody] RenewBorrowCommandRequest request)
+    {
+        var response = await _mediator.Send(request);
+        await _mediator.Publish(
+            new BorrowLendEvent()
+            {
+                Errors = response.Success ? null : response.StateMessages,
+                IsSuccessful = response.Success,
+                BorrowLendType = LibraryTrackingApp.Domain.Enums.BorrowLendType.Renewed
+            }
+        );
+
+        var responseValue = new
+        {
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
+    }
+
+
+
+    /// <summary>
+    /// Hasarlı kitap durumunu bildirmek için istemciden gelen isteği işler.
+    /// </summary>
+    /// <param name="request">Hasarlı kitabın request nesnesi.</param>
+    /// <returns>
+    /// 200 OK cevabı, işlem başarılı ise;
+    /// 404 Not Found cevabı, kitap bulunamadığı durumda;
+    /// 400 Bad Request cevabı, geçersiz kitap işlemi durumunda;
+    /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
+    /// </returns>
+    [HttpPost("report-damage")]
+    public async Task<IActionResult> ReportDamage([FromBody] ReportDamageBookCommandRequest request)
+    {
+        var response = await _mediator.Send(request);
+        await _mediator.Publish(
+            new BorrowLendEvent()
+            {
+                Errors = response.Success ? null : response.StateMessages,
+                IsSuccessful = response.Success,
+                BorrowLendType = LibraryTrackingApp.Domain.Enums.BorrowLendType.Damaged
+            }
+        );
+
+        var responseValue = new
+        {
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
+    }
+
+
+    /// <summary>
+    /// Kayıp kitap durumunu bildirmek için istemciden gelen isteği işler.
+    /// </summary>
+    /// <param name="request">Kayıp kitabın request nesnesi.</param>
+    /// <returns>
+    /// 200 OK cevabı, işlem başarılı ise;
+    /// 404 Not Found cevabı, kitap bulunamadığı durumda;
+    /// 400 Bad Request cevabı, geçersiz kitap işlemi durumunda;
+    /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
+    /// </returns>
+    [HttpPost("report-loss")]
+    public async Task<IActionResult> ReportLoss([FromBody] ReportLossBookCommandRequest request)
+    {
+        var response = await _mediator.Send(request);
+        await _mediator.Publish(
+            new BorrowLendEvent()
+            {
+                Errors = response.Success ? null : response.StateMessages,
+                IsSuccessful = response.Success,
+                BorrowLendType = LibraryTrackingApp.Domain.Enums.BorrowLendType.Lost
+            }
+        );
+
+        var responseValue = new
+        {
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
+    }
 
     /// <summary>
     /// Belirli bir ödünç işlemi ID'sine göre ödünç işleminin detaylarını getirir.
