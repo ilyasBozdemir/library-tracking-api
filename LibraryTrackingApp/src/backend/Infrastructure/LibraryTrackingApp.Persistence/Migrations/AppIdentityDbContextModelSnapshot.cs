@@ -39,8 +39,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            AuthorId = new Guid("083ecb57-f36b-4f12-8c77-39d2343dd4a9"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008")
+                            AuthorId = new Guid("2cd3a01b-482e-452d-b354-1cbd746caca4"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7")
                         });
                 });
 
@@ -61,13 +61,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            TagId = new Guid("fb7816ca-3443-422a-a498-5cbbb24bfc45"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008")
+                            TagId = new Guid("078e80c2-9eb4-4466-8f13-ffeac5c5d7b6"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7")
                         },
                         new
                         {
-                            TagId = new Guid("e34fc271-a8f3-48aa-9a7d-d9db8b6ae7a9"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008")
+                            TagId = new Guid("cbeb1aca-0f6a-49d0-b1be-ece0438ab8a1"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7")
                         });
                 });
 
@@ -88,13 +88,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MemberId = new Guid("9acc5bc2-c342-4a7d-b9a8-dbc2f93fa786"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631")
+                            MemberId = new Guid("9ab91798-a963-4cee-905b-c066a5c5cfb8"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd")
                         },
                         new
                         {
-                            MemberId = new Guid("74faad27-6421-4829-8b6a-9c6e02bd6fa6"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631")
+                            MemberId = new Guid("bc536473-9af6-4c47-a241-a54bbd73a9a3"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd")
                         });
                 });
 
@@ -263,29 +263,29 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5ad3b527-d475-445b-a9b0-a6462f7cd987"),
-                            ConcurrencyStamp = "93a13c75-620d-4510-ad7d-d0b91ee0a2f0",
+                            Id = new Guid("ae1ba15c-e74f-484d-a400-e777c820c73a"),
+                            ConcurrencyStamp = "9d3fce5b-b139-460b-b2d4-225eeda71488",
                             Name = "system",
                             NormalizedName = "SYSTEM"
                         },
                         new
                         {
-                            Id = new Guid("d541ad6c-d990-4160-b430-c4ed048242a5"),
-                            ConcurrencyStamp = "339f4420-bf36-42f1-a167-a67a7312611f",
+                            Id = new Guid("9fd10230-1e18-4b3e-880f-630e8b6180f0"),
+                            ConcurrencyStamp = "035663f3-ae8a-4e63-adc4-e85846ae08bc",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("b966a17e-8090-4061-bb79-f811020145dd"),
-                            ConcurrencyStamp = "dcd0ec78-61d1-41f1-816b-4d6fa7856a8f",
+                            Id = new Guid("cb1745cf-fd9d-4c74-9aa1-c189a8331c0c"),
+                            ConcurrencyStamp = "d9ffe135-df40-4fbe-ba20-1a4657f1b3d4",
                             Name = "Staff",
                             NormalizedName = "STAFF"
                         },
                         new
                         {
-                            Id = new Guid("dab47e78-67e8-4b99-baa0-031b37e43b57"),
-                            ConcurrencyStamp = "9b74dc13-3ae0-407f-ba96-ccd99502b8a1",
+                            Id = new Guid("258db1dd-6d71-41ae-bd62-3d6a5df400aa"),
+                            ConcurrencyStamp = "15aeaec2-b5da-4a94-9d97-a78920841590",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         });
@@ -408,11 +408,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            Id = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             AccessFailedCount = 0,
                             Address = "123 System St.",
                             BirthDate = new DateTime(1980, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "6db92d3b-8b49-424d-86a1-0ed7e1db1652",
+                            ConcurrencyStamp = "ae497bee-53c0-495f-99f9-9a61a2f3e4c9",
                             CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             CreatedDateUnix = 0L,
                             Email = "system@domain.com",
@@ -425,7 +425,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             Name = "System",
                             NormalizedEmail = "SYSTEM@DOMAIN.COM",
                             NormalizedUserName = "SYSTEM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECY88merkbGr1WK1Y3uo+BD5yd7s3l6bBfJ9ESjJVvlD6oJ33Rr2ZLpRqpnfpiK7Vg==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJgl1HpIWhhv/3C8LXeagLMF0U3aqUS5i0Vy/k0UwNlWC5NjrkVqEDv66jN85p4IqQ==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -435,24 +435,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("77cf39ea-87a9-481b-929f-9abf80a7c1d7"),
+                            Id = new Guid("c8eb5e83-bb71-45e5-9431-2a7aa82e039f"),
                             AccessFailedCount = 0,
                             Address = "456 Admin St.",
                             BirthDate = new DateTime(1985, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "60a3ae43-ac5e-4c6d-aaca-5c4ef8f8b64e",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            ConcurrencyStamp = "5c08cdf3-dc14-44d9-8aec-82f09c4ec6a9",
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             CreatedDateUnix = 0L,
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             Gender = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             LockoutEnabled = false,
                             Name = "Admin",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEArkj6N65dBOXg7veenD4YPpcr1PNEOPSTUlld5nkkS+wU0MwtcmRVSsK6yB5atsig==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEMIkbl4CGWpBWDU6Mt6RnsX+98bsW7l05rZgoVz6xm8fTIDt6tmOCDqGqIG/w6GLVw==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -462,24 +462,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2e9a9efc-1e1c-4eba-8b03-1dad31d459b9"),
+                            Id = new Guid("6219baba-87aa-4cbc-b506-243a37125723"),
                             AccessFailedCount = 0,
                             Address = "789 Employee St.",
                             BirthDate = new DateTime(1990, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "70525978-70f4-4c26-8269-f12c77c6b50b",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            ConcurrencyStamp = "ccb997be-c49f-4f81-a905-2e790d2cdd72",
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             CreatedDateUnix = 0L,
                             Email = "employee1@example.com",
                             EmailConfirmed = true,
                             Gender = 1,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             LockoutEnabled = false,
                             Name = "Employee",
                             NormalizedEmail = "EMPLOYEE1@EXAMPLE.COM",
                             NormalizedUserName = "EMPLOYEE1@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAELdxogC/bcwLrivYLnqbTKIjp/H1jaWT4XMTOUFLCmYnHG2vX39q9h2rWQFU1hEbhA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEOuaNqq+FcAMoqbOOK1OW9NQYCCWUk2wb8eoLiXK9FXgDxyhD2nlcPapNzrMdQkirg==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -489,24 +489,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("46236d25-f9e8-4b9e-9577-68cbceedfdca"),
+                            Id = new Guid("d862394e-2949-4209-b8f9-6fcb4c1c1fab"),
                             AccessFailedCount = 0,
                             Address = "123 Main Street",
                             BirthDate = new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "240a9024-0c8e-4c92-8401-cc6b9e1134c1",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            ConcurrencyStamp = "a855e3fd-090a-4972-a1d5-b5e19bff1cd8",
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             CreatedDateUnix = 0L,
                             Email = "john.doe@example.com",
                             EmailConfirmed = true,
                             Gender = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             LockoutEnabled = false,
                             Name = "John",
                             NormalizedEmail = "JOHN.DOE@EXAMPLE.COM",
                             NormalizedUserName = "JOHN.DOE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEM5ai2wz1GK/Fh3tE0TY0xFlbNR1CFfoJPpY5bklnVuvGzZnFVrdA46pqz8cyoo55w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEDnpTv7p3rKoJpIA2nGJeamtu+Kmqu2pBKbAtRPvCNCztrNWNIaWD1M75MCN9MXnyQ==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -516,24 +516,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a8604411-9fbd-41c0-8cc9-fe2f96e7609c"),
+                            Id = new Guid("124d66a0-7826-42f2-a93e-f456cc6332cb"),
                             AccessFailedCount = 0,
                             Address = "456 Oak Street",
                             BirthDate = new DateTime(1985, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "fb4f5583-ab84-402f-a947-6b4c50226c1d",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            ConcurrencyStamp = "801e68cf-00ce-44c4-8435-9bf6fd3a9013",
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             CreatedDateUnix = 0L,
                             Email = "jane.smith@example.com",
                             EmailConfirmed = true,
                             Gender = 1,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             LockoutEnabled = false,
                             Name = "Jane",
                             NormalizedEmail = "JANE.SMITH@EXAMPLE.COM",
                             NormalizedUserName = "JANE.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEAG2aeEHR3NtH4IMc5GBO9+PxAEKCW3gMo6u2siRyGvv5ST2XQWqDJRgPbgN+FqZ6g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEERyCVHL/1Uv5nJmMxWgH/87Vtp5lwINU/D5Y416/0cVHQvOCOT3cyAD4BLhR/zTWw==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -710,21 +710,21 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("083ecb57-f36b-4f12-8c77-39d2343dd4a9"),
+                            Id = new Guid("2cd3a01b-482e-452d-b354-1cbd746caca4"),
                             Biography = "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.",
                             BirthDate = new DateTime(1965, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Country = "United Kingdom",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Name = "J.K.",
                             Surname = "Rowling"
                         });
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -734,9 +734,6 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("AuthorId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid?>("BookCompartmentId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("BookFormat")
@@ -823,8 +820,6 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BookCompartmentId");
-
                     b.HasIndex("FavoriteListId");
 
                     b.HasIndex("GenreId");
@@ -839,32 +834,32 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasIndex("Title");
 
-                    b.ToTable("Books", "lm");
+                    b.ToTable("BookCatalogs", "lm");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
-                            AuthorId = new Guid("083ecb57-f36b-4f12-8c77-39d2343dd4a9"),
+                            Id = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            AuthorId = new Guid("2cd3a01b-482e-452d-b354-1cbd746caca4"),
                             BookFormat = "PrintedBook",
                             BookLanguage = "English",
                             BookStatus = "Active",
-                            BookStockId = new Guid("e5d6c73a-e865-412c-98d9-e4bfd147784b"),
+                            BookStockId = new Guid("5eb64c5d-7871-4dd1-b65c-41cd0d8fb06d"),
                             CoverImageUrl = "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             Description = "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
-                            GenreId = new Guid("086a66f7-1be6-46cb-a490-7d28badd16a7"),
+                            GenreId = new Guid("c346f72a-f3e9-4c11-8646-1755b80f9e51"),
                             ISBN = "9781408855652",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFeatured = true,
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OriginalPublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PageCount = 352,
                             PublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PublisherId = new Guid("f71b05af-21b6-4439-9b4a-9119e1970a8e"),
+                            PublisherId = new Guid("8c1ac52f-3f58-44cc-ac6d-d1e1430961f4"),
                             Title = "Harry Potter and the Philosopher's Stone"
                         });
                 });
@@ -873,6 +868,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BookInventoryItem")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookInventoryItemId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("CreatedById")
@@ -901,7 +902,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
-                    b.Property<Guid?>("ShelfId")
+                    b.Property<Guid>("ShelfId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
@@ -909,65 +910,188 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasIndex("ShelfId");
 
                     b.ToTable("BookCompartments", "lm");
-                });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookEntry", b =>
-                {
-                    b.Property<Guid>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("BookFormat")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("BookId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<int>("BookLanguage")
-                        .HasColumnType("int");
-
-                    b.Property<string>("BookNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("BookStatus")
-                        .HasColumnType("int");
-
-                    b.Property<Guid>("CreatedById")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<long>("CreatedDateUnix")
-                        .HasColumnType("bigint");
-
-                    b.Property<long?>("DeletedDateUnix")
-                        .HasColumnType("bigint");
-
-                    b.Property<DateTime>("EntryDate")
-                        .HasColumnType("datetime2");
-
-                    b.Property<bool>("IsAvailable")
-                        .HasColumnType("bit");
-
-                    b.Property<bool>("IsDeleted")
-                        .HasColumnType("bit");
-
-                    b.Property<Guid>("IsDeletedById")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<DateTime>("LastModified")
-                        .HasColumnType("datetime2");
-
-                    b.Property<Guid>("LastModifiedById")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<long?>("LastModifiedDateUnix")
-                        .HasColumnType("bigint");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("BookId");
-
-                    b.ToTable("BookEntry");
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("a62364b5-c242-44c0-ac35-b908c5316977"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 1",
+                            ShelfId = new Guid("245dca91-f12f-424b-9e8f-1cb4b59946f7")
+                        },
+                        new
+                        {
+                            Id = new Guid("2ddb12d3-4399-4c79-9aa6-bcd2e85ee7dc"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 2",
+                            ShelfId = new Guid("245dca91-f12f-424b-9e8f-1cb4b59946f7")
+                        },
+                        new
+                        {
+                            Id = new Guid("789d17a2-e0d4-4c03-8483-b76a4c0f4fc4"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 3",
+                            ShelfId = new Guid("245dca91-f12f-424b-9e8f-1cb4b59946f7")
+                        },
+                        new
+                        {
+                            Id = new Guid("b68aa6fe-3c55-4599-b1ee-f30f59c6730c"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 4",
+                            ShelfId = new Guid("245dca91-f12f-424b-9e8f-1cb4b59946f7")
+                        },
+                        new
+                        {
+                            Id = new Guid("47d43a29-a5b4-4a83-a1e0-f1ebb22e57fb"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 5",
+                            ShelfId = new Guid("245dca91-f12f-424b-9e8f-1cb4b59946f7")
+                        },
+                        new
+                        {
+                            Id = new Guid("a78c209e-befd-49e2-80ec-af77250ea95d"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 1",
+                            ShelfId = new Guid("8d348907-e5b1-4cad-b8eb-0667609a6e92")
+                        },
+                        new
+                        {
+                            Id = new Guid("02f52e31-e429-4c9c-ad23-34eebb59a096"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 2",
+                            ShelfId = new Guid("8d348907-e5b1-4cad-b8eb-0667609a6e92")
+                        },
+                        new
+                        {
+                            Id = new Guid("7f8dc829-4699-4769-9897-5a7067d5bc13"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 3",
+                            ShelfId = new Guid("8d348907-e5b1-4cad-b8eb-0667609a6e92")
+                        },
+                        new
+                        {
+                            Id = new Guid("dd2c0777-dcda-4f75-84c8-0bdc0dcb05d2"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 4",
+                            ShelfId = new Guid("8d348907-e5b1-4cad-b8eb-0667609a6e92")
+                        },
+                        new
+                        {
+                            Id = new Guid("6721cbe2-bdf7-45e8-bab8-c62403997971"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 5",
+                            ShelfId = new Guid("8d348907-e5b1-4cad-b8eb-0667609a6e92")
+                        },
+                        new
+                        {
+                            Id = new Guid("ce689a8b-0b06-4694-a9f2-6debfe16bc33"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 1",
+                            ShelfId = new Guid("09382326-27ac-4f15-89a0-5b34b5ed427f")
+                        },
+                        new
+                        {
+                            Id = new Guid("47448b87-7a6d-4f01-82ec-f1480fae0135"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 2",
+                            ShelfId = new Guid("09382326-27ac-4f15-89a0-5b34b5ed427f")
+                        },
+                        new
+                        {
+                            Id = new Guid("e543780b-86af-4bbb-ba07-0eede0f93e1a"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 3",
+                            ShelfId = new Guid("09382326-27ac-4f15-89a0-5b34b5ed427f")
+                        },
+                        new
+                        {
+                            Id = new Guid("9524e374-1155-45d4-8c35-222eaecc9bf0"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 4",
+                            ShelfId = new Guid("09382326-27ac-4f15-89a0-5b34b5ed427f")
+                        },
+                        new
+                        {
+                            Id = new Guid("79bbf917-918b-416e-b04a-a63b534bbdcc"),
+                            BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Compartment 5",
+                            ShelfId = new Guid("09382326-27ac-4f15-89a0-5b34b5ed427f")
+                        });
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookGenre", b =>
@@ -1011,25 +1135,1992 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("086a66f7-1be6-46cb-a490-7d28badd16a7"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            Id = new Guid("c346f72a-f3e9-4c11-8646-1755b80f9e51"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             IsActive = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Name = "Fantasy"
                         },
                         new
                         {
-                            Id = new Guid("00191e89-4992-4fd5-aae9-73797b1ccc76"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            Id = new Guid("f8814cfa-37b9-4378-aea0-3692598cd9f3"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             IsActive = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Name = "Adventure"
+                        });
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookInventory", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BookCompartmentId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("BookNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("BookStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BookStockTransactionType")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("BorrowLendId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Notes")
+                        .IsRequired()
+                        .HasMaxLength(1000)
+                        .HasColumnType("nvarchar(1000)");
+
+                    b.Property<long>("TransactionDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookCompartmentId");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("BookNumber")
+                        .IsUnique();
+
+                    b.ToTable("BookInventories", "lm");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("433e47dc-4ce3-480e-bd0e-89edd74d0441"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-1",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("27383240-cd1f-4f1d-8581-dde20296f99f"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-2",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("fa8c626e-6c14-4457-ab33-f4c960fc355e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-3",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("5ed654fd-3db7-4ae1-9080-2eabfd418394"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-4",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("08d75ef7-2a23-469a-83fc-9d6b0dd0fead"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-5",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("43c76a97-628a-40f7-9781-e015f69bb66c"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-6",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("7de7555c-7908-4ee4-b356-c4cbe54a105d"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-7",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("3a66471d-5010-40c8-9216-12e819d17eda"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-8",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("57974e6f-7350-467e-a960-14acf8efbe4d"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-9",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("3216bd15-8c5a-4c04-8e32-f15dd6e84b3e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-10",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("28a52eda-5789-4c03-bc1c-1c9e6ff8c06b"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-11",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("21d01f77-7320-4b16-83ea-32da8ad6e3ab"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-12",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("fbe21763-9989-4583-aa15-d77d2a86c676"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-13",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("2501a4cf-b434-4c36-bb29-6ff3feb79628"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-14",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("872fd46a-981c-434a-ae76-010cc22f9e9d"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-15",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("4bc378a9-2cb2-408d-bf09-7628d0f8293b"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-16",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("6ee928ef-53b9-4576-b03e-e74359d251f6"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-17",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("5ad7af76-7d38-4dc7-b0c1-56c65486eebd"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-18",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("81e6cee5-5c3f-48e0-9bb8-af6430a0ee80"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-19",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("dd574e17-90d5-44de-adf7-eb8b3f23a917"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-20",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("db97f4cc-8a48-48dd-8f16-25514698e732"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-21",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("3a18785b-4cf2-42c0-89a7-193855acbd02"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-22",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("4c480a4c-fe1a-4570-b328-d1fe656dd533"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-23",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("9db2e3b9-40f9-4813-a040-a48355c71a42"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-24",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("7e2fd01f-c2a2-46d1-9973-5e8834d51a22"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-25",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("20cfdc6f-2ecd-4c50-81a2-5d2a19de3349"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-26",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("41490bcb-186c-46af-bddc-812853ca1f3e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-27",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("2e419802-b061-40f4-afe3-b6d65b917f33"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-28",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("b0362b06-d373-4607-9f31-2e8d9388e70b"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-29",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("9fb3bc2e-b041-44d7-a85c-f0c657d936c1"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-30",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("14f1cb3a-8008-4a89-8900-075525b5fc4a"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-31",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("b5fc29eb-539f-494b-a815-247e1614c1a9"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-32",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("e3aa7d78-b2ce-4960-8cbf-a68847c6f431"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-33",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("ec046fee-9e47-4be0-b2bb-065a8283e16c"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-34",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("748e6daa-2bce-442c-869f-a51bdb22550b"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-35",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("7ce24f55-314f-4c83-8983-0272b3380551"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-36",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("d21d176a-d108-4b07-871d-e79a71b2b89e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-37",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("bc2258ae-5fda-4d91-b643-82d8ddda7c87"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-38",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("ee6e9129-2dcf-4603-901e-f42e1208953e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-39",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("b63619d9-4489-4b6f-8777-8817b32a3351"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-40",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("2392a97d-2480-4962-bf00-44f177e82f5f"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-41",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("c2e13922-2704-4927-a9b0-f87785824e76"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-42",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("c921e654-0de8-4cb1-98e3-8c9fd8e1c201"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-43",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("d19211b0-da32-4577-b0da-da60df9ca36a"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-44",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("4e88536c-f326-4610-9f48-82a0063a7f2d"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-45",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("06dac086-f370-41cd-8624-27a619c6815b"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-46",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("69ed72eb-aed1-430b-b470-a02c3907a180"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-47",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("03ac7bde-ae55-40d5-8463-072393dd2e7e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-48",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("1358237f-dcec-47db-b862-2de1a1204be5"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-49",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("6be8c543-d0ce-4382-a6f9-16c791629f36"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-50",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("53a70593-1a93-42c6-ae50-983f48e194cf"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-51",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("7ad7f62c-d775-429b-b10a-3f3ac226b56c"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-52",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("8b3aca2a-04c4-4c2d-af3b-4279edcf82c9"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-53",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("b5ac23fb-6f37-4c49-a1ec-e13d34d3c746"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-54",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("9b2a7df0-051a-40b8-bae5-8067ef7ff2a7"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-55",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("31fa82d6-9a50-4e4f-b5f2-638f9a3f2d9e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-56",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("cee963b4-3f4e-4fc1-abf2-85abd72865ca"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-57",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("216abbf5-4a86-49b7-ae51-d0cece8b4142"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-58",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("ba6a10ad-07a7-498a-bfa8-5b86affd4d33"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-59",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("3d09c54d-4955-4fc9-b858-f12298577895"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-60",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("56c42545-de36-4759-874c-2bdec77b0ecb"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-61",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("2306e59a-59a4-4fc6-94cf-6c5910b5a2cb"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-62",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("f7c36065-8312-48d8-b649-e22c69da2864"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-63",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("1ad40b60-7fc4-4b89-85e4-520269da6096"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-64",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("c63aa10b-e5f0-42d3-8ec8-0281f971b4b2"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-65",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("3c8744ce-aa66-4a7f-a5e7-2b731ab1ad56"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-66",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("fe3632a5-d5de-4a4f-ab8e-dd7a30c0199e"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-67",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("db084660-42e2-4b7c-a72c-10cd9ec75f39"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-68",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("e3211bc5-f3ba-4851-9b8f-b602b56512a4"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-69",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("98de9322-0a4c-437f-bcc6-611fcc16d175"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-70",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("9b7b0541-8b3d-4f07-b3d0-b44b2ad1ded6"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-71",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("8ba34160-c00e-48d9-9ead-2c8fd8e0ed1c"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-72",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("bde6183a-cb2e-4c9a-b56e-8886516b6f1c"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-73",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("b9540d87-a75b-48e8-9714-76c00beb14f7"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-74",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("1647fa7e-77f6-4160-b9a9-1abb1557ba48"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-75",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("ce2a3bb0-7608-4aa0-8004-fc28eb50b252"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-76",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("9fb40372-70b6-431a-b9a2-f1d2fbd4747c"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-77",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("cf86a06b-fd41-42ec-9cad-44d84be0ed68"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-78",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("33d12e3e-41c5-4e29-9914-09eea05aae9d"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-79",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("06cb5d75-f790-4bb9-a70e-d92e3422a70d"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-80",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("9dcb8899-52be-4ed5-9d66-951a9d566339"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-81",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("3d0d41af-ea30-4d9b-b158-ae4ed5d09bc4"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-82",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("27fc2f48-8490-4a0d-bb4e-81ce08eb0693"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-83",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("a6d862f5-fc0f-4a00-8ee8-7d0af9607e08"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-84",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("129b21fc-cd53-4f72-a864-8d132954ba94"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-85",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("fbb1c0af-6210-451a-adb7-6f853c8f6974"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-86",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("81bd9a83-986b-44e4-82cc-dd1438e6a973"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-87",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("4b9b8683-04cf-4cc3-8d68-5e1d39c42371"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-88",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("af96f39e-ddaf-49cb-8d71-71897b6705ff"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-89",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("b5a48413-7a0a-4ed4-b1a7-5cb3044c9007"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-90",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("90c961ce-3d81-4d15-adf8-94149be1f120"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-91",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("f5bd92e4-d4c3-45a4-b060-85d08507cfb5"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-92",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("6c5c5c87-2c3c-44ae-964a-e957febf70a8"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-93",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("901e8f0c-2577-4553-ac1a-606891f4e7eb"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-94",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("a0e00027-7717-4810-b35c-e2c1d6ff6ee7"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-95",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("cf255b3d-bae4-4421-b9c2-b1133d46f098"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-96",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("09ef3b6d-3f3b-4d79-a7e9-55a57520db74"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-97",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("a5860579-492e-4386-b929-71464f719726"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-98",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("d76e7ad3-aec5-4f64-ba75-3aab72818e8c"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-99",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("366e2a62-37b3-4c8a-822c-4c69b707bc76"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-100",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("37514116-83d2-4bbd-84f3-ebe2e50c63c0"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-101",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("478c417d-bfcd-438d-9b5b-fbf29ebdd356"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-102",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("69cf6bd9-15b3-4951-b5ca-f40f93c6cda8"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-103",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("0a13c9a1-570a-4140-b825-6efed90631d8"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-104",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
+                        },
+                        new
+                        {
+                            Id = new Guid("ff84d0d9-7015-44e3-b8b9-2b4bcfabcb5b"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BookNumber = "HP-105",
+                            BookStatus = "Active",
+                            BookStockTransactionType = 0,
+                            BorrowLendId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            Description = "",
+                            IsAvailable = true,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            Notes = "",
+                            TransactionDateUnix = 1714435972L
                         });
                 });
 
@@ -1092,14 +3183,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f71b05af-21b6-4439-9b4a-9119e1970a8e"),
+                            Id = new Guid("8c1ac52f-3f58-44cc-ac6d-d1e1430961f4"),
                             Address = "50 Bedford Square, London, England",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             Email = "info@bloomsbury.com",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Name = "Bloomsbury Publishing",
                             PhoneNumber = "+44 (0)20 7631 5600",
                             Website = "https://www.bloomsbury.com/"
@@ -1154,7 +3245,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.ToTable("BookReviews", "lm");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookStock", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookStockOLD", b =>
                 {
                     b.Property<Guid>("Id")
                         .ValueGeneratedOnAdd()
@@ -1191,18 +3282,18 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasIndex("BookId");
 
-                    b.ToTable("BookStocks", "lm");
+                    b.ToTable("BookStocksOLD", "lm");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("e5d6c73a-e865-412c-98d9-e4bfd147784b"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            Id = new Guid("5eb64c5d-7871-4dd1-b65c-41cd0d8fb06d"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Quantity = 100
                         });
                 });
@@ -1250,35 +3341,35 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fb7816ca-3443-422a-a498-5cbbb24bfc45"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            Id = new Guid("078e80c2-9eb4-4466-8f13-ffeac5c5d7b6"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Name = "Hogwarts"
                         },
                         new
                         {
-                            Id = new Guid("e34fc271-a8f3-48aa-9a7d-d9db8b6ae7a9"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            Id = new Guid("cbeb1aca-0f6a-49d0-b1be-ece0438ab8a1"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Name = "Harry Potter"
                         },
                         new
                         {
-                            Id = new Guid("238d37b1-41c2-470c-ae0a-6a47c7a17842"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            Id = new Guid("d03fb188-f628-4a20-9caf-c7d53a458af8"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             Name = "Quidditch"
                         });
                 });
@@ -1290,6 +3381,9 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BookInventoryId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<DateTime>("BorrowDate")
@@ -1348,6 +3442,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasIndex("BookId");
 
+                    b.HasIndex("BookInventoryId");
+
                     b.HasIndex("BorrowDate");
 
                     b.HasIndex("DueDate");
@@ -1361,43 +3457,43 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f0eac556-a732-47d7-8a0a-30bace0331f2"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
-                            BorrowDate = new DateTime(2024, 4, 19, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1228),
+                            Id = new Guid("bcf6651f-3b85-49e9-a830-b03b57988549"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BorrowDate = new DateTime(2024, 4, 20, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2418),
                             BorrowStatus = "Returned",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
-                            DueDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1245),
-                            FeeAmount = 0m,
-                            HasFee = false,
-                            IsDeleted = false,
-                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            IsLate = false,
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LateDurationInDays = 0,
-                            LenderId = new Guid("a94c2719-ea2b-4b0c-be99-fd7268afb2f5"),
-                            MemberId = new Guid("9acc5bc2-c342-4a7d-b9a8-dbc2f93fa786"),
-                            ReturnDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1245)
-                        },
-                        new
-                        {
-                            Id = new Guid("3b565299-2fdc-490c-a700-4a0cca5cc877"),
-                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
-                            BorrowDate = new DateTime(2024, 4, 19, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1268),
-                            BorrowStatus = "DelayedReturn",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
-                            DueDate = new DateTime(2024, 4, 28, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1295),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            DueDate = new DateTime(2024, 4, 30, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2442),
                             FeeAmount = 0m,
                             HasFee = false,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsLate = true,
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LateDurationInDays = 0,
+                            LenderId = new Guid("f8db9c7f-7052-4a3c-9154-89477d617b8a"),
+                            MemberId = new Guid("9ab91798-a963-4cee-905b-c066a5c5cfb8"),
+                            ReturnDate = new DateTime(2024, 4, 30, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2443)
+                        },
+                        new
+                        {
+                            Id = new Guid("c3d1bda0-09ca-4f96-b4b9-33cf77fd8dc0"),
+                            BookId = new Guid("bc3b4a96-3235-456c-8419-5a30adb961a7"),
+                            BorrowDate = new DateTime(2024, 4, 20, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2672),
+                            BorrowStatus = "DelayedReturn",
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            DueDate = new DateTime(2024, 4, 29, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2677),
+                            FeeAmount = 0m,
+                            HasFee = false,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            IsLate = true,
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
                             LateDurationInDays = 1,
-                            LenderId = new Guid("a94c2719-ea2b-4b0c-be99-fd7268afb2f5"),
-                            MemberId = new Guid("74faad27-6421-4829-8b6a-9c6e02bd6fa6"),
-                            ReturnDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1306)
+                            LenderId = new Guid("f8db9c7f-7052-4a3c-9154-89477d617b8a"),
+                            MemberId = new Guid("bc536473-9af6-4c47-a241-a54bbd73a9a3"),
+                            ReturnDate = new DateTime(2024, 4, 30, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2714)
                         });
                 });
 
@@ -1455,93 +3551,93 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("889b3e3a-176c-41c5-a09e-e0e5d2c8065b"),
+                            Id = new Guid("97769e77-a855-4523-a219-34dbd7498db5"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("366adfd4-877c-4b48-af6b-a1d8064520fc"),
+                            Id = new Guid("a5e69e85-2fe2-4d10-95f9-d542417c8324"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("e5efdaf7-d680-4733-9554-82ecf5cb1445"),
+                            Id = new Guid("3534a2ff-5e6d-45e1-8747-a3f7de87a3d7"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("f075bd9f-5a05-40d0-91d7-63a279baa5b6"),
+                            Id = new Guid("5c231d4d-08ee-4b15-8a22-85fe8522e3ff"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("1ec6b73a-487c-4dfd-8280-2939d0417327"),
+                            Id = new Guid("fd356728-6307-4a24-a61d-bf7c6d1e2c95"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("45ce0949-c5ae-412c-9157-d28060cc9229"),
+                            Id = new Guid("3948019f-2b16-4306-9502-2517cb3b4f18"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("2107ba2f-cb43-4de6-9d7b-e6d40be6c766"),
+                            Id = new Guid("4fcf7f67-0a9b-4f86-8c26-d27d5aca8214"),
                             ClosingTime = new TimeSpan(0, 0, 0, 0, 0),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             OpeningTime = new TimeSpan(0, 0, 0, 0, 0)
                         });
                 });
@@ -1591,17 +3687,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("BookId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("BranchHourId")
-                        .HasColumnType("uniqueidentifier");
-
                     b.Property<Guid>("CreatedById")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<long>("CreatedDateUnix")
                         .HasColumnType("bigint");
+
+                    b.Property<int>("CriticalLevelThreshold")
+                        .HasColumnType("int");
 
                     b.Property<long?>("DeletedDateUnix")
                         .HasColumnType("bigint");
@@ -1622,25 +3715,31 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<long?>("LastModifiedDateUnix")
                         .HasColumnType("bigint");
 
-                    b.Property<Guid>("LibraryBranchId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("MaxCheckoutDurationInDays")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("LibraryTransactionId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("MaxCheckoutLimit")
+                        .HasColumnType("int");
 
-                    b.Property<Guid>("MemberId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("MinCheckoutDurationInDays")
+                        .HasColumnType("int");
 
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<bool>("NotifyOnBookOrBlogComment")
+                        .HasColumnType("bit");
+
                     b.Property<string>("PhoneNumber")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<Guid>("StaffId")
-                        .HasColumnType("uniqueidentifier");
+                    b.Property<int>("TopBooksReportLimit")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TopMembersReportLimit")
+                        .HasColumnType("int");
 
                     b.HasKey("Id");
 
@@ -1652,22 +3751,23 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            Id = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             Address = "123 Ana Cadde",
-                            BookId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            BranchHourId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            CriticalLevelThreshold = 5,
                             Description = "Bu bir örnek kütüphane şubesidir.",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LibraryTransactionId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            MemberId = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            MaxCheckoutDurationInDays = 7,
+                            MaxCheckoutLimit = 5,
+                            MinCheckoutDurationInDays = 5,
                             Name = "Örnek Kütüphane Şubesi",
+                            NotifyOnBookOrBlogComment = true,
                             PhoneNumber = "123-456-7890",
-                            StaffId = new Guid("00000000-0000-0000-0000-000000000000")
+                            TopBooksReportLimit = 5,
+                            TopMembersReportLimit = 5
                         });
                 });
 
@@ -1775,6 +3875,10 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<DateTime>("MembershipDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("MembershipStatus")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int>("NumberOfLateReturns")
                         .HasColumnType("int");
 
@@ -1798,47 +3902,49 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9acc5bc2-c342-4a7d-b9a8-dbc2f93fa786"),
+                            Id = new Guid("9ab91798-a963-4cee-905b-c066a5c5cfb8"),
                             BorrowId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             ExtensionDurationInDays = 7,
                             Gender = "Male",
                             HasPenalty = false,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = true,
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             MaxLateReturnsAllowed = 3,
                             MemberType = "Adult",
-                            MembershipDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1165),
+                            MembershipDate = new DateTime(2024, 4, 30, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2274),
+                            MembershipStatus = "Active",
                             NumberOfLateReturns = 0,
                             Occupation = "Software Engineer",
                             PenaltyDurationInDays = 0,
-                            UserId = new Guid("46236d25-f9e8-4b9e-9577-68cbceedfdca")
+                            UserId = new Guid("d862394e-2949-4209-b8f9-6fcb4c1c1fab")
                         },
                         new
                         {
-                            Id = new Guid("74faad27-6421-4829-8b6a-9c6e02bd6fa6"),
+                            Id = new Guid("bc536473-9af6-4c47-a241-a54bbd73a9a3"),
                             BorrowId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
                             ExtensionDurationInDays = 0,
                             Gender = "Female",
                             HasPenalty = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = false,
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             MaxLateReturnsAllowed = 3,
                             MemberType = "Teacher",
-                            MembershipDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1171),
+                            MembershipDate = new DateTime(2024, 4, 30, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2287),
+                            MembershipStatus = "Active",
                             NumberOfLateReturns = 2,
                             Occupation = "Teacher",
                             PenaltyDurationInDays = 7,
-                            UserId = new Guid("a8604411-9fbd-41c0-8cc9-fe2f96e7609c")
+                            UserId = new Guid("124d66a0-7826-42f2-a93e-f456cc6332cb")
                         });
                 });
 
@@ -1912,6 +4018,38 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Shelves", "lm");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = new Guid("245dca91-f12f-424b-9e8f-1cb4b59946f7"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Shelf 1"
+                        },
+                        new
+                        {
+                            Id = new Guid("8d348907-e5b1-4cad-b8eb-0667609a6e92"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Shelf 2"
+                        },
+                        new
+                        {
+                            Id = new Guid("09382326-27ac-4f15-89a0-5b34b5ed427f"),
+                            CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            CreatedDateUnix = 0L,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            Name = "Shelf 3"
+                        });
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Staff", b =>
@@ -1978,19 +4116,19 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("a94c2719-ea2b-4b0c-be99-fd7268afb2f5"),
+                            Id = new Guid("f8db9c7f-7052-4a3c-9154-89477d617b8a"),
                             Address = "Employee Address",
-                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            CreatedDateUnix = 1714398673L,
-                            EmploymentDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1220),
+                            CreatedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            CreatedDateUnix = 1714435972L,
+                            EmploymentDate = new DateTime(2024, 4, 30, 0, 12, 52, 703, DateTimeKind.Local).AddTicks(2395),
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFullTime = true,
-                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
-                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
+                            LastModifiedById = new Guid("4bb4a49f-0c7c-46f2-b67b-125d2843fb8f"),
+                            LibraryBranchId = new Guid("480fc452-469b-437d-b20e-3cb69910b2fd"),
                             Phone = "+905553331122",
                             Salary = 3000.00m,
-                            UserId = new Guid("2e9a9efc-1e1c-4eba-8b03-1dad31d459b9")
+                            UserId = new Guid("6219baba-87aa-4cbc-b506-243a37125723")
                         });
                 });
 
@@ -2115,13 +4253,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("77cf39ea-87a9-481b-929f-9abf80a7c1d7"),
-                            RoleId = new Guid("d541ad6c-d990-4160-b430-c4ed048242a5")
+                            UserId = new Guid("c8eb5e83-bb71-45e5-9431-2a7aa82e039f"),
+                            RoleId = new Guid("9fd10230-1e18-4b3e-880f-630e8b6180f0")
                         },
                         new
                         {
-                            UserId = new Guid("2e9a9efc-1e1c-4eba-8b03-1dad31d459b9"),
-                            RoleId = new Guid("b966a17e-8090-4061-bb79-f811020145dd")
+                            UserId = new Guid("6219baba-87aa-4cbc-b506-243a37125723"),
+                            RoleId = new Guid("cb1745cf-fd9d-4c74-9aa1-c189a8331c0c")
                         });
                 });
 
@@ -2133,7 +4271,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", null)
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", null)
                         .WithMany()
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -2142,7 +4280,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             modelBuilder.Entity("BookTags", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", null)
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", null)
                         .WithMany()
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -2196,12 +4334,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("Scope");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", null)
-                        .WithMany("Books")
-                        .HasForeignKey("BookCompartmentId");
-
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.FavoriteList", null)
                         .WithMany("FavoriteBooks")
                         .HasForeignKey("FavoriteListId");
@@ -2237,25 +4371,35 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Shelf", null)
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Shelf", "Shelf")
                         .WithMany("Compartments")
-                        .HasForeignKey("ShelfId");
+                        .HasForeignKey("ShelfId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Shelf");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookEntry", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookInventory", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
-                        .WithMany("BookEntries")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", "BookCompartment")
+                        .WithMany("BookInventoryItems")
+                        .HasForeignKey("BookCompartmentId");
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", "Book")
+                        .WithMany("BookInventories")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Book");
+
+                    b.Navigation("BookCompartment");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookStock", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookStockOLD", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", "Book")
                         .WithMany("BookStocks")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Restrict)
@@ -2266,11 +4410,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BorrowLend", b =>
                 {
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", "Book")
                         .WithMany("Borrows")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Restrict)
                         .IsRequired();
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookInventory", null)
+                        .WithMany("BorrowLends")
+                        .HasForeignKey("BookInventoryId");
 
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Staff", "Lender")
                         .WithMany()
@@ -2415,9 +4563,9 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("RoleScopes");
                 });
 
-            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCatalog", b =>
                 {
-                    b.Navigation("BookEntries");
+                    b.Navigation("BookInventories");
 
                     b.Navigation("BookStocks");
 
@@ -2426,12 +4574,17 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", b =>
                 {
-                    b.Navigation("Books");
+                    b.Navigation("BookInventoryItems");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookGenre", b =>
                 {
                     b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookInventory", b =>
+                {
+                    b.Navigation("BorrowLends");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookPublisher", b =>

@@ -6,5 +6,5 @@ public class BookTag : BaseEntity<Guid>, IAuditable<Guid>
     public Guid BookId { get; set; }
     public string Name { get; set; }
 
-    public virtual ICollection<Book> Books { get; set; }
+    public virtual ICollection<BookCatalog> Books { get; set; }
 }

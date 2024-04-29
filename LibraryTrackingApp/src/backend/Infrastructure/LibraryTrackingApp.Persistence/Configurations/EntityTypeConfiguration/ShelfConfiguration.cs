@@ -16,6 +16,12 @@ public class ShelfConfiguration : IEntityTypeConfiguration<Shelf>
             .IsRequired()
             .HasMaxLength(100);
 
+        // Shelf ile BookCompartment arasında birçok ilişki tanımla
+
+        builder.HasMany(s => s.Compartments) // Shelf'in Compartments koleksiyonu ile
+              .WithOne(bc => bc.Shelf) // BookCompartment'in Shelf özelliği ile
+              .HasForeignKey(bc => bc.ShelfId) // ShelfId alanını dış anahtar olarak kullan
+              .OnDelete(DeleteBehavior.Cascade);
 
     }
 }

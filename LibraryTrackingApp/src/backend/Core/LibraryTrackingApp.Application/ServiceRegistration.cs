@@ -2,7 +2,7 @@
 using LibraryTrackingApp.Application.Behaviors;
 using LibraryTrackingApp.Application.Features.AppUsers.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.Authors.Behaviors.Mapping;
-using LibraryTrackingApp.Application.Features.Books.Behaviors.Mapping;
+using LibraryTrackingApp.Application.Features.BookInventories.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.BookStocks.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.BorrowLend.Behaviors.Mapping;
 using Microsoft.Extensions.DependencyInjection;

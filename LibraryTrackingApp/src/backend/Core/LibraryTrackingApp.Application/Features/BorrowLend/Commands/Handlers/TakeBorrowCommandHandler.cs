@@ -51,7 +51,7 @@ public class TakeBorrowCommandHandler
                     StateMessages = new[] { "Ödünç Kitap Bulunamadı." }
                 };
 
-            if (borrowedBook.BorrowStatus == BorrowStatus.Returned)
+            if (borrowedBook.BorrowStatus == BorrowStatus.Returned || borrowedBook.BorrowStatus == BorrowStatus.DelayedReturn)
                 return new()
                 {
                     StatusCode = (int)HttpStatusCode.BadRequest,

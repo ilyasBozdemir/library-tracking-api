@@ -1,6 +1,8 @@
 ﻿using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
 using LibraryTrackingApp.Application.Features.BorrowLend.Events;
+using LibraryTrackingApp.Application.Features.BorrowLend.Queries.Requests;
 using LibraryTrackingApp.Infrastructure.Mvc;
+using System.Net;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;
 
@@ -209,23 +211,57 @@ public class BorrowLendsController : CustomBaseController
     [HttpGet("borrow/{borrowId}")]
     public async Task<IActionResult> GetBorrowById(Guid borrowId)
     {
-        //eklencek daha
-        return Ok();
+        var response = await _mediator.Send(new GetBorrowByIdQueryRequest { BorrowId = borrowId });
+        await _mediator.Publish(
+            new BorrowLendEvent()
+            {
+                Errors = response.Success ? null : response.StateMessages,
+                IsSuccessful = response.Success,
+                BorrowLendType = LibraryTrackingApp.Domain.Enums.BorrowLendType.FetchedSingle
+            }
+        );
+
+        var responseValue = new
+        {
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
+
 
     /// <summary>
     /// Tüm ödünç işlemlerini sayfalama ile getirir.
     /// </summary>
-    /// <param name="pageIndex">Sayfa indeksi.</param>
-    /// <param name="pageSize">Sayfa boyutu.</param>
+    /// <param name="request">Tüm ödünç kitapları getirme için temsil eden request nesnesi</param>
     /// <returns>
     /// 200 OK cevabı, işlem başarılı ise;
     /// 500 Internal Server Error cevabı, bir hata oluştuğunda.
     /// </returns>
     [HttpGet("borrows")]
-    public async Task<IActionResult> GetAllBorrows()
+    public async Task<IActionResult> GetAllBorrows(GetAllBorrowsQueryRequest request)
     {
-        //eklencek daha
-        return Ok();
+        var response = await _mediator.Send(request);
+        await _mediator.Publish(
+            new BorrowLendEvent()
+            {
+                Errors = response.Success ? null : response.StateMessages,
+                IsSuccessful = response.Success,
+                BorrowLendType = LibraryTrackingApp.Domain.Enums.BorrowLendType.FetchedAll
+            }
+        );
+
+        var responseValue = new
+        {
+            IsSuccess = response.Success,
+            StatusCode = response.StatusCode,
+            Messages = response.StateMessages.ToArray(),
+            Data = response.Data,
+        };
+
+        return new JsonResult(responseValue) { StatusCode = response.StatusCode };
     }
 }

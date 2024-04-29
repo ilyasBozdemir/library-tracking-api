@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LibraryTrackingApp.Application.Shared.Wrappers.Results;
 
-namespace LibraryTrackingApp.Application.Features.BorrowLend.Queries.Responses
+namespace LibraryTrackingApp.Application.Features.BorrowLend.Queries.Responses;
+
+public class GetAllBorrowsQueryResponse : PaginatedQueryResult<BorrowLendDTO>
 {
-    internal class GetAllBorrowsQueryResponse
-    {
-    }
+
 }

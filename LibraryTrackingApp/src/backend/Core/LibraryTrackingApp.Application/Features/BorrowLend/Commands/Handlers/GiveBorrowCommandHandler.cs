@@ -72,7 +72,7 @@ public class GiveBorrowCommandHandler
         try
         {
             var existingBook = await _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.Book>()
+                .GetReadRepository<Domain.Entities.Library.BookCatalog>()
                 .ExistsAsync(b => b.Id == request.BookId);
 
             var existingMember = await _unitOfWork

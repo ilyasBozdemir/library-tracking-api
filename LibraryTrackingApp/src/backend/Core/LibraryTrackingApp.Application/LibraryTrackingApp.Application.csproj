@@ -59,6 +59,7 @@
 	<Folder Include="Features\CheckUserExistence\Commands\Requests\" />
 	<Folder Include="Features\CheckUserExistence\Commands\Responses\" />
 	<Folder Include="Features\CheckUserExistence\Events\" />
+	<Folder Include="Features\BookInventoryItems\" />
 	<Folder Include="Features\ReadingLists\Behaviors\Mapping\" />
 	<Folder Include="Features\ReadingLists\Behaviors\Validator\" />
 	<Folder Include="Features\ReadingLists\Commands\Handlers\" />

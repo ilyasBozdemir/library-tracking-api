@@ -26,7 +26,7 @@ public class BorrowLend : BaseEntity<Guid>, IAuditable<Guid>
     public int? LateDurationInDays { get; set; }
 
 
-    public Book Book { get; set; }
+    public BookCatalog Book { get; set; }
     public Member Member { get; set; }
     public Staff Lender { get; set; }
 }

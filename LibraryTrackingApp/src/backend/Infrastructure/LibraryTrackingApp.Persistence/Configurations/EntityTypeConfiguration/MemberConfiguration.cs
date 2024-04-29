@@ -35,6 +35,12 @@ public class MemberConfiguration : IEntityTypeConfiguration<Member>
 
 
         builder
+            .Property(m => m.MembershipStatus)
+            .HasConversion(new EnumToStringConverter<MembershipStatus>());
+
+        
+
+        builder
             .Property(m => m.Gender)
             .HasConversion(new EnumToStringConverter<GenderType>());
 

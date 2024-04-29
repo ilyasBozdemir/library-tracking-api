@@ -12,8 +12,8 @@ public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
     public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options) { }
 
     public DbSet<Author> Authors { get; set; }
-    public DbSet<Book> Books { get; set; }
-    public DbSet<BookStock> BookStocks { get; set; }
+    public DbSet<BookCatalog> Books { get; set; }
+    public DbSet<BookStockOLD> BookStocks { get; set; }
     public DbSet<BranchHour> BranchHours { get; set; }
     public DbSet<BookGenre> Genres { get; set; }
     public DbSet<LibraryBranch> LibraryBranches { get; set; }

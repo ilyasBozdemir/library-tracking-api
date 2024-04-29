@@ -1,6 +1,6 @@
-﻿using LibraryTrackingApp.Application.Features.Books.Commands.Requests;
-using LibraryTrackingApp.Application.Features.Books.Events;
-using LibraryTrackingApp.Application.Features.Books.Queries.Requests;
+﻿using LibraryTrackingApp.Application.Features.BookInventories.Commands.Requests;
+using LibraryTrackingApp.Application.Features.BookInventories.Events;
+using LibraryTrackingApp.Application.Features.BookInventories.Queries.Requests;
 using LibraryTrackingApp.Infrastructure.Mvc;
 
 namespace LibraryTrackingApp.WebApi.Controllers.v1;

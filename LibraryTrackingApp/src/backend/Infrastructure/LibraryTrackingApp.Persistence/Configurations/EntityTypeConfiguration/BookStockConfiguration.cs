@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
-public class BookStockConfiguration : IEntityTypeConfiguration<BookStock>
+public class BookStockConfiguration : IEntityTypeConfiguration<BookStockOLD>
 {
-    public void Configure(EntityTypeBuilder<BookStock> builder)
+    public void Configure(EntityTypeBuilder<BookStockOLD> builder)
     {
-        builder.ToTable(name: "BookStocks", schema: "lm");// LibraryManagement
+        builder.ToTable(name: "BookStocksOLD", schema: "lm");// LibraryManagement
         builder.HasKey(bs => bs.Id);
         builder.Property(bs => bs.Id).ValueGeneratedOnAdd(); 
 
