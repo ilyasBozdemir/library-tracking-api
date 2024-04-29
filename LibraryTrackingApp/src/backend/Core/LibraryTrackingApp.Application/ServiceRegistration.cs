@@ -4,6 +4,7 @@ using LibraryTrackingApp.Application.Features.AppUsers.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.Authors.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.Books.Behaviors.Mapping;
 using LibraryTrackingApp.Application.Features.BookStocks.Behaviors.Mapping;
+using LibraryTrackingApp.Application.Features.BorrowLend.Behaviors.Mapping;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
 
@@ -23,11 +24,13 @@ public static class ServiceRegistration
 
 
         MapperConfiguration mapperConfiguration = new MapperConfiguration(mapperConfig => {
+            mapperConfig.AddProfile<UserMappingsProfile>();
             mapperConfig.AddProfile<AuthorMappingProfile>();
             mapperConfig.AddProfile<BookMappingProfile>();
             mapperConfig.AddProfile<BookStockMappingProfile>();
-            mapperConfig.AddProfile<UserMappingsProfile>();
-            //UserMappingsProfile
+            mapperConfig.AddProfile<BorrowLendMappingProfile>();
+           
+            //BorrowLendMappingProfile
         });
 
         services.AddSingleton(mapperConfiguration.CreateMapper());

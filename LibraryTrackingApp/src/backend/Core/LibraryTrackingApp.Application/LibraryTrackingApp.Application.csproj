@@ -32,16 +32,6 @@
 	<Folder Include="Authorization\Scopes\" />
 	<Folder Include="Authorization\Requirements\" />
 	<Folder Include="Claims\" />
-	<Folder Include="Features\BookReturns\" />
-	<Folder Include="Features\BorrowBooks\Behaviors\Mapping\" />
-	<Folder Include="Features\BorrowBooks\Behaviors\Validator\" />
-	<Folder Include="Features\BorrowBooks\Commands\Handlers\" />
-	<Folder Include="Features\BorrowBooks\Commands\Requests\" />
-	<Folder Include="Features\BorrowBooks\Commands\Responses\" />
-	<Folder Include="Features\BorrowBooks\Events\" />
-	<Folder Include="Features\BorrowBooks\Queries\Handlers\" />
-	<Folder Include="Features\BorrowBooks\Queries\Requests\" />
-	<Folder Include="Features\BorrowBooks\Queries\Responses\" />
 	<Folder Include="Features\BookTags\Behaviors\Mapping\" />
 	<Folder Include="Features\BookTags\Behaviors\Validator\" />
 	<Folder Include="Features\BookTags\Commands\Handlers\" />

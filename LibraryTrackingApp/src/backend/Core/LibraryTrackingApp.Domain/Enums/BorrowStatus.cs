@@ -1,4 +1,5 @@
 ﻿namespace LibraryTrackingApp.Domain.Enums;
+
 /// <summary>
 /// Ödünç durumunu belirten bir enum.
 /// </summary>
@@ -6,47 +7,37 @@
 public enum BorrowStatus
 {
     /// <summary>
-    /// İşlem bekliyor.
-    /// </summary>
-    Pending = 1 << 0,    // 1
-
-    /// <summary>
     /// Ödünç alındı.
     /// </summary>
-    Borrowed = 1 << 1,   // 2
+    Borrowed = 1 << 1,
 
     /// <summary>
     /// İade edildi.
     /// </summary>
-    Completed = 1 << 2,  // 4
-
-    /// <summary>
-    /// İade edildi.
-    /// </summary>
-    Returned = 1 << 3,   // 8
+    Returned = 1 << 2,
 
     /// <summary>
     /// Süresi doldu.
     /// </summary>
-    Expired = 1 << 4,    // 16
+    Expired = 1 << 3,
 
     /// <summary>
     /// İptal edildi.
     /// </summary>
-    Cancelled = 1 << 5,  // 32
+    Cancelled = 1 << 4,
 
     /// <summary>
     /// Kayıp.
     /// </summary>
-    Lost = 1 << 6,       // 64
+    Losted = 1 << 5,
 
     /// <summary>
     /// Hasarlı.
     /// </summary>
-    Damaged = 1 << 7,    // 128
+    Damaged = 1 << 6,
 
     /// <summary>
     /// Askıya alındı.
     /// </summary>
-    OnHold = 1 << 8      // 256
+    OnHold = 1 << 7
 }

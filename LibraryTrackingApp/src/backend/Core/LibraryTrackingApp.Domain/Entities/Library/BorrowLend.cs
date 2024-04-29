@@ -8,7 +8,7 @@
    unix seconds olarak saklanacaktır sonra ki güncellemede.
  */
 
-public class BorrowBook : BaseEntity<Guid>, IAuditable<Guid>
+public class BorrowLend : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
     public Guid BookId { get; set; }
@@ -22,10 +22,12 @@ public class BorrowBook : BaseEntity<Guid>, IAuditable<Guid>
     public TimeSpan TimeElapsedSinceBorrowDate => DateTime.Now - BorrowDate;
 
 
+    public DateTime? ReturnDate { get; set; }
+    public bool? IsLate { get; set; }
+    public int? LateDurationInDays { get; set; }
 
 
     public Book Book { get; set; }
-    public BookReturn Return { get; set; }
     public Member Member { get; set; }
     public Staff Lender { get; set; }
 }

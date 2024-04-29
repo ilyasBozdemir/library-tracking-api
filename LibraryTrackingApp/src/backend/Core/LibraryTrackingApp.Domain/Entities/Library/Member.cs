@@ -29,5 +29,5 @@ public class Member : BaseEntity<Guid>, IAuditable<Guid>
 
 
     public virtual ICollection<LibraryBranch> LibraryBranches { get; set; }
-    public virtual ICollection<BorrowBook> Borrows { get; set; }
+    public virtual ICollection<BorrowLend> Borrows { get; set; }
 }
