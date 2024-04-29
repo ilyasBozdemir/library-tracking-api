@@ -8,9 +8,7 @@ public class Book : BaseEntity<Guid>, IAuditable<Guid>
     public Guid AuthorId { get; set; }
     public Guid LibraryBranchId { get; set; }
     public Guid BookStockId { get; set; }
-    public Guid BorrowId { get; set; }
 
-    public string BookNumber { get; set; }
     public string Title { get; set; }
     public string ISBN { get; set; }
     public string Description { get; set; }
@@ -36,4 +34,6 @@ public class Book : BaseEntity<Guid>, IAuditable<Guid>
     public ICollection<Author> Authors { get; set; }
     public ICollection<BookStock> BookStocks { get; set; }
     public ICollection<BorrowLend> Borrows { get; set; }
+    public ICollection<BookEntry> BookEntries { get; set; }
+    
 }

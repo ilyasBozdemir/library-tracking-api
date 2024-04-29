@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LibraryTrackingApp.Application.Features.BorrowLend.Queries.Requests;
 
-namespace LibraryTrackingApp.Application.Features.BorrowLend.Behaviors.Validator
+namespace LibraryTrackingApp.Application.Features.BorrowLend.Behaviors.Validator;
+
+
+public class GetAllBorrowsQueryRequestValidator : AbstractValidator<GetAllBorrowsQueryRequest>
 {
-    internal class GetAllBorrowsQueryRequestValidator
+    public GetAllBorrowsQueryRequestValidator()
     {
+        
     }
 }

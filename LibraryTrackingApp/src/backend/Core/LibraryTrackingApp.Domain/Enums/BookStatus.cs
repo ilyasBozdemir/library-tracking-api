@@ -15,4 +15,14 @@ public enum BookStatus
     /// Kitap pasif durumda.
     /// </summary>
     Inactive = 1 << 1, // 2
+
+    /// <summary>
+    /// Kitap hasarlı durumda.
+    /// </summary>
+    Damaged = 1 << 2, // 4
+
+    /// <summary>
+    /// Kitap kayıp durumda.
+    /// </summary>
+    Lost = 1 << 3, // 8
 }

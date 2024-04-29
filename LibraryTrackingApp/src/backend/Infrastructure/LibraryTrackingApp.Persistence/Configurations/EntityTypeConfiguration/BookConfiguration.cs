@@ -41,6 +41,12 @@ public class BookConfiguration : IEntityTypeConfiguration<Book>
         // Book - Borrows ilişkisi
         builder.HasMany(b => b.Borrows).WithOne(br => br.Book).HasForeignKey(br => br.BookId);
 
+        //BookEntry ile olan ilişkiyi tanımlama
+        builder.HasMany(b => b.BookEntries)
+              .WithOne(be => be.Book)
+              .HasForeignKey(be => be.BookId)
+              .OnDelete(DeleteBehavior.Cascade);
+
         // Book - Tags ilişkisi
         builder
             .HasMany(b => b.Tags)

@@ -39,8 +39,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            AuthorId = new Guid("9bd17259-24a1-4fe0-abdc-b70796e8b52f"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687")
+                            AuthorId = new Guid("083ecb57-f36b-4f12-8c77-39d2343dd4a9"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008")
                         });
                 });
 
@@ -61,13 +61,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            TagId = new Guid("7cbe9df9-dca0-4498-921f-2cdc195b655b"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687")
+                            TagId = new Guid("fb7816ca-3443-422a-a498-5cbbb24bfc45"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008")
                         },
                         new
                         {
-                            TagId = new Guid("3dd801ff-debe-45e7-9e41-82082d4b3a21"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687")
+                            TagId = new Guid("e34fc271-a8f3-48aa-9a7d-d9db8b6ae7a9"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008")
                         });
                 });
 
@@ -88,13 +88,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MemberId = new Guid("c8cdaba4-8d50-47ce-b901-02535538794b"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab")
+                            MemberId = new Guid("9acc5bc2-c342-4a7d-b9a8-dbc2f93fa786"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631")
                         },
                         new
                         {
-                            MemberId = new Guid("f2fb9f79-95ea-4edc-a765-93f5e50e23b4"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab")
+                            MemberId = new Guid("74faad27-6421-4829-8b6a-9c6e02bd6fa6"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631")
                         });
                 });
 
@@ -263,29 +263,29 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5f21b5c9-1c31-44a5-a953-f1493717f2ba"),
-                            ConcurrencyStamp = "778c282f-f4ab-40ab-9903-4f5f99354d46",
+                            Id = new Guid("5ad3b527-d475-445b-a9b0-a6462f7cd987"),
+                            ConcurrencyStamp = "93a13c75-620d-4510-ad7d-d0b91ee0a2f0",
                             Name = "system",
                             NormalizedName = "SYSTEM"
                         },
                         new
                         {
-                            Id = new Guid("8dd459f0-af81-4fee-8124-f367b14d390c"),
-                            ConcurrencyStamp = "bcf80ab8-c7f8-4d57-b688-185254d4351f",
+                            Id = new Guid("d541ad6c-d990-4160-b430-c4ed048242a5"),
+                            ConcurrencyStamp = "339f4420-bf36-42f1-a167-a67a7312611f",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("15be1db9-8a32-41f2-bdd4-d0fbc7a9b555"),
-                            ConcurrencyStamp = "5b6be477-5e0a-4326-8509-316c9d2ec81a",
+                            Id = new Guid("b966a17e-8090-4061-bb79-f811020145dd"),
+                            ConcurrencyStamp = "dcd0ec78-61d1-41f1-816b-4d6fa7856a8f",
                             Name = "Staff",
                             NormalizedName = "STAFF"
                         },
                         new
                         {
-                            Id = new Guid("e3bee32c-8bc8-459f-bdc7-c4dc27ff3343"),
-                            ConcurrencyStamp = "16676b45-b01d-46b7-827b-e5ce43dce976",
+                            Id = new Guid("dab47e78-67e8-4b99-baa0-031b37e43b57"),
+                            ConcurrencyStamp = "9b74dc13-3ae0-407f-ba96-ccd99502b8a1",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         });
@@ -408,11 +408,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            Id = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             AccessFailedCount = 0,
                             Address = "123 System St.",
                             BirthDate = new DateTime(1980, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "277f19e3-2a41-4b21-9011-45e275398fc9",
+                            ConcurrencyStamp = "6db92d3b-8b49-424d-86a1-0ed7e1db1652",
                             CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             CreatedDateUnix = 0L,
                             Email = "system@domain.com",
@@ -425,7 +425,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             Name = "System",
                             NormalizedEmail = "SYSTEM@DOMAIN.COM",
                             NormalizedUserName = "SYSTEM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPSBwkzx4B2FBOO2TMY1CmOTm8Hbx4Kkhx1jQ+cbXX0RawEL+fokxKfzfiTjdUvQ7w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAECY88merkbGr1WK1Y3uo+BD5yd7s3l6bBfJ9ESjJVvlD6oJ33Rr2ZLpRqpnfpiK7Vg==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -435,24 +435,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("4158956f-5ba6-41d1-8cd4-d57311dea737"),
+                            Id = new Guid("77cf39ea-87a9-481b-929f-9abf80a7c1d7"),
                             AccessFailedCount = 0,
                             Address = "456 Admin St.",
                             BirthDate = new DateTime(1985, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "fde1ecf3-1d5c-4b2a-9bb2-48ccb0487a8e",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            ConcurrencyStamp = "60a3ae43-ac5e-4c6d-aaca-5c4ef8f8b64e",
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             CreatedDateUnix = 0L,
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             Gender = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             LockoutEnabled = false,
                             Name = "Admin",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEHkA/to6jUewOwYD8nDuRDn32jZFwDmDRSJD6wIojiW/uCVrIS/ljZFwm12MePq/0w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEArkj6N65dBOXg7veenD4YPpcr1PNEOPSTUlld5nkkS+wU0MwtcmRVSsK6yB5atsig==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -462,24 +462,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("05c67957-851a-45ff-aa71-17c19117135c"),
+                            Id = new Guid("2e9a9efc-1e1c-4eba-8b03-1dad31d459b9"),
                             AccessFailedCount = 0,
                             Address = "789 Employee St.",
                             BirthDate = new DateTime(1990, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "7c0dd22b-bd17-4dbd-a9df-366a2462ebbf",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            ConcurrencyStamp = "70525978-70f4-4c26-8269-f12c77c6b50b",
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             CreatedDateUnix = 0L,
                             Email = "employee1@example.com",
                             EmailConfirmed = true,
                             Gender = 1,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             LockoutEnabled = false,
                             Name = "Employee",
                             NormalizedEmail = "EMPLOYEE1@EXAMPLE.COM",
                             NormalizedUserName = "EMPLOYEE1@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEPyJjMH2xm3l4fO0wrq3cW/opMDAVTxxphZEWMA77coyuuilw1p73KridrZRwBkIyQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAELdxogC/bcwLrivYLnqbTKIjp/H1jaWT4XMTOUFLCmYnHG2vX39q9h2rWQFU1hEbhA==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -489,24 +489,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("54db8065-ac01-416a-b5f3-b696e153e066"),
+                            Id = new Guid("46236d25-f9e8-4b9e-9577-68cbceedfdca"),
                             AccessFailedCount = 0,
                             Address = "123 Main Street",
                             BirthDate = new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "631e6db1-e797-480e-8759-2bc2a4011b95",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            ConcurrencyStamp = "240a9024-0c8e-4c92-8401-cc6b9e1134c1",
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             CreatedDateUnix = 0L,
                             Email = "john.doe@example.com",
                             EmailConfirmed = true,
                             Gender = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             LockoutEnabled = false,
                             Name = "John",
                             NormalizedEmail = "JOHN.DOE@EXAMPLE.COM",
                             NormalizedUserName = "JOHN.DOE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAENXGYARWgiVjj4PUgnZGYo+yYYsYr+IOHAYWnt7Ck257H+y4fJUDsK2fSSxDUdEGbw==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEM5ai2wz1GK/Fh3tE0TY0xFlbNR1CFfoJPpY5bklnVuvGzZnFVrdA46pqz8cyoo55w==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -516,24 +516,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("2648d2f6-3d0e-43d5-8ab0-f6961a661090"),
+                            Id = new Guid("a8604411-9fbd-41c0-8cc9-fe2f96e7609c"),
                             AccessFailedCount = 0,
                             Address = "456 Oak Street",
                             BirthDate = new DateTime(1985, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "42199153-6623-4a71-b123-aecae5e8146f",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            ConcurrencyStamp = "fb4f5583-ab84-402f-a947-6b4c50226c1d",
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             CreatedDateUnix = 0L,
                             Email = "jane.smith@example.com",
                             EmailConfirmed = true,
                             Gender = 1,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             LockoutEnabled = false,
                             Name = "Jane",
                             NormalizedEmail = "JANE.SMITH@EXAMPLE.COM",
                             NormalizedUserName = "JANE.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEH0Zc4xoOCN7ayCdq6eeO3mL9ekFKBwuJc5riA8wwtW0mBOvy119Lfs2FfY7ho+Vow==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEAG2aeEHR3NtH4IMc5GBO9+PxAEKCW3gMo6u2siRyGvv5ST2XQWqDJRgPbgN+FqZ6g==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -710,15 +710,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9bd17259-24a1-4fe0-abdc-b70796e8b52f"),
+                            Id = new Guid("083ecb57-f36b-4f12-8c77-39d2343dd4a9"),
                             Biography = "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.",
                             BirthDate = new DateTime(1965, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Country = "United Kingdom",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Name = "J.K.",
                             Surname = "Rowling"
                         });
@@ -736,6 +736,9 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<Guid>("AuthorId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("BookCompartmentId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("BookFormat")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -744,18 +747,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("BookNumber")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("BookStatus")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<Guid>("BookStockId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("BorrowId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CoverImageUrl")
@@ -827,6 +823,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("BookCompartmentId");
+
                     b.HasIndex("FavoriteListId");
 
                     b.HasIndex("GenreId");
@@ -846,31 +844,130 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687"),
-                            AuthorId = new Guid("9bd17259-24a1-4fe0-abdc-b70796e8b52f"),
+                            Id = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
+                            AuthorId = new Guid("083ecb57-f36b-4f12-8c77-39d2343dd4a9"),
                             BookFormat = "PrintedBook",
                             BookLanguage = "English",
-                            BookNumber = "A1",
                             BookStatus = "Active",
-                            BookStockId = new Guid("240a693c-b4e9-46f8-a380-9649bf427450"),
-                            BorrowId = new Guid("85eda2ef-0a39-43d8-9413-1c03c734f6cd"),
+                            BookStockId = new Guid("e5d6c73a-e865-412c-98d9-e4bfd147784b"),
                             CoverImageUrl = "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             Description = "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
-                            GenreId = new Guid("3e3bafdb-3f07-428b-bbf7-00d300996d6d"),
+                            GenreId = new Guid("086a66f7-1be6-46cb-a490-7d28badd16a7"),
                             ISBN = "9781408855652",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFeatured = true,
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OriginalPublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PageCount = 352,
                             PublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PublisherId = new Guid("acc3b4ef-0af1-4603-a520-ab9d1162b825"),
+                            PublisherId = new Guid("f71b05af-21b6-4439-9b4a-9119e1970a8e"),
                             Title = "Harry Potter and the Philosopher's Stone"
                         });
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.Property<Guid?>("ShelfId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("ShelfId");
+
+                    b.ToTable("BookCompartments", "lm");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookEntry", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("BookFormat")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("BookLanguage")
+                        .HasColumnType("int");
+
+                    b.Property<string>("BookNumber")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("BookStatus")
+                        .HasColumnType("int");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<DateTime>("EntryDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<bool>("IsAvailable")
+                        .HasColumnType("bit");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("LastModified")
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("BookEntry");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookGenre", b =>
@@ -914,24 +1011,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3e3bafdb-3f07-428b-bbf7-00d300996d6d"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            Id = new Guid("086a66f7-1be6-46cb-a490-7d28badd16a7"),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             IsActive = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Name = "Fantasy"
                         },
                         new
                         {
-                            Id = new Guid("ca1c300a-1e3f-468b-bf9c-958e2d8646be"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            Id = new Guid("00191e89-4992-4fd5-aae9-73797b1ccc76"),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             IsActive = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Name = "Adventure"
                         });
                 });
@@ -995,14 +1092,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("acc3b4ef-0af1-4603-a520-ab9d1162b825"),
+                            Id = new Guid("f71b05af-21b6-4439-9b4a-9119e1970a8e"),
                             Address = "50 Bedford Square, London, England",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             Email = "info@bloomsbury.com",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Name = "Bloomsbury Publishing",
                             PhoneNumber = "+44 (0)20 7631 5600",
                             Website = "https://www.bloomsbury.com/"
@@ -1099,13 +1196,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("240a693c-b4e9-46f8-a380-9649bf427450"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            Id = new Guid("e5d6c73a-e865-412c-98d9-e4bfd147784b"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Quantity = 100
                         });
                 });
@@ -1153,35 +1250,35 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7cbe9df9-dca0-4498-921f-2cdc195b655b"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            Id = new Guid("fb7816ca-3443-422a-a498-5cbbb24bfc45"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Name = "Hogwarts"
                         },
                         new
                         {
-                            Id = new Guid("3dd801ff-debe-45e7-9e41-82082d4b3a21"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            Id = new Guid("e34fc271-a8f3-48aa-9a7d-d9db8b6ae7a9"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Name = "Harry Potter"
                         },
                         new
                         {
-                            Id = new Guid("adc919af-06be-4c13-822e-780da2e32996"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            Id = new Guid("238d37b1-41c2-470c-ae0a-6a47c7a17842"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             Name = "Quidditch"
                         });
                 });
@@ -1264,22 +1361,43 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("85eda2ef-0a39-43d8-9413-1c03c734f6cd"),
-                            BookId = new Guid("6da9b541-a7e2-462d-b623-dc1aa6055687"),
-                            BorrowDate = new DateTime(2024, 4, 28, 18, 25, 0, 460, DateTimeKind.Local).AddTicks(5917),
+                            Id = new Guid("f0eac556-a732-47d7-8a0a-30bace0331f2"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
+                            BorrowDate = new DateTime(2024, 4, 19, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1228),
                             BorrowStatus = "Returned",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
-                            DueDate = new DateTime(2024, 5, 12, 18, 25, 0, 460, DateTimeKind.Local).AddTicks(5918),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
+                            DueDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1245),
                             FeeAmount = 0m,
                             HasFee = false,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsLate = false,
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LenderId = new Guid("ca1f12e5-63a5-4dbd-8070-79967002db87"),
-                            MemberId = new Guid("c8cdaba4-8d50-47ce-b901-02535538794b"),
-                            ReturnDate = new DateTime(2024, 4, 28, 18, 35, 0, 460, DateTimeKind.Local).AddTicks(5928)
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LateDurationInDays = 0,
+                            LenderId = new Guid("a94c2719-ea2b-4b0c-be99-fd7268afb2f5"),
+                            MemberId = new Guid("9acc5bc2-c342-4a7d-b9a8-dbc2f93fa786"),
+                            ReturnDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1245)
+                        },
+                        new
+                        {
+                            Id = new Guid("3b565299-2fdc-490c-a700-4a0cca5cc877"),
+                            BookId = new Guid("a56ce706-f92e-4c22-b9ab-b2b2ecd32008"),
+                            BorrowDate = new DateTime(2024, 4, 19, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1268),
+                            BorrowStatus = "DelayedReturn",
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
+                            DueDate = new DateTime(2024, 4, 28, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1295),
+                            FeeAmount = 0m,
+                            HasFee = false,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            IsLate = true,
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LateDurationInDays = 1,
+                            LenderId = new Guid("a94c2719-ea2b-4b0c-be99-fd7268afb2f5"),
+                            MemberId = new Guid("74faad27-6421-4829-8b6a-9c6e02bd6fa6"),
+                            ReturnDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1306)
                         });
                 });
 
@@ -1337,93 +1455,93 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("259561f5-d40c-4956-9676-ed90bb8aeb82"),
+                            Id = new Guid("889b3e3a-176c-41c5-a09e-e0e5d2c8065b"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("2c91ac06-c143-42f3-8dcb-657c56673d8d"),
+                            Id = new Guid("366adfd4-877c-4b48-af6b-a1d8064520fc"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("287b544f-ba14-4ae2-b8a4-1170f786cb1b"),
+                            Id = new Guid("e5efdaf7-d680-4733-9554-82ecf5cb1445"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("54678360-a567-446b-810e-def90bf74996"),
+                            Id = new Guid("f075bd9f-5a05-40d0-91d7-63a279baa5b6"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("eabbafb7-b5e9-4e12-aa77-d01cae543ef9"),
+                            Id = new Guid("1ec6b73a-487c-4dfd-8280-2939d0417327"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("88e3a14b-050c-4cd0-8f74-68728b13a51d"),
+                            Id = new Guid("45ce0949-c5ae-412c-9157-d28060cc9229"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("8e4d174b-8c86-4e46-ad57-eb9359a70eeb"),
+                            Id = new Guid("2107ba2f-cb43-4de6-9d7b-e6d40be6c766"),
                             ClosingTime = new TimeSpan(0, 0, 0, 0, 0),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             OpeningTime = new TimeSpan(0, 0, 0, 0, 0)
                         });
                 });
@@ -1534,16 +1652,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            Id = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             Address = "123 Ana Cadde",
                             BookId = new Guid("00000000-0000-0000-0000-000000000000"),
                             BranchHourId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             Description = "Bu bir örnek kütüphane şubesidir.",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
                             LibraryBranchId = new Guid("00000000-0000-0000-0000-000000000000"),
                             LibraryTransactionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             MemberId = new Guid("00000000-0000-0000-0000-000000000000"),
@@ -1680,47 +1798,47 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c8cdaba4-8d50-47ce-b901-02535538794b"),
+                            Id = new Guid("9acc5bc2-c342-4a7d-b9a8-dbc2f93fa786"),
                             BorrowId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             ExtensionDurationInDays = 7,
                             Gender = "Male",
                             HasPenalty = false,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = true,
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             MaxLateReturnsAllowed = 3,
                             MemberType = "Adult",
-                            MembershipDate = new DateTime(2024, 4, 28, 18, 25, 0, 460, DateTimeKind.Local).AddTicks(5858),
+                            MembershipDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1165),
                             NumberOfLateReturns = 0,
                             Occupation = "Software Engineer",
                             PenaltyDurationInDays = 0,
-                            UserId = new Guid("54db8065-ac01-416a-b5f3-b696e153e066")
+                            UserId = new Guid("46236d25-f9e8-4b9e-9577-68cbceedfdca")
                         },
                         new
                         {
-                            Id = new Guid("f2fb9f79-95ea-4edc-a765-93f5e50e23b4"),
+                            Id = new Guid("74faad27-6421-4829-8b6a-9c6e02bd6fa6"),
                             BorrowId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
                             ExtensionDurationInDays = 0,
                             Gender = "Female",
                             HasPenalty = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = false,
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             MaxLateReturnsAllowed = 3,
                             MemberType = "Teacher",
-                            MembershipDate = new DateTime(2024, 4, 28, 18, 25, 0, 460, DateTimeKind.Local).AddTicks(5865),
+                            MembershipDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1171),
                             NumberOfLateReturns = 2,
                             Occupation = "Teacher",
                             PenaltyDurationInDays = 7,
-                            UserId = new Guid("2648d2f6-3d0e-43d5-8ab0-f6961a661090")
+                            UserId = new Guid("a8604411-9fbd-41c0-8cc9-fe2f96e7609c")
                         });
                 });
 
@@ -1757,6 +1875,43 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("ReadingLists", "lm");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Shelf", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("CreatedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long>("CreatedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<long?>("DeletedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<bool>("IsDeleted")
+                        .HasColumnType("bit");
+
+                    b.Property<Guid>("IsDeletedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid>("LastModifiedById")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<long?>("LastModifiedDateUnix")
+                        .HasColumnType("bigint");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Shelves", "lm");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Staff", b =>
@@ -1823,19 +1978,19 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("ca1f12e5-63a5-4dbd-8070-79967002db87"),
+                            Id = new Guid("a94c2719-ea2b-4b0c-be99-fd7268afb2f5"),
                             Address = "Employee Address",
-                            CreatedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            CreatedDateUnix = 1714328700L,
-                            EmploymentDate = new DateTime(2024, 4, 28, 18, 25, 0, 460, DateTimeKind.Local).AddTicks(5910),
+                            CreatedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            CreatedDateUnix = 1714398673L,
+                            EmploymentDate = new DateTime(2024, 4, 29, 13, 51, 13, 966, DateTimeKind.Local).AddTicks(1220),
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFullTime = true,
-                            LastModifiedById = new Guid("46e85cb7-93eb-4d8a-84f4-c6ee9d8d1da8"),
-                            LibraryBranchId = new Guid("495c6c35-3ba8-4c36-997c-a9f3a6c8c7ab"),
+                            LastModifiedById = new Guid("44073bfd-0b99-48e7-a951-2c9203e7340e"),
+                            LibraryBranchId = new Guid("282ac419-5495-4e92-a109-b51055b8b631"),
                             Phone = "+905553331122",
                             Salary = 3000.00m,
-                            UserId = new Guid("05c67957-851a-45ff-aa71-17c19117135c")
+                            UserId = new Guid("2e9a9efc-1e1c-4eba-8b03-1dad31d459b9")
                         });
                 });
 
@@ -1960,13 +2115,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("4158956f-5ba6-41d1-8cd4-d57311dea737"),
-                            RoleId = new Guid("8dd459f0-af81-4fee-8124-f367b14d390c")
+                            UserId = new Guid("77cf39ea-87a9-481b-929f-9abf80a7c1d7"),
+                            RoleId = new Guid("d541ad6c-d990-4160-b430-c4ed048242a5")
                         },
                         new
                         {
-                            UserId = new Guid("05c67957-851a-45ff-aa71-17c19117135c"),
-                            RoleId = new Guid("15be1db9-8a32-41f2-bdd4-d0fbc7a9b555")
+                            UserId = new Guid("2e9a9efc-1e1c-4eba-8b03-1dad31d459b9"),
+                            RoleId = new Guid("b966a17e-8090-4061-bb79-f811020145dd")
                         });
                 });
 
@@ -2043,6 +2198,10 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
                 {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", null)
+                        .WithMany("Books")
+                        .HasForeignKey("BookCompartmentId");
+
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.FavoriteList", null)
                         .WithMany("FavoriteBooks")
                         .HasForeignKey("FavoriteListId");
@@ -2074,6 +2233,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Navigation("LibraryBranch");
 
                     b.Navigation("Publisher");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Shelf", null)
+                        .WithMany("Compartments")
+                        .HasForeignKey("ShelfId");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookEntry", b =>
+                {
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Book", "Book")
+                        .WithMany("BookEntries")
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookStock", b =>
@@ -2240,9 +2417,16 @@ namespace LibraryTrackingApp.Persistence.Migrations
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Book", b =>
                 {
+                    b.Navigation("BookEntries");
+
                     b.Navigation("BookStocks");
 
                     b.Navigation("Borrows");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookCompartment", b =>
+                {
+                    b.Navigation("Books");
                 });
 
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.BookGenre", b =>
@@ -2279,6 +2463,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
             modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.ReadingList", b =>
                 {
                     b.Navigation("Books");
+                });
+
+            modelBuilder.Entity("LibraryTrackingApp.Domain.Entities.Library.Shelf", b =>
+                {
+                    b.Navigation("Compartments");
                 });
 #pragma warning restore 612, 618
         }
