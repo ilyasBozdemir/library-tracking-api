@@ -66,9 +66,6 @@ const features = [
 const Features = () => {
   return (
     <Container maxW="6xl" p={{ base: 5, md: 10 }}>
-      <Heading as="h2" size="xl" textAlign={'center'} mb={8}>
-        Uygulamamızın Sunduğu Özellikler
-      </Heading>
       <SimpleGrid
         columns={{ base: 1, md: 2 }}
         placeItems="center"

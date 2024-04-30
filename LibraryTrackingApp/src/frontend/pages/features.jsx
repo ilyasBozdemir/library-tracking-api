@@ -1,4 +1,4 @@
-import Features from "@/components/Features";
+import Features from "@/layouts/Anon/components/Features";
 import { Box } from "@chakra-ui/react";
 import React from "react";
 
