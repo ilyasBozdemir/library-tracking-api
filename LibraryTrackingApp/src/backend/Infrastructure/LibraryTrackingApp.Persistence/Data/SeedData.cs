@@ -161,6 +161,7 @@ public static class SeedData
             Surname = "Rowling",
             BirthDate = new DateTime(1965, 7, 31),
             Country = "United Kingdom",
+            Website = "www.example.com",
             Biography =
                 "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.",
             CreatedById = systemUser.Id,
@@ -168,7 +169,7 @@ public static class SeedData
             LastModifiedById = systemUser.Id,
         };
 
-        var fantasyGenre = new BookGenre
+        var fantasyGenre = new WorkGenre
         {
             Id = Guid.NewGuid(),
             Name = "Fantasy",
@@ -178,7 +179,7 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        var adventureGenre = new BookGenre
+        var adventureGenre = new WorkGenre
         {
             Id = Guid.NewGuid(),
             Name = "Adventure",
@@ -189,32 +190,140 @@ public static class SeedData
         };
 
         var mainBranchId = Guid.NewGuid();
+        var secondBranchId = Guid.NewGuid();
 
         var mainBranch = new LibraryBranch
         {
             Id = mainBranchId,
-            Name = "Örnek Kütüphane Şubesi",
-            Address = "123 Ana Cadde",
-            PhoneNumber = "123-456-7890",
-            Description = "Bu bir örnek kütüphane şubesidir.",
-            MaxCheckoutLimit = 5,
-            MinCheckoutDurationInDays = 5,
-            MaxCheckoutDurationInDays = 7,
-            CriticalLevelThreshold = 5,
+            Name = "Ana Kütüphane Şubesi",
+            Address = "456 İkinci Sokak, No: 15",
+            PhoneNumber = "+90 (212) 123 4567",
+            Description =
+                "Ana Kütüphane Şubesi, şehrin kalbindeki kitapseverler için bir buluşma noktasıdır.",
+            MaxCheckoutLimit = 7,
+            MinCheckoutDurationInDays = 4,
+            MaxCheckoutDurationInDays = 10,
+            CriticalLevelThreshold = 6,
             NotifyOnBookOrBlogComment = true,
-            TopMembersReportLimit = 5,
-            TopBooksReportLimit = 5,
+            TopMembersReportLimit = 7,
+            TopBooksReportLimit = 7,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
         };
 
-        var bloomsburyPublishingPublisher = new BookPublisher
+        var secondBranch = new LibraryBranch
+        {
+            Id = secondBranchId,
+            Name = "Yıldızlar Kütüphanesi",
+            Address = "789 Üçüncü Bulvar, No: 23",
+            PhoneNumber = "+90 (212) 987 6543",
+            Description = "Yıldızlar Kütüphanesi, gökyüzünü aşkın kitaplarla dolu bir yerdir.",
+            MaxCheckoutLimit = 10,
+            MinCheckoutDurationInDays = 3,
+            MaxCheckoutDurationInDays = 14,
+            CriticalLevelThreshold = 8,
+            NotifyOnBookOrBlogComment = false,
+            TopMembersReportLimit = 10,
+            TopBooksReportLimit = 10,
+            CreatedById = systemUser.Id,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
+        };
+
+        int shelfCountPerLibrary = 4;
+        int compartmentCountPerShelf = 5;
+        int compartmentCountPerBook = 10;
+        int bookCount = compartmentCountPerBook * shelfCountPerLibrary * compartmentCountPerShelf;
+
+        var bookStockId = Guid.NewGuid();
+        var harryPotterBookId = Guid.NewGuid();
+
+        List<Shelf> shelves = new List<Shelf>();
+        List<WorkCompartment> bookCompartments = new List<WorkCompartment>();
+
+        for (int i = 0; i < shelfCountPerLibrary; i++)
+        {
+            var shelf = new Shelf
+            {
+                Id = Guid.NewGuid(),
+                Name = $"Shelf {i + 1}",
+                LibraryBranchId = mainBranchId,
+                CreatedById = systemUser.Id,
+                CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+                LastModifiedById = systemUser.Id
+            };
+
+            shelves.Add(shelf);
+
+            for (int j = 0; j < compartmentCountPerShelf; j++)
+            {
+                var compartment = new WorkCompartment
+                {
+                    Id = Guid.NewGuid(),
+                    Name = $"Compartment {j + 1}",
+                    ShelfId = shelf.Id,
+                    CreatedById = systemUser.Id,
+                    CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+                    LastModifiedById = systemUser.Id,
+                };
+
+                bookCompartments.Add(compartment);
+            }
+        }
+
+        List<WorkInventory> bookItems = new List<WorkInventory>();
+
+        for (int i = 0; i < bookCount; i++)
+        {
+            var item = new WorkInventory
+            {
+                Id = Guid.NewGuid(),
+                BookId = harryPotterBookId,
+                BookNumber = $"HP-{i + 1}",
+                BookStatus = WorkStatus.Active,
+                IsAvailable = true,
+                Description = null,
+                Notes = null,
+                Donor = null,
+                BookStockTransactionType = BookStockTransactionType.Entry,
+                CreatedById = systemUser.Id,
+                CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+                LastModifiedById = systemUser.Id
+            };
+            bookItems.Add(item);
+        }
+
+        // Kitapları raf ve bölmelere dağıtma işlemi
+        int bookIndex = 0;
+
+
+        for (int i = 0; i < bookItems.Count; i++)
+        {
+            var workInventory = bookItems[i];
+
+            int bookSequence = i + 1;
+
+            int shelfIndex = (bookSequence - 1) / (compartmentCountPerShelf * compartmentCountPerBook);
+            int compartmentIndex = ((bookSequence - 1) / compartmentCountPerBook) % compartmentCountPerShelf;
+
+            Guid shelfId = shelves[shelfIndex].Id;
+            Guid compartmentId = bookCompartments[compartmentIndex].Id;
+
+
+            workInventory.ShelfId = shelfId;
+            workInventory.BookCompartmentId = compartmentId;
+        }
+
+
+        var bloomsburyPublishingPublisher = new WorkPublisher
         {
             Id = Guid.NewGuid(),
             Name = "Bloomsbury Publishing",
             Website = "https://www.bloomsbury.com/",
             Address = "50 Bedford Square, London, England",
+            City = "London",
+            Country = "England",
             PhoneNumber = "+44 (0)20 7631 5600",
             Email = "info@bloomsbury.com",
             CreatedById = systemUser.Id,
@@ -222,11 +331,39 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        var bookStockId = Guid.NewGuid();
-
-        var harryPotterBook = new BookCatalog
+        var penguinBooksPublisher = new WorkPublisher
         {
             Id = Guid.NewGuid(),
+            Name = "Penguin Books",
+            Website = "https://www.penguin.co.uk/",
+            Address = "80 Strand, London, England",
+            City = "London",
+            Country = "England",
+            PhoneNumber = "+44 (0)20 7139 3000",
+            Email = "info@penguin.co.uk",
+            CreatedById = systemUser.Id,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
+        };
+
+        var randomHousePublisher = new WorkPublisher
+        {
+            Id = Guid.NewGuid(),
+            Name = "Random House",
+            Website = "https://www.randomhousebooks.com/",
+            Address = "1745 Broadway, New York, NY, USA",
+            City = "New York",
+            Country = "USA",
+            PhoneNumber = "+1 212-782-9000",
+            Email = "info@randomhouse.com",
+            CreatedById = systemUser.Id,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
+        };
+
+        var harryPotterBook = new WorkCatalog
+        {
+            Id = harryPotterBookId,
             GenreId = fantasyGenre.Id,
             LibraryBranchId = mainBranch.Id,
             PublisherId = bloomsburyPublishingPublisher.Id,
@@ -234,19 +371,57 @@ public static class SeedData
             BookStockId = bookStockId,
             Title = "Harry Potter and the Philosopher's Stone",
             ISBN = "9781408855652",
-            Description =
-                "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
+            Summary = """
+                Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive.
+                Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle.
+                Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!
+                """,
             CoverImageUrl = "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg",
             PageCount = 352,
-            PublicationDate = new DateTime(1997, 6, 26),
             OriginalPublicationDate = new DateTime(1997, 6, 26),
-            BookStatus = BookStatus.Active,
-            BookFormat = BookFormat.PrintedBook,
-            BookLanguage = BookLanguage.English,
+            BookStatus = WorkStatus.Active,
+            BookFormat = WorkFormat.PrintedBook,
+            WorkLanguage = "English",
+            AudioFilePath = null,
+            FilePath = null,
             IsFeatured = true,
+            Translator = null,
+            Editor = null,
+            IsBorrowable = true,
+            HasTagPrinted = false,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
+        };
+
+        var firstEdition = new Edition
+        {
+            Id = Guid.NewGuid(),
+            WorkCatalogId = harryPotterBook.Id,
+            PublisherId = bloomsburyPublishingPublisher.Id,
+            EditionNumber = 1,
+            PublicationDate = new DateTime(1997, 6, 26),
+            Notes = "First edition of Harry Potter and the Philosopher's Stone."
+        };
+
+        var secondEdition = new Edition
+        {
+            Id = Guid.NewGuid(),
+            WorkCatalogId = harryPotterBook.Id,
+            PublisherId = penguinBooksPublisher.Id,
+            EditionNumber = 2,
+            PublicationDate = new DateTime(1998, 7, 2),
+            Notes = "Second edition of Harry Potter and the Philosopher's Stone."
+        };
+
+        var thirdEdition = new Edition
+        {
+            Id = Guid.NewGuid(),
+            WorkCatalogId = harryPotterBook.Id,
+            PublisherId = randomHousePublisher.Id,
+            EditionNumber = 3,
+            PublicationDate = new DateTime(1999, 5, 5),
+            Notes = "Third edition of Harry Potter and the Philosopher's Stone."
         };
 
         var bookAuthor = new Dictionary<string, object>
@@ -255,7 +430,7 @@ public static class SeedData
             { "AuthorId", jKRowlingAuthor.Id }
         };
 
-        var harryPotterTag1 = new BookTag
+        var harryPotterTag1 = new WorkTag
         {
             Id = Guid.NewGuid(),
             Name = "Hogwarts",
@@ -265,7 +440,7 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        var harryPotterTag2 = new BookTag
+        var harryPotterTag2 = new WorkTag
         {
             Id = Guid.NewGuid(),
             Name = "Harry Potter",
@@ -275,7 +450,7 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        var harryPotterTag3 = new BookTag
+        var harryPotterTag3 = new WorkTag
         {
             Id = Guid.NewGuid(),
             Name = "Quidditch",
@@ -305,7 +480,7 @@ public static class SeedData
             Gender = GenderType.Male,
             Occupation = "Software Engineer",
             MemberType = MemberType.Adult,
-            MembershipStatus=MembershipStatus.Active,
+            MembershipStatus = MembershipStatus.Active,
             NumberOfLateReturns = 0,
             MaxLateReturnsAllowed = 3,
             HasPenalty = false,
@@ -349,6 +524,12 @@ public static class SeedData
         {
             { "MemberId", member2.Id },
             { "LibraryBranchId", mainBranchId }
+        };
+
+        var memberLibraryBranch3 = new Dictionary<string, object>
+        {
+            { "MemberId", member2.Id }, // İkinci üye
+            { "LibraryBranchId", secondBranchId }
         };
 
         var mondaybranchHour = new BranchHour
@@ -428,8 +609,6 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-
-
         var staff = new Staff
         {
             Id = Guid.NewGuid(),
@@ -487,7 +666,7 @@ public static class SeedData
         borrow2.LateDurationInDays =
             borrow2.IsLate == true ? (int?)(borrow2.ReturnDate - borrow2.DueDate)?.TotalDays : 0;
 
-        var bookStock = new BookStockOLD
+        var bookStock = new BookStockOLD // kaldırılcaktır bu alan... ama su anlık kitap emanet verilir alınırsa burda k tabloyu kullanıyor
         {
             Id = bookStockId,
             BookId = harryPotterBook.Id,
@@ -496,62 +675,6 @@ public static class SeedData
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
         };
-
-
-
-        List<Shelf> shelves = new List<Shelf>();
-        List<BookCompartment> bookCompartments = new List<BookCompartment>();
-
-        int compartmentCountPerShelf = 5;
-        int shelfCount = 3;
-
-        for (int i = 0; i < shelfCount; i++)
-        {
-            var shelf = new Shelf { Id = Guid.NewGuid(), Name = $"Shelf {i + 1}", };
-
-            shelves.Add(shelf);
-
-            for (int j = 0; j < compartmentCountPerShelf; j++)
-            {
-                var compartment = new BookCompartment
-                {
-                    Id = Guid.NewGuid(),
-                    Name = $"Compartment {j + 1}",
-                    ShelfId = shelf.Id,
-                };
-
-                bookCompartments.Add(compartment);
-            }
-        }
-
-        List<BookInventory> bookItems = new List<BookInventory>();
-
-        for (int i = 0; i < 105; i++)
-        {
-            var item = new BookInventory
-            {
-                Id = Guid.NewGuid(),
-                BookId = harryPotterBook.Id,
-                BookNumber = $"HP-{i + 1}",
-                BookStatus = BookStatus.Active,
-                IsAvailable = true,
-                Description = "",
-                Notes = "",
-                TransactionDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
-                BookStockTransactionType = BookStockTransactionType.Entry,
-                CreatedById = systemUser.Id,
-                CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
-                LastModifiedById = systemUser.Id
-            };
-
-            bookItems.Add(item);
-        }
-
-        // kitap bölmelerine kitapları ilişkilendircez.
-        
-        //burda tanımlancaktır.....
-
-
 
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
         SeedEntities<AppUser>(
@@ -564,8 +687,8 @@ public static class SeedData
         );
         SeedEntities<AppUserRole>(modelBuilder, appUserRole, appUserRole2);
         SeedEntities<Author>(modelBuilder, jKRowlingAuthor);
-        SeedEntities<BookGenre>(modelBuilder, fantasyGenre, adventureGenre);
-        SeedEntities<LibraryBranch>(modelBuilder, mainBranch);
+        SeedEntities<WorkGenre>(modelBuilder, fantasyGenre, adventureGenre);
+        SeedEntities<LibraryBranch>(modelBuilder, mainBranch, secondBranch);
         SeedEntities<BranchHour>(
             modelBuilder,
             mondaybranchHour,
@@ -576,23 +699,30 @@ public static class SeedData
             saturdaybranchHour,
             sundaybranchHour
         );
-        SeedEntities<BookPublisher>(modelBuilder, bloomsburyPublishingPublisher);
-        SeedEntities<BookCatalog>(modelBuilder, harryPotterBook);
-        SeedEntities<BookTag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
+        SeedEntities<WorkPublisher>(
+            modelBuilder,
+            bloomsburyPublishingPublisher,
+            randomHousePublisher,
+            penguinBooksPublisher
+        );
+        SeedEntities<Edition>(modelBuilder, firstEdition, secondEdition, thirdEdition);
+        SeedEntities<WorkCatalog>(modelBuilder, harryPotterBook);
+        SeedEntities<WorkTag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
         SeedEntities<Member>(modelBuilder, member1, member2);
         SeedEntities<BorrowLend>(modelBuilder, borrow, borrow2);
         SeedEntities<Staff>(modelBuilder, staff);
-        SeedEntities<BookStockOLD>(modelBuilder, bookStock);//BookInventory işlemi bitince bu entity kaldırılcaktır
 
-        SeedEntities<BookInventory>(modelBuilder, bookItems.ToArray());
+        SeedEntities<BookStockOLD>(modelBuilder, bookStock); //BookInventory işlemi bitince bu entity kaldırılcaktır
+
+        SeedEntities<WorkInventory>(modelBuilder, bookItems.ToArray());
         SeedEntities<Shelf>(modelBuilder, shelves.ToArray());
-        SeedEntities<BookCompartment>(modelBuilder, bookCompartments.ToArray());
+        SeedEntities<WorkCompartment>(modelBuilder, bookCompartments.ToArray());
 
         modelBuilder.Entity("BookTags").HasData(bookTag1, bookTag2);
         modelBuilder.Entity("BookAuthors").HasData(bookAuthor);
         modelBuilder
             .Entity("LibraryBranchMembers")
-            .HasData(memberLibraryBranch, memberLibraryBranch2);
+            .HasData(memberLibraryBranch, memberLibraryBranch2, memberLibraryBranch3);
     }
 
     private static void SeedEntities<T>(ModelBuilder modelBuilder, params T[] entities)

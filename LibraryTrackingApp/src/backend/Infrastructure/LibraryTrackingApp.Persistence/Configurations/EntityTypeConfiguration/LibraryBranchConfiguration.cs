@@ -46,6 +46,13 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
 
 
 
+        builder.HasMany(lb => lb.Shelves)
+               .WithOne(s => s.LibraryBranch)
+               .HasForeignKey(s => s.LibraryBranchId) 
+               .OnDelete(DeleteBehavior.Cascade); 
+
+
+
 
         builder.HasMany(lb => lb.BranchHours)
                .WithOne(bh => bh.LibraryBranch)

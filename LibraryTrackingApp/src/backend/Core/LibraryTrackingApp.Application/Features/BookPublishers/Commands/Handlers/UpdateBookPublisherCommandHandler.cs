@@ -22,7 +22,7 @@ public class UpdateBookPublisherCommandHandler : IRequestHandler<UpdateBookPubli
     {
         try
         {
-            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.BookPublisher>();
+            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.WorkPublisher>();
 
             var existingBookPublisher = await readRepository.GetSingleAsync(s => s.Id == request.UpdatedId);
             if (existingBookPublisher == null)
@@ -36,7 +36,7 @@ public class UpdateBookPublisherCommandHandler : IRequestHandler<UpdateBookPubli
             }
             else
             {
-                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookPublisher>();
+                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkPublisher>();
 
                 existingBookPublisher.Name = request.Name;
                 existingBookPublisher.Website = request.Website;

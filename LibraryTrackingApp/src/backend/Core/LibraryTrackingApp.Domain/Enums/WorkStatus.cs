@@ -1,28 +1,28 @@
 ﻿namespace LibraryTrackingApp.Domain.Enums;
 
 /// <summary>
-/// Bir kitabın durumunu belirtir.
+/// Bir Eser durumunu belirtir.
 /// </summary>
 [Flags]
-public enum BookStatus
+public enum WorkStatus
 {
     /// <summary>
-    /// Kitap aktif durumda.
+    /// Eser aktif durumda.
     /// </summary>
     Active = 1 << 0, // 1
 
     /// <summary>
-    /// Kitap pasif durumda.
+    /// Eser pasif durumda.
     /// </summary>
     Inactive = 1 << 1, // 2
 
     /// <summary>
-    /// Kitap hasarlı durumda.
+    /// Eser hasarlı durumda.
     /// </summary>
     Damaged = 1 << 2, // 4
 
     /// <summary>
-    /// Kitap kayıp durumda.
+    /// Eser kayıp durumda.
     /// </summary>
     Lost = 1 << 3, // 8
 }

@@ -5,15 +5,15 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
-public class BookCatalogConfiguration : IEntityTypeConfiguration<BookCatalog>
+public class BookCatalogConfiguration : IEntityTypeConfiguration<WorkCatalog>
 {
-    public void Configure(EntityTypeBuilder<BookCatalog> builder)
+    public void Configure(EntityTypeBuilder<WorkCatalog> builder)
     {
         builder.ToTable(name: "BookCatalogs", schema: "lm");// LibraryManagement
         builder.HasKey(b => b.Id);
         builder.Property(b => b.Title).IsRequired();
         builder.Property(b => b.ISBN).IsRequired();
-        builder.Property(lb => lb.Description).IsRequired();
+        builder.Property(lb => lb.Summary).IsRequired();
 
         builder.HasOne(b => b.Publisher)
             .WithMany(p => p.Books)
@@ -22,15 +22,12 @@ public class BookCatalogConfiguration : IEntityTypeConfiguration<BookCatalog>
 
         builder
             .Property(b => b.BookStatus)
-            .HasConversion(new EnumToStringConverter<BookStatus>());
+            .HasConversion(new EnumToStringConverter<WorkStatus>());
 
         builder
             .Property(b => b.BookFormat)
-            .HasConversion(new EnumToStringConverter<BookFormat>());
+            .HasConversion(new EnumToStringConverter<WorkFormat>());
 
-        builder
-            .Property(b => b.BookLanguage)
-            .HasConversion(new EnumToStringConverter<BookLanguage>());
 
         builder.HasIndex(b => b.Title);
         builder.HasIndex(b => b.ISBN);
@@ -54,11 +51,11 @@ public class BookCatalogConfiguration : IEntityTypeConfiguration<BookCatalog>
             .UsingEntity<Dictionary<string, object>>(
             "BookTags",
             j => j
-            .HasOne<BookTag>()
+            .HasOne<WorkTag>()
             .WithMany()
             .HasForeignKey("TagId"),
             j => j
-            .HasOne<BookCatalog>()
+            .HasOne<WorkCatalog>()
             .WithMany()
             .HasForeignKey("BookId"),
             j =>
@@ -80,7 +77,7 @@ public class BookCatalogConfiguration : IEntityTypeConfiguration<BookCatalog>
             .WithMany()
             .HasForeignKey("AuthorId"),
                 j => j
-            .HasOne<BookCatalog>()
+            .HasOne<WorkCatalog>()
             .WithMany()
             .HasForeignKey("BookId"),
             j =>

@@ -23,7 +23,7 @@ public class CreateBookPublisherCommandHandler : IRequestHandler<CreateBookPubli
         try
         {
             var existinBookPublisher = await _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookPublisher>()
+                .GetReadRepository<Domain.Entities.Library.WorkPublisher>()
                 .ExistsAsync(b =>
                 b.Name == request.Name
                 );
@@ -37,7 +37,7 @@ public class CreateBookPublisherCommandHandler : IRequestHandler<CreateBookPubli
                     StateMessages = new string[] { "Bu bilgilere sahip bir yayınevi zaten mevcut." }
                 };
             }
-            var newBookPublisher = new Domain.Entities.Library.BookPublisher()
+            var newBookPublisher = new Domain.Entities.Library.WorkPublisher()
             {
                 Name = request.Name,
                 Website = request.Website,
@@ -61,7 +61,7 @@ public class CreateBookPublisherCommandHandler : IRequestHandler<CreateBookPubli
                 PhoneNumber = request.PhoneNumber,
             };
 
-            var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookPublisher>();
+            var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkPublisher>();
             bool isAdded = await writeRepository.AddAsync(newBookPublisher);
             if (isAdded)
             {

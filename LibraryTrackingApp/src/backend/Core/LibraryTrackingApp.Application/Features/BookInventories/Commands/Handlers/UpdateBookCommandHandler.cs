@@ -17,7 +17,7 @@ public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommandRequest
     {
         try
         {
-            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.BookCatalog>();
+            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.WorkCatalog>();
 
             var existingBook = await readRepository.GetSingleAsync(s => s.Id == request.Id);
 
@@ -33,18 +33,17 @@ public class UpdateBookCommandHandler : IRequestHandler<UpdateBookCommandRequest
 
             else
             {
-                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookCatalog>();
+                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkCatalog>();
 
                 existingBook.Title = request.Title;
                 existingBook.ISBN = request.ISBN;
                 existingBook.PageCount = request.PageCount;
-                existingBook.PublicationDate = request.PublicationDate;
+                //existingBook.PublicationDate = request.PublicationDate;
                 existingBook.BookStatus = request.Status;
-                existingBook.Description = request.Description;
-                existingBook.PublicationDate = request.PublicationDate;
+                existingBook.Summary = request.Summary;
                 existingBook.OriginalPublicationDate = request.OriginalPublicationDate;
                 existingBook.BookFormat = request.BookFormat;
-                existingBook.BookLanguage = request.BookLanguage;
+                existingBook.WorkLanguage = request.BookLanguage;
                 existingBook.GenreId = request.GenreId;
                 existingBook.PublisherId = request.PublisherId;
                 existingBook.AuthorId = request.AuthorId;

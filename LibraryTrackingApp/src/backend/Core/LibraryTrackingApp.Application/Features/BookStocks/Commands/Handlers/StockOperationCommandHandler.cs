@@ -25,7 +25,7 @@ public class StockOperationCommandHandler
         try
         {
             var existingBook = await _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookCatalog>()
+                .GetReadRepository<Domain.Entities.Library.WorkCatalog>()
                 .ExistsAsync(b => b.Id == request.BookId);
 
         

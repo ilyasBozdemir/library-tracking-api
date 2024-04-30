@@ -3,9 +3,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace LibraryTrackingApp.Persistence.Configurations.EntityTypeConfiguration;
 
-public class BookGenreConfiguration : IEntityTypeConfiguration<BookGenre>
+public class BookGenreConfiguration : IEntityTypeConfiguration<WorkGenre>
 {
-    public void Configure(EntityTypeBuilder<BookGenre> builder)
+    public void Configure(EntityTypeBuilder<WorkGenre> builder)
     {
         builder.ToTable(name: "BookGenres", schema: "lm");// LibraryManagement
 

@@ -7,5 +7,5 @@ public class BookStockOLD : BaseEntity<Guid>, IAuditable<Guid>
     public Guid BookId { get; set; }
     public int Quantity { get; set; }
 
-    public virtual BookCatalog Book { get; set; }
+    public virtual WorkCatalog Book { get; set; }
 }

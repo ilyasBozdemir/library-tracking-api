@@ -24,7 +24,7 @@ public class GetBookPublisherQueryHandler : IRequestHandler<GetBookPublisherQuer
         try
         {
             var readRepository = _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookPublisher>();
+                .GetReadRepository<Domain.Entities.Library.WorkPublisher>();
 
 
             var existingBookPublisher = await
