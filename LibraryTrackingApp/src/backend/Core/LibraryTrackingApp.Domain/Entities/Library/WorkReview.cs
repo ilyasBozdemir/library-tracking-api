@@ -1,6 +1,6 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
-public class BookReview : BaseEntity<Guid>, IAuditable<Guid>
+public class WorkReview : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid BookId { get; set; }
     public Guid MemberId { get; set; }

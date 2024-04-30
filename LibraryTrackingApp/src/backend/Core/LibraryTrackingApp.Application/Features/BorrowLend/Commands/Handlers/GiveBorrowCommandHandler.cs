@@ -72,7 +72,7 @@ public class GiveBorrowCommandHandler
         try
         {
             var existingBook = await _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookCatalog>()
+                .GetReadRepository<Domain.Entities.Library.WorkCatalog>()
                 .ExistsAsync(b => b.Id == request.BookId);
 
             var existingMember = await _unitOfWork
@@ -83,13 +83,30 @@ public class GiveBorrowCommandHandler
                 .GetReadRepository<Domain.Entities.Library.Staff>()
                 .ExistsAsync(b => b.Id == request.LenderId);
 
-            if (!existingBook || !existingMember || !existingStaff)
+
+            List<string> invalidEntries = new List<string>();
+
+            if (!existingBook)
+                invalidEntries.Add("Kitap");
+           
+
+            if (!existingMember)
+                invalidEntries.Add("Üye");
+            
+
+            if (!existingStaff)
+                invalidEntries.Add("Personel");
+
+
+            if (invalidEntries.Any())
             {
+                string errorMessage = $"Geçersiz veya eksik girişler: {string.Join(", ", invalidEntries)}.";
+
                 return new()
                 {
                     StatusCode = (int)HttpStatusCode.BadRequest,
                     Success = false,
-                    StateMessages = new[] { "Bazı girişler geçersiz veya eksik." }
+                    StateMessages = new[] { errorMessage }
                 };
             }
 

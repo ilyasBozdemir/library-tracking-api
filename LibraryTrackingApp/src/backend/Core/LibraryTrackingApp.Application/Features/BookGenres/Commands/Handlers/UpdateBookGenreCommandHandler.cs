@@ -22,7 +22,7 @@ public class UpdateBookGenreCommandHandler : IRequestHandler<UpdateBookGenreComm
     {
         try
         {
-            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.BookGenre>();
+            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.WorkGenre>();
 
             var existingBookGenre = await readRepository.GetSingleAsync(s => s.Id == request.UpdatedId);
             if (existingBookGenre == null)
@@ -36,7 +36,7 @@ public class UpdateBookGenreCommandHandler : IRequestHandler<UpdateBookGenreComm
             }
             else
             {
-                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookGenre>();
+                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkGenre>();
 
                 existingBookGenre.Name = request.Name;
                 existingBookGenre.IsActive = request.IsActive;

@@ -22,7 +22,7 @@ public class GetBookQueryHandler : IRequestHandler<GetBookQueryRequest, GetBookQ
         try
         {
             var readRepository = _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookCatalog>();
+                .GetReadRepository<Domain.Entities.Library.WorkCatalog>();
 
 
             var existingAuthor = await

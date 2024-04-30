@@ -26,7 +26,7 @@ public class GetBookGenreQueryHandler : IRequestHandler<GetBookGenreQueryRequest
         try
         {
             var readRepository = _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookGenre>();
+                .GetReadRepository<Domain.Entities.Library.WorkGenre>();
 
 
             var existingBookGenre = await

@@ -25,7 +25,7 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
 
         try
         {
-            var existingBook = await _unitOfWork.GetReadRepository<Domain.Entities.Library.BookCatalog>()
+            var existingBook = await _unitOfWork.GetReadRepository<Domain.Entities.Library.WorkCatalog>()
                 .ExistsAsync(b => b.ISBN == request.ISBN);
 
             if (existingBook)
@@ -40,11 +40,11 @@ public class CreateBookCommandHandler : IRequestHandler<CreateBookCommandRequest
 
 
 
-            var newBook = _mapper.Map<Domain.Entities.Library.BookCatalog>(request);
+            var newBook = _mapper.Map<Domain.Entities.Library.WorkCatalog>(request);
             newBook.Id = Guid.NewGuid();
 
 
-            var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookCatalog>();
+            var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkCatalog>();
             bool isAdded = await writeRepository.AddAsync(newBook);
 
             if (isAdded)

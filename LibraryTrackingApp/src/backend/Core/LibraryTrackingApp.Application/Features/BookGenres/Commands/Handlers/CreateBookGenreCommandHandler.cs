@@ -23,7 +23,7 @@ public class CreateBookGenreCommandHandler : IRequestHandler<CreateBookGenreComm
         try
         {
             var existinBookGenre = await _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.BookGenre>()
+                .GetReadRepository<Domain.Entities.Library.WorkGenre>()
                 .ExistsAsync(b =>
                 b.Name == request.Name
                 );
@@ -37,7 +37,7 @@ public class CreateBookGenreCommandHandler : IRequestHandler<CreateBookGenreComm
                     StateMessages = new string[] { "Bu bilgilere sahip bir tür zaten mevcut." }
                 };
             }
-            var newBookGenre = new Domain.Entities.Library.BookGenre()
+            var newBookGenre = new Domain.Entities.Library.WorkGenre()
             {
                 Name = request.Name,
                 IsActive= request.IsActive,
@@ -54,7 +54,7 @@ public class CreateBookGenreCommandHandler : IRequestHandler<CreateBookGenreComm
                 IsActive = request.IsActive,
             };
 
-            var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookGenre>();
+            var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkGenre>();
             bool isAdded = await writeRepository.AddAsync(newBookGenre);
             if (isAdded)
             {

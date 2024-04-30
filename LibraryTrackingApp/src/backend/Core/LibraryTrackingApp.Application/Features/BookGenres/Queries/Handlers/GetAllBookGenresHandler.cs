@@ -29,13 +29,13 @@ public class GetAllBookGenresHandler : IRequestHandler<GetAllBookGenresQueryRequ
             int PageIndex = request.PageIndex;
 
             var readRepository = _unitOfWork
-                           .GetReadRepository<Domain.Entities.Library.BookGenre>();
+                           .GetReadRepository<Domain.Entities.Library.WorkGenre>();
 
             var BookGenreList = readRepository.GetAll();
 
             var bookGenreDtoList = new List<BookGenreDTO>();
 
-            foreach (BookGenre libraryBranch in BookGenreList)
+            foreach (WorkGenre libraryBranch in BookGenreList)
             {
                 bookGenreDtoList.Add(new BookGenreDTO
                 {

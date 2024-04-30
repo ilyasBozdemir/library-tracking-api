@@ -8,8 +8,8 @@ public class BookMappingProfile : Profile
 {
     public BookMappingProfile()
     {
-        CreateMap<BookCatalog, BookDTO>().ReverseMap();
-        CreateMap<BookCatalog, CreateBookCommandRequest>().ReverseMap();
+        CreateMap<WorkCatalog, BookDTO>().ReverseMap();
+        CreateMap<WorkCatalog, CreateBookCommandRequest>().ReverseMap();
         CreateMap<BookDTO, CreateBookCommandRequest>().ReverseMap();
 
         // lazım olan yerde burda map'leme yapılabilir.

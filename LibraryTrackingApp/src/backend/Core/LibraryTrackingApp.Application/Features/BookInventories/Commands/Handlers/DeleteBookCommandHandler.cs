@@ -18,7 +18,7 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
         try
         {
 
-            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.BookCatalog>();
+            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.WorkCatalog>();
 
             Guid bookId;
             bool isGuid = Guid.TryParse(request.IdOrISBN, out bookId);
@@ -39,7 +39,7 @@ public class DeleteBookCommandHandler : IRequestHandler<DeleteBookCommandRequest
             }
             else
             {
-                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookCatalog>();
+                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkCatalog>();
                 bool isDeleted = await writeRepository.DeleteAsync(existingBookStock);
                 if (isDeleted)
                 {

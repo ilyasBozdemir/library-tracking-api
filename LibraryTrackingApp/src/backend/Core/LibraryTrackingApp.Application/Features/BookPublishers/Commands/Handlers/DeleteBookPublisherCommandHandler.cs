@@ -22,7 +22,7 @@ public class DeleteBookPublisherCommandHandler : IRequestHandler<DeleteBookPubli
         try
         {
 
-            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.BookPublisher>();
+            var readRepository = _unitOfWork.GetReadRepository<Domain.Entities.Library.WorkPublisher>();
 
             Guid bookId;
             bool isGuid = Guid.TryParse(request.Id, out bookId);
@@ -40,7 +40,7 @@ public class DeleteBookPublisherCommandHandler : IRequestHandler<DeleteBookPubli
             }
             else
             {
-                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.BookPublisher>();
+                var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.WorkPublisher>();
                 bool isDeleted = await writeRepository.DeleteAsync(existingBookPublisher);
                 if (isDeleted)
                 {
