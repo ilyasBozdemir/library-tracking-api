@@ -1,17 +1,18 @@
 import {
   Link as CLink,
+  Flex,
 } from "@chakra-ui/react";
 
 
 import React from "react";
 
-const FooterSection = () => {
+const Footer = () => {
 
 
   return (
-    <>
+    <Flex justifyContent={'center'}>
     <FooterData/>
-    </>
+    </Flex>
   );
 };
 
@@ -35,4 +36,4 @@ export async function getStaticProps({ locale }) {
   };
 }
 
-export default React.memo(FooterSection);
+export default React.memo(Footer);

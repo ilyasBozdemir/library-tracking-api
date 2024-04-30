@@ -20,6 +20,7 @@ import {
   Link as CLink,
   FormErrorMessage,
   IconButton,
+  Text,
 } from "@chakra-ui/react";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
 import Link from "next/link";
@@ -32,8 +33,8 @@ const LoginPage = () => {
   const router = useRouter();
   const formik = useFormik({
     initialValues: {
-      username: "",
-      password: "",
+      username: "admin",
+      password: "admin",
     },
     validationSchema: Yup.object({
       username: Yup.string().required("Kullanıcı adı zorunlu"),
@@ -135,6 +136,11 @@ const LoginPage = () => {
             </VStack>
           </Stack>
         </Center>
+
+        <Text as='small' mt={5}>
+          Not: herhangi bir username ve password ile girilebilir su an
+          backende tam olarak baglanmamıstır.
+        </Text>
       </Container>
     </>
   );
