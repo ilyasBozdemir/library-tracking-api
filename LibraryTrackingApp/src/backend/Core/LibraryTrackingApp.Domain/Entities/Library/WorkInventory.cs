@@ -1,13 +1,11 @@
 ﻿namespace LibraryTrackingApp.Domain.Entities.Library;
 
 
-//bookstock tablosu kalkıcaktır. stokları teker teker aynı kitapta da verilen numaralar ile ayırarak burda da bunu girerek
-// yapılcaktır stok adedi bu şekilde olucaktır.
 public class WorkInventory : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
     public Guid BookId { get; set; }
-    public Guid BorrowLendId { get; set; }
+    public Guid? BorrowLendId { get; set; }
     public Guid EditionId { get; set; } // Eserin türü
     public Guid? ShelfId { get; set; }
     public Guid? BookCompartmentId { get; set; }
@@ -27,7 +25,7 @@ public class WorkInventory : BaseEntity<Guid>, IAuditable<Guid>
 
     public ICollection<Edition> Editions { get; set; } // Baskılar
 
-    public virtual ICollection<BorrowLend> BorrowLends { get; set; }
+    public virtual ICollection<BorrowLend>? BorrowLends { get; set; }
 
     public virtual WorkCompartment BookCompartment { get; set; }
 }

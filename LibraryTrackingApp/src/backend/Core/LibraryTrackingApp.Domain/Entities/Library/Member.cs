@@ -11,6 +11,7 @@ namespace LibraryTrackingApp.Domain.Entities.Library;
 public class Member : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid UserId { get; set; }
+    public Guid? BorrowId { get; set; }
     public DateTime MembershipDate { get; set; } // Üyelik Tarihi
     public GenderType Gender { get; set; } 
     public string Occupation { get; set; } //Meslek
@@ -24,11 +25,10 @@ public class Member : BaseEntity<Guid>, IAuditable<Guid>
     public bool IsExtensionAllowed { get; set; } // Uzatma izni
     public int ExtensionDurationInDays { get; set; } // Uzatma süresi (gün cinsinden)
 
-    public Guid BorrowId { get; set; }
     public Guid LibraryBranchId { get; set; }
     public AppUser User { get; set; }
 
 
     public virtual ICollection<LibraryBranch> LibraryBranches { get; set; }
-    public virtual ICollection<BorrowLend> Borrows { get; set; }
+    public virtual ICollection<BorrowLend>? Borrows { get; set; }
 }
