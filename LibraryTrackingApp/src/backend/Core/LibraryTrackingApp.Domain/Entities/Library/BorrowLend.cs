@@ -19,7 +19,7 @@ public class BorrowLend : BaseEntity<Guid>, IAuditable<Guid>
     public DateTime DueDate { get; set; } 
     public DateTime? ReturnDate { get; set; }
     public BorrowStatus BorrowStatus { get; set; }
-   
+    
     public bool HasFee { get; set; }
     public decimal FeeAmount { get; set; }
   

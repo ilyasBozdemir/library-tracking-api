@@ -25,7 +25,7 @@ public class WorkCatalogConfiguration : IEntityTypeConfiguration<WorkCatalog>
         builder
             .HasMany(b => b.WorkInventories)
             .WithOne(be => be.WorkCatalog)
-            .HasForeignKey(be => be.BookId)
+            .HasForeignKey(be => be.WorkCatalogId)
             .OnDelete(DeleteBehavior.Cascade);
 
         // WorkCatalog - Publisher ilişkisi

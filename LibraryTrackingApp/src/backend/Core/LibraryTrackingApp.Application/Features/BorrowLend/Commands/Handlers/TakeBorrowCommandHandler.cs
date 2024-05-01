@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using LibraryTrackingApp.Application.Features.BookStocks.Commands.Requests;
 using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
 using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
@@ -40,7 +39,7 @@ public class TakeBorrowCommandHandler
                 _unitOfWork.GetReadRepository<Domain.Entities.Library.BorrowLend>();
 
             var borrowedBook = await givenBookReadRepository.GetSingleAsync(
-                b => b.Id == request.BorrowId
+                b => b.WorkInventoryId == request.WorkInventoryId
             );
 
             if (borrowedBook == null)
@@ -59,6 +58,8 @@ public class TakeBorrowCommandHandler
                     StateMessages = new[] { "Kitap zaten iade edilmiş durumda." }
                 };
 
+            //
+
             borrowedBook.ReturnDate = DateTime.Now;
 
             borrowedBook.BorrowStatus = BorrowStatus.Returned;
@@ -67,6 +68,7 @@ public class TakeBorrowCommandHandler
             {
                 borrowedBook.LateDurationInDays = (int?)
                     (borrowedBook.ReturnDate - borrowedBook.DueDate)?.TotalDays;
+
                 borrowedBook.BorrowStatus = BorrowStatus.DelayedReturn;
             }
             else
@@ -74,35 +76,15 @@ public class TakeBorrowCommandHandler
                 borrowedBook.LateDurationInDays = 0;
             }
 
-            var stockDecreaseResponse = await _mediator.Send(
-               new StockOperationCommandRequest
-               {
-                   BookId = borrowedBook.WorkCatalogId,
-                   OperationType = StockOperationType.Increase,
-                   Quantity = 1,
-               }
-           );
-
-
-            if (stockDecreaseResponse.Success)
-            {
-
-                var givenBookResult = await givenBookWriteRepository.UpdateAsync(borrowedBook);
-
-                return new()
-                {
-                    StatusCode = (int)HttpStatusCode.OK,
-                    Success = stockDecreaseResponse.Success,
-                    StateMessages = new[] { "Kitap Başarıyla Teslim alındı." }
-                };
-            }
+            var givenBookResult = await givenBookWriteRepository.UpdateAsync(borrowedBook);
 
             return new()
             {
-                StatusCode = stockDecreaseResponse.StatusCode,
-                Success = stockDecreaseResponse.Success,
-                StateMessages = stockDecreaseResponse.StateMessages
+                Success = true,
+                StatusCode = (int)HttpStatusCode.OK,
+                StateMessages = new[] { "Kitap İade Alındı." }
             };
+
         }
         catch (Exception ex)
         {

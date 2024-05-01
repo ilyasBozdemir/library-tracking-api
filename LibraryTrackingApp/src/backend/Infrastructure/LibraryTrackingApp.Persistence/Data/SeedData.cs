@@ -288,7 +288,7 @@ public static class SeedData
             var item = new WorkInventory
             {
                 Id = Guid.NewGuid(),
-                BookId = harryPotterBookId,
+                WorkCatalogId = harryPotterBookId,
                 BookNumber = $"HP-{i + 1}",
                 BookStatus = WorkStatus.Active,
                 IsAvailable = true,
@@ -750,12 +750,6 @@ public static class SeedData
         borrow3.IsLate = borrow3.ReturnDate > borrow3.DueDate;
         borrow3.LateDurationInDays =
             borrow3.IsLate == true ? (int?)(borrow3.ReturnDate - borrow3.DueDate)?.TotalDays : 0;
-
-
-
-
-
-
 
 
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
