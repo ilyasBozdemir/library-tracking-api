@@ -17,5 +17,5 @@ public class Author : BaseEntity<Guid>, IAuditable<Guid>
     public string Website { get; set; }
 
 
-    public ICollection<WorkCatalog> Books { get; set; }
+    public ICollection<WorkCatalog> WorkCatalogs { get; set; }
 }

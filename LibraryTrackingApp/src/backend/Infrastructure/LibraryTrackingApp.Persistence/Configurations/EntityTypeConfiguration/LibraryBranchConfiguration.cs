@@ -19,31 +19,9 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
         builder.Property(lb => lb.Description).IsRequired();
 
         builder
-            .HasMany(lb => lb.Books)
+            .HasMany(lb => lb.WorkCatalogs)
             .WithOne(b => b.LibraryBranch)
             .HasForeignKey(b => b.LibraryBranchId);
-
-
-        builder
-            .HasMany(b => b.Members)
-            .WithMany(t => t.LibraryBranches)
-            .UsingEntity<Dictionary<string, object>>(
-            "LibraryBranchMembers",
-            j => j
-            .HasOne<Member>()
-            .WithMany()
-            .HasForeignKey("MemberId"),
-            j => j
-            .HasOne<LibraryBranch>()
-            .WithMany()
-            .HasForeignKey("LibraryBranchId"),
-            j =>
-            {
-                j.HasKey("MemberId", "LibraryBranchId");
-                j.ToTable("LibraryBranchMembers");
-            }
-            );
-
 
 
         builder.HasMany(lb => lb.Shelves)
@@ -60,7 +38,7 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
                .OnDelete(DeleteBehavior.Cascade);
 
         builder
-            .HasMany(lb => lb.Books)
+            .HasMany(lb => lb.WorkCatalogs)
             .WithOne(b => b.LibraryBranch)
             .HasForeignKey(b => b.LibraryBranchId)
             .OnDelete(DeleteBehavior.Cascade);
@@ -76,5 +54,26 @@ public class LibraryBranchConfiguration : IEntityTypeConfiguration<LibraryBranch
             .WithOne(t => t.LibraryBranch)
             .HasForeignKey(t => t.LibraryBranchId)
             .OnDelete(DeleteBehavior.Cascade);
+
+
+       
+        builder
+         .HasMany(t => t.Members)
+         .WithMany(wc => wc.LibraryBranches)
+         .UsingEntity<LibraryBranchMember>(
+         j => j.HasOne(twc => twc.Member).WithMany().HasForeignKey(twc => twc.MemberId),
+         j => j.HasOne(twc => twc.LibraryBranch).WithMany().HasForeignKey(twc => twc.LibraryBranchId),
+         j =>
+         {
+             j.HasKey(wt => new { wt.MemberId, wt.LibraryBranchId });
+             j.ToTable("LibraryBranch_Member", "lm");
+         }
+         );
+        
+
+        // library- owner user n-n  yapılcak...
+
+
+
     }
 }

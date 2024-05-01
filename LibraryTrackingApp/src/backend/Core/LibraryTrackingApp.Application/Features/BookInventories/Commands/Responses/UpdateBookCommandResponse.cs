@@ -1,9 +1,0 @@
-﻿using LibraryTrackingApp.Application.Shared.Wrappers.Results;
-
-namespace LibraryTrackingApp.Application.Features.BookInventories.Commands.Responses;
-
-public class UpdateBookCommandResponse : CommandResult
-{
-
-
-}

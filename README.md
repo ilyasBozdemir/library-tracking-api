@@ -127,18 +127,17 @@ Uygulama aşağıdaki entiteleri içermektedir:
 - **LibraryBranch**: Kütüphane şubelerinin kaydedilmesi.
 - **LibraryTransaction**: Kütüphane işlemlerinin yönetimi.
 - **Branch Hour**: Kütüphane şubelerinin çalışma saatlerinin yönetimi.
-- **Book**: Kitapların kaydedilmesi ve yönetilmesi.
-- **BookGenre**: Kitap türlerinin kaydedilmesi.
-- **Author**: Kitap yazarlarının kaydedilmesi.
-- **BookPublisher**: Kitap yayınevlerinin kaydedilmesi.
-- **BorrowLend**: Kitap ödünç alma ve iade işlemlerinin yönetimi.
-- **BookStock**: Kitap stoklarının yönetimi. //OLD
-- **BookInstance**: Kitaplar için stok entity yerine stok tutması ve kayıt tutması için bunu kullanıcaz ilerde
-- **BookTag**: Kitapları kategorize etmek için etiketlerin yönetimi.
+- **WorkCatalog**: Eserlerin kaydedilmesi ve yönetilmesi.
+- **WorkGenre**: Eser türlerinin kaydedilmesi.
+- **Author**: Eser yazarlarının kaydedilmesi.
+- **WorkPublisher**: Eser yayınevlerinin kaydedilmesi.
+- **BorrowLend**: Eser ödünç alma ve iade işlemlerinin yönetimi.
+- **WorkInventory**: Eserler için envantor yönetimi 
+- **WorkTag**: Eserleri kategorize etmek için etiketlerin yönetimi.
 - **FavoriteList**: Kullanıcıların favori listesine kitap eklemesi
 - **ReadingList**: Kullanıcıların okuma listesine kitap eklemesi.
 - **Shelf**: Kitaplar için rafı temsil eden entity
-- **BookCompartment**: rafların kitap bölmesini temsil eden entity
+- **WorkCompartment**: rafların kitap bölmesini temsil eden entity
 
 ## Planlanan Özellikler
 

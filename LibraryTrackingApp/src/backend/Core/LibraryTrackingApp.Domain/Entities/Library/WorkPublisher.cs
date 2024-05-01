@@ -12,6 +12,8 @@ public class WorkPublisher : BaseEntity<Guid>, IAuditable<Guid>
     public string Email { get; set; } // Yayınevi e-posta adresi
 
 
-    public ICollection<WorkCatalog> Books { get; set; }
+
+
+    public ICollection<WorkCatalog> WorkCatalogs { get; set; }
     public ICollection<Edition> Editions { get; set; }
 }

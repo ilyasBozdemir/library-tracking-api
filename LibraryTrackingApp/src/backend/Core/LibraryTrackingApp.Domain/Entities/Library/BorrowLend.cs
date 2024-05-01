@@ -11,9 +11,9 @@
 public class BorrowLend : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
-    public Guid BookId { get; set; }
+    public Guid WorkCatalogId { get; set; }
     public Guid MemberId { get; set; }
-    public Guid LenderId { get; set; }
+    public Guid StaffLenderId { get; set; }
     public DateTime BorrowDate { get; set; }
     public DateTime DueDate { get; set; } 
     public DateTime? ReturnDate { get; set; }
@@ -26,7 +26,7 @@ public class BorrowLend : BaseEntity<Guid>, IAuditable<Guid>
     public int? LateDurationInDays { get; set; }
 
 
-    public WorkCatalog Book { get; set; }
+    public WorkCatalog WorkCatalog { get; set; }
     public Member Member { get; set; }
-    public Staff Lender { get; set; }
+    public Staff StaffLender { get; set; }
 }

@@ -87,6 +87,8 @@ public static class SeedData
             LastModifiedById = systemUserId,
         };
 
+
+
         var staffUser = new AppUser
         {
             Id = Guid.NewGuid(),
@@ -236,8 +238,12 @@ public static class SeedData
         int compartmentCountPerBook = 10;
         int bookCount = compartmentCountPerBook * shelfCountPerLibrary * compartmentCountPerShelf;
 
-        var bookStockId = Guid.NewGuid();
         var harryPotterBookId = Guid.NewGuid();
+
+        var firstEditionId = Guid.NewGuid();
+        var secondEditionId = Guid.NewGuid();
+        var thirdEditionId = Guid.NewGuid();
+
 
         List<Shelf> shelves = new List<Shelf>();
         List<WorkCompartment> bookCompartments = new List<WorkCompartment>();
@@ -272,10 +278,13 @@ public static class SeedData
             }
         }
 
-        List<WorkInventory> bookItems = new List<WorkInventory>();
+        List<WorkInventory> workInventories = new List<WorkInventory>();
+
+
 
         for (int i = 0; i < bookCount; i++)
         {
+
             var item = new WorkInventory
             {
                 Id = Guid.NewGuid(),
@@ -291,16 +300,16 @@ public static class SeedData
                 CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
                 LastModifiedById = systemUser.Id
             };
-            bookItems.Add(item);
+            workInventories.Add(item);
         }
 
         // Kitapları raf ve bölmelere dağıtma işlemi
         int bookIndex = 0;
 
 
-        for (int i = 0; i < bookItems.Count; i++)
+        for (int i = 0; i < workInventories.Count; i++)
         {
-            var workInventory = bookItems[i];
+            var workInventory = workInventories[i];
 
             int bookSequence = i + 1;
 
@@ -314,6 +323,8 @@ public static class SeedData
             workInventory.ShelfId = shelfId;
             workInventory.BookCompartmentId = compartmentId;
         }
+
+
 
 
         var bloomsburyPublishingPublisher = new WorkPublisher
@@ -368,8 +379,9 @@ public static class SeedData
             LibraryBranchId = mainBranch.Id,
             PublisherId = bloomsburyPublishingPublisher.Id,
             AuthorId = jKRowlingAuthor.Id,
-            BookStockId = bookStockId,
             Title = "Harry Potter and the Philosopher's Stone",
+            DeweyCode = "800",
+            IsApproved = true,
             ISBN = "9781408855652",
             Summary = """
                 Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive.
@@ -379,8 +391,8 @@ public static class SeedData
             CoverImageUrl = "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg",
             PageCount = 352,
             OriginalPublicationDate = new DateTime(1997, 6, 26),
-            BookStatus = WorkStatus.Active,
-            BookFormat = WorkFormat.PrintedBook,
+            WorkStatus = WorkStatus.Active,
+            WorkFormat = WorkFormat.PrintedBook,
             WorkLanguage = "English",
             AudioFilePath = null,
             FilePath = null,
@@ -394,10 +406,11 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
+
         var firstEdition = new Edition
         {
-            Id = Guid.NewGuid(),
-            WorkCatalogId = harryPotterBook.Id,
+            Id = firstEditionId,
+            WorkInventoryId = harryPotterBook.Id,
             PublisherId = bloomsburyPublishingPublisher.Id,
             EditionNumber = 1,
             PublicationDate = new DateTime(1997, 6, 26),
@@ -406,8 +419,8 @@ public static class SeedData
 
         var secondEdition = new Edition
         {
-            Id = Guid.NewGuid(),
-            WorkCatalogId = harryPotterBook.Id,
+            Id = secondEditionId,
+            WorkInventoryId = harryPotterBook.Id,
             PublisherId = penguinBooksPublisher.Id,
             EditionNumber = 2,
             PublicationDate = new DateTime(1998, 7, 2),
@@ -416,25 +429,51 @@ public static class SeedData
 
         var thirdEdition = new Edition
         {
-            Id = Guid.NewGuid(),
-            WorkCatalogId = harryPotterBook.Id,
+            Id = thirdEditionId,
+            WorkInventoryId = harryPotterBook.Id,
             PublisherId = randomHousePublisher.Id,
             EditionNumber = 3,
             PublicationDate = new DateTime(1999, 5, 5),
             Notes = "Third edition of Harry Potter and the Philosopher's Stone."
         };
 
-        var bookAuthor = new Dictionary<string, object>
+        List<Edition> editions = new List<Edition>()
         {
-            { "BookId", harryPotterBook.Id },
-            { "AuthorId", jKRowlingAuthor.Id }
+            firstEdition,
+            secondEdition,
+            thirdEdition,
         };
+
+
+        List<EditionWorkInventory> editionWorkInventoryList = new List<EditionWorkInventory>();
+
+
+        foreach (var edition in editions)
+        {
+            foreach (var workInventory in workInventories)
+            {
+                var editionWorkInventory = new EditionWorkInventory
+                {
+                    EditionId = edition.Id,
+                    WorkInventoryId = workInventory.Id
+                };
+                editionWorkInventoryList.Add(editionWorkInventory);
+            }
+        }
+
+        var bookAuthor = new AuthorWorkCatalog
+        {
+            WorkCatalogId = harryPotterBook.Id,
+            AuthorId = jKRowlingAuthor.Id
+        };
+
+
 
         var harryPotterTag1 = new WorkTag
         {
             Id = Guid.NewGuid(),
             Name = "Hogwarts",
-            BookId = harryPotterBook.Id,
+            WorkCatalogId = harryPotterBook.Id,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
@@ -444,7 +483,7 @@ public static class SeedData
         {
             Id = Guid.NewGuid(),
             Name = "Harry Potter",
-            BookId = harryPotterBook.Id,
+            WorkCatalogId = harryPotterBook.Id,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
@@ -454,22 +493,31 @@ public static class SeedData
         {
             Id = Guid.NewGuid(),
             Name = "Quidditch",
-            BookId = harryPotterBook.Id,
+            WorkCatalogId = harryPotterBook.Id,
             CreatedById = systemUser.Id,
             CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             LastModifiedById = systemUser.Id
         };
 
-        var bookTag1 = new Dictionary<string, object>
+
+
+        var bookTag1 = new WorkCatalogTag
         {
-            { "BookId", harryPotterBook.Id },
-            { "TagId", harryPotterTag1.Id }
+            WorkCatalogId = harryPotterBook.Id,
+            TagId = harryPotterTag1.Id
         };
 
-        var bookTag2 = new Dictionary<string, object>
+        var bookTag2 = new WorkCatalogTag
         {
-            { "BookId", harryPotterBook.Id },
-            { "TagId", harryPotterTag2.Id }
+            WorkCatalogId = harryPotterBook.Id,
+            TagId = harryPotterTag2.Id
+        };
+
+
+        var bookTag3 = new WorkCatalogTag
+        {
+            WorkCatalogId = harryPotterBook.Id,
+            TagId = harryPotterTag3.Id
         };
 
         var member1 = new Member
@@ -514,23 +562,28 @@ public static class SeedData
             LastModifiedById = systemUser.Id
         };
 
-        var memberLibraryBranch = new Dictionary<string, object>
+
+        var memberLibraryBranch = new LibraryBranchMember
         {
-            { "MemberId", member1.Id },
-            { "LibraryBranchId", mainBranchId }
+            MemberId = member1.Id,
+            LibraryBranchId = mainBranchId
         };
 
-        var memberLibraryBranch2 = new Dictionary<string, object>
+
+        var memberLibraryBranch2 = new LibraryBranchMember
         {
-            { "MemberId", member2.Id },
-            { "LibraryBranchId", mainBranchId }
+            MemberId = member2.Id,
+            LibraryBranchId = mainBranchId
         };
 
-        var memberLibraryBranch3 = new Dictionary<string, object>
+
+        var memberLibraryBranch3 = new LibraryBranchMember
         {
-            { "MemberId", member2.Id }, // İkinci üye
-            { "LibraryBranchId", secondBranchId }
+            MemberId = member2.Id,
+            LibraryBranchId = secondBranchId
         };
+
+
 
         var mondaybranchHour = new BranchHour
         {
@@ -624,12 +677,16 @@ public static class SeedData
             LibraryBranchId = mainBranch.Id
         };
 
+
+        //BorrowLend bunları da  harryPotterBook ile değil bunun kopyası olan
+        // envantor entity'si ile ilişkilendirilcektir.
+
         var borrow = new BorrowLend
         {
             Id = Guid.NewGuid(),
             MemberId = member1.Id,
-            BookId = harryPotterBook.Id,
-            LenderId = staff.Id,
+            WorkCatalogId = harryPotterBook.Id,
+            StaffLenderId = staff.Id,
             BorrowDate = DateTime.Now - TimeSpan.FromDays(10),
             BorrowStatus = BorrowStatus.Borrowed,
             CreatedById = systemUser.Id,
@@ -649,8 +706,8 @@ public static class SeedData
         {
             Id = Guid.NewGuid(),
             MemberId = member2.Id,
-            BookId = harryPotterBook.Id,
-            LenderId = staff.Id,
+            WorkCatalogId = harryPotterBook.Id,
+            StaffLenderId = staff.Id,
             BorrowDate = DateTime.Now - TimeSpan.FromDays(10),
             BorrowStatus = BorrowStatus.Borrowed,
             CreatedById = systemUser.Id,
@@ -665,16 +722,6 @@ public static class SeedData
         borrow2.IsLate = borrow2.ReturnDate > borrow2.DueDate;
         borrow2.LateDurationInDays =
             borrow2.IsLate == true ? (int?)(borrow2.ReturnDate - borrow2.DueDate)?.TotalDays : 0;
-
-        var bookStock = new BookStockOLD // kaldırılcaktır bu alan... ama su anlık kitap emanet verilir alınırsa burda k tabloyu kullanıyor
-        {
-            Id = bookStockId,
-            BookId = harryPotterBook.Id,
-            Quantity = 100,
-            CreatedById = systemUser.Id,
-            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
-            LastModifiedById = systemUser.Id
-        };
 
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
         SeedEntities<AppUser>(
@@ -711,18 +758,18 @@ public static class SeedData
         SeedEntities<Member>(modelBuilder, member1, member2);
         SeedEntities<BorrowLend>(modelBuilder, borrow, borrow2);
         SeedEntities<Staff>(modelBuilder, staff);
+        SeedEntities<AuthorWorkCatalog>(modelBuilder, bookAuthor);
 
-        SeedEntities<BookStockOLD>(modelBuilder, bookStock); //BookInventory işlemi bitince bu entity kaldırılcaktır
 
-        SeedEntities<WorkInventory>(modelBuilder, bookItems.ToArray());
+        SeedEntities<WorkInventory>(modelBuilder, workInventories.ToArray());
         SeedEntities<Shelf>(modelBuilder, shelves.ToArray());
         SeedEntities<WorkCompartment>(modelBuilder, bookCompartments.ToArray());
+        SeedEntities<EditionWorkInventory>(modelBuilder, editionWorkInventoryList.ToArray());
 
-        modelBuilder.Entity("BookTags").HasData(bookTag1, bookTag2);
-        modelBuilder.Entity("BookAuthors").HasData(bookAuthor);
-        modelBuilder
-            .Entity("LibraryBranchMembers")
-            .HasData(memberLibraryBranch, memberLibraryBranch2, memberLibraryBranch3);
+        SeedEntities<WorkCatalogTag>(modelBuilder, bookTag1, bookTag2, bookTag3);
+
+        SeedEntities<LibraryBranchMember>(modelBuilder, memberLibraryBranch, memberLibraryBranch2, memberLibraryBranch3);
+
     }
 
     private static void SeedEntities<T>(ModelBuilder modelBuilder, params T[] entities)

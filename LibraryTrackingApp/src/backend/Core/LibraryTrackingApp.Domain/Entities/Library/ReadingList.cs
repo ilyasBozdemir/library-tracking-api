@@ -3,5 +3,5 @@
 public class ReadingList : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid MemberId { get; set; }
-    public ICollection<WorkCatalog> Books { get; set; }
+    public ICollection<WorkCatalog> WorkCatalogs { get; set; }
 }
