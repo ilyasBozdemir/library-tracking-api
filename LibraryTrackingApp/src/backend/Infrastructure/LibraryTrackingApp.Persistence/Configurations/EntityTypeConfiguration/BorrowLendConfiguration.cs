@@ -32,15 +32,18 @@ public class BorrowLendConfiguration : IEntityTypeConfiguration<BorrowLend>
             .HasConversion(new EnumToStringConverter<BorrowStatus>());
 
 
-        builder.HasOne(l => l.WorkCatalog)
-               .WithMany(b => b.Borrows) 
-               .HasForeignKey(l => l.WorkCatalogId)
-               .IsRequired();
-
         builder.HasOne(b => b.WorkCatalog)
              .WithMany(b => b.Borrows)
              .HasForeignKey(b => b.WorkCatalogId)
              .OnDelete(DeleteBehavior.Restrict);
+
+
+
+        builder.HasOne(b => b.WorkInventory)
+             .WithMany(b => b.BorrowLends)
+             .HasForeignKey(b => b.WorkInventoryId)
+             .OnDelete(DeleteBehavior.Restrict);
+
 
         builder.HasOne(b => b.Member)
                .WithMany(m => m.Borrows)

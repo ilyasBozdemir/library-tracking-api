@@ -246,7 +246,7 @@ public static class SeedData
 
 
         List<Shelf> shelves = new List<Shelf>();
-        List<WorkCompartment> bookCompartments = new List<WorkCompartment>();
+        List<WorkCompartment> workCompartments = new List<WorkCompartment>();
 
         for (int i = 0; i < shelfCountPerLibrary; i++)
         {
@@ -274,7 +274,7 @@ public static class SeedData
                     LastModifiedById = systemUser.Id,
                 };
 
-                bookCompartments.Add(compartment);
+                workCompartments.Add(compartment);
             }
         }
 
@@ -304,6 +304,7 @@ public static class SeedData
         }
 
         // Kitapları raf ve bölmelere dağıtma işlemi
+
         int bookIndex = 0;
 
 
@@ -317,7 +318,7 @@ public static class SeedData
             int compartmentIndex = ((bookSequence - 1) / compartmentCountPerBook) % compartmentCountPerShelf;
 
             Guid shelfId = shelves[shelfIndex].Id;
-            Guid compartmentId = bookCompartments[compartmentIndex].Id;
+            Guid compartmentId = workCompartments[compartmentIndex].Id;
 
 
             workInventory.ShelfId = shelfId;
@@ -678,14 +679,18 @@ public static class SeedData
         };
 
 
-        //BorrowLend bunları da  harryPotterBook ile değil bunun kopyası olan
-        // envantor entity'si ile ilişkilendirilcektir.
+
+        var hp5Inventory = workInventories.FirstOrDefault(item => item.BookNumber == "HP-5");
+        var hp10Inventory = workInventories.FirstOrDefault(item => item.BookNumber == "HP-10");
+        var hp15Inventory = workInventories.FirstOrDefault(item => item.BookNumber == "HP-15");
+
 
         var borrow = new BorrowLend
         {
             Id = Guid.NewGuid(),
             MemberId = member1.Id,
             WorkCatalogId = harryPotterBook.Id,
+            WorkInventoryId = hp5Inventory.Id,
             StaffLenderId = staff.Id,
             BorrowDate = DateTime.Now - TimeSpan.FromDays(10),
             BorrowStatus = BorrowStatus.Borrowed,
@@ -707,6 +712,7 @@ public static class SeedData
             Id = Guid.NewGuid(),
             MemberId = member2.Id,
             WorkCatalogId = harryPotterBook.Id,
+            WorkInventoryId = hp10Inventory.Id,
             StaffLenderId = staff.Id,
             BorrowDate = DateTime.Now - TimeSpan.FromDays(10),
             BorrowStatus = BorrowStatus.Borrowed,
@@ -722,6 +728,35 @@ public static class SeedData
         borrow2.IsLate = borrow2.ReturnDate > borrow2.DueDate;
         borrow2.LateDurationInDays =
             borrow2.IsLate == true ? (int?)(borrow2.ReturnDate - borrow2.DueDate)?.TotalDays : 0;
+
+
+
+        var borrow3 = new BorrowLend // iade edilmemiş olan için.
+        {
+            Id = Guid.NewGuid(),
+            MemberId = member2.Id,
+            WorkCatalogId = harryPotterBook.Id,
+            WorkInventoryId = hp15Inventory.Id,
+            StaffLenderId = staff.Id,
+            BorrowDate = DateTime.Now - TimeSpan.FromDays(10),
+            BorrowStatus = BorrowStatus.Borrowed,
+            CreatedById = systemUser.Id,
+            CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
+            LastModifiedById = systemUser.Id
+        };
+
+        borrow3.DueDate = DateTime.Now + TimeSpan.FromDays(1);
+
+        borrow3.IsLate = borrow3.ReturnDate > borrow3.DueDate;
+        borrow3.LateDurationInDays =
+            borrow3.IsLate == true ? (int?)(borrow3.ReturnDate - borrow3.DueDate)?.TotalDays : 0;
+
+
+
+
+
+
+
 
         SeedEntities<AppRole>(modelBuilder, systemRole, adminRole, staffRole, memberRole);
         SeedEntities<AppUser>(
@@ -756,14 +791,14 @@ public static class SeedData
         SeedEntities<WorkCatalog>(modelBuilder, harryPotterBook);
         SeedEntities<WorkTag>(modelBuilder, harryPotterTag1, harryPotterTag2, harryPotterTag3);
         SeedEntities<Member>(modelBuilder, member1, member2);
-        SeedEntities<BorrowLend>(modelBuilder, borrow, borrow2);
+        SeedEntities<BorrowLend>(modelBuilder, borrow, borrow2, borrow3);
         SeedEntities<Staff>(modelBuilder, staff);
         SeedEntities<AuthorWorkCatalog>(modelBuilder, bookAuthor);
 
 
         SeedEntities<WorkInventory>(modelBuilder, workInventories.ToArray());
         SeedEntities<Shelf>(modelBuilder, shelves.ToArray());
-        SeedEntities<WorkCompartment>(modelBuilder, bookCompartments.ToArray());
+        SeedEntities<WorkCompartment>(modelBuilder, workCompartments.ToArray());
         SeedEntities<EditionWorkInventory>(modelBuilder, editionWorkInventoryList.ToArray());
 
         SeedEntities<WorkCatalogTag>(modelBuilder, bookTag1, bookTag2, bookTag3);

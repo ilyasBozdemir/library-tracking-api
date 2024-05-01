@@ -21,13 +21,6 @@ public class WorkCatalogConfiguration : IEntityTypeConfiguration<WorkCatalog>
 
         builder.Property(b => b.WorkFormat).HasConversion(new EnumToStringConverter<WorkFormat>());
 
-        // WorkCatalog - Borrows ilişkisi ... kalkıcak ...
-        builder
-            .HasMany(b => b.Borrows)
-            .WithOne(br => br.WorkCatalog)
-            .HasForeignKey(br => br.WorkCatalogId)
-            .OnDelete(DeleteBehavior.Cascade);
-
         //WorkInventory ile olan ilişkiyi tanımlama bir katalogun birden fazla örneği olabilir.
         builder
             .HasMany(b => b.WorkInventories)
