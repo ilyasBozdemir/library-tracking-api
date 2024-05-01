@@ -187,29 +187,29 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3e824d56-1369-4f17-b061-815208647b9b"),
-                            ConcurrencyStamp = "5993d4e5-3f9d-4f67-b898-ff9eeab92e0d",
+                            Id = new Guid("13f5c29d-33a9-4cdf-b216-5b42c36c19d5"),
+                            ConcurrencyStamp = "89094ff0-b3df-4437-a5a3-6d869b715dcc",
                             Name = "system",
                             NormalizedName = "SYSTEM"
                         },
                         new
                         {
-                            Id = new Guid("22a5a7c6-3196-449f-ab3a-0ffbea44d029"),
-                            ConcurrencyStamp = "cf085311-deb0-49f4-9355-3d65bbf2355d",
+                            Id = new Guid("3adfa666-b1eb-4e68-b064-ad62d8b4fee2"),
+                            ConcurrencyStamp = "ef60ee62-b721-4022-a75b-f1ae98ff022e",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         },
                         new
                         {
-                            Id = new Guid("a2eb03b8-1711-44e9-ad5f-95352b90b9fd"),
-                            ConcurrencyStamp = "f9e46371-861e-448b-ba85-3b2e782d8c38",
+                            Id = new Guid("3faa18d9-14f9-4529-8768-1b924f2e9dff"),
+                            ConcurrencyStamp = "098f6eb8-e3ed-47e1-8f28-8f8fa69af39f",
                             Name = "Staff",
                             NormalizedName = "STAFF"
                         },
                         new
                         {
-                            Id = new Guid("1571ce3b-399b-446e-ba69-529e3c2d0c96"),
-                            ConcurrencyStamp = "27a90fd9-d7f1-4ccc-a341-50ab46c7dbab",
+                            Id = new Guid("1f347ab8-9c12-4f19-b189-668666f6baf8"),
+                            ConcurrencyStamp = "3f673a35-cdce-4fb5-ad14-79438fee789b",
                             Name = "Member",
                             NormalizedName = "MEMBER"
                         });
@@ -332,11 +332,11 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            Id = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             AccessFailedCount = 0,
                             Address = "123 System St.",
                             BirthDate = new DateTime(1980, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "827c4a71-a2c4-43db-bcc0-803dd3b2a1ce",
+                            ConcurrencyStamp = "5a4d1751-4b01-46d2-9f4f-97a546b72732",
                             CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             CreatedDateUnix = 0L,
                             Email = "system@domain.com",
@@ -349,7 +349,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             Name = "System",
                             NormalizedEmail = "SYSTEM@DOMAIN.COM",
                             NormalizedUserName = "SYSTEM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEFnVv4B+hyFkOupsmCtS3BihmWYHQ/Iqg8lLbHcxH57NQMPO06KXmWIklLZz2EZFbA==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEIoLn1hlBrQidarQxN9AKrwyv1JuexwYUFtVy9QNacP4IoPIhefMdwinB8QlHyuhhQ==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -359,24 +359,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("a3ee9353-af86-4da1-8fcd-46ff242c0459"),
+                            Id = new Guid("9cb26a43-1d33-429b-86ec-9ed7aa3229bc"),
                             AccessFailedCount = 0,
                             Address = "456 Admin St.",
                             BirthDate = new DateTime(1985, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "082483d7-10b5-4b78-8693-f1a9a6cf3b87",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            ConcurrencyStamp = "e186cf0c-9048-4bfe-80ed-c1e6b46b011c",
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             CreatedDateUnix = 0L,
                             Email = "admin@example.com",
                             EmailConfirmed = true,
                             Gender = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             LockoutEnabled = false,
                             Name = "Admin",
                             NormalizedEmail = "ADMIN@EXAMPLE.COM",
                             NormalizedUserName = "ADMIN@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEGeA0JHl09/zFXXaQACdMwI6aaT4monrt+Y91SEkpl/M2oh/mKbES1z5PFRx58xfPQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEJ10lje9xyWBbqa/Db64xKWxpgK4vdsR0fm+mCMNL8Dsn36xW/Ihr5BfR6kfFz3JkQ==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -386,24 +386,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("3d13b95f-0743-48e9-84f8-4b2ae1b93b3f"),
+                            Id = new Guid("6c4e4ce0-be88-4442-ad7a-091a6bee3547"),
                             AccessFailedCount = 0,
                             Address = "789 Employee St.",
                             BirthDate = new DateTime(1990, 10, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "b370beee-c47b-4e3b-ab9a-2d847dbe3495",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            ConcurrencyStamp = "cfe00560-39c3-482d-9cc6-83dfbe628192",
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             CreatedDateUnix = 0L,
                             Email = "employee1@example.com",
                             EmailConfirmed = true,
                             Gender = 1,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             LockoutEnabled = false,
                             Name = "Employee",
                             NormalizedEmail = "EMPLOYEE1@EXAMPLE.COM",
                             NormalizedUserName = "EMPLOYEE1@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAECUbW4QaOuWPandjzaA5bbtDfvzyVacKJpYri3eZSWshuYR909LHpNZMjvZURZJP5g==",
+                            PasswordHash = "AQAAAAIAAYagAAAAENNrI+2Qjqg308zY5t7jDqQuiqkhHa8hdnbl0xmqLVXjnkkePn6iOePbKwoT5bdUCg==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -413,24 +413,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("8624b610-5f17-4317-b237-e25895f13ec4"),
+                            Id = new Guid("fe2c853b-7b4d-4aca-95f4-971be25a9ab6"),
                             AccessFailedCount = 0,
                             Address = "123 Main Street",
                             BirthDate = new DateTime(1990, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "89b6378e-410e-473b-92f2-fd6ce59541c3",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            ConcurrencyStamp = "48cdd1ac-0286-4654-91ed-8fc5263e2f63",
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             CreatedDateUnix = 0L,
                             Email = "john.doe@example.com",
                             EmailConfirmed = true,
                             Gender = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             LockoutEnabled = false,
                             Name = "John",
                             NormalizedEmail = "JOHN.DOE@EXAMPLE.COM",
                             NormalizedUserName = "JOHN.DOE@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEL2gF5hB4uGYTY8w0seq4RGgzd5tEHuQTIr6pIUdbUU7c+fFP7Z2YJpgfvVpbx4UUQ==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEGZOaAQEuU8V2262U+U0g7QE9LgioBJOxs7SVYglByL6MsjyeILlX4kbO6ShBSU2cA==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -440,24 +440,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("cd806e7b-dd6a-4920-b793-f8b492aeca18"),
+                            Id = new Guid("0a3b5daa-af78-422d-8818-d03a0f4bd5e7"),
                             AccessFailedCount = 0,
                             Address = "456 Oak Street",
                             BirthDate = new DateTime(1985, 8, 20, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            ConcurrencyStamp = "6570faad-be40-4b42-9863-b88cb262411a",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            ConcurrencyStamp = "fbd35ccd-e1ce-464b-83a1-0372eaffb685",
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             CreatedDateUnix = 0L,
                             Email = "jane.smith@example.com",
                             EmailConfirmed = true,
                             Gender = 1,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             LockoutEnabled = false,
                             Name = "Jane",
                             NormalizedEmail = "JANE.SMITH@EXAMPLE.COM",
                             NormalizedUserName = "JANE.SMITH@EXAMPLE.COM",
-                            PasswordHash = "AQAAAAIAAYagAAAAEKXRe0Ah/BeVixKUAUaOazxcyuwfhyyoog897d7xvqE2mNfbo+8RKecwxOxFv+uW1w==",
+                            PasswordHash = "AQAAAAIAAYagAAAAEByCuM0S4BvNlvv9eNaqPnBNIgOP+JoUpRFD0URywus8wvX6yv+gUMN4Z452JFvXeQ==",
                             PhoneNumberConfirmed = false,
                             ProfilePicture = new byte[0],
                             SecurityStamp = "",
@@ -638,15 +638,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("5d80ecd1-a9ad-4d49-a44e-1eae7e588d29"),
+                            Id = new Guid("22297362-649f-4473-9df1-8ae1ffaf6c3e"),
                             Biography = "Joanne Rowling, better known by her pen name J.K. Rowling, is a British author, philanthropist, film producer, television producer, and screenwriter. She is best known for writing the Harry Potter fantasy series.",
                             BirthDate = new DateTime(1965, 7, 31, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             Country = "United Kingdom",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "J.K.",
                             Surname = "Rowling",
                             Website = "www.example.com"
@@ -670,8 +670,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            AuthorId = new Guid("5d80ecd1-a9ad-4d49-a44e-1eae7e588d29")
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            AuthorId = new Guid("22297362-649f-4473-9df1-8ae1ffaf6c3e")
                         });
                 });
 
@@ -758,65 +758,65 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4afb9a57-d250-48ba-b520-8fc09b1ecd48"),
-                            BorrowDate = new DateTime(2024, 4, 21, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(6947),
+                            Id = new Guid("4b942281-5ab1-4a81-b5e8-74bd238be178"),
+                            BorrowDate = new DateTime(2024, 4, 21, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6485),
                             BorrowStatus = "Returned",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
-                            DueDate = new DateTime(2024, 5, 1, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(6984),
-                            FeeAmount = 0m,
-                            HasFee = false,
-                            IsDeleted = false,
-                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            IsLate = true,
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LateDurationInDays = 0,
-                            MemberId = new Guid("c3181c17-0116-495b-9fd9-cda9ae7bca9c"),
-                            ReturnDate = new DateTime(2024, 5, 1, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(6985),
-                            StaffLenderId = new Guid("f0290ada-2668-48af-898c-a87a2cb14f28"),
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            WorkInventoryId = new Guid("f4012e1f-9090-4e05-8770-9c2c75dd3d10")
-                        },
-                        new
-                        {
-                            Id = new Guid("f3959019-63cf-475c-8eed-a2590d355512"),
-                            BorrowDate = new DateTime(2024, 4, 21, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(7049),
-                            BorrowStatus = "DelayedReturn",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
-                            DueDate = new DateTime(2024, 4, 30, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(7052),
-                            FeeAmount = 0m,
-                            HasFee = false,
-                            IsDeleted = false,
-                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            IsLate = true,
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LateDurationInDays = 1,
-                            MemberId = new Guid("650b5c5c-2833-4539-805b-c055e87ae21e"),
-                            ReturnDate = new DateTime(2024, 5, 1, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(7053),
-                            StaffLenderId = new Guid("f0290ada-2668-48af-898c-a87a2cb14f28"),
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            WorkInventoryId = new Guid("0f1f0aff-f449-43e8-8fbb-2e53b38f30e2")
-                        },
-                        new
-                        {
-                            Id = new Guid("77f8a7c2-fa3a-40ab-82c6-f519b2cd46c6"),
-                            BorrowDate = new DateTime(2024, 4, 21, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(7064),
-                            BorrowStatus = "Borrowed",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
-                            DueDate = new DateTime(2024, 4, 30, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(7066),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
+                            DueDate = new DateTime(2024, 5, 1, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6516),
                             FeeAmount = 0m,
                             HasFee = false,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsLate = false,
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             LateDurationInDays = 0,
-                            MemberId = new Guid("650b5c5c-2833-4539-805b-c055e87ae21e"),
-                            StaffLenderId = new Guid("f0290ada-2668-48af-898c-a87a2cb14f28"),
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            WorkInventoryId = new Guid("b8e110a5-8a33-42c0-9202-c2d1b0092793")
+                            MemberId = new Guid("0a52b851-58a9-470c-8105-6bf1041f2902"),
+                            ReturnDate = new DateTime(2024, 5, 1, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6516),
+                            StaffLenderId = new Guid("334b40cf-ef4e-4ace-a4b4-4b05aace6a1a"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            WorkInventoryId = new Guid("9d58ebc2-af8a-4ceb-bbb8-fd069e75dfcd")
+                        },
+                        new
+                        {
+                            Id = new Guid("c3606be6-30cc-4023-b81d-a2271f1ca4d1"),
+                            BorrowDate = new DateTime(2024, 4, 21, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6568),
+                            BorrowStatus = "DelayedReturn",
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
+                            DueDate = new DateTime(2024, 4, 30, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6571),
+                            FeeAmount = 0m,
+                            HasFee = false,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            IsLate = true,
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LateDurationInDays = 1,
+                            MemberId = new Guid("f8010f1f-827e-49bd-b8b6-a928708d754c"),
+                            ReturnDate = new DateTime(2024, 5, 1, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6572),
+                            StaffLenderId = new Guid("334b40cf-ef4e-4ace-a4b4-4b05aace6a1a"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            WorkInventoryId = new Guid("f514cdc8-7545-4f7e-a00c-e2f87d72e603")
+                        },
+                        new
+                        {
+                            Id = new Guid("600df8d0-0954-471a-96a3-5f361ea2883f"),
+                            BorrowDate = new DateTime(2024, 4, 21, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6606),
+                            BorrowStatus = "Borrowed",
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
+                            DueDate = new DateTime(2024, 5, 2, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6610),
+                            FeeAmount = 0m,
+                            HasFee = false,
+                            IsDeleted = false,
+                            IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
+                            IsLate = false,
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LateDurationInDays = 0,
+                            MemberId = new Guid("f8010f1f-827e-49bd-b8b6-a928708d754c"),
+                            StaffLenderId = new Guid("334b40cf-ef4e-4ace-a4b4-4b05aace6a1a"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            WorkInventoryId = new Guid("46bef8fe-970a-434a-b86b-3144201495ea")
                         });
                 });
 
@@ -874,93 +874,93 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("eccc477d-eaf3-4365-8f96-8e2a3db50a0e"),
+                            Id = new Guid("7326d06d-3c07-4987-8998-5fa3c6dbb12b"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("ff5d73bf-62b3-42d4-82c8-1a7b8daa8337"),
+                            Id = new Guid("97d00173-cd5e-4212-a7c4-d9f42cb83b85"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("4f6f476e-573b-4cd9-bf16-17e08ef158e9"),
+                            Id = new Guid("14446dc0-699b-4e5f-a6e3-7cd5a50307e8"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("511be4f3-23bc-403a-bcbd-a52f25013a0a"),
+                            Id = new Guid("6180d1dc-7ddf-4797-abd4-f2a621ff89a6"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("0cbef449-5fa3-46ac-ad21-062ce6f89d50"),
+                            Id = new Guid("6d4d8224-0cba-4054-af56-a0a370b682b6"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("2e69e19f-75f3-409f-a27c-32f817d82d30"),
+                            Id = new Guid("4e2892ee-d505-4f3e-b85b-f5fab2959e06"),
                             ClosingTime = new TimeSpan(0, 17, 30, 0, 0),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OpeningTime = new TimeSpan(0, 8, 0, 0, 0)
                         },
                         new
                         {
-                            Id = new Guid("26cfd8dc-18fb-4501-95e2-7b448e827fc8"),
+                            Id = new Guid("b1bd150c-6251-40f9-94eb-bdde165c6ed7"),
                             ClosingTime = new TimeSpan(0, 0, 0, 0, 0),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DayOfWeek = 0,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OpeningTime = new TimeSpan(0, 0, 0, 0, 0)
                         });
                 });
@@ -1022,7 +1022,7 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926"),
+                            Id = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07"),
                             CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             CreatedDateUnix = 0L,
                             EditionNumber = 1,
@@ -1031,12 +1031,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             Notes = "First edition of Harry Potter and the Philosopher's Stone.",
                             PublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PublisherId = new Guid("7906d383-58dd-49de-bade-fc51049ddf16"),
-                            WorkInventoryId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9")
+                            PublisherId = new Guid("ff3a6541-3074-48bf-a3e5-6e2405747224"),
+                            WorkInventoryId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216"),
+                            Id = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b"),
                             CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             CreatedDateUnix = 0L,
                             EditionNumber = 2,
@@ -1045,12 +1045,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             Notes = "Second edition of Harry Potter and the Philosopher's Stone.",
                             PublicationDate = new DateTime(1998, 7, 2, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PublisherId = new Guid("e5aca9af-a9ae-49b9-92bd-9602a6544dce"),
-                            WorkInventoryId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9")
+                            PublisherId = new Guid("e0138691-a585-4713-bf0a-a1479c0ba48e"),
+                            WorkInventoryId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd"),
+                            Id = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d"),
                             CreatedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             CreatedDateUnix = 0L,
                             EditionNumber = 3,
@@ -1059,8 +1059,8 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             LastModifiedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             Notes = "Third edition of Harry Potter and the Philosopher's Stone.",
                             PublicationDate = new DateTime(1999, 5, 5, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PublisherId = new Guid("b8499496-3dfa-42ee-b2ee-f14e75169192"),
-                            WorkInventoryId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9")
+                            PublisherId = new Guid("186e42f5-fdfb-46ce-8d4f-6fbd5121c167"),
+                            WorkInventoryId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         });
                 });
 
@@ -1081,3003 +1081,3003 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            WorkInventoryId = new Guid("4fc572a4-3950-4922-8d9b-bbcdcd077f4d"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("bf9224dc-2166-4638-a681-467ec5622124"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("792b78bb-9679-445b-8892-21e85e36c3da"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c8187025-1c5c-4455-80dc-d681b6fd0eae"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0c95266e-2d54-49d0-b6a8-a727af27165c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("66e6c10a-f39d-4d59-9839-11bf3e71552c"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b3a0a72c-f3d8-4fd4-bb35-ac06ab8e3235"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4bf8a285-ecee-4786-938b-c22e3c7843cf"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f4012e1f-9090-4e05-8770-9c2c75dd3d10"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9d58ebc2-af8a-4ceb-bbb8-fd069e75dfcd"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1674c3f6-0cfb-49ac-9548-811c0fbb5b66"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2c030a58-681c-495a-934d-ad106df0eaae"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8c2e5db4-ae68-480f-84cb-7b8a4824a0dc"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("847331b6-5cdf-4162-8703-9e771f730d64"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c3047815-83f4-4e6a-89b6-f73398d664f2"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("fbf2b975-ed37-4b0e-b793-9ec3547a84e5"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("91a05d83-cd18-485d-8ef7-2d5f685cf0a9"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0c1bbd50-fc3a-4d53-a18f-816aa403dde0"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0f1f0aff-f449-43e8-8fbb-2e53b38f30e2"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("f514cdc8-7545-4f7e-a00c-e2f87d72e603"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f285ea90-73fd-4e06-bb8d-22eb1943ca59"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ee43063b-2a30-4e7b-a024-d0c25e803a81"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a3644880-b624-4d8d-a05e-89f37bc0e3cb"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2c2aa99e-b59b-42e8-b5e0-747e5638f026"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("775726fe-2aa3-48df-9e93-866c19bd996a"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("d5c9d9bf-7604-46e9-82ad-264eb71245f8"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("47a6643c-23bc-4006-b43f-10cef807ceb6"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4a5b5dd6-0378-4e7b-a643-4e5aebbedbfc"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b8e110a5-8a33-42c0-9202-c2d1b0092793"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("46bef8fe-970a-434a-b86b-3144201495ea"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8ed128ac-38ef-4570-84a3-6546d06d1d0f"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("38e6cdfc-4c1d-411f-8f75-ef18b06520af"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b7c931c5-98b4-4a4c-9bd6-7c959a6cd789"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("07223d49-cfee-4117-884f-c05ab090dd6e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c66d3bc7-3989-4973-80c8-98d5d0cfd0c3"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("5d6ac73d-8c14-4d84-8f9e-f4932bcf58c2"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a82214b3-d412-4dff-8663-7b8db391ed4d"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c6212e97-2bed-4852-990b-f31438b7f98a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("6941f0b4-45d4-4cfc-bc74-a14261ceb993"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("83106ffe-a658-40b7-91fe-fe2bf8ed882d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a4a7c03e-9a1c-48d1-a847-d6e75cce66e2"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("dc7adfb9-232c-43ca-95c6-f3fbb8136164"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b468ebf5-e900-49a4-8ff1-d11e8074486e"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c152dade-e413-47d6-8c1d-2ed9b1e23a42"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("835df545-19b5-465a-b318-265c1a2b9100"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("125d1502-8218-4487-bd82-66c750d6d725"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("6cb3aad1-356b-4435-8753-e57b498ca4c4"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("3d2ebd46-da0d-42d0-bb02-ab09f092115d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("afa24be7-b23a-4e12-87b7-a226a2fc8512"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e4c6d766-57cc-42e8-b488-4ba80e520a3a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("98fea8eb-9e8f-4eb1-a256-0553a947478a"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c7011e0c-915e-46bf-9ec9-694c1ad0956b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e7f21b0c-2315-4f1a-81f4-1c8d4b6a8fe6"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0f449291-d7f7-47e5-9b8e-e737231354dc"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("cafd5bfd-18ee-4b57-b522-3bee56c23639"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("d4a2c18e-9255-489e-a588-26f2dd7c6255"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0a1df5f0-652c-4af8-92f7-c6451fc02601"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("329743b1-9cea-437e-bf5c-7561dea58415"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ff86c0c3-29ce-4d44-8541-c965b5a6a00f"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("cc638689-6fcf-483d-9fe0-6913913421cc"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8e0c06df-c4fe-46b2-9137-db57f8bad3b4"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e55d91a3-2953-47b6-b05f-df5c6502cb32"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d73bf0be-dea2-4cb4-a2a3-d5e2da30d91c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4541ace7-bb80-4e7a-a25c-6103c3c58193"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2e335d71-c894-4fed-897a-f44d31dc3bd3"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("313d1383-60a8-40fa-aebf-c4ba800bcd4c"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("065711d8-c1b1-4cb5-a4f4-34cc54ac3648"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e5091fba-9732-4083-a7cd-b2e270f749ce"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9a3bf4ba-98a0-441c-9c88-ef567939ac5d"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2765a047-4a05-48ca-b705-56808b85665f"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f31ee530-2706-4ab2-9583-616cdf0b86b2"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("998df2b0-fcdb-42b5-8af4-78621b3f4225"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12e736b2-368d-4fe7-9191-995f6c12eb52"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("da6227dd-7179-454c-b654-f267622455ae"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("234729bc-e29d-495e-9d1b-87fb236d8a5b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("21fd3b87-b44e-4577-abb7-09db603a5eb6"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ba704ad5-3701-41bf-8c0b-73b4b0ead2a0"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("787aa6c7-eaf2-4c03-8540-231a7cb41fc0"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b413c7b5-8d32-4ae5-93a9-67eef825c3e9"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a765d0db-82f1-44c1-995b-f0c85b5bba41"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("57510cd7-737b-4e1c-897b-d3f498acb429"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("58ab03bd-f6d4-4f1a-baf5-9185733821c3"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9477e69d-e096-4588-ac15-d795aaa8310c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e3d733f3-a977-4b2d-8624-87370fdeed77"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0ee7d6b-3118-4fa8-a75f-67386a637489"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9e1f878f-8e0d-4d54-a770-e643c609b0e4"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dd34dadd-cc2d-43a5-9d9a-5aa6deefefc7"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("3f488e87-fca4-4c56-aba0-00c3b2bab605"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a970d5c2-5468-47d6-9088-27422ff1ea43"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c107bf5a-047b-4927-af16-7f4a7a10fbc2"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1a4ae726-26c9-42cf-9f18-018fba6bd315"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4f308676-f1a4-4f26-bff7-f6b1752fd35c"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d2c9b079-f973-4894-afbd-605cb1ca5aa9"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("84520422-ecd8-4f0a-aa47-fcd730c6fb05"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("78167945-078c-4a60-b1c3-841f3709ccac"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("f7d4840f-cb8b-4673-b26d-ed2791bcefa4"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("63143432-e40b-4805-8ef4-bf9df37748e4"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("7398aed3-65c8-4425-bdf6-41b8c13f49c0"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c21b7663-ab35-4e26-93a0-e3ee871fa7fa"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2d226d0d-61ff-4a19-85ed-3c75f1cc3cdc"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("41c8a235-28a6-47df-93ad-db758ca47015"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("fb0eb65c-4e48-45af-ae2c-890ab3379483"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e8ac4309-802b-4093-b051-783721e3fa4d"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4655e0ab-311c-4876-9327-35a4f6b11dbe"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0bcf8ad-d01b-4f7a-ad19-614a3e51a8db"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9b0b1ee0-9af9-464b-85e9-b6a68b8ead08"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("131fa718-b850-46eb-b0fd-cece0e420875"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("45f2f538-c362-4157-a73c-9fe2f3f0a109"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e407e004-c38d-47d5-99b7-ddcbf7c9eb14"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("611c88d5-7d70-42b4-9508-591568ab7df4"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("791ddfbb-216f-4ace-801b-86381b4ab75d"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("b51e0f50-cf53-4bc6-b0eb-b7bdd40c7224"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a76dca57-69e6-4bda-9f2d-6c98d27cb1ec"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("d23c8efa-a2de-40a4-81d4-55caf85aedcf"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c6aa873d-b8f6-4159-a3c3-b7749608cc8e"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("07636ab9-a8af-4496-95b0-f62a3e96cf69"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("73649381-e9b7-43a3-94a7-9eb547645806"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("f4a8131d-a39c-4e73-9082-3c37205e88f3"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7e6bec3b-aa8d-4085-b925-1c02c1a69b98"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8d6c7ddc-b585-44c9-bdcf-4f516ac00170"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ec5c1c11-50df-47d6-af0c-d4259f878d77"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8e9b0804-5cac-42bf-85eb-cb9fe50d6108"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f3482ec4-ffe6-4cec-8b31-70c114e6544a"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("72ad3299-3ed5-487d-b256-9c2d3f91c41a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0e1a8071-7c31-410d-b38b-83330c55b044"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("75f0496d-d1bf-459a-bce7-2246da53b609"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a5c583de-e031-41b9-8f38-3491050ae321"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("09ca92ab-3c1f-4605-9f16-e80112516d8d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a1597b83-643a-40dc-8b47-243fb43c6584"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("82255f85-e046-4644-9090-88dacb3e9a90"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("75146d89-a464-44f1-ae95-bcbdc3b943de"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e75c12a0-bae8-4186-87a1-f194de5ec477"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("24903cd7-b7a6-47ee-be62-f001a975cbe0"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("da3beeec-0bf7-4f99-9fe9-4a664117c541"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("af815875-898d-4501-b956-425737101725"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("6adde0ab-5077-47f6-99fc-c67321ffd1b6"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2f8b7551-8ac8-467b-8e2e-ed4ff0b92786"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("48ba8fa4-96a6-4293-b10a-e9c146d59d5e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8f7ec91d-53c5-4727-8fbc-c81fa362f584"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("93f1b876-e1ff-4173-8361-4013d98d5c4b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fd0e2552-c4d7-4686-b951-1d0840ccd7e2"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a60fa37b-ed2d-4a9c-8563-683f7e17ad28"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0dbac186-e155-4aff-bbce-fd62c0eaab1c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("3bb06b4d-84a8-4266-917f-dc98b25d6764"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("034a9188-e681-422c-b1bc-627366d4f552"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("6053e92f-ee7a-45ee-b4da-af18fd486e68"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("00e107c6-a505-4840-9062-c51bf8f2e6eb"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("49eb307e-4a3f-43c1-bdaf-da7ee8020b7f"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("cfb5547a-8e5c-47b0-85b2-0470ab1665fe"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2010f496-ba1c-4bac-b081-fb2a37bb2579"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ae660485-06fa-4cba-b856-972a1fa7225e"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("61106be8-77f6-44a2-887a-6bde8eccf73b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7fa25c63-4d96-4e8c-83f8-e6ed6241a193"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("7d28da3e-3bce-4f92-beb8-52621c8a4ddf"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4d32715c-1dd9-4dda-b7fe-f36876197eb7"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8b978676-ec06-4985-9a24-2859e588a0c5"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c5878d16-6f89-4950-9512-3c9a22d2390c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0eb12faa-e79a-41ec-aeb1-d86734554997"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f2268ce4-adb1-4185-8059-72aa2de7faa6"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("b85694b4-fa61-4945-9ba3-0e73956c3812"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("09928f85-004f-4b7f-8168-1af079e557d7"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("83493076-412e-45b0-8ad9-9c1bb645f384"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bbe543ee-1736-49d3-a99a-39d60510873b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ff6c896d-800d-4087-a965-fa31e013227a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1aa1a4d7-c1d1-4249-9146-46ee040e8bd5"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("5fc9be19-b651-454e-9b0c-c2b761522121"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12f438df-64e2-45bb-a379-568e3500933a"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("16ac8b0c-a9f4-4fe3-bd7b-a925ce89bdc1"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f4d0dce8-27de-42ce-bb30-edb1ec650090"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("09004dcf-38ce-49ae-8ef2-8bbf3836fafb"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("301b3944-d368-42f7-95ea-93acfd8182aa"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("5287fc76-6dea-4eae-9fbb-1d91cfe70c6b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d46faf8e-ac78-439a-af5f-982876451809"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c9efd7a4-99a4-4124-bf45-990781471032"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("544b6598-9c9c-4974-ac8d-436b0374e85f"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("6ee5506e-1a3b-43ea-938f-ceccff0fadd2"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bdbb5035-9296-449f-8031-0416f67330d3"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("830a85a3-2975-47d0-9c05-32cc05b4f05e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("aacc5e3b-4253-4631-aeaf-9b3a7c1e4910"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("223fe8b4-2c8e-4566-ad25-7bc2f2a53846"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("17bf37bc-9e03-4ef4-ba59-8cc7ece5e8d4"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("bef79182-8380-4587-83cc-e6e7bcf6eb48"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d535450a-f276-494c-bfe5-f4ef690cb7e1"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("b186b8c6-7e39-4fdf-8e1e-38b29ec4f0cb"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("183e0cc3-6cfb-4cfb-b436-0280030660dc"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8e35a916-8be3-4837-9673-6d77029685e1"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("41fe867d-54db-4b65-b44d-e1d6bb008acf"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("37625e49-6fb9-4478-a1c8-6854e7c9acfc"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fd0d0d0f-8714-4007-8f61-e01097aeb176"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("61f9738b-f8e6-4829-be2f-804bb7fff40e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("22be3bfa-c2f4-45fc-a18c-fb2ea2dd3810"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9867a970-8f20-4537-bfdc-0d060af33dbf"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("04757b70-5a00-4a66-a024-5be7c9d3738b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ef9af11d-d63e-4617-8a10-ed86f049f022"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("549b349a-2f08-4f11-9b6a-9c9b411785a8"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2e3fe1b6-94a4-4c4d-8e3e-373d90fcdcc6"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0c2e8b24-5fd4-4aa0-b002-7bbbf2300bb5"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("cab10885-2d9c-48ae-9306-f9d07290953f"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9e8fd25a-a602-47e9-913a-94b413d3eb0a"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("6deb362a-690d-47f7-a312-c965e9b6c90d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9c3190c9-6a1b-4b98-91f5-cb22a5ab92a8"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("5815a21a-214b-484a-a54b-19ff31445e6d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0d568200-ac80-45be-8c75-399b9471ca02"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("27e86885-925d-4d6f-b897-810816de7b27"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("33ac04b5-9382-48b4-99e1-a8a89bc36ba4"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("55eccf50-44c1-4e70-b323-1e82aab13037"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bc369b8b-ad13-4fce-a4d8-0fa3af33677b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("179efc4d-cc7b-47ac-b440-f2cf907de5b3"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4288761b-be53-4abc-b9f1-adce58973489"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("785966d6-b3a8-43ac-b292-8fc5654d4b41"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("de28a8ba-132b-48d0-a6aa-390754f06838"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("33017d8e-8731-40d2-af5a-9b39a8b1abb6"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2093209a-8898-4b1f-bbe3-5de8f1991bbb"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e810fe6c-03fe-4895-8b59-9182cd6a41bb"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a1429e97-5a23-4cb9-989a-c44f1940c839"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("160955cd-316d-4cad-ac47-e6739d62f76c"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("95f96325-16c6-4cb9-8217-4fd20f8e2ec1"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("fd0be251-42b7-4117-9af6-d554974e4f84"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4e96eb2d-ac3c-4392-b3e0-4af9efdd2a47"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ab0f3925-12a5-43db-b8a8-03178dbf6488"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7e50a191-016f-46f6-8d4b-e86520327666"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("358250c8-937c-4f78-8e9a-37d31819379d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("222ef5b7-c98a-4c25-81aa-730193249108"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0a88304d-1334-4171-aa90-4137abc33698"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9a8fbf3e-b11e-438c-a299-d3ae7f43b9af"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8ae98fc3-75f3-463a-a3f3-427cd7542b6b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4d80d5d9-9a1d-4325-a9b2-98fe3ec8513a"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("44be6661-925d-480c-a803-f341d5d300ab"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b9bf432c-8317-432c-b737-74fbc7fe2174"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("1b04e7e6-1e2a-40b0-af1b-81e3c3384e8e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0f5e00a8-dc5d-4b38-b26c-96905900b232"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2b97e25d-97ba-402a-a002-efc9d2bf365b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1454eb56-d435-4610-b23c-ee40bd437215"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("32a1b88b-feb2-4733-9024-b377e3b62a23"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f25c2c9e-5aa0-4c96-bbab-b78be8a11340"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a42e6bfd-d89f-4627-8cc6-ac20a1c34d44"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0cb6af86-d4f3-4e61-9a4d-9124379644da"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9120f4b7-1083-446e-8b97-86a7306bbc12"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7ad48c24-cb83-451b-91ae-f9e7f70195fd"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("082a66ec-b26a-4d2b-9c4b-ee6a42b40e73"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("03e55897-2a15-49d2-ad76-f906e5c7f6e9"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8b5e1ec1-1d05-4b80-8627-b1652497a232"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("89655a9e-48e3-46c4-909f-47abe889b643"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0d928aec-70bf-4803-824d-0ffa8b8df959"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("44ffb661-8d90-4031-a984-a661733bb063"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("08b8505b-f898-4143-b6b0-a086ada7e099"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3e6cdab7-7a8e-45c9-8e53-020b54248a06"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4f566db2-a4f1-4de4-af2b-c94403a571d0"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2cbb1298-f828-40f4-9d11-1a794606da97"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2dc37efb-0a8e-4abe-ad8b-2d46e4e2f6bc"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dde24248-d933-4811-ae4a-0639efa57150"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("5f9ccbb0-82de-4014-9e08-21f436cfad2c"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c1299cab-53ee-48ec-bad8-0e2daaabb72c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9f688e9e-4fa1-41a8-a947-e9304839bdfe"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3b3115e4-e493-4ea1-9406-01d656cd1189"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ec03856c-3460-4fff-91c9-3fe16e7e39cb"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9cd59022-9580-4a73-a21f-f2b217a75436"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2b771377-7611-493f-8ecf-4edf4ddd8f25"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("eea6569f-4485-4111-86cb-0b3d81684b32"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("49947dcc-91d9-4433-ab60-0f240dbceb92"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4af45f35-dcf6-4bcf-92a5-f6dc0a1ff6cc"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4af42d68-019f-4fe2-ba21-e33107ab3570"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("235303c7-8985-4ffb-962f-b182e718a8de"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("666cbf5c-f227-43c6-a5e4-0b46d3069f65"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7326aca7-5041-438f-a0b4-9f56c520023a"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0459cf70-b1bd-4db9-81c7-84db786cd582"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e6c82700-f8b7-407c-abad-a311a6ab7126"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("541a31e2-bb03-42be-95fd-dbbfa0125b4d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("be372ccb-ddb0-4831-96cb-c3da7eb710e9"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("40ad12f4-4996-41cb-9111-156a47feff70"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e2c0b5de-9db9-4320-be64-c831996714e5"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("377f6fc8-f087-43e1-9352-ec8341cc393e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d8ba923f-b2b2-4f52-97d3-607029250ec6"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a5f5b3d4-c3a6-4933-9f67-47dd6e24b1c5"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ab69c29f-ac7f-4357-b515-f34bc2993251"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("59a142a7-1033-4495-8785-d3dbd3907a37"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("919a33f8-0788-40db-a5a3-98d9b4abd172"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c54e1f56-c3e2-4113-9dc0-b83b56627ded"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e512a5df-3ab9-42aa-b6c1-f2e345dd6427"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("689d05b4-0ce9-426a-a6b8-ee09f5027e21"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bfe57479-bede-46f7-8241-b9a3901d7e35"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9f63c80a-2290-47b6-b702-f668e44ed8c0"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d74ba646-5a55-4799-bff2-9f99070d3bba"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9cd41ddd-82c2-4ab5-b5ff-7a2ed6818fb4"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("725a7940-0cf8-4fdd-a7c8-2f75e9b3ff28"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("3558e621-f43f-488e-8c63-8b3fdc23492a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7d46e770-86d2-4bb6-b2c0-1a2179efece1"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("995d6ab1-9477-4b71-a236-ddbab6cef352"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("64ebdc42-f2be-47e0-87d0-b447174492f3"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("d5476484-68e7-4351-b2c9-11e5e79c458a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fa8b52a1-f8f6-45e0-aded-15e817fe23b9"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0df871bb-68f1-4d04-8310-cb611f922068"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("672b6b2a-d2e6-4364-a4b6-549bc2517834"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("70418e8e-ee78-4144-af39-1c973286eaaa"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8d786851-3a43-41d0-80af-5487c3237693"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("b009309c-1420-4f63-9749-fd9978e32da2"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3b7e0b1f-363f-417f-9b04-1639089ab476"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("213ce899-e1d5-4bee-801d-326e0aa9d090"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fc364525-c09f-4dcb-a051-cad96f65fd1b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("6cd687eb-df78-4538-a726-e3dd2d615f6f"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ea565302-21f6-4379-a444-298d635eee74"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("18ef3409-4ed9-4501-8b38-f4e17938969a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5ac3d2ef-c4d2-4377-ae63-1d7286c0ff77"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("fd06bba9-f75c-4679-abe2-ce455ebaa86e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3fcc3b5b-d230-4433-bc7c-adbba9ebeac4"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2e7c41fc-6b85-4553-9b40-34e6f28a811a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9f2a1d24-7e82-4c96-95ca-fc6b4447f45c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("6a31ef9b-9fdc-4b26-bd1c-a3f87a06b8a7"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1101d667-087b-4b96-bcae-c1c4d9e129db"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a756269e-60bf-46b5-ab5f-a90ba04bfb7d"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b6f02257-431c-4f49-b6bf-a7d2e523ee0b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ad74ce6f-c9e8-4130-be53-61e73cad057f"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("369bc41e-8a8e-4f98-8fa6-1a7d805a0c57"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("95e2ffd2-ff4f-4408-b9c0-ee78eba05a74"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5a30e6ef-3047-4bfd-b6f9-98f2c6829d32"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("64930d87-d819-4e53-9a43-ba9781a5d88e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("60c45917-63b5-460e-b30b-e37d4fd7fb83"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ca414129-6658-46a4-9708-971f73cc3616"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("19f89ed0-b319-44dd-a6a3-1c7055ede531"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("71d718fe-e626-40e1-97b8-e28c4eb561da"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4868206d-e067-4ced-816e-1046f02c0b9d"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("1f26625d-e01d-42d8-941a-56ea6ecd5cd4"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5f10fc96-64f1-4fb5-a750-9348766590a3"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a66a7d3a-8eeb-4c51-b540-bf2cc2738cf1"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4bb334c7-5d3b-4e61-8563-82dfdede7d5c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("26e9444a-002c-4435-b105-8e1395bd38fa"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dcbfbc9f-6d43-4c39-9a5f-8e5d6381e039"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8f28d5b3-0901-4581-9e9f-3bb72152b391"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c240ff63-f2c1-4abc-b52e-d1563af091c5"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("48fd7f3e-05f3-46c5-95c9-eceff844e59c"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("aff2e6b5-7e68-41da-bca0-d7bda6576c3c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("9110330a-941c-4b7d-92b0-ed8ae8523d81"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2006bf3b-213e-43ba-9411-38e51925f1f5"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("61b3a28b-419c-4170-84f8-e890a725a728"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fb64710e-e858-49a1-87f8-3597b46cf973"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("687090a2-4066-4466-a66f-f0354a1420a5"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3cea29f7-b21d-4105-a0bc-95c622ef9e2b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("63aac367-9ac5-4dc9-ae96-14d860a03f19"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ab27dedc-1b46-4844-b02d-e678b8c7621f"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e68f3a0f-3f56-4f1a-8bc8-9a7f3279004a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12c081a3-62a7-4656-b620-f5b53aa65a38"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("442588ef-c63f-4137-bd7c-dcc787ce082b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("375c0328-eeaf-4f7c-9a1e-7e6d2fd30215"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("87007bab-56de-4301-9592-145c0e595f22"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("600b6fac-1742-43e4-a6d1-2c72007e7f2b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("8ec4e221-bb3b-4936-9da5-b81ee5d5c12a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("155fb4e6-7bf0-4ee8-8c70-983c6bb31a55"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("f4fbfc08-593d-4f47-b17f-c967749c646a"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("648a605a-5011-4f34-8aa8-4877ad303e54"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4fc46ee2-c739-45ea-a15b-1b718141756e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("39cee64c-886a-4a0a-91a3-42d0afc419a5"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c415a761-7a91-48e2-a742-727a174161f7"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c1d79d3c-5a74-46ac-9f0d-32ed6be5695c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("1985c61c-6d23-4cac-8464-731d4ac9c3c9"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ee5d7c3a-5e00-4f10-a75b-6a9175f9fb55"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("54c8ba52-ef3b-41af-892e-829d49bbdbcb"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0d2884bf-3bf2-433e-9742-2a6ccbc8ac1b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("58e6df3c-a5b5-42aa-91e3-ff6086fb2db6"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("19f8d096-00f2-432b-bb24-4e84d462a6f2"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("043bc03e-ff53-4754-93f8-87851b55d1ca"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1c458204-e5a2-432d-bfe3-fae6fcd7c218"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("1e0ff314-da46-40c8-b9f7-19fce67d753e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a54b0471-287c-4c32-b5ce-eff67f0efd09"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("716f2b3d-0c09-480e-a4ad-bbbf12f77016"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4da4784e-e863-4f6f-b95b-5123246ef314"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("238d626d-2f2f-434f-a380-2c46d43bf8fd"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d9a8fa29-1bdf-4529-a157-799b89c51669"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("eae9323a-1757-4bfa-b502-69ba792d5198"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("edb8e025-c60f-4adf-9a5b-c1ace73cb7aa"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("ca17343f-26ca-4922-a036-bffb456918f0"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c0c0381d-953f-42fa-a3f7-75d52b37366c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a8cc027b-1c82-4b7a-b646-fbcaa609fe6e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e4ae3a64-3dbb-4443-9263-344bff0bcc0b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c9350533-35db-49de-94ed-65a371e43248"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("455e5219-148f-4493-a484-fc9eed732bfc"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("e3eb10f1-ed77-4a3b-8157-af9612eed256"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9ee289f6-00f9-4d49-9724-53d52ee555ae"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a98b4822-0959-414c-9497-97bc42d05b58"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4be33054-28d0-4b6c-92ab-87f0a245a327"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("f129fa8b-a508-4af8-8c61-bb315d4f88e2"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5db7f5ab-4b98-4df7-82bd-b7329401f915"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("775f8028-8524-4603-a2f9-1a0e5ba23230"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("71e16121-6d38-413a-8dbd-ca8bbe000a35"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("a2ab83c3-1681-47b2-a95d-250f4c12268b"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9c93db4c-a6e1-43ea-8b95-028f10196e2c"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c6024252-cae3-49bc-9808-b1ecced933dd"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("237dc3bb-1bc5-4443-8ca4-6e870243503b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0f3f39be-71ad-4569-9432-5bed9a698fa7"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4db59d81-0d2c-46de-9e68-0fee7dd4a1b9"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("6af4f908-1442-4064-92f9-b8642b5020e5"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0f96b1f-4371-426b-8ebb-dfb06ddaf40e"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("0b4712a8-c875-49b7-a001-3a7283f1c87e"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b2a2bb11-01c3-4907-adee-67b66c45c6d6"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("2d654848-8ec7-470a-8216-b4510a2ed262"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("89dc88f4-5fc6-48da-8c55-3dffb560548b"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("4965db90-4179-4297-a421-5c1ea8e4fc50"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2c6edac6-087b-49de-bf43-371393da0409"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("c12d19b9-f7fa-4819-b064-bec9d8a00fa4"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("722237f9-bf1f-4a49-a447-2395ee181795"),
-                            EditionId = new Guid("3990aad1-96f9-473f-9d49-7112b75c6926")
+                            WorkInventoryId = new Guid("90c35989-5890-4a5b-82f4-43bfdb5c44d3"),
+                            EditionId = new Guid("633a48b0-094b-460c-9074-e96bcc4c6d07")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4fc572a4-3950-4922-8d9b-bbcdcd077f4d"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("bf9224dc-2166-4638-a681-467ec5622124"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("792b78bb-9679-445b-8892-21e85e36c3da"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c8187025-1c5c-4455-80dc-d681b6fd0eae"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0c95266e-2d54-49d0-b6a8-a727af27165c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("66e6c10a-f39d-4d59-9839-11bf3e71552c"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b3a0a72c-f3d8-4fd4-bb35-ac06ab8e3235"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4bf8a285-ecee-4786-938b-c22e3c7843cf"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f4012e1f-9090-4e05-8770-9c2c75dd3d10"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9d58ebc2-af8a-4ceb-bbb8-fd069e75dfcd"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1674c3f6-0cfb-49ac-9548-811c0fbb5b66"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2c030a58-681c-495a-934d-ad106df0eaae"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8c2e5db4-ae68-480f-84cb-7b8a4824a0dc"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("847331b6-5cdf-4162-8703-9e771f730d64"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c3047815-83f4-4e6a-89b6-f73398d664f2"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("fbf2b975-ed37-4b0e-b793-9ec3547a84e5"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("91a05d83-cd18-485d-8ef7-2d5f685cf0a9"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0c1bbd50-fc3a-4d53-a18f-816aa403dde0"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0f1f0aff-f449-43e8-8fbb-2e53b38f30e2"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("f514cdc8-7545-4f7e-a00c-e2f87d72e603"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f285ea90-73fd-4e06-bb8d-22eb1943ca59"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ee43063b-2a30-4e7b-a024-d0c25e803a81"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a3644880-b624-4d8d-a05e-89f37bc0e3cb"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2c2aa99e-b59b-42e8-b5e0-747e5638f026"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("775726fe-2aa3-48df-9e93-866c19bd996a"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("d5c9d9bf-7604-46e9-82ad-264eb71245f8"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("47a6643c-23bc-4006-b43f-10cef807ceb6"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4a5b5dd6-0378-4e7b-a643-4e5aebbedbfc"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b8e110a5-8a33-42c0-9202-c2d1b0092793"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("46bef8fe-970a-434a-b86b-3144201495ea"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8ed128ac-38ef-4570-84a3-6546d06d1d0f"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("38e6cdfc-4c1d-411f-8f75-ef18b06520af"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b7c931c5-98b4-4a4c-9bd6-7c959a6cd789"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("07223d49-cfee-4117-884f-c05ab090dd6e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c66d3bc7-3989-4973-80c8-98d5d0cfd0c3"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("5d6ac73d-8c14-4d84-8f9e-f4932bcf58c2"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a82214b3-d412-4dff-8663-7b8db391ed4d"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c6212e97-2bed-4852-990b-f31438b7f98a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("6941f0b4-45d4-4cfc-bc74-a14261ceb993"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("83106ffe-a658-40b7-91fe-fe2bf8ed882d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a4a7c03e-9a1c-48d1-a847-d6e75cce66e2"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("dc7adfb9-232c-43ca-95c6-f3fbb8136164"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b468ebf5-e900-49a4-8ff1-d11e8074486e"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c152dade-e413-47d6-8c1d-2ed9b1e23a42"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("835df545-19b5-465a-b318-265c1a2b9100"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("125d1502-8218-4487-bd82-66c750d6d725"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("6cb3aad1-356b-4435-8753-e57b498ca4c4"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("3d2ebd46-da0d-42d0-bb02-ab09f092115d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("afa24be7-b23a-4e12-87b7-a226a2fc8512"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e4c6d766-57cc-42e8-b488-4ba80e520a3a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("98fea8eb-9e8f-4eb1-a256-0553a947478a"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c7011e0c-915e-46bf-9ec9-694c1ad0956b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e7f21b0c-2315-4f1a-81f4-1c8d4b6a8fe6"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0f449291-d7f7-47e5-9b8e-e737231354dc"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("cafd5bfd-18ee-4b57-b522-3bee56c23639"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("d4a2c18e-9255-489e-a588-26f2dd7c6255"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0a1df5f0-652c-4af8-92f7-c6451fc02601"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("329743b1-9cea-437e-bf5c-7561dea58415"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ff86c0c3-29ce-4d44-8541-c965b5a6a00f"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("cc638689-6fcf-483d-9fe0-6913913421cc"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8e0c06df-c4fe-46b2-9137-db57f8bad3b4"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e55d91a3-2953-47b6-b05f-df5c6502cb32"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d73bf0be-dea2-4cb4-a2a3-d5e2da30d91c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4541ace7-bb80-4e7a-a25c-6103c3c58193"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2e335d71-c894-4fed-897a-f44d31dc3bd3"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("313d1383-60a8-40fa-aebf-c4ba800bcd4c"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("065711d8-c1b1-4cb5-a4f4-34cc54ac3648"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e5091fba-9732-4083-a7cd-b2e270f749ce"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9a3bf4ba-98a0-441c-9c88-ef567939ac5d"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2765a047-4a05-48ca-b705-56808b85665f"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f31ee530-2706-4ab2-9583-616cdf0b86b2"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("998df2b0-fcdb-42b5-8af4-78621b3f4225"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12e736b2-368d-4fe7-9191-995f6c12eb52"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("da6227dd-7179-454c-b654-f267622455ae"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("234729bc-e29d-495e-9d1b-87fb236d8a5b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("21fd3b87-b44e-4577-abb7-09db603a5eb6"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ba704ad5-3701-41bf-8c0b-73b4b0ead2a0"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("787aa6c7-eaf2-4c03-8540-231a7cb41fc0"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b413c7b5-8d32-4ae5-93a9-67eef825c3e9"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a765d0db-82f1-44c1-995b-f0c85b5bba41"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("57510cd7-737b-4e1c-897b-d3f498acb429"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("58ab03bd-f6d4-4f1a-baf5-9185733821c3"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9477e69d-e096-4588-ac15-d795aaa8310c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e3d733f3-a977-4b2d-8624-87370fdeed77"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0ee7d6b-3118-4fa8-a75f-67386a637489"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9e1f878f-8e0d-4d54-a770-e643c609b0e4"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dd34dadd-cc2d-43a5-9d9a-5aa6deefefc7"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("3f488e87-fca4-4c56-aba0-00c3b2bab605"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a970d5c2-5468-47d6-9088-27422ff1ea43"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c107bf5a-047b-4927-af16-7f4a7a10fbc2"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1a4ae726-26c9-42cf-9f18-018fba6bd315"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4f308676-f1a4-4f26-bff7-f6b1752fd35c"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d2c9b079-f973-4894-afbd-605cb1ca5aa9"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("84520422-ecd8-4f0a-aa47-fcd730c6fb05"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("78167945-078c-4a60-b1c3-841f3709ccac"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("f7d4840f-cb8b-4673-b26d-ed2791bcefa4"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("63143432-e40b-4805-8ef4-bf9df37748e4"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("7398aed3-65c8-4425-bdf6-41b8c13f49c0"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c21b7663-ab35-4e26-93a0-e3ee871fa7fa"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2d226d0d-61ff-4a19-85ed-3c75f1cc3cdc"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("41c8a235-28a6-47df-93ad-db758ca47015"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("fb0eb65c-4e48-45af-ae2c-890ab3379483"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e8ac4309-802b-4093-b051-783721e3fa4d"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4655e0ab-311c-4876-9327-35a4f6b11dbe"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0bcf8ad-d01b-4f7a-ad19-614a3e51a8db"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9b0b1ee0-9af9-464b-85e9-b6a68b8ead08"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("131fa718-b850-46eb-b0fd-cece0e420875"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("45f2f538-c362-4157-a73c-9fe2f3f0a109"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e407e004-c38d-47d5-99b7-ddcbf7c9eb14"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("611c88d5-7d70-42b4-9508-591568ab7df4"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("791ddfbb-216f-4ace-801b-86381b4ab75d"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("b51e0f50-cf53-4bc6-b0eb-b7bdd40c7224"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a76dca57-69e6-4bda-9f2d-6c98d27cb1ec"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("d23c8efa-a2de-40a4-81d4-55caf85aedcf"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c6aa873d-b8f6-4159-a3c3-b7749608cc8e"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("07636ab9-a8af-4496-95b0-f62a3e96cf69"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("73649381-e9b7-43a3-94a7-9eb547645806"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("f4a8131d-a39c-4e73-9082-3c37205e88f3"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7e6bec3b-aa8d-4085-b925-1c02c1a69b98"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8d6c7ddc-b585-44c9-bdcf-4f516ac00170"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ec5c1c11-50df-47d6-af0c-d4259f878d77"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8e9b0804-5cac-42bf-85eb-cb9fe50d6108"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f3482ec4-ffe6-4cec-8b31-70c114e6544a"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("72ad3299-3ed5-487d-b256-9c2d3f91c41a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0e1a8071-7c31-410d-b38b-83330c55b044"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("75f0496d-d1bf-459a-bce7-2246da53b609"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a5c583de-e031-41b9-8f38-3491050ae321"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("09ca92ab-3c1f-4605-9f16-e80112516d8d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a1597b83-643a-40dc-8b47-243fb43c6584"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("82255f85-e046-4644-9090-88dacb3e9a90"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("75146d89-a464-44f1-ae95-bcbdc3b943de"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e75c12a0-bae8-4186-87a1-f194de5ec477"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("24903cd7-b7a6-47ee-be62-f001a975cbe0"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("da3beeec-0bf7-4f99-9fe9-4a664117c541"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("af815875-898d-4501-b956-425737101725"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("6adde0ab-5077-47f6-99fc-c67321ffd1b6"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2f8b7551-8ac8-467b-8e2e-ed4ff0b92786"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("48ba8fa4-96a6-4293-b10a-e9c146d59d5e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8f7ec91d-53c5-4727-8fbc-c81fa362f584"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("93f1b876-e1ff-4173-8361-4013d98d5c4b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fd0e2552-c4d7-4686-b951-1d0840ccd7e2"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a60fa37b-ed2d-4a9c-8563-683f7e17ad28"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0dbac186-e155-4aff-bbce-fd62c0eaab1c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("3bb06b4d-84a8-4266-917f-dc98b25d6764"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("034a9188-e681-422c-b1bc-627366d4f552"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("6053e92f-ee7a-45ee-b4da-af18fd486e68"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("00e107c6-a505-4840-9062-c51bf8f2e6eb"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("49eb307e-4a3f-43c1-bdaf-da7ee8020b7f"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("cfb5547a-8e5c-47b0-85b2-0470ab1665fe"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2010f496-ba1c-4bac-b081-fb2a37bb2579"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ae660485-06fa-4cba-b856-972a1fa7225e"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("61106be8-77f6-44a2-887a-6bde8eccf73b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7fa25c63-4d96-4e8c-83f8-e6ed6241a193"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("7d28da3e-3bce-4f92-beb8-52621c8a4ddf"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4d32715c-1dd9-4dda-b7fe-f36876197eb7"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8b978676-ec06-4985-9a24-2859e588a0c5"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c5878d16-6f89-4950-9512-3c9a22d2390c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0eb12faa-e79a-41ec-aeb1-d86734554997"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f2268ce4-adb1-4185-8059-72aa2de7faa6"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("b85694b4-fa61-4945-9ba3-0e73956c3812"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("09928f85-004f-4b7f-8168-1af079e557d7"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("83493076-412e-45b0-8ad9-9c1bb645f384"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bbe543ee-1736-49d3-a99a-39d60510873b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ff6c896d-800d-4087-a965-fa31e013227a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1aa1a4d7-c1d1-4249-9146-46ee040e8bd5"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("5fc9be19-b651-454e-9b0c-c2b761522121"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12f438df-64e2-45bb-a379-568e3500933a"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("16ac8b0c-a9f4-4fe3-bd7b-a925ce89bdc1"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f4d0dce8-27de-42ce-bb30-edb1ec650090"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("09004dcf-38ce-49ae-8ef2-8bbf3836fafb"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("301b3944-d368-42f7-95ea-93acfd8182aa"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("5287fc76-6dea-4eae-9fbb-1d91cfe70c6b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d46faf8e-ac78-439a-af5f-982876451809"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c9efd7a4-99a4-4124-bf45-990781471032"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("544b6598-9c9c-4974-ac8d-436b0374e85f"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("6ee5506e-1a3b-43ea-938f-ceccff0fadd2"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bdbb5035-9296-449f-8031-0416f67330d3"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("830a85a3-2975-47d0-9c05-32cc05b4f05e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("aacc5e3b-4253-4631-aeaf-9b3a7c1e4910"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("223fe8b4-2c8e-4566-ad25-7bc2f2a53846"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("17bf37bc-9e03-4ef4-ba59-8cc7ece5e8d4"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("bef79182-8380-4587-83cc-e6e7bcf6eb48"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d535450a-f276-494c-bfe5-f4ef690cb7e1"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("b186b8c6-7e39-4fdf-8e1e-38b29ec4f0cb"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("183e0cc3-6cfb-4cfb-b436-0280030660dc"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8e35a916-8be3-4837-9673-6d77029685e1"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("41fe867d-54db-4b65-b44d-e1d6bb008acf"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("37625e49-6fb9-4478-a1c8-6854e7c9acfc"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fd0d0d0f-8714-4007-8f61-e01097aeb176"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("61f9738b-f8e6-4829-be2f-804bb7fff40e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("22be3bfa-c2f4-45fc-a18c-fb2ea2dd3810"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9867a970-8f20-4537-bfdc-0d060af33dbf"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("04757b70-5a00-4a66-a024-5be7c9d3738b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ef9af11d-d63e-4617-8a10-ed86f049f022"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("549b349a-2f08-4f11-9b6a-9c9b411785a8"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2e3fe1b6-94a4-4c4d-8e3e-373d90fcdcc6"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0c2e8b24-5fd4-4aa0-b002-7bbbf2300bb5"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("cab10885-2d9c-48ae-9306-f9d07290953f"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9e8fd25a-a602-47e9-913a-94b413d3eb0a"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("6deb362a-690d-47f7-a312-c965e9b6c90d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9c3190c9-6a1b-4b98-91f5-cb22a5ab92a8"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("5815a21a-214b-484a-a54b-19ff31445e6d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0d568200-ac80-45be-8c75-399b9471ca02"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("27e86885-925d-4d6f-b897-810816de7b27"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("33ac04b5-9382-48b4-99e1-a8a89bc36ba4"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("55eccf50-44c1-4e70-b323-1e82aab13037"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bc369b8b-ad13-4fce-a4d8-0fa3af33677b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("179efc4d-cc7b-47ac-b440-f2cf907de5b3"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4288761b-be53-4abc-b9f1-adce58973489"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("785966d6-b3a8-43ac-b292-8fc5654d4b41"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("de28a8ba-132b-48d0-a6aa-390754f06838"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("33017d8e-8731-40d2-af5a-9b39a8b1abb6"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2093209a-8898-4b1f-bbe3-5de8f1991bbb"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e810fe6c-03fe-4895-8b59-9182cd6a41bb"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a1429e97-5a23-4cb9-989a-c44f1940c839"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("160955cd-316d-4cad-ac47-e6739d62f76c"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("95f96325-16c6-4cb9-8217-4fd20f8e2ec1"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("fd0be251-42b7-4117-9af6-d554974e4f84"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4e96eb2d-ac3c-4392-b3e0-4af9efdd2a47"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ab0f3925-12a5-43db-b8a8-03178dbf6488"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7e50a191-016f-46f6-8d4b-e86520327666"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("358250c8-937c-4f78-8e9a-37d31819379d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("222ef5b7-c98a-4c25-81aa-730193249108"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0a88304d-1334-4171-aa90-4137abc33698"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9a8fbf3e-b11e-438c-a299-d3ae7f43b9af"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8ae98fc3-75f3-463a-a3f3-427cd7542b6b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4d80d5d9-9a1d-4325-a9b2-98fe3ec8513a"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("44be6661-925d-480c-a803-f341d5d300ab"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b9bf432c-8317-432c-b737-74fbc7fe2174"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("1b04e7e6-1e2a-40b0-af1b-81e3c3384e8e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0f5e00a8-dc5d-4b38-b26c-96905900b232"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2b97e25d-97ba-402a-a002-efc9d2bf365b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1454eb56-d435-4610-b23c-ee40bd437215"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("32a1b88b-feb2-4733-9024-b377e3b62a23"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f25c2c9e-5aa0-4c96-bbab-b78be8a11340"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a42e6bfd-d89f-4627-8cc6-ac20a1c34d44"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0cb6af86-d4f3-4e61-9a4d-9124379644da"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9120f4b7-1083-446e-8b97-86a7306bbc12"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7ad48c24-cb83-451b-91ae-f9e7f70195fd"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("082a66ec-b26a-4d2b-9c4b-ee6a42b40e73"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("03e55897-2a15-49d2-ad76-f906e5c7f6e9"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8b5e1ec1-1d05-4b80-8627-b1652497a232"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("89655a9e-48e3-46c4-909f-47abe889b643"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0d928aec-70bf-4803-824d-0ffa8b8df959"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("44ffb661-8d90-4031-a984-a661733bb063"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("08b8505b-f898-4143-b6b0-a086ada7e099"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3e6cdab7-7a8e-45c9-8e53-020b54248a06"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4f566db2-a4f1-4de4-af2b-c94403a571d0"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2cbb1298-f828-40f4-9d11-1a794606da97"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2dc37efb-0a8e-4abe-ad8b-2d46e4e2f6bc"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dde24248-d933-4811-ae4a-0639efa57150"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("5f9ccbb0-82de-4014-9e08-21f436cfad2c"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c1299cab-53ee-48ec-bad8-0e2daaabb72c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9f688e9e-4fa1-41a8-a947-e9304839bdfe"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3b3115e4-e493-4ea1-9406-01d656cd1189"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ec03856c-3460-4fff-91c9-3fe16e7e39cb"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9cd59022-9580-4a73-a21f-f2b217a75436"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2b771377-7611-493f-8ecf-4edf4ddd8f25"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("eea6569f-4485-4111-86cb-0b3d81684b32"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("49947dcc-91d9-4433-ab60-0f240dbceb92"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4af45f35-dcf6-4bcf-92a5-f6dc0a1ff6cc"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4af42d68-019f-4fe2-ba21-e33107ab3570"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("235303c7-8985-4ffb-962f-b182e718a8de"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("666cbf5c-f227-43c6-a5e4-0b46d3069f65"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7326aca7-5041-438f-a0b4-9f56c520023a"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0459cf70-b1bd-4db9-81c7-84db786cd582"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e6c82700-f8b7-407c-abad-a311a6ab7126"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("541a31e2-bb03-42be-95fd-dbbfa0125b4d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("be372ccb-ddb0-4831-96cb-c3da7eb710e9"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("40ad12f4-4996-41cb-9111-156a47feff70"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e2c0b5de-9db9-4320-be64-c831996714e5"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("377f6fc8-f087-43e1-9352-ec8341cc393e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d8ba923f-b2b2-4f52-97d3-607029250ec6"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a5f5b3d4-c3a6-4933-9f67-47dd6e24b1c5"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ab69c29f-ac7f-4357-b515-f34bc2993251"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("59a142a7-1033-4495-8785-d3dbd3907a37"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("919a33f8-0788-40db-a5a3-98d9b4abd172"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c54e1f56-c3e2-4113-9dc0-b83b56627ded"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e512a5df-3ab9-42aa-b6c1-f2e345dd6427"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("689d05b4-0ce9-426a-a6b8-ee09f5027e21"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bfe57479-bede-46f7-8241-b9a3901d7e35"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9f63c80a-2290-47b6-b702-f668e44ed8c0"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d74ba646-5a55-4799-bff2-9f99070d3bba"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9cd41ddd-82c2-4ab5-b5ff-7a2ed6818fb4"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("725a7940-0cf8-4fdd-a7c8-2f75e9b3ff28"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("3558e621-f43f-488e-8c63-8b3fdc23492a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7d46e770-86d2-4bb6-b2c0-1a2179efece1"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("995d6ab1-9477-4b71-a236-ddbab6cef352"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("64ebdc42-f2be-47e0-87d0-b447174492f3"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("d5476484-68e7-4351-b2c9-11e5e79c458a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fa8b52a1-f8f6-45e0-aded-15e817fe23b9"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0df871bb-68f1-4d04-8310-cb611f922068"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("672b6b2a-d2e6-4364-a4b6-549bc2517834"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("70418e8e-ee78-4144-af39-1c973286eaaa"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8d786851-3a43-41d0-80af-5487c3237693"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("b009309c-1420-4f63-9749-fd9978e32da2"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3b7e0b1f-363f-417f-9b04-1639089ab476"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("213ce899-e1d5-4bee-801d-326e0aa9d090"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fc364525-c09f-4dcb-a051-cad96f65fd1b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("6cd687eb-df78-4538-a726-e3dd2d615f6f"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ea565302-21f6-4379-a444-298d635eee74"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("18ef3409-4ed9-4501-8b38-f4e17938969a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5ac3d2ef-c4d2-4377-ae63-1d7286c0ff77"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("fd06bba9-f75c-4679-abe2-ce455ebaa86e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3fcc3b5b-d230-4433-bc7c-adbba9ebeac4"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2e7c41fc-6b85-4553-9b40-34e6f28a811a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9f2a1d24-7e82-4c96-95ca-fc6b4447f45c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("6a31ef9b-9fdc-4b26-bd1c-a3f87a06b8a7"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1101d667-087b-4b96-bcae-c1c4d9e129db"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a756269e-60bf-46b5-ab5f-a90ba04bfb7d"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b6f02257-431c-4f49-b6bf-a7d2e523ee0b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ad74ce6f-c9e8-4130-be53-61e73cad057f"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("369bc41e-8a8e-4f98-8fa6-1a7d805a0c57"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("95e2ffd2-ff4f-4408-b9c0-ee78eba05a74"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5a30e6ef-3047-4bfd-b6f9-98f2c6829d32"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("64930d87-d819-4e53-9a43-ba9781a5d88e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("60c45917-63b5-460e-b30b-e37d4fd7fb83"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ca414129-6658-46a4-9708-971f73cc3616"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("19f89ed0-b319-44dd-a6a3-1c7055ede531"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("71d718fe-e626-40e1-97b8-e28c4eb561da"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4868206d-e067-4ced-816e-1046f02c0b9d"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("1f26625d-e01d-42d8-941a-56ea6ecd5cd4"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5f10fc96-64f1-4fb5-a750-9348766590a3"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a66a7d3a-8eeb-4c51-b540-bf2cc2738cf1"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4bb334c7-5d3b-4e61-8563-82dfdede7d5c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("26e9444a-002c-4435-b105-8e1395bd38fa"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dcbfbc9f-6d43-4c39-9a5f-8e5d6381e039"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8f28d5b3-0901-4581-9e9f-3bb72152b391"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c240ff63-f2c1-4abc-b52e-d1563af091c5"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("48fd7f3e-05f3-46c5-95c9-eceff844e59c"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("aff2e6b5-7e68-41da-bca0-d7bda6576c3c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("9110330a-941c-4b7d-92b0-ed8ae8523d81"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2006bf3b-213e-43ba-9411-38e51925f1f5"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("61b3a28b-419c-4170-84f8-e890a725a728"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fb64710e-e858-49a1-87f8-3597b46cf973"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("687090a2-4066-4466-a66f-f0354a1420a5"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3cea29f7-b21d-4105-a0bc-95c622ef9e2b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("63aac367-9ac5-4dc9-ae96-14d860a03f19"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ab27dedc-1b46-4844-b02d-e678b8c7621f"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e68f3a0f-3f56-4f1a-8bc8-9a7f3279004a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12c081a3-62a7-4656-b620-f5b53aa65a38"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("442588ef-c63f-4137-bd7c-dcc787ce082b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("375c0328-eeaf-4f7c-9a1e-7e6d2fd30215"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("87007bab-56de-4301-9592-145c0e595f22"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("600b6fac-1742-43e4-a6d1-2c72007e7f2b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("8ec4e221-bb3b-4936-9da5-b81ee5d5c12a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("155fb4e6-7bf0-4ee8-8c70-983c6bb31a55"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("f4fbfc08-593d-4f47-b17f-c967749c646a"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("648a605a-5011-4f34-8aa8-4877ad303e54"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4fc46ee2-c739-45ea-a15b-1b718141756e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("39cee64c-886a-4a0a-91a3-42d0afc419a5"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c415a761-7a91-48e2-a742-727a174161f7"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c1d79d3c-5a74-46ac-9f0d-32ed6be5695c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("1985c61c-6d23-4cac-8464-731d4ac9c3c9"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ee5d7c3a-5e00-4f10-a75b-6a9175f9fb55"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("54c8ba52-ef3b-41af-892e-829d49bbdbcb"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0d2884bf-3bf2-433e-9742-2a6ccbc8ac1b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("58e6df3c-a5b5-42aa-91e3-ff6086fb2db6"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("19f8d096-00f2-432b-bb24-4e84d462a6f2"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("043bc03e-ff53-4754-93f8-87851b55d1ca"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1c458204-e5a2-432d-bfe3-fae6fcd7c218"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("1e0ff314-da46-40c8-b9f7-19fce67d753e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a54b0471-287c-4c32-b5ce-eff67f0efd09"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("716f2b3d-0c09-480e-a4ad-bbbf12f77016"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4da4784e-e863-4f6f-b95b-5123246ef314"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("238d626d-2f2f-434f-a380-2c46d43bf8fd"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d9a8fa29-1bdf-4529-a157-799b89c51669"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("eae9323a-1757-4bfa-b502-69ba792d5198"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("edb8e025-c60f-4adf-9a5b-c1ace73cb7aa"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("ca17343f-26ca-4922-a036-bffb456918f0"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c0c0381d-953f-42fa-a3f7-75d52b37366c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a8cc027b-1c82-4b7a-b646-fbcaa609fe6e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e4ae3a64-3dbb-4443-9263-344bff0bcc0b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c9350533-35db-49de-94ed-65a371e43248"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("455e5219-148f-4493-a484-fc9eed732bfc"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("e3eb10f1-ed77-4a3b-8157-af9612eed256"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9ee289f6-00f9-4d49-9724-53d52ee555ae"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a98b4822-0959-414c-9497-97bc42d05b58"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4be33054-28d0-4b6c-92ab-87f0a245a327"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("f129fa8b-a508-4af8-8c61-bb315d4f88e2"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5db7f5ab-4b98-4df7-82bd-b7329401f915"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("775f8028-8524-4603-a2f9-1a0e5ba23230"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("71e16121-6d38-413a-8dbd-ca8bbe000a35"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("a2ab83c3-1681-47b2-a95d-250f4c12268b"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9c93db4c-a6e1-43ea-8b95-028f10196e2c"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c6024252-cae3-49bc-9808-b1ecced933dd"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("237dc3bb-1bc5-4443-8ca4-6e870243503b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0f3f39be-71ad-4569-9432-5bed9a698fa7"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4db59d81-0d2c-46de-9e68-0fee7dd4a1b9"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("6af4f908-1442-4064-92f9-b8642b5020e5"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0f96b1f-4371-426b-8ebb-dfb06ddaf40e"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("0b4712a8-c875-49b7-a001-3a7283f1c87e"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b2a2bb11-01c3-4907-adee-67b66c45c6d6"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("2d654848-8ec7-470a-8216-b4510a2ed262"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("89dc88f4-5fc6-48da-8c55-3dffb560548b"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("4965db90-4179-4297-a421-5c1ea8e4fc50"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2c6edac6-087b-49de-bf43-371393da0409"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("c12d19b9-f7fa-4819-b064-bec9d8a00fa4"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("722237f9-bf1f-4a49-a447-2395ee181795"),
-                            EditionId = new Guid("3d0c059c-ef76-46e1-98b0-7ebb7bb59216")
+                            WorkInventoryId = new Guid("90c35989-5890-4a5b-82f4-43bfdb5c44d3"),
+                            EditionId = new Guid("b3766ddd-d286-406a-8f75-1ca586e9262b")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4fc572a4-3950-4922-8d9b-bbcdcd077f4d"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("bf9224dc-2166-4638-a681-467ec5622124"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("792b78bb-9679-445b-8892-21e85e36c3da"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c8187025-1c5c-4455-80dc-d681b6fd0eae"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0c95266e-2d54-49d0-b6a8-a727af27165c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("66e6c10a-f39d-4d59-9839-11bf3e71552c"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b3a0a72c-f3d8-4fd4-bb35-ac06ab8e3235"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4bf8a285-ecee-4786-938b-c22e3c7843cf"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f4012e1f-9090-4e05-8770-9c2c75dd3d10"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9d58ebc2-af8a-4ceb-bbb8-fd069e75dfcd"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1674c3f6-0cfb-49ac-9548-811c0fbb5b66"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2c030a58-681c-495a-934d-ad106df0eaae"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8c2e5db4-ae68-480f-84cb-7b8a4824a0dc"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("847331b6-5cdf-4162-8703-9e771f730d64"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c3047815-83f4-4e6a-89b6-f73398d664f2"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("fbf2b975-ed37-4b0e-b793-9ec3547a84e5"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("91a05d83-cd18-485d-8ef7-2d5f685cf0a9"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0c1bbd50-fc3a-4d53-a18f-816aa403dde0"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0f1f0aff-f449-43e8-8fbb-2e53b38f30e2"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("f514cdc8-7545-4f7e-a00c-e2f87d72e603"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f285ea90-73fd-4e06-bb8d-22eb1943ca59"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ee43063b-2a30-4e7b-a024-d0c25e803a81"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a3644880-b624-4d8d-a05e-89f37bc0e3cb"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2c2aa99e-b59b-42e8-b5e0-747e5638f026"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("775726fe-2aa3-48df-9e93-866c19bd996a"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("d5c9d9bf-7604-46e9-82ad-264eb71245f8"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("47a6643c-23bc-4006-b43f-10cef807ceb6"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4a5b5dd6-0378-4e7b-a643-4e5aebbedbfc"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b8e110a5-8a33-42c0-9202-c2d1b0092793"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("46bef8fe-970a-434a-b86b-3144201495ea"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8ed128ac-38ef-4570-84a3-6546d06d1d0f"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("38e6cdfc-4c1d-411f-8f75-ef18b06520af"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b7c931c5-98b4-4a4c-9bd6-7c959a6cd789"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("07223d49-cfee-4117-884f-c05ab090dd6e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c66d3bc7-3989-4973-80c8-98d5d0cfd0c3"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("5d6ac73d-8c14-4d84-8f9e-f4932bcf58c2"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a82214b3-d412-4dff-8663-7b8db391ed4d"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c6212e97-2bed-4852-990b-f31438b7f98a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("6941f0b4-45d4-4cfc-bc74-a14261ceb993"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("83106ffe-a658-40b7-91fe-fe2bf8ed882d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a4a7c03e-9a1c-48d1-a847-d6e75cce66e2"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("dc7adfb9-232c-43ca-95c6-f3fbb8136164"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b468ebf5-e900-49a4-8ff1-d11e8074486e"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c152dade-e413-47d6-8c1d-2ed9b1e23a42"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("835df545-19b5-465a-b318-265c1a2b9100"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("125d1502-8218-4487-bd82-66c750d6d725"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("6cb3aad1-356b-4435-8753-e57b498ca4c4"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("3d2ebd46-da0d-42d0-bb02-ab09f092115d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("afa24be7-b23a-4e12-87b7-a226a2fc8512"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e4c6d766-57cc-42e8-b488-4ba80e520a3a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("98fea8eb-9e8f-4eb1-a256-0553a947478a"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c7011e0c-915e-46bf-9ec9-694c1ad0956b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e7f21b0c-2315-4f1a-81f4-1c8d4b6a8fe6"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0f449291-d7f7-47e5-9b8e-e737231354dc"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("cafd5bfd-18ee-4b57-b522-3bee56c23639"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("d4a2c18e-9255-489e-a588-26f2dd7c6255"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0a1df5f0-652c-4af8-92f7-c6451fc02601"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("329743b1-9cea-437e-bf5c-7561dea58415"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ff86c0c3-29ce-4d44-8541-c965b5a6a00f"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("cc638689-6fcf-483d-9fe0-6913913421cc"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8e0c06df-c4fe-46b2-9137-db57f8bad3b4"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e55d91a3-2953-47b6-b05f-df5c6502cb32"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d73bf0be-dea2-4cb4-a2a3-d5e2da30d91c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4541ace7-bb80-4e7a-a25c-6103c3c58193"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2e335d71-c894-4fed-897a-f44d31dc3bd3"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("313d1383-60a8-40fa-aebf-c4ba800bcd4c"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("065711d8-c1b1-4cb5-a4f4-34cc54ac3648"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e5091fba-9732-4083-a7cd-b2e270f749ce"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9a3bf4ba-98a0-441c-9c88-ef567939ac5d"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2765a047-4a05-48ca-b705-56808b85665f"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f31ee530-2706-4ab2-9583-616cdf0b86b2"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("998df2b0-fcdb-42b5-8af4-78621b3f4225"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12e736b2-368d-4fe7-9191-995f6c12eb52"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("da6227dd-7179-454c-b654-f267622455ae"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("234729bc-e29d-495e-9d1b-87fb236d8a5b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("21fd3b87-b44e-4577-abb7-09db603a5eb6"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ba704ad5-3701-41bf-8c0b-73b4b0ead2a0"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("787aa6c7-eaf2-4c03-8540-231a7cb41fc0"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b413c7b5-8d32-4ae5-93a9-67eef825c3e9"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a765d0db-82f1-44c1-995b-f0c85b5bba41"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("57510cd7-737b-4e1c-897b-d3f498acb429"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("58ab03bd-f6d4-4f1a-baf5-9185733821c3"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9477e69d-e096-4588-ac15-d795aaa8310c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e3d733f3-a977-4b2d-8624-87370fdeed77"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0ee7d6b-3118-4fa8-a75f-67386a637489"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9e1f878f-8e0d-4d54-a770-e643c609b0e4"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dd34dadd-cc2d-43a5-9d9a-5aa6deefefc7"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("3f488e87-fca4-4c56-aba0-00c3b2bab605"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a970d5c2-5468-47d6-9088-27422ff1ea43"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c107bf5a-047b-4927-af16-7f4a7a10fbc2"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1a4ae726-26c9-42cf-9f18-018fba6bd315"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4f308676-f1a4-4f26-bff7-f6b1752fd35c"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d2c9b079-f973-4894-afbd-605cb1ca5aa9"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("84520422-ecd8-4f0a-aa47-fcd730c6fb05"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("78167945-078c-4a60-b1c3-841f3709ccac"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("f7d4840f-cb8b-4673-b26d-ed2791bcefa4"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("63143432-e40b-4805-8ef4-bf9df37748e4"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("7398aed3-65c8-4425-bdf6-41b8c13f49c0"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c21b7663-ab35-4e26-93a0-e3ee871fa7fa"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2d226d0d-61ff-4a19-85ed-3c75f1cc3cdc"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("41c8a235-28a6-47df-93ad-db758ca47015"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("fb0eb65c-4e48-45af-ae2c-890ab3379483"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e8ac4309-802b-4093-b051-783721e3fa4d"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4655e0ab-311c-4876-9327-35a4f6b11dbe"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0bcf8ad-d01b-4f7a-ad19-614a3e51a8db"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9b0b1ee0-9af9-464b-85e9-b6a68b8ead08"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("131fa718-b850-46eb-b0fd-cece0e420875"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("45f2f538-c362-4157-a73c-9fe2f3f0a109"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e407e004-c38d-47d5-99b7-ddcbf7c9eb14"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("611c88d5-7d70-42b4-9508-591568ab7df4"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("791ddfbb-216f-4ace-801b-86381b4ab75d"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("b51e0f50-cf53-4bc6-b0eb-b7bdd40c7224"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a76dca57-69e6-4bda-9f2d-6c98d27cb1ec"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("d23c8efa-a2de-40a4-81d4-55caf85aedcf"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c6aa873d-b8f6-4159-a3c3-b7749608cc8e"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("07636ab9-a8af-4496-95b0-f62a3e96cf69"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("73649381-e9b7-43a3-94a7-9eb547645806"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("f4a8131d-a39c-4e73-9082-3c37205e88f3"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7e6bec3b-aa8d-4085-b925-1c02c1a69b98"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8d6c7ddc-b585-44c9-bdcf-4f516ac00170"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ec5c1c11-50df-47d6-af0c-d4259f878d77"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8e9b0804-5cac-42bf-85eb-cb9fe50d6108"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f3482ec4-ffe6-4cec-8b31-70c114e6544a"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("72ad3299-3ed5-487d-b256-9c2d3f91c41a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0e1a8071-7c31-410d-b38b-83330c55b044"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("75f0496d-d1bf-459a-bce7-2246da53b609"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a5c583de-e031-41b9-8f38-3491050ae321"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("09ca92ab-3c1f-4605-9f16-e80112516d8d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a1597b83-643a-40dc-8b47-243fb43c6584"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("82255f85-e046-4644-9090-88dacb3e9a90"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("75146d89-a464-44f1-ae95-bcbdc3b943de"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e75c12a0-bae8-4186-87a1-f194de5ec477"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("24903cd7-b7a6-47ee-be62-f001a975cbe0"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("da3beeec-0bf7-4f99-9fe9-4a664117c541"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("af815875-898d-4501-b956-425737101725"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("6adde0ab-5077-47f6-99fc-c67321ffd1b6"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2f8b7551-8ac8-467b-8e2e-ed4ff0b92786"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("48ba8fa4-96a6-4293-b10a-e9c146d59d5e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8f7ec91d-53c5-4727-8fbc-c81fa362f584"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("93f1b876-e1ff-4173-8361-4013d98d5c4b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fd0e2552-c4d7-4686-b951-1d0840ccd7e2"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a60fa37b-ed2d-4a9c-8563-683f7e17ad28"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0dbac186-e155-4aff-bbce-fd62c0eaab1c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("3bb06b4d-84a8-4266-917f-dc98b25d6764"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("034a9188-e681-422c-b1bc-627366d4f552"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("6053e92f-ee7a-45ee-b4da-af18fd486e68"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("00e107c6-a505-4840-9062-c51bf8f2e6eb"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("49eb307e-4a3f-43c1-bdaf-da7ee8020b7f"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("cfb5547a-8e5c-47b0-85b2-0470ab1665fe"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2010f496-ba1c-4bac-b081-fb2a37bb2579"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ae660485-06fa-4cba-b856-972a1fa7225e"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("61106be8-77f6-44a2-887a-6bde8eccf73b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7fa25c63-4d96-4e8c-83f8-e6ed6241a193"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("7d28da3e-3bce-4f92-beb8-52621c8a4ddf"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4d32715c-1dd9-4dda-b7fe-f36876197eb7"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8b978676-ec06-4985-9a24-2859e588a0c5"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c5878d16-6f89-4950-9512-3c9a22d2390c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0eb12faa-e79a-41ec-aeb1-d86734554997"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f2268ce4-adb1-4185-8059-72aa2de7faa6"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("b85694b4-fa61-4945-9ba3-0e73956c3812"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("09928f85-004f-4b7f-8168-1af079e557d7"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("83493076-412e-45b0-8ad9-9c1bb645f384"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bbe543ee-1736-49d3-a99a-39d60510873b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ff6c896d-800d-4087-a965-fa31e013227a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1aa1a4d7-c1d1-4249-9146-46ee040e8bd5"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("5fc9be19-b651-454e-9b0c-c2b761522121"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12f438df-64e2-45bb-a379-568e3500933a"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("16ac8b0c-a9f4-4fe3-bd7b-a925ce89bdc1"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f4d0dce8-27de-42ce-bb30-edb1ec650090"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("09004dcf-38ce-49ae-8ef2-8bbf3836fafb"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("301b3944-d368-42f7-95ea-93acfd8182aa"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("5287fc76-6dea-4eae-9fbb-1d91cfe70c6b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d46faf8e-ac78-439a-af5f-982876451809"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c9efd7a4-99a4-4124-bf45-990781471032"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("544b6598-9c9c-4974-ac8d-436b0374e85f"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("6ee5506e-1a3b-43ea-938f-ceccff0fadd2"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bdbb5035-9296-449f-8031-0416f67330d3"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("830a85a3-2975-47d0-9c05-32cc05b4f05e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("aacc5e3b-4253-4631-aeaf-9b3a7c1e4910"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("223fe8b4-2c8e-4566-ad25-7bc2f2a53846"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("17bf37bc-9e03-4ef4-ba59-8cc7ece5e8d4"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("bef79182-8380-4587-83cc-e6e7bcf6eb48"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d535450a-f276-494c-bfe5-f4ef690cb7e1"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("b186b8c6-7e39-4fdf-8e1e-38b29ec4f0cb"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("183e0cc3-6cfb-4cfb-b436-0280030660dc"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8e35a916-8be3-4837-9673-6d77029685e1"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("41fe867d-54db-4b65-b44d-e1d6bb008acf"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("37625e49-6fb9-4478-a1c8-6854e7c9acfc"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fd0d0d0f-8714-4007-8f61-e01097aeb176"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("61f9738b-f8e6-4829-be2f-804bb7fff40e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("22be3bfa-c2f4-45fc-a18c-fb2ea2dd3810"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9867a970-8f20-4537-bfdc-0d060af33dbf"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("04757b70-5a00-4a66-a024-5be7c9d3738b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ef9af11d-d63e-4617-8a10-ed86f049f022"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("549b349a-2f08-4f11-9b6a-9c9b411785a8"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2e3fe1b6-94a4-4c4d-8e3e-373d90fcdcc6"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0c2e8b24-5fd4-4aa0-b002-7bbbf2300bb5"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("cab10885-2d9c-48ae-9306-f9d07290953f"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9e8fd25a-a602-47e9-913a-94b413d3eb0a"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("6deb362a-690d-47f7-a312-c965e9b6c90d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9c3190c9-6a1b-4b98-91f5-cb22a5ab92a8"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("5815a21a-214b-484a-a54b-19ff31445e6d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0d568200-ac80-45be-8c75-399b9471ca02"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("27e86885-925d-4d6f-b897-810816de7b27"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("33ac04b5-9382-48b4-99e1-a8a89bc36ba4"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("55eccf50-44c1-4e70-b323-1e82aab13037"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bc369b8b-ad13-4fce-a4d8-0fa3af33677b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("179efc4d-cc7b-47ac-b440-f2cf907de5b3"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4288761b-be53-4abc-b9f1-adce58973489"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("785966d6-b3a8-43ac-b292-8fc5654d4b41"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("de28a8ba-132b-48d0-a6aa-390754f06838"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("33017d8e-8731-40d2-af5a-9b39a8b1abb6"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2093209a-8898-4b1f-bbe3-5de8f1991bbb"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e810fe6c-03fe-4895-8b59-9182cd6a41bb"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a1429e97-5a23-4cb9-989a-c44f1940c839"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("160955cd-316d-4cad-ac47-e6739d62f76c"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("95f96325-16c6-4cb9-8217-4fd20f8e2ec1"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("fd0be251-42b7-4117-9af6-d554974e4f84"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4e96eb2d-ac3c-4392-b3e0-4af9efdd2a47"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ab0f3925-12a5-43db-b8a8-03178dbf6488"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7e50a191-016f-46f6-8d4b-e86520327666"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("358250c8-937c-4f78-8e9a-37d31819379d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("222ef5b7-c98a-4c25-81aa-730193249108"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0a88304d-1334-4171-aa90-4137abc33698"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9a8fbf3e-b11e-438c-a299-d3ae7f43b9af"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8ae98fc3-75f3-463a-a3f3-427cd7542b6b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4d80d5d9-9a1d-4325-a9b2-98fe3ec8513a"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("44be6661-925d-480c-a803-f341d5d300ab"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b9bf432c-8317-432c-b737-74fbc7fe2174"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("1b04e7e6-1e2a-40b0-af1b-81e3c3384e8e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0f5e00a8-dc5d-4b38-b26c-96905900b232"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2b97e25d-97ba-402a-a002-efc9d2bf365b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1454eb56-d435-4610-b23c-ee40bd437215"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("32a1b88b-feb2-4733-9024-b377e3b62a23"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f25c2c9e-5aa0-4c96-bbab-b78be8a11340"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a42e6bfd-d89f-4627-8cc6-ac20a1c34d44"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0cb6af86-d4f3-4e61-9a4d-9124379644da"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9120f4b7-1083-446e-8b97-86a7306bbc12"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7ad48c24-cb83-451b-91ae-f9e7f70195fd"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("082a66ec-b26a-4d2b-9c4b-ee6a42b40e73"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("03e55897-2a15-49d2-ad76-f906e5c7f6e9"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8b5e1ec1-1d05-4b80-8627-b1652497a232"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("89655a9e-48e3-46c4-909f-47abe889b643"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0d928aec-70bf-4803-824d-0ffa8b8df959"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("44ffb661-8d90-4031-a984-a661733bb063"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("08b8505b-f898-4143-b6b0-a086ada7e099"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3e6cdab7-7a8e-45c9-8e53-020b54248a06"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4f566db2-a4f1-4de4-af2b-c94403a571d0"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2cbb1298-f828-40f4-9d11-1a794606da97"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2dc37efb-0a8e-4abe-ad8b-2d46e4e2f6bc"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dde24248-d933-4811-ae4a-0639efa57150"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("5f9ccbb0-82de-4014-9e08-21f436cfad2c"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c1299cab-53ee-48ec-bad8-0e2daaabb72c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9f688e9e-4fa1-41a8-a947-e9304839bdfe"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3b3115e4-e493-4ea1-9406-01d656cd1189"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ec03856c-3460-4fff-91c9-3fe16e7e39cb"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9cd59022-9580-4a73-a21f-f2b217a75436"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2b771377-7611-493f-8ecf-4edf4ddd8f25"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("eea6569f-4485-4111-86cb-0b3d81684b32"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("49947dcc-91d9-4433-ab60-0f240dbceb92"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4af45f35-dcf6-4bcf-92a5-f6dc0a1ff6cc"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4af42d68-019f-4fe2-ba21-e33107ab3570"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("235303c7-8985-4ffb-962f-b182e718a8de"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("666cbf5c-f227-43c6-a5e4-0b46d3069f65"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7326aca7-5041-438f-a0b4-9f56c520023a"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0459cf70-b1bd-4db9-81c7-84db786cd582"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e6c82700-f8b7-407c-abad-a311a6ab7126"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("541a31e2-bb03-42be-95fd-dbbfa0125b4d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("be372ccb-ddb0-4831-96cb-c3da7eb710e9"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("40ad12f4-4996-41cb-9111-156a47feff70"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e2c0b5de-9db9-4320-be64-c831996714e5"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("377f6fc8-f087-43e1-9352-ec8341cc393e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d8ba923f-b2b2-4f52-97d3-607029250ec6"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a5f5b3d4-c3a6-4933-9f67-47dd6e24b1c5"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ab69c29f-ac7f-4357-b515-f34bc2993251"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("59a142a7-1033-4495-8785-d3dbd3907a37"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("919a33f8-0788-40db-a5a3-98d9b4abd172"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c54e1f56-c3e2-4113-9dc0-b83b56627ded"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e512a5df-3ab9-42aa-b6c1-f2e345dd6427"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("689d05b4-0ce9-426a-a6b8-ee09f5027e21"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("bfe57479-bede-46f7-8241-b9a3901d7e35"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9f63c80a-2290-47b6-b702-f668e44ed8c0"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d74ba646-5a55-4799-bff2-9f99070d3bba"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9cd41ddd-82c2-4ab5-b5ff-7a2ed6818fb4"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("725a7940-0cf8-4fdd-a7c8-2f75e9b3ff28"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("3558e621-f43f-488e-8c63-8b3fdc23492a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("7d46e770-86d2-4bb6-b2c0-1a2179efece1"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("995d6ab1-9477-4b71-a236-ddbab6cef352"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("64ebdc42-f2be-47e0-87d0-b447174492f3"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("d5476484-68e7-4351-b2c9-11e5e79c458a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fa8b52a1-f8f6-45e0-aded-15e817fe23b9"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0df871bb-68f1-4d04-8310-cb611f922068"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("672b6b2a-d2e6-4364-a4b6-549bc2517834"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("70418e8e-ee78-4144-af39-1c973286eaaa"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("8d786851-3a43-41d0-80af-5487c3237693"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("b009309c-1420-4f63-9749-fd9978e32da2"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3b7e0b1f-363f-417f-9b04-1639089ab476"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("213ce899-e1d5-4bee-801d-326e0aa9d090"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fc364525-c09f-4dcb-a051-cad96f65fd1b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("6cd687eb-df78-4538-a726-e3dd2d615f6f"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ea565302-21f6-4379-a444-298d635eee74"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("18ef3409-4ed9-4501-8b38-f4e17938969a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5ac3d2ef-c4d2-4377-ae63-1d7286c0ff77"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("fd06bba9-f75c-4679-abe2-ce455ebaa86e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3fcc3b5b-d230-4433-bc7c-adbba9ebeac4"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2e7c41fc-6b85-4553-9b40-34e6f28a811a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9f2a1d24-7e82-4c96-95ca-fc6b4447f45c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("6a31ef9b-9fdc-4b26-bd1c-a3f87a06b8a7"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1101d667-087b-4b96-bcae-c1c4d9e129db"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a756269e-60bf-46b5-ab5f-a90ba04bfb7d"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b6f02257-431c-4f49-b6bf-a7d2e523ee0b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ad74ce6f-c9e8-4130-be53-61e73cad057f"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("369bc41e-8a8e-4f98-8fa6-1a7d805a0c57"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("95e2ffd2-ff4f-4408-b9c0-ee78eba05a74"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5a30e6ef-3047-4bfd-b6f9-98f2c6829d32"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("64930d87-d819-4e53-9a43-ba9781a5d88e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("60c45917-63b5-460e-b30b-e37d4fd7fb83"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ca414129-6658-46a4-9708-971f73cc3616"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("19f89ed0-b319-44dd-a6a3-1c7055ede531"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("71d718fe-e626-40e1-97b8-e28c4eb561da"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4868206d-e067-4ced-816e-1046f02c0b9d"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("1f26625d-e01d-42d8-941a-56ea6ecd5cd4"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5f10fc96-64f1-4fb5-a750-9348766590a3"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a66a7d3a-8eeb-4c51-b540-bf2cc2738cf1"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4bb334c7-5d3b-4e61-8563-82dfdede7d5c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("26e9444a-002c-4435-b105-8e1395bd38fa"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("dcbfbc9f-6d43-4c39-9a5f-8e5d6381e039"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8f28d5b3-0901-4581-9e9f-3bb72152b391"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c240ff63-f2c1-4abc-b52e-d1563af091c5"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("48fd7f3e-05f3-46c5-95c9-eceff844e59c"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("aff2e6b5-7e68-41da-bca0-d7bda6576c3c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("9110330a-941c-4b7d-92b0-ed8ae8523d81"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2006bf3b-213e-43ba-9411-38e51925f1f5"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("61b3a28b-419c-4170-84f8-e890a725a728"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("fb64710e-e858-49a1-87f8-3597b46cf973"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("687090a2-4066-4466-a66f-f0354a1420a5"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("3cea29f7-b21d-4105-a0bc-95c622ef9e2b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("63aac367-9ac5-4dc9-ae96-14d860a03f19"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ab27dedc-1b46-4844-b02d-e678b8c7621f"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e68f3a0f-3f56-4f1a-8bc8-9a7f3279004a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("12c081a3-62a7-4656-b620-f5b53aa65a38"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("442588ef-c63f-4137-bd7c-dcc787ce082b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("375c0328-eeaf-4f7c-9a1e-7e6d2fd30215"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("87007bab-56de-4301-9592-145c0e595f22"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("600b6fac-1742-43e4-a6d1-2c72007e7f2b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("8ec4e221-bb3b-4936-9da5-b81ee5d5c12a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("155fb4e6-7bf0-4ee8-8c70-983c6bb31a55"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("f4fbfc08-593d-4f47-b17f-c967749c646a"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("648a605a-5011-4f34-8aa8-4877ad303e54"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4fc46ee2-c739-45ea-a15b-1b718141756e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("39cee64c-886a-4a0a-91a3-42d0afc419a5"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c415a761-7a91-48e2-a742-727a174161f7"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c1d79d3c-5a74-46ac-9f0d-32ed6be5695c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("1985c61c-6d23-4cac-8464-731d4ac9c3c9"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("ee5d7c3a-5e00-4f10-a75b-6a9175f9fb55"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("54c8ba52-ef3b-41af-892e-829d49bbdbcb"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("0d2884bf-3bf2-433e-9742-2a6ccbc8ac1b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("58e6df3c-a5b5-42aa-91e3-ff6086fb2db6"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("19f8d096-00f2-432b-bb24-4e84d462a6f2"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("043bc03e-ff53-4754-93f8-87851b55d1ca"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("1c458204-e5a2-432d-bfe3-fae6fcd7c218"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("1e0ff314-da46-40c8-b9f7-19fce67d753e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("a54b0471-287c-4c32-b5ce-eff67f0efd09"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("716f2b3d-0c09-480e-a4ad-bbbf12f77016"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4da4784e-e863-4f6f-b95b-5123246ef314"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("238d626d-2f2f-434f-a380-2c46d43bf8fd"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("d9a8fa29-1bdf-4529-a157-799b89c51669"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("eae9323a-1757-4bfa-b502-69ba792d5198"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("edb8e025-c60f-4adf-9a5b-c1ace73cb7aa"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("ca17343f-26ca-4922-a036-bffb456918f0"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("c0c0381d-953f-42fa-a3f7-75d52b37366c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a8cc027b-1c82-4b7a-b646-fbcaa609fe6e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("e4ae3a64-3dbb-4443-9263-344bff0bcc0b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c9350533-35db-49de-94ed-65a371e43248"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("455e5219-148f-4493-a484-fc9eed732bfc"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("e3eb10f1-ed77-4a3b-8157-af9612eed256"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9ee289f6-00f9-4d49-9724-53d52ee555ae"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a98b4822-0959-414c-9497-97bc42d05b58"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4be33054-28d0-4b6c-92ab-87f0a245a327"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("f129fa8b-a508-4af8-8c61-bb315d4f88e2"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("5db7f5ab-4b98-4df7-82bd-b7329401f915"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("775f8028-8524-4603-a2f9-1a0e5ba23230"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("71e16121-6d38-413a-8dbd-ca8bbe000a35"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("a2ab83c3-1681-47b2-a95d-250f4c12268b"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("9c93db4c-a6e1-43ea-8b95-028f10196e2c"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c6024252-cae3-49bc-9808-b1ecced933dd"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("237dc3bb-1bc5-4443-8ca4-6e870243503b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0f3f39be-71ad-4569-9432-5bed9a698fa7"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("4db59d81-0d2c-46de-9e68-0fee7dd4a1b9"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("6af4f908-1442-4064-92f9-b8642b5020e5"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("f0f96b1f-4371-426b-8ebb-dfb06ddaf40e"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("0b4712a8-c875-49b7-a001-3a7283f1c87e"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("b2a2bb11-01c3-4907-adee-67b66c45c6d6"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("2d654848-8ec7-470a-8216-b4510a2ed262"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("89dc88f4-5fc6-48da-8c55-3dffb560548b"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("4965db90-4179-4297-a421-5c1ea8e4fc50"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("2c6edac6-087b-49de-bf43-371393da0409"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("c12d19b9-f7fa-4819-b064-bec9d8a00fa4"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         },
                         new
                         {
-                            WorkInventoryId = new Guid("722237f9-bf1f-4a49-a447-2395ee181795"),
-                            EditionId = new Guid("46763933-aaf9-4bd6-921d-bdf497c757fd")
+                            WorkInventoryId = new Guid("90c35989-5890-4a5b-82f4-43bfdb5c44d3"),
+                            EditionId = new Guid("db8d3de7-77d9-41bc-a7f5-a3137cdb5d4d")
                         });
                 });
 
@@ -4195,15 +4195,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            Id = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             Address = "456 İkinci Sokak, No: 15",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             CriticalLevelThreshold = 6,
                             Description = "Ana Kütüphane Şubesi, şehrin kalbindeki kitapseverler için bir buluşma noktasıdır.",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             MaxCheckoutDurationInDays = 10,
                             MaxCheckoutLimit = 7,
                             MinCheckoutDurationInDays = 4,
@@ -4215,15 +4215,15 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         },
                         new
                         {
-                            Id = new Guid("d49dc7e0-4d60-40ba-bd0d-4da81754ce14"),
+                            Id = new Guid("94b4c46b-ff79-4991-b76c-3080a7c0ab87"),
                             Address = "789 Üçüncü Bulvar, No: 23",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             CriticalLevelThreshold = 8,
                             Description = "Yıldızlar Kütüphanesi, gökyüzünü aşkın kitaplarla dolu bir yerdir.",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             MaxCheckoutDurationInDays = 14,
                             MaxCheckoutLimit = 10,
                             MinCheckoutDurationInDays = 3,
@@ -4252,18 +4252,18 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            MemberId = new Guid("c3181c17-0116-495b-9fd9-cda9ae7bca9c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d")
+                            MemberId = new Guid("0a52b851-58a9-470c-8105-6bf1041f2902"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994")
                         },
                         new
                         {
-                            MemberId = new Guid("650b5c5c-2833-4539-805b-c055e87ae21e"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d")
+                            MemberId = new Guid("f8010f1f-827e-49bd-b8b6-a928708d754c"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994")
                         },
                         new
                         {
-                            MemberId = new Guid("650b5c5c-2833-4539-805b-c055e87ae21e"),
-                            LibraryBranchId = new Guid("d49dc7e0-4d60-40ba-bd0d-4da81754ce14")
+                            MemberId = new Guid("f8010f1f-827e-49bd-b8b6-a928708d754c"),
+                            LibraryBranchId = new Guid("94b4c46b-ff79-4991-b76c-3080a7c0ab87")
                         });
                 });
 
@@ -4398,47 +4398,47 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("c3181c17-0116-495b-9fd9-cda9ae7bca9c"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("0a52b851-58a9-470c-8105-6bf1041f2902"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             ExtensionDurationInDays = 7,
                             Gender = "Male",
                             HasPenalty = false,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = true,
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             MaxLateReturnsAllowed = 3,
                             MemberType = "Adult",
-                            MembershipDate = new DateTime(2024, 5, 1, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(6804),
+                            MembershipDate = new DateTime(2024, 5, 1, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6335),
                             MembershipStatus = "Active",
                             NumberOfLateReturns = 0,
                             Occupation = "Software Engineer",
                             PenaltyDurationInDays = 0,
-                            UserId = new Guid("8624b610-5f17-4317-b237-e25895f13ec4")
+                            UserId = new Guid("fe2c853b-7b4d-4aca-95f4-971be25a9ab6")
                         },
                         new
                         {
-                            Id = new Guid("650b5c5c-2833-4539-805b-c055e87ae21e"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("f8010f1f-827e-49bd-b8b6-a928708d754c"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             ExtensionDurationInDays = 0,
                             Gender = "Female",
                             HasPenalty = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsExtensionAllowed = false,
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             MaxLateReturnsAllowed = 3,
                             MemberType = "Teacher",
-                            MembershipDate = new DateTime(2024, 5, 1, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(6810),
+                            MembershipDate = new DateTime(2024, 5, 1, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6340),
                             MembershipStatus = "Active",
                             NumberOfLateReturns = 2,
                             Occupation = "Teacher",
                             PenaltyDurationInDays = 7,
-                            UserId = new Guid("cd806e7b-dd6a-4920-b793-f8b492aeca18")
+                            UserId = new Guid("0a3b5daa-af78-422d-8818-d03a0f4bd5e7")
                         });
                 });
 
@@ -4521,46 +4521,46 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             Name = "Shelf 1"
                         },
                         new
                         {
-                            Id = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             Name = "Shelf 2"
                         },
                         new
                         {
-                            Id = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             Name = "Shelf 3"
                         },
                         new
                         {
-                            Id = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             Name = "Shelf 4"
                         });
                 });
@@ -4629,19 +4629,19 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("f0290ada-2668-48af-898c-a87a2cb14f28"),
+                            Id = new Guid("334b40cf-ef4e-4ace-a4b4-4b05aace6a1a"),
                             Address = "Employee Address",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
-                            EmploymentDate = new DateTime(2024, 5, 1, 18, 7, 25, 121, DateTimeKind.Local).AddTicks(6846),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
+                            EmploymentDate = new DateTime(2024, 5, 1, 21, 26, 4, 458, DateTimeKind.Local).AddTicks(6379),
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFullTime = true,
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             Phone = "+905553331122",
                             Salary = 3000.00m,
-                            UserId = new Guid("3d13b95f-0743-48e9-84f8-4b2ae1b93b3f")
+                            UserId = new Guid("6c4e4ce0-be88-4442-ad7a-091a6bee3547")
                         });
                 });
 
@@ -4771,13 +4771,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            AuthorId = new Guid("5d80ecd1-a9ad-4d49-a44e-1eae7e588d29"),
+                            Id = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            AuthorId = new Guid("22297362-649f-4473-9df1-8ae1ffaf6c3e"),
                             CoverImageUrl = "https://m.media-amazon.com/images/I/81q77Q39nEL._SY385_.jpg",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             DeweyCode = "800",
-                            GenreId = new Guid("10a8c77d-eb06-4b02-b1e4-c753c8aece0a"),
+                            GenreId = new Guid("ee22b6e0-4f38-496b-aa86-2a4e370bf098"),
                             HasTagPrinted = false,
                             ISBN = "9781408855652",
                             IsApproved = true,
@@ -4785,12 +4785,12 @@ namespace LibraryTrackingApp.Persistence.Migrations
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsFeatured = true,
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            LibraryBranchId = new Guid("f1ea5c5a-ede8-42e1-8f59-67d70b8e486d"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            LibraryBranchId = new Guid("3f2b9227-e53c-49df-b934-7f4c97e2f994"),
                             OriginalPublicationDate = new DateTime(1997, 6, 26, 0, 0, 0, 0, DateTimeKind.Unspecified),
                             PageCount = 352,
                             PublicationDate = new DateTime(1, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            PublisherId = new Guid("7906d383-58dd-49de-bade-fc51049ddf16"),
+                            PublisherId = new Guid("ff3a6541-3074-48bf-a3e5-6e2405747224"),
                             Summary = "Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive.\r\nAddressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle.\r\nThen, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin!",
                             Title = "Harry Potter and the Philosopher's Stone",
                             WorkFormat = "PrintedBook",
@@ -4816,18 +4816,18 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            TagId = new Guid("68eeec58-9d3d-496f-9ad4-affdbc3bc60d")
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            TagId = new Guid("1bc39e57-1ba9-4fd4-ab56-4fa57b745cfe")
                         },
                         new
                         {
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            TagId = new Guid("def21e12-d2e0-41f0-a73c-d1d905a3b0bd")
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            TagId = new Guid("a17ee5ac-7ad0-407d-b6e7-a5e0113a9928")
                         },
                         new
                         {
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
-                            TagId = new Guid("eb1090fa-ac84-4433-a1d0-74311bbc4ffa")
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433"),
+                            TagId = new Guid("b05891b6-9e81-4752-b423-59de18424e1c")
                         });
                 });
 
@@ -4878,243 +4878,243 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
+                            Id = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 1",
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2")
                         },
                         new
                         {
-                            Id = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
+                            Id = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 2",
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2")
                         },
                         new
                         {
-                            Id = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
+                            Id = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 3",
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2")
                         },
                         new
                         {
-                            Id = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
+                            Id = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 4",
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2")
                         },
                         new
                         {
-                            Id = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
+                            Id = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 5",
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2")
                         },
                         new
                         {
-                            Id = new Guid("c2ef6902-83c7-4875-99c3-e8b7e2e09627"),
+                            Id = new Guid("07f406f3-1dcf-4526-9c3c-17722e16ed13"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 1",
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087")
                         },
                         new
                         {
-                            Id = new Guid("c09c40ee-cced-44f5-ba18-ca305c2a5179"),
+                            Id = new Guid("94e3c932-ae28-40b1-b8be-013e14496614"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 2",
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087")
                         },
                         new
                         {
-                            Id = new Guid("18c3f44e-ff44-469d-bb24-7a6c2c8985f9"),
+                            Id = new Guid("36d29d09-5463-48ff-b95d-c079539126cd"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 3",
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087")
                         },
                         new
                         {
-                            Id = new Guid("3d95da36-43ef-4e70-a458-d0a182e66dcf"),
+                            Id = new Guid("e9151013-0bf2-4f09-8164-231ccae06200"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 4",
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087")
                         },
                         new
                         {
-                            Id = new Guid("a5e147ca-a189-4586-b415-db5d0775baf1"),
+                            Id = new Guid("5712d335-e2dc-4b22-a810-4325f00fa0de"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 5",
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087")
                         },
                         new
                         {
-                            Id = new Guid("7c2fa5c6-acb6-4e69-ba07-9bf459d9c64b"),
+                            Id = new Guid("6e643751-d86b-4239-89ab-338bd89373ed"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 1",
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084")
                         },
                         new
                         {
-                            Id = new Guid("d6f7f24d-2be7-446d-a072-ec78f3eed5ae"),
+                            Id = new Guid("2eda58c8-de7f-4db5-8064-5f6d6eb36eea"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 2",
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084")
                         },
                         new
                         {
-                            Id = new Guid("9375fe2c-da0a-4f13-b596-33796fdae9a3"),
+                            Id = new Guid("09d87f52-c979-4a24-b2b4-98e56d5a8703"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 3",
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084")
                         },
                         new
                         {
-                            Id = new Guid("8b9c4f77-9fcc-4184-a99b-df2489db71d6"),
+                            Id = new Guid("2e6b91bc-b359-41b5-ae61-49febf49ed4c"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 4",
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084")
                         },
                         new
                         {
-                            Id = new Guid("c39b6b84-b94c-476d-9846-8d31744fa954"),
+                            Id = new Guid("0e21d166-ac26-44d3-85d9-cf1f19c468a5"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 5",
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084")
                         },
                         new
                         {
-                            Id = new Guid("66f04430-c2f9-45fb-8afc-7874bf3b85f3"),
+                            Id = new Guid("5325803b-4625-43a6-8e8b-105e945df512"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 1",
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8")
                         },
                         new
                         {
-                            Id = new Guid("c295011e-9aea-48ef-91ea-f902fb6382e0"),
+                            Id = new Guid("30c50ea5-9b59-4fc9-9786-5e56586663b4"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 2",
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8")
                         },
                         new
                         {
-                            Id = new Guid("323e9041-7f8a-4346-9296-a3863f9ab1c1"),
+                            Id = new Guid("f6efa15e-ba38-4be2-80fc-d551c43cf011"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 3",
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8")
                         },
                         new
                         {
-                            Id = new Guid("e5d805dd-f169-45f1-a3c5-99311c4c7016"),
+                            Id = new Guid("7f7cac21-dbbc-4f76-9de2-54cbaabdffa8"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 4",
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8")
                         },
                         new
                         {
-                            Id = new Guid("e40a36bb-af73-4ade-9b1f-7ef682b1ae31"),
+                            Id = new Guid("85f71474-5376-4ccd-a447-df9d783720c4"),
                             BookInventoryItemId = new Guid("00000000-0000-0000-0000-000000000000"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Compartment 5",
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8")
                         });
                 });
 
@@ -5159,24 +5159,24 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("10a8c77d-eb06-4b02-b1e4-c753c8aece0a"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("ee22b6e0-4f38-496b-aa86-2a4e370bf098"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsActive = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Fantasy"
                         },
                         new
                         {
-                            Id = new Guid("6b9148b9-73bc-42aa-b77b-f92f93d3c6d1"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("51b706db-7fdc-45e4-87a7-2e21823ce940"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsActive = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Adventure"
                         });
                 });
@@ -5188,9 +5188,6 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<Guid?>("BookCompartmentId")
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<Guid>("BookId")
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("BookNumber")
@@ -5248,3419 +5245,3422 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.Property<Guid?>("ShelfId")
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("WorkCatalogId")
+                        .HasColumnType("uniqueidentifier");
+
                     b.HasKey("Id");
 
                     b.HasIndex("BookCompartmentId");
-
-                    b.HasIndex("BookId");
 
                     b.HasIndex("BookNumber")
                         .IsUnique();
 
                     b.HasIndex("ShelfId");
 
+                    b.HasIndex("WorkCatalogId");
+
                     b.ToTable("WorkInventories", "lm");
 
                     b.HasData(
                         new
                         {
-                            Id = new Guid("4fc572a4-3950-4922-8d9b-bbcdcd077f4d"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("bf9224dc-2166-4638-a681-467ec5622124"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-1",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("792b78bb-9679-445b-8892-21e85e36c3da"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c8187025-1c5c-4455-80dc-d681b6fd0eae"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-2",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0c95266e-2d54-49d0-b6a8-a727af27165c"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("66e6c10a-f39d-4d59-9839-11bf3e71552c"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-3",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b3a0a72c-f3d8-4fd4-bb35-ac06ab8e3235"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4bf8a285-ecee-4786-938b-c22e3c7843cf"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-4",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f4012e1f-9090-4e05-8770-9c2c75dd3d10"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9d58ebc2-af8a-4ceb-bbb8-fd069e75dfcd"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-5",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("1674c3f6-0cfb-49ac-9548-811c0fbb5b66"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2c030a58-681c-495a-934d-ad106df0eaae"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-6",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("8c2e5db4-ae68-480f-84cb-7b8a4824a0dc"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("847331b6-5cdf-4162-8703-9e771f730d64"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-7",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c3047815-83f4-4e6a-89b6-f73398d664f2"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("fbf2b975-ed37-4b0e-b793-9ec3547a84e5"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-8",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("91a05d83-cd18-485d-8ef7-2d5f685cf0a9"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0c1bbd50-fc3a-4d53-a18f-816aa403dde0"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-9",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0f1f0aff-f449-43e8-8fbb-2e53b38f30e2"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("f514cdc8-7545-4f7e-a00c-e2f87d72e603"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-10",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f285ea90-73fd-4e06-bb8d-22eb1943ca59"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ee43063b-2a30-4e7b-a024-d0c25e803a81"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-11",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a3644880-b624-4d8d-a05e-89f37bc0e3cb"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2c2aa99e-b59b-42e8-b5e0-747e5638f026"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-12",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("775726fe-2aa3-48df-9e93-866c19bd996a"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("d5c9d9bf-7604-46e9-82ad-264eb71245f8"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-13",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("47a6643c-23bc-4006-b43f-10cef807ceb6"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4a5b5dd6-0378-4e7b-a643-4e5aebbedbfc"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-14",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b8e110a5-8a33-42c0-9202-c2d1b0092793"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("46bef8fe-970a-434a-b86b-3144201495ea"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-15",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("8ed128ac-38ef-4570-84a3-6546d06d1d0f"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("38e6cdfc-4c1d-411f-8f75-ef18b06520af"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-16",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b7c931c5-98b4-4a4c-9bd6-7c959a6cd789"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("07223d49-cfee-4117-884f-c05ab090dd6e"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-17",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c66d3bc7-3989-4973-80c8-98d5d0cfd0c3"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("5d6ac73d-8c14-4d84-8f9e-f4932bcf58c2"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-18",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a82214b3-d412-4dff-8663-7b8db391ed4d"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c6212e97-2bed-4852-990b-f31438b7f98a"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-19",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("6941f0b4-45d4-4cfc-bc74-a14261ceb993"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("83106ffe-a658-40b7-91fe-fe2bf8ed882d"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-20",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a4a7c03e-9a1c-48d1-a847-d6e75cce66e2"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("dc7adfb9-232c-43ca-95c6-f3fbb8136164"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-21",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b468ebf5-e900-49a4-8ff1-d11e8074486e"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c152dade-e413-47d6-8c1d-2ed9b1e23a42"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-22",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("835df545-19b5-465a-b318-265c1a2b9100"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("125d1502-8218-4487-bd82-66c750d6d725"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-23",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("6cb3aad1-356b-4435-8753-e57b498ca4c4"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("3d2ebd46-da0d-42d0-bb02-ab09f092115d"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-24",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("afa24be7-b23a-4e12-87b7-a226a2fc8512"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e4c6d766-57cc-42e8-b488-4ba80e520a3a"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-25",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("98fea8eb-9e8f-4eb1-a256-0553a947478a"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c7011e0c-915e-46bf-9ec9-694c1ad0956b"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-26",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("e7f21b0c-2315-4f1a-81f4-1c8d4b6a8fe6"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0f449291-d7f7-47e5-9b8e-e737231354dc"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-27",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("cafd5bfd-18ee-4b57-b522-3bee56c23639"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("d4a2c18e-9255-489e-a588-26f2dd7c6255"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-28",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0a1df5f0-652c-4af8-92f7-c6451fc02601"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("329743b1-9cea-437e-bf5c-7561dea58415"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-29",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ff86c0c3-29ce-4d44-8541-c965b5a6a00f"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("cc638689-6fcf-483d-9fe0-6913913421cc"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-30",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("8e0c06df-c4fe-46b2-9137-db57f8bad3b4"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e55d91a3-2953-47b6-b05f-df5c6502cb32"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-31",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("d73bf0be-dea2-4cb4-a2a3-d5e2da30d91c"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4541ace7-bb80-4e7a-a25c-6103c3c58193"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-32",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("2e335d71-c894-4fed-897a-f44d31dc3bd3"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("313d1383-60a8-40fa-aebf-c4ba800bcd4c"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-33",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("065711d8-c1b1-4cb5-a4f4-34cc54ac3648"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e5091fba-9732-4083-a7cd-b2e270f749ce"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-34",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9a3bf4ba-98a0-441c-9c88-ef567939ac5d"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2765a047-4a05-48ca-b705-56808b85665f"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-35",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f31ee530-2706-4ab2-9583-616cdf0b86b2"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("998df2b0-fcdb-42b5-8af4-78621b3f4225"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-36",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("12e736b2-368d-4fe7-9191-995f6c12eb52"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("da6227dd-7179-454c-b654-f267622455ae"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-37",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("234729bc-e29d-495e-9d1b-87fb236d8a5b"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("21fd3b87-b44e-4577-abb7-09db603a5eb6"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-38",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ba704ad5-3701-41bf-8c0b-73b4b0ead2a0"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("787aa6c7-eaf2-4c03-8540-231a7cb41fc0"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-39",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b413c7b5-8d32-4ae5-93a9-67eef825c3e9"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a765d0db-82f1-44c1-995b-f0c85b5bba41"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-40",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("57510cd7-737b-4e1c-897b-d3f498acb429"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("58ab03bd-f6d4-4f1a-baf5-9185733821c3"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-41",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9477e69d-e096-4588-ac15-d795aaa8310c"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e3d733f3-a977-4b2d-8624-87370fdeed77"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-42",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f0ee7d6b-3118-4fa8-a75f-67386a637489"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9e1f878f-8e0d-4d54-a770-e643c609b0e4"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-43",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("dd34dadd-cc2d-43a5-9d9a-5aa6deefefc7"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("3f488e87-fca4-4c56-aba0-00c3b2bab605"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-44",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a970d5c2-5468-47d6-9088-27422ff1ea43"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c107bf5a-047b-4927-af16-7f4a7a10fbc2"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-45",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("1a4ae726-26c9-42cf-9f18-018fba6bd315"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4f308676-f1a4-4f26-bff7-f6b1752fd35c"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-46",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("d2c9b079-f973-4894-afbd-605cb1ca5aa9"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("84520422-ecd8-4f0a-aa47-fcd730c6fb05"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-47",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("78167945-078c-4a60-b1c3-841f3709ccac"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("f7d4840f-cb8b-4673-b26d-ed2791bcefa4"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-48",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("63143432-e40b-4805-8ef4-bf9df37748e4"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("7398aed3-65c8-4425-bdf6-41b8c13f49c0"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-49",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c21b7663-ab35-4e26-93a0-e3ee871fa7fa"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2d226d0d-61ff-4a19-85ed-3c75f1cc3cdc"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-50",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4a5eb835-0ca8-453b-a790-e2404671ff42")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("98e24329-6d10-4264-b90b-dc0188ef74e2"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("41c8a235-28a6-47df-93ad-db758ca47015"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("fb0eb65c-4e48-45af-ae2c-890ab3379483"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-51",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("e8ac4309-802b-4093-b051-783721e3fa4d"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4655e0ab-311c-4876-9327-35a4f6b11dbe"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-52",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f0bcf8ad-d01b-4f7a-ad19-614a3e51a8db"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9b0b1ee0-9af9-464b-85e9-b6a68b8ead08"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-53",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("131fa718-b850-46eb-b0fd-cece0e420875"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("45f2f538-c362-4157-a73c-9fe2f3f0a109"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-54",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("e407e004-c38d-47d5-99b7-ddcbf7c9eb14"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("611c88d5-7d70-42b4-9508-591568ab7df4"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-55",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("791ddfbb-216f-4ace-801b-86381b4ab75d"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("b51e0f50-cf53-4bc6-b0eb-b7bdd40c7224"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-56",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a76dca57-69e6-4bda-9f2d-6c98d27cb1ec"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("d23c8efa-a2de-40a4-81d4-55caf85aedcf"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-57",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c6aa873d-b8f6-4159-a3c3-b7749608cc8e"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("07636ab9-a8af-4496-95b0-f62a3e96cf69"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-58",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("73649381-e9b7-43a3-94a7-9eb547645806"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("f4a8131d-a39c-4e73-9082-3c37205e88f3"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-59",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("7e6bec3b-aa8d-4085-b925-1c02c1a69b98"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8d6c7ddc-b585-44c9-bdcf-4f516ac00170"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-60",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ec5c1c11-50df-47d6-af0c-d4259f878d77"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8e9b0804-5cac-42bf-85eb-cb9fe50d6108"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-61",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f3482ec4-ffe6-4cec-8b31-70c114e6544a"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("72ad3299-3ed5-487d-b256-9c2d3f91c41a"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-62",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0e1a8071-7c31-410d-b38b-83330c55b044"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("75f0496d-d1bf-459a-bce7-2246da53b609"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-63",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a5c583de-e031-41b9-8f38-3491050ae321"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("09ca92ab-3c1f-4605-9f16-e80112516d8d"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-64",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a1597b83-643a-40dc-8b47-243fb43c6584"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("82255f85-e046-4644-9090-88dacb3e9a90"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-65",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("75146d89-a464-44f1-ae95-bcbdc3b943de"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e75c12a0-bae8-4186-87a1-f194de5ec477"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-66",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("24903cd7-b7a6-47ee-be62-f001a975cbe0"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("da3beeec-0bf7-4f99-9fe9-4a664117c541"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-67",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("af815875-898d-4501-b956-425737101725"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("6adde0ab-5077-47f6-99fc-c67321ffd1b6"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-68",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("2f8b7551-8ac8-467b-8e2e-ed4ff0b92786"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("48ba8fa4-96a6-4293-b10a-e9c146d59d5e"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-69",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("8f7ec91d-53c5-4727-8fbc-c81fa362f584"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("93f1b876-e1ff-4173-8361-4013d98d5c4b"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-70",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("fd0e2552-c4d7-4686-b951-1d0840ccd7e2"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a60fa37b-ed2d-4a9c-8563-683f7e17ad28"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-71",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0dbac186-e155-4aff-bbce-fd62c0eaab1c"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("3bb06b4d-84a8-4266-917f-dc98b25d6764"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-72",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("034a9188-e681-422c-b1bc-627366d4f552"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("6053e92f-ee7a-45ee-b4da-af18fd486e68"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-73",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("00e107c6-a505-4840-9062-c51bf8f2e6eb"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("49eb307e-4a3f-43c1-bdaf-da7ee8020b7f"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-74",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("cfb5547a-8e5c-47b0-85b2-0470ab1665fe"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2010f496-ba1c-4bac-b081-fb2a37bb2579"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-75",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ae660485-06fa-4cba-b856-972a1fa7225e"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("61106be8-77f6-44a2-887a-6bde8eccf73b"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-76",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("7fa25c63-4d96-4e8c-83f8-e6ed6241a193"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("7d28da3e-3bce-4f92-beb8-52621c8a4ddf"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-77",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4d32715c-1dd9-4dda-b7fe-f36876197eb7"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8b978676-ec06-4985-9a24-2859e588a0c5"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-78",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c5878d16-6f89-4950-9512-3c9a22d2390c"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0eb12faa-e79a-41ec-aeb1-d86734554997"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-79",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f2268ce4-adb1-4185-8059-72aa2de7faa6"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("b85694b4-fa61-4945-9ba3-0e73956c3812"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-80",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("09928f85-004f-4b7f-8168-1af079e557d7"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("83493076-412e-45b0-8ad9-9c1bb645f384"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-81",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("bbe543ee-1736-49d3-a99a-39d60510873b"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ff6c896d-800d-4087-a965-fa31e013227a"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-82",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("1aa1a4d7-c1d1-4249-9146-46ee040e8bd5"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("5fc9be19-b651-454e-9b0c-c2b761522121"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-83",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("12f438df-64e2-45bb-a379-568e3500933a"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("16ac8b0c-a9f4-4fe3-bd7b-a925ce89bdc1"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-84",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f4d0dce8-27de-42ce-bb30-edb1ec650090"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("09004dcf-38ce-49ae-8ef2-8bbf3836fafb"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-85",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("301b3944-d368-42f7-95ea-93acfd8182aa"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("5287fc76-6dea-4eae-9fbb-1d91cfe70c6b"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-86",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("d46faf8e-ac78-439a-af5f-982876451809"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c9efd7a4-99a4-4124-bf45-990781471032"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-87",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("544b6598-9c9c-4974-ac8d-436b0374e85f"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("6ee5506e-1a3b-43ea-938f-ceccff0fadd2"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-88",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("bdbb5035-9296-449f-8031-0416f67330d3"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("830a85a3-2975-47d0-9c05-32cc05b4f05e"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-89",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("aacc5e3b-4253-4631-aeaf-9b3a7c1e4910"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("223fe8b4-2c8e-4566-ad25-7bc2f2a53846"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-90",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("17bf37bc-9e03-4ef4-ba59-8cc7ece5e8d4"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("bef79182-8380-4587-83cc-e6e7bcf6eb48"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-91",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("d535450a-f276-494c-bfe5-f4ef690cb7e1"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("b186b8c6-7e39-4fdf-8e1e-38b29ec4f0cb"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-92",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("183e0cc3-6cfb-4cfb-b436-0280030660dc"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8e35a916-8be3-4837-9673-6d77029685e1"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-93",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("41fe867d-54db-4b65-b44d-e1d6bb008acf"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("37625e49-6fb9-4478-a1c8-6854e7c9acfc"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-94",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("fd0d0d0f-8714-4007-8f61-e01097aeb176"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("61f9738b-f8e6-4829-be2f-804bb7fff40e"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-95",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("22be3bfa-c2f4-45fc-a18c-fb2ea2dd3810"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9867a970-8f20-4537-bfdc-0d060af33dbf"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-96",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("04757b70-5a00-4a66-a024-5be7c9d3738b"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ef9af11d-d63e-4617-8a10-ed86f049f022"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-97",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("549b349a-2f08-4f11-9b6a-9c9b411785a8"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2e3fe1b6-94a4-4c4d-8e3e-373d90fcdcc6"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-98",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0c2e8b24-5fd4-4aa0-b002-7bbbf2300bb5"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("cab10885-2d9c-48ae-9306-f9d07290953f"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-99",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9e8fd25a-a602-47e9-913a-94b413d3eb0a"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("6deb362a-690d-47f7-a312-c965e9b6c90d"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-100",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("f66c5b81-4fdd-4bea-951e-a3fbd16b9d3b")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("4541075b-5ca9-4569-8748-3a5fd17ab087"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9c3190c9-6a1b-4b98-91f5-cb22a5ab92a8"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("5815a21a-214b-484a-a54b-19ff31445e6d"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-101",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0d568200-ac80-45be-8c75-399b9471ca02"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("27e86885-925d-4d6f-b897-810816de7b27"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-102",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("33ac04b5-9382-48b4-99e1-a8a89bc36ba4"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("55eccf50-44c1-4e70-b323-1e82aab13037"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-103",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("bc369b8b-ad13-4fce-a4d8-0fa3af33677b"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("179efc4d-cc7b-47ac-b440-f2cf907de5b3"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-104",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4288761b-be53-4abc-b9f1-adce58973489"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("785966d6-b3a8-43ac-b292-8fc5654d4b41"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-105",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("de28a8ba-132b-48d0-a6aa-390754f06838"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("33017d8e-8731-40d2-af5a-9b39a8b1abb6"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-106",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("2093209a-8898-4b1f-bbe3-5de8f1991bbb"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e810fe6c-03fe-4895-8b59-9182cd6a41bb"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-107",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a1429e97-5a23-4cb9-989a-c44f1940c839"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("160955cd-316d-4cad-ac47-e6739d62f76c"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-108",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("95f96325-16c6-4cb9-8217-4fd20f8e2ec1"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("fd0be251-42b7-4117-9af6-d554974e4f84"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-109",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4e96eb2d-ac3c-4392-b3e0-4af9efdd2a47"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ab0f3925-12a5-43db-b8a8-03178dbf6488"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-110",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("7e50a191-016f-46f6-8d4b-e86520327666"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("358250c8-937c-4f78-8e9a-37d31819379d"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-111",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("222ef5b7-c98a-4c25-81aa-730193249108"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0a88304d-1334-4171-aa90-4137abc33698"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-112",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9a8fbf3e-b11e-438c-a299-d3ae7f43b9af"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8ae98fc3-75f3-463a-a3f3-427cd7542b6b"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-113",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4d80d5d9-9a1d-4325-a9b2-98fe3ec8513a"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("44be6661-925d-480c-a803-f341d5d300ab"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-114",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b9bf432c-8317-432c-b737-74fbc7fe2174"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("1b04e7e6-1e2a-40b0-af1b-81e3c3384e8e"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-115",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0f5e00a8-dc5d-4b38-b26c-96905900b232"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2b97e25d-97ba-402a-a002-efc9d2bf365b"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-116",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("1454eb56-d435-4610-b23c-ee40bd437215"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("32a1b88b-feb2-4733-9024-b377e3b62a23"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-117",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f25c2c9e-5aa0-4c96-bbab-b78be8a11340"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a42e6bfd-d89f-4627-8cc6-ac20a1c34d44"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-118",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0cb6af86-d4f3-4e61-9a4d-9124379644da"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9120f4b7-1083-446e-8b97-86a7306bbc12"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-119",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("7ad48c24-cb83-451b-91ae-f9e7f70195fd"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("082a66ec-b26a-4d2b-9c4b-ee6a42b40e73"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-120",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("03e55897-2a15-49d2-ad76-f906e5c7f6e9"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8b5e1ec1-1d05-4b80-8627-b1652497a232"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-121",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("89655a9e-48e3-46c4-909f-47abe889b643"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0d928aec-70bf-4803-824d-0ffa8b8df959"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-122",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("44ffb661-8d90-4031-a984-a661733bb063"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("08b8505b-f898-4143-b6b0-a086ada7e099"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-123",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("3e6cdab7-7a8e-45c9-8e53-020b54248a06"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4f566db2-a4f1-4de4-af2b-c94403a571d0"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-124",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("2cbb1298-f828-40f4-9d11-1a794606da97"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2dc37efb-0a8e-4abe-ad8b-2d46e4e2f6bc"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-125",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("dde24248-d933-4811-ae4a-0639efa57150"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("5f9ccbb0-82de-4014-9e08-21f436cfad2c"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-126",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c1299cab-53ee-48ec-bad8-0e2daaabb72c"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9f688e9e-4fa1-41a8-a947-e9304839bdfe"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-127",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("3b3115e4-e493-4ea1-9406-01d656cd1189"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ec03856c-3460-4fff-91c9-3fe16e7e39cb"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-128",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9cd59022-9580-4a73-a21f-f2b217a75436"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2b771377-7611-493f-8ecf-4edf4ddd8f25"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-129",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("eea6569f-4485-4111-86cb-0b3d81684b32"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("49947dcc-91d9-4433-ab60-0f240dbceb92"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-130",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4af45f35-dcf6-4bcf-92a5-f6dc0a1ff6cc"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4af42d68-019f-4fe2-ba21-e33107ab3570"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-131",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("235303c7-8985-4ffb-962f-b182e718a8de"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("666cbf5c-f227-43c6-a5e4-0b46d3069f65"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-132",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("7326aca7-5041-438f-a0b4-9f56c520023a"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0459cf70-b1bd-4db9-81c7-84db786cd582"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-133",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("e6c82700-f8b7-407c-abad-a311a6ab7126"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("541a31e2-bb03-42be-95fd-dbbfa0125b4d"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-134",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("be372ccb-ddb0-4831-96cb-c3da7eb710e9"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("40ad12f4-4996-41cb-9111-156a47feff70"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-135",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("e2c0b5de-9db9-4320-be64-c831996714e5"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("377f6fc8-f087-43e1-9352-ec8341cc393e"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-136",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("d8ba923f-b2b2-4f52-97d3-607029250ec6"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a5f5b3d4-c3a6-4933-9f67-47dd6e24b1c5"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-137",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ab69c29f-ac7f-4357-b515-f34bc2993251"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("59a142a7-1033-4495-8785-d3dbd3907a37"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-138",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("919a33f8-0788-40db-a5a3-98d9b4abd172"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c54e1f56-c3e2-4113-9dc0-b83b56627ded"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-139",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("e512a5df-3ab9-42aa-b6c1-f2e345dd6427"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("689d05b4-0ce9-426a-a6b8-ee09f5027e21"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-140",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("bfe57479-bede-46f7-8241-b9a3901d7e35"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9f63c80a-2290-47b6-b702-f668e44ed8c0"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-141",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("d74ba646-5a55-4799-bff2-9f99070d3bba"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9cd41ddd-82c2-4ab5-b5ff-7a2ed6818fb4"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-142",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("725a7940-0cf8-4fdd-a7c8-2f75e9b3ff28"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("3558e621-f43f-488e-8c63-8b3fdc23492a"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-143",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("7d46e770-86d2-4bb6-b2c0-1a2179efece1"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("995d6ab1-9477-4b71-a236-ddbab6cef352"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-144",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("64ebdc42-f2be-47e0-87d0-b447174492f3"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("d5476484-68e7-4351-b2c9-11e5e79c458a"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-145",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("fa8b52a1-f8f6-45e0-aded-15e817fe23b9"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0df871bb-68f1-4d04-8310-cb611f922068"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-146",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("672b6b2a-d2e6-4364-a4b6-549bc2517834"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("70418e8e-ee78-4144-af39-1c973286eaaa"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-147",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("8d786851-3a43-41d0-80af-5487c3237693"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("b009309c-1420-4f63-9749-fd9978e32da2"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-148",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("3b7e0b1f-363f-417f-9b04-1639089ab476"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("213ce899-e1d5-4bee-801d-326e0aa9d090"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-149",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("fc364525-c09f-4dcb-a051-cad96f65fd1b"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("6cd687eb-df78-4538-a726-e3dd2d615f6f"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-150",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("72481c79-1d5d-4e93-b1d1-0f0545ec01fb")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("7cf757ac-c8c5-414f-bda8-296d49a20084"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ea565302-21f6-4379-a444-298d635eee74"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("18ef3409-4ed9-4501-8b38-f4e17938969a"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-151",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("5ac3d2ef-c4d2-4377-ae63-1d7286c0ff77"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("fd06bba9-f75c-4679-abe2-ce455ebaa86e"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-152",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("3fcc3b5b-d230-4433-bc7c-adbba9ebeac4"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2e7c41fc-6b85-4553-9b40-34e6f28a811a"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-153",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9f2a1d24-7e82-4c96-95ca-fc6b4447f45c"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("6a31ef9b-9fdc-4b26-bd1c-a3f87a06b8a7"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-154",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("1101d667-087b-4b96-bcae-c1c4d9e129db"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a756269e-60bf-46b5-ab5f-a90ba04bfb7d"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-155",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b6f02257-431c-4f49-b6bf-a7d2e523ee0b"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ad74ce6f-c9e8-4130-be53-61e73cad057f"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-156",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("369bc41e-8a8e-4f98-8fa6-1a7d805a0c57"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("95e2ffd2-ff4f-4408-b9c0-ee78eba05a74"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-157",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("5a30e6ef-3047-4bfd-b6f9-98f2c6829d32"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("64930d87-d819-4e53-9a43-ba9781a5d88e"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-158",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("60c45917-63b5-460e-b30b-e37d4fd7fb83"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ca414129-6658-46a4-9708-971f73cc3616"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-159",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("19f89ed0-b319-44dd-a6a3-1c7055ede531"),
-                            BookCompartmentId = new Guid("495bb669-1f9f-4f0d-8cc4-f2b0637032c5"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("71d718fe-e626-40e1-97b8-e28c4eb561da"),
+                            BookCompartmentId = new Guid("d11207c4-89c7-4e52-8376-e88e11a0984e"),
                             BookNumber = "HP-160",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4868206d-e067-4ced-816e-1046f02c0b9d"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("1f26625d-e01d-42d8-941a-56ea6ecd5cd4"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-161",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("5f10fc96-64f1-4fb5-a750-9348766590a3"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a66a7d3a-8eeb-4c51-b540-bf2cc2738cf1"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-162",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4bb334c7-5d3b-4e61-8563-82dfdede7d5c"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("26e9444a-002c-4435-b105-8e1395bd38fa"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-163",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("dcbfbc9f-6d43-4c39-9a5f-8e5d6381e039"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8f28d5b3-0901-4581-9e9f-3bb72152b391"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-164",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c240ff63-f2c1-4abc-b52e-d1563af091c5"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("48fd7f3e-05f3-46c5-95c9-eceff844e59c"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-165",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("aff2e6b5-7e68-41da-bca0-d7bda6576c3c"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("9110330a-941c-4b7d-92b0-ed8ae8523d81"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-166",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("2006bf3b-213e-43ba-9411-38e51925f1f5"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("61b3a28b-419c-4170-84f8-e890a725a728"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-167",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("fb64710e-e858-49a1-87f8-3597b46cf973"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("687090a2-4066-4466-a66f-f0354a1420a5"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-168",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("3cea29f7-b21d-4105-a0bc-95c622ef9e2b"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("63aac367-9ac5-4dc9-ae96-14d860a03f19"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-169",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ab27dedc-1b46-4844-b02d-e678b8c7621f"),
-                            BookCompartmentId = new Guid("d44937dd-2b8d-4cf9-ba10-cbdf458df0db"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e68f3a0f-3f56-4f1a-8bc8-9a7f3279004a"),
+                            BookCompartmentId = new Guid("36769ea7-0df0-4e74-aea2-25097aa929c1"),
                             BookNumber = "HP-170",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("12c081a3-62a7-4656-b620-f5b53aa65a38"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("442588ef-c63f-4137-bd7c-dcc787ce082b"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-171",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("375c0328-eeaf-4f7c-9a1e-7e6d2fd30215"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("87007bab-56de-4301-9592-145c0e595f22"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-172",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("600b6fac-1742-43e4-a6d1-2c72007e7f2b"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("8ec4e221-bb3b-4936-9da5-b81ee5d5c12a"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-173",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("155fb4e6-7bf0-4ee8-8c70-983c6bb31a55"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("f4fbfc08-593d-4f47-b17f-c967749c646a"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-174",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("648a605a-5011-4f34-8aa8-4877ad303e54"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4fc46ee2-c739-45ea-a15b-1b718141756e"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-175",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("39cee64c-886a-4a0a-91a3-42d0afc419a5"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c415a761-7a91-48e2-a742-727a174161f7"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-176",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c1d79d3c-5a74-46ac-9f0d-32ed6be5695c"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("1985c61c-6d23-4cac-8464-731d4ac9c3c9"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-177",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("ee5d7c3a-5e00-4f10-a75b-6a9175f9fb55"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("54c8ba52-ef3b-41af-892e-829d49bbdbcb"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-178",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("0d2884bf-3bf2-433e-9742-2a6ccbc8ac1b"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("58e6df3c-a5b5-42aa-91e3-ff6086fb2db6"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-179",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("19f8d096-00f2-432b-bb24-4e84d462a6f2"),
-                            BookCompartmentId = new Guid("7266fbd5-0e7e-4bd0-9794-efd4d4771bdf"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("043bc03e-ff53-4754-93f8-87851b55d1ca"),
+                            BookCompartmentId = new Guid("2579198f-ee45-46de-aca0-791b9339b0b4"),
                             BookNumber = "HP-180",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("1c458204-e5a2-432d-bfe3-fae6fcd7c218"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("1e0ff314-da46-40c8-b9f7-19fce67d753e"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-181",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("a54b0471-287c-4c32-b5ce-eff67f0efd09"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("716f2b3d-0c09-480e-a4ad-bbbf12f77016"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-182",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4da4784e-e863-4f6f-b95b-5123246ef314"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("238d626d-2f2f-434f-a380-2c46d43bf8fd"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-183",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("d9a8fa29-1bdf-4529-a157-799b89c51669"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("eae9323a-1757-4bfa-b502-69ba792d5198"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-184",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("edb8e025-c60f-4adf-9a5b-c1ace73cb7aa"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("ca17343f-26ca-4922-a036-bffb456918f0"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-185",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("c0c0381d-953f-42fa-a3f7-75d52b37366c"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a8cc027b-1c82-4b7a-b646-fbcaa609fe6e"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-186",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("e4ae3a64-3dbb-4443-9263-344bff0bcc0b"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c9350533-35db-49de-94ed-65a371e43248"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-187",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("455e5219-148f-4493-a484-fc9eed732bfc"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("e3eb10f1-ed77-4a3b-8157-af9612eed256"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-188",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9ee289f6-00f9-4d49-9724-53d52ee555ae"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a98b4822-0959-414c-9497-97bc42d05b58"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-189",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4be33054-28d0-4b6c-92ab-87f0a245a327"),
-                            BookCompartmentId = new Guid("8ad4bd9c-4085-4771-b3db-6f4697ec2fc2"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("f129fa8b-a508-4af8-8c61-bb315d4f88e2"),
+                            BookCompartmentId = new Guid("793b0092-f546-462d-9e28-b6a96744949e"),
                             BookNumber = "HP-190",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("5db7f5ab-4b98-4df7-82bd-b7329401f915"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("775f8028-8524-4603-a2f9-1a0e5ba23230"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-191",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("71e16121-6d38-413a-8dbd-ca8bbe000a35"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("a2ab83c3-1681-47b2-a95d-250f4c12268b"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-192",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("9c93db4c-a6e1-43ea-8b95-028f10196e2c"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c6024252-cae3-49bc-9808-b1ecced933dd"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-193",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("237dc3bb-1bc5-4443-8ca4-6e870243503b"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0f3f39be-71ad-4569-9432-5bed9a698fa7"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-194",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("4db59d81-0d2c-46de-9e68-0fee7dd4a1b9"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("6af4f908-1442-4064-92f9-b8642b5020e5"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-195",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("f0f96b1f-4371-426b-8ebb-dfb06ddaf40e"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("0b4712a8-c875-49b7-a001-3a7283f1c87e"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-196",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("b2a2bb11-01c3-4907-adee-67b66c45c6d6"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("2d654848-8ec7-470a-8216-b4510a2ed262"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-197",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("89dc88f4-5fc6-48da-8c55-3dffb560548b"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("4965db90-4179-4297-a421-5c1ea8e4fc50"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-198",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("2c6edac6-087b-49de-bf43-371393da0409"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("c12d19b9-f7fa-4819-b064-bec9d8a00fa4"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-199",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("722237f9-bf1f-4a49-a447-2395ee181795"),
-                            BookCompartmentId = new Guid("53b652d0-1b8a-4a72-a45d-f2dadb5ce2d9"),
-                            BookId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9"),
+                            Id = new Guid("90c35989-5890-4a5b-82f4-43bfdb5c44d3"),
+                            BookCompartmentId = new Guid("8e02ac32-0d1d-4eb3-9713-08cca3d0c220"),
                             BookNumber = "HP-200",
                             BookStatus = "Active",
                             BookStockTransactionType = 0,
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             EditionId = new Guid("00000000-0000-0000-0000-000000000000"),
                             IsAvailable = true,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            ShelfId = new Guid("4c700425-20cf-45db-b25d-0eeb2e5d57c5")
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            ShelfId = new Guid("49f4a13c-9de3-4fbc-9830-4f92263b5cc8"),
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         });
                 });
 
@@ -8731,48 +8731,48 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("7906d383-58dd-49de-bade-fc51049ddf16"),
+                            Id = new Guid("ff3a6541-3074-48bf-a3e5-6e2405747224"),
                             Address = "50 Bedford Square, London, England",
                             City = "London",
                             Country = "England",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             Email = "info@bloomsbury.com",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Bloomsbury Publishing",
                             PhoneNumber = "+44 (0)20 7631 5600",
                             Website = "https://www.bloomsbury.com/"
                         },
                         new
                         {
-                            Id = new Guid("b8499496-3dfa-42ee-b2ee-f14e75169192"),
+                            Id = new Guid("186e42f5-fdfb-46ce-8d4f-6fbd5121c167"),
                             Address = "1745 Broadway, New York, NY, USA",
                             City = "New York",
                             Country = "USA",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             Email = "info@randomhouse.com",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Random House",
                             PhoneNumber = "+1 212-782-9000",
                             Website = "https://www.randomhousebooks.com/"
                         },
                         new
                         {
-                            Id = new Guid("e5aca9af-a9ae-49b9-92bd-9602a6544dce"),
+                            Id = new Guid("e0138691-a585-4713-bf0a-a1479c0ba48e"),
                             Address = "80 Strand, London, England",
                             City = "London",
                             Country = "England",
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             Email = "info@penguin.co.uk",
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Penguin Books",
                             PhoneNumber = "+44 (0)20 7139 3000",
                             Website = "https://www.penguin.co.uk/"
@@ -8870,36 +8870,36 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("68eeec58-9d3d-496f-9ad4-affdbc3bc60d"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("1bc39e57-1ba9-4fd4-ab56-4fa57b745cfe"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Hogwarts",
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9")
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("def21e12-d2e0-41f0-a73c-d1d905a3b0bd"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("a17ee5ac-7ad0-407d-b6e7-a5e0113a9928"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Harry Potter",
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9")
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         },
                         new
                         {
-                            Id = new Guid("eb1090fa-ac84-4433-a1d0-74311bbc4ffa"),
-                            CreatedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
-                            CreatedDateUnix = 1714586845L,
+                            Id = new Guid("b05891b6-9e81-4752-b423-59de18424e1c"),
+                            CreatedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
+                            CreatedDateUnix = 1714598764L,
                             IsDeleted = false,
                             IsDeletedById = new Guid("00000000-0000-0000-0000-000000000000"),
-                            LastModifiedById = new Guid("fa7f4b6d-2de7-42a6-a69c-0631e879983c"),
+                            LastModifiedById = new Guid("77e3db66-0f8a-468a-8578-b54fcfc8d74b"),
                             Name = "Quidditch",
-                            WorkCatalogId = new Guid("8fa9a7f6-4285-4e41-9b72-5713e75abfa9")
+                            WorkCatalogId = new Guid("93386e81-e153-4af0-a190-c66f5210c433")
                         });
                 });
 
@@ -9024,13 +9024,13 @@ namespace LibraryTrackingApp.Persistence.Migrations
                     b.HasData(
                         new
                         {
-                            UserId = new Guid("a3ee9353-af86-4da1-8fcd-46ff242c0459"),
-                            RoleId = new Guid("22a5a7c6-3196-449f-ab3a-0ffbea44d029")
+                            UserId = new Guid("9cb26a43-1d33-429b-86ec-9ed7aa3229bc"),
+                            RoleId = new Guid("3adfa666-b1eb-4e68-b064-ad62d8b4fee2")
                         },
                         new
                         {
-                            UserId = new Guid("3d13b95f-0743-48e9-84f8-4b2ae1b93b3f"),
-                            RoleId = new Guid("a2eb03b8-1711-44e9-ad5f-95352b90b9fd")
+                            UserId = new Guid("6c4e4ce0-be88-4442-ad7a-091a6bee3547"),
+                            RoleId = new Guid("3faa18d9-14f9-4529-8768-1b924f2e9dff")
                         });
                 });
 
@@ -9307,15 +9307,14 @@ namespace LibraryTrackingApp.Persistence.Migrations
                         .WithMany("BookInventoryItems")
                         .HasForeignKey("BookCompartmentId");
 
-                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.WorkCatalog", "WorkCatalog")
-                        .WithMany("WorkInventories")
-                        .HasForeignKey("BookId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
                     b.HasOne("LibraryTrackingApp.Domain.Entities.Library.Shelf", "Shelf")
                         .WithMany()
                         .HasForeignKey("ShelfId");
+
+                    b.HasOne("LibraryTrackingApp.Domain.Entities.Library.WorkCatalog", "WorkCatalog")
+                        .WithMany("WorkInventories")
+                        .HasForeignKey("WorkCatalogId")
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.Navigation("BookCompartment");
 

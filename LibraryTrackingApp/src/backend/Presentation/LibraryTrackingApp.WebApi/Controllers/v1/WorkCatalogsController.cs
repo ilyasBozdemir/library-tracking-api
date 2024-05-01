@@ -10,16 +10,16 @@ namespace LibraryTrackingApp.WebApi.Controllers.v1;
 /// </summary>
 [ApiController]
 [ApiVersion(ApiVersions.V1)]
-[Route($"api/v{ApiVersions.V1}/works")]
-public class WorksController : CustomBaseController
+[Route($"api/v{ApiVersions.V1}/work-catalogs")]
+public class WorkCatalogsController : CustomBaseController
 {
-    public WorksController(IMediator mediator)
+    public WorkCatalogsController(IMediator mediator)
         : base(mediator) { }
 
     /// <summary>
-    /// Yeni bir kitap oluşturur.
+    /// Yeni bir eser  oluşturur.
     /// </summary>
-    /// <param name="request">Kitap bilgilerini içeren istek nesnesi.</param>
+    /// <param name="request">Eser bilgilerini içeren istek nesnesi.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
 
     [HttpPost]
@@ -58,7 +58,7 @@ public class WorksController : CustomBaseController
 
 
     /// <summary>
-    /// Mevcut bir kitabı günceller.
+    /// Mevcut bir eseri günceller.
     /// </summary>
     /// <param name="id">Güncellenecek kitabın ID'si.</param>
     /// <param name="request">Güncellenmiş kitap bilgilerini içeren istek nesnesi.</param>
@@ -107,7 +107,7 @@ public class WorksController : CustomBaseController
     /// <summary>
     /// Bir kitabı ID veya ISBN ile siler.
     /// </summary>
-    /// <param name="IdOrISBN">Silinecek kitabın ID'si veya ISBN'i.</param>
+    /// <param name="IdOrISBN">Silinecek eserin ID'si veya ISBN'i.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpDelete("{IdOrISBN}")]
     public async Task<IActionResult> Delete([FromRoute] string IdOrISBN)
@@ -152,7 +152,7 @@ public class WorksController : CustomBaseController
     /// <summary>
     /// Bir kitabı ID ile alır.
     /// </summary>
-    /// <param name="id">Alınacak kitabın ID'si.</param>
+    /// <param name="id">Alınacak eserin ID'si.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpGet("{id}")]
     public async Task<IActionResult> GetBook([FromRoute] Guid id)
@@ -213,9 +213,9 @@ public class WorksController : CustomBaseController
 
 
     /// <summary>
-    /// Tüm kitapları alır.
+    /// Tüm eserleri alır.
     /// </summary>
-    /// <param name="request">Kitapları filtrelemek için kriterleri içeren istek nesnesi.</param>
+    /// <param name="request">Eserleri filtrelemek için kriterleri içeren istek nesnesi.</param>
     /// <returns>İşlemin sonucunu temsil eden ActionResult.</returns>
     [HttpGet]
     public async Task<IActionResult> GetAllBooks([FromBody] GetAllBooksQueryRequest request)

@@ -5,5 +5,5 @@ namespace LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
 
 public class TakeBorrowCommandRequest : IRequest<TakeBorrowCommandResponse>
 {
-    public Guid BorrowId { get; set; }
+    public Guid WorkInventoryId { get; set; }
 }

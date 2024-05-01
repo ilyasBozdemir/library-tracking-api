@@ -6,7 +6,7 @@ namespace LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
 
 public class GiveBorrowCommandRequest : IRequest<GiveBorrowCommandResponse>
 {
-    public Guid BookId { get; set; }
+    public Guid WorkInventoryId { get; set; }
     public Guid MemberId { get; set; }
     public Guid LenderId { get; set; }
 

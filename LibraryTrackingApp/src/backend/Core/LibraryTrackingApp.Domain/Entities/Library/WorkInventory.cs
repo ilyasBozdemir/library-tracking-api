@@ -4,7 +4,7 @@
 public class WorkInventory : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
-    public Guid BookId { get; set; }
+    public Guid? WorkCatalogId { get; set; }
     public Guid? BorrowLendId { get; set; }
     public Guid EditionId { get; set; } // Eserin türü
     public Guid? ShelfId { get; set; }

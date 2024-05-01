@@ -1,5 +1,4 @@
 ﻿using System.Net;
-using LibraryTrackingApp.Application.Features.BookStocks.Commands.Requests;
 using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Requests;
 using LibraryTrackingApp.Application.Features.BorrowLend.Commands.Responses;
 using LibraryTrackingApp.Application.Interfaces.UnitOfWork;
@@ -71,9 +70,14 @@ public class GiveBorrowCommandHandler
     {
         try
         {
-            var existingBook = await _unitOfWork
-                .GetReadRepository<Domain.Entities.Library.WorkCatalog>()
-                .ExistsAsync(b => b.Id == request.BookId);
+
+            var inventoryBookReadRepository =
+        _unitOfWork.GetReadRepository<Domain.Entities.Library.WorkInventory>();
+
+
+            var inventoryBook = await inventoryBookReadRepository.GetSingleAsync(b => b.Id == request.WorkInventoryId);
+
+
 
             var existingMember = await _unitOfWork
                 .GetReadRepository<Domain.Entities.Library.Member>()
@@ -82,17 +86,18 @@ public class GiveBorrowCommandHandler
             var existingStaff = await _unitOfWork
                 .GetReadRepository<Domain.Entities.Library.Staff>()
                 .ExistsAsync(b => b.Id == request.LenderId);
-
+            //burası bir sonraki güncellemde çalısan veya yönetici şube sahibinin id'sine de eşitse de diye 
+            // kontrolü yapılcak.
 
             List<string> invalidEntries = new List<string>();
 
-            if (!existingBook)
+            if (inventoryBook == null)
                 invalidEntries.Add("Kitap");
-           
+
 
             if (!existingMember)
                 invalidEntries.Add("Üye");
-            
+
 
             if (!existingStaff)
                 invalidEntries.Add("Personel");
@@ -110,57 +115,106 @@ public class GiveBorrowCommandHandler
                 };
             }
 
-            var stockDecreaseResponse = await _mediator.Send(
-                new StockOperationCommandRequest
-                {
-                    BookId = request.BookId,
-                    OperationType = StockOperationType.Decrease,
-                    Quantity = 1,
-                }
-            );
 
-            if (stockDecreaseResponse.Success)
+            var givenBookWriteRepository =
+                _unitOfWork.GetWriteRepository<Domain.Entities.Library.BorrowLend>();
+
+            var givenBookReadRepository =
+             _unitOfWork.GetReadRepository<Domain.Entities.Library.BorrowLend>();
+
+
+
+
+            var givenBook = _mapper.Map<Domain.Entities.Library.BorrowLend>(request);
+
+            givenBook.WorkCatalogId = inventoryBook.WorkCatalogId ?? System.Guid.Empty;// empty gelmez zaten,
+            givenBook.WorkInventoryId = request.WorkInventoryId;
+            givenBook.MemberId= request.MemberId;
+
+            givenBook.StaffLenderId = request.LenderId;
+
+            var borrowedBook = await givenBookReadRepository.GetSingleAsync(
+              b => b.WorkInventoryId == request.WorkInventoryId
+          );
+
+            if (borrowedBook==null)
             {
-                var givenBookWriteRepository =
-                    _unitOfWork.GetWriteRepository<Domain.Entities.Library.BorrowLend>();
-
-                var givenBook = _mapper.Map<Domain.Entities.Library.BorrowLend>(request);
-
                 givenBook.BorrowDate = DateTime.Now;
-
-                givenBook.IsLate = givenBook.IsLate = givenBook.ReturnDate > givenBook.DueDate;
                 givenBook.BorrowStatus = BorrowStatus.Borrowed;
 
                 var givenBookResult = await givenBookWriteRepository.AddAsync(givenBook);
-
-                if (givenBookResult)
-                {
-                    return new()
-                    {
-                        StatusCode = (int)HttpStatusCode.OK,
-                        Success = true,
-                        StateMessages = new[] { "Kitap Başarıyla Ödünç Verildi." }
-                    };
-                }
-                else
-                {
-                    return new()
-                    {
-                        StatusCode = (int)HttpStatusCode.BadRequest,
-                        Success = true,
-                        StateMessages = new[] { "Kitap Ödünç Verilirken Hata Oluştu." }
-                    };
-                }
-            }
-            else
-            {
                 return new()
                 {
-                    StatusCode = stockDecreaseResponse.StatusCode,
-                    Success = stockDecreaseResponse.Success,
-                    StateMessages = stockDecreaseResponse.StateMessages
+                    Success = true,
+                    StatusCode = (int)HttpStatusCode.OK,
+                    StateMessages = new[] { "Kitap Başarıyla Ödünç Verildi." }
                 };
             }
+
+
+            if (borrowedBook.BorrowStatus is BorrowStatus.Returned or BorrowStatus.DelayedReturn)
+            {
+                givenBook.BorrowDate = DateTime.Now;
+                givenBook.BorrowStatus = BorrowStatus.Borrowed;
+
+                var givenBookResult = await givenBookWriteRepository.AddAsync(givenBook);
+            }
+
+            // Kitap ödünç verme işlemi
+            return borrowedBook.BorrowStatus switch
+            {
+                BorrowStatus.Returned or BorrowStatus.DelayedReturn => 
+                new ()
+                {
+                    Success = true,
+                    StatusCode = (int)HttpStatusCode.OK,
+                    StateMessages = new[] { "Kitap Başarıyla Ödünç Verildi." }
+                },
+                BorrowStatus.Borrowed => new()
+                {
+                    Success = false,
+                    StatusCode = (int)HttpStatusCode.Conflict,
+                    StateMessages = new[] { "Kitap zaten ödünç verilmiş durumda." }
+                },
+                BorrowStatus.Losted => new()
+                {
+                    Success = false,
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    StateMessages = new[] { "Kitap şu an kayıp edilmiş durumda." }
+                },
+                BorrowStatus.Cancelled => new()
+                {
+                    Success = false,
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    StateMessages = new[] { "Kitap ödünç alma işlemi iptal edilmiş durumda." }
+                },
+                BorrowStatus.Expired => new()
+                {
+                    Success = false,
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    StateMessages = new[] { "Kitap ödünç alma süresi dolduğu için ödünç verilemez." }
+                },
+                BorrowStatus.Damaged => new()
+                {
+                    Success = false,
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    StateMessages = new[] { "Kitap hasarlı olduğu için ödünç verilemez." }
+                },
+                BorrowStatus.OnHold => new()
+                {
+                    Success = false,
+                    StatusCode = (int)HttpStatusCode.BadRequest,
+                    StateMessages = new[] { "Kitap askıya alındığı için ödünç verilemez." }
+                },
+
+                _ => new()
+                {
+                    Success = false,
+                    StatusCode = (int)HttpStatusCode.InternalServerError,
+                    StateMessages = new[] { "Belirsiz ödünç durumu." }
+                }
+            };
+
         }
         catch (Exception ex)
         {
