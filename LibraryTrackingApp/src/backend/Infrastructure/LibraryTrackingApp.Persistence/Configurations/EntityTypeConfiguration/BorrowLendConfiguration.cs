@@ -1,6 +1,5 @@
 ﻿using LibraryTrackingApp.Domain.Entities.Library;
 using LibraryTrackingApp.Domain.Enums;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
@@ -16,7 +15,7 @@ public class BorrowLendConfiguration : IEntityTypeConfiguration<BorrowLend>
         builder.Property(l => l.DueDate).IsRequired();
 
         builder.HasIndex(b => b.MemberId);
-        builder.HasIndex(b => b.BookId);
+        builder.HasIndex(b => b.WorkCatalogId);
         builder.HasIndex(b => b.BorrowDate);
         builder.HasIndex(b => b.DueDate);
 
@@ -33,14 +32,14 @@ public class BorrowLendConfiguration : IEntityTypeConfiguration<BorrowLend>
             .HasConversion(new EnumToStringConverter<BorrowStatus>());
 
 
-        builder.HasOne(l => l.Book)
+        builder.HasOne(l => l.WorkCatalog)
                .WithMany(b => b.Borrows) 
-               .HasForeignKey(l => l.BookId)
+               .HasForeignKey(l => l.WorkCatalogId)
                .IsRequired();
 
-        builder.HasOne(b => b.Book)
+        builder.HasOne(b => b.WorkCatalog)
              .WithMany(b => b.Borrows)
-             .HasForeignKey(b => b.BookId)
+             .HasForeignKey(b => b.WorkCatalogId)
              .OnDelete(DeleteBehavior.Restrict);
 
         builder.HasOne(b => b.Member)
@@ -48,9 +47,9 @@ public class BorrowLendConfiguration : IEntityTypeConfiguration<BorrowLend>
                .HasForeignKey(b => b.MemberId)
                .OnDelete(DeleteBehavior.Restrict);
 
-        builder.HasOne(b => b.Lender)
+        builder.HasOne(b => b.StaffLender)
                .WithMany()
-               .HasForeignKey(b => b.LenderId)
+               .HasForeignKey(b => b.StaffLenderId)
                .OnDelete(DeleteBehavior.Restrict);
 
     }

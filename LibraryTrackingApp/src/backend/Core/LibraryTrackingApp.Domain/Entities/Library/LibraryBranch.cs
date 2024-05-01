@@ -1,4 +1,6 @@
-﻿namespace LibraryTrackingApp.Domain.Entities.Library;
+﻿using LibraryTrackingApp.Domain.Entities.Identity;
+
+namespace LibraryTrackingApp.Domain.Entities.Library;
 
 // şubeleri aslında appusere baglayıp appuserin yani adminin subeleri olması lazım.
 // sonra ki guncellemede gelicektir.
@@ -22,7 +24,7 @@ public class LibraryBranch : BaseEntity<Guid>, IAuditable<Guid>
 
 
     public ICollection<Shelf> Shelves { get; set; }// Şubeye ait raflar
-    public ICollection<WorkCatalog> Books { get; set; } // Şubeye ait kitaplar  -- bitirince işlem bu kalkıcaktır.
+    public ICollection<WorkCatalog> WorkCatalogs { get; set; } // Şubeye ait kitaplar  -- bitirince işlem bu kalkıcaktır.
     public ICollection<Member> Members { get; set; } // Şubeye kayıtlı üyeler
     public ICollection<Staff> Staffs { get; set; } // Şube personeli
     public ICollection<BranchHour> BranchHours { get; set; } // mesai saatleri

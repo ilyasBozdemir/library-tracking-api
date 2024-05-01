@@ -10,19 +10,8 @@ namespace LibraryTrackingApp.Persistence.Contexts;
 public class AppIdentityDbContext : IdentityDbContext<AppUser, AppRole, Guid>
 {
     public AppIdentityDbContext(DbContextOptions<AppIdentityDbContext> options) : base(options) { }
-
-    public DbSet<Author> Authors { get; set; }
-    public DbSet<WorkCatalog> Books { get; set; }
-    public DbSet<BookStockOLD> BookStocks { get; set; }
-    public DbSet<BranchHour> BranchHours { get; set; }
-    public DbSet<WorkGenre> Genres { get; set; }
-    public DbSet<LibraryBranch> LibraryBranches { get; set; }
-    public DbSet<LibraryTransaction> LibraryTransactions { get; set; }
-    public DbSet<Member> Members { get; set; }
-    public DbSet<WorkPublisher> Publishers { get; set; }
-    public DbSet<Staff> Staffs { get; set; }
-    public DbSet<WorkTag> Tags { get; set; }
-    public DbSet<BorrowLend> Borrows { get; set; }
+    
+    // dbset'lere gerek yok burda generic repository pattern hallediyor.
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

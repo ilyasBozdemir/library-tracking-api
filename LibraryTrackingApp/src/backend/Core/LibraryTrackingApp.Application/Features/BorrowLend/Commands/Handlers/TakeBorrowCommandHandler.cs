@@ -77,7 +77,7 @@ public class TakeBorrowCommandHandler
             var stockDecreaseResponse = await _mediator.Send(
                new StockOperationCommandRequest
                {
-                   BookId = borrowedBook.BookId,
+                   BookId = borrowedBook.WorkCatalogId,
                    OperationType = StockOperationType.Increase,
                    Quantity = 1,
                }

@@ -3,8 +3,8 @@
 public class WorkTag : BaseEntity<Guid>, IAuditable<Guid>
 {
     public Guid Id { get; set; }
-    public Guid BookId { get; set; }
+    public Guid WorkCatalogId { get; set; }
     public string Name { get; set; }
 
-    public virtual ICollection<WorkCatalog> Books { get; set; }
+    public virtual ICollection<WorkCatalog> WorkCatalogs { get; set; }
 }

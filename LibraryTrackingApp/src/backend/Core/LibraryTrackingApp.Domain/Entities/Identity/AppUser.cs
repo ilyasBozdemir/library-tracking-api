@@ -32,4 +32,7 @@ public class AppUser : IdentityUser<Guid>, IAuditable<Guid>
     public virtual Member Member { get; set; }
     public ICollection<AppRole> AppRoles { get; set; }
 
+ 
+    public virtual ICollection<LibraryBranch> LibraryBranches { get; set; }
+
 }
