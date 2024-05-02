@@ -3,12 +3,21 @@ import {
   FaClock,
   FaExchangeAlt,
   FaHistory,
+  FaList,
   FaQuestionCircle,
+  FaStar,
   FaUser,
   FaUsers,
 } from "react-icons/fa";
+import { FiHome } from "react-icons/fi";
 
 export const meSidebarItems = [
+  {
+    title: "Ana Sayfa",
+    icon: <FiHome />,
+    href: "/me",
+    target: "_self",
+  },
   {
     title: "Profil Yönetimi",
     icon: <FaUser />,
@@ -34,6 +43,20 @@ export const meSidebarItems = [
     title: "Geçmiş Alınan Kitaplar",
     icon: <FaHistory />,
     href: "/me/past-books",
+    target: "_self",
+    subItems: [],
+  },
+  {
+    title: "Favoriler",
+    icon: <FaStar />,
+    href: "/me/favorites",
+    target: "_self",
+    subItems: [],
+  },
+  {
+    title: "Okuma Listesi",
+    icon: <FaList />,
+    href: "/me/reading-list",
     target: "_self",
     subItems: [],
   },

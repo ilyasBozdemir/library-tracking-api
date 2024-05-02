@@ -7,4 +7,5 @@ public record CreateAuthorDTO : BaseAuditableDTO<Guid>
     public DateTime BirthDate { get; set; }
     public string Country { get; set; }
     public string Biography { get; set; }
+    public string Website { get; set; }
 }

@@ -47,6 +47,7 @@ public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommandReq
                 Country = request.Country,
                 BirthDate = request.BirthDate,
                 Biography = request.Biography,
+                Website = request.Website,
                 IsDeleted = false,
                 CreatedById = Guid.NewGuid(),//staff id olucak ilerde
                 LastModifiedById = Guid.NewGuid(),//staff id olucak ilerde
@@ -54,14 +55,7 @@ public class CreateAuthorCommandHandler : IRequestHandler<CreateAuthorCommandReq
                 CreatedDateUnix = BaseEntity.ToUnixTimestamp(DateTime.Now),
             };
 
-            var bookDto = new AuthorDTO()
-            {
-                Name = request.Name,
-                Surname = request.Surname,
-                Country = request.Country,
-                BirthDate = request.BirthDate,
-                Biography = request.Biography,
-            };
+          
 
             var writeRepository = _unitOfWork.GetWriteRepository<Domain.Entities.Library.Author>();
             bool isAdded = await writeRepository.AddAsync(newAuthor);
