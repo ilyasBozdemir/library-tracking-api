@@ -64,6 +64,7 @@ public class GetAllAuthorsQueryHandler : IRequestHandler<GetAllAuthorsQueryReque
                     Biography = author.Biography,
                     BirthDate = author.BirthDate,
                     Country = author.Country,
+                    Website=author.Website,
                 }).ToList();
 
                 _cache.Set(cacheKey, authorDtoList, TimeSpan.FromMinutes(5));

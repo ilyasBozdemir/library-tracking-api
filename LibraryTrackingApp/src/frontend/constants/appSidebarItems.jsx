@@ -229,13 +229,13 @@ export const sidebarItems = [
       {
         icon: <IoCreateOutline />,
         title: "Yeni Ekle",
-        href: "book-tag/new",
+        href: "/app/book-tag/new",
         target: "_self",
       },
       {
         icon: <BsArrowLeftRight />,
         title: "Etiketleri Listele",
-        href: "book-tag",
+        href: "/app/book-tag",
         target: "_self",
       },
     ],
