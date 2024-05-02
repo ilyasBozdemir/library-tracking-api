@@ -124,6 +124,14 @@ const LoginPage = () => {
                     Şifremi Unuttum
                   </CLink>
                 </Stack>
+                <Text fontSize="sm" mt={2} textAlign="center">
+                  Giriş yaparak gizlilik sözleşmemizi kabul etmiş olursunuz.{" "}
+                  <Link href="/privacy-policy" target={"_blank"}>
+                    <Text color="teal.500">
+                      Sözleşme metnine buradan ulaşabilirsiniz.
+                    </Text>
+                  </Link>
+                </Text>
                 <Button
                   type="submit"
                   colorScheme={"blue"}
@@ -137,9 +145,9 @@ const LoginPage = () => {
           </Stack>
         </Center>
 
-        <Text as='small' mt={5}>
-          Not: herhangi bir username ve password ile girilebilir su an
-          backende tam olarak baglanmamıstır.
+        <Text as="small" mt={5}>
+          Not: herhangi bir username ve password ile girilebilir su an backende
+          tam olarak baglanmamıstır.
         </Text>
       </Container>
     </>

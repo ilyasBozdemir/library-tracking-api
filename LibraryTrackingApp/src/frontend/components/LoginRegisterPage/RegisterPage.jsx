@@ -20,10 +20,13 @@ import {
   InputGroup,
   InputRightElement,
   IconButton,
+  Select,
+  Text,
 } from "@chakra-ui/react";
 import { NextSeo } from "next-seo";
 import AuthService from "@/services/authService";
 import { IoEyeOffOutline, IoEyeOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const RegisterPage = () => {
   const toast = useToast();
@@ -38,6 +41,7 @@ const RegisterPage = () => {
     values.name = "";
     values.surname = "";
     values.email = "";
+    values.userType = "";
     values.telNumber = "";
     values.password = "";
   };
@@ -48,6 +52,7 @@ const RegisterPage = () => {
       name: "",
       surname: "",
       email: "",
+      userType: "",
       telNumber: "",
       password: "",
       confirmPassword: "",
@@ -83,6 +88,21 @@ const RegisterPage = () => {
       telNumber: Yup.string()
         .matches(/^\d{10}$/, "Geçerli bir telefon numarası girin")
         .required("Telefon zorunlu"),
+      userType: Yup.string()
+        .required("Kullanıcı türü zorunlu")
+        .oneOf(
+          [
+            "user",
+            "manager",
+            "student",
+            "teacher",
+            "parent",
+            "library-responsible",
+            "employee",
+            "other",
+          ],
+          "Geçerli bir kullanıcı türü seçin"
+        ),
       password: Yup.string()
         .min(5, "Şifre en az 5 karakter olmalı")
         .matches(/[a-zğüşıöç]/, "Şifre en az bir küçük harf içermeli")
@@ -234,6 +254,32 @@ const RegisterPage = () => {
                 <FormErrorMessage>{formik.errors.telNumber}</FormErrorMessage>
               </FormControl>
               <FormControl
+                id="userType"
+                mt={4}
+                isInvalid={formik.touched.userType && formik.errors.userType}
+              >
+                <FormLabel>Kullanıcı Türü</FormLabel>
+                <Select
+                  placeholder="Kullanıcı türünü seçin"
+                  value={formik.values.userType}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  name="userType"
+                >
+                  <option value="user">Normal Kullanıcı</option>
+                  <option value="manager">Yönetici</option>
+                  <option value="student">Öğrenci</option>
+                  <option value="teacher">Öğretmen</option>
+                  <option value="parent">Veli</option>
+                  <option value="library-responsible">
+                    Kütüphane Sorumlusu
+                  </option>
+                  <option value="employee">Çalışan</option>
+                  <option value="other">Diğer</option>
+                </Select>
+                <FormErrorMessage>{formik.errors.userType}</FormErrorMessage>
+              </FormControl>
+              <FormControl
                 id="password"
                 isInvalid={formik.touched.password && formik.errors.password}
               >
@@ -279,6 +325,14 @@ const RegisterPage = () => {
                   {formik.errors.confirmPassword}
                 </FormErrorMessage>
               </FormControl>
+              <Text fontSize="sm" mt={2} textAlign="center">
+                Kayıt olarak gizlilik sözleşmemizi kabul etmiş olursunuz.{" "}
+                <Link href="/privacy-policy" target={'_blank'}>
+                  <Text color="teal.500">
+                    Sözleşme metnine buradan ulaşabilirsiniz.
+                  </Text>
+                </Link>
+              </Text>
               <Button type="submit" colorScheme="teal" w={"full"} mt={4}>
                 Kayıt Ol
               </Button>

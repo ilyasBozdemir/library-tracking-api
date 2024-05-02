@@ -14,16 +14,11 @@ import Link from "next/link";
 
 import { CloseIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
-import { adminSidebarItems } from "@/constants/adminSidebarItems";
+import { meSidebarItems } from "@/constants/meSidebarItems";
 import { useEffect, useState } from "react";
 
 function Sidebar({ isOpen, toggleSidebar }) {
   const router = useRouter();
-
-  useEffect(()=>{
-
-    
-  },[])
 
   return (
     <Box
@@ -43,7 +38,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
       <Flex alignItems="center" mb="8">
         <Avatar size="sm" name="Admin" />
         <Text ml="3" fontSize="lg" fontWeight="bold" color="white">
-          Admin Panel
+          Me Panel
         </Text>
         <Box ml="auto" onClick={toggleSidebar}>
           <CloseIcon
@@ -55,7 +50,7 @@ function Sidebar({ isOpen, toggleSidebar }) {
         </Box>
       </Flex>
       <VStack spacing="4" align="stretch">
-        {adminSidebarItems.map((item, index) => (
+        {meSidebarItems.map((item, index) => (
           <Box key={index}>
             <SidebarItem
               icon={item.icon}
@@ -64,17 +59,17 @@ function Sidebar({ isOpen, toggleSidebar }) {
               target={item.target}
               isActive={router.pathname === item.href}
             />
-            {adminSidebarItems.subItems && item.subItems.length > 0 && (
+            {meSidebarItems.subItems && item.subItems.length > 0 && (
               <VStack spacing="1" align="stretch" ml="4">
                 {item.subItems.map((subItem, subIndex) => (
-               <SidebarItem
-               icon={item.icon}
-               text={item.title}
-               href={item.href}
-               target={item.target}
-               isActive={router.pathname === item.href}
-               subItems={item.subItems}
-             />
+                  <SidebarItem
+                    icon={item.icon}
+                    text={item.title}
+                    href={item.href}
+                    target={item.target}
+                    isActive={router.pathname === item.href}
+                    subItems={item.subItems}
+                  />
                 ))}
               </VStack>
             )}
@@ -98,9 +93,9 @@ const SidebarItem = ({ icon, text, href, target, isActive, subItems }) => {
     <>
       <Button
         variant="ghost"
-        cursor={'pointer'}
+        cursor={"pointer"}
         color={color}
-        bg={'transparent'}
+        bg={"transparent"}
         _hover={{ color: "#1468de" }}
         leftIcon={icon}
         rightIcon={
@@ -116,8 +111,6 @@ const SidebarItem = ({ icon, text, href, target, isActive, subItems }) => {
         onClick={subItems?.length > 0 ? handleToggle : null}
         as={subItems?.length > 0 ? null : Link}
         href={href}
-        target={target}
-
       >
         {text}
       </Button>

@@ -8,7 +8,6 @@ import Testimonials from "@/layouts/Anon/components/Testimonials";
 import LibraryPricing from "@/layouts/Anon/components/LibraryPricing";
 import OverviewSection from "@/layouts/Anon/components/OverviewSection";
 
-
 function IndexPage() {
   return (
     <>
@@ -25,12 +24,13 @@ const LandingPage = () => {
   return (
     <Flex align="center" justify="center" direction="column" px={8}>
       <Box mt={5}>
-        <HeroSection/>
-        <OverviewSection/>
-        <LibraryStats/>
+        <HeroSection />
+
+        <LibraryStats />
         <Features />
-        <LibraryPricing/>
-        <Testimonials/>
+        <LibraryPricing />
+        <OverviewSection />
+        <Testimonials />
       </Box>
     </Flex>
   );

@@ -32,9 +32,4 @@ public enum WorkFormat
     /// </summary>
     Thesis = 1 << 4,
 
-    /// <summary>
-    /// Eser öneri formatında.
-    /// </summary>
-    Recommendation = 1 << 5
-
 }

@@ -98,6 +98,7 @@ const SidebarItem = ({ icon, text, href, target, isActive, subItems }) => {
         onClick={subItems?.length > 0 ? handleToggle : null}
         as={subItems?.length > 0 ? null : Link}
         href={href}
+        target={target}
       >
         {text}
       </Button>
