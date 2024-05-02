@@ -7,6 +7,7 @@ import {
   Icon,
   Button,
   Divider,
+  Collapse,
 } from "@chakra-ui/react";
 
 import Link from "next/link";
@@ -14,7 +15,7 @@ import Link from "next/link";
 import { CloseIcon } from "@chakra-ui/icons";
 import { useRouter } from "next/router";
 import { adminSidebarItems } from "@/constants/adminSidebarItems";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function Sidebar({ isOpen, toggleSidebar }) {
   const router = useRouter();
@@ -66,15 +67,14 @@ function Sidebar({ isOpen, toggleSidebar }) {
             {adminSidebarItems.subItems && item.subItems.length > 0 && (
               <VStack spacing="1" align="stretch" ml="4">
                 {item.subItems.map((subItem, subIndex) => (
-                  <SidebarItem
-                    key={subIndex}
-                    icon={subItem.icon}
-                    text={subItem.title}
-                    href={subItem.href}
-                    target={subItem.target}
-                    isActive={router.pathname === subItem.href}
-                    isSubItem
-                  />
+               <SidebarItem
+               icon={item.icon}
+               text={item.title}
+               href={item.href}
+               target={item.target}
+               isActive={router.pathname === item.href}
+               subItems={item.subItems}
+             />
                 ))}
               </VStack>
             )}
@@ -85,21 +85,57 @@ function Sidebar({ isOpen, toggleSidebar }) {
   );
 }
 
-const SidebarItem = ({ icon, text, href, target, isActive }) => {
+const SidebarItem = ({ icon, text, href, target, isActive, subItems }) => {
+  const [isOpen, setIsOpen] = useState(false);
   const color = isActive ? "#1468de" : "gray.100";
+  const router = useRouter();
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <Link href={href} target={target} passHref>
+    <>
       <Button
         variant="ghost"
+        cursor={'pointer'}
         color={color}
+        bg={'transparent'}
         _hover={{ color: "#1468de" }}
         leftIcon={icon}
+        rightIcon={
+          subItems?.length > 0 ? (
+            isOpen ? (
+              <ChevronUpIcon />
+            ) : (
+              <ChevronDownIcon />
+            )
+          ) : null
+        }
         justifyContent="flex-start"
+        onClick={subItems?.length > 0 ? handleToggle : null}
+        as={subItems?.length > 0 ? null : Link}
+        href={href}
       >
         {text}
       </Button>
-    </Link>
+
+      <Collapse in={isOpen}>
+        <VStack spacing="1" align="stretch" ml="7">
+          {subItems?.map((subItem, subIndex) => (
+            <SidebarItem
+              key={subIndex}
+              icon={subItem.icon}
+              text={subItem.title}
+              href={subItem.href}
+              target={subItem.target}
+              isActive={router.pathname === subItem.href}
+              subItems={subItem.subItems || []}
+            />
+          ))}
+        </VStack>
+      </Collapse>
+    </>
   );
 };
-
 export default Sidebar;

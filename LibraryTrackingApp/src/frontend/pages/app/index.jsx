@@ -1,4 +1,4 @@
-import { items } from "@/constants/sidebarItems";
+import { items } from "@/constants/appSidebarItems";
 import {
   Flex,
   Heading,
