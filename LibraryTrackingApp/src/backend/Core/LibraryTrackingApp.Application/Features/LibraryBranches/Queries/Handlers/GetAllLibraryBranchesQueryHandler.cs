@@ -40,6 +40,15 @@ public class GetAllLibraryBranchesQueryHandler : IRequestHandler<GetAllLibraryBr
                     Description = libraryBranch.Description,
                     Address = libraryBranch.Address,
                     PhoneNumber = libraryBranch.PhoneNumber,
+
+                    MaxCheckoutLimit = libraryBranch.MaxCheckoutLimit,
+                    MinCheckoutDurationInDays = libraryBranch.MinCheckoutDurationInDays,
+                    MaxCheckoutDurationInDays = libraryBranch.MaxCheckoutDurationInDays,
+                    CriticalLevelThreshold = libraryBranch.CriticalLevelThreshold,
+                    NotifyOnBookOrBlogComment = libraryBranch.NotifyOnBookOrBlogComment,
+                    TopMembersReportLimit = libraryBranch.TopMembersReportLimit,
+                    TopBooksReportLimit = libraryBranch.TopBooksReportLimit,
+
                 });
             }
 

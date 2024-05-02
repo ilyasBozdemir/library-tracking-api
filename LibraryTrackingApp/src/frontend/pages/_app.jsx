@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     colorMode === "light" ? lightTheme.colors : darkTheme.colors
   );
 
-  const placeholderRoutes = ["/login", "/register", "/docs", "/api-docs",'/401','/403','/404','/409','/500','/501','/502','/503'];
+  const placeholderRoutes = ["/privacy-policy", "/login", "/register", "/docs", "/api-docs", '/401', '/403', '/404', '/409', '/500', '/501', '/502', '/503'];
   const anonLayoutRoutes = ["/./"];
   const adminLayoutRoutes = /^\/admin(?:\/|$)/;
   const appLayoutRoutes = /^\/app(?:\/|$)/;

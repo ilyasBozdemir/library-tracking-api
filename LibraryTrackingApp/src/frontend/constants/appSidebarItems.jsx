@@ -3,7 +3,6 @@ import {
   FiSettings,
   FiLogOut,
   FiBook,
-  FiHelpCircle,
 } from "react-icons/fi";
 import {
   BsArrowLeftRight,
@@ -208,6 +207,12 @@ export const sidebarItems = [
         target: "_self",
       },
       {
+        icon: <IoCreateOutline />,
+        title: "Uzatma İstekleri",
+        href: "/app/borrow/extension-requests",
+        target: "_self",
+      },
+      {
         icon: <CiBoxList />,
         title: "Ödünç Kitapları Listele",
         href: "/app/borrow",
@@ -223,8 +228,8 @@ export const sidebarItems = [
     subItems: [
       {
         icon: <IoCreateOutline />,
-        title: "Ödünç Ver",
-        href: 'book-tag/new',
+        title: "Yeni Ekle",
+        href: "book-tag/new",
         target: "_self",
       },
       {

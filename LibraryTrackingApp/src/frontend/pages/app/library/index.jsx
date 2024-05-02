@@ -45,7 +45,7 @@ function LibraryIndexPage() {
         const fetchedLibrary = await LibraryService.getLibraries();
         setLibraries(fetchedLibrary.data);
       } catch (error) {
-        console.error("Yazarları getirirken bir hata oluştu:", error);
+        console.error("Kütüphane şubelerini getirirken bir hata oluştu:", error);
       }
     };
 
@@ -86,7 +86,7 @@ function LibraryIndexPage() {
     <>
       <TableContainer>
         <Table variant="striped" colorScheme="blue">
-          <TableCaption>{`${libraries.length} yazar bulundu.`}</TableCaption>
+          <TableCaption>{`${libraries.length} kütüphane şubesi bulundu.`}</TableCaption>
           <Thead>
             <Tr>
               <Th>Id</Th>
