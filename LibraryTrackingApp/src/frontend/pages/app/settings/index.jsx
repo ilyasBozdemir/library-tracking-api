@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Button,
   Container,
@@ -20,7 +20,7 @@ import {
   Box,
   Heading,
   Switch,
-  ButtonGroup,
+  useColorMode,
 } from "@chakra-ui/react";
 
 const LibraryProfileSettingsPage = () => {
@@ -60,7 +60,7 @@ const LibraryProfileSettingsPage = () => {
 
   return (
     <Container maxW="5xl">
-      <Tabs>
+      <Tabs overflow={"auto"}>
         <TabList>
           <Tab
             _selected={{
@@ -272,6 +272,7 @@ const LibraryProfileSettingsPage = () => {
 };
 
 const GeneralSettingsPage = () => {
+  const { colorMode, toggleColorMode } = useColorMode();
   const toast = useToast();
   const [formData, setFormData] = useState({
     enableDarkMode: false,
@@ -280,8 +281,25 @@ const GeneralSettingsPage = () => {
     enableAutoApproval: false,
   });
 
+  useEffect(() => {
+    const channelBroadcast = () => {};
+    const channel = new BroadcastChannel("themeChannel");
+    let newColorMode = "";
+
+    if (formData.enableDarkMode) {
+      newColorMode = "dark";
+    } else {
+      newColorMode = "light";
+    }
+
+    channel.postMessage({ colorMode: newColorMode });
+
+    channelBroadcast();
+  }, [formData.enableDarkMode]);
+
   const handleChange = (e) => {
     const { name, checked } = e.target;
+
     setFormData((prevData) => ({
       ...prevData,
       [name]: checked,

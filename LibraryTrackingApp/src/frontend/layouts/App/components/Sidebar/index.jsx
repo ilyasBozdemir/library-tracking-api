@@ -17,7 +17,7 @@ import { useRouter } from "next/router";
 import { sidebarItems } from "@/constants/appSidebarItems";
 import { useState } from "react";
 
-function Sidebar({ isOpen, toggleSidebar }) {
+function Sidebar({ isOpen }) {
   const router = useRouter();
 
   return (
@@ -33,21 +33,12 @@ function Sidebar({ isOpen, toggleSidebar }) {
       transition="0.3s ease-in-out"
       transform={isOpen ? "translateX(0)" : "translateX(-275px)"}
       boxShadow="md"
-      zIndex="2"
     >
       <Flex alignItems="center" mb="8">
         <Avatar size="sm" name="Admin" />
         <Text ml="3" fontSize="lg" fontWeight="bold" color="white">
           Application Panel
         </Text>
-        <Box ml="auto" onClick={toggleSidebar}>
-          <CloseIcon
-            boxSize={4}
-            color="white"
-            cursor={"pointer"}
-            _hover={{ color: "red" }}
-          />
-        </Box>
       </Flex>
       <VStack spacing="4" align="stretch">
         {sidebarItems.map((item, index) => (

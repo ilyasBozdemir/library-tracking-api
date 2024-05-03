@@ -31,7 +31,6 @@ function Layout({ children }) {
           ml={isSidebarOpen ? "300px" : "0px"}
           mt={isSidebarOpen ? "20" : "20"}
           transition="margin-left 0.5s ease-in-out"
-          p={6}
         >
           {children}
         </Box>

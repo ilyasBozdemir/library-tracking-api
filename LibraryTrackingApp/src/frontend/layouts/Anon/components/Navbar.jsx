@@ -57,13 +57,23 @@ export default function Navbar() {
           <ThemeSwitcher />
 
           <Link href="/register" passHref target="_blank">
-            <Button colorScheme="white" variant="outline">
+            <Button colorScheme="white" variant="outline"
+             px={6}
+
+            >
               Kayıt Ol
             </Button>
           </Link>
 
           <Link href="/login" passHref target="_blank">
-            <Button colorScheme="teal">Giriş Yap</Button>
+            <Button
+              bgGradient="linear(to-br, teal.500, teal.300)"
+              color="white"
+              _hover={{ bgGradient: "linear(to-br, teal.500, teal.400)" }}
+              px={6}
+            >
+              Giriş Yap
+            </Button>
           </Link>
         </Flex>
 

@@ -54,16 +54,15 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
 
   return (
     <Flex
-      py="2"
-      boxShadow="sm"
-      border="0 solid #e5e7eb"
-      position="fixed"
-      top="0"
-      bg={useColorModeValue("gray.100", "gray.700")}
-      width="100%"
-      transition="0.3s ease-in-out"
-      justifyContent={"space-between"}
-      p={2}
+    boxShadow="sm"
+    border="0 solid #e5e7eb"
+    bg={useColorModeValue("gray.100", "gray.700")}
+    justifyContent={"space-between"}
+    p={2}
+    zIndex={15}
+    width={isOpen ? "calc(100% - 275px)" : "100%"}
+    transform={isOpen ? "translateX(275px)" : "translateX(0)"}
+     transition="0.3s ease-in"
     >
       <HStack spacing={3}>
         <Icon
