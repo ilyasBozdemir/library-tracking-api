@@ -322,7 +322,7 @@ public static class SeedData
 
 
             workInventory.ShelfId = shelfId;
-            workInventory.BookCompartmentId = compartmentId;
+            workInventory.WorkCompartmentId = compartmentId;
         }
 
 
