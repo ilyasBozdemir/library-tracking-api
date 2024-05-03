@@ -1,9 +1,4 @@
-import {
-  FiHome,
-  FiSettings,
-  FiLogOut,
-  FiBook,
-} from "react-icons/fi";
+import { FiHome, FiSettings, FiLogOut, FiBook } from "react-icons/fi";
 import {
   BsArrowLeftRight,
   BsBook,
@@ -263,44 +258,5 @@ export const sidebarItems = [
     icon: <FiLogOut />,
     href: "/app/logout",
     target: "_self",
-  },
-];
-
-export const items = [
-  {
-    title: "Kütüphane",
-    description: "Kütüphane bilgilerini düzenleyin, yeni kütüphaneler ekleyin.",
-    link: "/app/library",
-  },
-  {
-    title: "Üyeler",
-    description: "Üyeleri yönetin, yeni üyeler ekleyin.",
-    link: "/app/member",
-  },
-  {
-    title: "Kitaplar",
-    description: "Kitapları düzenleyin, yeni kitaplar ekleyin.",
-    link: "/app/book",
-  },
-  {
-    title: "Personel",
-    description: "Personel bilgilerini yönetin, yeni personel ekleyin.",
-    link: "/app/staff",
-  },
-  {
-    title: "Ödünç Verme",
-    description: "Kitap ödünç verme işlemlerini yönetin.",
-    link: "/app/borrow",
-  },
-  {
-    title: "Kitap Türleri",
-    description: "Kitap türlerini düzenleyin, yeni türler ekleyin.",
-    link: "/app/genre",
-  },
-  {
-    title: "Kitap Etiketleri",
-    description:
-      "Arama terimlerini yönetin, popüler arama terimlerini görüntüleyin ve düzenleyin.",
-    link: "/app/book-tag",
   },
 ];

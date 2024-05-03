@@ -76,7 +76,7 @@ const HeroSection = () => {
                     maxH="52px"
                     w="max-content"
                     color="white"
-                    bgGradient="linear(to-br, #228be6, #15aabf)"
+                    bgGradient="linear(to-br, teal.500, teal.300)"
                     rounded="md"
                   >
                     {feature.icon}
@@ -108,9 +108,9 @@ const HeroSection = () => {
                 <chakra.button
                   h={12}
                   px={6}
-                  bgGradient="linear(to-br, #228be6, #15aabf)"
+                  bgGradient="linear(to-br, teal.500, teal.300)"
                   color="white"
-                  _hover={{ bgGradient: "linear(to-br, #228be6, #228be6)" }}
+                  _hover={{ bgGradient: "linear(to-br, teal.500, teal.400)" }}
                   variant="solid"
                   size="lg"
                   rounded="md"

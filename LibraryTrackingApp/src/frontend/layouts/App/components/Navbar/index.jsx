@@ -20,6 +20,7 @@ import LanguageSwitcher from "../../../../components/LanguageSwitcher";
 
 import { FiMinimize, FiMaximize } from "react-icons/fi";
 import { HiMenuAlt2 } from "react-icons/hi";
+import { CloseIcon } from "@chakra-ui/icons";
 
 const Navbar = ({ isOpen, onMenuToggle }) => {
   const [isMaximized, setIsMaximized] = useState(false);
@@ -54,30 +55,40 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
 
   return (
     <Flex
-      py="2"
       boxShadow="sm"
       border="0 solid #e5e7eb"
-      position="fixed"
-      top="0"
       bg={useColorModeValue("gray.100", "gray.700")}
-      width="100%"
-      transition="0.3s ease-in-out"
       justifyContent={"space-between"}
       p={2}
+      zIndex={15}
+      width={isOpen ? "calc(100% - 275px)" : "100%"}
+      transform={isOpen ? "translateX(275px)" : "translateX(0)"}
+      transition="0.3s ease-in"
+
     >
       <HStack spacing={3}>
-        <Icon
-          cursor={"pointer"}
-          as={HiMenuAlt2}
-          boxSize={18}
-          onClick={onMenuToggle}
-        />
+        {isOpen ? (
+          <CloseIcon
+            boxSize={4}
+            cursor={"pointer"}
+            onClick={onMenuToggle}
+            _hover={{ color: "red" }}
+          />
+        ) : (
+          <Icon
+            cursor={"pointer"}
+            as={HiMenuAlt2}
+            boxSize={18}
+            onClick={onMenuToggle}
+          />
+        )}
       </HStack>
-
-      <NavItem
-        isMaximized={isMaximized}
-        handleMaximizeToggle={handleMaximizeToggle}
-      />
+      <Box >
+        <NavItem
+          isMaximized={isMaximized}
+          handleMaximizeToggle={handleMaximizeToggle}
+        />
+      </Box>
     </Flex>
   );
 };
