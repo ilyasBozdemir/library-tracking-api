@@ -1,9 +1,9 @@
 import React from 'react'
 
-function BooksPage() {
+function ThesisPage() {
   return (
-    <div>BooksPage</div>
+    <div>ThesisPage</div>
   )
 }
 
-export default BooksPage
+export default ThesisPage
