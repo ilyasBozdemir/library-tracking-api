@@ -8,7 +8,7 @@ public class WorkInventory : BaseEntity<Guid>, IAuditable<Guid>
     public Guid? BorrowLendId { get; set; }
     public Guid EditionId { get; set; } // Eserin türü
     public Guid? ShelfId { get; set; }
-    public Guid? BookCompartmentId { get; set; }
+    public Guid? WorkCompartmentId { get; set; }
     public string BookNumber { get; set; }
     public WorkStatus BookStatus { get; set; }
     public bool IsAvailable { get; set; }
@@ -27,5 +27,5 @@ public class WorkInventory : BaseEntity<Guid>, IAuditable<Guid>
 
     public virtual ICollection<BorrowLend>? BorrowLends { get; set; }
 
-    public virtual WorkCompartment BookCompartment { get; set; }
+    public virtual WorkCompartment WorkCompartment { get; set; }
 }

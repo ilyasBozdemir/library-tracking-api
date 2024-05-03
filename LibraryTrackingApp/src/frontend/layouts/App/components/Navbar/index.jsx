@@ -13,12 +13,13 @@ import {
   useColorModeValue,
   Icon,
   Flex,
+  useColorMode,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import ThemeSwitcher from "../../../../components/ThemeSwitcher";
 import LanguageSwitcher from "../../../../components/LanguageSwitcher";
 
-import { FiMinimize, FiMaximize } from "react-icons/fi";
+import { FiMinimize, FiMaximize, FiBell } from "react-icons/fi";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { CloseIcon } from "@chakra-ui/icons";
 
@@ -97,6 +98,7 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
   return (
     <>
       <HStack spacing={3}>
+      <NotificationMenu/>
         <LanguageSwitcher />
         <ThemeSwitcher />
 
@@ -136,5 +138,70 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
     </>
   );
 };
+const NotificationMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const notifications = [
+    {
+      id: 1,
+      title: "Yeni Mesaj",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      time: "5 dakika önce",
+      read: false,
+    },
+    {
+      id: 2,
+      title: "Bildirim",
+      content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      time: "1 saat önce",
+      read: true,
+    },
+    {
+      id: 3,
+      title: "Bilgilendirme",
+      content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      time: "1 gün önce",
+      read: false,
+    },
+  ];
 
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const { colorMode } = useColorMode();
+
+  // Okunmamış bildirim sayısını hesapla
+  const unreadNotificationsCount = notifications.filter(notification => !notification.read).length;
+
+  return (
+    <Menu isLazy>
+      <MenuButton
+        cursor="pointer"
+        boxSize={15}
+        _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
+        onClick={handleToggle}
+        position="relative"
+      >
+        <FiBell />
+      </MenuButton>
+      <MenuList
+        zIndex={5}
+        border="2px solid"
+        borderColor="gray.200"
+        boxShadow="4px 4px 0"
+        minWidth="200px"
+        display={isOpen ? "block" : "none"}
+      >
+        {notifications.map((notification, index) => (
+          <MenuItem key={index}>
+            <VStack spacing={2} align="start">
+              <Text fontWeight="500">{notification.title}</Text>
+              <Text color="gray.500">{notification.content}</Text>
+            </VStack>
+          </MenuItem>
+        ))}
+      </MenuList>
+    </Menu>
+  );
+};
 export default Navbar;

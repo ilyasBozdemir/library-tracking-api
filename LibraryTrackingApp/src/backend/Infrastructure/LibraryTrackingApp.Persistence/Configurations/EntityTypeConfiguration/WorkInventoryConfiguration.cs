@@ -27,16 +27,9 @@ public class WorkInventoryConfiguration : IEntityTypeConfiguration<WorkInventory
          .HasConversion(new EnumToStringConverter<WorkStatus>());
 
 
-        builder.HasOne(bi => bi.BookCompartment)
+        builder.HasOne(bi => bi.WorkCompartment)
               .WithMany(bc => bc.BookInventoryItems)
-              .HasForeignKey(bi => bi.BookCompartmentId)
+              .HasForeignKey(bi => bi.WorkCompartmentId)
               .IsRequired(false);
-
-
-        builder.HasOne(bi => bi.BookCompartment)
-            .WithMany(bc => bc.BookInventoryItems)
-            .HasForeignKey(bi => bi.BookCompartmentId) 
-            .IsRequired(false);
-
     }
 }
