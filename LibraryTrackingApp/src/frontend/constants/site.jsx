@@ -16,7 +16,7 @@ const API_BASE_URL =
 
 const baseUrl =
   process.env.NODE_ENV === "production"
-    ? "https://appizsoft.com"
+    ? "https://domain.com"
     : "http://localhost:3000";
 
 export const site = {

@@ -125,23 +125,10 @@ export const sidebarItems = [
   },
   {
     title: "Tür Yönetimi",
-    icon: <FaBookOpen />,
-    href: null,
+    icon: <CiBoxList />,
+    href: "/app/genre",
     target: "_self",
-    subItems: [
-      {
-        icon: <IoCreateOutline />,
-        title: "Yeni  Ekle",
-        href: "/app/genre/new",
-        target: "_self",
-      },
-      {
-        icon: <CiBoxList />,
-        title: "Listele",
-        href: "/app/genre",
-        target: "_self",
-      },
-    ],
+    subItems: [],
   },
   {
     title: "Üye Yönetimi",

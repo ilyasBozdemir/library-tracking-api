@@ -19,14 +19,14 @@ export const meSidebarItems = [
     target: "_self",
   },
   {
-    title: "Profil Yönetimi",
+    title: "Profilim",
     icon: <FaUser />,
     href: "/me/profile",
     target: "_self",
     subItems: [],
   },
   {
-    title: "Kütüphane Yönetimi",
+    title: "Kütüphanelerim",
     icon: <FaBook />,
     href: "/me/library",
     target: "_self",

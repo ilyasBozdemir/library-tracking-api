@@ -1,4 +1,10 @@
-import { Box, Button, Select, useColorModeValue } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Select,
+  useColorMode,
+  useColorModeValue,
+} from "@chakra-ui/react";
 import { useRouter } from "next/router";
 import React, { useEffect, useState } from "react";
 import locales, { EN_LOCALE, TR_LOCALE } from "../lib/locales";
@@ -27,7 +33,6 @@ function LangSwitcher() {
     broadcastChannel.addEventListener("message", (message) => {
       changeLanguage(message.data);
     });
-
   }, []);
 
   const changeLanguage = (newLocale) => {
@@ -38,7 +43,7 @@ function LangSwitcher() {
     } else {
       router.push(router.pathname, undefined, {
         locale: newLocale,
-        shallow: true
+        shallow: true,
       });
     }
   };
@@ -50,11 +55,12 @@ function LangSwitcher() {
     changeLanguage(newLocale);
     broadcastChannel.postMessage(newLocale);
   };
-
+  const { colorMode } = useColorMode();
   return (
     <>
       <Button
         id="lang-switcher"
+        _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
         color={useColorModeValue("text.200", "textD.200")}
         bg="transparent"
         p={2}
@@ -62,10 +68,6 @@ function LangSwitcher() {
         onClick={toggleLanguage}
         mr={2}
         variant={"link"}
-        _hover={{
-          textDecoration: "none",
-          color: "primary.100",
-        }}
         cursor={"pointer"}
       >
         {currentLocale === EN_LOCALE.hl ? "TR" : "EN"}

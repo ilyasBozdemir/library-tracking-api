@@ -53,7 +53,7 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
       }
     }
   };
-
+  const { colorMode } = useColorMode();
   return (
     <Flex
       boxShadow="sm"
@@ -65,7 +65,6 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
       width={isOpen ? "calc(100% - 275px)" : "100%"}
       transform={isOpen ? "translateX(275px)" : "translateX(0)"}
       transition="0.3s ease-in"
-
     >
       <HStack spacing={3}>
         {isOpen ? (
@@ -73,7 +72,7 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
             boxSize={4}
             cursor={"pointer"}
             onClick={onMenuToggle}
-            _hover={{ color: "red" }}
+            _hover={{ color: colorMode === "light" ? "red" : "red.300" }}
           />
         ) : (
           <Icon
@@ -81,10 +80,11 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
             as={HiMenuAlt2}
             boxSize={18}
             onClick={onMenuToggle}
+            _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
           />
         )}
       </HStack>
-      <Box >
+      <Box>
         <NavItem
           isMaximized={isMaximized}
           handleMaximizeToggle={handleMaximizeToggle}
@@ -95,10 +95,11 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
 };
 
 const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
+  const { colorMode } = useColorMode();
   return (
     <>
       <HStack spacing={3}>
-      <NotificationMenu/>
+        <NotificationMenu />
         <LanguageSwitcher />
         <ThemeSwitcher />
 
@@ -107,6 +108,7 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
           as={isMaximized ? FiMinimize : FiMaximize}
           boxSize={15}
           onClick={handleMaximizeToggle}
+          _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
         />
 
         <Menu isLazy>
@@ -151,14 +153,16 @@ const NotificationMenu = () => {
     {
       id: 2,
       title: "Bildirim",
-      content: "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      content:
+        "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       time: "1 saat önce",
       read: true,
     },
     {
       id: 3,
       title: "Bilgilendirme",
-      content: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      content:
+        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
       time: "1 gün önce",
       read: false,
     },
@@ -171,37 +175,41 @@ const NotificationMenu = () => {
   const { colorMode } = useColorMode();
 
   // Okunmamış bildirim sayısını hesapla
-  const unreadNotificationsCount = notifications.filter(notification => !notification.read).length;
+  const unreadNotificationsCount = notifications.filter(
+    (notification) => !notification.read
+  ).length;
 
   return (
-    <Menu isLazy>
-      <MenuButton
-        cursor="pointer"
-        boxSize={15}
-        _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
-        onClick={handleToggle}
-        position="relative"
-      >
-        <FiBell />
-      </MenuButton>
-      <MenuList
-        zIndex={5}
-        border="2px solid"
-        borderColor="gray.200"
-        boxShadow="4px 4px 0"
-        minWidth="200px"
-        display={isOpen ? "block" : "none"}
-      >
-        {notifications.map((notification, index) => (
-          <MenuItem key={index}>
-            <VStack spacing={2} align="start">
-              <Text fontWeight="500">{notification.title}</Text>
-              <Text color="gray.500">{notification.content}</Text>
-            </VStack>
-          </MenuItem>
-        ))}
-      </MenuList>
-    </Menu>
+    <>
+      <Menu isLazy>
+        <MenuButton
+          cursor="pointer"
+          boxSize={15}
+          _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
+          onClick={handleToggle}
+          position="relative"
+        >
+          <FiBell />
+        </MenuButton>
+        <MenuList
+          zIndex={5}
+          border="2px solid"
+          borderColor="gray.200"
+          boxShadow="4px 4px 0"
+          minWidth="200px"
+          display={isOpen ? "block" : "none"}
+        >
+          {notifications.map((notification, index) => (
+            <MenuItem key={index}>
+              <VStack spacing={2} align="start">
+                <Text fontWeight="500">{notification.title}</Text>
+                <Text color="gray.500">{notification.content}</Text>
+              </VStack>
+            </MenuItem>
+          ))}
+        </MenuList>
+      </Menu>
+    </>
   );
 };
 export default Navbar;

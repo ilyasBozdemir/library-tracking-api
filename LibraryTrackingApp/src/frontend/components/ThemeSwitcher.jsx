@@ -42,6 +42,7 @@ function ThemeSwitcher() {
     <>
       <IconButton
         id={"theme-switcher"}
+        _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
         aria-label="Color Switcher"
         variant={"ghost"}
         onClick={handleToggleColorMode}
