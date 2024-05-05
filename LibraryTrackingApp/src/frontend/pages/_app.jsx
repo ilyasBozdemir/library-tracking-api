@@ -5,9 +5,9 @@ const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
 const AppLayout = dynamic(() => import("@/layouts/App/layout"));
 const MeLayout = dynamic(() => import("@/layouts/Me/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
-const PlaceholderLayout = dynamic(() =>
-  import("@/layouts/Placeholder/layout")
-);
+import ForumLayout from "@/layouts/Forum/layout";
+
+const PlaceholderLayout = dynamic(() => import("@/layouts/Placeholder/layout"));
 
 import { useColorMode, colorMode } from "@chakra-ui/react";
 
@@ -28,16 +28,32 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     colorMode === "light" ? lightTheme.colors : darkTheme.colors
   );
 
-  const placeholderRoutes = ["/privacy-policy", "/login", "/register", "/docs", "/api-docs", '/401', '/403', '/404', '/409', '/500', '/501', '/502', '/503'];
+  const placeholderRoutes = [
+    "/privacy-policy",
+    "/login",
+    "/register",
+    "/docs",
+    "/api-docs",
+    "/401",
+    "/403",
+    "/404",
+    "/409",
+    "/500",
+    "/501",
+    "/502",
+    "/503",
+  ];
   const anonLayoutRoutes = ["/./"];
   const adminLayoutRoutes = /^\/admin(?:\/|$)/;
   const appLayoutRoutes = /^\/app(?:\/|$)/;
   const meLayoutRoutes = /^\/me(?:\/|$)/;
+  const forumLayoutRoutes = /^\/forum(?:\/|$)/;
 
   const routeLayoutMap = [
     { regex: adminLayoutRoutes, layout: AdminLayout },
     { regex: appLayoutRoutes, layout: AppLayout },
     { regex: meLayoutRoutes, layout: MeLayout },
+    { regex: forumLayoutRoutes, layout: ForumLayout },
     {
       regex: new RegExp(`^(${placeholderRoutes.join("|")})`),
       layout: PlaceholderLayout,
