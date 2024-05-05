@@ -223,12 +223,6 @@ export const sidebarItems = [
     ],
   },
   {
-    title: "Ayarlar",
-    icon: <FiSettings />,
-    href: "/app/settings",
-    target: "_self",
-  },
-  {
     title: "Geliştirici Belgeleri",
     icon: <FiBook />,
     href: "/docs",
@@ -238,6 +232,12 @@ export const sidebarItems = [
     title: "Destek",
     icon: <BiSupport />,
     href: "/app/support",
+    target: "_self",
+  },
+  {
+    title: "Ayarlar",
+    icon: <FiSettings />,
+    href: "/app/settings",
     target: "_self",
   },
   {

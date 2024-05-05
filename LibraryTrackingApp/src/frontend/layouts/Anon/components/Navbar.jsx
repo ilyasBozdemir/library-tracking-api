@@ -23,7 +23,7 @@ const navLinks = [
   { name: "Hakkımızda", path: "/about", target: "_self" },
   { name: "Özellikler", path: "/features", target: "_self" },
   { name: "Dökümantasyon", path: "/docs", target: "_blank" },
-  { name: "Topluluk", path: "/community", target: "_self" },
+  { name: "Forum", path: "/forum", target: "_self" },
   { name: "Blog", path: "/blog" },
 ];
 

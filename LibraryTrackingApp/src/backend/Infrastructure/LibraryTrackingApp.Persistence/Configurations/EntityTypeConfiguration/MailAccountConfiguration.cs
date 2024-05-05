@@ -10,7 +10,7 @@ public class MailAccountConfiguration : IEntityTypeConfiguration<Domain.Entities
     {
         builder.ToTable("MailAccounts", schema: "static");// Veritabanında tablo adı
         builder.HasKey(ms => ms.Id); // Primary key olarak Id'yi kullanma
-        builder.Property(ms => ms.Owner).IsRequired().HasMaxLength(100); // Owner özelliği zorunlu ve maksimum 100 karakter olmalı
+        builder.Property(ms => ms.Purpose).IsRequired().HasMaxLength(100); // Owner özelliği zorunlu ve maksimum 100 karakter olmalı
         builder.Property(ms => ms.SmtpServer).IsRequired().HasMaxLength(100); // SmtpServer özelliği zorunlu ve maksimum 100 karakter olmalı
         builder.Property(ms => ms.Port).IsRequired(); // Port özelliği zorunlu
         builder.Property(ms => ms.SenderEmail).IsRequired().HasMaxLength(100); // SenderEmail özelliği zorunlu ve maksimum 100 karakter olmalı

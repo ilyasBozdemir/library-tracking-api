@@ -16,8 +16,10 @@ import {
 } from "@chakra-ui/react";
 import { FiSettings, FiLogOut } from "react-icons/fi";
 import { FaRegHeart, FaRegListAlt } from "react-icons/fa";
+import { useRouter } from "next/router";
 
 const IndexPage = () => {
+  const router = useRouter();
 
   const user = {
     name: "İlyas Bozdemir",
@@ -30,8 +32,15 @@ const IndexPage = () => {
   };
 
   return (
-    <Flex p={4}>
-      <Box w="25%">
+    <Flex
+      p={4}
+      direction={{
+        base: "column",
+        md: "column",
+      }}
+      gap={8}
+    >
+      <Box>
         <Avatar name={user.name} size="xl" src={user.avatar}>
           <AvatarBadge boxSize="1.25em" bg="green.500" />
         </Avatar>
@@ -40,7 +49,13 @@ const IndexPage = () => {
         </Heading>
         <Text color="gray.500">Premium Üye</Text>
         <Flex justify="center" align="center" mt={4}>
-          <Button leftIcon={<FiSettings />} colorScheme="teal">
+          <Button
+            leftIcon={<FiSettings />}
+            onClick={() => {
+              router.push("/me/profile");
+            }}
+            colorScheme="teal"
+          >
             Profili Düzenle
           </Button>
           <IconButton
@@ -50,58 +65,80 @@ const IndexPage = () => {
             colorScheme="red"
           />
         </Flex>
+      </Box>
+      <Spacer />
 
-      </Box>
-      <Spacer />
-      <Box w="50%" borderWidth="1px" borderRadius="md" p={4}>
-        <Heading as="h3" mb={4} fontSize="xl">
-          Favori Kitaplar
-        </Heading>
-        <Stack spacing={2}>
-          <Box>
-            <Text fontWeight="bold">1. Harry Potter ve Felsefe Taşı</Text>
-            <Text color="gray.500">J.K. Rowling</Text>
-          </Box>
-          <Divider />
-          <Box>
-            <Text fontWeight="bold">2. Hobbit</Text>
-            <Text color="gray.500">J.R.R. Tolkien</Text>
-          </Box>
-          <Divider />
-          <Box>
-            <Text fontWeight="bold">3. Suç ve Ceza</Text>
-            <Text color="gray.500">Fyodor Dostoyevski</Text>
-          </Box>
-        </Stack>
-        <Button mt={4} leftIcon={<FaRegHeart />} colorScheme="teal">
-          Tüm Favorileri Görüntüle
-        </Button>
-      </Box>
-      <Spacer />
-      <Box w="25%" borderWidth="1px" borderRadius="md" p={4}>
-        <Heading as="h3" mb={4} fontSize="xl">
-          Okuma Listesi
-        </Heading>
-        <Stack spacing={2}>
-          <Box>
-            <Text fontWeight="bold">1. Uyanış</Text>
-            <Text color="gray.500">Leo Tolstoy</Text>
-          </Box>
-          <Divider />
-          <Box>
-            <Text fontWeight="bold">2. 1984</Text>
-            <Text color="gray.500">George Orwell</Text>
-          </Box>
-          <Divider />
-          <Box>
-            <Text fontWeight="bold">3. Uçurtma Avcısı</Text>
-            <Text color="gray.500">Khaled Hosseini</Text>
-          </Box>
-        </Stack>
-        <Button mt={4} leftIcon={<FaRegListAlt />} colorScheme="teal">
-          Tümünü Görüntüle
-        </Button>
-      </Box>
+      <Flex
+        direction={{
+          base: "column",
+          md: "column",
+        }}
+        gap={5}
+      >
+        <Box borderWidth="1px" borderRadius="md" p={4}>
+          <Heading as="h3" mb={4} fontSize="xl">
+            Favori Kitaplar
+          </Heading>
+          <Stack spacing={2}>
+            <Box>
+              <Text fontWeight="bold">1. Harry Potter ve Felsefe Taşı</Text>
+              <Text color="gray.500">J.K. Rowling</Text>
+            </Box>
+            <Divider />
+            <Box>
+              <Text fontWeight="bold">2. Hobbit</Text>
+              <Text color="gray.500">J.R.R. Tolkien</Text>
+            </Box>
+            <Divider />
+            <Box>
+              <Text fontWeight="bold">3. Suç ve Ceza</Text>
+              <Text color="gray.500">Fyodor Dostoyevski</Text>
+            </Box>
+          </Stack>
+          <Button
+            mt={4}
+            leftIcon={<FaRegHeart />}
+            onClick={() => {
+              router.push("/me/favorites");
+            }}
+            colorScheme="teal"
+          >
+            Tüm Favorileri Görüntüle
+          </Button>
+        </Box>
+        <Spacer />
+        <Box borderWidth="1px" borderRadius="md" p={4}>
+          <Heading as="h3" mb={4} fontSize="xl">
+            Okuma Listesi
+          </Heading>
+          <Stack spacing={2}>
+            <Box>
+              <Text fontWeight="bold">1. Uyanış</Text>
+              <Text color="gray.500">Leo Tolstoy</Text>
+            </Box>
+            <Divider />
+            <Box>
+              <Text fontWeight="bold">2. 1984</Text>
+              <Text color="gray.500">George Orwell</Text>
+            </Box>
+            <Divider />
+            <Box>
+              <Text fontWeight="bold">3. Uçurtma Avcısı</Text>
+              <Text color="gray.500">Khaled Hosseini</Text>
+            </Box>
+          </Stack>
+          <Button
+            mt={4}
+            onClick={() => {
+              router.push("/me/reading-list");
+            }}
+            leftIcon={<FaRegListAlt />}
+            colorScheme="teal"
+          >
+            Tümünü Görüntüle
+          </Button>
+        </Box>
+      </Flex>
     </Flex>
   );
 };

@@ -15,17 +15,29 @@ import {
   Flex,
   useColorMode,
   IconButton,
+  Link as CLink,
+  useDisclosure,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import ThemeSwitcher from "../../../../components/ThemeSwitcher";
-import LanguageSwitcher from "../../../../components/LanguageSwitcher";
+
 import { TfiHome } from "react-icons/tfi";
 import { FiMinimize, FiMaximize, FiBell } from "react-icons/fi";
-import { HiMenuAlt2 } from "react-icons/hi";
-import { CloseIcon } from "@chakra-ui/icons";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { useRouter } from "next/router";
+import { AiOutlineClose } from "react-icons/ai";
 
-const Navbar = ({ isOpen, onMenuToggle }) => {
+const navLinks = [
+  { name: "Hakkımızda", path: "/about", target: "_self" },
+  { name: "Özellikler", path: "/features", target: "_self" },
+  { name: "Dökümantasyon", path: "/docs", target: "_blank" },
+  { name: "Topluluk", path: "/community", target: "_self" },
+  { name: "Forum", path: "/forum", target: "_self" },
+  { name: "Blog", path: "/blog" },
+];
+
+const Navbar = () => {
   const [isMaximized, setIsMaximized] = useState(false);
 
   const handleMaximizeToggle = () => {
@@ -56,61 +68,63 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
     }
   };
   const { colorMode } = useColorMode();
+  const { isOpen, onOpen, onClose } = useDisclosure();
   return (
-    <Flex
-      boxShadow="sm"
-      border="0 solid #e5e7eb"
-      bg={useColorModeValue("gray.100", "gray.700")}
-      justifyContent={"space-between"}
-      p={2}
-      zIndex={15}
-      width={isOpen ? "calc(100% - 275px)" : "100%"}
-      transform={isOpen ? "translateX(275px)" : "translateX(0)"}
-      transition="0.3s ease-in"
-    >
-      <HStack spacing={3}>
-        {isOpen ? (
-          <CloseIcon
-            boxSize={4}
-            cursor={"pointer"}
-            onClick={onMenuToggle}
-            _hover={{ color: colorMode === "light" ? "red" : "red.300" }}
-          />
-        ) : (
-          <Icon
-            cursor={"pointer"}
-            as={HiMenuAlt2}
-            boxSize={18}
-            onClick={onMenuToggle}
-            _hover={{ color: colorMode === "light" ? "teal.500" : "teal.300" }}
-          />
-        )}
-      </HStack>
-      <Box>
-        <NavItem
-          isMaximized={isMaximized}
-          handleMaximizeToggle={handleMaximizeToggle}
+    <>
+      <Flex
+        boxShadow="sm"
+        border="0 solid #e5e7eb"
+        bg={useColorModeValue("gray.100", "gray.700")}
+        justifyContent={"space-between"}
+        p={2}
+        zIndex={15}
+        width={"100%"}
+        alignItems="center"
+      >
+        <IconButton
+          size="md"
+          icon={isOpen ? <AiOutlineClose /> : <GiHamburgerMenu />}
+          aria-label="Open Menu"
+          display={{ base: "inherit", md: "none" }}
+          onClick={isOpen ? onClose : onOpen}
+          variant={"ghost"}
         />
-      </Box>
-    </Flex>
+        <Link href="/">
+              <Text
+                fontWeight={"semibold"}
+                fontSize={{ base: 18, md: 20 }}
+                line
+              >
+                LOGO
+              </Text>
+            </Link>
+        <HStack
+          as="nav"
+          spacing={6}
+          display={{ base: "none", md: "flex" }}
+          alignItems="center"
+        >
+          {navLinks.map((link, index) => (
+            <NavLink key={index} {...link} onClose={onClose} />
+          ))}
+        </HStack>
+        <Box>
+          <NavItem
+            isMaximized={isMaximized}
+            handleMaximizeToggle={handleMaximizeToggle}
+          />
+        </Box>
+      </Flex>
+    </>
   );
 };
 
 const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
   const { colorMode } = useColorMode();
-  
+
   return (
     <>
       <HStack spacing={3}>
-        <Icon
-          as={TfiHome}
-          cursor={"pointer"}
-          mx={2.5}
-          onClick={() => {
-            window.open("/", "_blank");
-          }}
-        />
-
         <NotificationMenu />
         <LanguageSwitcher />
         <ThemeSwitcher />
@@ -136,7 +150,7 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
             borderColor={useColorModeValue("gray.100", "gray.700")}
             boxShadow="4px 4px 0"
           >
-            <Link href="/app/profile" passHref>
+            <Link href="/profile" passHref>
               <MenuItem>
                 <VStack justify="start" alignItems="left">
                   <Text fontWeight="500">İlyas Bozdemir</Text>
@@ -224,4 +238,31 @@ const NotificationMenu = () => {
     </>
   );
 };
+const NavLink = ({ name, path, target, onClose }) => {
+  const router = useRouter();
+  const isActive = router.pathname === path;
+
+  const color = isActive
+    ? useColorModeValue("teal.500", "teal.200")
+    : useColorModeValue("black", "white");
+
+  return (
+    <CLink
+      as={Link}
+      href={path}
+      lineHeight="inherit"
+      target={target}
+      color={color}
+      _hover={{
+        textDecoration: "none",
+        color: useColorModeValue("teal.500", "teal.200"),
+        textDecoration: "underline",
+      }}
+      onClick={() => onClose()}
+    >
+      {name}
+    </CLink>
+  );
+};
+
 export default Navbar;
