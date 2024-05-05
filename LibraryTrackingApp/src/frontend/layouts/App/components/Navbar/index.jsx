@@ -14,14 +14,16 @@ import {
   Icon,
   Flex,
   useColorMode,
+  IconButton,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import ThemeSwitcher from "../../../../components/ThemeSwitcher";
 import LanguageSwitcher from "../../../../components/LanguageSwitcher";
-
+import { TfiHome } from "react-icons/tfi";
 import { FiMinimize, FiMaximize, FiBell } from "react-icons/fi";
 import { HiMenuAlt2 } from "react-icons/hi";
 import { CloseIcon } from "@chakra-ui/icons";
+import { useRouter } from "next/router";
 
 const Navbar = ({ isOpen, onMenuToggle }) => {
   const [isMaximized, setIsMaximized] = useState(false);
@@ -96,9 +98,19 @@ const Navbar = ({ isOpen, onMenuToggle }) => {
 
 const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
   const { colorMode } = useColorMode();
+  
   return (
     <>
       <HStack spacing={3}>
+        <Icon
+          as={TfiHome}
+          cursor={"pointer"}
+          mx={2.5}
+          onClick={() => {
+            window.open("/", "_blank");
+          }}
+        />
+
         <NotificationMenu />
         <LanguageSwitcher />
         <ThemeSwitcher />

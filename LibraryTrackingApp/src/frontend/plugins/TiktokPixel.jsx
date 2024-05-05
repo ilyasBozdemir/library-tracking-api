@@ -1,6 +1,4 @@
 import React from "react";
-import { useEffect } from 'react';
-
 function TiktokPixel({ code }) {
   const script = `
   !(function (w, d, t) {

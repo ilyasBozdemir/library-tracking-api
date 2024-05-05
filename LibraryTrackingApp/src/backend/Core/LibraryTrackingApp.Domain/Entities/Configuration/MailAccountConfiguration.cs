@@ -4,7 +4,7 @@ public class MailAccountConfiguration : BaseEntity<int>
 {
     public int Id { get; set; }
 
-    public string Owner { get; set; }
+    public string Purpose { get; set; }
     public string SmtpServer { get; set; }
     public int Port { get; set; }
 

@@ -1,7 +1,6 @@
 import { Box, Flex } from "@chakra-ui/react";
 import Head from "next/head";
 import React, { useState } from "react";
-
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 
@@ -16,7 +15,7 @@ function Layout({ children }) {
       <Head>
         <meta name="robots" content="noindex, nofollow" />
         <link rel="icon" href="/favicon.ico" />
-        <title>Library Managament</title>
+        <title>Kütüphane Yönetim Platformu</title>
       </Head>
 
       <Sidebar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />

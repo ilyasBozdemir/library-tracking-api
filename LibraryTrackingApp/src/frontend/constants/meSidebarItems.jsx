@@ -28,7 +28,7 @@ export const meSidebarItems = [
   {
     title: "Kütüphanelerim",
     icon: <FaBook />,
-    href: "/me/library",
+    href: "/me/libraries",
     target: "_self",
     subItems: [],
   },

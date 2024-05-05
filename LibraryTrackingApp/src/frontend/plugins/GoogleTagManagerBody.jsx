@@ -6,8 +6,8 @@ function GoogleTagManagerBody({ code }) {
       <noscript>
         <iframe
           src={`https://www.googletagmanager.com/ns.html?id=${code}`}
-          height="0"
-          width="0"
+          height="10"
+          width="10"
           style={{ display: "none", visibility: "hidden" }}
         />
       </noscript>

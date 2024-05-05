@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   Button,
   Container,
@@ -21,7 +21,41 @@ import {
   Heading,
   Switch,
   useColorMode,
+  InputGroup,
+  InputLeftAddon,
+  Icon,
+  InputRightAddon,
+  Flex,
+  Select,
+  Table,
+  TableCaption,
+  Thead,
+  Tr,
+  Th,
+  Tbody,
+  Td,
+  IconButton,
+  SimpleGrid,
+  TableContainer,
 } from "@chakra-ui/react";
+
+import {
+  AlertDialog,
+  AlertDialogBody,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogContent,
+  AlertDialogOverlay,
+} from "@chakra-ui/react";
+
+import { useApp } from "@/contexts/AppContext";
+
+import { CgWebsite } from "react-icons/cg";
+import { FiFacebook, FiInstagram } from "react-icons/fi";
+import { FaXTwitter } from "react-icons/fa6";
+import { SiTiktok } from "react-icons/si";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { MdOutlineDelete } from "react-icons/md";
 
 const LibraryProfileSettingsPage = () => {
   const toast = useToast();
@@ -58,15 +92,26 @@ const LibraryProfileSettingsPage = () => {
     });
   };
 
+  const [activeTab, setActiveTab] = useState(0);
+  const handleTabChange = (index) => {
+    setActiveTab(index);
+  };
+
   return (
-    <Container maxW="5xl">
-      <Tabs overflow={"auto"}>
+    <Container maxW="6xl">
+      <Tabs
+        overflow="auto"
+        onChange={handleTabChange}
+        index={activeTab}
+        defaultIndex={activeTab}
+      >
         <TabList>
           <Tab
             _selected={{
               color: "white",
               bg: "teal.500",
             }}
+            onClick={() => setActiveTab(0)}
           >
             Genel Ayarlar
           </Tab>
@@ -75,6 +120,7 @@ const LibraryProfileSettingsPage = () => {
               color: "white",
               bg: "teal.500",
             }}
+            onClick={() => setActiveTab(1)}
           >
             Kütüphane Bilgileri
           </Tab>
@@ -83,6 +129,7 @@ const LibraryProfileSettingsPage = () => {
               color: "white",
               bg: "teal.500",
             }}
+            onClick={() => setActiveTab(2)}
           >
             Eser Ayarları
           </Tab>
@@ -91,6 +138,7 @@ const LibraryProfileSettingsPage = () => {
               color: "white",
               bg: "teal.500",
             }}
+            onClick={() => setActiveTab(0)}
           >
             Üye Ayarları
           </Tab>
@@ -99,6 +147,7 @@ const LibraryProfileSettingsPage = () => {
               color: "white",
               bg: "teal.500",
             }}
+            onClick={() => setActiveTab(4)}
           >
             Çalışan Ayarları
           </Tab>
@@ -107,6 +156,7 @@ const LibraryProfileSettingsPage = () => {
               color: "white",
               bg: "teal.500",
             }}
+            onClick={() => setActiveTab(5)}
           >
             Gizlilik Ayarları
           </Tab>
@@ -115,6 +165,7 @@ const LibraryProfileSettingsPage = () => {
               color: "white",
               bg: "teal.500",
             }}
+            onClick={() => setActiveTab(6)}
           >
             Sosyal Medya Ayarları
           </Tab>
@@ -272,7 +323,6 @@ const LibraryProfileSettingsPage = () => {
 };
 
 const GeneralSettingsPage = () => {
-  const { colorMode, toggleColorMode } = useColorMode();
   const toast = useToast();
   const [formData, setFormData] = useState({
     enableDarkMode: false,
@@ -327,6 +377,7 @@ const GeneralSettingsPage = () => {
               name="enableDarkMode"
               isChecked={formData.enableDarkMode}
               onChange={handleChange}
+              colorScheme={'teal'}
             />
           </Box>
           <Box>
@@ -335,6 +386,7 @@ const GeneralSettingsPage = () => {
               name="enableNotifications"
               isChecked={formData.enableNotifications}
               onChange={handleChange}
+              colorScheme={'teal'}
             />
           </Box>
           <Box>
@@ -343,6 +395,7 @@ const GeneralSettingsPage = () => {
               name="enableEmailNotifications"
               isChecked={formData.enableEmailNotifications}
               onChange={handleChange}
+              colorScheme={'teal'}
             />
           </Box>
           <Box>
@@ -351,6 +404,7 @@ const GeneralSettingsPage = () => {
               name="enableAutoApproval"
               isChecked={formData.enableAutoApproval}
               onChange={handleChange}
+              colorScheme={'teal'}
             />
           </Box>
           <Button type="submit" colorScheme="teal">
@@ -517,23 +571,29 @@ const PrivacySettingsPage = () => {
 };
 const SocialMediaSettingsPage = () => {
   const toast = useToast();
+  const { analytics, setAnalytics } = useApp();
+  const [activeSubTab, setActiveSubTab] = useState(0);
 
-  const [socialMediaLinks, setSocialMediaLinks] = useState({
-    facebook: "",
-    twitter: "",
-    instagram: "",
-    tiktok: "",
-  });
+  const handleTabChange = (index) => {
+    setActiveSubTab(index);
+  };
 
-  const [pixelCodes, setPixelCodes] = useState({
-    facebook: "",
-    linkedin: "",
-    googleTagManager: "",
-    googleAnalytics: "",
-  });
+  const [purposes, setPurposes] = useState([
+    { name: "Bildirim", value: "notification" },
+    { name: "Ödünç/İade", value: "borrow_return" },
+    { name: "Hatırlatma", value: "reminding" },
+    { name: "Destek", value: "support" },
+    { name: "Abonelik", value: "subscription" },
+    { name: "Reklam", value: "advertisement" },
+    { name: "Etkinlik", value: "event" },
+    { name: "Fatura ve Ödeme", value: "billing_payment" },
+    { name: "Kimlik Doğrulama ve Onay", value: "authentication_confirmation" },
+  ]);
 
   const [emailAccounts, setEmailAccounts] = useState([
     {
+      id: "",
+      purpose: "",
       server: "",
       port: "",
       email: "",
@@ -542,57 +602,52 @@ const SocialMediaSettingsPage = () => {
     },
   ]);
 
-  const handleSocialMediaChange = (e, platform) => {
-    const { value } = e.target;
-    setSocialMediaLinks((prevLinks) => ({
-      ...prevLinks,
-      [platform]: value,
-    }));
-  };
-
-  const handlePixelCodeChange = (e, platform) => {
-    const { value } = e.target;
-    setPixelCodes((prevCodes) => ({
-      ...prevCodes,
-      [platform]: value,
-    }));
-  };
-
   const handleEmailAccountChange = (e, index) => {
     const { name, value } = e.target;
+    console.log();
     setEmailAccounts((prevAccounts) => {
       const updatedAccounts = [...prevAccounts];
       updatedAccounts[index][name] = value;
       return updatedAccounts;
     });
   };
-
   const addEmailAccount = () => {
-    setEmailAccounts((prevAccounts) => [
-      ...prevAccounts,
-      {
-        server: "",
-        port: "",
-        email: "",
-        password: "",
-        displayName: "",
-      },
-    ]);
+    const isEmpty = emailAccounts.some(
+      (account) => account.email.trim() === ""
+    );
+
+    if (!isEmpty) {
+      setEmailAccounts((prevAccounts) => [
+        ...prevAccounts,
+        {
+          id: "",
+          purpose: "",
+          server: "",
+          port: "",
+          email: "",
+          password: "",
+          displayName: "",
+        },
+      ]);
+    }
   };
 
-  const removeEmailAccount = (index) => {
-    setEmailAccounts((prevAccounts) => {
-      const updatedAccounts = [...prevAccounts];
-      updatedAccounts.splice(index, 1);
-      return updatedAccounts;
-    });
+  const handlePixelCodeChange = (e, name) => {
+    const { value } = e.target;
+    setAnalytics((prevAnalytics) => ({
+      ...prevAnalytics,
+      [name]: { ...prevAnalytics[name], code: value },
+    }));
   };
-
+  
+  const handleCheckboxChange = (name) => {
+    setAnalytics((prevAnalytics) => ({
+      ...prevAnalytics,
+      [name]: { ...prevAnalytics[name], isActive: !prevAnalytics[name].isActive },
+    }));
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Social Media Links:", socialMediaLinks);
-    console.log("Pixel Codes:", pixelCodes);
-    console.log("Email Accounts:", emailAccounts);
     toast({
       title: "Ayarlar güncellendi",
       status: "success",
@@ -601,172 +656,386 @@ const SocialMediaSettingsPage = () => {
     });
   };
 
+  const [isOpen, setIsOpen] = useState(false);
+  const [accountToRemove, setAccountToRemove] = useState(null);
+  const cancelRef = useRef();
+
+  const removeEmailAccount = (index) => {
+    setIsOpen(true);
+    setAccountToRemove(index);
+  };
+
+  const handleClose = () => setIsOpen(false);
+
+  const handleConfirmRemove = () => {
+    setIsOpen(false);
+    setEmailAccounts((prevAccounts) => {
+      const updatedAccounts = [...prevAccounts];
+      updatedAccounts.splice(accountToRemove, 1);
+      return updatedAccounts;
+    });
+  };
+
   return (
-    <Container maxW="5xl">
-      <Tabs align={"center"}>
+    <Container maxW="7xl">
+      <Tabs
+        align={"center"}
+        defaultIndex={activeSubTab}
+        onChange={handleTabChange}
+        index={activeSubTab}
+      >
         <TabList>
-          <Tab>Sosyal Medya</Tab>
-          <Tab>Takip Kodları</Tab>
-          <Tab>E-posta Hesapları</Tab>
+          <Tab
+            _selected={{ color: "white", bg: "teal.400" }}
+            onClick={() => setActiveSubTab(0)}
+          >
+            Sosyal Medya
+          </Tab>
+          <Tab
+            _selected={{ color: "white", bg: "teal.400" }}
+            onClick={() => setActiveSubTab(1)}
+          >
+            Takip Kodları
+          </Tab>
+          <Tab
+            _selected={{ color: "white", bg: "teal.400" }}
+            onClick={() => setActiveSubTab(2)}
+          >
+            E-posta Hesapları
+          </Tab>
         </TabList>
         <TabPanels>
           <TabPanel>
+            <SocialMediaLinksTab />
+          </TabPanel>
+          <TabPanel>
             <form onSubmit={handleSubmit}>
               <Stack spacing={4}>
-                <FormControl id="facebook">
-                  <FormLabel>Facebook Linki</FormLabel>
-                  <Input
-                    type="text"
-                    value={socialMediaLinks.facebook}
-                    onChange={(e) => handleSocialMediaChange(e, "facebook")}
-                  />
-                </FormControl>
-                <FormControl id="twitter">
-                  <FormLabel>Twitter Linki</FormLabel>
-                  <Input
-                    type="text"
-                    value={socialMediaLinks.twitter}
-                    onChange={(e) => handleSocialMediaChange(e, "twitter")}
-                  />
-                </FormControl>
-                <FormControl id="instagram">
-                  <FormLabel>Instagram Linki</FormLabel>
-                  <Input
-                    type="text"
-                    value={socialMediaLinks.instagram}
-                    onChange={(e) => handleSocialMediaChange(e, "instagram")}
-                  />
-                </FormControl>
-                <FormControl id="tiktok">
-                  <FormLabel>TikTok Linki</FormLabel>
-                  <Input
-                    type="text"
-                    value={socialMediaLinks.tiktok}
-                    onChange={(e) => handleSocialMediaChange(e, "tiktok")}
-                  />
-                </FormControl>
-                <Button type="submit" colorScheme="teal">
+                {Object.keys(analytics).map((key, index) => (
+                  <FormControl key={index} id={key}>
+                    <FormLabel>{key} Kodu</FormLabel>
+                    <Input
+                      type="text"
+                      value={analytics[key].code}
+                      onChange={(e) => handlePixelCodeChange(e, key)}
+                    />
+                    <Checkbox
+                      isChecked={analytics[key].isActive}
+                      onChange={() => handleCheckboxChange(key)}
+                    >
+                      Aktif/Pasif
+                    </Checkbox>
+                  </FormControl>
+                ))}
+                <Button type="submit" variant={"outline"} colorScheme="teal">
                   Kaydet
                 </Button>
               </Stack>
             </form>
           </TabPanel>
           <TabPanel>
-            <form onSubmit={handleSubmit}>
-              <Stack spacing={4}>
-                <FormControl id="facebookPixelCode">
-                  <FormLabel>Facebook Pixel Kodu</FormLabel>
-                  <Input
-                    type="text"
-                    value={pixelCodes.facebook}
-                    onChange={(e) => handlePixelCodeChange(e, "facebook")}
-                  />
-                </FormControl>
-                <FormControl id="linkedinPixelCode">
-                  <FormLabel>LinkedIn Pixel Kodu</FormLabel>
-                  <Input
-                    type="text"
-                    value={pixelCodes.linkedin}
-                    onChange={(e) => handlePixelCodeChange(e, "linkedin")}
-                  />
-                </FormControl>
-                <FormControl id="googleTagManager">
-                  <FormLabel>Google Tag Manager Kodu</FormLabel>
-                  <Input
-                    type="text"
-                    value={pixelCodes.googleTagManager}
-                    onChange={(e) =>
-                      handlePixelCodeChange(e, "googleTagManager")
-                    }
-                  />
-                </FormControl>
-                <FormControl id="googleAnalytics">
-                  <FormLabel>Google Analytics Kodu</FormLabel>
-                  <Input
-                    type="text"
-                    value={pixelCodes.googleAnalytics}
-                    onChange={(e) =>
-                      handlePixelCodeChange(e, "googleAnalytics")
-                    }
-                  />
-                </FormControl>
-                <Button type="submit" colorScheme="teal">
-                  Kaydet
-                </Button>
-              </Stack>
-            </form>
-          </TabPanel>
-          <TabPanel>
-            <form onSubmit={handleSubmit}>
-              {emailAccounts.map((account, index) => (
-                <Stack spacing={4} key={index}>
-                  <FormControl id={`server${index}`}>
-                    <FormLabel>Sunucu</FormLabel>
-                    <Input
-                      type="text"
-                      name="server"
-                      value={account.server}
-                      onChange={(e) => handleEmailAccountChange(e, index)}
-                    />
-                  </FormControl>
-                  <FormControl id={`port${index}`}>
-                    <FormLabel>Port</FormLabel>
-                    <Input
-                      type="text"
-                      name="port"
-                      value={account.port}
-                      onChange={(e) => handleEmailAccountChange(e, index)}
-                    />
-                  </FormControl>
-                  <FormControl id={`email${index}`}>
-                    <FormLabel>E-posta</FormLabel>
-                    <Input
-                      type="text"
-                      name="email"
-                      value={account.email}
-                      onChange={(e) => handleEmailAccountChange(e, index)}
-                    />
-                  </FormControl>
-                  <FormControl id={`password${index}`}>
-                    <FormLabel>Şifre</FormLabel>
-                    <Input
-                      type="password"
-                      name="password"
-                      value={account.password}
-                      onChange={(e) => handleEmailAccountChange(e, index)}
-                    />
-                  </FormControl>
-                  <FormControl id={`displayName${index}`}>
-                    <FormLabel>Görüntülenen Ad</FormLabel>
-                    <Input
-                      type="text"
-                      name="displayName"
-                      value={account.displayName}
-                      onChange={(e) => handleEmailAccountChange(e, index)}
-                    />
-                  </FormControl>
-                  <Button
-                    type="button"
-                    onClick={() => removeEmailAccount(index)}
-                    colorScheme="red"
-                  >
-                    Hesabı Kaldır
-                  </Button>
-                </Stack>
-              ))}
-              <VStack>
-                <Button type="button" mt={3} onClick={addEmailAccount}>
-                  Yeni Hesap Ekle
-                </Button>
-                <Button type="submit" colorScheme="teal">
-                  Kaydet
-                </Button>
-              </VStack>
-            </form>
+            <>
+              <SimpleGrid columns={{ base: 1 }} spacing={6}>
+                <TableContainer overflowX={{ base: "scroll", md: "unset" }}>
+                  <Table variant="simple">
+                    <TableCaption placement="top">
+                      Mail Hesapları Yapılandırma Alanı
+                    </TableCaption>
+                    <Thead>
+                      <Tr>
+                        <Th>Alan</Th>
+                        <Th>Sunucu</Th>
+                        <Th>Port</Th>
+                        <Th>E-posta</Th>
+                        <Th>Şifre</Th>
+                        <Th>Varsayılan</Th>
+                        <Th></Th>
+                      </Tr>
+                    </Thead>
+                    <Tbody>
+                      {emailAccounts.map((account, index) => (
+                        <Tr key={index}>
+                          <Td>
+                            <FormControl id={`purpose${index}`} isRequired>
+                              <Select
+                                name="purpose"
+                                value={account.purpose}
+                                onChange={(e) =>
+                                  handleEmailAccountChange(e, index)
+                                }
+                              >
+                                <option value="">Amaç Seçin</option>
+                                {purposes.map((purpose, index) => (
+                                  <option key={index} value={purpose.value}>
+                                    {purpose.name}
+                                  </option>
+                                ))}
+                              </Select>
+                            </FormControl>
+                          </Td>
+                          <Td>
+                            <FormControl id={`server${index}`}>
+                              <Input
+                                type="text"
+                                name="server"
+                                value={account.server}
+                                onChange={(e) =>
+                                  handleEmailAccountChange(e, index)
+                                }
+                              />
+                            </FormControl>
+                          </Td>
+                          <Td>
+                            <FormControl id={`port${index}`}>
+                              <Input
+                                type="text"
+                                name="port"
+                                value={account.port}
+                                onChange={(e) =>
+                                  handleEmailAccountChange(e, index)
+                                }
+                              />
+                            </FormControl>
+                          </Td>
+                          <Td>
+                            <FormControl id={`email${index}`}>
+                              <Input
+                                type="text"
+                                name="email"
+                                value={account.email}
+                                onChange={(e) =>
+                                  handleEmailAccountChange(e, index)
+                                }
+                              />
+                            </FormControl>
+                          </Td>
+                          <Td>
+                            <FormControl id={`password${index}`}>
+                              <Input
+                                type="password"
+                                name="password"
+                                value={account.password}
+                                onChange={(e) =>
+                                  handleEmailAccountChange(e, index)
+                                }
+                              />
+                            </FormControl>
+                          </Td>
+                          <Td>
+                            <IconButton
+                              onClick={() => removeEmailAccount(index)}
+                              colorScheme="red"
+                              icon={<MdOutlineDelete />}
+                            />
+                          </Td>
+                        </Tr>
+                      ))}
+                    </Tbody>
+                  </Table>
+                </TableContainer>
+                <Box>
+                  <Flex gap={3} justify="center" alignItems="center">
+                    <Button
+                      type="button"
+                      variant="outline"
+                      colorScheme="teal"
+                      onClick={addEmailAccount}
+                    >
+                      Yeni Hesap Ekle
+                    </Button>
+                    <Button
+                      type="submit"
+                      variant="outline"
+                      colorScheme="blue"
+                      onClick={handleSubmit}
+                    >
+                      Kaydet
+                    </Button>
+                  </Flex>
+                  <Text as="small" mt={4}>
+                    Bu alan, mail hesaplarınızı yapılandırmak için kullanılır.
+                    Şifreler AES şifreleme ile saklanmaktadır.
+                  </Text>
+                </Box>
+              </SimpleGrid>
+              <>
+                <AlertDialog
+                  isOpen={isOpen}
+                  leastDestructiveRef={cancelRef}
+                  onClose={handleClose}
+                >
+                  <AlertDialogOverlay>
+                    <AlertDialogContent>
+                      <AlertDialogHeader fontSize="lg" fontWeight="bold">
+                        Hesabı Sil
+                      </AlertDialogHeader>
+
+                      <AlertDialogBody>
+                        Hesabı silmek istediğinizden emin misiniz? Bu işlem geri
+                        alınamaz.
+                      </AlertDialogBody>
+
+                      <AlertDialogFooter>
+                        <Button ref={cancelRef} onClick={handleClose}>
+                          İptal
+                        </Button>
+                        <Button
+                          colorScheme="red"
+                          onClick={handleConfirmRemove}
+                          ml={3}
+                        >
+                          Sil
+                        </Button>
+                      </AlertDialogFooter>
+                    </AlertDialogContent>
+                  </AlertDialogOverlay>
+                </AlertDialog>
+              </>
+            </>
           </TabPanel>
         </TabPanels>
       </Tabs>
     </Container>
+  );
+};
+
+const SocialMediaLinksTab = () => {
+  // backend'e bağlanacaktır daha...
+  const toast = useToast();
+
+  const [socialMediaLinks, setSocialMediaLinks] = useState({
+    website: "",
+    facebook: "",
+    x: "",
+    instagram: "",
+    tiktok: "",
+    linkedin: "",
+  });
+
+  const links = [
+    {
+      id: "website",
+      label: "Website Linki",
+      value: socialMediaLinks.website,
+      type: "text",
+      icon: CgWebsite,
+      onChange: (e) => handleSocialMediaChange(e, "website"),
+      placeHolder: "",
+      variant: socialMediaLinks.website ? "filled" : "outline",
+      color: "gray.500",
+    },
+    {
+      id: "facebook",
+      label: "Facebook Linki",
+      value: socialMediaLinks.facebook,
+      type: "text",
+      icon: FiFacebook,
+      onChange: (e) => handleSocialMediaChange(e, "facebook"),
+      placeHolder: "",
+      variant: socialMediaLinks.facebook ? "filled" : "outline",
+      color: "#3b5998",
+    },
+    {
+      id: "instagram",
+      label: "İnstagram Linki",
+      value: socialMediaLinks.instagram,
+      type: "text",
+      icon: FiInstagram,
+      onChange: (e) => handleSocialMediaChange(e, "instagram"),
+      placeHolder: "",
+      variant: socialMediaLinks.instagram ? "filled" : "outline",
+      color: "#c13584",
+    },
+    {
+      id: "x",
+      label: "X Linki",
+      value: socialMediaLinks.x,
+      type: "text",
+      icon: FaXTwitter,
+      onChange: (e) => handleSocialMediaChange(e, "x"),
+      placeHolder: "",
+      variant: socialMediaLinks.x ? "filled" : "outline",
+      color: "#1da1f2",
+    },
+    {
+      id: "tiktok",
+      label: "Tiktok Linki",
+      value: socialMediaLinks.tiktok,
+      type: "text",
+      icon: SiTiktok,
+      onChange: (e) => handleSocialMediaChange(e, "tiktok"),
+      placeHolder: "",
+      variant: socialMediaLinks.tiktok ? "filled" : "outline",
+      color: "#69c9d0",
+    },
+    {
+      id: "linkedin",
+      label: "Linkedin Linki",
+      value: socialMediaLinks.linkedin,
+      type: "text",
+      icon: SlSocialLinkedin,
+      onChange: (e) => handleSocialMediaChange(e, "linkedin"),
+      placeHolder: "",
+      variant: socialMediaLinks.linkedin ? "filled" : "outline",
+      color: "#0077b5",
+    },
+  ];
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    toast({
+      title: "Sosyal Medya Linkleri Başarıyla Güncellendi.",
+      status: "success",
+      duration: 2000,
+      isClosable: true,
+    });
+  };
+  const handleSocialMediaChange = (e, platform) => {
+    const { value } = e.target;
+    setSocialMediaLinks((prevLinks) => ({
+      ...prevLinks,
+      [platform]: value,
+    }));
+  };
+
+  return (
+    <>
+      <Flex
+        as={"form"}
+        onSubmit={handleSubmit}
+        gap={4}
+        direction={"column"}
+        justifyContent={"center"}
+      >
+        {links.map((link) => (
+          <FormControl key={link.id} id={link.id}>
+            <FormLabel>{link.label}</FormLabel>
+            <InputGroup size="sm">
+              <InputLeftAddon>
+                <Icon as={link.icon} color={link.color} />
+              </InputLeftAddon>
+              <Input
+                type={link.type}
+                value={link.value}
+                onChange={link.onChange}
+                placeholder={link.placeHolder}
+                variant={link.variant}
+                focusBorderColor="teal.400"
+              />
+              {/* 
+                  <InputRightAddon>
+                  
+                  </InputRightAddon>
+                  */}
+            </InputGroup>
+          </FormControl>
+        ))}
+        <Button type="submit" colorScheme="teal">
+          Kaydet
+        </Button>
+      </Flex>
+    </>
   );
 };
 

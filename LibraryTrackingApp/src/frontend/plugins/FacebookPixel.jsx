@@ -19,6 +19,7 @@ function FacebookPixel({ code }) {
               `,
         }}
       />
+
       <noscript>
         <img
           height="1"
