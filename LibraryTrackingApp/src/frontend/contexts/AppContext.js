@@ -1,11 +1,5 @@
 import React, { createContext, useContext, useState } from "react";
-import initialSiteInfo, {
-  footerData,
-  navLinks,
-  dropdownLinks,
-  footerLinks,
-  socialMediaLinks,
-} from "./appContextValues";
+
 const AppContext = createContext();
 
 export const useAppContext = () => {
@@ -71,15 +65,8 @@ export const AppContextProvider = ({ children }) => {
     }));
   };
 
-  const siteInfo = initialSiteInfo;
 
   const contextValue = {
-    navLinks,
-    dropdownLinks,
-    footerLinks,
-    footerData,
-    siteInfo,
-    socialMediaLinks,
     analytics,
     setAnalytics,
     adminAnalytics,
