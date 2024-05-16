@@ -290,4 +290,10 @@ dotnet restore
    npm run start
    ```
 
-5. Admin sayfası için http://localhost:3000/ sayfasını acın.
+5. landing page sayfası için http://localhost:3000/ sayfasını acın.
+6. Application sayfası için http://localhost:3000/app sayfasını acın.
+7. Admin sayfası için http://localhost:3000/admin sayfasını acın.
+8. Üye sayfası için http://localhost:3000/me sayfasını acın.
+   
+
+NOT: pages router ile baslanmıstır. App router'a geçirilicektir
