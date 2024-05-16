@@ -49,8 +49,6 @@ const AlertData = () => {
 function MyApp({ Component, pageProps, statusCode = 200 }) {
   const router = useRouter();
 
-
-
   const placeholderRoutes = [
     "/privacy-policy",
     "/login",
