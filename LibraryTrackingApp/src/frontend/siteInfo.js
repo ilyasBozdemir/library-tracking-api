@@ -55,5 +55,4 @@ module.exports = {
   dropdownLinks,
   footerLinks,
   socialMediaLinks
-
 };
