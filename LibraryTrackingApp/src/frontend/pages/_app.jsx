@@ -5,8 +5,7 @@ const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
 const AppLayout = dynamic(() => import("@/layouts/App/layout"));
 const MeLayout = dynamic(() => import("@/layouts/Me/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
-import ForumLayout from "@/layouts/Forum/layout";
-
+const ForumLayout = dynamic(() => import("@/layouts/Forum/layout"));
 const PlaceholderLayout = dynamic(() => import("@/layouts/Placeholder/layout"));
 
 import { useColorMode, colorMode } from "@chakra-ui/react";
