@@ -1,4 +1,10 @@
-import { Alert, AlertIcon, ChakraProvider, Text, extendTheme } from "@chakra-ui/react";
+import {
+  Alert,
+  AlertIcon,
+  ChakraProvider,
+  Text,
+  extendTheme,
+} from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
 const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
@@ -7,7 +13,6 @@ const MeLayout = dynamic(() => import("@/layouts/Me/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
 const ForumLayout = dynamic(() => import("@/layouts/Forum/layout"));
 const PlaceholderLayout = dynamic(() => import("@/layouts/Placeholder/layout"));
-
 
 import "../styles/globals.css";
 import AOS from "aos";
@@ -27,7 +32,7 @@ const AlertData = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(site.API_BASE_URL + '');
+        const response = await axios.get(site.API_BASE_URL + "");
       } catch (error) {
         setError(error.message);
       }
@@ -35,21 +40,22 @@ const AlertData = () => {
 
     fetchData();
   }, []);
-  return (<>
+  return (
+    <>
+      <Alert status={error ? "warning" : "info"} justifyContent={"center"}>
+        <AlertIcon />
+        <Text as={"p"}>
+          {error
+            ? "Üzgünüm, veritabanından veri çekilemiyor. Fakat Sayfalar arasında gezinmeye devam edebilirsiniz."
+            : "Harika! Veriler başarıyla alındı."}
+        </Text>
+      </Alert>
+    </>
+  );
+};
 
-
-    <Alert status={error ? 'warning' : 'info'} justifyContent={'center'}>
-      <AlertIcon />
-      <Text as={'p'}>
-        {error ? 'Üzgünüm, veritabanından veri çekilemiyor. Fakat Sayfalar arasında gezinmeye devam edebilirsiniz.' : 'Harika! Veriler başarıyla alındı.'}
-      </Text>
-    </Alert></>)
-}
-
-function MyApp({ Component, pageProps, session, statusCode }) {
+function MyApp() {
   const router = useRouter();
-
-
 
   const placeholderRoutes = [
     "/privacy-policy",
@@ -100,27 +106,22 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     AOS.refresh();
   }, []);
 
-
-
-
   return (
     <>
-      {errorStatusCodes.includes(statusCode) ? (
+      {errorStatusCodes.includes(200) ? (
         <>
-          <PlaceholderLayout statusCode={statusCode} />
+          <PlaceholderLayout statusCode={200} />
         </>
       ) : (
         <AppContextProvider>
           <AuthContextProvider>
             <ChakraProvider theme={theme} resetCSS>
-
-{/*
+              {/*
 
 */}
 
-<AlertData/>
+              <AlertData />
               <Layout>
-
                 <Component {...pageProps} />
               </Layout>
             </ChakraProvider>
@@ -130,21 +131,5 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     </>
   );
 }
-
-MyApp.getInitialProps = async (appContext) => {
-  const { Component, ctx } = appContext;
-  let pageProps = {};
-  let session = {};
-
-  if (Component.getInitialProps) {
-    pageProps = await Component.getInitialProps(ctx);
-    session = await Component.getInitialProps(ctx);
-  }
-
-  const { res, err } = ctx;
-  const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-
-  return { pageProps, session, statusCode };
-};
 
 export default MyApp;
