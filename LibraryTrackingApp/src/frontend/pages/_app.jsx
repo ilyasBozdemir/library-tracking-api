@@ -87,6 +87,7 @@ function MyApp({ Component, pageProps, session, statusCode }) {
           <AuthContextProvider>
             <ChakraProvider theme={theme} resetCSS>
               <Layout>
+                
                 <Component {...pageProps} />
               </Layout>
             </ChakraProvider>

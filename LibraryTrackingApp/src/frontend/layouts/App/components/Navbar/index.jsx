@@ -101,6 +101,7 @@ const NavItem = ({ isMaximized, handleMaximizeToggle }) => {
   
   return (
     <>
+    
       <HStack spacing={3}>
         <Icon
           as={TfiHome}
