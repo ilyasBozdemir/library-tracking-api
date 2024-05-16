@@ -30,7 +30,7 @@ function DocsPage({ swaggerJsonUri, pageTitle, error }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getInitialProps() {
 
 
   // burda json dosyasını alıp günlük haftalık gibi cachelemek ile 
