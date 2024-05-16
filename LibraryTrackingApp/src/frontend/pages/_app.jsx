@@ -1,4 +1,4 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Alert, AlertIcon, ChakraProvider, Text, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
 const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
@@ -14,11 +14,12 @@ import "../styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { darkTheme, lightTheme } from "@/src/foundations/colors";
 import { AuthContextProvider, AuthProvider } from "@/contexts/AuthContext";
 import { AppContextProvider } from "@/contexts/AppContext";
 import { errorStatusCodes } from "@/constants/errorStatusCodes";
+import { site } from "@/constants/site";
 
 function MyApp({ Component, pageProps, session, statusCode }) {
   const router = useRouter();
@@ -76,6 +77,21 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     AOS.refresh();
   }, []);
 
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(site.API_BASE_URL + '');
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   return (
     <>
       {errorStatusCodes.includes(statusCode) ? (
@@ -86,8 +102,14 @@ function MyApp({ Component, pageProps, session, statusCode }) {
         <AppContextProvider>
           <AuthContextProvider>
             <ChakraProvider theme={theme} resetCSS>
+              <Alert status={error ? 'warning' : 'info'} alignContent={'center'}>
+                <AlertIcon />
+                <Text textAlign={'center'}>
+                {error ? 'Üzgünüm, veritabanından veri çekilemiyor. Verileri görmek için backend sunucusunu başlatmanız gerekiyor.' : 'Harika! Veriler başarıyla alındı.'}
+                </Text>
+              </Alert>
               <Layout>
-                
+
                 <Component {...pageProps} />
               </Layout>
             </ChakraProvider>
