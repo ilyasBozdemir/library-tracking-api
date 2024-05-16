@@ -4,19 +4,49 @@ const { i18n } = require("./next-i18next.config");
 const routes = require("./routes");
 
 const nextConfig = {
-  i18n,
   reactStrictMode: true,
-
-  async rewrites() {
-    const rewritesConfig = Object.values(routes).flatMap((route) =>
-      Object.entries(route).map(([path, c]) => ({
-        source: c.config.rewrite.source,
-        destination: c.config.rewrite.destination,
-      }))
-    );
-
-    return rewritesConfig;
+  exportTrailingSlash: true,
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      // paths...
+    };
   },
+  // Zaman aşımını artırın
+  exportTrailingSlash: true,
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      // paths...
+    };
+  },
+  // Zaman aşımını artırın
+  exportTrailingSlash: true,
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      // paths...
+    };
+  },
+  // Zaman aşımını artırın
+  exportTrailingSlash: true,
+  exportPathMap: async function (
+    defaultPathMap,
+    { dev, dir, outDir, distDir, buildId }
+  ) {
+    return {
+      // paths...
+    };
+  },
+  // Zaman aşımını artırın
+  exportTimeout: 1000, // 1 saniye yerine başka bir değer de kullanabilirsiniz
+
 };
 
 module.exports = nextConfig;

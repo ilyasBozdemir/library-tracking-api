@@ -1,32 +1,53 @@
-import { ChakraProvider, extendTheme } from "@chakra-ui/react";
+import { Alert, AlertIcon, ChakraProvider, Text, extendTheme } from "@chakra-ui/react";
 import dynamic from "next/dynamic";
 
 const AnonLayout = dynamic(() => import("@/layouts/Anon/layout"));
 const AppLayout = dynamic(() => import("@/layouts/App/layout"));
 const MeLayout = dynamic(() => import("@/layouts/Me/layout"));
 const AdminLayout = dynamic(() => import("@/layouts/Admin/layout"));
-import ForumLayout from "@/layouts/Forum/layout";
-
+const ForumLayout = dynamic(() => import("@/layouts/Forum/layout"));
 const PlaceholderLayout = dynamic(() => import("@/layouts/Placeholder/layout"));
 
-import { useColorMode, colorMode } from "@chakra-ui/react";
 
 import "../styles/globals.css";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { darkTheme, lightTheme } from "@/src/foundations/colors";
 import { AuthContextProvider, AuthProvider } from "@/contexts/AuthContext";
 import { AppContextProvider } from "@/contexts/AppContext";
 import { errorStatusCodes } from "@/constants/errorStatusCodes";
+import { site } from "@/constants/site";
+import theme from "@/src/theme";
 
-function MyApp({ Component, pageProps, session, statusCode }) {
+const AlertData = () => {
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(site.API_BASE_URL + '');
+      } catch (error) {
+        setError(error.message);
+      }
+    };
+
+    fetchData();
+  }, []);
+  return (<>
+
+
+    <Alert status={error ? 'warning' : 'info'} justifyContent={'center'}>
+      <AlertIcon />
+      <Text as={'p'}>
+        {error ? 'Üzgünüm, veritabanından veri çekilemiyor. Fakat Sayfalar arasında gezinmeye devam edebilirsiniz.' : 'Harika! Veriler başarıyla alındı.'}
+      </Text>
+    </Alert></>)
+}
+
+function MyApp({ Component, pageProps, statusCode = 200 }) {
   const router = useRouter();
-
-  const theme = extendTheme(
-    colorMode === "light" ? lightTheme.colors : darkTheme.colors
-  );
 
   const placeholderRoutes = [
     "/privacy-policy",
@@ -77,6 +98,9 @@ function MyApp({ Component, pageProps, session, statusCode }) {
     AOS.refresh();
   }, []);
 
+
+
+
   return (
     <>
       {errorStatusCodes.includes(statusCode) ? (
@@ -87,7 +111,14 @@ function MyApp({ Component, pageProps, session, statusCode }) {
         <AppContextProvider>
           <AuthContextProvider>
             <ChakraProvider theme={theme} resetCSS>
+
+              {/*
+
+*/}
+
+              <AlertData />
               <Layout>
+
                 <Component {...pageProps} />
               </Layout>
             </ChakraProvider>
@@ -98,20 +129,5 @@ function MyApp({ Component, pageProps, session, statusCode }) {
   );
 }
 
-MyApp.getInitialProps = async (appContext) => {
-  const { Component, ctx } = appContext;
-  let pageProps = {};
-  let session = {};
-
-  if (Component.getInitialProps) {
-    pageProps = await Component.getInitialProps(ctx);
-    session = await Component.getInitialProps(ctx);
-  }
-
-  const { res, err } = ctx;
-  const statusCode = res ? res.statusCode : err ? err.statusCode : null;
-
-  return { pageProps, session, statusCode };
-};
 
 export default MyApp;
